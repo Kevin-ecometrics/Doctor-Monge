@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Skills from "../components/Skills.astro";
+import Success from "../components/Success_Stories.astro";
+import Education from "../components/Education.jsx";
+import Navbar from "../components/Navbar.astro";
+import Doctorialia from "../components/icons/Doctoralia.astro";
+import Facebook from "../components/icons/Facebook.astro";
+import Instagram from "../components/icons/Instagram.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import Threads from "../components/icons/Threads.astro";
+import Tiktok from "../components/icons/Tiktok.astro";
+import Testimonials from "../components/Testimonials.jsx";
+import Partners from "../components/Partners.astro";
+import Blogs from "../components/Blogs.astro";
+import Contact from "../components/Contact.jsx";
+---
+
+<Layout title="Doctor Monge">
+  <main class="main">
+    <Navbar />
+    <div
+      class="fixed flex flex-col items-center justify-center h-screen gap-4 px-8"
+    >
+      <div class="border-r border-gray-200 h-full md:block hidden"></div>
+      <div class="md:block hidden mb-2">
+        <Facebook class="cursor-pointer" />
+      </div>
+      <div class="md:block hidden mb-2">
+        <Tiktok class="cursor-pointer" />
+      </div>
+      <div class="md:block hidden mb-2">
+        <Instagram class="cursor-pointer" />
+      </div>
+      <a
+        href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
+        target="_blank"
+        class="md:block hidden mb-2"
+      >
+        <Doctorialia class="cursor-pointer" />
+      </a>
+      <div class="md:block hidden mb-2">
+        <Linkedin class="cursor-pointer" />
+      </div>
+      <div class="md:block hidden mb-2">
+        <Threads class="cursor-pointer" />
+      </div>
+      <div class="border-r border-gray-200 h-full md:block hidden"></div>
+    </div>
+
+    <section id="section1" class="snap-start">
+      <Hero />
+    </section>
+    <section id="section2" class="snap-start">
+      <Skills />
+    </section>
+    <section id="section3" class="snap-start">
+      <Success />
+    </section>
+    <section id="section4" class="snap-start">
+      <Education client:visible />
+    </section>
+    <section id="section5" class="snap-start">
+      <Testimonials client:visible />
+    </section>
+    <section id="section6" class="snap-start h-screen">
+      <Partners />
+    </section>
+    <section id="section7" class="snap-start">
+      <Blogs />
+    </section>
+    <section id="section8" class="snap-start h-screen">
+      <Contact client:visible />
+    </section>
+    <div class="scroll-menu">
+      <div class="scroll-bar"></div>
+    </div>
+
+    <style>
+      .main {
+        color: white;
+        overflow-y: auto;
+        height: 100vh;
+        position: relative;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        overflow-x: hidden;
+      }
+
+      /* scrollbar */
+      .scroll-menu {
+        position: fixed;
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        z-index: 10;
+        height: 50%;
+        width: 3px;
+        background-color: white;
+      }
+
+      .scroll-bar {
+        background-color: #005692;
+        border: #005692;
+        transition: min-height 1s ease;
+      }
+
+      @media (max-width: 767px) {
+        .scroll-menu,
+        .scroll-bar {
+          display: none;
+        }
+      }
+    </style>
+
+    <script>
+      const mainElement = document.querySelector(".main");
+      const scrollBar = document.querySelector(".scroll-bar");
+      const sections = [
+        document.querySelector("#section1"),
+        document.querySelector("#section2"),
+        document.querySelector("#section3"),
+        document.querySelector("#section4"),
+        document.querySelector("#section5"),
+        document.querySelector("#section6"),
+        document.querySelector("#section7"),
+        document.querySelector("#section8"),
+      ].filter(Boolean) as HTMLElement[];
+
+      if (mainElement && scrollBar instanceof HTMLElement) {
+        mainElement.addEventListener("scroll", function () {
+          const heights = sections.map((section) => section.offsetHeight);
+          const scrollPosition = mainElement.scrollTop;
+
+          let accumulatedHeight = 0;
+          for (let i = 0; i < sections.length; i++) {
+            accumulatedHeight += heights[i];
+            if (scrollPosition < accumulatedHeight) {
+              scrollBar.style.minHeight = `${(i / (sections.length - 1)) * 100}%`;
+              break;
+            }
+          }
+        });
+      }
+    </script>
+  </main>
+</Layout>

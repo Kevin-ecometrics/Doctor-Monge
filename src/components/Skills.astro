@@ -1,0 +1,64 @@
+---
+let skills = [
+  { name: "Artroscopia", percentage: "10%" },
+  { name: "Cirugía de Columna", percentage: "10%" },
+  { name: "Artoplastia", percentage: "10%" },
+  { name: "Prótesis", percentage: "10%" },
+  { name: "Cirugía de Hombro", percentage: "10%" },
+  { name: "Cirugía de Cadera", percentage: "10%" },
+  { name: "Lesiones de Rodilla", percentage: "10%" },
+];
+---
+
+<main class="flex justify-center items-center h-screen py-16">
+  <div
+    class="flex justify-evenly md:flex-row flex-col items-center w-[80%] px-8"
+  >
+    <div class="border-b border-l border-t md:w-64 border-white h-96">
+      <div class="flex justify-center items-center gap-4">
+        <h1 class="font-medium text-[170px]">6</h1>
+        <div class="h-[20px] w-[20px] bg-blue-500 relative right-0 top-10">
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-end items-end mb-8 px-6">
+        <h1 class="text-[18px] font-bold">Años</h1>
+        <h1 class="text-[18px] font-bold">Práctica</h1>
+        <h1 class="text-[18px] font-bold">Ortopedia</h1>
+      </div>
+    </div>
+    <div>
+      <h1 class="text-[30px] font-semibold">Médico Ortopedista</h1>
+      <p class="font-bold text-[#969596] text-[22px]">
+        Comprometido y honesto.
+      </p>
+      <div class="py-4 md:py-12">
+        {
+          skills.map((skill) => (
+            <>
+              <div class="mb-1 text-base font-medium ">{skill.name}</div>
+              <div class="w-96 bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                <div class="bg-blue-600 h-2.5 rounded-full animate-width" />
+              </div>
+            </>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</main>
+
+<style>
+  @keyframes increase {
+    0% {
+      width: 10%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .animate-width {
+    animation: increase 4s linear forwards;
+  }
+</style>

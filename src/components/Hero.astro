@@ -1,0 +1,35 @@
+---
+import Play from "./Play.astro";
+---
+
+<main class="px-16 md:py-0">
+  <div
+    class="flex justify-center items-center h-[600px] md:h-screen md:absolute flex-col md:px-16"
+  >
+    <section class="z-10">
+      <Play class="cursor-pointer" />
+      <img src="/titulo.png" alt="Logo" />
+      <p class="font-semibold md:w-[650px] text-[13px] text-[#969596]">
+        Me especializo en el manejo de lesiones músculo-esqueléticas y
+        tratamientos conservadores como el quirúrgico, así como manejo de
+        fracturas, prótesis, artroscopia, entre otras modalidades.
+      </p>
+    </section>
+  </div>
+  <img src="/Hero.png" class="h-auto w-full relative" />
+  <div class="md:block hidden">
+    <div class="absolute bottom-10 text-xl">
+      <h1>© Doctor Monge. 2024</h1>
+    </div>
+    <div class="absolute bottom-10 right-16 text-xl flex gap-6 cursor-pointer">
+      <h1 class="hover:text-blue-500">ENG</h1>
+      <h1 class="hover:text-blue-500">ESP</h1>
+    </div>
+  </div>
+</main>
+
+<style>
+  img {
+    mask-image: linear-gradient(black 50%, transparent);
+  }
+</style>
