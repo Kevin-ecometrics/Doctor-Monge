@@ -148,3 +148,32 @@
     </div>
   </div>
 </main>
+
+<style>
+  @property --angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+  }
+
+  .relative.group {
+    --angle: 0deg;
+    border: 1px solid transparent;
+    border-radius: 1px;
+    max-width: 400px;
+    border-image: conic-gradient(from var(--angle), #2563eb, #17171b) 1;
+  }
+
+  .relative.group:hover {
+    animation: rotate-gradient 3s infinite linear;
+  }
+
+  @keyframes rotate-gradient {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
+</style>
