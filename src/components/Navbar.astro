@@ -23,7 +23,7 @@ import Hamburger from "./icons/Hamburger.astro";
 
 <aside
   id="sidebar"
-  class="fixed transform translate-x-full transition-transform duration-200 ease-in-out right-0 w-72 h-full text-white bg-[#161616] border-white border overflow-auto z-20"
+  class="fixed transform translate-x-full transition-transform duration-200 ease-in-out right-0 w-72 h-full text-white bg-[#161616] border-gray-600 border overflow-auto z-20"
 >
   <div class="flex justify-between p-4">
     <div class="flex gap-4 cursor-pointer">
@@ -57,9 +57,18 @@ import Hamburger from "./icons/Hamburger.astro";
     <a href="#section8">CONTACTO</a>
   </ul>
   <div class="flex justify-start px-4 gap-4 mt-8">
-    <Facebook class="cursor-pointer" />
-    <Tiktok class="cursor-pointer" />
-    <Instagram class="cursor-pointer" />
+    <a
+      href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
+      target="_blank"
+    >
+      <Facebook class="cursor-pointer" />
+    </a>
+    <a href="https://www.tiktok.com/@elmongedelaortopedia" target="_blank">
+      <Tiktok class="cursor-pointer" />
+    </a>
+    <a href="https://www.instagram.com/drmonge.ortho/?hl=es" target="_blank">
+      <Instagram class="cursor-pointer" />
+    </a>
     <a
       href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
       target="_blank"

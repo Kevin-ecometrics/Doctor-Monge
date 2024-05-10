@@ -31,7 +31,7 @@ const Education = () => {
   };
 
   return (
-    <main className="md:w-[80%] mx-auto md:py-32 py-16 md:h-screen">
+    <main className="md:w-[80%] md:mx-auto py-44 md:h-screen">
       <div className="md:w-full flex flex-col justify-center md:flex-row md:justify-between items-center">
         <div>
           <h1 className="text-[42px] font-medium text-center md:text-start">
@@ -74,9 +74,17 @@ const Education = () => {
                 Títulos
               </h2>
             </div>
-            <div className="flex justify-center items-center gap-8">
-              <img src="/Titulo1.png" alt="Image 1" className="mx-auto" />
-              <img src="/Titulo2.png" alt="Image 2" className="mx-auto" />
+            <div className="flex md:flex-row flex-col justify-center items-center gap-8">
+              <img
+                src="/Titulo1.png"
+                alt="Image 1"
+                className="mx-auto size-72  md:size-full  "
+              />
+              <img
+                src="/Titulo2.png"
+                alt="Image 2"
+                className="mx-auto size-72 md:size-full"
+              />
             </div>
             <div className="">
               <button

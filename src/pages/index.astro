@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Skills from "../components/Skills.astro";
-import Success from "../components/Success_Stories.astro";
+import Success from "../components/Success_Stories.jsx";
 import Education from "../components/Education.jsx";
 import Doctorialia from "../components/icons/Doctoralia.astro";
 import Facebook from "../components/icons/Facebook.astro";
@@ -26,15 +26,27 @@ import Contact from "../components/Contact.jsx";
       class="fixed flex flex-col items-center justify-center h-screen gap-4 px-8"
     >
       <div class="border-r border-gray-200 h-full md:block hidden"></div>
-      <div class="md:block hidden mb-2">
+      <a
+        href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
+        target="_blank"
+        class="md:block hidden mb-2"
+      >
         <Facebook class="cursor-pointer" />
-      </div>
-      <div class="md:block hidden mb-2">
+      </a>
+      <a
+        href="https://www.tiktok.com/@elmongedelaortopedia"
+        target="_blank"
+        class="md:block hidden mb-2"
+      >
         <Tiktok class="cursor-pointer" />
-      </div>
-      <div class="md:block hidden mb-2">
+      </a>
+      <a
+        href="https://www.instagram.com/drmonge.ortho/?hl=es"
+        target="_blank"
+        class="md:block hidden mb-2"
+      >
         <Instagram class="cursor-pointer" />
-      </div>
+      </a>
       <a
         href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
         target="_blank"
@@ -58,7 +70,7 @@ import Contact from "../components/Contact.jsx";
       <Skills />
     </section>
     <section id="section3" class="snap-start">
-      <Success />
+      <Success client:visible />
     </section>
     <section id="section4" class="snap-start">
       <Education client:visible />
@@ -66,13 +78,13 @@ import Contact from "../components/Contact.jsx";
     <section id="section5" class="snap-start">
       <Testimonials client:visible />
     </section>
-    <section id="section6" class="snap-start h-screen">
+    <section id="section6" class="snap-start">
       <Partners />
     </section>
     <section id="section7" class="snap-start">
       <Blogs />
     </section>
-    <section id="section8" class="snap-start h-screen">
+    <section id="section8" class="snap-start">
       <Contact client:visible />
     </section>
     <div class="scroll-menu">

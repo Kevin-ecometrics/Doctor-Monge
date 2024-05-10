@@ -11,7 +11,7 @@ function Contact() {
   };
   return (
     <main
-      class="flex justify-center items-center h-screen"
+      class="flex justify-center items-center md:h-screen"
       style={{
         backgroundImage: "url('/contact.png')",
         backgroundSize: "cover",
@@ -42,7 +42,7 @@ function Contact() {
           <h1 className="font-medium text-[20px] text-[#005692]">
             Mándame mensaje o agenda tu cita.
           </h1>
-          <form className="mt-8" onSubmit={handleSubmit}>
+          <form className="mt-8 mb-24 md:mb-8" onSubmit={handleSubmit}>
             <div class="relative z-0 w-full mb-5 group">
               <input
                 type="text"
