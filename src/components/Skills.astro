@@ -48,6 +48,26 @@ let skills = [
   </div>
 </main>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var elements = document.querySelectorAll(".animate-width"); // Selecciona todos los elementos con la clase animate-width
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting === true)
+            entry.target.classList.add("animate-width");
+          else entry.target.classList.remove("animate-width");
+        });
+      },
+      { threshold: [0] }
+    );
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+  });
+</script>
+
 <style>
   @keyframes increase {
     0% {
@@ -59,6 +79,6 @@ let skills = [
   }
 
   .animate-width {
-    animation: increase 4s linear forwards;
+    animation: increase 2s linear forwards;
   }
 </style>

@@ -1,24 +1,33 @@
 ---
+import Navbar from "../components/Navbar.astro";
 interface Props {
   title: string;
+  description: string;
+  keywords: string;
 }
 
 import "@fontsource-variable/inter";
 
-const { title } = Astro.props;
+const { title, description, keywords } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href="http://mongeortopedista.com/" />
+    <meta name="author" content="Doctor Monge" />
+    <meta name="publisher" content="Ecommetrica" />
+    <meta name="robots" content="index, follow" />
   </head>
   <body>
+    <Navbar />
     <slot />
   </body>
 </html>

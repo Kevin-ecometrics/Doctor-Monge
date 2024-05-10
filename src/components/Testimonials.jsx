@@ -14,7 +14,7 @@ const testimonials = [
 ];
 
 function Testimonials() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(1);
 
   return (
     <main
