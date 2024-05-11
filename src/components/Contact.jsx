@@ -11,7 +11,7 @@ function Contact() {
   };
   return (
     <main
-      class="flex justify-center items-center md:h-screen"
+      class="flex justify-center items-center h-screen"
       style={{
         backgroundImage: "url('/contact.png')",
         backgroundSize: "cover",

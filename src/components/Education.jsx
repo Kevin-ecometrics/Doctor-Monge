@@ -53,7 +53,12 @@ const Education = () => {
       {educationData.map((item) => (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-8 border-b border-gray-300 items-center px-8">
           <div>
-            <img src={item.logo} className="" alt="" />
+            <img
+              src={item.logo}
+              className="w-24"
+              alt="Logos Institucionales"
+              title="logos Institucionales"
+            />
           </div>
           <div>
             <p className="text-[#969596] font-bold text-[12px]">{item.years}</p>

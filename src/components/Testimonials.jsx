@@ -25,7 +25,7 @@ function Testimonials() {
         backgroundPosition: "center",
       }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 px-8 md:w-[80%] md:mx-auto gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 px-8 md:w-[80%] md:mx-auto gap-16">
         <div>
           <h1 className="font-semibold text-[29px] md:text-[42px]">
             Buscaremos el tratamiento ideal para ti y tu lesión.
