@@ -1,13 +1,26 @@
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
+
 function Contact() {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
+
     const data = {
       nombre: formData.get("nombre"),
       correo: formData.get("correo"),
       mensaje: formData.get("mensaje"),
     };
-    console.log(data);
+
+    try {
+      const response = await axios.post("http://localhost:3001/contacto", data);
+      console.log(response);
+      toast.success("Mensaje enviado correctamente");
+      e.target.reset();
+    } catch (error) {
+      console.error(error);
+      toast.error("Ocurrió un error al enviar el mensaje");
+    }
   };
   return (
     <main
@@ -29,12 +42,31 @@ function Contact() {
             <p>Interior 809-810, Zona Urbana Río, C.P.</p>
             <p>22010 Tijuana, B.C., México</p>
           </div>
-          <div>
-            <h1 className="font-medium text-[29px]">664 976 3510</h1>
-            <h1 className="font-medium text-[29px] mb-8">664 169 0650</h1>
-            <p className="font-bold text-[15px] text-[#969596]">
+          <div className="flex flex-col">
+            <a
+              href="tel:6649763510"
+              className="font-medium text-[29px] hover:text-blue-600"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              664 976 3510
+            </a>
+            <a
+              href="tel:6641690650"
+              className="font-medium text-[29px] hover:text-blue-600 mb-8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              664 169 0650
+            </a>
+            <a
+              href="mailto:rmonge.ortho@gmail.com"
+              className="font-bold text-[15px] text-[#969596] hover:text-blue-600"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               rmonge.ortho@gmail.com
-            </p>
+            </a>
           </div>
         </div>
         <div>
@@ -97,6 +129,7 @@ function Contact() {
               Hacer cita
             </button>
           </form>
+          <Toaster position="top-right" />
         </div>
       </div>
     </main>

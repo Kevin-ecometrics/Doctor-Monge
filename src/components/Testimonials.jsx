@@ -2,14 +2,29 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    text: "Excelente trato y muy claro al explicar, nos atendió en domingo a las 4 pm Muy bien por el Dr.",
-    name: "Denisse Higuera",
-    topic: "Articulaciones",
+    text: "Excelente atención y gran profesionalismo, toda explicación es detallada y armónica para su comprensión",
+    name: "Alan Cota",
+    topic: "Ortopedia ",
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, molestias?",
-    name: "Denisse Higuera",
-    topic: "Artoplastia",
+    text: "El Dr Ricardo Monge a quien visité por vez primera revisó de forma muy amplia y detallada mi padecimiento, y con su explicación me quedó totalmente claro el tratamiento a seguir para mi recuperación. Excelente",
+    name: "Leticia R",
+    topic: "Traumatología ",
+  },
+  {
+    text: "Bastante profesional, explica cada detalle de los procedimientos posibles y recomendó la mejor accion. Me he sentido de maravilla y quede muy agradecido con el Dr. Monge",
+    name: "FP",
+    topic: "Ortopedia ",
+  },
+  {
+    text: "Mi experiencia con el dr monge fue muy buena, nos explicó perfectamente todo, apenas empiezo un tratamiento con el pero la atención fue excelente y el trato muy amable. Lo recomiendo!!",
+    name: "Nelly toledo",
+    topic: "Traumatología ",
+  },
+  {
+    text: "Excelente doctor , muy explícito en sus palabras , tanto profesional como humana, ambas cosas totalmente diferentes , certero y sabio en sus diagnósticos ,lo recomiendo ampliamente gracias doctor en lo personal por su enorme ayuda y ante todo paciencia a todas mis dudas con amabilidad que me las respondió al momento ,grx mil",
+    name: "Alicia garza soltero",
+    topic: "Traumatología ",
   },
 ];
 
