@@ -1,9 +1,17 @@
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-
+import { motion, useInView } from "framer-motion";
 function Contact() {
+  const [isLoading, setIsLoading] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const [animationKey, setAnimationKey] = useState(0);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+
     const formData = new FormData(e.target);
 
     const data = {
@@ -13,28 +21,55 @@ function Contact() {
     };
 
     try {
-      const response = await axios.post("http://localhost:3001/contacto", data);
+      const response = await axios.post(
+        "http://mongeortopedia.com/contactoForm",
+        data
+      );
       console.log(response);
       toast.success("Mensaje enviado correctamente");
+      setIsLoading(false);
       e.target.reset();
     } catch (error) {
       console.error(error);
       toast.error("Ocurrió un error al enviar el mensaje");
     }
   };
+  useEffect(() => {
+    if (isInView) {
+      setAnimationKey((prevKey) => prevKey + 1);
+    }
+  }, [isInView]);
+
   return (
     <main
-      class="flex justify-center items-center h-screen"
+      ref={ref}
+      className="flex justify-center items-center md:h-screen py-16 md:py-0 relative"
       style={{
-        backgroundImage: "url('/contact.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        overflow: "hidden", // Asegura que el contenido animado no desborde
       }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 px-8 gap-16 w-[80%] mx-auto">
+      <motion.div
+        key={animationKey} // Usa la clave que cambia para forzar la reanimación
+        initial={{ scale: 1.25 }} // Inicia con el fondo escalado al 125%
+        animate={{ scale: 1 }} // Anima la escala al 100% cuando está en vista
+        transition={{ duration: 5, ease: "easeOut" }}
+        style={{
+          backgroundImage: "url('/contact.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "absolute", // Posiciona sobre el main
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: -1, // Asegura que el fondo esté detrás del contenido
+          opacity: 0.9,
+        }}
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 px-8 gap-16 w-[80%] mx-auto z-10">
         <div>
           <h1 className="font-medium text-[42px]">Contacto</h1>
-          <p className="font-bold text-[#969596] text-[12px] mb-12">
+          <p className="font-bold text-[#969596] text-[16px] mb-12">
             Encuéntrame en:
           </p>
           <div className="*:font-medium *:text-[16px] mb-12">
@@ -61,7 +96,7 @@ function Contact() {
             </a>
             <a
               href="mailto:rmonge.ortho@gmail.com"
-              className="font-bold text-[15px] text-[#969596] hover:text-blue-600"
+              className="font-bold text-[18px] text-[#969596] hover:text-blue-600"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -70,9 +105,14 @@ function Contact() {
           </div>
         </div>
         <div>
-          <h1 className="text-[25px] font-medium">¿Tienes alguna duda? </h1>
+          <h1 className="text-[25px] font-medium mb-4">
+            ¿Tienes alguna pregunta? Te invito a ver más contenido en mis redes
+            ahí encontraras preguntas frecuentes y también más contenido de
+            ortopedia y traumatología en Tijuana{" "}
+          </h1>
           <h1 className="font-medium text-[20px] text-[#005692]">
-            Mándame mensaje o agenda tu cita.
+            ¿ Deseas agendar tu cita? Con gusto, solo escribe tus datos para
+            comenzar o llámanos{" "}
           </h1>
           <form className="mt-8 mb-24 md:mb-8" onSubmit={handleSubmit}>
             <div class="relative z-0 w-full mb-5 group">
@@ -124,9 +164,10 @@ function Contact() {
             </div>
             <button
               type="submit"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 text-[11px] font-medium w-full sm:w-full px-5 py-2.5 text-center"
+              disabled={isLoading}
+              class="text-white bg-blue-700 hover:bg-blue-800  focus:outline-none text-[13px] font-medium w-full sm:w-full px-5 py-2.5 text-center"
             >
-              Hacer cita
+              {isLoading ? "Enviando..." : "Hacer cita"}
             </button>
           </form>
           <Toaster position="top-right" />

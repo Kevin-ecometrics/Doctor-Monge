@@ -1,42 +1,61 @@
 ---
 let skills = [
-  { name: "Artroscopia", percentage: "10%" },
-  { name: "Cirugía de Columna", percentage: "10%" },
-  { name: "Artoplastia", percentage: "10%" },
-  { name: "Prótesis", percentage: "10%" },
-  { name: "Cirugía de Hombro", percentage: "10%" },
-  { name: "Cirugía de Cadera", percentage: "10%" },
-  { name: "Lesiones de Rodilla", percentage: "10%" },
+  { name: "Artroplastia de cadera y rodilla ", percentage: "10%" },
+  { name: "Artroscopia de hombro y rodilla ", percentage: "10%" },
+  { name: "Cirugía de columna", percentage: "10%" },
 ];
 ---
 
-<main class="flex justify-center items-center md:h-screen py-16">
+<main class="flex flex-col sm:flex-row h-screen items-center py-4 sm:py-16">
   <div
-    class="flex md:justify-evenly md:flex-row flex-col items-center md:w-[80%] px-16"
+    class="grid grid-cols-1 sm:grid-cols-2 px-8 py-16 sm:px-8 md:w-[80%] mx-auto gap-4 sm:gap-12"
   >
-    <div class="border-b border-l border-t md:w-64 border-white h-96">
-      <div class="flex justify-center items-center gap-4">
-        <h1 class="font-medium text-[170px]">6</h1>
-        <div class="h-[20px] w-[20px] bg-blue-500 relative right-0 top-10">
+    <div
+      class="border-b border-l border-t border-white w-80 md:w-[60%] md:h-[450px] sm:h-auto"
+    >
+      <div class="flex justify-center items-center gap-2 sm:gap-4">
+        <h1 class="font-medium text-[100px] sm:text-[170px]">6</h1>
+        <div class="relative top-5 sm:top-10">
+          <svg
+            width="44"
+            height="43"
+            viewBox="0 0 47 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.8651 45.4524V0.19673H29.3068V45.4524H17.8651ZM0.958097 28.5455V17.1037H46.2138V28.5455H0.958097Z"
+              fill="#005692"></path>
+          </svg>
         </div>
       </div>
 
-      <div class="flex flex-col justify-end items-end mb-8 px-6">
-        <h1 class="text-[18px] font-bold">Años</h1>
-        <h1 class="text-[18px] font-bold">Práctica</h1>
-        <h1 class="text-[18px] font-bold">Ortopedia</h1>
+      <div
+        class="flex flex-col justify-end items-end mb-4 sm:mb-8 px-3 sm:px-6"
+      >
+        <h1 class="text-[16px] sm:text-[20px] font-bold">Años de</h1>
+        <h1 class="text-[16px] sm:text-[20px] font-bold">Práctica en</h1>
+        <h1 class="text-[16px] sm:text-[20px] font-bold">Ortopedia y</h1>
+        <h1 class="text-[16px] sm:text-[20px] font-bold">Traumatología</h1>
+        <div class="flex justify-between items-end gap-2 sm:gap-4">
+          <div class="border-b border-white w-28 md:w-16"></div>
+          <h1 class="text-[16px] sm:text-[20px] font-bold">
+            aliviando a pacientes
+          </h1>
+        </div>
       </div>
     </div>
     <div class="md:py-0 py-4">
-      <h1 class="text-[30px] font-semibold">Médico Ortopedista</h1>
-      <p class="font-bold text-[#969596] text-[22px]">
-        Comprometido y honesto.
-      </p>
+      <h2 class="text-[35px] font-semibold">Sobre mi</h2>
+      <h3 class="font-bold text-[#969596] text-[25px] mb-2">
+        Tu médico Ortopedista que está cerca de ti Comprometido y honesto.
+      </h3>
+      <h2 class="text-[35px] font-semibold">Especialidades</h2>
       <div class="py-4 md:py-12">
         {
           skills.map((skill) => (
             <>
-              <div class="mb-1 text-base font-medium ">{skill.name}</div>
+              <div class="mb-1 text-lg font-medium ">{skill.name}</div>
               <div class="md:w-96 bg-gray-200 rounded-full h-2.5 mb-4 ">
                 <div class="bg-blue-600 h-2.5 rounded-full animate-width" />
               </div>

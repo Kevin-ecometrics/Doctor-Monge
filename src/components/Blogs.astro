@@ -1,6 +1,8 @@
 <main class="flex justify-center items-center py-24 md:py-24 md:h-screen">
   <div class="text-start">
-    <h1 class="font-medium text-[42px] mb-16">Más información</h1>
+    <h1 class="font-medium text-[42px] mb-16 px-8">
+      Conoce más sobre ortopedia y traumatología
+    </h1>
     <div class="flex flex-col md:flex-row justify-between items-center gap-8">
       <div class="relative group">
         <img
@@ -11,19 +13,20 @@
         <p
           class="absolute inset-0 flex items-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
-          Mayo 2024
+          Abril 2024
         </p>
         <p
-          class="absolute inset-0 flex items-start px-4 py-24 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          class="absolute inset-0 flex items-start px-4 py-16 font-bold justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
-          Tema para blog Op 1
+          Artroplastia de la cadera con prótesis total
         </p>
         <p
           class="absolute inset-0 flex items-center text-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          fugiat aut ipsum voluptatem dicta animi obcaecati ad maxime itaque
-          consequuntur soluta, voluptatibus dignissimos autem qui.
+          Hola, en este blog profundizaremos en una de las cirugías más
+          realizadas en el campo de la medicina, te explico en que consiste está
+          técnica mínimamente invasiva y que puedes esperar previo durante y
+          después, da click para comenzar
         </p>
         <div class="items-center gap-2">
           <p
@@ -61,16 +64,18 @@
           Mayo 2024
         </p>
         <p
-          class="absolute inset-0 flex items-start px-4 py-24 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          class="absolute inset-0 flex items-start px-4 py-16 font-bold justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
-          Tema para blog Op 2
+          Hernia de disco lumbar
         </p>
         <p
           class="absolute inset-0 flex items-center text-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          fugiat aut ipsum voluptatem dicta animi obcaecati ad maxime itaque
-          consequuntur soluta, voluptatibus dignissimos autem qui.
+          ¿Sabías que El síndrome clínico de radiculopatía por hernia en disco
+          lumbar es de las mayores causas de incapacidad a nivel mundial? Me
+          gustaría hablar sobre la intervención quirúrgica donde se realizará
+          una descompresión de la raíz nerviosa afectada, da click para iniciar
+          el video
         </p>
         <div class="items-center gap-2">
           <p
@@ -105,19 +110,20 @@
         <p
           class="absolute inset-0 flex items-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
-          Mayo 2024
+          Junio 2024
         </p>
         <p
-          class="absolute inset-0 flex items-start px-4 py-24 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          class="absolute inset-0 flex items-start px-4 py-16 font-bold justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
-          Tema para blog Op 3
+          Artroplastia rodilla con prótesis total
         </p>
         <p
           class="absolute inset-0 flex items-center text-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          fugiat aut ipsum voluptatem dicta animi obcaecati ad maxime itaque
-          consequuntur soluta, voluptatibus dignissimos autem qui.
+          Los resultados de esta cirugía tienen mayores tasas de éxito, con
+          resultados muy satisfactorios, sin embargo, es normal sentirte con
+          angustia previo a este procedimiento, hoy te explico brevemente todo
+          lo que debes saber ¿Comenzamos?
         </p>
         <div class="items-center gap-2">
           <p
@@ -148,30 +154,31 @@
 </main>
 
 <style>
-  @property --angle {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0deg;
-  }
-
   .relative.group {
-    --angle: 0deg;
-    border: 1px solid transparent;
+    position: relative;
     border-radius: 1px;
     max-width: 400px;
-    border-image: conic-gradient(from var(--angle), #2563eb, #17171b) 1;
+    overflow: hidden;
+    background: linear-gradient(white, white), linear-gradient(white, white),
+      linear-gradient(to right, #ffffff 0%, #ffffff 100%),
+      linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-size:
+      0% 2px,
+      /* Inicialmente, los bordes horizontales no se muestran */ 2px 0%,
+      /* Inicialmente, los bordes verticales no se muestran */ 0% 2px,
+      2px 0%;
+    background-position: top, right, bottom, left; /* Posición de los bordes */
+    -webkit-background-clip: padding-box, border-box, padding-box, border-box;
+    background-clip: padding-box, border-box, padding-box, border-box;
+    transition: background-size 0.5s ease-in-out;
   }
 
   .relative.group:hover {
-    animation: rotate-gradient 3s infinite linear;
-  }
-
-  @keyframes rotate-gradient {
-    from {
-      --angle: 0deg;
-    }
-    to {
-      --angle: 360deg;
-    }
+    background-size:
+      100% 2px,
+      /* Al pasar el ratón, los bordes horizontales se completan */ 2px 100%,
+      /* Al pasar el ratón, los bordes verticales se completan */ 100% 2px,
+      2px 100%;
   }
 </style>

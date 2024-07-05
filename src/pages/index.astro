@@ -1,14 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
+import Hero from "../components/Hero.jsx";
 import Skills from "../components/Skills.astro";
 import Success from "../components/Success_Stories.jsx";
 import Education from "../components/Education.jsx";
 import Doctorialia from "../components/icons/Doctoralia.astro";
 import Facebook from "../components/icons/Facebook.astro";
 import Instagram from "../components/icons/Instagram.astro";
-import Linkedin from "../components/icons/Linkedin.astro";
-import Threads from "../components/icons/Threads.astro";
 import Tiktok from "../components/icons/Tiktok.astro";
 import Testimonials from "../components/Testimonials.jsx";
 import Partners from "../components/Partners.astro";
@@ -17,15 +15,15 @@ import Contact from "../components/Contact.jsx";
 ---
 
 <Layout
-  title="Doctor Monge - Ortopedista y Traumatólogo en Tijuana."
-  description="Ortopedista y Traumatólogo en Tijuana, Baja California. Conoce más sobre el Dr. Ricardo Monge y sus servicios en la ciudad de Tijuana."
+  title="Encuentra el tratamiento ideal para tu lesión con Ricardo Monge"
+  description="Dr Ricardo Monge, ortopedista y traumatólogo especializado en lesiones musculoesqueléticas en rodillas, cadera y columna con y sin cirugía en Tijuana"
   keywords="Ortopedista, Traumatólogo, Tijuana, Baja California, Dr. Ricardo Monge"
 >
   <main class="main">
     <div
-      class="fixed flex flex-col items-center justify-center h-screen gap-4 px-8"
+      class="fixed flex flex-col items-center justify-center h-screen gap-4 px-14"
     >
-      <div class="border-r border-gray-200 h-full md:block hidden"></div>
+      <div class="border-r border-gray-200 h-52 md:block hidden z-10"></div>
       <a
         href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
         target="_blank"
@@ -54,17 +52,11 @@ import Contact from "../components/Contact.jsx";
       >
         <Doctorialia class="cursor-pointer" />
       </a>
-      <!-- <div class="md:block hidden mb-2">
-        <Linkedin class="cursor-pointer" />
-      </div>
-      <div class="md:block hidden mb-2">
-        <Threads class="cursor-pointer" />
-      </div> -->
-      <div class="border-r border-gray-200 h-full md:block hidden"></div>
+      <div class="border-r border-gray-200 h-52 md:block hidden z-10"></div>
     </div>
 
     <section id="section1" class="snap-start">
-      <Hero />
+      <Hero client:load />
     </section>
     <section id="section2" class="snap-start">
       <Skills />

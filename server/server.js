@@ -4,12 +4,13 @@ const nodemailer = require("nodemailer");
 const app = express();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "http://localhost:4321",
-  })
-);
-app.post("/contacto", async (req, res) => {
+app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
+app.post("/contactoForm", async (req, res) => {
   const { nombre, correo, mensaje } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -17,15 +18,15 @@ app.post("/contacto", async (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: "pacientes@mongeortopedista.com",
-      pass: "8w%r.Di&x*1_",
+      user: "pacientes@mongeortopedia.com",
+      pass: "R1ck@rd01",
     },
   });
 
   const mailOptions = {
-    from: "pacientes@mongeortopedista.com",
+    from: "pacientes@mongeortopedia.com",
     to: correo,
-    // cc: "pacientes@mongeortopedista.com",
+    cc: "pacientes@mongeortopedia.com",
     subject: `Mensaje de ${nombre}`,
     text: mensaje,
   };

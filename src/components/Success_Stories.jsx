@@ -1,135 +1,196 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const SuccessStories = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); // Estado para el índice del contenido actual
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animate, setAnimate] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0);
+  const [isActive, setIsActive] = useState(false); // Estado para controlar la activación de la animación
+  const sectionRef = useRef(null); // Ref para la sección a observar
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsActive(true); // Activa la animación cuando la sección entra en el viewport
+        }
+      },
+      {
+        root: null, // null significa que el viewport es el contenedor de referencia
+        rootMargin: "0px",
+        threshold: 0.1, // Se activa cuando el 10% de la sección es visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current); // Observa la sección referenciada
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current); // Limpia el observer al desmontar el componente
+      }
+    };
+  }, []);
 
   const content = [
     {
-      title: "Casos de",
-      title2: "Éxito1",
+      title: "Prótesis total de",
+      title2: " rodilla",
       subtitle:
-        "Te compartimos la historia detrás de los padecimientos y como tenazmente se logró  rehabilitar a los pacientes y mejorar su calidad de vida.",
+        "Los resultados de esta cirugía tienen una de las tasas de éxito más altas, es normal sentirte con angustia previo a este procedimiento, en este videoblog te explico como especialista en rodilla todo lo que debes saber",
+      background: "/1_Procedimientos.png",
     },
     {
-      title: "Casos de",
-      title2: "Éxito2",
+      title: "Prótesis total de",
+      title2: "cadera",
       subtitle:
-        "Te compartimos la historia detrás de los padecimientos y como tenazmente se logró  rehabilitar a los pacientes y mejorar su calidad de vida.",
+        "En este videoblog profundizaremos en una de las cirugías más realizadas mundialmente con poco más de 1 millón de pacientes cada año.Te explico en que consiste y quienes son candidatos",
+      background: "/2_Procedimientos.png",
     },
     {
-      title: "Casos de",
-      title2: "Éxito3",
+      title: "Hernia de ",
+      title2: "disco lumbar",
       subtitle:
-        "Te compartimos la historia detrás de los padecimientos y como tenazmente se logró  rehabilitar a los pacientes y mejorar su calidad de vida.",
+        "¿Sabías que la radiculopatía por hernia en disco lumbar es una de las principales causas de discapacidad en todo el mundo? Me gustaría hablar sobre la intervención quirúrgica donde se realizará una descompresión de la raíz nerviosa afectada",
+      background: "/3_Procedimientos.png",
+    },
+    {
+      title: "Lesiones en",
+      title2: " Ligamento cruzado anterior",
+      subtitle:
+        "El ligamento cruzado anterior es uno de los estabilizadores más importantes de la rodilla que le da el 85% de su estabilidad, acompáñame te platico a detalle cómo se aborda esta lesión",
+      background: "/4_Procedimientos.png",
+    },
+    {
+      title: "hernia discal",
+      title2: "cervica",
+      subtitle:
+        "Una hernia se produce cuando el disco que se encargan de disipar las fuerzas que recorren la columna se dañan, por tanto, se aplasta las raíces nerviosas. Te invito a ver este videoblog para conocer su tratamiento",
+      background: "/5_Procedimientos.png",
+    },
+    {
+      title: "Lesiones en",
+      title2: "meniscos",
+      subtitle:
+        "son responsables del casi 50 % de la trasmisión de fuerza a través de la rodilla y actúan como estabilizadores secundarios. Esta es una de las lesiones de rodilla más comunes te invito a conocer tratamiento",
+      background: "/6_Procedimientos.png",
     },
   ];
 
   function incrementIndex() {
-    if (currentIndex < content.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      setCurrentIndex(0);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % content.length);
+    setAnimate(true);
+    setAnimationKey((prevKey) => prevKey + 1);
   }
 
   function decrementIndex() {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    } else {
-      setCurrentIndex(content.length - 1);
-    }
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + content.length) % content.length
+    );
+    setAnimate(true);
+    setAnimationKey((prevKey) => prevKey + 1);
   }
 
+  useEffect(() => {
+    if (animate) {
+      const timer = setTimeout(() => setAnimate(false), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [animate, currentIndex]);
+
   return (
-    <main
-      className="flex flex-col h-screen py-16 md:py-0"
-      style={{
-        backgroundImage: "url(/casos_exito.png)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="flex justify-center md:justify-between items-center h-screen md:w-[1400px] m-auto px-16">
-        <button onClick={decrementIndex} className="hidden md:block">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-arrow-narrow-left"
-            width="64"
-            height="64"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#ffffff"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M5 12l14 0" />
-            <path d="M5 12l4 4" />
-            <path d="M5 12l4 -4" />
-          </svg>{" "}
-        </button>
-        <div className="flex flex-col justify-center items-start">
-          <h1 className="font-bold text-[25px] md:text-[50px] mb-2">
-            {content[currentIndex].title}
-          </h1>
-          <h1 className="font-bold text-[70px] md:text-[140px] mb-2">
-            {content[currentIndex].title2}
-          </h1>
-          <h1 className="font-bold text-[10px] md:text-[16px] text-[#969596] mb-8 text ">
-            {content[currentIndex].subtitle.slice(
-              0,
-              Math.floor(content[currentIndex].subtitle.length / 2)
-            )}
-            <br />
-            {content[currentIndex].subtitle.slice(
-              Math.floor(content[currentIndex].subtitle.length / 2)
-            )}
-          </h1>
-          <button className="bg-blue-500 hover:bg-blue-700 px-8 py-2 mb-12">
-            <p className="text-sm">Ver Casos.</p>
-          </button>
-          <div className="flex justify-center items-center gap-4">
-            {content.map((item, index) => (
+    <main className="flex flex-col h-screen py-16 md:py-0">
+      <div ref={sectionRef} className="overflow-hidden h-screen">
+        <motion.div
+          key={currentIndex} // Asegúrate de que este valor cambie para reiniciar la animación
+          initial={{ scale: 1.5 }}
+          animate={{ scale: isActive ? 1 : 1.5 }} // Usa el estado para controlar la animación
+          transition={{ duration: 1.0 }}
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundImage: `url(${content[currentIndex].background})`,
+          }}
+        >
+          <div className="flex justify-center md:justify-between items-center h-screen md:w-[1400px] m-auto px-16">
+            <button onClick={decrementIndex} className="hidden md:block">
               <svg
-                className="cursor-pointer"
-                key={index}
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
+                width="31"
+                height="57"
+                viewBox="0 0 31 57"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                onClick={() => setCurrentIndex(index)}
               >
-                <circle
-                  cx="6"
-                  cy="6"
-                  r="6"
-                  fill={currentIndex === index ? "#3B82F6" : "#FFFFFF"}
+                <path
+                  d="M28.2861 54.6339L2.41885 28.1918L28.861 2.32457"
+                  stroke="#969596"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
               </svg>
-            ))}
+            </button>
+            <motion.div
+              key={animationKey}
+              className={`flex flex-col justify-center items-start px-16`}
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0 }}
+            >
+              <h1 className="font-bold text-[25px] md:text-[50px] mb-2">
+                {content[currentIndex].title}
+              </h1>
+              <h1 className="font-bold text-[70px] md:text-[80px] mb-2">
+                {content[currentIndex].title2}
+              </h1>
+              <h3 className="font-bold text-[14px] md:text-[18px] text-[#969596] mb-8">
+                {content[currentIndex].subtitle}
+              </h3>
+              <button className="bg-blue-500 hover:bg-blue-700 px-8 py-2 mb-12">
+                <p className="text-sm">Conocer más</p>
+              </button>
+              <div className="flex justify-center items-center gap-4">
+                {content.map((item, index) => (
+                  <svg
+                    className="cursor-pointer"
+                    key={index}
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    onClick={() => setCurrentIndex(index)}
+                  >
+                    <circle
+                      cx="6"
+                      cy="6"
+                      r="6"
+                      fill={currentIndex === index ? "#3B82F6" : "#FFFFFF"}
+                    />
+                  </svg>
+                ))}
+              </div>
+            </motion.div>
+            <button onClick={incrementIndex} className="hidden md:block">
+              <svg
+                width="31"
+                height="57"
+                viewBox="0 0 31 57"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.42188 2L28.5781 28.1562L2.42188 54.3125"
+                  stroke="#969596"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </div>
-        </div>
-        <button onClick={incrementIndex} className="hidden md:block">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-arrow-narrow-right"
-            width="64"
-            height="64"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#ffffff"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M5 12l14 0" />
-            <path d="M15 16l4 -4" />
-            <path d="M15 8l4 4" />
-          </svg>{" "}
-        </button>
+        </motion.div>
       </div>
     </main>
   );
