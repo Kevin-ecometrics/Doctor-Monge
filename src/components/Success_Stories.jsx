@@ -35,43 +35,43 @@ const SuccessStories = () => {
 
   const content = [
     {
-      title: "Prótesis total de",
-      title2: " rodilla",
+      title: "Prótesis Total de",
+      title2: "Rodilla",
       subtitle:
         "Los resultados de esta cirugía tienen una de las tasas de éxito más altas, es normal sentirte con angustia previo a este procedimiento, en este videoblog te explico como especialista en rodilla todo lo que debes saber",
       background: "/1_Procedimientos.png",
     },
     {
-      title: "Prótesis total de",
-      title2: "cadera",
+      title: "Prótesis Total de",
+      title2: "Cadera",
       subtitle:
         "En este videoblog profundizaremos en una de las cirugías más realizadas mundialmente con poco más de 1 millón de pacientes cada año.Te explico en que consiste y quienes son candidatos",
       background: "/2_Procedimientos.png",
     },
     {
       title: "Hernia de ",
-      title2: "disco lumbar",
+      title2: "Disco Lumbar",
       subtitle:
         "¿Sabías que la radiculopatía por hernia en disco lumbar es una de las principales causas de discapacidad en todo el mundo? Me gustaría hablar sobre la intervención quirúrgica donde se realizará una descompresión de la raíz nerviosa afectada",
       background: "/3_Procedimientos.png",
     },
     {
-      title: "Lesiones en",
-      title2: " Ligamento cruzado anterior",
+      title: "Lesion por",
+      title2: "L.C.A.",
       subtitle:
         "El ligamento cruzado anterior es uno de los estabilizadores más importantes de la rodilla que le da el 85% de su estabilidad, acompáñame te platico a detalle cómo se aborda esta lesión",
       background: "/4_Procedimientos.png",
     },
     {
-      title: "hernia discal",
-      title2: "cervica",
+      title: "Hernia Discal",
+      title2: "Cervica",
       subtitle:
         "Una hernia se produce cuando el disco que se encargan de disipar las fuerzas que recorren la columna se dañan, por tanto, se aplasta las raíces nerviosas. Te invito a ver este videoblog para conocer su tratamiento",
       background: "/5_Procedimientos.png",
     },
     {
       title: "Lesiones en",
-      title2: "meniscos",
+      title2: "Meniscos",
       subtitle:
         "son responsables del casi 50 % de la trasmisión de fuerza a través de la rodilla y actúan como estabilizadores secundarios. Esta es una de las lesiones de rodilla más comunes te invito a conocer tratamiento",
       background: "/6_Procedimientos.png",
@@ -103,17 +103,17 @@ const SuccessStories = () => {
     <main className="flex flex-col h-screen py-16 md:py-0">
       <div ref={sectionRef} className="overflow-hidden h-screen">
         <motion.div
-          key={currentIndex} // Asegúrate de que este valor cambie para reiniciar la animación
-          initial={{ scale: 1.5 }}
-          animate={{ scale: isActive ? 1 : 1.5 }} // Usa el estado para controlar la animación
-          transition={{ duration: 1.0 }}
+          key={currentIndex}
+          initial={{ scale: 1.25 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
           style={{
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundImage: `url(${content[currentIndex].background})`,
           }}
         >
-          <div className="flex justify-center md:justify-between items-center h-screen md:w-[1400px] m-auto px-16">
+          <div className="flex justify-center md:justify-between items-center h-screen md:w-[1400px] m-auto px-28">
             <button onClick={decrementIndex} className="hidden md:block">
               <svg
                 width="31"
@@ -138,13 +138,13 @@ const SuccessStories = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0 }}
             >
-              <h1 className="font-bold text-[25px] md:text-[50px] mb-2">
+              <h2 className="font-bold text-[25px] md:text-[50px] mb-2">
                 {content[currentIndex].title}
-              </h1>
+              </h2>
               <h1 className="font-bold text-[70px] md:text-[80px] mb-2">
                 {content[currentIndex].title2}
               </h1>
-              <h3 className="font-bold text-[14px] md:text-[18px] text-[#969596] mb-8">
+              <h3 className="font-bold text-[14px] md:text-[18px] text-[#969596] mb-8 md:w-[70%]">
                 {content[currentIndex].subtitle}
               </h3>
               <button className="bg-blue-500 hover:bg-blue-700 px-8 py-2 mb-12">

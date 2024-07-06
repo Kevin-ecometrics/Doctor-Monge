@@ -24,7 +24,7 @@ const Education = () => {
         " Hospital General del Estado de Sonora, avalado por la U.N.A.M. certificado y miembro del Consejo Mexicano de Ortopedia.",
     },
     {
-      logo: "/Ricardo Monge  pertenece a una  de las  organizaciones de ortopedia y traumatologia más grande de america latina.png",
+      logo: "/Ricardo Monge pertenece a una de las organizaciones de ortopedia y traumatologia mas grande de america latina.png",
       alt: "Ricardo Monge pertenece a una institución que fomenta el conocimiento y promueve el mejoramiento continuo de la práctica médica a especialistas en ortopedia y traumatología",
       years: "2021 - 2022",
       university: "4to. Lugar Nacional FEMECOT 2022",
@@ -38,11 +38,11 @@ const Education = () => {
   };
 
   return (
-    <main className="md:w-[80%] md:mx-auto py-44 md:h-screen" ref={ref}>
+    <main className="md:w-[80%] md:mx-auto py-44" ref={ref}>
       <div className="md:w-full flex flex-col justify-center md:flex-row md:justify-between items-center">
         <div>
           <h1 className="text-[42px] font-medium text-center md:text-start">
-            Trayectoria académica
+            Trayectoria Académica
           </h1>
           <h4 className="font-bold text-[16px] text-[#969596] text-center md:text-start px-8 md:px-0 md:w-[70%]">
             Me he preparado en las mejores instituciones para brindarte
@@ -54,7 +54,7 @@ const Education = () => {
         </div>
         <div className="py-6 md:py-0">
           <button
-            className="bg-blue-500 hover:bg-blue-700 px-16 py-2"
+            className="bg-blue-500 hover:bg-blue-700 px-8 py-2 whitespace-nowrap"
             onClick={handleButtonClick}
           >
             Ver Títulos
@@ -65,7 +65,7 @@ const Education = () => {
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 2.0, ease: "easeOut" }}
+          transition={{ duration: 3.0, ease: "easeOut" }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-8 border-b border-gray-300 items-center px-8"
         >
           <div>

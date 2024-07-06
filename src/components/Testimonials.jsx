@@ -51,7 +51,7 @@ function Testimonials() {
   return (
     <main
       ref={ref}
-      className="flex justify-center items-center h-screen py-16 md:py-0 relative"
+      className="flex justify-center items-center md:h-screen py-16 md:py-0 relative"
       style={{
         overflow: "hidden", // Asegura que el contenido animado no desborde
       }}
@@ -89,8 +89,8 @@ function Testimonials() {
           </svg>
 
           <h1 className="font-semibold text-[29px] md:text-[42px] py-4 md:py-16">
-            Encontramos el tratamiento ortopedista perfecto que sea a la medida
-            para aliviar a cada paciente en Tijuana{" "}
+            Encontramos el mejor tratamiento ortopedista para cada paciente en
+            Tijuana
           </h1>
         </div>
         <div>
@@ -104,10 +104,10 @@ function Testimonials() {
                 transition={{ duration: 0.5 }}
                 className={currentTestimonial === index ? "block" : "hidden"}
               >
-                <h2 className="mb-8 font-bold text-[22px] text-[#ACACAD]">
+                <h2 className="mb-8 font-normal text-[22px] text-[#ACACAD]">
                   {testimonial.text}
                 </h2>
-                <h3 className="mb-8 font-bold text-[24px]">
+                <h3 className="mb-8 font-normal text-[24px]">
                   {testimonial.name}
                 </h3>
                 <h3 className="font-medium text-[22px] text-[#D9D9D9] mb-16">
@@ -117,7 +117,7 @@ function Testimonials() {
             ))}
           </section>
 
-          <div className="flex justify-start items-center gap-4">
+          <div className="flex justify-start items-center gap-4 md:mb-0 mb-16">
             <button
               className="border border-white px-4 py-2 hover:bg-blue-500 hover:text-[#000] transition-all duration-300"
               onClick={() =>
