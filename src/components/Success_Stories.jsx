@@ -46,8 +46,7 @@ const SuccessStories = () => {
       title2: "Cadera",
       subtitle:
         "En este videoblog profundizaremos en una de las cirugías más realizadas mundialmente con poco más de 1 millón de pacientes cada año.Te explico en que consiste y quienes son candidatos",
-      background:
-        "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png",
+      background: "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png",
     },
     {
       title: "Hernia de ",
@@ -78,7 +77,8 @@ const SuccessStories = () => {
       title2: "Meniscos",
       subtitle:
         "son responsables del casi 50 % de la trasmisión de fuerza a través de la rodilla y actúan como estabilizadores secundarios. Esta es una de las lesiones de rodilla más comunes te invito a conocer tratamiento",
-      background: "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png",
+      background:
+        "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png",
     },
   ];
 

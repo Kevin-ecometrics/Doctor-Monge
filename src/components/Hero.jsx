@@ -27,21 +27,13 @@ function Hero() {
               className="mb-8 "
             />
             <h2 className="mb-8 font-semibold md:w-[500px] text-[18px] text-[#969596] hidden md:block">
-              Soy especialista en reemplazo de cadera, rodilla, artroscopia de
-              hombro y rodilla y cirugía de columna con base en Tijuana B.C.
+              Soy especialista en artroscopia y reemplazo de cadera, rodilla,
+              hombro y cirugía de columna en Tijuana B.C.
             </h2>
-            <h3 className="mb-4 font-semibold md:w-[500px] text-[18px] text-[#969596] hidden  md:block">
-              Me interesa conocer tu caso y acompañarte a comprender tu
-              enfermedad o lesión y comenzar juntos con el tratamiento ideal
-              para ti
-            </h3>
-            <h3 className="mb-4 font-semibold md:w-[500px] text-[22px] text-[#969596] hidden md:block">
-              ¿Estas Listo?
-            </h3>
           </section>
           <div className="w-[400px] h-[400px] md:h-screen md:w-full md:absolute md:translate-x-4 translate-x-[-40px] top-[-150px] hidden md:block">
             <motion.img
-              key={animationKey} // Paso 3: Usa el estado como key para reiniciar la animación
+              key={animationKey}
               src="/hero.webp"
               style={{
                 maskImage: "linear-gradient(to bottom, black 60%, transparent)",
@@ -53,7 +45,7 @@ function Hero() {
           </div>
           <div className="block md:hidden">
             <motion.img
-              key={animationKey} // Paso 3: Usa el estado como key para reiniciar la animación
+              key={animationKey}
               style={{
                 maskImage: "linear-gradient(to bottom, black 60%, transparent)",
               }}
@@ -64,16 +56,8 @@ function Hero() {
             />
             <h2 className="mb-8 font-semibold md:w-[500px] text-[18px] text-[#969596]">
               Soy especialista en reemplazo de cadera, rodilla, artroscopia de
-              hombro y rodilla y cirugía de columna con base en Tijuana B.C.
+              hombro y rodilla y cirugía de columna en Tijuana B.C.
             </h2>
-            <h3 className="mb-4 font-semibold md:w-[500px] text-[18px] text-[#969596]">
-              Me interesa conocer tu caso y acompañarte a comprender tu
-              enfermedad o lesión y comenzar juntos con el tratamiento ideal
-              para ti
-            </h3>
-            <h3 className="mb-4 font-semibold md:w-[500px] text-[22px] text-[#969596]">
-              ¿Estas Listo?
-            </h3>
           </div>
         </div>
 
