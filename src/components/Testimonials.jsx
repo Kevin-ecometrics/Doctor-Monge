@@ -19,12 +19,12 @@ const testimonials = [
   },
   {
     text: "Mi experiencia con el dr monge fue muy buena, nos explicó perfectamente todo, apenas empiezo un tratamiento con el pero la atención fue excelente y el trato muy amable. Lo recomiendo!!",
-    name: "Nelly toledo",
+    name: "Nelly Toledo",
     topic: "Traumatología ",
   },
   {
     text: "Excelente doctor , muy explícito en sus palabras , tanto profesional como humana, ambas cosas totalmente diferentes , certero y sabio en sus diagnósticos ,lo recomiendo ampliamente gracias doctor en lo personal por su enorme ayuda y ante todo paciencia a todas mis dudas con amabilidad que me las respondió al momento ,grx mil",
-    name: "Alicia garza soltero",
+    name: "Alicia Garza Soltero",
     topic: "Traumatología ",
   },
 ];
@@ -62,7 +62,8 @@ function Testimonials() {
         animate={{ scale: 1 }} // Anima la escala al 100% cuando está en vista
         transition={{ duration: 5, ease: "easeOut" }}
         style={{
-          backgroundImage: "url('/testimoniales.png')",
+          backgroundImage:
+            "url('/Bienvenido a tu tratamiento a la medida con expertos en traumatologia.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "absolute", // Posiciona sobre el main

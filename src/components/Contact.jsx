@@ -54,7 +54,8 @@ function Contact() {
         animate={{ scale: 1 }} // Anima la escala al 100% cuando está en vista
         transition={{ duration: 5, ease: "easeOut" }}
         style={{
-          backgroundImage: "url('/contact.png')",
+          backgroundImage:
+            "url('/Comodidad desde la primera visita en el consultorio de Dr Monge.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "absolute", // Posiciona sobre el main

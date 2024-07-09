@@ -5,10 +5,12 @@ const Education = () => {
   const [showImages, setShowImages] = useState(false);
   const ref = useRef(null);
   const isVisible = useInView(ref);
+  const [hoverIndex, setHoverIndex] = useState(null);
 
   const educationData = [
     {
       logo: "/Ricardo Monge  obtuvo su titulo  como medico  general en una prestigiosa  universidad en Tijuana Baja California.png",
+      hoverLogo: "/xochicalco.png",
       alt: "El doctor Ricardo Monge se formó en una de las mejores universidades de Tijuana Baja california con un modelo educativo integral",
       years: "2013 - 2018",
       university: "Universidad Xochicalco",
@@ -17,6 +19,7 @@ const Education = () => {
     },
     {
       logo: "/Ricardo Monge es un medico especialista avalado por la UNAM.png",
+      hoverLogo: "/unam.png",
       alt: "El doctor Ricardo Monge fue Avadado por unas de las facultades más reconocidas del país en su especialidad como traumatólogo",
       years: "2018 - 2021",
       university: "Universidad Nacional Autónoma de México.",
@@ -25,6 +28,7 @@ const Education = () => {
     },
     {
       logo: "/Ricardo Monge pertenece a una de las organizaciones de ortopedia y traumatologia mas grande de america latina.png",
+      hoverLogo: "/femecot.png",
       alt: "Ricardo Monge pertenece a una institución que fomenta el conocimiento y promueve el mejoramiento continuo de la práctica médica a especialistas en ortopedia y traumatología",
       years: "2021 - 2022",
       university: "4to. Lugar Nacional FEMECOT 2022",
@@ -61,8 +65,9 @@ const Education = () => {
           </button>
         </div>
       </div>
-      {educationData.map((item) => (
+      {educationData.map((item, index) => (
         <motion.div
+          key={index}
           initial={{ opacity: 0, y: -100 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 3.0, ease: "easeOut" }}
@@ -70,9 +75,11 @@ const Education = () => {
         >
           <div>
             <img
-              src={item.logo}
+              src={hoverIndex === index ? item.hoverLogo : item.logo}
               className="w-24"
               alt={item.alt}
+              onMouseEnter={() => setHoverIndex(index)}
+              onMouseLeave={() => setHoverIndex(null)}
               title="logos Institucionales"
             />
           </div>

@@ -39,42 +39,46 @@ const SuccessStories = () => {
       title2: "Rodilla",
       subtitle:
         "Los resultados de esta cirugía tienen una de las tasas de éxito más altas, es normal sentirte con angustia previo a este procedimiento, en este videoblog te explico como especialista en rodilla todo lo que debes saber",
-      background: "/1_Procedimientos.png",
+      background: "/Protesis%20total%20de%20cadera%20en%20Tijuana.png",
     },
     {
       title: "Prótesis Total de",
       title2: "Cadera",
       subtitle:
         "En este videoblog profundizaremos en una de las cirugías más realizadas mundialmente con poco más de 1 millón de pacientes cada año.Te explico en que consiste y quienes son candidatos",
-      background: "/2_Procedimientos.png",
+      background:
+        "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png",
     },
     {
       title: "Hernia de ",
       title2: "Disco Lumbar",
       subtitle:
         "¿Sabías que la radiculopatía por hernia en disco lumbar es una de las principales causas de discapacidad en todo el mundo? Me gustaría hablar sobre la intervención quirúrgica donde se realizará una descompresión de la raíz nerviosa afectada",
-      background: "/3_Procedimientos.png",
+      background:
+        "/protesis%20total%20de%20rodilla%20en%20Tijuana%20consulta.png",
     },
     {
       title: "Lesion por",
       title2: "L.C.A.",
       subtitle:
         "El ligamento cruzado anterior es uno de los estabilizadores más importantes de la rodilla que le da el 85% de su estabilidad, acompáñame te platico a detalle cómo se aborda esta lesión",
-      background: "/4_Procedimientos.png",
+      background:
+        "/Lesiones%20en%20ligamento%20cruzado%20anterior%20tratamiento%20conservador%20en%20Tijuana.png",
     },
     {
       title: "Hernia Discal",
       title2: "Cervica",
       subtitle:
         "Una hernia se produce cuando el disco que se encargan de disipar las fuerzas que recorren la columna se dañan, por tanto, se aplasta las raíces nerviosas. Te invito a ver este videoblog para conocer su tratamiento",
-      background: "/5_Procedimientos.png",
+      background:
+        "/Hernia%20de%20disco%20lumbar%20cirugia%20y%20tratamiento%20en%20Tijuana.png",
     },
     {
       title: "Lesiones en",
       title2: "Meniscos",
       subtitle:
         "son responsables del casi 50 % de la trasmisión de fuerza a través de la rodilla y actúan como estabilizadores secundarios. Esta es una de las lesiones de rodilla más comunes te invito a conocer tratamiento",
-      background: "/6_Procedimientos.png",
+      background: "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png",
     },
   ];
 
@@ -100,7 +104,7 @@ const SuccessStories = () => {
   }, [animate, currentIndex]);
 
   return (
-    <main className="flex flex-col h-screen py-16 md:py-0">
+    <main className="flex flex-col md:h-screen py-16 md:py-0">
       <div ref={sectionRef} className="overflow-hidden h-screen">
         <motion.div
           key={currentIndex}
