@@ -43,7 +43,7 @@ function Partners() {
   ];
   return (
     <div>
-      <main class="flex justify-center md:justify-start flex-col md:w-[80%] mx-auto items-center md:items-start py-48 md:h-screen">
+      <main class="flex justify-center md:justify-start flex-col md:w-[80%] mx-auto items-center md:items-start py-16 md:py-48 ">
         <h1 class="text-[42px] font-medium mb-4 px-8 md:px-0 text-center">
           Colegios Médicos
         </h1>
@@ -67,7 +67,7 @@ function Partners() {
                     : partner.image
                 }
                 alt={partner.alt}
-                className="w-64 h-64 object-contain"
+                className="w-48 h-48 object-contain"
               />
             </div>
           ))}

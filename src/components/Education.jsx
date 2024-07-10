@@ -42,7 +42,7 @@ const Education = () => {
   };
 
   return (
-    <main className="md:w-[80%] md:mx-auto py-44" ref={ref}>
+    <main className="md:w-[80%] md:mx-auto py-16 md:py-44" ref={ref}>
       <div className="md:w-full flex flex-col justify-center md:flex-row md:justify-between items-center">
         <div>
           <h1 className="text-[42px] font-medium text-center md:text-start">

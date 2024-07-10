@@ -1,0 +1,16 @@
+---
+const { videoId } = Astro.props;
+---
+
+<div class="flex justify-center items-center h-screen relative">
+  <div class="aspect-w-16 aspect-h-9 w-full max-w-5xl">
+    <iframe
+      src={`https://www.youtube.com/embed/${videoId}`}
+      class="md:w-full md:h-[500px] w-screen h-96 px-4"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+  </div>
+</div>

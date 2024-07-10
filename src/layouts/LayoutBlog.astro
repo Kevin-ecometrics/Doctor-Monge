@@ -1,6 +1,6 @@
 ---
-import Navbar from "../components/Navbar.astro";
 import { ViewTransitions } from "astro:transitions";
+
 interface Props {
   title: string;
   description: string;
@@ -8,6 +8,7 @@ interface Props {
 }
 
 import "@fontsource-variable/inter";
+import Navbar from "../components/blogs/navbar.astro";
 
 const { title, description, keywords } = Astro.props;
 ---

@@ -1,0 +1,136 @@
+---
+import Background from "../../components/blogs/background.astro";
+import Layout from "../../layouts/LayoutBlog.astro";
+import Content from "../../components/blogs/content.astro";
+import Doctorialia from "../../components/icons/Doctoralia.astro";
+import Facebook from "../../components/icons/Facebook.astro";
+import Instagram from "../../components/icons/Instagram.astro";
+import Tiktok from "../../components/icons/Tiktok.astro";
+import { slide } from "astro:transitions";
+export function getStaticPaths() {
+  return [
+    { params: { blog: "Artroplastia rodilla con protesis total" } },
+    { params: { blog: "Hernia de disco lumbar" } },
+    { params: { blog: "Artroplastia de la cadera con protesis total" } },
+  ];
+}
+
+const blogs = [
+  {
+    titulo: "Artroplastia rodilla con protesis total",
+    ruta: "/blogs/Artroplastia rodilla con protesis total",
+  },
+  { titulo: "Hernia de disco lumbar", ruta: "/blogs/Hernia de disco lumbar" },
+  {
+    titulo: "Artroplastia de la cadera con protesis total",
+    ruta: "/blogs/Artroplastia de la cadera con protesis total",
+  },
+];
+
+const { blog } = Astro.params;
+const otrosBlogs = blogs.filter((b) => b.titulo !== blog);
+
+let image;
+let date;
+let content;
+if (blog === "Artroplastia rodilla con protesis total") {
+  image = "/fondo3.png";
+  date = "Junio 2024";
+  content =
+    "Hola, en este blog profundizaremos en una de las cirugías más realizadas en el campo de la medicina, te explico en que consiste está técnica mínimamente invasiva y que puedes esperar previo durante y después, da click para comenzar";
+} else if (blog === "Hernia de disco lumbar") {
+  image = "/fondo2.png";
+  date = "Mayo 2024";
+  content =
+    "Hola, en este blog profundizaremos en una de las cirugías más realizadas en el campo de la medicina, te explico en que consiste está técnica mínimamente invasiva y que puedes esperar previo durante y después, da click para comenzar";
+} else if (blog === "Artroplastia de la cadera con protesis total") {
+  image = "/fondo1.png";
+  date = "Abril 2024";
+  content =
+    "Hola, en este blog profundizaremos en una de las cirugías más realizadas en el campo de la medicina, te explico en que consiste está técnica mínimamente invasiva y que puedes esperar previo durante y después, da click para comenzar";
+} else {
+  image = "/fondoDefault.png";
+}
+---
+
+<Layout
+  title="Dr. Ricardo Monge especialista en traumatología en Tijuana"
+  description="Recibe la atención en ortopedia con el Dr. Ricardo Monge especializado en lesiones musculoesqueléticas en rodillas, cadera y columna en Tijuana."
+  keywords="Ortopedista, Traumatólogo, Tijuana, Baja California, Dr. Ricardo Monge"
+>
+  <main
+    transition:animate={slide({
+      duration: "0.8s",
+    })}
+  >
+    <div
+      class="fixed flex flex-col items-center justify-center h-screen gap-4 px-14 z-20"
+    >
+      <div class="border-r border-gray-200 h-48 md:block hidden z-10"></div>
+      <a
+        href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
+        target="_blank"
+        class="md:block hidden mb-2"
+      >
+        <Facebook class="cursor-pointer" />
+      </a>
+      <a
+        href="https://www.tiktok.com/@elmongedelaortopedia"
+        target="_blank"
+        class="md:block hidden mb-2"
+      >
+        <Tiktok class="cursor-pointer" />
+      </a>
+      <a
+        href="https://www.instagram.com/drmonge.ortho/?hl=es"
+        target="_blank"
+        class="md:block hidden mb-2"
+      >
+        <Instagram class="cursor-pointer" />
+      </a>
+      <a
+        href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
+        target="_blank"
+        class="md:block hidden mb-2"
+      >
+        <Doctorialia class="cursor-pointer" />
+      </a>
+      <div class="border-r border-gray-200 h-48 md:block hidden z-10"></div>
+    </div>
+    <Background image={image} title={blog} date={date} />
+    <Content content={content} />
+    <hr />
+    <footer class="text-white p-4 mt-8 mb-8">
+      <div class="max-w-4xl mx-auto flex flex-col items-center">
+        <h3 class="text-lg font-semibold mb-4">Otros Blogs</h3>
+        <ul class="flex flex-wrap gap-4 justify-center">
+          {
+            otrosBlogs.map((blog) => (
+              <li>
+                <a
+                  href={blog.ruta}
+                  class="text-blue-500 hover:text-blue-100 transition-colors duration-300"
+                >
+                  {blog.titulo}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  main {
+    color: white;
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    overflow-x: hidden;
+  }
+</style>
