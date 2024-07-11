@@ -65,10 +65,6 @@ function Hero() {
           <div className="bottom-10 text-md px-1 fixed">
             <h1>© Doctor Monge. 2024</h1>
           </div>
-          <div className="fixed bottom-10 right-16 text-md flex gap-6 cursor-pointer">
-            <h1 className="hover:text-blue-500">ENG</h1>
-            <h1 className="hover:text-blue-500">ESP</h1>
-          </div>
         </div>
       </main>
     </div>
