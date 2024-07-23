@@ -42,13 +42,13 @@ const Education = () => {
   };
 
   return (
-    <main className="md:w-[80%] md:mx-auto py-16 md:py-44" ref={ref}>
-      <div className="md:w-full flex flex-col justify-center md:flex-row md:justify-between items-center">
+    <main className="lg:w-[80%] lg:mx-auto py-16 lg:py-44" ref={ref}>
+      <div className="lg:w-full flex flex-col justify-center lg:flex-row lg:justify-between items-center">
         <div>
-          <h1 className="text-[42px] font-medium text-center md:text-start">
+          <h1 className="text-[42px] font-medium text-center lg:text-start">
             Trayectoria Académica
           </h1>
-          <h4 className="font-bold text-[16px] text-[#969596] text-center md:text-start px-8 md:px-0 md:w-[70%]">
+          <h4 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
             Me he preparado en las mejores instituciones para brindarte
             tratamiento de excelencia y acompañamiento de calidad, así como
             brindarte la información absolutamente necesaria para que comprendas
@@ -56,7 +56,7 @@ const Education = () => {
             profesional: 129001837660539
           </h4>
         </div>
-        <div className="py-6 md:py-0">
+        <div className="py-6 lg:py-0">
           <button
             className="bg-blue-500 hover:bg-blue-700 px-8 py-2 whitespace-nowrap"
             onClick={handleButtonClick}
@@ -71,7 +71,7 @@ const Education = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 3.0, ease: "easeOut" }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-8 border-b border-gray-300 items-center px-8"
+          className="grid grid-cols-1 lg:grid-cols-3 py-8 border-b border-gray-300 items-center px-8"
         >
           <div>
             <img
@@ -104,16 +104,16 @@ const Education = () => {
                 Títulos
               </h2>
             </div>
-            <div className="flex md:flex-row flex-col justify-center items-center gap-8">
+            <div className="flex lg:flex-row flex-col justify-center items-center gap-8">
               <img
                 src="/Ricardo Monge es un medico certificado por las mejores universidades de Mexico.png"
                 alt="Ricardo monge concluyo sus estudios de forma destacable en las mejores universidades de medicina en México"
-                className="mx-auto size-72  md:size-full  "
+                className="mx-auto size-72  lg:size-full  "
               />
               <img
                 src="/Ricardo Monge  especialista en cirugia y manejo de lesiones muscoloesqueleticas.png"
                 alt="Ricardo monge egresó como médico especializado en lesiones musculo esqueléticas"
-                className="mx-auto size-72 md:size-full"
+                className="mx-auto size-72 lg:size-full"
               />
             </div>
             <div className="">

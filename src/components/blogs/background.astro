@@ -9,26 +9,25 @@ const { image, title, date } = Astro.props;
     class="w-full
         h-screen
         object-cover
-        
         object-center"
   />
-  <div class="md:w-[60%]">
+  <div class="lg:w-[60%]">
     <h2
-      class="text-[40px] hidden md:block absolute font-semibold text-white bottom-72 left-48"
+      class="text-[40px] hidden lg:block absolute font-semibold text-white bottom-72 left-48"
     >
       {date}
     </h2>
     <h1
-      class="text-[60px] hidden md:block absolute font-semibold text-white bottom-48 left-48"
+      class="text-[60px] hidden lg:block absolute font-semibold text-white bottom-48 left-48"
     >
       {title}
     </h1>
   </div>
   <div class="px-8 py-4">
-    <h2 class="text-[20px] md:hidden font-semibold text-white text-start">
+    <h2 class="text-[20px] lg:hidden font-semibold text-white text-start">
       {date}
     </h2>
-    <h1 class="text-[40px] md:hidden font-semibold text-white text-start">
+    <h1 class="text-[40px] lg:hidden font-semibold text-white text-start">
       {title}
     </h1>
   </div>

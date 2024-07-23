@@ -9,54 +9,76 @@ import Tiktok from "../../components/icons/Tiktok.astro";
 import { slide } from "astro:transitions";
 export function getStaticPaths() {
   return [
-    { params: { blog: "Artroplastia rodilla con protesis total" } },
-    { params: { blog: "Hernia de disco lumbar" } },
-    { params: { blog: "Artroplastia de la cadera con protesis total" } },
+    { params: { blog: "Fractura-de-tibia-y-Perone" } },
+    { params: { blog: "Pseudoartrosis-y-Retraso-de-Consolidacion" } },
+    { params: { blog: "Lesion-de-Ligamento-cruzado-anterior" } },
   ];
 }
 
 const blogs = [
   {
-    titulo: "Artroplastia rodilla con protesis total",
-    ruta: "/blogs/Artroplastia rodilla con protesis total",
+    titulo: "Fractura-de-tibia-y-Perone",
+    ruta: "/blogs/Fractura-de-tibia-y-Perone",
+    blogTitle: "Fractura de Tibia y Peroné",
+    title: "Fracturas de Tibia y Peroné: Guía de Tratamiento y Recuperación ",
+    description:
+      "Descubre todo sobre las fracturas de tibia y peroné: causas, síntomas, tratamientos conservadores quirúrgicos, consejos y rehabilitación eficaz.",
+    keywords:
+      "fracturas de tibia y peroné, tratamiento y rehabilitación de fractura",
   },
-  { titulo: "Hernia de disco lumbar", ruta: "/blogs/Hernia de disco lumbar" },
   {
-    titulo: "Artroplastia de la cadera con protesis total",
-    ruta: "/blogs/Artroplastia de la cadera con protesis total",
+    titulo: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+    ruta: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion",
+    blogTitle: "Pseudoartrosis y Retraso de Consolidación",
+    title: "Complicaciones de Fracturas: Pseudoartrosis y Consolidación ",
+    description:
+      " Explora las causas y tratamientos de complicaciones en fracturas, pseudoartrosis y retraso en la consolidación. Conoce cómo optimizar la recuperación. ",
+    keywords: "complicaciones fracturas pseudoartrosis tratamiento ",
+  },
+  {
+    titulo: "Lesion-de-Ligamento-cruzado-anterior",
+    ruta: "/blogs/Lesion-de-Ligamento-cruzado-anterior",
+    blogTitle: "Lesión de Ligamento Cruzado Anterior",
+    title: "Recuperación de Lesión de Ligamento Cruzado Anterior en Mujeres ",
+    description:
+      "Descubre por qué las mujeres son más propensas a las lesiones de LCA y cómo la artroscopia puede ayudar en una recuperación rápida y efectiva. ",
+    keywords:
+      "lesión de LCA en mujeres, recuperación con artroscopia, factores de riesgo de LCA en mujeres ",
   },
 ];
 
 const { blog } = Astro.params;
+const blogActual = blogs.find((b) => b.titulo === blog);
 const otrosBlogs = blogs.filter((b) => b.titulo !== blog);
 
 let image;
 let date;
 let content;
-if (blog === "Artroplastia rodilla con protesis total") {
+let blogTitle;
+if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   image = "/fondo3.png";
   date = "Junio 2024";
-  content =
-    "Hola, en este blog profundizaremos en una de las cirugías más realizadas en el campo de la medicina, te explico en que consiste está técnica mínimamente invasiva y que puedes esperar previo durante y después, da click para comenzar";
-} else if (blog === "Hernia de disco lumbar") {
+  content = "Blog3";
+  blogTitle = "Lesión de Ligamento Cruzado Anterior";
+} else if (blog === "Pseudoartrosis-y-Retraso-de-Consolidacion") {
   image = "/fondo2.png";
   date = "Mayo 2024";
-  content =
-    "Hola, en este blog profundizaremos en una de las cirugías más realizadas en el campo de la medicina, te explico en que consiste está técnica mínimamente invasiva y que puedes esperar previo durante y después, da click para comenzar";
-} else if (blog === "Artroplastia de la cadera con protesis total") {
+  content = "Blog2";
+  blogTitle = "Pseudoartrosis y Retraso de Consolidación";
+} else if (blog === "Fractura-de-tibia-y-Perone") {
   image = "/fondo1.png";
   date = "Abril 2024";
-  content =
-    "Hola, en este blog profundizaremos en una de las cirugías más realizadas en el campo de la medicina, te explico en que consiste está técnica mínimamente invasiva y que puedes esperar previo durante y después, da click para comenzar";
+  content = "Blog1";
+  blogTitle = "Fractura de Tibia y Peroné";
 } else {
   image = "/fondoDefault.png";
 }
 ---
 
 <Layout
-  title="Dr. Ricardo Monge especialista en traumatología en Tijuana"
-  description="Recibe la atención en ortopedia con el Dr. Ricardo Monge especializado en lesiones musculoesqueléticas en rodillas, cadera y columna en Tijuana."
-  keywords="Ortopedista, Traumatólogo, Tijuana, Baja California, Dr. Ricardo Monge"
+  title={blogActual?.title ?? "Título predeterminado"}
+  description={blogActual?.description ?? "Descripción predeterminada"}
+  keywords={blogActual?.keywords ?? "palabras, clave, predeterminadas"}
 >
   <main
     transition:animate={slide({
@@ -66,38 +88,38 @@ if (blog === "Artroplastia rodilla con protesis total") {
     <div
       class="fixed flex flex-col items-center justify-center h-screen gap-4 px-14 z-20"
     >
-      <div class="border-r border-gray-200 h-48 md:block hidden z-10"></div>
+      <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
       <a
         href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
         target="_blank"
-        class="md:block hidden mb-2"
+        class="lg:block hidden mb-2"
       >
         <Facebook class="cursor-pointer" />
       </a>
       <a
         href="https://www.tiktok.com/@elmongedelaortopedia"
         target="_blank"
-        class="md:block hidden mb-2"
+        class="lg:block hidden mb-2"
       >
         <Tiktok class="cursor-pointer" />
       </a>
       <a
         href="https://www.instagram.com/drmonge.ortho/?hl=es"
         target="_blank"
-        class="md:block hidden mb-2"
+        class="lg:block hidden mb-2"
       >
         <Instagram class="cursor-pointer" />
       </a>
       <a
         href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
         target="_blank"
-        class="md:block hidden mb-2"
+        class="lg:block hidden mb-2"
       >
         <Doctorialia class="cursor-pointer" />
       </a>
-      <div class="border-r border-gray-200 h-48 md:block hidden z-10"></div>
+      <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
     </div>
-    <Background image={image} title={blog} date={date} />
+    <Background image={image} title={blogTitle} date={date} />
     <Content content={content} />
     <hr />
     <footer class="text-white p-4 mt-8 mb-8">
@@ -111,7 +133,7 @@ if (blog === "Artroplastia rodilla con protesis total") {
                   href={blog.ruta}
                   class="text-blue-500 hover:text-blue-100 transition-colors duration-300"
                 >
-                  {blog.titulo}
+                  {blog.blogTitle}
                 </a>
               </li>
             ))

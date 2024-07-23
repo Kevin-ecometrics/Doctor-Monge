@@ -110,7 +110,7 @@ const SuccessStories = () => {
   }, [animate, currentIndex]);
 
   return (
-    <main className="flex flex-col md:h-screen py-16 md:py-0">
+    <main className="flex flex-col lg:h-screen py-16 lg:py-0">
       <div ref={sectionRef} className="overflow-hidden h-screen">
         <motion.div
           key={currentIndex}
@@ -123,8 +123,8 @@ const SuccessStories = () => {
             backgroundImage: `url(${content[currentIndex].background})`,
           }}
         >
-          <div className="flex justify-center md:justify-between items-center h-screen md:w-[1400px] m-auto px-28">
-            <button onClick={decrementIndex} className="hidden md:block">
+          <div className="flex justify-center lg:justify-between items-center h-screen lg:w-[1400px] m-auto px-28">
+            <button onClick={decrementIndex} className="hidden lg:block">
               <svg
                 width="31"
                 height="57"
@@ -148,13 +148,13 @@ const SuccessStories = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0 }}
             >
-              <h2 className="font-bold text-[25px] md:text-[50px] mb-2">
+              <h2 className="font-bold text-[25px] lg:text-[50px] mb-2">
                 {content[currentIndex].title}
               </h2>
-              <h1 className="font-bold text-[70px] md:text-[80px] mb-2">
+              <h1 className="font-bold text-[70px] lg:text-[80px] mb-2">
                 {content[currentIndex].title2}
               </h1>
-              <h3 className="font-bold text-[14px] md:text-[18px] text-[#969596] mb-8 md:w-[70%]">
+              <h3 className="font-bold text-[14px] lg:text-[18px] text-[#969596] mb-8 lg:w-[70%]">
                 {content[currentIndex].subtitle}
               </h3>
               <button className="bg-blue-500 hover:bg-blue-700 px-8 py-2 mb-12">
@@ -184,7 +184,7 @@ const SuccessStories = () => {
                 ))}
               </div>
             </motion.div>
-            <button onClick={incrementIndex} className="hidden md:block">
+            <button onClick={incrementIndex} className="hidden lg:block">
               <svg
                 width="31"
                 height="57"

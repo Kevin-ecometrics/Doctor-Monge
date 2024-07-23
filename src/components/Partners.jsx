@@ -5,10 +5,9 @@ function Partners() {
 
   const partners = [
     {
-      image:
-        "/Tuvo su residencia en el  Hospital General del Estado de Sonora.png",
-      hoverLogo: "/hospital.png",
-      alt: "El doctor Ricardo Monge egreso del Hospital General del Estado de Sonora donde hizo su residencia",
+      image: "/Logos FENECOT 2 (A).png",
+      hoverLogo: "/Logos FENECOT 2 (B).png",
+      alt: "El doctor Ricardo Monge es miembro de la federacion nacional de colegios de ortopedia y traumatologia de mexico",
     },
     {
       image:
@@ -43,17 +42,17 @@ function Partners() {
   ];
   return (
     <div>
-      <main class="flex justify-center md:justify-start flex-col md:w-[80%] mx-auto items-center md:items-start py-16 md:py-48 ">
-        <h1 class="text-[42px] font-medium mb-4 px-8 md:px-0 text-center">
+      <main class="flex justify-center lg:justify-start flex-col lg:w-[80%] mx-auto items-center lg:items-start py-16 lg:py-48 ">
+        <h1 class="text-[42px] font-medium mb-4 px-8 lg:px-0 text-center">
           Colegios Médicos
         </h1>
-        <h4 class="font-bold text-[#969596] text-[16px] mb-8 px-8 md:px-0 md:mb-16">
+        <h4 class="font-bold text-[#969596] text-[16px] mb-8 px-8 lg:px-0 lg:mb-16">
           Miembro activo de varios colegios e instituciones especializadas me
           continúan preparando y actualizando mediante seminarios y congresos
           con el fin de seguir brindando una alta calidad de atención para
           paciente actuales y futuros
         </h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:w-full">
           {partners.map((partner, index) => (
             <div
               key={index}

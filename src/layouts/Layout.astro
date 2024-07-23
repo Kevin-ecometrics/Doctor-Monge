@@ -15,10 +15,41 @@ const { title, description, keywords } = Astro.props;
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ML4B63MEC1"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ML4B63MEC1");
+    </script>
+
+    <!-- Google Tag Manager -->
+
+    <script type="text/partytown">
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-56JJJJZZ");
+    </script>
+
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="icon" href="https://mongeortopedia.com/preview.png" />
+
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="keywords" content={keywords} />
@@ -26,9 +57,25 @@ const { title, description, keywords } = Astro.props;
     <meta name="author" content="Doctor Monge" />
     <meta name="publisher" content="Ecommetrica" />
     <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mongeortopedia.com/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content="https://mongeortopedia.com/preview.png"
+    />
+
     <ViewTransitions />
   </head>
   <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-56JJJJZZ"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
     <Navbar />
     <slot />
     <style is:global>

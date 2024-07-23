@@ -51,7 +51,7 @@ function Testimonials() {
   return (
     <main
       ref={ref}
-      className="flex justify-center items-center md:h-screen py-16 md:py-0 relative"
+      className="flex justify-center items-center lg:h-screen py-16 lg:py-0 relative"
       style={{
         overflow: "hidden", // Asegura que el contenido animado no desborde
       }}
@@ -74,7 +74,7 @@ function Testimonials() {
           zIndex: -1, // Asegura que el fondo esté detrás del contenido
         }}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 px-8 md:w-[80%] md:mx-auto gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 px-8 lg:w-[80%] lg:mx-auto gap-16">
         <div>
           <svg
             width="78"
@@ -89,7 +89,7 @@ function Testimonials() {
             />
           </svg>
 
-          <h1 className="font-semibold text-[29px] md:text-[42px] py-4 md:py-16">
+          <h1 className="font-semibold text-[29px] lg:text-[42px] py-4 lg:py-16">
             Encontramos el mejor tratamiento ortopedista para cada paciente en
             Tijuana
           </h1>
@@ -118,7 +118,7 @@ function Testimonials() {
             ))}
           </section>
 
-          <div className="flex justify-start items-center gap-4 md:mb-0 mb-16">
+          <div className="flex justify-start items-center gap-4 lg:mb-0 mb-40 ">
             <button
               className="border border-white px-4 py-2 hover:bg-blue-500 hover:text-[#000] transition-all duration-300"
               onClick={() =>

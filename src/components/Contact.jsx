@@ -22,7 +22,7 @@ function Contact() {
 
     try {
       const response = await axios.post(
-        "http://mongeortopedia.com/contactoForm",
+        "https://mongeortopedia.com/contactoForm",
         data
       );
       console.log(response);
@@ -43,7 +43,7 @@ function Contact() {
   return (
     <main
       ref={ref}
-      className="flex justify-center items-center md:h-screen py-16 md:py-0 relative"
+      className="flex justify-center items-center lg:h-screen py-16 lg:py-0 relative"
       style={{
         overflow: "hidden", // Asegura que el contenido animado no desborde
       }}
@@ -67,7 +67,7 @@ function Contact() {
           opacity: 0.9,
         }}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 px-8 gap-16 w-[80%] mx-auto z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 px-8 gap-16 w-[80%] mx-auto z-10">
         <div>
           <h1 className="font-medium text-[42px]">Contacto</h1>
           <p className="font-bold text-[#969596] text-[16px] mb-12">
@@ -96,12 +96,12 @@ function Contact() {
               664 169 0650
             </a>
             <a
-              href="mailto:rmonge.ortho@gmail.com"
+              href="mailto:pacientes@mongeortopedia.com"
               className="font-bold text-[18px] text-[#969596] hover:text-blue-600"
               target="_blank"
               rel="noopener noreferrer"
             >
-              rmonge.ortho@gmail.com
+              pacientes@mongeortopedia.com{" "}
             </a>
           </div>
         </div>
@@ -117,7 +117,7 @@ function Contact() {
             comenzar o llámanos{" "}
           </h1>
           <h2></h2>
-          <form className="mt-8 mb-24 md:mb-8" onSubmit={handleSubmit}>
+          <form className="mt-8 mb-24 lg:mb-8" onSubmit={handleSubmit}>
             <div class="relative z-0 w-full mb-5 group">
               <input
                 type="text"
@@ -175,7 +175,23 @@ function Contact() {
           </form>
           <Toaster position="top-right" />
         </div>
-      </div>
+      </div>{" "}
+      <footer className="absolute bottom-10 left-10 lg:left-20">
+        <p className="text-sm">
+          All rights reserved by Doctor Monge. 2024 ©{" "}
+          <a href="/" className="hover:text-blue-500 hover:underline">
+            <strong> mongeortopedia.com</strong>
+          </a>{" "}
+          is powered by{" "}
+          <a
+            href="https://ecommetrica.com/"
+            target="_blank"
+            className="hover:text-blue-500 hover:underline"
+          >
+            <strong>ecommetrica.com</strong>
+          </a>
+        </p>
+      </footer>
     </main>
   );
 }
