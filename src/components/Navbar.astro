@@ -14,11 +14,12 @@ import Hamburger from "./icons/Hamburger.astro";
       <img
         src="/El doctor Ricardo Monge es  ortopedista especialista en rodilla cadera y espalda.png"
         alt="El doctor Ricardo Monge es especialista en ortopedia y traumatología especializado en lesiones musculo esqueléticas  de rodilla, cadera y espalda"
+        class="px-4"
       />
     </a>
   </div>
   <div class="flex justify-end">
-    <button id="hamburger" class="focus:outline-none">
+    <button id="hamburger" class="focus:outline-none" aria-label="Abrir menu">
       <Hamburger />
     </button>
   </div>
@@ -29,7 +30,7 @@ import Hamburger from "./icons/Hamburger.astro";
   class="fixed transform translate-x-full transition-transform duration-200 ease-in-out right-0 w-72 h-full text-white bg-[#161616] border-gray-600 border overflow-auto z-20"
 >
   <div class="flex justify-between p-4">
-    <button id="close" class="focus:outline-none">
+    <button id="close" class="focus:outline-none" aria-label="Abrir menu">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -46,31 +47,41 @@ import Hamburger from "./icons/Hamburger.astro";
     </button>
   </div>
   <ul class="flex flex-col space-y-8 py-16 p-4 hover:*:text-blue-500 font-bold">
-    <a href="#section1">INICIO</a>
-    <a href="#section2">HABILIDADES</a>
-    <a href="#section3">CASOS DE EXITO</a>
-    <a href="#section4">EDUCACION</a>
-    <a href="#section5">TESTIMONIALES</a>
-    <a href="#section6">SOCIOS</a>
-    <a href="#section7">BLOG</a>
-    <a href="#section8">CONTACTO</a>
+    <li><a href="#section1">INICIO</a></li>
+    <li><a href="#section2">HABILIDADES</a></li>
+    <li><a href="#section3">CASOS DE EXITO</a></li>
+    <li><a href="#section4">EDUCACION</a></li>
+    <li><a href="#section5">TESTIMONIALES</a></li>
+    <li><a href="#section6">SOCIOS</a></li>
+    <li><a href="#section7">BLOG</a></li>
+    <li><a href="#section8">CONTACTO</a></li>
   </ul>
   <div class="flex justify-start px-4 gap-4 mt-16 md:mt-8">
     <a
       href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
       target="_blank"
+      aria-label="Facebook"
     >
       <Facebook class="cursor-pointer" />
     </a>
-    <a href="https://www.tiktok.com/@elmongedelaortopedia" target="_blank">
+    <a
+      href="https://www.tiktok.com/@elmongedelaortopedia"
+      target="_blank"
+      aria-label="Tiktok"
+    >
       <Tiktok class="cursor-pointer" />
     </a>
-    <a href="https://www.instagram.com/drmonge.ortho/?hl=es" target="_blank">
+    <a
+      href="https://www.instagram.com/drmonge.ortho/?hl=es"
+      target="_blank"
+      aria-label="Instagram"
+    >
       <Instagram class="cursor-pointer" />
     </a>
     <a
       href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
       target="_blank"
+      aria-label="Doctoralia"
     >
       <Doctorialia class="cursor-pointer" />
     </a>

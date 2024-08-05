@@ -48,18 +48,19 @@ const Education = () => {
           <h1 className="text-[42px] font-medium text-center lg:text-start">
             Trayectoria Académica
           </h1>
-          <h4 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
+          <h2 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
             Me he preparado en las mejores instituciones para brindarte
             tratamiento de excelencia y acompañamiento de calidad, así como
             brindarte la información absolutamente necesaria para que comprendas
             tu lesión o patología y poderla tratar. Número de Cédula
             profesional: 129001837660539
-          </h4>
+          </h2>
         </div>
         <div className="py-6 lg:py-0">
           <button
-            className="bg-blue-500 hover:bg-blue-700 px-8 py-2 whitespace-nowrap"
+            className="bg-blue-700 hover:bg-blue-900 text-white px-8 py-2 whitespace-nowrap"
             onClick={handleButtonClick}
+            aria-label="Ver Títulos"
           >
             Ver Títulos
           </button>

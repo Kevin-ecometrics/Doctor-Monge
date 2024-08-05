@@ -134,6 +134,7 @@ function Testimonials() {
                 viewBox="0 0 31 57"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-label="Previous Slide"
               >
                 <path
                   d="M28.2861 54.6339L2.41885 28.1918L28.861 2.32457"
@@ -158,6 +159,7 @@ function Testimonials() {
                 viewBox="0 0 31 57"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-label="Next Slide"
               >
                 <path
                   d="M2.42188 2L28.5781 28.1562L2.42188 54.3125"

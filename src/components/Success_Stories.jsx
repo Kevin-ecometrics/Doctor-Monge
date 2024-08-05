@@ -131,6 +131,7 @@ const SuccessStories = () => {
                 viewBox="0 0 31 57"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-label="Previous Slide"
               >
                 <path
                   d="M28.2861 54.6339L2.41885 28.1918L28.861 2.32457"
@@ -148,12 +149,12 @@ const SuccessStories = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0 }}
             >
-              <h2 className="font-bold text-[25px] lg:text-[50px] mb-2">
+              <h1 className="font-bold text-[25px] lg:text-[50px] mb-2">
                 {content[currentIndex].title}
-              </h2>
-              <h1 className="font-bold text-[70px] lg:text-[80px] mb-2">
-                {content[currentIndex].title2}
               </h1>
+              <h2 className="font-bold text-[70px] lg:text-[80px] mb-2">
+                {content[currentIndex].title2}
+              </h2>
               <h3 className="font-bold text-[14px] lg:text-[18px] text-[#969596] mb-8 lg:w-[70%]">
                 {content[currentIndex].subtitle}
               </h3>
@@ -191,6 +192,7 @@ const SuccessStories = () => {
                 viewBox="0 0 31 57"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-label="Next Slide"
               >
                 <path
                   d="M2.42188 2L28.5781 28.1562L2.42188 54.3125"

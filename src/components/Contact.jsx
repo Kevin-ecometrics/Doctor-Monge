@@ -55,7 +55,7 @@ function Contact() {
         transition={{ duration: 5, ease: "easeOut" }}
         style={{
           backgroundImage:
-            "url('/Comodidad desde la primera visita en el consultorio de Dr Monge.png')",
+            "url('/Comodidad_desde_la_primera_visita_en_el_consultorio_de_Dr_Monge.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "absolute", // Posiciona sobre el main

@@ -46,12 +46,12 @@ function Partners() {
         <h1 class="text-[42px] font-medium mb-4 px-8 lg:px-0 text-center">
           Colegios Médicos
         </h1>
-        <h4 class="font-bold text-[#969596] text-[16px] mb-8 px-8 lg:px-0 lg:mb-16">
+        <h2 class="font-bold text-[#969596] text-[16px] mb-8 px-8 lg:px-0 lg:mb-16">
           Miembro activo de varios colegios e instituciones especializadas me
           continúan preparando y actualizando mediante seminarios y congresos
           con el fin de seguir brindando una alta calidad de atención para
           paciente actuales y futuros
-        </h4>
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:w-full">
           {partners.map((partner, index) => (
             <div
