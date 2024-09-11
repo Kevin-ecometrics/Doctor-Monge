@@ -1,13 +1,26 @@
+---
+import Observer from "@components/blogs/Observer"
+
+---
+
 <article
   class="prose lg:prose-xl mx-auto py-4 text-gray-300 [&>h1]:text-white [&>h2]:text-white [&>h3]:text-white"
 >
-  <h1 class="text-2xl font-bold mb-2">Fractura de tibia y Perone</h1>
-  <h3 class="font-semibold text-xl mb-4">
+<Observer client:visible>
+  <h1 class="animate-fade-up text-2xl font-bold mb-2">Fractura de tibia y Perone</h1>
+  </Observer>
+
+  <Observer client:visible>
+
+  <h3 class="animate-fade-up font-semibold text-xl mb-4">
     Una de las fracturas con más incidencias en el mundo, te presento los puntos
     claves que debes conocer sobre este tipo de lesiones
   </h3>
+  </Observer>
 
-  <h4 class="text-xl mb-4">
+  <Observer client:visible>
+
+  <h4 class="animate-fade-up text-xl mb-4">
     Cuando te fracturas un hueso, el cuerpo inmediatamente empieza un proceso
     muy complejo. No solo es el hueso lo que se lastima sino todo lo que lo
     rodea, ya que al fracturarse o quebrarse se libera energía o también llamada
@@ -17,30 +30,53 @@
     proceso se llama consolidación primaria o secundaria, depende de cuál lesión
     es, cómo tu ortopedista va a solucionar ese conflicto.
   </h4>
-  <h4 class="text-xl mb-4">
+  </Observer>
+
+  <Observer client:visible>
+
+  <h4 class="animate-fade-up text-xl mb-4">
     El tratamiento es variado, entre los cuales se puede hacer de forma
     conservadora o quirúrgica. Hay tres aspectos fundamentales para que tu
     médico opte por el más conveniente, que son:
   </h4>
+  </Observer>
 
-  <ul class="list-decimal mb-4 px-6 text-white">
-    <li class="font-bold text-xl">Tipo de fractura.</li>
-    <li class="font-bold text-xl">Condición de salud general.</li>
-    <li class="font-bold text-xl">
+  <Observer client:visible>
+
+  <ul class="animate-fade-up list-decimal mb-4 px-6 text-white">
+    <li class="animate-fade-up font-bold text-xl">Tipo de fractura.</li>
+    <li class="animate-fade-up font-bold text-xl">Condición de salud general.</li>
+    <li class="animate-fade-up font-bold text-xl">
       Como están los tejidos alrededor de la fractura.
     </li>
   </ul>
-  <h3 class="text-2xl font-bold mb-4">
+  </Observer>
+
+  <Observer client:visible>
+
+  <h3 class="animate-fade-up text-2xl font-bold mb-4">
     ¿Como se fractura la tibia y el peroné?
   </h3>
-  <h4 class="text-xl mb-4">
+  </Observer>
+
+  <Observer client:visible>
+
+  <h4 class="animate-fade-up text-xl mb-4">
     Son las fracturas de huesos largos más frecuentes que pueden ocurrir por
     diversos motivos, los más comunes son: Por un impacto directo causado por
     alguna caída, rotación forzada, accidentes vehiculares, practicar algún
     deporte y por sobrecarga por desgaste.
   </h4>
-  <h3 class="text-2xl font-bold mb-4">¿Qué tratamiento es más optimo?</h3>
-  <h4 class="text-xl mb-4">
+  </Observer>
+
+  <Observer client:visible>
+
+  <h3 class="animate-fade-up text-2xl font-bold mb-4">¿Qué tratamiento es más optimo?</h3>
+  </Observer>
+
+  <Observer client:visible>
+
+  <h4 class="animate-fade-up text-xl mb-4">
     Dependerá si la fractura está cerca de la rodilla, del tobillo o justo en el
     centro, y del estado de salud general del paciente, es destacable que hay
     que atender lo antes posible para identificar si requiere tratamiento
@@ -64,10 +100,18 @@
     mediante placas, tornillos o clavos intramedulares para mantener los huesos en
     su lugar mientras se curan.
   </h4>
-  <h3 class="text-2xl font-bold mb-4">
+  </Observer>
+
+  <Observer client:visible>
+
+  <h3 class="animate-fade-up text-2xl font-bold mb-4">
     Cuando hablamos de fracturas abiertas.
   </h3>
-  <h4 class="text-xl mb-4">
+  </Observer>
+
+  <Observer client:visible>
+
+  <h4 class="animate-fade-up text-xl mb-4">
     Implica una lesión considerable tanto en el hueso como en los tejidos
     alrededor por tanto es de urgencia atender en la brevedad.
     <br />
@@ -80,8 +124,16 @@
     Posteriormente se debe estabilizar pata mejorar el flujo vascular reducir el
     dolor para realizar el cierre de la herida.
   </h4>
-  <h3 class="text-2xl font-bold mb-4">Recuperación y rehabilitación</h3>
-  <h4 class="text-xl mb-4">
+  </Observer>
+
+  <Observer client:visible>
+
+  <h3 class="animate-fade-up text-2xl font-bold mb-4">Recuperación y rehabilitación</h3>
+  </Observer>
+
+  <Observer client:visible>
+
+  <h4 class="animate-fade-up text-xl mb-4">
     Independientemente del método de tratamiento utilizado, la rehabilitación es
     esencial para la recuperación completa. Depende en que semana de
     consolidación es cuando se va a ir permitiendo de forma paulatina realizar
@@ -91,8 +143,16 @@
     como fumar pueden alentar o perjudicar el proceso de consolidación y
     cicatrización provocando incluso infecciones.
   </h4>
-  <h3 class="text-2xl font-bold mb-4">Alimentación</h3>
-  <h4 class="text-xl mb-4">
+  </Observer>
+
+  <Observer client:visible>
+
+  <h3 class="animate-fade-up text-2xl font-bold mb-4">Alimentación</h3>
+  </Observer>
+
+  <Observer client:visible>
+
+  <h4 class=" text-xl mb-4 animate-fade-up">
     Durante el proceso de consolidación ósea los tejidos requieren de proteínas
     y minerales por tanto tener un régimen alimenticio será favorecedor para un
     proceso de recuperación más ágil.
@@ -121,4 +181,7 @@
     Me encuentro en Tijuana muy cerca de ti, si tienes alguna consulta no dudes en
     escribir y si te interesa una revisión agenda para comenzar.
   </h4>
+</Observer>
+
 </article>
+

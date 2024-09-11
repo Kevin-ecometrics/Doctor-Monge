@@ -2,13 +2,22 @@
 import Blog1 from "../blogs/blog1.astro";
 import Blog2 from "../blogs/blog2.astro";
 import Blog3 from "../blogs/blog3.astro";
+import Blog4 from "../blogs/blog4.astro";
+import Blog5 from "../blogs/blog5.astro";
+import Blog6 from "../blogs/blog6.astro";
+import Blog7 from "../blogs/blog7.astro";
 const { content } = Astro.props;
 ---
 
-<main class="lg:w-[77%] mx-auto text-white lg:py-8 px-8 lg:px-0 mb-8">
+<main class="lg:w-[85%] lg:mx-auto text-white lg:py-8 lg:px-0 mb-8">
   <div>
     {content === "Blog1" ? <Blog1 /> : null}
     {content === "Blog2" ? <Blog2 /> : null}
     {content === "Blog3" ? <Blog3 /> : null}
+    {content === "Blog4" ? <Blog4 /> : null}
+    { content === "Blog5" ? <Blog5 /> : null }
+    { content === "Blog6" ? <Blog6 /> : null }
+    { content === "Blog7" ? <Blog7 /> : null }
+
   </div>
 </main>

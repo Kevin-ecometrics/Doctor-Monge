@@ -4,11 +4,18 @@ import react from "@astrojs/react";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 import partytown from "@astrojs/partytown";
-
 import playformCompress from "@playform/compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://mongeortopedista.com/",
-  integrations: [tailwind(), react(), robotsTxt(), sitemap(), partytown(), playformCompress()]
+  site: "https://mongeortopedia.com/",
+  base: "/",
+  integrations: [
+    tailwind(),
+    react(),
+    robotsTxt(),
+    sitemap(),
+    partytown(),
+    playformCompress(),
+  ],
 });

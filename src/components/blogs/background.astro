@@ -12,19 +12,17 @@ const { image, title, date } = Astro.props;
         object-center"
   />
   <div class="lg:w-[60%]">
-    <h2
-      class="text-[40px] hidden lg:block absolute font-semibold text-white bottom-72 left-48"
-    >
-      {date}
-    </h2>
-    <h1
-      class="text-[60px] hidden lg:block absolute font-semibold text-white bottom-48 left-48"
-    >
-      {title}
-    </h1>
+    <div class="hidden lg:flex lg:flex-col lg:items-start lg:justify-center lg:absolute lg:left-48 lg:top-1/2 lg:bottom-1/2">
+      <h2 class="text-[40px] font-semibold text-white mb-2">
+        {date}
+      </h2>
+      <h1 class="text-[60px] font-semibold text-white">
+        {title}
+      </h1>
+    </div>
   </div>
-  <div class="px-8 py-4">
-    <h2 class="text-[20px] lg:hidden font-semibold text-white text-start">
+  <div class="px-8 py-2">
+    <h2 class="text-[20px]  lg:hidden font-semibold text-white text-start">
       {date}
     </h2>
     <h1 class="text-[40px] lg:hidden font-semibold text-white text-start">

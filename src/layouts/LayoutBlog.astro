@@ -29,8 +29,6 @@ const { title, description, keywords } = Astro.props;
       gtag("config", "G-ML4B63MEC1");
     </script>
 
-    <!-- Google Tag Manager -->
-
     <script type="text/partytown">
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -43,19 +41,39 @@ const { title, description, keywords } = Astro.props;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-56JJJJZZ");
     </script>
+<script       type="text/partytown"
+async src="https://www.googletagmanager.com/gtag/js?id=AW-11309383024">
+</script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <meta name="keywords" content={keywords} />
-    <link rel="canonical" href="http://mongeortopedia.com/" />
-    <meta name="author" content="Doctor Monge" />
-    <meta name="publisher" content="Ecommetrica" />
-    <meta name="robots" content="index, follow" />
-    <ViewTransitions />
+  gtag('config', 'AW-11309383024');
+</script>
+<meta charset="UTF-8" />
+<meta name="description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" href="https://mongeortopedia.com/preview.png" />
+
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+<meta name="keywords" content={keywords} />
+<link rel="canonical" href="http://mongeortopedia.com/" />
+<meta name="author" content="Doctor Monge" />
+<meta name="publisher" content="Ecommetrica" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mongeortopedia.com/" />
+<meta property="og:title" content="Dr. Ricardo Monge especialista en traumatología en Tijuana" />
+<meta property="og:description" content="Recibe la atención en ortopedia con el Dr. Ricardo Monge especializado en lesiones musculoesqueléticas en rodillas, cadera y columna en Tijuana.
+" />
+<meta
+  property="og:image"
+  content="https://mongeortopedia.com/preview.png"
+/>
+
+<ViewTransitions />
   </head>
   <body>
     <noscript
@@ -63,8 +81,7 @@ const { title, description, keywords } = Astro.props;
         src="https://www.googletagmanager.com/ns.html?id=GTM-56JJJJZZ"
         height="0"
         width="0"
-        style="display:none;visibility:hidden"></iframe></noscript
-    >
+        style="display:none;visibility:hidden"></iframe></noscript>
     <Navbar />
     <slot />
     <style is:global>
