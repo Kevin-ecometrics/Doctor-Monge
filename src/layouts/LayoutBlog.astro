@@ -44,8 +44,7 @@ const { title, description, keywords } = Astro.props;
     <script
       type="text/partytown"
       async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-11309383024"
-    ></script>
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11309383024"></script>
     <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -84,6 +83,42 @@ const { title, description, keywords } = Astro.props;
     />
 
     <ViewTransitions />
+    <!-- Meta Pixel Code -->
+
+    <script type="text/partytown">
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+
+      fbq("init", "487515010536352");
+
+      fbq("track", "PageView");
+    </script>
   </head>
   <body>
     <noscript
@@ -92,6 +127,14 @@ const { title, description, keywords } = Astro.props;
         height="0"
         width="0"
         style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=487515010536352&ev=PageView&noscript=1"
+      /></noscript
     >
     <Navbar />
     <slot />
