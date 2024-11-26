@@ -7,44 +7,35 @@ import Facebook from "@components/icons/Facebook.astro";
 import Instagram from "@components/icons/Instagram.astro";
 import Tiktok from "@components/icons/Tiktok.astro";
 import { slide } from "astro:transitions";
-import Comments from "@components/blogs/Comment";
-import Form from "@components/blogs/CommentForm";
-import Aside from "@components/blogs/Aside";
+import Menu from "@components/blogs/Menu";
 
 export function getStaticPaths() {
   return [
     { params: { blog: "Fractura-de-tibia-y-Perone" } },
     { params: { blog: "Pseudoartrosis-y-Retraso-de-Consolidacion" } },
     { params: { blog: "Lesion-de-Ligamento-cruzado-anterior" } },
-    { params: { blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor" } },
-    { params: { blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla" } },
-    // { params: { blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical" } },
-    // { params: { blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas" } },
+    {
+      params: {
+        blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+      },
+    },
+    {
+      params: {
+        blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+      },
+    },
+    {
+      params: {
+        blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+      },
+    },
+    {
+      params: {
+        blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+      },
+    },
   ];
 }
-
-const blogsRutas = [{
-  blog: "Fractura-de-tibia-y-Perone",
-
-},
-{
-  blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
-
-},
-{
-  blog: "Lesion-de-Ligamento-cruzado-anterior",
-
-},
-{
-  blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
-
-},
-{
-  blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
-
-},
-
-]
 
 const blogs = [
   {
@@ -57,6 +48,7 @@ const blogs = [
       "Descubre todo sobre las fracturas de tibia y peroné: causas, síntomas, tratamientos conservadores quirúrgicos, consejos y rehabilitación eficaz.",
     keywords:
       "fracturas de tibia y peroné, tratamiento y rehabilitación de fractura",
+    id: 1,
   },
   {
     titulo: "Pseudoartrosis-y-Retraso-de-Consolidacion",
@@ -67,6 +59,7 @@ const blogs = [
     description:
       " Explora las causas y tratamientos de complicaciones en fracturas, pseudoartrosis y retraso en la consolidación. Conoce cómo optimizar la recuperación. ",
     keywords: "complicaciones fracturas pseudoartrosis tratamiento ",
+    id: 2,
   },
   {
     titulo: "Lesion-de-Ligamento-cruzado-anterior",
@@ -79,56 +72,68 @@ const blogs = [
       "Descubre por qué las mujeres son más propensas a las lesiones de LCA y cómo la artroscopia puede ayudar en una recuperación rápida y efectiva. ",
     keywords:
       "lesión de ligamento cruzado anterior, recuperación de LCA, artroscopia",
+    id: 3,
   },
-   {
-     titulo: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
-     ruta: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
-     blogTitle: "Osteoporosis: Una condición silenciosa",
-     date: "Julio 2024",
-     title: "Osteoporosis: Una condición silenciosa que afecta a la mitad de la población mayor de 50 años",
-     description:
-       "Conoce más sobre la osteoporosis, una enfermedad que afecta a millones de personas mayores de 50 años. Descubre sus causas, síntomas y tratamientos.",
-     keywords:
-       "osteoporosis, enfermedad silenciosa, tratamiento de osteoporosis",
-   },
-   {
-     titulo: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
-     ruta: "/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
-     blogTitle: "Infiltraciones en la Rodilla con Ácido Hialurónico",
-     date: "Agosto 2024",
-     title: "Infiltraciones en la Rodilla con Ácido Hialurónico para Tratamiento de Artrosis de Rodilla",
-     description:
-       "Descubre cómo las infiltraciones con ácido hialurónico pueden ayudar en el tratamiento de la artrosis de rodilla, aliviando el dolor y mejorando la movilidad.",
-     keywords:
-       "infiltraciones rodilla, ácido hialurónico, tratamiento artrosis rodilla",
-   },
-  // {
-  //   titulo: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
-  //   ruta: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
-  //   date: "Enero 2024",
-  //   blogTitle: "Tratamiento Conservador vs Cirugía",
-  //   title: "Tratamiento Conservador vs Cirugía: Cuando un Tratamiento Conservador Falla y Requiere Intervención Quirúrgica en Hernia Discal Cervical",
-  //   description:
-  //     "Explora las diferencias entre el tratamiento conservador y la cirugía para la hernia discal cervical, y cuándo es necesario optar por la intervención quirúrgica.",
-  //   keywords:
-  //     "tratamiento conservador, cirugía, hernia discal cervical, intervención quirúrgica",
-  // },
-  // {
-  //   titulo: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
-  //   ruta: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
-  //   blogTitle: "Rechazo de Material en Osteosíntesis",
-  //   title: "¿Por qué se dice que el cuerpo rechazó el material? Factores Asociados al Fallo en la Osteosíntesis de Fracturas",
-  //   date: "Enero 2024",
+  {
+    titulo:
+      "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+    ruta: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+    blogTitle: "Osteoporosis: Una condición silenciosa",
+    date: "Julio 2024",
+    title:
+      "Osteoporosis: Una condición silenciosa que afecta a la mitad de la población mayor de 50 años",
+    description:
+      "Conoce más sobre la osteoporosis, una enfermedad que afecta a millones de personas mayores de 50 años. Descubre sus causas, síntomas y tratamientos.",
+    keywords:
+      "osteoporosis, enfermedad silenciosa, tratamiento de osteoporosis",
+    id: 4,
+  },
+  {
+    titulo:
+      "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+    ruta: "/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+    blogTitle: "Infiltraciones en la Rodilla con Ácido Hialurónico",
+    date: "Agosto 2024",
+    title:
+      "Infiltraciones en la Rodilla con Ácido Hialurónico para Tratamiento de Artrosis de Rodilla",
+    description:
+      "Descubre cómo las infiltraciones con ácido hialurónico pueden ayudar en el tratamiento de la artrosis de rodilla, aliviando el dolor y mejorando la movilidad.",
+    keywords:
+      "infiltraciones rodilla, ácido hialurónico, tratamiento artrosis rodilla",
+    id: 5,
+  },
+  {
+    titulo:
+      "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+    ruta: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+    date: "Septiembre 2024",
+    blogTitle: "Tratamiento Conservador vs Cirugía",
+    title:
+      "Tratamiento Conservador vs Cirugía: Cuando un Tratamiento Conservador Falla y Requiere Intervención Quirúrgica en Hernia Discal Cervical",
+    description:
+      "Explora las diferencias entre el tratamiento conservador y la cirugía para la hernia discal cervical, y cuándo es necesario optar por la intervención quirúrgica.",
+    keywords:
+      "tratamiento conservador, cirugía, hernia discal cervical, intervención quirúrgica",
+  },
+  {
+    titulo:
+      "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+    ruta: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+    blogTitle: "Rechazo de Material en Osteosíntesis",
+    title:
+      "¿Por qué se dice que el cuerpo rechazó el material? Factores Asociados al Fallo en la Osteosíntesis de Fracturas",
+    date: "Octubre 2024",
 
-  //   description:
-  //     "Conoce los factores que pueden llevar al fallo en la osteosíntesis de fracturas y por qué a veces se dice que el cuerpo rechazó el material.",
-  //   keywords:
-  //     "rechazo de material, fallo osteosíntesis, fracturas, factores asociados",
-  // },
+    description:
+      "Conoce los factores que pueden llevar al fallo en la osteosíntesis de fracturas y por qué a veces se dice que el cuerpo rechazó el material.",
+    keywords:
+      "rechazo de material, fallo osteosíntesis, fracturas, factores asociados",
+  },
 ];
 
 const { blog } = Astro.params;
 const blogActual = blogs.find((b) => b.titulo === blog);
+const asideTitulo = blogActual?.titulo;
 
 let image;
 let date;
@@ -149,38 +154,43 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   date = "Abril 2024";
   content = "Blog1";
   blogTitle = "Fractura de Tibia y Peroné";
-} else if (blog === "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor") {
+} else if (
+  blog ===
+  "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor"
+) {
   image = "/fondo4.webp";
   date = "Julio 2024";
   content = "Blog4";
-  blogTitle = "Osteoporosis: Una condición silenciosa que afecta a la mitad de la población mayor de 50 años";
-} else if (blog === "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla") {
+  blogTitle =
+    "Osteoporosis: Una condición silenciosa que afecta a la mitad de la población mayor de 50 años";
+} else if (
+  blog ===
+  "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla"
+) {
   image = "/fondo5.webp";
   date = "Agosto 2024";
   content = "Blog5";
   blogTitle = "Infiltraciones en la Rodilla con Ácido Hialurónico";
-} else if (blog === "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical") {
-  image = "/fondo6.png";
-  date = "Enero 2024";
+} else if (
+  blog ===
+  "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical"
+) {
+  image = "/fondo6.webp";
+  date = "Septiembre 2024";
   content = "Blog6";
   blogTitle = "Tratamiento Conservador vs Cirugía";
-} else if (blog === "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas") {
-  image = "/fondo7.png";
-  date = "Diciembre 2024";
+} else if (
+  blog ===
+  "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas"
+) {
+  image = "/fondo7.webp";
+  date = "Octubre 2024";
   content = "Blog7";
   blogTitle = "Rechazo de Material en Osteosíntesis";
-}
-else {
+} else {
   image = "/fondoDefault.png";
 }
-
-
-let author = "Griff Bowden";
-let comment = "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time. emotional sensation of stress from our first.";
-let business = "Google";
-
 ---
-
 
 <Layout
   title={blogActual?.title ?? "Título predeterminado"}
@@ -224,21 +234,16 @@ let business = "Google";
       >
         <Doctorialia class="cursor-pointer" />
       </a>
+
       <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
     </div>
-    <Background image={image} title={blogTitle} date={date} />
-    <div class="flex flex-col md:flex-row px-8 md:px-8">
-      <div class="w-full md:w-3/4">
-        <Content content={content} />
-      </div>
-      <Aside client:only blogs={blogs} />
-    </div>
-    <!-- <div class="flex flex-col gap-8 justify-start items-start md:px-28 px-4">
-    <Comments client:visible author={author} comment={comment}  business={business} 
-    />
-    </div>
 
-    <Form client:only blogs={blogsRutas} /> -->
+    <Background image={image} title={blogTitle} date={date} />
+    <div class="flex flex-col md:flex-row px-0 md:px-8">
+      <Content content={content} />
+      <Menu client:visible titulo={asideTitulo} blogs={blogs} />
+      <!-- <Aside client:visible titulo={asideTitulo} blogs={blogs} /> -->
+    </div>
   </main>
 </Layout>
 

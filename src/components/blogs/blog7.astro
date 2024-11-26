@@ -1,56 +1,153 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/blog7-1.webp";
+import Image2 from "@public/blog7-2.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+];
+
+const blogActual =
+  "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas";
+
+const id = 7;
+---
+
 <article
-  class="prose lg:prose-xl mx-auto py-4 text-gray-300 [&>h1]:text-white [&>h2]:text-white [&>h3]:text-white"
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
 >
-<h1 class="text-2xl font-bold mb-2">
-  ¿Porque se dice que el cuerpo rechazo de material? Factores asociados al fallo en la osteosíntesis de fracturas </h1> 
+  <Observer client:visible>
+    <h1 class="text-2xl md:text-5xl text-white font-semibold mb-16 md:mt-32">
+      ¿Porque se dice que el cuerpo rechazo de material? Factores asociados al
+      fallo en la osteosíntesis de fracturas
+    </h1>
+  </Observer>
 
-<h3 class="text-xl mb-4"> Cuando hablamos de osteosíntesis nos referimos una técnica quirúrgica que consiste en estabilizar y unir los fragmentos óseos tras una fractura o un implante. A menudo pacientes comentan: “Mi cuerpo rechazo el material” Ya que notan como se puede apreciar una anomalía, lo que puede ser causado por una placa o tornillo aflojado, esto hace que sobresalga en la piel y moleste. 
+  <Observer client:visible>
+    <h3 class="text-xl mb-24">
+      Cuando hablamos de osteosíntesis nos referimos una técnica quirúrgica que
+      consiste en estabilizar y unir los fragmentos óseos tras una fractura o un
+      implante. <br />
+      <br /> A menudo pacientes comentan: “Mi cuerpo rechazo el material” Ya que
+      notan como se puede apreciar una anomalía, lo que puede ser causado por una
+      placa o tornillo aflojado, esto hace que sobresalga en la piel y moleste. Sin
+      embargo, existen múltiples razones por la cual puede existir un fallo en la
+      osteosíntesis, pero en la gran mayoría de casos, tu cuerpo no ha rechazado
+      el material, sino que existió una fatiga del material que con micro o macro
+      movimientos empezó aflojarse y soltarse. El material cuando se coloca se busca
+      que este con una estabilidad considerablemente alta y con buen agarre, factores
+      como los cuidados postoperatorios, peso y las fuerza, con las que pasan a través
+      del material antes del tiempo estipulado puede generar estrés sobre el material
+      que con micro o macro movimientos empezó a aflojarse y soltarse A esto lo conocemos
+      como fenómeno de des anclaje cuando existe una protrusión del tonillo o placa
+      o bien fatiga del implante.
+    </h3>
+  </Observer>
 
-Sin embargo, existen múltiples razones por la cual puede existir un fallo en la osteosíntesis, pero en la gran mayoría de casos, tu cuerpo no ha rechazado el material, sino que existió una fatiga del material que  con  micro o macro movimientos empezó aflojarse y soltarse. 
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt="Imagen de fractura de tibia y peroné"
+        class="object-cover mb-24"
+      />
+    </div>
+  </ObserverImage>
 
-El material cuando se coloca se busca que este con una estabilidad considerablemente alta y con buen agarre, factores como los cuidados postoperatorios, peso y las fuerza, con las que pasan a través del material antes del tiempo estipulado puede generar estrés sobre el material que con micro o macro movimientos empezó a aflojarse y soltarse  
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">Causas principales</h2>
+  </Observer>
 
-A esto lo conocemos como fenómeno de des anclaje cuando existe una protrusión del tonillo o placa o bien fatiga del implante. </h3> 
+  <Observer client:visible>
+    <h3 class="text-xl mb-24">
+      Mala reducción de la fractura Falta de cuidados postoperatorios Inadecuada
+      colocación del torillo, placa o implante Alergia o infección Como
+      ortopedista traumatólogo hago hincapié en acudir con expertos y confiar en
+      sus indicaciones, así como seguirlas al pie de la letra para evitar
+      complicaciones.
+    </h3>
+  </Observer>
 
-<h2 class="text-xl mb-2 font-semibold"> Causas principales </h2> 
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt="Imagen de fractura de tibia y peroné"
+        class="fade-up object-cover mb-24"
+      />
+    </div>
+  </ObserverImage>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      ¿Como se lleva a cabo una extracción de material de osteosíntesis?
+    </h2>
+  </Observer>
 
-<h3 class="text-xl mb-4"> Mala reducción de la fractura  
-
-Falta de cuidados postoperatorios  
-
-Inadecuada colocación del torillo, placa o implante 
-
-Alergia o infección  
-
-Como ortopedista traumatólogo hago hincapié en acudir con expertos y confiar en sus indicaciones, así como seguirlas al pie de la letra para evitar complicaciones. </h3> 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-<h2 class="text-xl mb-2 font-semibold"> ¿Como se lleva a cabo una extracción de material de osteosíntesis? </h2> 
-
-<h3 class="text-xl mb-4"> Por infección: Ocurre como resultado de la contaminación durante o después de la intervención quirúrgica, por alteraciones de cicatrización, o por hematomas infectados.Durante este abordaje se administrará tratamiento antibiótico intravenoso y será necesario realizar una profilaxis antibiótica previo a la intervención donde se extraerá el tejido infectado, de manera breve para evitar aumentar las tasas de infección, ya en la fase postoperatoria se volverá a desinfectar la piel alrededor de la zona de incisión, evitando la acumulación de líquidos en la herida por medio de un sistema de drenaje y se le administra tratamiento antibiótico.  
-
- 
-
-Alergia: Debido a materiales con los que están hechos los tornillos, placas e implantes usualmente predominan materiales como: níquel, cobalto y cromo que pueden producir dermatitis alérgica de contacto. 
-
- 
-
-Fatiga: La intervención se realiza a través de la incisión previa se retira el componente desgastando o aflojado y se sustituye por otro nuevo. Durante el recambio protésico puede ser necesaria la utilización de un injerto óseo o un material especializado para rellenar las zonas de osteólisis. 
-
-La única forma en la que se puede denominar que tu cuerpo rechazo el material es cuando existe una reacción alérgica. Aspectos ajenos se les considera como infección, fatiga/desgaste o un fallo de consolidación mejor conocida como pseudoartrosis. 
-
-Es importante acudir a las citas de seguimiento con tu ortopedista, compartir tus dudas y comentar cualquier inquietud o cambio que percibas para evitar inconvenientes que puedan afectar tu recuperación. 
-
-Si te interesa agendar para una cita de valoración, puedes escribirme para agendar. </h3> 
+  <Observer client:visible>
+    <h3 class="text-xl mb-24">
+      Por infección: Ocurre como resultado de la contaminación durante o después
+      de la intervención quirúrgica, por alteraciones de cicatrización, o por
+      hematomas infectados. Durante este abordaje se administrará tratamiento
+      antibiótico intravenoso y será necesario realizar una profilaxis
+      antibiótica previo a la intervención donde se extraerá el tejido
+      infectado, de manera breve para evitar aumentar las tasas de infección, ya
+      en la fase postoperatoria se volverá a desinfectar la piel alrededor de la
+      zona de incisión, evitando la acumulación de líquidos en la herida por
+      medio de un sistema de drenaje y se le administra tratamiento antibiótico. <br
+      />
+      <br /> Alergia: Debido a materiales con los que están hechos los tornillos,
+      placas e implantes usualmente predominan materiales como: níquel, cobalto y
+      cromo que pueden producir dermatitis alérgica de contacto. <br />
+      <br /> Fatiga: La intervención se realiza a través de la incisión previa se
+      retira el componente desgastando o aflojado y se sustituye por otro nuevo.
+      Durante el recambio protésico puede ser necesaria la utilización de un injerto
+      óseo o un material especializado para rellenar las zonas de osteólisis. La
+      única forma en la que se puede denominar que tu cuerpo rechazo el material
+      es cuando existe una reacción alérgica. Aspectos ajenos se les considera como
+      infección, fatiga/desgaste o un fallo de consolidación mejor conocida como
+      pseudoartrosis. Es importante acudir a las citas de seguimiento con tu ortopedista,
+      compartir tus dudas y comentar cualquier inquietud o cambio que percibas para
+      evitar inconvenientes que puedan afectar tu recuperación. Si te interesa agendar
+      para una cita de valoración, puedes escribirme para agendar.
+    </h3>
+  </Observer>
 </article>
+
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  />
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>

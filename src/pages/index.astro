@@ -1,17 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.jsx";
-import Skills from "../components/Skills.astro";
-import Success from "../components/Success_Stories.jsx";
-import Education from "../components/Education.jsx";
-import Doctorialia from "../components/icons/Doctoralia.astro";
-import Facebook from "../components/icons/Facebook.astro";
-import Instagram from "../components/icons/Instagram.astro";
-import Tiktok from "../components/icons/Tiktok.astro";
-import Testimonials from "../components/Testimonials.jsx";
-import Partners from "../components/Partners.jsx";
-import Blogs from "../components/Blogs.astro";
-import Contact from "../components/Contact.jsx";
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.jsx";
+import Skills from "@components/Skills.astro";
+import Success from "@components/Success_Stories.jsx";
+import Education from "@components/Education.jsx";
+import Doctorialia from "@components/icons/Doctoralia.astro";
+import Facebook from "@components/icons/Facebook.astro";
+import Instagram from "@components/icons/Instagram.astro";
+import Tiktok from "@components/icons/Tiktok.astro";
+import Testimonials from "@components/Testimonials.jsx";
+import Partners from "@components/Partners.jsx";
+import Blogs from "@components/Blogs";
+import Contact from "@components/Contact.jsx";
 ---
 
 <Layout
@@ -78,7 +78,7 @@ import Contact from "../components/Contact.jsx";
       <Partners client:visible />
     </section>
     <section id="section7" class="snap-start">
-      <Blogs />
+      <Blogs client:visible />
     </section>
     <section id="section8" class="snap-start">
       <Contact client:visible />

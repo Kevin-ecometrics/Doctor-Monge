@@ -7,7 +7,7 @@ function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [animationKey, setAnimationKey] = useState(0);
-
+  const year = new Date().getFullYear();
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -123,7 +123,7 @@ function Contact() {
                 type="text"
                 name="nombre"
                 id="nombre"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white  focus:outline-none focus:ring-0 peer"
                 placeholder=""
                 required
               />
@@ -139,7 +139,7 @@ function Contact() {
                 type="email"
                 name="correo"
                 id="correo"
-                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white  focus:outline-none focus:ring-0 peer"
                 placeholder=" "
                 required
               />
@@ -154,7 +154,7 @@ function Contact() {
               <textarea
                 name="mensaje"
                 id="mensaje"
-                class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-blue-600 peer text-white"
+                class="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white  focus:outline-none focus:ring-0 peer"
                 placeholder=" "
                 required
               />
@@ -168,7 +168,7 @@ function Contact() {
             <button
               type="submit"
               disabled={isLoading}
-              class="text-white bg-blue-700 hover:bg-blue-800  focus:outline-none text-[13px] font-medium w-full sm:w-full px-5 py-2.5 text-center"
+              class="text-white bg-blue-700 hover:bg-blue-800  focus:outline-none text-[13px] font-medium w-full sm:w-[400px] px-5 py-2.5 text-center"
             >
               {isLoading ? "Enviando..." : "Hacer cita"}
             </button>
@@ -178,7 +178,7 @@ function Contact() {
       </div>{" "}
       <footer className="absolute bottom-10 left-10 lg:left-20">
         <p className="text-sm">
-          All rights reserved by Doctor Monge. 2024 ©{" "}
+          All rights reserved by Doctor Monge. {year} ©{" "}
           <a href="/" className="hover:text-blue-500 hover:underline">
             <strong> mongeortopedia.com</strong>
           </a>{" "}

@@ -1,0 +1,12 @@
+@keyframes curtain-open {
+    0% {
+      clip-path: inset(0 0 0 100%);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  .curtain-open {
+    animation: curtain-open 2s ease-out forwards;
+  }

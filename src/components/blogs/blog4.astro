@@ -1,138 +1,196 @@
 ---
-import { Image } from "astro:assets"
-import Image1 from "@public/blog4-1.webp"
-import Image2 from "@public/blog4-2.webp"
-import Observer from "@components/blogs/Observer"
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/blog4-1.webp";
+import Image2 from "@public/blog4-2.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
 
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+];
+
+const blogActual =
+  "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor";
+
+const id = 4;
 ---
 
 <article
-  class="lg:prose-xl mx-auto py-4 text-gray-300 [&>h1]:text-white [&>h2]:text-white [&>h3]:text-white"
-
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
 >
-<Observer client:visible>
-
-<h1 class="fade-up text-xl mb-2 font-semibold "> Osteoporosis: 
-  Una condición silenciosa que afecta a la mitad de la población mayor de 50 años</h1> 
-</Observer>
+  <Observer client:visible>
+    <h1 class="text-2xl md:text-5xl text-white font-semibold mb-24 md:mt-32">
+      Osteoporosis: Una condición silenciosa que afecta a la mitad de la
+      población mayor de 50 años
+    </h1>
+  </Observer>
 
   <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24 mt-12">
+      Hola que tal, hoy te platico de una condición en los huesos que, como
+      ortopedista, sé que genera bastantes dudas y estrés pasando los 50 años.
+    </h4>
+  </Observer>
 
-<h4 class="fade-up text-xl mb-2"> Hola que tal, hoy te platico de una condición en los huesos que, como ortopedista, sé que genera bastantes dudas y estrés pasando los 50 años. </h4> 
-</Observer>
+  <Observer client:visible>
+    <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
+      ¿Qué pasa si tengo osteoporosis?
+    </h2>
+  </Observer>
 
-<Observer client:visible>
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24 mt-12">
+      La densidad disminuye en los huesos del cuerpo. Es un defecto en la
+      cantidad no de la calidad de hueso, al tener menos masa se hace una zona
+      con más probabilidad de fracturarse. Es una condición que no genera
+      síntomas visibles por ello se le conoce como silenciosa, uno puede
+      enterarse hasta que el hueso se fracture, que usualmente suelen ser
+      fracturas de cadera, vertebras de la columna y la muñeca. Estás fracturas
+      se dan de forma muy sencilla es decir por caídas leves o esfuerzos
+      normales como inclinarse o agacharse. Esta condición afecta 4 veces más a
+      las mujeres debido a los cambios hormonales de la menopausia. Aunque a la
+      mitad de la población arriba de los 50 años puede padecerla.
+    </h4>
+  </Observer>
 
-<h2 class="fade-up text-xl mb-2 font-semibold"> ¿Qué pasa si tengo osteoporosis? </h2> 
-</Observer>
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image src={Image1} alt="Osteoporosis" class="fade-up object-cover" />
+    </div>
+  </ObserverImage>
 
-<Observer client:visible>
+  <Observer client:visible>
+    <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
+      Causas de la osteoporosis
+    </h2>
+  </Observer>
 
-<h4 class="fade-up text-xl mb-2"> La densidad disminuye en los huesos del cuerpo. Es un defecto en la cantidad no de la calidad de hueso, al tener menos masa se hace una zona con más probabilidad de fracturarse.  
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24 mt-12">
+      Durante los 25 a 30 años el hueso llega a su máximo desarrollo
+      esquelético, posterior se ve un decremento por ello es importante mantener
+      hábitos saludables, claro que estos cambios dependerán de factores
+      genéticos, nutricionales, actividad física y hormonal. Es normal a partir
+      de los 40 años que el metabolismo óseo se vuelva más lento y crea un
+      desbalance que lo hace propenso a lesionarse con menos energía. Aunque sea
+      un padecimiento más común en mujeres los hombres desarrollan más tarde la
+      enfermedad por la pérdida de testosterona. Peso y estatura, cuando hombres
+      y mujeres tienen bajo peso corporal y estatura los hace más propensos a
+      tener osteoporosis. Cambios hormonales especialmente niveles bajos de
+      ciertas hormonas. Factores hereditarios. Enfermedades y medicamentos.
+      Estilo de vida: Hábitos como fumar o consumir bebidas alcohólicas en
+      exceso y no realizar ejercicio. Por ello es importante mantener una vida
+      activa durante nuestra juventud para tener una densidad mineral ósea
+      suficiente.
+    </h4>
+  </Observer>
 
-Es una condición que no genera síntomas visibles por ello se le conoce como silenciosa, uno puede enterarse hasta que el hueso se fracture, que usualmente suelen ser fracturas de cadera, vertebras de la columna y la muñeca. Estás fracturas se dan de forma muy sencilla es decir por caídas leves o esfuerzos normales como inclinarse o agacharse.  
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image src={Image2} alt="Osteoporosis" class="fade-up object-cover" />
+    </div>
+  </ObserverImage>
+  <Observer client:visible>
+    <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
+      ¿Cómo se diagnostica?
+    </h2>
+  </Observer>
 
-Esta condición afecta 4 veces más a las mujeres debido a los cambios hormonales de la menopausia. Aunque a la mitad de la población arriba de los 50 años puede padecerla. </h4> 
-</Observer>
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24 mt-12">
+      El estudio para valorar la densidad ósea se llama densitometría ósea. La
+      densidad mineral ósea es la cantidad de masa por unidad de volumen o por
+      unidad de área. El objetivo del DMO brindar un diagnóstico o pronostico.
+      De acuerdo con el contenido mineral óseo podemos dividir los estadios
+      clínicos de la Osteoporosis en etapas: Normal: densidad mineral ósea -1
+      desviación estándar. Osteopenia o DMO baja: densidad mineral óseo entre -1
+      y -2.5 desviación estándar. Osteoporosis: densidad mineral ósea -2.5
+      desviación estándar. Osteoporosis Establecida o con fractura: densidad
+      mineral óseo por debajo de 2.5 Los resultados se obtienen por medio del
+      cálculo de FRAX una herramienta que permie calcular el riesgo de fractura
+      a partir de la densitometría y el historial clínico.
+    </h4>
+  </Observer>
 
-<Observer client:visible>
+  <Observer client:visible>
+    <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
+      Tipos de osteoporosis
+    </h2>
+  </Observer>
 
-<Image src={Image1} alt="Osteoporosis" class="fade-up object-cover" />
-</Observer>
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24 mt-12">
+      Osteoporosis juvenil idiopática: Aparece una desmineralización del hueso
+      entre los 8 y 12 años se caracterizada por dolor de espalda, pies y
+      extremosidades, dificultares para caminar, suele resolverse con
+      tratamiento y una vez pasada la pubertad. Osteoporosis tipo I: Se da en
+      una etapa postmenopáusica en mujeres debido a la falta de estrógenos.
+      Osteoporosis tipo II: Es producida por el envejecimiento.
+    </h4>
+  </Observer>
 
-<Observer client:visible>
+  <Observer client:visible>
+    <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
+      Tratamiento
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24 mt-12">
+      Depende de cada caso será el abordaje, los medicamentos más recetados son
+      los bisfosfonatos que inhiben la reabsorción ósea, a su vez están las
+      inyecciones de denosumab, claro todos complementados con un plan
+      nutricional rico en calcio, vitamina D, Omega 3 y suplementos. Otro
+      abordaje a esta condición es la terapia de reemplazo hormonal que será un
+      tratamiento que llevará a cabo un endocrinólogo para administrar el
+      medicamento más adecuado.
+    </h4>
+  </Observer>
 
-<h2 class="fade-up text-xl mb-2 font-semibold"> Causas de la osteoporosis </h2> 
-</Observer>
+  <Observer client:visible>
+    <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
+      Recomendaciones
+    </h2>
+  </Observer>
 
-<Observer client:visible>
-
-<h4 class="fade-up text-xl mb-2"> Durante los 25 a 30 años el hueso llega a su máximo desarrollo esquelético, posterior se ve un decremento por ello es importante mantener hábitos saludables, claro que estos cambios dependerán de factores genéticos, nutricionales, actividad física y hormonal. Es normal a partir de los 40 años que el metabolismo óseo se vuelva más lento y crea un desbalance que lo hace propenso a lesionarse con menos energía. 
-
-Aunque sea un padecimiento más común en mujeres los hombres desarrollan más tarde la enfermedad por la pérdida de testosterona.  
-
-Peso y estatura, cuando hombres y mujeres tienen bajo peso corporal y estatura los hace más propensos a tener osteoporosis.  
-
-Cambios hormonales especialmente niveles bajos de ciertas hormonas. 
-
-Factores hereditarios.  
-
-Enfermedades y medicamentos.  
-
-Estilo de vida: Hábitos como fumar o consumir bebidas alcohólicas en exceso y no realizar ejercicio.  
-
-Por ello es importante mantener una vida activa durante nuestra juventud para tener una densidad mineral ósea suficiente. </h4> 
-</Observer>
-
-<Observer client:visible>
-
-<Image src={Image2} alt="Osteoporosis" class="fade-up object-cover" />
-</Observer>
-<Observer client:visible>
-<h2 class="fade-up text-xl mb-2 font-semibold"> ¿Cómo se diagnostica? </h2> 
-</Observer>
-
-<Observer client:visible>
-
-<h4 class="fade-up text-xl mb-2"> El estudio para valorar la densidad ósea se llama densitometría ósea. La densidad mineral ósea es la cantidad de masa por unidad de volumen o por unidad de área. El objetivo del DMO brindar un diagnóstico o pronostico.  
-
-De acuerdo con el contenido mineral óseo podemos dividir los estadios clínicos de la Osteoporosis en etapas: 
-
- Normal: densidad mineral ósea  -1 desviación estándar. 
-
- Osteopenia o DMO baja: densidad mineral óseo entre -1 y -2.5 desviación estándar. 
-
- Osteoporosis: densidad mineral ósea -2.5 desviación estándar. 
-
- Osteoporosis Establecida o con fractura: densidad mineral óseo por debajo de 2.5  
-
-Los resultados se obtienen por medio del cálculo de FRAX una herramienta que permie calcular el riesgo de fractura a partir de la densitometría y el historial clínico. </h4> 
-</Observer>
-
-<Observer client:visible>
-
-<h2 class="fade-up text-xl mb-2 font-semibold"> Tipos de osteoporosis </h2> 
-</Observer>
-
-<Observer client:visible>
-
-<h4 class="fade-up text-xl mb-2"> Osteoporosis juvenil idiopática: Aparece una desmineralización del hueso entre los 8 y 12 años se caracterizada por dolor de espalda, pies y extremosidades, dificultares para caminar, suele resolverse con tratamiento y una vez pasada la pubertad. 
-
-Osteoporosis tipo I: Se da en una etapa postmenopáusica en mujeres debido a la falta de estrógenos. 
-
-Osteoporosis tipo II: Es producida por el envejecimiento. </h4> 
-</Observer>
-
-<Observer client:visible>
-
-<h2 class="fade-up text-xl mb-2 font-semibold"> Tratamiento </h2> 
-
-</Observer>
-<Observer client:visible>
-
-<h4 class="fade-up text-xl mb-2"> Depende de cada caso será el abordaje, los medicamentos más recetados son los bisfosfonatos que inhiben la reabsorción ósea, a su vez están las inyecciones de denosumab, claro todos complementados con un plan nutricional rico en calcio, vitamina D, Omega 3 y suplementos. Otro abordaje a esta condición es la terapia de reemplazo hormonal que será un tratamiento que llevará a cabo un endocrinólogo para administrar el medicamento más adecuado. </h4> 
-</Observer>
-
-<Observer client:visible>
-
-<h2 class="fade-up text-xl mb-2 font-semibold"> Recomendaciones </h2> 
-</Observer>
-
-<Observer client:visible>
-
-<h4 class="fade-up text-xl mb-2"> Alimentación y suplementación 
-
-Evitar fumar 
-
-Evitar el consumo de alcohol 
-
-Utilizar zapatos adecuados, 
-
-Adaptar espacios: Con iluminación adecuada, barras de agarre en las regaderas, escaleras y suelas antideslizantes.  
-
- 
-
-Si tienes dudas sobre la osteoporosis mándame mensaje o agenda tu cita, Me encuentro en Tijuana. </h4> 
-</Observer>
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24 mt-12">
+      Alimentación y suplementación Evitar fumar Evitar el consumo de alcohol
+      Utilizar zapatos adecuados, Adaptar espacios: Con iluminación adecuada,
+      barras de agarre en las regaderas, escaleras y suelas antideslizantes. Si
+      tienes dudas sobre la osteoporosis mándame mensaje o agenda tu cita, Me
+      encuentro en Tijuana.
+    </h4>
+  </Observer>
 </article>
 
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  />
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>

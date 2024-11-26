@@ -3,7 +3,7 @@ import React from "react";
 function Comment({ comment, author, business }) {
   return (
     <div className="flex flex-col py-16">
-      <article className="border-white px-4 md:px-24 py-8 border-4 md:w-[900px]">
+      <article className="border-white px-4 md:px-9 py-8 border-4 md:w-[900px]">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/5">
             <svg

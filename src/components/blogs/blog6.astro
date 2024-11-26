@@ -1,68 +1,180 @@
+---
+import { Image } from "astro:assets";
+import Image1 from "@public/blog6-1.webp";
+import Image2 from "@public/blog6-2.webp";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+];
+
+const blogActual =
+  "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical";
+
+const id = 6;
+---
+
 <article
-  class="prose lg:prose-xl mx-auto py-4 text-gray-300 [&>h1]:text-white [&>h2]:text-white [&>h3]:text-white"
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
 >
-  <h1 class="text-2xl font-bold mb-2">
- Tratamiento conservador vs cirugía: Cuando un tratamiento conservador falla y requiere intervención quirúrgica en hernia discal cervical. </h1> 
+  <Observer client:visible>
+    <h1 class="text-2xl md:text-5xl text-white font-semibold mb-16 md:mt-32">
+      Tratamiento conservador vs cirugía: Cuando un tratamiento conservador
+      falla y requiere intervención quirúrgica en hernia discal cervical.
+    </h1>
+  </Observer>
 
-  <h2 class="text-xl mb-2 font-semibold">
- Hola me gustaría hablarte de los tratamientos conservadores ya no son suficientes y la intervención quirúrgica es la última línea de tratamiento en traumatología </h2> 
+  <Observer client:visible>
+    <h2 class="text-xl mb-24 font-semibold">
+      Hola me gustaría hablarte de los tratamientos conservadores ya no son
+      suficientes y la intervención quirúrgica es la última línea de tratamiento
+      en traumatología
+    </h2>
+  </Observer>
 
-<h3 class="text-xl mb-4"> Una intervención quirúrgica no es tan intimidante como suena, al contrario, es una solución permanente a un dolor que ha sido persistente y que afecta tu calidad de vida. 
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Una intervención quirúrgica no es tan intimidante como suena, al
+      contrario, es una solución permanente a un dolor que ha sido persistente y
+      que afecta tu calidad de vida. Una hernia de disco puede generar un dolor
+      que se extiende desde el cuello, los hombros hasta los brazos, se puede
+      percibir como un hormigueo o entumecimiento de brazos. Este es un dolor
+      que puede llegar a ser constante, pero difícil de identificar o puede
+      llegar a ser agudo y fácil de localizar. <br />
+      <br /> La hernia se produce cuando el anillo fibroso que es su capa externa
+      protectora se desgarra y el núcleo pulposo que es el que amortigua se filtra.
+      Los niveles más comunes donde se presentan las hernias de cisco cervical son
+      C5-C6. Puedes experimentar un dolor, hormigueo en pulgares, debilidad en los
+      bíceps o antebrazos. Los niveles C6-C7 se presenta con entumecimiento, hormigueo
+      y dolor los tríceps Los síntomas de dolor pueden durar unos días o convertirse
+      en un dolor crónico, de 6 a 12 semanas, aunque el disco no se cure.
+    </h3>
+  </Observer>
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt="Hernia discal cervical"
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-24 font-semibold">
+      Tratamiento conservador
+    </h2>
+  </Observer>
 
-Una hernia de disco puede generar un dolor que se extiende desde el cuello, los hombros hasta los brazos, se puede percibir como un hormigueo o entumecimiento de brazos. Este es un dolor que puede llegar a ser constante, pero difícil de identificar o puede llegar a ser agudo y fácil de localizar. 
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Durante el tratamiento conservador se busca mejorar hábitos evitar
+      movimientos que puedan generar dolor. Se pueden aplicar tratamientos como:
+      Terapia de calor que es aplicar una compresa caliente durante 15 a 20
+      minutos o terapia de frio aplicar hielo durante 20 minutos. Otro abordaje
+      es con medicamentos antiinflamatorios, fisioterapia para fortalecer y
+      estirar el cuello y uno de los tratamientos más comunes es acudir a que te
+      administren esteroides orales o inyectados. Si el dolor se prolongó más de
+      12 semanas o genera una discapacidad grave sin mejoría es necesario
+      considerar una intervención quirúrgica.
+    </h3>
+  </Observer>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-24 font-semibold">
+      Preparación para una cirugía
+    </h2>
+  </Observer>
 
-La hernia se produce cuando el anillo fibroso que es su capa externa protectora se desgarra y el núcleo pulposo que es el que amortigua se filtra. Los niveles más comunes donde se presentan las hernias de cisco cervical son C5-C6. Puedes experimentar un dolor, hormigueo en pulgares, debilidad en los bíceps o antebrazos. Los niveles C6-C7 se presenta con entumecimiento, hormigueo y dolor los tríceps 
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Dejar el cigarro si o si, es importante eliminar la nicotina de los
+      hábitos ya que puede generar complicaciones con mayor riesgo de
+      infecciones y una demora en la fusión del hueso. 2 semanas previas Es
+      necesario estudios de laboratorio, electrocardiograma y radiografías Se
+      pausará la toma de suplementos, vitaminas y anticoagulantes como aspirina
+      y antiinflamatorios como ibuprofeno y naproxeno Se recomienda apagarse al
+      100% a un plan alimenticio saludable, evitando malos hábitos como fumar e
+      ingerir bebidas alcohólicas. 1 semana previa Asegurarse que su casa sea
+      segura y accesible de transitar, sin obstáculos para que tu proceso de
+      recuperación sea lo más cómodo posible que te permita movilizarse solo lo
+      esencial.
+    </h3>
+  </Observer>
 
-Los síntomas de dolor pueden durar unos días o convertirse en un dolor crónico, de 6 a 12 semanas, aunque el disco no se cure. </h3> 
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt="Cirugía discal cervical"
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-24 font-semibold">
+      Cirugía discal cervical
+    </h2>
+  </Observer>
 
-  <h2 class="text-xl mb-2 font-semibold">
- Tratamiento conservador </h2> 
-
-<h3 class="text-xl mb-4"> Durante el tratamiento conservador se busca mejorar hábitos evitar movimientos que puedan generar dolor. Se pueden aplicar tratamientos como: Terapia de calor que es aplicar una compresa caliente durante 15 a 20 minutos o terapia de frio aplicar hielo durante 20 minutos. Otro abordaje es con medicamentos antiinflamatorios, fisioterapia para fortalecer y estirar el cuello y uno de los tratamientos más comunes es acudir a que te administren esteroides orales o inyectados. 
-
-Si el dolor se prolongó más de 12 semanas o genera una discapacidad grave sin mejoría es necesario considerar una intervención quirúrgica.  </h3> 
-
-  <h2 class="text-xl mb-2 font-semibold">
- Preparación para una cirugía </h2> 
-
-<h3 class="text-xl mb-4"> Dejar el cigarro si o si, es importante eliminar la nicotina de los hábitos ya que puede generar complicaciones con mayor riesgo de infecciones y una demora en la fusión del hueso. 
-
-2 semanas previas  
-
-Es necesario estudios de laboratorio, electrocardiograma y radiografías  
-
-Se pausará la toma de suplementos, vitaminas y anticoagulantes como aspirina y antiinflamatorios como ibuprofeno y naproxeno 
-
-Se recomienda apagarse al 100% a un plan alimenticio saludable, evitando malos hábitos como fumar e ingerir bebidas alcohólicas. 
-
-1 semana previa  
-
-Asegurarse que su casa sea segura y accesible de transitar, sin obstáculos para que tu proceso de recuperación sea lo más cómodo posible que te permita movilizarse solo lo esencial. </h3> 
-
- 
-
-  <h2 class="text-xl mb-2 font-semibold">
- Cirugía discal cervical </h2> 
-
-<h3 class="text-xl mb-4"> Disectomia cervical anterior y fusión espinal  
-
-En esta intervención se extirpa el disco mediante una incisión de unas 1 a 2 pulgadas en la parte frontal del cuello, una vez extirpa el espacio discal se prepara para que las vértebras adyacentes se fusionen, y se añade una placa para aumentar estabilidad y mejorar la tasa de fusión. 
-
-Sustitución del disco cervical  
-
-Al igual que la cirugía anterior, primero se extirpa el disco que esta dañado mediante la misma incisión del cuello, la diferencia es que se implanta un disco (prótesis) en el espacio discal, permitiendo que esta prótesis imite la forma y función. 
-
-Discectomia cervical posterior 
-
-Esta intervención es igual que la Disectomia cervical anterior y fusión espinal excepto que el abordaje es por la parte de atrás del cuello  
-
-Después del procedimiento 
-
-Se administrarán medicamentos para controlar el dolor. Se le darán recomendaciones nutricionales ya que normalmente se pierde el apetito. También se darán recomendaciones para moverse y vestir de forma cómoda y segura. 
-
-El tratamiento conservador puede ser para unos y para otros puede representar una cuestión de riesgo, pero el fracaso del tratamiento conservador no debe desalentar o dar indicación que la cirugía no funcionará, al contrario, las cirugías presentan excelentes resultados con bajas tasas de complicaciones, ofreciendo alivio permanente.  
-
-No hay nada que preocuparse en las intervenciones quirúrgicas cuando se trata de manos expertas en traumatología y ortopedia. 
-
-Si tienes una consulta o te gustaría agendar, mándame mensaje o llama directo a oficina para agendar. </h3> 
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Disectomia cervical anterior y fusión espinal En esta intervención se
+      extirpa el disco mediante una incisión de unas 1 a 2 pulgadas en la parte
+      frontal del cuello, una vez extirpa el espacio discal se prepara para que
+      las vértebras adyacentes se fusionen, y se añade una placa para aumentar
+      estabilidad y mejorar la tasa de fusión. Sustitución del disco cervical Al
+      igual que la cirugía anterior, primero se extirpa el disco que esta dañado
+      mediante la misma incisión del cuello, la diferencia es que se implanta un
+      disco (prótesis) en el espacio discal, permitiendo que esta prótesis imite
+      la forma y función. Discectomia cervical posterior Esta intervención es
+      igual que la Disectomia cervical anterior y fusión espinal excepto que el
+      abordaje es por la parte de atrás del cuello Después del procedimiento Se
+      administrarán medicamentos para controlar el dolor. <br />
+      <br /> Se le darán recomendaciones nutricionales ya que normalmente se pierde
+      el apetito. También se darán recomendaciones para moverse y vestir de forma
+      cómoda y segura. El tratamiento conservador puede ser para unos y para otros
+      puede representar una cuestión de riesgo, pero el fracaso del tratamiento conservador
+      no debe desalentar o dar indicación que la cirugía no funcionará, al contrario,
+      las cirugías presentan excelentes resultados con bajas tasas de complicaciones,
+      ofreciendo alivio permanente. No hay nada que preocuparse en las intervenciones
+      quirúrgicas cuando se trata de manos expertas en traumatología y ortopedia.
+      Si tienes una consulta o te gustaría agendar, mándame mensaje o llama directo
+      a oficina para agendar.
+    </h3>
+  </Observer>
 </article>
+
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  />
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>

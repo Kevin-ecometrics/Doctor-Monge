@@ -40,7 +40,7 @@ const SuccessStories = () => {
       subtitle:
         "Los resultados de esta cirugía tienen una de las tasas de éxito más altas, es normal sentirte con angustia previo a este procedimiento, en este videoblog te explico como especialista en rodilla todo lo que debes saber",
       background: "/Protesis%20total%20de%20cadera%20en%20Tijuana.png",
-      link: "/procedimientos/protesis-total-de-cadera",
+      link: "/procedimientos/protesis-total-de-rodilla",
     },
     {
       title: "Prótesis Total de",
@@ -48,7 +48,7 @@ const SuccessStories = () => {
       subtitle:
         "En este videoblog profundizaremos en una de las cirugías más realizadas mundialmente con poco más de 1 millón de pacientes cada año.Te explico en que consiste y quienes son candidatos",
       background: "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png",
-      link: "/procedimientos/protesis-total-de-rodilla",
+      link: "/procedimientos/protesis-total-de-cadera",
     },
     {
       title: "Hernia de ",

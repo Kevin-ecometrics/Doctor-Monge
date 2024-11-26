@@ -1,13 +1,15 @@
 import React, { useEffect, useRef } from "react";
+import "./Animation.css";
 
-const FadeUpObserver = ({ children }) => {
+const ObserverImage = ({ children }) => {
   const ref = useRef();
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("motion-safe:animate-fade-up");
+          entry.target.classList.add("curtain-open");
+          observer.unobserve(entry.target);
         }
       });
     });
@@ -23,14 +25,7 @@ const FadeUpObserver = ({ children }) => {
     };
   }, []);
 
-  return (
-    <div
-      ref={ref}
-      className="opacity-0 transform translate-y-5 transition-opacity duration-1000 ease-in-out"
-    >
-      {children}
-    </div>
-  );
+  return <div ref={ref}>{children}</div>;
 };
 
-export default FadeUpObserver;
+export default ObserverImage;

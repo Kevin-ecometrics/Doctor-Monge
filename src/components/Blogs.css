@@ -1,0 +1,33 @@
+.relative.group {
+  position: relative;
+  border-radius: 1px;
+  max-width: 400px;
+  overflow: hidden;
+  background: linear-gradient(white, white), linear-gradient(white, white),
+    linear-gradient(to right, #ffffff 0%, #ffffff 100%),
+    linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 2px,
+    /* Inicialmente, los bordes horizontales no se muestran */ 2px 0%,
+    /* Inicialmente, los bordes verticales no se muestran */ 0% 2px, 2px 0%;
+  background-position: top, right, bottom, left; /* Posición de los bordes */
+  -webkit-background-clip: padding-box, border-box, padding-box, border-box;
+  background-clip: padding-box, border-box, padding-box, border-box;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.relative.group:hover {
+  background-size: 100% 2px,
+    /* Al pasar el ratón, los bordes horizontales se completan */ 2px 100%,
+    /* Al pasar el ratón, los bordes verticales se completan */ 100% 2px,
+    2px 100%;
+}
+
+.relative.group:hover img {
+  opacity: 0%; /* Aplica la opacidad directamente a las imágenes */
+  background-color: black;
+}
+
+.text-hover-blue {
+  color: #005692;
+}

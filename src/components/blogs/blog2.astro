@@ -1,269 +1,289 @@
 ---
-import Observer from "@components/blogs/Observer"
+import Observer from "@components/blogs/Observer";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
 
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+];
+
+const blogActual = "Pseudoartrosis-y-Retraso-de-Consolidacion";
+
+const id = 2;
 ---
 
 <article
-  class="prose lg:prose-xl mx-auto py-4 text-gray-300 [&>h1]:text-white [&>h2]:text-white [&>h3]:text-white"
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
 >
-<Observer client:visible>
-  <h1 class=" fade-up text-2xl font-bold mb-2">
-    Complicaciones en procedimientos médicos: pseudoartrosis y retraso de
-    consolidación
-  </h1>
+  <Observer client:visible>
+    <h1 class="text-2xl md:text-5xl text-white font-semibold mb-24 md:mt-32">
+      Complicaciones en procedimientos médicos: pseudoartrosis y retraso de
+      consolidación
+    </h1>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-2xl font-bold mb-4">
-    ¿Porque algunas fracturas se comportan bien y otras mal?
-  </h3>
+    <h3 class="fade-up text-2xl font-bold mb-24 text-white">
+      ¿Porque algunas fracturas se comportan bien y otras mal?
+    </h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Nuestro cuerpo y cada estructura se nutren de la sangre y el oxígeno. cuando
-    hay una fractura lo afectado no solo es el hueso sino todos los tejidos
-    alrededor el hueso, para que sane requiere de sangre y oxígeno y al
-    quebrarse se interrumpe, es un proceso complicado y tiene muchos factores a
-    considerar, pero la meta final es optimizar las condiciones de tu lesión y
-    cuerpo para que logre recuperarse.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Nuestro cuerpo y cada estructura se nutren de la sangre y el oxígeno.
+      cuando hay una fractura lo afectado no solo es el hueso sino todos los
+      tejidos alrededor el hueso, para que sane requiere de sangre y oxígeno y
+      al quebrarse se interrumpe, es un proceso complicado y tiene muchos
+      factores a considerar, pero la meta final es optimizar las condiciones de
+      tu lesión y cuerpo para que logre recuperarse.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-2xl font-bold mb-4">¿Qué sucede durante la consolidación?</h3>
+    <h3 class="fade-up text-2xl font-bold mb-24 text-white">
+      ¿Qué sucede durante la consolidación?
+    </h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-xl mb-4">Existen dos tipos la primaria y secundaria</h3>
+    <h3 class="fade-up text-xl mb-16">
+      Existen dos tipos la primaria y secundaria
+    </h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Entendemos como consolidación primaria del hueso a la curación de la
-    fractura sin la formación del callo y apoyo de material como placas,
-    tornillos, clavos para fijar y estabilizar la posición de la fractura.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Entendemos como consolidación primaria del hueso a la curación de la
+      fractura sin la formación del callo y apoyo de material como placas,
+      tornillos, clavos para fijar y estabilizar la posición de la fractura.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Por otra parte, en la consolidación secundaria todas las fracturas sometidas
-    a un proceso de inmovilización con material que este puede ser, por ejemplo:
-    yeso no requieren ser estabilizada quirúrgicamente, tienen tendencia a la
-    curación por deformación de un callo.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Por otra parte, en la consolidación secundaria todas las fracturas
+      sometidas a un proceso de inmovilización con material que este puede ser,
+      por ejemplo: yeso no requieren ser estabilizada quirúrgicamente, tienen
+      tendencia a la curación por deformación de un callo.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-xl mb-4 font-bold text-white">
-    Se desarrolla en tres fases:
-  </h3>
+    <h3 class="fade-up text-xl mb-16 font-bold text-white">
+      Se desarrolla en tres fases:
+    </h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Inflamatoria, reparadora y la de remodelación. La primera ocurre en las
-    primeras 24 a 48 hrs iniciando un proceso inflamatorio donde sucede una
-    activación y migración de células al sitio de la lesión formándose un
-    coagulo entre los tejidos y hueso afectado.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Inflamatoria, reparadora y la de remodelación. La primera ocurre en las
+      primeras 24 a 48 hrs iniciando un proceso inflamatorio donde sucede una
+      activación y migración de células al sitio de la lesión formándose un
+      coagulo entre los tejidos y hueso afectado.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    En la fase reparadora o callo blando se empieza a formar el callo que hace
-    unos puentes desde ambas puntas del hueso quebrado, resultando en la
-    restauración de la circulación medular. Esto transcurre en un lapso de dos
-    semanas este proceso esta influenciado por causas mecánicas y humorales.
-    Posterior a esto está la formación del callo duro que es donde se puede
-    apreciar ya con radiografías la presencia de calcificación y osificación
-    progresiva.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      En la fase reparadora o callo blando se empieza a formar el callo que hace
+      unos puentes desde ambas puntas del hueso quebrado, resultando en la
+      restauración de la circulación medular. Esto transcurre en un lapso de dos
+      semanas este proceso esta influenciado por causas mecánicas y humorales.
+      Posterior a esto está la formación del callo duro que es donde se puede
+      apreciar ya con radiografías la presencia de calcificación y osificación
+      progresiva.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    En la última fase, la fase de remodelación ocurre en un periodo de 3 a 5
-    meses, consiste en que se forma un hueso inmaduro como cartílago que se
-    remodela gradualmente gracias a los osteoclastos, que son las células
-    encargadas de reparar los huesos devolviéndolos a su estado original.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      En la última fase, la fase de remodelación ocurre en un periodo de 3 a 5
+      meses, consiste en que se forma un hueso inmaduro como cartílago que se
+      remodela gradualmente gracias a los osteoclastos, que son las células
+      encargadas de reparar los huesos devolviéndolos a su estado original.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-2xl font-bold mb-4 py-4">
-    Los trastornos de la consolidación
-  </h3>
+    <h3 class="fade-up text-2xl font-bold mb-16 py-4 text-white">
+      Los trastornos de la consolidación
+    </h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Son procesos muy comunes en el área de ortopedia y traumatología siendo más
-    propensas las fracturas de huesos largos.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Son procesos muy comunes en el área de ortopedia y traumatología siendo
+      más propensas las fracturas de huesos largos.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-2xl font-bold mb-4">Causas</h3>
+    <h3 class="fade-up text-2xl font-bold mb-16 text-white">Causas</h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Existen diferentes factores, entre ellos pueden ser:
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Existen diferentes factores, entre ellos pueden ser:
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <ul class=" fade-up list-decimal px-4 mb-4 text-white">
-    <li class=" fade-up font-bold text-xl">
-      Traumatismos de alto impacto, contracturas mutisegmentadas, fracturas
-      abiertas que se hayan infectado.
-    </li>
-    <li class=" fade-up font-bold
+    <ul class="fade-up list-decimal px-4 mb-16 text-white">
+      <li class="fade-up font-bold text-xl">
+        Traumatismos de alto impacto, contracturas mutisegmentadas, fracturas
+        abiertas que se hayan infectado.
+      </li>
+      <li class="fade-up font-bold
       text-xl">
-      Edad, genero, malos hábitos como fumar en abundancia.
-    </li>
-    <li class=" fade-up font-bold text-xl">
-      Enfermedades sistémicas como diabetes, lupus, hipotiroidismo y osteopatía
-      descalificante.
-    </li>
-    <li class=" fade-up font-bold
+        Edad, genero, malos hábitos como fumar en abundancia.
+      </li>
+      <li class="fade-up font-bold text-xl">
+        Enfermedades sistémicas como diabetes, lupus, hipotiroidismo y
+        osteopatía descalificante.
+      </li>
+      <li class="fade-up font-bold
       text-xl">
-      Consolidación viciosa, que ocurre por una mala técnica de reducción de la
-      fractura.
-    </li>
-  </ul>
+        Consolidación viciosa, que ocurre por una mala técnica de reducción de
+        la fractura.
+      </li>
+    </ul>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-2xl font-bold mb-4">Trastorno de Consolidación</h3>
+    <h3 class="fade-up text-2xl font-bold mb-16 text-white">
+      Trastorno de Consolidación
+    </h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Se le considera un trastorno sin embargo no es una cuestión patológica al
-    retraso de la consolidación cuando hay una descalcificación de los extremos
-    óseos.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Se le considera un trastorno sin embargo no es una cuestión patológica al
+      retraso de la consolidación cuando hay una descalcificación de los
+      extremos óseos.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-2xl font-bold mb-4">Tratamiento</h3>
+    <h3 class="fade-up text-2xl font-bold mb-16 text-white">Tratamiento</h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Para ello será indispensable corregir la causa que lo provoca o mantiene por
-    ejemplo corregir la mala inmovilización, tratar la infección, así como se
-    buscara estimular la extremidad y retirar cuerpos extraños.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Para ello será indispensable corregir la causa que lo provoca o mantiene
+      por ejemplo corregir la mala inmovilización, tratar la infección, así como
+      se buscara estimular la extremidad y retirar cuerpos extraños.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-2xl font-bold mb-4">Pseudoartrosis</h3>
+    <h3 class="fade-up text-2xl font-bold mb-16 text-white">Pseudoartrosis</h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Es cuando el proceso de consolidación terminó, pero no se realizó de la
-    forma adecuada, generando dolor al realizar movimientos. El tratamiento que
-    requeriría será tratando de forma más invasiva ya es considerado un proceso
-    patológico. Para ello se buscará la resección de la cicatriz fibrosa para
-    reavivar los extremos óseos, mediante injertos para iniciar de nuevo el
-    proceso de consolidación, los injertos son la opción más adecuada por no
-    presentar reacciones de inmunológicas o infecciones.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Es cuando el proceso de consolidación terminó, pero no se realizó de la
+      forma adecuada, generando dolor al realizar movimientos. El tratamiento
+      que requeriría será tratando de forma más invasiva ya es considerado un
+      proceso patológico. Para ello se buscará la resección de la cicatriz
+      fibrosa para reavivar los extremos óseos, mediante injertos para iniciar
+      de nuevo el proceso de consolidación, los injertos son la opción más
+      adecuada por no presentar reacciones de inmunológicas o infecciones.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-2xl font-bold mb-4">Tratamiento</h3>
+    <h3 class="fade-up text-2xl font-bold mb-16 text-white">Tratamiento</h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">Para la pseudoartrosis hipertrófica</h4>
+    <h4 class="fade-up text-xl mb-16">Para la pseudoartrosis hipertrófica</h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Debido a una cuestión mecánica, se debe asegurar una mejor estabilidad.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Debido a una cuestión mecánica, se debe asegurar una mejor estabilidad.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">Pseudoartrosis infectadas</h4>
+    <h4 class="fade-up text-xl mb-16">Pseudoartrosis infectadas</h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">Para este tipo se trata con antibióticos.</h4>
+    <h4 class="fade-up text-xl mb-16">
+      Para este tipo se trata con antibióticos.
+    </h4>
   </Observer>
 
   <Observer client:visible>
-
-  <h3 class=" fade-up text-2xl font-bold mb-4">Para la pseudoartrosis atrófica</h3>
+    <h3 class="fade-up text-2xl font-bold mb-24 text-white">
+      Para la pseudoartrosis atrófica
+    </h3>
   </Observer>
 
   <Observer client:visible>
-
-  <h4 class=" fade-up text-xl mb-4">
-    Se deberá eliminar el tejido fibroso, desde la altura de la fractura hasta
-    llegar al hueso sano y colocar los injertos.
-  </h4>
+    <h4 class="fade-up text-xl mb-16">
+      Se deberá eliminar el tejido fibroso, desde la altura de la fractura hasta
+      llegar al hueso sano y colocar los injertos.
+    </h4>
   </Observer>
 
   <Observer client:visible>
+    <h4 class="fade-up text-xl mb-16">
+      Existen múltiples abordajes individualizados que tomen en cuenta todos los
+      factores presentes de los trastornos de consolidación y pseudoartrosis
+      para lograr el objetivo e incorporar al paciente a su calidad y vida digna
+      nuevamente.
 
-  <h4 class=" fade-up text-xl mb-4">
-    Existen múltiples abordajes individualizados que tomen en cuenta todos los
-    factores presentes de los trastornos de consolidación y pseudoartrosis para
-    lograr el objetivo e incorporar al paciente a su calidad y vida digna
-    nuevamente.
+      <br />
+      <br /> Hablar de las complicaciones en procedimientos es un tema que a veces
+      no se habla mucho, una complicación es un evento no deseado que puede ocurrir
+      a pesar de un tratamiento adecuado, puede ser desde infecciones, efectos secundarios
+      con medicamentos y como vimos hoy un retraso en consolidación y una pseudoartrosis.
 
-    <br />Hablar de las complicaciones en procedimientos es un tema que a veces
-    no se habla mucho, una complicación es un evento no deseado que puede
-    ocurrir a pesar de un tratamiento adecuado, puede ser desde infecciones,
-    efectos secundarios con medicamentos y como vimos hoy un retraso en
-    consolidación y una pseudoartrosis.
+      <br />
+      <br /> Cualquier procedimiento por más mínimo que sea puede traer una complicación
+      pese a que el porcentaje del evento puede ser muy bajo nunca es un cero, lo
+      que hacemos como médicos especialistas en traumatología y ortopedia para minimizar
+      el porcentaje de alguna complicación, es optimizarte como paciente y tomar
+      medidas específicas para lo que pueda aumentar el riesgo y tratarlo de disminuir
+      lo mejor posible. Es importantísimo como tu médico especialista, ser siempre
+      justos con tu condición médica y no brindar expectativas que no corresponde,
+      preguntar, platicar y conoce todo sobre tu padecimiento, es tu derecho como
+      paciente.
 
-    <br />Cualquier procedimiento por más mínimo que sea puede traer una
-    complicación pese a que el porcentaje del evento puede ser muy bajo nunca es
-    un cero, lo que hacemos como médicos especialistas en traumatología y
-    ortopedia para minimizar el porcentaje de alguna complicación, es
-    optimizarte como paciente y tomar medidas específicas para lo que pueda
-    aumentar el riesgo y tratarlo de disminuir lo mejor posible. Es
-    importantísimo como tu médico especialista, ser siempre justos con tu
-    condición médica y no brindar expectativas que no corresponde, preguntar,
-    platicar y conoce todo sobre tu padecimiento, es tu derecho como paciente.
-
-    <br />Si tienes una duda mándame mensaje o agenda tu cita para comenzar,
-    estoy cerca de ti en Tijuana
-  </h4>
+      <br />
+      <br /> Si tienes una duda mándame mensaje o agenda tu cita para comenzar, estoy
+      cerca de ti en Tijuana
+    </h4>
   </Observer>
 </article>
 
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  />
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>

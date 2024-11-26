@@ -1,7 +1,6 @@
 import React from "react";
 
-function Aside({ blogs }) {
-  const currentRoute = window.location.pathname;
+function Aside({ blogs, titulo }) {
   return (
     <aside class="w-full md:w-1/4 mt-8 md:mt-0 md:ml-8">
       <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
@@ -11,7 +10,7 @@ function Aside({ blogs }) {
         <ul class="space-y-2">
           {blogs.map((blog) => (
             <li>
-              {blog.ruta === currentRoute ? (
+              {blog.titulo === titulo ? (
                 <span class="block text-white transition-colors duration-300 p-2 rounded-lg">
                   {blog.title}
                 </span>

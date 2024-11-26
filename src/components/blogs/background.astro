@@ -6,13 +6,12 @@ const { image, title, date } = Astro.props;
   <img
     src={image}
     alt="fondo"
-    class="w-full
-        h-screen
-        object-cover
-        object-center"
+    class="w-full h-screen object-cover object-center"
   />
   <div class="lg:w-[60%]">
-    <div class="hidden lg:flex lg:flex-col lg:items-start lg:justify-center lg:absolute lg:left-48 lg:top-1/2 lg:bottom-1/2">
+    <div
+      class="hidden lg:flex lg:flex-col lg:items-start lg:justify-center lg:absolute lg:left-48 lg:top-1/2 lg:bottom-1/2"
+    >
       <h2 class="text-[40px] font-semibold text-white mb-2">
         {date}
       </h2>
@@ -21,8 +20,8 @@ const { image, title, date } = Astro.props;
       </h1>
     </div>
   </div>
-  <div class="px-8 py-2">
-    <h2 class="text-[20px]  lg:hidden font-semibold text-white text-start">
+  <div class="px-4 py-2 pointer-events-none">
+    <h2 class="text-[20px] lg:hidden font-semibold text-white text-start">
       {date}
     </h2>
     <h1 class="text-[40px] lg:hidden font-semibold text-white text-start">

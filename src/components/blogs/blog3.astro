@@ -1,195 +1,224 @@
 ---
-import Observer from "@components/blogs/Observer"
+import Observer from "@components/blogs/Observer";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
 
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+];
+
+const blogActual = "Lesion-de-Ligamento-cruzado-anterior";
+
+const id = 3;
 ---
 
-
 <article
-  class="lg:prose-xl py-4 text-gray-300 [&>h1]:text-white [&>h2]:text-white [&>h3]:text-white"
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
 >
   <Observer client:visible>
-  <h1 class="fade-up text-2xl font-bold mb-2">
-    Lesión de Ligamento cruzado anterior: las lesiones que son 4 veces más
-    comunes en mujeres.
-  </h1>
-</Observer>
+    <h1
+      class="fade-up text-2xl md:text-5xl font-bold mb-16 md:mt-32 text-white"
+    >
+      Lesión de Ligamento cruzado anterior: las lesiones que son 4 veces más
+      comunes en mujeres.
+    </h1>
+  </Observer>
 
   <Observer client:visible>
-
-  <h2 class="fade-up text-xl mb-2 font-semibold">
-    Cómo la artroscopia puede ayudar con la recuperación permanente.
-  </h2>
-</Observer>
-
-  <Observer client:visible>
-
-  <h4 class="fade-up text-xl mb-4">
-    Hola, Soy Ricardo Monge, me gustaría abordar una de lesiones más comunes en
-    mujeres y como se interviene como traumatólogo especialista en la
-    reconstrucción de ligamentos cruzados anteriores de rodilla por artroscopia.
-    <br />
-    La rodilla es una articulación con muchas estructuras, estas estructuras necesitan
-    trabajar en armonía para estar balanceadas y trabajar de manera eficiente. Los
-    músculos ligamentos y tendones funcionan sincrónicamente para que en cada rango
-    que tú le das de movimiento se mantenga balanceada y en su lugar.
-    <br />
-    El ligamento cruzado interior se encuentra en el centro de la rodilla, que conecta
-    el hueso de la tibia con el fémur. Es uno de los principales estabilizadores
-    de la rodilla encargándose de evitar el desplazamiento de la tibia bajo el fémur,
-    cuando se rompe o estira de más, es cuando viene un desbalance de estas estructuras
-    que puede ocasionar molestias porque se sobrecargan partes de la rodilla te preguntas:
-    ¿Como se puede lesionar exactamente? Cuando la rodilla se tuerce o se hiperextiende
-    o recibe un golpe directo.
-  </h4>
-</Observer>
+    <h2 class="fade-up text-white text-xl mb-16 font-semibold">
+      Cómo la artroscopia puede ayudar con la recuperación permanente.
+    </h2>
+  </Observer>
 
   <Observer client:visible>
-
-  <h2 class="fade-up text-2xl font-bold mb-4">
-    ¿Porque las mujeres son más propensas a las lesiones por LCA?
-  </h2>
-</Observer>
-
-  <Observer client:visible>
-
-  <h4 class="fade-up text-xl mb-4">
-    Existen diferentes factores de riesgo como los ambientales, anatómicos,
-    hormonales y biomecánicos.
-  </h4>
-</Observer>
-
-  <Observer client:visible>
-  <h4 class="fade-up text-xl mb-4">
-    <strong class="fade-up text-white"> Ambientales: </strong>
-    la relación del deporte con la fricción de la superficie la temperatura los tenis
-    para hacer ejercicio por ejemplo correr flag, futbol y basquetbol.
-  </h4>
-</Observer>
-
-  <Observer client:visible>
-
-  <h4 class="fade-up text-xl mb-4">
-    <strong class="fade-up text-white"> Factores anatómicos: </strong>
-    Los ligamentos cruzados anteriores son más delgados en comparación con los de
-    los hombres, la pelvis más ancha, fémur más corto, los ángulos formados entre
-    el tendón rotuliano y la tibia las hace más propensas a lastimarse por el aumento
-    de ángulo que les generar mayor cantidad de estrés en el LCA en comparación del
-    hombre.
-  </h4>
-</Observer>
+    <h4 class="fade-up text-xl mb-24">
+      Hola, Soy Ricardo Monge, me gustaría abordar una de lesiones más comunes
+      en mujeres y como se interviene como traumatólogo especialista en la
+      reconstrucción de ligamentos cruzados anteriores de rodilla por
+      artroscopia.
+      <br />
+      La rodilla es una articulación con muchas estructuras, estas estructuras necesitan
+      trabajar en armonía para estar balanceadas y trabajar de manera eficiente.
+      Los músculos ligamentos y tendones funcionan sincrónicamente para que en cada
+      rango que tú le das de movimiento se mantenga balanceada y en su lugar.
+      <br />
+      El ligamento cruzado interior se encuentra en el centro de la rodilla, que
+      conecta el hueso de la tibia con el fémur. Es uno de los principales estabilizadores
+      de la rodilla encargándose de evitar el desplazamiento de la tibia bajo el
+      fémur, cuando se rompe o estira de más, es cuando viene un desbalance de estas
+      estructuras que puede ocasionar molestias porque se sobrecargan partes de la
+      rodilla te preguntas: ¿Como se puede lesionar exactamente? Cuando la rodilla
+      se tuerce o se hiperextiende o recibe un golpe directo.
+    </h4>
+  </Observer>
 
   <Observer client:visible>
-
-  <h2 class="fade-up text-2xl font-bold mb-4">Factores hormonales</h2>
-</Observer>
-
-  <Observer client:visible>
-
-  <h4 class="fade-up text-xl mb-4">
-    Los cambios hormonales se dan a lo largo del ciclo menstrual que durante la
-    fase ovulatoria los niveles de estrógeno son más altos y producen cambios en
-    la proliferación y síntesis de fibroblastos que desempeñan la función de
-    secretar colágeno, que ayuda a mantener el marco estructural de los tejidos.
-  </h4>
-</Observer>
+    <h2 class="fade-up text-2xl font-bold mb-8 text-white">
+      ¿Porque las mujeres son más propensas a las lesiones por LCA?
+    </h2>
+  </Observer>
 
   <Observer client:visible>
-
-  <h2 class="fade-up text-2xl font-bold mb-4">
-    ¿Porque es necesario realizar una artroscopia?
-  </h2>
-</Observer>
-
-  <Observer client:visible>
-
-  <h4 class="fade-up text-xl mb-4">
-    La artroscopia es una de las intervenciones no invasivas con una tasa de
-    éxito del 95% y es una de las más realizadas en el mundo con cerca de 2
-    millones de pacientes al año, es un procedimiento con un tiempo de
-    recuperación rápido debido a las incisiones más pequeñas y con un porcentaje
-    muy bajo de riego ya que se evita complicaciones como infecciones o
-    coágulos.
-  </h4>
-</Observer>
+    <h4 class="fade-up text-xl mb-24">
+      Existen diferentes factores de riesgo como los ambientales, anatómicos,
+      hormonales y biomecánicos.
+    </h4>
+  </Observer>
 
   <Observer client:visible>
-
-  <h4 class="fade-up text-xl mb-4">
-    Si un LCA dañado no se atiende puede generar mayor inestabilidad y estrés a
-    la rodilla con una alta probabilidad de una ruptura de meniscos. Por tanto,
-    la artroscopia es una forma rápida y eficiente de resolver una lesión.
-  </h4>
-</Observer>
-
-  <Observer client:visible>
-
-  <h2 class="fade-up text-2xl font-bold mb-4">Intervención quirúrgica</h2>
-</Observer>
+    <h4 class="fade-up text-xl mb-24">
+      <strong class="fade-up text-white"> Ambientales: </strong>
+      la relación del deporte con la fricción de la superficie la temperatura los
+      tenis para hacer ejercicio por ejemplo correr flag, futbol y basquetbol.
+    </h4>
+  </Observer>
 
   <Observer client:visible>
-
-  <h4 class="fade-up text-xl mb-4">
-    Durante la artroscopia mediante una pequeña incisión se inserta una cámara
-    en el centro de la rodilla donde se encuentra el LCA que se trasmite
-    mediante una pantalla que nos permite revisar los ligamentos y otros tejidos
-    de la rodilla. El tejido dependiendo el estado puede solo requerir una
-    reconstrucción en caso de que el daño sea severo es reemplazado por un
-    tejido propio, usualmente se puede tomar tejido de un tendón de la rótula,
-    un tendón del cuádriceps o bien un injerto de un cadáver.
-  </h4>
-</Observer>
+    <h4 class="fade-up text-xl mb-24">
+      <strong class="fade-up text-white"> Factores anatómicos: </strong>
+      Los ligamentos cruzados anteriores son más delgados en comparación con los
+      de los hombres, la pelvis más ancha, fémur más corto, los ángulos formados
+      entre el tendón rotuliano y la tibia las hace más propensas a lastimarse por
+      el aumento de ángulo que les generar mayor cantidad de estrés en el LCA en
+      comparación del hombre.
+    </h4>
+  </Observer>
 
   <Observer client:visible>
-
-  <h4 class="fade-up text-xl mb-4">
-    Durante este procedimiento se hará otras incisiones alrededor de la rodilla
-    y se introducirán otros instrumentos para reparar el LCA o si es necesario
-    reemplazar.
-  </h4>
-</Observer>
+    <h2 class="fade-up text-2xl font-bold mb-8 text-white">
+      Factores hormonales
+    </h2>
+  </Observer>
 
   <Observer client:visible>
-
-  <h2 class="fade-up text-2xl font-bold mb-4">
-    ¿Que esperar después de una artroscopia?
-  </h2>
-</Observer>
-
-  <Observer client:visible>
-
-  <h4 class="fade-up text-xl mb-4">
-    Lo más recomendable sería el uso de muletas los primeros días, evitar estar
-    de pie o caminar por tiempo prolongado
-  </h4>
-</Observer>
+    <h4 class="fade-up text-xl mb-24">
+      Los cambios hormonales se dan a lo largo del ciclo menstrual que durante
+      la fase ovulatoria los niveles de estrógeno son más altos y producen
+      cambios en la proliferación y síntesis de fibroblastos que desempeñan la
+      función de secretar colágeno, que ayuda a mantener el marco estructural de
+      los tejidos.
+    </h4>
+  </Observer>
 
   <Observer client:visible>
-
-  <ul class="fade-up list-decimal text-white px-4 mb-4">
-    <li class="fade-up font-bold text-xl">
-      Se recomienda tener una dieta rica en proteínas, vitaminas y minerales
-    </li>
-    <li class="fade-up font-bold text-xl">Aplicar comprensas frías</li>
-    <li class="fade-up font-bold text-xl">
-      Mantener una compresión adecuada para disminuir la hinchazón
-    </li>
-    <li class="fade-up font-bold text-xl">Mantener la pierna elevada</li>
-    <li class="fade-up font-bold text-xl">Seguir puntualmente la receta medica</li>
-  </ul>
-</Observer>
+    <h2 class="fade-up text-2xl font-bold mb-8 text-white">
+      ¿Porque es necesario realizar una artroscopia?
+    </h2>
+  </Observer>
 
   <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24">
+      La artroscopia es una de las intervenciones no invasivas con una tasa de
+      éxito del 95% y es una de las más realizadas en el mundo con cerca de 2
+      millones de pacientes al año, es un procedimiento con un tiempo de
+      recuperación rápido debido a las incisiones más pequeñas y con un
+      porcentaje muy bajo de riego ya que se evita complicaciones como
+      infecciones o coágulos.
+    </h4>
+  </Observer>
 
-  <h4 class="fade-up text-xl mb-4">
-    Realizar los ejercicios recomendados en el tiempo estipulado hasta que se
-    recomiende complementarlo con un fisioterapeuta para recobrar el movimiento
-    y fuerza. Recuerda acudir a tus visitas de seguimiento y ser muy paciente,
-    cada quien tiene un proceso de recuperación diferente, no siempre se trata
-    de la rapidez si no de la estabilidad y salud que el cuerpo requiere.
-    Cualquier duda o comentario házmelo saber, agenda tu cita para poder
-    apoyarte.
-  </h4>
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24">
+      Si un LCA dañado no se atiende puede generar mayor inestabilidad y estrés
+      a la rodilla con una alta probabilidad de una ruptura de meniscos. Por
+      tanto, la artroscopia es una forma rápida y eficiente de resolver una
+      lesión.
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="fade-up text-2xl font-bold mb-8 text-white">
+      Intervención quirúrgica
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24">
+      Durante la artroscopia mediante una pequeña incisión se inserta una cámara
+      en el centro de la rodilla donde se encuentra el LCA que se trasmite
+      mediante una pantalla que nos permite revisar los ligamentos y otros
+      tejidos de la rodilla. El tejido dependiendo el estado puede solo requerir
+      una reconstrucción en caso de que el daño sea severo es reemplazado por un
+      tejido propio, usualmente se puede tomar tejido de un tendón de la rótula,
+      un tendón del cuádriceps o bien un injerto de un cadáver.
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24">
+      Durante este procedimiento se hará otras incisiones alrededor de la
+      rodilla y se introducirán otros instrumentos para reparar el LCA o si es
+      necesario reemplazar.
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="fade-up text-2xl font-bold mb-8 text-white">
+      ¿Que esperar después de una artroscopia?
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24">
+      Lo más recomendable sería el uso de muletas los primeros días, evitar
+      estar de pie o caminar por tiempo prolongado
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <ul class="fade-up list-decimal text-white px-4 mb-24">
+      <li class="fade-up font-bold text-xl">
+        Se recomienda tener una dieta rica en proteínas, vitaminas y minerales
+      </li>
+      <li class="fade-up font-bold text-xl">Aplicar comprensas frías</li>
+      <li class="fade-up font-bold text-xl">
+        Mantener una compresión adecuada para disminuir la hinchazón
+      </li>
+      <li class="fade-up font-bold text-xl">Mantener la pierna elevada</li>
+      <li class="fade-up font-bold text-xl">
+        Seguir puntualmente la receta medica
+      </li>
+    </ul>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24">
+      Realizar los ejercicios recomendados en el tiempo estipulado hasta que se
+      recomiende complementarlo con un fisioterapeuta para recobrar el
+      movimiento y fuerza. Recuerda acudir a tus visitas de seguimiento y ser
+      muy paciente, cada quien tiene un proceso de recuperación diferente, no
+      siempre se trata de la rapidez si no de la estabilidad y salud que el
+      cuerpo requiere. Cualquier duda o comentario házmelo saber, agenda tu cita
+      para poder apoyarte.
+    </h4>
   </Observer>
 </article>
 
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  />
 
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>

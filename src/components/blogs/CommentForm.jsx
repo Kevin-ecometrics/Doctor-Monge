@@ -2,19 +2,20 @@ import React, { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 
-function Comment({ blogs }) {
+function Comment({ blogs, blogActual, idForm }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
+  const [blogId, setBlogId] = useState(idForm);
 
-  const currentRoute = window.location.pathname;
-  const blogId =
-    blogs.findIndex((b) => `/blogs/${b.blog}` === currentRoute) + 1;
+  let blogIndex = blogs.findIndex((blog) => blog.blog === blogActual);
 
-  console.log(blogs);
-  console.log(`Current Route: ${currentRoute}`);
-  console.log(`Blog ID: ${blogId}`);
+  blogIndex = blogIndex + 1;
+
+  const handleBlogChange = (event) => {
+    setBlogId(event.target.value);
+  };
 
   useEffect(() => {
     const fetchComments = async () => {
@@ -24,7 +25,7 @@ function Comment({ blogs }) {
         );
         const filteredComments = response.data.filter(
           (comment) =>
-            comment.blog_id === blogId && comment.estatus === "aceptado"
+            comment.estatus === "aceptado" && comment.blog_id === blogIndex
         );
         setComments(filteredComments);
       } catch (error) {
@@ -33,7 +34,7 @@ function Comment({ blogs }) {
     };
 
     fetchComments();
-  }, [blogId]);
+  }, [blogIndex]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,39 +57,48 @@ function Comment({ blogs }) {
     }
   };
 
-  const calculateYearsAgo = (date) => {
+  const formatDate = (dateString) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const date = new Date(dateString);
+    const formattedDate = date.toLocaleDateString(undefined, options);
+
     const currentDate = new Date();
-    const commentDate = new Date(date);
-    const yearsAgo = currentDate.getFullYear() - commentDate.getFullYear();
-    return yearsAgo;
+    const yearsAgo = currentDate.getFullYear() - date.getFullYear();
+
+    return `${formattedDate} (${yearsAgo} años atrás)`;
   };
-
   return (
-    <div className="flex flex-col justify-start items-start px-4 md:px-28 py-16 bg-[#202020] h-screen w-screen">
-      <h1 className="font-bold text-2xl mb-12">Nuestros comentarios:</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {comments.map((comment, index) => (
-          <div key={index} className="border-2 p-4 border-white mb-8">
-            <div className="flex justify-start gap-6 items-center mb-8">
-              <h1>{comment.nombre}</h1>-{" "}
-              <p>
-                {new Date(comment.fecha_creacion).toLocaleDateString("es-ES", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}{" "}
-                ({calculateYearsAgo(comment.fecha_creacion)} años atrás)
-              </p>{" "}
-            </div>
-            <p className="font-medium">{comment.comentario}</p>
-          </div>
-        ))}
-      </div>
+    <div className="flex flex-col px-4 md:px-0 py-16 ">
+      {comments.length > 0 && (
+        <h1 className="font-bold text-2xl">Nuestros comentarios:</h1>
+      )}{" "}
+      <div className="gap-8 grid grid-cols-1 md:grid-cols-3  mb-8">
+        {comments.length > 0 ? (
+          comments.map((comment, index) => (
+            <div key={index} className="bg-gray-800 p-4 mt-2 rounded">
+              <p className="text-white">
+                Aportado por: <strong>{comment.nombre}</strong>
+              </p>
 
-      <div className="h-screen flex flex-col justify-start items-start">
+              <p className="text-white break-words">
+                Comentario:
+                <span className="block mt-1">{comment.comentario}</span>
+              </p>
+              <p className="text-white text-sm">
+                Fecha de creación: {formatDate(comment.fecha_creacion)}
+              </p>
+            </div>
+          ))
+        ) : (
+          <p className="text-white text-xl font-light mb-8">
+            No hay comentarios para este blog.
+          </p>
+        )}
+      </div>
+      <div className="flex flex-col">
         <h1 className="text-2xl font-bold mb-4">Deja tu comentario </h1>
 
-        <form className="w-80" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="relative z-0 w-full mb-5 group">
             <input
               type="text"
@@ -96,7 +106,7 @@ function Comment({ blogs }) {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              className="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-white  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             />
@@ -114,7 +124,7 @@ function Comment({ blogs }) {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              className="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             />
@@ -133,7 +143,7 @@ function Comment({ blogs }) {
               id="comment"
               value={comment}
               onChange={(e) => setComment(e.target.value)}
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              className="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             />
@@ -149,20 +159,22 @@ function Comment({ blogs }) {
               className="block text-white text-sm font-bold mb-2"
               htmlFor="currentRoute"
             >
-              URL Actual
+              Subir comentario al blog:
             </label>
             <select
               id="currentRoute"
               className="w-full px-3 py-2 text-black"
               value={blogId}
-              readOnly
+              onChange={handleBlogChange}
             >
-              <option value={blogId}>{blogId}</option>
+              <option key={idForm} value={idForm}>
+                {idForm}
+              </option>{" "}
             </select>
           </div>
           <button
             type="submit"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm w-full sm:w-80 px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Enviar comentario
           </button>
