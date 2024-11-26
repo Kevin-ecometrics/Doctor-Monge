@@ -50,7 +50,7 @@ function Partners() {
           Miembro activo de varios colegios e instituciones especializadas me
           continúan preparando y actualizando mediante seminarios y congresos
           con el fin de seguir brindando una alta calidad de atención para
-          paciente actuales y futuros
+          paciente actuales y futuros.
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:w-full">
           {partners.map((partner, index) => (
