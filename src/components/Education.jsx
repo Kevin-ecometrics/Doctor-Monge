@@ -52,8 +52,10 @@ const Education = () => {
             Me he preparado en las mejores instituciones para brindarte
             tratamiento de excelencia y acompañamiento de calidad, así como
             brindarte la información absolutamente necesaria para que comprendas
-            tu lesión o patología y poderla tratar. Número de Cédula
-            profesional: 129001837660539
+            tu lesión o patología y poderla tratar. 
+          </h2>
+          <h2 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
+            Número de Cédula profesional: 129001837660539
           </h2>
         </div>
         <div className="py-6 lg:py-0">

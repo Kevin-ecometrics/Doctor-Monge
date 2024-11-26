@@ -3,29 +3,29 @@ import { motion, useInView } from "framer-motion";
 
 const testimonials = [
   {
-    text: "Excelente atención y gran profesionalismo, toda explicación es detallada y armónica para su comprensión",
+    text: "Excelente atención y gran profesionalismo, toda explicación por parte del Doctor Ricardo es detallada y armónica para su comprensión",
     name: "Alan Cota",
-    topic: "Ortopedia ",
+    topic: "Hombro",
   },
   {
-    text: "El Dr Ricardo Monge a quien visité por vez primera revisó de forma muy amplia y detallada mi padecimiento, y con su explicación me quedó totalmente claro el tratamiento a seguir para mi recuperación. Excelente",
+    text: "El Dr. Ricardo Monge, a quien visité por vez primera, revisó de forma muy amplia y detallada mi padecimiento, y con su explicación me quedó totalmente claro el tratamiento a seguir para mi recuperación. Excelente",
     name: "Leticia R",
-    topic: "Traumatología ",
+    topic: "Columna ",
   },
   {
-    text: "Bastante profesional, explica cada detalle de los procedimientos posibles y recomendó la mejor accion. Me he sentido de maravilla y quede muy agradecido con el Dr. Monge",
-    name: "FP",
-    topic: "Ortopedia ",
+    text: "Bastante profesional, explica cada detalle de los procedimientos posibles y recomendó la mejor acción. Me he sentido de maravilla y quede muy agradecido con el Dr. Monge",
+    name: "Francisco Pérez",
+    topic: "Rodilla ",
   },
   {
-    text: "Mi experiencia con el dr monge fue muy buena, nos explicó perfectamente todo, apenas empiezo un tratamiento con el pero la atención fue excelente y el trato muy amable. Lo recomiendo!!",
+    text: "Mi experiencia con el Dr. Monge fue muy buena, nos explicó perfectamente todo, apenas empiezo un tratamiento con él pero la atención fue excelente y el trato muy amable. ¡Lo recomiendo!",
     name: "Nelly Toledo",
-    topic: "Traumatología ",
+    topic: "Rodilla ",
   },
   {
-    text: "Excelente doctor , muy explícito en sus palabras , tanto profesional como humana, ambas cosas totalmente diferentes , certero y sabio en sus diagnósticos ,lo recomiendo ampliamente gracias doctor en lo personal por su enorme ayuda y ante todo paciencia a todas mis dudas con amabilidad que me las respondió al momento ,grx mil",
+    text: "Excelente doctor, muy explícito en sus palabras , tanto profesional como humana, ambas cosas totalmente diferentes , certero y sabio en sus diagnósticos ,lo recomiendo ampliamente gracias doctor en lo personal por su enorme ayuda y ante todo paciencia a todas mis dudas con amabilidad que me las respondió al momento",
     name: "Alicia Garza Soltero",
-    topic: "Traumatología ",
+    topic: "Cadera ",
   },
 ];
 

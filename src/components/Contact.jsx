@@ -109,10 +109,10 @@ function Contact() {
           <h1 className="text-[32px] font-bold mb-2">
             ¿Tienes alguna pregunta?
           </h1>
-          <h2 className="text-[25px] font-medium mb-2">
-            Te invito a ver más contenido de Ortopedia y Traumatología
+          <h2 className="text-[25px] font-medium mb-10">
+            Te invito a preguntarme más sobre Ortopedia y Traumatología.
           </h2>
-          <h1 className="font-medium text-[20px] text-blue-500">
+          <h1 className="font-medium mb-10 text-[20px] text-blue-500">
             ¿ Deseas agendar tu cita? Con gusto, solo escribe tus datos para
             comenzar o llámanos{" "}
           </h1>
