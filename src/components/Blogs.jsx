@@ -63,6 +63,15 @@ function Blogs() {
         "En este blog te platicare sobre el rechazo de material en osteosíntesis y como detectarlo a tiempo para evitar complicaciones.",
       link: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
     },
+    {
+      img: "/8.Card.webp",
+      fecha: "Noviembre 2024",
+      titulo:
+        "Juanetes: Sintomas, detección y tipos de cirugía para eliminarlos",
+      texto:
+        "En este blog te platicare sobre los juanetes, como detectarlos y los tipos de cirugía que existen para eliminarlos.",
+      link: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();

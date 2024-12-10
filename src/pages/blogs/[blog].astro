@@ -34,6 +34,11 @@ export function getStaticPaths() {
         blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
       },
     },
+    {
+      params: {
+        blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+      },
+    },
   ];
 }
 
@@ -114,6 +119,7 @@ const blogs = [
       "Explora las diferencias entre el tratamiento conservador y la cirugía para la hernia discal cervical, y cuándo es necesario optar por la intervención quirúrgica.",
     keywords:
       "tratamiento conservador, cirugía, hernia discal cervical, intervención quirúrgica",
+    id: 6,
   },
   {
     titulo:
@@ -128,6 +134,20 @@ const blogs = [
       "Conoce los factores que pueden llevar al fallo en la osteosíntesis de fracturas y por qué a veces se dice que el cuerpo rechazó el material.",
     keywords:
       "rechazo de material, fallo osteosíntesis, fracturas, factores asociados",
+    id: 7,
+  },
+  {
+    titulo: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+    ruta: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+    blogTitle:
+      "Juanetes: sintomas, Detección y Tipos de Cirugía para Eliminarlos",
+    title: "Juanetes: sintomas, Detección y Tipos de Cirugía para Eliminarlos",
+    date: "Noviembre 2024",
+
+    description:
+      "Descubre todo sobre los juanetes: síntomas, detección y tipos de cirugía para eliminarlos. Conoce cómo tratar y prevenir esta afección en los pies.",
+    keywords: "juanetes, cirugía de juanetes, tratamiento de juanetes",
+    id: 8,
   },
 ];
 
@@ -187,6 +207,14 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   date = "Octubre 2024";
   content = "Blog7";
   blogTitle = "Rechazo de Material en Osteosíntesis";
+} else if (
+  blog === "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos"
+) {
+  image = "/fondo8.webp";
+  date = "Noviembre 2024";
+  content = "Blog8";
+  blogTitle =
+    "Juanetes: Síntomas, Detección y Tipos de Cirugía para Eliminarlos";
 } else {
   image = "/fondoDefault.png";
 }
