@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 function Menu({ blogs, titulo }) {
@@ -12,10 +12,10 @@ function Menu({ blogs, titulo }) {
 
   return (
     <div>
-      <div className="relative">
+      <div className="relative z-50">
         <button
           onClick={toggleMenu}
-          className="p-2 top-2 right-4 md:top-10 md:right-10 fixed text-white rounded-lg"
+          className="p-2 top-2 right-4 md:top-10 md:right-10 fixed  text-white rounded-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ function Menu({ blogs, titulo }) {
               <div key={key}>
                 <a
                   href={blog.ruta}
-                  className={`p-4 mb-4 flex flex-col text-center transition duration-300 ease-in-out transform hover:scale-105 rounded-lg ${
+                  className={`p-2 md:p-4 mb-4 flex flex-col text-center transition duration-300 ease-in-out transform hover:scale-105 rounded-lg ${
                     blog.ruta === "/blogs/" + titulo
                       ? "text-blue-400 bg-gray-700" // Estilo especial para el título activo
                       : "text-white bg-gray-800 hover:bg-gray-700"

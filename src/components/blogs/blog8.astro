@@ -85,7 +85,7 @@ const id = 8;
     <h2 class="text-white text-4xl mb-4 font-semibold">
       Entre los factores biomecánicos participan alteraciones del pie como:
     </h2>
-    <ul class="list-decimal mb-8">
+    <ul class="list-decimal mb-8 px-5">
       <li>Gastrocnemio sóleo</li>
       <li>Gastrocnemio</li>
       <li>Pie plano</li>
@@ -97,7 +97,7 @@ const id = 8;
     <h2 class="text-white text-4xl mb-4 font-semibold">
       Artritis y alteraciones metabólicas:
     </h2>
-    <ul class="list-decimal mb-8">
+    <ul class="list-decimal mb-8 px-5">
       <li>Artritis gotosa</li>
       <li>Artritis reumatoide</li>
       <li>Trastornos del tejido conectivo</li>
@@ -108,7 +108,7 @@ const id = 8;
     <h2 class="text-white text-4xl mb-4 font-semibold">
       Lesiones traumáticas:
     </h2>
-    <ul class="list-decimal mb-8">
+    <ul class="list-decimal mb-8 px-5">
       <li>Daño intraarticular</li>
       <li>Dislocaciones</li>
       <li>Deformidad estructural</li>
@@ -198,7 +198,7 @@ const id = 8;
       prolongado, decidan tratarse cuando esta condición les impide realizar sus
       actividades de forma funcional, lo cual puede generar complicaciones como:
     </h3>
-    <ul class="list-decimal mb-8">
+    <ul class="list-decimal mb-8 px-5">
       <li>
         Bursitis: Sucede cuando las bolsas sinoviales de las articulaciones del
         dedo sufren rigidez e hinchazón
@@ -233,7 +233,9 @@ const id = 8;
       <li>Lateral</li>
       <li>Proyecciones axiales para obsevar los sesamoideos</li>
     </ul>
-    <h3 class="text-xl mb-16">Tratamiento:</h3>
+    <h2 class="text-4xl text-white mb-16 font-bold">
+      Tratamiento de juanetes o hallux valgus
+    </h2>
   </Observer>
 
   <Observer client:visible>
@@ -247,7 +249,7 @@ const id = 8;
       Se recomiendan medidas para aminorar el dolor, como el uso de un calzado
       especial:
     </h3>
-    <ul class="list-decimal mb-8">
+    <ul class="list-decimal mb-8 px-5">
       <li>
         Tratamiento farmacológico: Administración intraarticular de
         antiinflamatorios esteroideos para controlar la inflamación y disminuir
@@ -353,12 +355,12 @@ const id = 8;
 </article>
 
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
-  <Comments
+  <!-- <Comments
     client:visible
     author={author}
     comment={comment}
     business={business}
-  />
+  /> -->
 
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
