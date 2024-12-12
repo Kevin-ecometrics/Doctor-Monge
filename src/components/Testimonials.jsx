@@ -51,7 +51,7 @@ function Testimonials() {
   return (
     <main
       ref={ref}
-      className="flex justify-center items-center lg:h-screen py-16 lg:py-0 relative"
+      className="flex justify-center items-center lg:h-screen py-16 lg:py-0"
       style={{
         overflow: "hidden", // Asegura que el contenido animado no desborde
       }}
@@ -66,12 +66,10 @@ function Testimonials() {
             "url('/Bienvenido a tu tratamiento a la medida con expertos en traumatologia.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          position: "absolute", // Posiciona sobre el main
-          top: 0,
-          left: 0,
           width: "100%",
           height: "100%",
           zIndex: -1, // Asegura que el fondo esté detrás del contenido
+          position: "absolute", // Asegura que el fondo no afecte el scroll
         }}
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 px-8 lg:w-[80%] lg:mx-auto gap-16">

@@ -56,15 +56,13 @@ function Contact() {
         style={{
           backgroundImage:
             "url('/Comodidad_desde_la_primera_visita_en_el_consultorio_de_Dr_Monge.webp')",
+          cover: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          position: "absolute", // Posiciona sobre el main
-          top: 0,
-          left: 0,
           width: "100%",
           height: "100%",
-          zIndex: -1, // Asegura que el fondo esté detrás del contenido
-          opacity: 0.9,
+          position: "absolute",
+          zIndex: "-1",
         }}
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 px-8 gap-16 w-[80%] mx-auto z-10">
@@ -79,30 +77,109 @@ function Contact() {
             <p>22010 Tijuana, B.C., México</p>
           </div>
           <div className="flex flex-col">
-            <a
-              href="tel:6649763510"
-              className="font-medium text-[29px] hover:text-blue-600"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              664 976 3510
-            </a>
-            <a
-              href="tel:6641690650"
-              className="font-medium text-[29px] hover:text-blue-600 mb-8"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              664 169 0650
-            </a>
-            <a
-              href="mailto:pacientes@mongeortopedia.com"
-              className="font-bold text-[18px] text-[#969596] hover:text-blue-600"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              pacientes@mongeortopedia.com{" "}
-            </a>
+            <div className="flex flex-col">
+              <div className="mb-4 group">
+                <a
+                  href="tel:6649763510"
+                  className="flex items-center gap-4 group-hover:text-blue-600 group-hover:cursor-pointer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-building"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 21l18 0" />
+                    <path d="M9 8l1 0" />
+                    <path d="M9 12l1 0" />
+                    <path d="M9 16l1 0" />
+                    <path d="M14 8l1 0" />
+                    <path d="M14 12l1 0" />
+                    <path d="M14 16l1 0" />
+                    <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+                  </svg>
+                  <p
+                    className="font-medium text-[29px]"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    664 976 3510
+                  </p>
+                </a>
+              </div>
+              <p className="mb-2 font-bold text-[#969596]">
+                Horario de atención:
+              </p>
+              <p className="font-medium">
+                Lunes a Viernes de 10am-2pm y 4pm-6pm.
+              </p>
+              <p className="mb-4 font-medium">Sábados de 10am-2pm.</p>
+            </div>
+
+            <div className="mb-8 group">
+              <a
+                className="flex items-center gap-4 group-hover:text-blue-600 group-hover:cursor-pointer"
+                href="https://wa.me/6641690650"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                </svg>
+                <p
+                  className="font-medium text-[29px]  "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  664 169 0650
+                </p>
+              </a>
+            </div>
+            <div className="mb-8 group">
+              <a
+                href="mailto:pacientes@mongeortopedia.com"
+                className=" group-hover:text-blue-600 flex items-center gap-4 group-hover:cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                  <path d="M3 7l9 6l9 -6" />
+                </svg>
+                <p className="font-bold text-[18px]">
+                  pacientes@mongeortopedia.com{" "}
+                </p>
+              </a>
+            </div>
           </div>
         </div>
         <div>
@@ -113,7 +190,7 @@ function Contact() {
             Te invito a preguntarme más sobre Ortopedia y Traumatología.
           </h2>
           <h1 className="font-medium mb-10 text-[20px] text-blue-500">
-            ¿ Deseas agendar tu cita? Con gusto, solo escribe tus datos para
+            ¿Deseas agendar tu cita? Con gusto, solo escribe tus datos para
             comenzar o llámanos{" "}
           </h1>
           <h2></h2>
@@ -176,7 +253,7 @@ function Contact() {
           <Toaster position="top-right" />
         </div>
       </div>{" "}
-      <footer className="absolute bottom-10 left-10 lg:left-20">
+      <footer className=" absolute bottom-10 left-10 lg:left-20">
         <p className="text-sm">
           All rights reserved by Doctor Monge. {year} ©{" "}
           <a href="/" className="hover:text-blue-500 hover:underline">

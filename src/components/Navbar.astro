@@ -86,7 +86,7 @@ import Hamburger from "./icons/Hamburger.astro";
       <Doctorialia class="cursor-pointer" />
     </a>
   </div>
-  <footer class="flex flex-col p-4 absolute bottom-0">
+  <footer class="flex flex-col p-4 bottom-0">
     <h1 class="text-[15px]">© Doctor Monge. 2024</h1>
     <h1 class="text-[15px]">Todos los derechos reservados</h1>
   </footer>
@@ -164,4 +164,12 @@ import Hamburger from "./icons/Hamburger.astro";
       });
     }
   });
+
+  window.addEventListener("popstate", () => {
+    reloadPage();
+  });
+
+  function reloadPage() {
+    window.location.reload();
+  }
 </script>
