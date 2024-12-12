@@ -8,7 +8,7 @@ interface Props {
 }
 
 import "@fontsource-variable/inter";
-import Navbar from "../components/blogs/navbar.astro";
+import Navbar from "../components/blogs/navbar";
 
 const { title, description, keywords } = Astro.props;
 ---
@@ -136,7 +136,7 @@ const { title, description, keywords } = Astro.props;
         src="https://www.facebook.com/tr?id=487515010536352&ev=PageView&noscript=1"
       /></noscript
     >
-    <Navbar />
+    <Navbar client:load />
     <slot />
     <style is:global>
       html {
