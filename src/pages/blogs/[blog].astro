@@ -39,6 +39,11 @@ export function getStaticPaths() {
         blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
       },
     },
+    {
+      params: {
+        blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+      },
+    },
   ];
 }
 
@@ -149,6 +154,22 @@ const blogs = [
     keywords: "juanetes, cirugía de juanetes, tratamiento de juanetes",
     id: 8,
   },
+  {
+    titulo:
+      "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+    ruta: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+    blogTitle:
+      "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis",
+    title:
+      "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis",
+    date: "Diciembre 2024",
+
+    description:
+      "Descubre las opciones y beneficios de las infiltraciones de rodilla para el tratamiento de la osteoartritis. Conoce cómo aliviar el dolor y mejorar la movilidad.",
+    keywords:
+      "infiltraciones de rodilla, osteoartritis, tratamiento de osteoartritis",
+    id: 9,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -215,6 +236,15 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   content = "Blog8";
   blogTitle =
     "Juanetes: Síntomas, Detección y Tipos de Cirugía para Eliminarlos";
+} else if (
+  blog ===
+  "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis"
+) {
+  image = "/fondo9.webp";
+  date = "Diciembre 2024";
+  content = "Blog9";
+  blogTitle =
+    "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis";
 } else {
   image = "/fondoDefault.png";
 }

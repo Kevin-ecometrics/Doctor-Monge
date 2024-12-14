@@ -1,0 +1,224 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/blog9-1.webp";
+import Image2 from "@public/blog9-2.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+];
+
+const blogActual =
+  "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis";
+
+const id = 9;
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      <strong class="text-white font-bold"> La osteoartritis (OA) </strong>
+      es una enfermedad crónica que se desarrolla cuando el cartílago que protege
+      y amortigua los extremos de los huesos comienza a desgastarse debido a diversos
+      factores, como el envejecimiento, lesiones repetitivas, sobrecarga mecánica,
+      entre otros. Este desgaste altera la estructura de la articulación, lo que
+      desencadena procesos inflamatorios y deterioro progresivo del tejido.
+      <br />
+      <br />
+      La OA puede causar discapacidad y es uno de los trastornos más frecuentes en
+      la población, con una frecuencia del 30% en personas de 45 a 60 años, y una
+      más alta, del 80%, en personas de 80 años. Esta ocurre cuando se rompe el equilibrio
+      dinámico entre la lesión y la reparación de los tejidos. El daño al cartílago
+      provoca que los huesos se rocen directamente, generando fricción, dolor, inflamación
+      y rigidez, especialmente al realizar movimientos y en casos más graves, al
+      estar en reposo. <br />
+      <br /> Las partes móviles de la articulación son las que comienzan a sufrir
+      primero, ya que se produce una pérdida ósea progresiva en el cartílago articular,
+      haciéndolo rugoso y erosionándolo poco a poco. En la mayoría de los casos,
+      debido a la relación entre el cartílago articular y la membrana sinovial, la
+      OA afecta a la articulación en su totalidad. <br />
+      <br /> Este es un problema bastante común, muy incapacitante y renuente al
+      tratamiento, debido a que, una vez que inicia el proceso de desgaste de una
+      articulación, nada lo detiene, y es cuestión de tiempo que progrese hasta requerir
+      una cirugía. Sin embargo, existen tratamientos conservadores que permiten prolongar
+      este procedimiento. Hablamos entonces de terapias físicas e infiltraciones
+      con antiinflamatorios, ácido hialurónico y terapias biológicas como el plasma
+      rico en plaquetas. Cada uno de estos tiene sus propias indicaciones específicas,
+      ya que puede ser útil para algunos pacientes y para otros no. Te explico: <br
+      />
+      <br />
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Infiltraciones con glucocorticoides o cortisona
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Este tipo de infiltraciones es muy eficaz para el alivio del dolor a muy
+      corto plazo. Normalmente, se aplican con anestesia para minimizar las
+      molestias al momento de hacer efecto. Otra razón importante para
+      combinarla es que permite confirmar que el medicamento se encuentra en el
+      tejido lesionado. Posteriormente, se requiere una visita de valoración
+      después de dos semanas. Cabe recalcar que este tipo de infiltraciones no
+      se recomiendan más de tres veces en un año. <br />
+      <br /> Para llevar a cabo es necesario pausar la ingesta de medicamentos anticoagulantes
+      o suplementos con efecto anticoagulante para evitar moretones o algún sangrado.
+      Durante la aplicación, se limpia la zona de la rodilla y con ayuda de un ecógrafo,
+      se puede visualizar el avance de la aguja en la rodilla para mayor precisión.
+      Algunas personas presentan enrojecimiento y una sensación de calor en el pecho
+      y el rostro. Es normal experimentar dolor en la rodilla e hinchazón durante
+      las primeras 24 a 48 horas. Se recomienda reposo relativo.
+    </h3>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt="Imagen de fractura de tibia y peroné"
+        class="object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-4 font-semibold">
+      Infiltraciones de plasma rico en plaquetas (PRP)
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      El plasma es un componente natural de la sangre, rico en proteínas, entre
+      otras propiedades. Mientras que el plasma rico en plaquetas es un
+      concentrado con un número mayor de plaquetas que las que se encuentran en
+      la sangre usualmente. Entre sus propiedades se encuentran los factores de
+      crecimiento de las plaquetas, que son indispensables para que las lesiones
+      sanen adecuadamente. <br />
+      <br /> Para llevar a cabo la infiltración, primero se requiere la extracción
+      de sangre del paciente para ser centrifugada este proceso permite aislar el
+      PRP, que puede contener 3 a 5 veces más plaquetas de lo normal. Con frecuencia
+      estas plaquetas son activadas por medio de sustancias como trombina, cloruro
+      de calcio, gluconato de calcio, lo que estimula los factores de crecimiento
+      esenciales para que se regeneren los tejidos. Finalmente, se realiza la reinyección
+      del plasma, la cual se lleva a cabo con ayuda de un ecógrafo para localizar
+      con precisión la lesión. <br />
+      <br /> En el caso de esta infiltración, no se puede aplicar anestesia previamente,
+      ya que modifica la estructura y la función de la sustancia, lo que la haría
+      menos efectiva. Se recomienda reposo relativo una vez aplicada.
+      <br />
+      <br />
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Infiltraciones con ácido hialurónico
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      El ácido hialurónico es una sustancia natural que se encuentra en el
+      líquido sinovial de las articulaciones, brindando lubricación y
+      amortiguación. Sin embargo, las afecciones articulares como la
+      osteoartritis generan una disminución de esta sustancia y por
+      consiguiente, un desgaste, fricción y dolor. <br />
+      <br /> Las infiltraciones de ácido hialurónico devuelven la lubricación de
+      la articulación, reduciendo la fricción y la inflamación. Al igual que las
+      infiltraciones ricas en plaquetas, estas se aplican sin anestesia para evitar
+      modificar la sustancia y su efecto. <br />
+      <br /> Te invito a leer más a detalle acerca de este procedimiento en mi blog:
+      <a
+        href="infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/"
+        class="text-white font-bold hover:underline"
+      >
+        https://mongeortopedia.com/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/
+      </a>
+      <br />
+      <br />
+      Durante tu visita con tu traumatólogo de confianza, se evalúan múltiples aspectos
+      para diagnosticar y sobre todo, recomendar el tratamiento más adecuado. En
+      caso de buscar postergar una cirugía, siempre está la opción de un tratamiento
+      conservador multidisciplinario. Este incluye ayudas ortopédicas como bastones,
+      muletas, andadores, vendajes, terapia con un fisioterapeuta, así como asistencia
+      nutricional que proporcione al paciente una dieta balanceada y nutritiva. Si
+      es necesario, se recomienda una dieta específica para reducir la carga en las
+      articulaciones. Todo esto debe ir acompañado de la realización rigurosa de
+      consultas de seguimiento. <br />
+      <br /> Cabe recalcar que este tipo de infiltraciones no curan la osteoartritis,
+      pero disminuyen el dolor y la inflamación lo suficiente para que el cuerpo
+      pueda continuar su trabajo de sanar o sobrellevarla con menos molestias.Cada
+      paciente es único, y no necesariamente el dolor en la rodilla es señal de una
+      afección u osteoartritis y no todos los pacientes son candidatos. Por ello,
+      es fundamental realizar un diagnóstico detallado e individualizado.
+    </h3>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt="Imagen de fractura de tibia y peroné"
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Si tienes más dudas, escríbeme y con gusto te apoyo a resolver tus dudas,
+      me encuentro en la ciudad de Tijuana y estoy a tu disposición para
+      trabajar juntos para hallar una solución 100% a tu medida.
+    </h2>
+  </Observer>
+</article>
+
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <!-- <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  /> -->
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>

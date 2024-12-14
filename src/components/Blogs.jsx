@@ -72,6 +72,15 @@ function Blogs() {
         "En este blog te platicare sobre los juanetes, como detectarlos y los tipos de cirugía que existen para eliminarlos.",
       link: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
     },
+    {
+      img: "/9.Card.webp",
+      fecha: "Diciembre 2024",
+      titulo:
+        "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis",
+      texto:
+        "En este blog te platicare sobre las infiltraciones de rodilla, sus opciones y beneficios para la osteoartritis.",
+      link: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();
