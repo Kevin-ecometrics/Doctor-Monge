@@ -9,26 +9,26 @@ function Blogs() {
     {
       img: "/Cuando tienes una lesion que no mejora acude con el Dr Monge experto en lesiones musculoesqueleticas.png",
       fecha: "Abril 2024",
-      titulo: "Fractura de Tibia y Perone",
+      titulo: "Fractura de Tibia y Peroné",
       texto:
-        "Todo lo que debes saber sobre las fracturas de tibia y peroné unas de las más complejas e interesantes lesiones atendidas en la traumatología. En este blog nos gustaría que nos acompañes a identificar porque son tan únicas en cada paciente",
+        "Todo lo que debes saber sobre las fracturas de tibia y peroné, unas de las lesiones más complejas e interesantes atendidas en la traumatología. En este blog nos gustaría que nos acompañes a identificar por qué son tan únicas en cada paciente.",
       link: "/blogs/Fractura-de-tibia-y-Perone",
     },
     {
       img: "/Todo lo que debes saber sobre una de las lesiones mas comunes en ortopedia.png",
       fecha: "Mayo 2024",
-      titulo: "Pseudoartrosis y Retraso de Consolidación",
+      titulo: "Pseudoartrosis y retraso de consolidación óse",
       texto:
-        "Seguramente conoces a alguien que esta o tu estas en una situación complicada con la sanación de tu fractura, en este blog abordaremos porque unas fracturas tardan en sanar o no sana completamente.",
+        "Seguramente conoces a alguien que está, o tú estás, en una situación complicada con la sanación de una fractura. En este blog abordaremos por qué algunas fracturas tardan en sanar o no sanan completamente.",
       link: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion",
     },
     {
       img: "/Si sufres de dolor en hueso o articulaciones a acude con tu medico ortopedista para una valoracion.png",
       fecha: "Junio 2024",
-      titulo: "Lesión de Ligamento cruzado anterior",
+      titulo: "Lesión de Ligamento Cruzado Anterior",
       texto:
-        "Descubre en este blog todas las causas que hacen a las mujeres más propensas a lesiones por LCA y como gracias a la artroscopia pueden reincorporarse sin complicaciones a su vida diaria",
-      link: "/blogs/Lesion-de-Ligamento-cruzado-anterior",
+        "Descubre en este blog todas las causas que hacen a las mujeres más propensas a lesiones de LCA y cómo, gracias a la artroscopia, pueden reincorporarse sin complicaciones a su vida diaria.",
+      link: "/blogs/Lesion-de-Ligamento-Cruzado-Anterior",
     },
     {
       img: "/4.Card.webp",
@@ -36,7 +36,7 @@ function Blogs() {
       titulo:
         "Osteoporosis: Una condición silenciosa que afecta a la mitad de la población mayor de 50 años",
       texto:
-        "Te platico de una condición en los huesos que, como ortopedista, sé que genera bastantes dudas y estrés pasando los 50 años.",
+        "Te platico sobre una condición en los huesos que, como ortopedista, sé que genera bastantes dudas y estrés a partir de los 50 años.",
       link: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
     },
     {
@@ -44,15 +44,15 @@ function Blogs() {
       fecha: "Agosto 2024",
       titulo: "Infiltraciones en la Rodilla con Ácido Hialurónico",
       texto:
-        "¿Te han recomendado infiltraciones en la rodilla con ácido hialurónico? En este blog te platicare  sobre este procedimiento conservador que ha demostrado ser muy eficaz.",
-      link: "/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+        "¿Te han recomendado infiltraciones en la rodilla con ácido hialurónico? En este blog te platicaré sobre este procedimiento conservador que ha demostrado ser muy eficaz.",
+      link: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
     },
     {
       img: "/6.Card.webp",
       fecha: "Septiembre 2024",
-      titulo: "Tratamiento conservador vs cirugía",
+      titulo: "Tratamiento Conservador vs Cirugía",
       texto:
-        "En este blog te platicare sobre las diferencias entre un tratamiento conservador y una cirugía, y como saber cuál es el mejor para ti.",
+        "En este blog te platicaré sobre las diferencias entre un tratamiento conservador y una cirugía, y cómo saber cuál es el mejor para ti.",
       link: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
     },
     {
@@ -60,25 +60,25 @@ function Blogs() {
       fecha: "Octubre 2024",
       titulo: "Rechazo de Material en Osteosíntesis",
       texto:
-        "En este blog te platicare sobre el rechazo de material en osteosíntesis y como detectarlo a tiempo para evitar complicaciones.",
+        "En este blog te platicaré sobre el rechazo de material en osteosíntesis y cómo detectarlo a tiempo para evitar complicaciones.",
       link: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
     },
     {
       img: "/8.Card.webp",
       fecha: "Noviembre 2024",
       titulo:
-        "Juanetes: Sintomas, detección y tipos de cirugía para eliminarlos",
+        "Juanetes: Síntomas, detección y tipos de cirugía para eliminarlos",
       texto:
-        "En este blog te platicare sobre los juanetes, como detectarlos y los tipos de cirugía que existen para eliminarlos.",
+        "En este blog te platicaré sobre los juanetes, cómo detectarlos y los tipos de cirugía que existen para eliminarlos.",
       link: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
     },
     {
       img: "/9.Card.webp",
       fecha: "Diciembre 2024",
       titulo:
-        "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis",
+        "Infiltraciones de Rodilla: Opciones y beneficios para la osteoartritis",
       texto:
-        "En este blog te platicare sobre las infiltraciones de rodilla, sus opciones y beneficios para la osteoartritis.",
+        "En este blog te platicaré sobre las infiltraciones de rodilla, sus opciones y beneficios para la osteoartritis.",
       link: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
     },
   ];

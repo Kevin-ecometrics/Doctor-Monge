@@ -23,6 +23,7 @@
     "astro-embed": "^0.7.2",
     "astro-navbar": "^2.3.2",
     "astro-robots-txt": "^1.0.0",
+    "astro-seo": "^0.8.4",
     "axios": "^1.7.2",
     "framer-motion": "^11.2.12",
     "react": "^18.3.1",

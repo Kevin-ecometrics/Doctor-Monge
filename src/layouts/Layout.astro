@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import { SEO } from "astro-seo";
 import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
@@ -15,6 +16,41 @@ const { title, description, keywords } = Astro.props;
 <!doctype html>
 <html lang="es">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="https://mongeortopedia.com/preview.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href="https://mongeortopedia.com/" />
+    <meta name="author" content="Doctor Monge" />
+    <meta name="publisher" content="Ecommetrica" />
+    <meta name="robots" content="index, follow" />
+    <!-- <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mongeortopedia.com/" />
+    <meta
+      property="og:title"
+      content="Dr. Ricardo Monge especialista en traumatología en Tijuana"
+    />
+    <meta
+      property="og:description"
+      content="Recibe la atención en ortopedia con el Dr. Ricardo Monge especializado en lesiones musculoesqueléticas en rodillas, cadera y columna en Tijuana."
+    />
+    <meta
+      property="og:image"
+      content="https://mongeortopedia.com/preview.jpg"
+    /> -->
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title: "Dr. Ricardo Monge especialista en traumatología en Tijuana",
+          type: "website",
+          image: "https://mongeortopedia.com/preview.jpg",
+          url: "https://mongeortopedia.com/",
+        },
+      }}
+    />
     <script
       type="text/partytown"
       async
@@ -54,31 +90,6 @@ const { title, description, keywords } = Astro.props;
       gtag("config", "AW-11309383024");
     </script>
 
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="https://mongeortopedia.com/preview.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <meta name="keywords" content={keywords} />
-    <link rel="canonical" href="https://mongeortopedia.com/" />
-    <meta name="author" content="Doctor Monge" />
-    <meta name="publisher" content="Ecommetrica" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mongeortopedia.com/" />
-    <meta
-      property="og:title"
-      content="Dr. Ricardo Monge especialista en traumatología en Tijuana"
-    />
-    <meta
-      property="og:description"
-      content="Recibe la atención en ortopedia con el Dr. Ricardo Monge especializado en lesiones musculoesqueléticas en rodillas, cadera y columna en Tijuana."
-    />
-    <meta
-      property="og:image"
-      content="https://mongeortopedia.com/preview.png"
-    />
     <ViewTransitions />
     <!-- Meta Pixel Code -->
 
