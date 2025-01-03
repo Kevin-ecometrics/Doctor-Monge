@@ -44,6 +44,11 @@ export function getStaticPaths() {
         blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
       },
     },
+    {
+      params: {
+        blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+      },
+    },
   ];
 }
 
@@ -166,9 +171,20 @@ const blogs = [
 
     description:
       "Descubre las opciones y beneficios de las infiltraciones de rodilla para el tratamiento de la osteoartritis. Conoce cómo aliviar el dolor y mejorar la movilidad.",
-    keywords:
-      "infiltraciones de rodilla, osteoartritis, tratamiento de osteoartritis",
+    keywords: "Tendinitis y tendinosis causas, diferencias y tratamiento ",
     id: 9,
+  },
+  {
+    titulo: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+    ruta: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+    blogTitle: "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento",
+    date: "Enero 2025",
+    title:
+      "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento para la Recuperación Efectiva",
+    description:
+      "Descubre las causas, diferencias y tratamientos para la tendinitis y tendinosis. Conoce cómo recuperarte de estas lesiones en los tendones de forma efectiva.",
+    keywords: "Tendinitis y tendinosis causas, diferencias y tratamiento ",
+    id: 10,
   },
 ];
 
@@ -245,6 +261,13 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   content = "Blog9";
   blogTitle =
     "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis";
+} else if (
+  blog === "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento"
+) {
+  image = "/fondo10.webp";
+  date = "Enero 2025";
+  content = "Blog10";
+  blogTitle = "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento";
 } else {
   image = "/fondoDefault.png";
 }

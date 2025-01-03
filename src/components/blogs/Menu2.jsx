@@ -3,31 +3,35 @@ import React, { useEffect, useState } from "react";
 const blogsURL = [
   {
     id: 1,
-    url: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis/",
+    url: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento/",
   },
   {
     id: 2,
-    url: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos/",
+    url: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis/",
   },
   {
     id: 3,
-    url: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas/",
+    url: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos/",
   },
   {
     id: 4,
-    url: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical/",
+    url: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas/",
   },
   {
     id: 5,
-    url: "/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
+    url: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical/",
   },
   {
     id: 6,
+    url: "/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
+  },
+  {
+    id: 7,
     url: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor/",
   },
-  { id: 7, url: "/blogs/Lesion-de-Ligamento-cruzado-anterior/" },
-  { id: 8, url: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion/" },
-  { id: 9, url: "/blogs/Fractura-de-tibia-y-Perone/" },
+  { id: 8, url: "/blogs/Lesion-de-Ligamento-cruzado-anterior/" },
+  { id: 9, url: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion/" },
+  { id: 10, url: "/blogs/Fractura-de-tibia-y-Perone/" },
 ];
 
 const Menu2 = () => {

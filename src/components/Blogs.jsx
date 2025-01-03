@@ -81,6 +81,14 @@ function Blogs() {
         "En este blog te platicaré sobre las infiltraciones de rodilla, sus opciones y beneficios para la osteoartritis.",
       link: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
     },
+    {
+      img: "/9.Card.webp",
+      fecha: "Enero 2025",
+      titulo: "Tendinitis y tendinosis: causas, diferencias y tratamiento ",
+      texto:
+        "En este blog te platicaré sobre la tendinitis y la tendinosis, sus causas, diferencias y tratamiento.",
+      link: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();

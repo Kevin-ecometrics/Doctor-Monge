@@ -1,0 +1,279 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/blog9-1.webp";
+import Image2 from "@public/blog9-2.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+];
+
+const blogActual = "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento";
+
+const id = 10;
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      A menudo, los pacientes vienen a consulta por un malestar e inflamación en
+      los tendones en alguna parte del cuerpo. Las zonas más comunes son: codo,
+      talón, hombro, rodilla, cadera y muñeca. Sin embargo, lo que parece a
+      simple vista un dolor, rigidez o sensibilidad pudiera ser una tendinitis
+      o, en realidad, una tendinosis. Por ello, me gustaría hablar de sus
+      principales características, diferencias y tratamiento. <br />
+      <br />
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Tendones y ligamentos
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Los tendones son tejidos que conectan los músculos con los huesos; estos
+      tienen la función de mover el hueso, mientras que los ligamentos son un
+      tejido fibroso que une los huesos entre sí, brindando estabilidad.
+    </h3>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt="Imagen de fractura de tibia y peroné"
+        class="object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-4 font-semibold">
+      ¿Qué es la tendinitis y cómo identificarla?
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      La tendinitis es la inflamación del tendón que resulta de un
+      microdesgarre. Esto sucede cuando la parte musculotendinosa (unión entre
+      el músculo y el tendón, donde se transmite la fuerza) se sobrecarga con
+      una fuerza de tracción repentina o con tensión y esfuerzo constantes
+      debido a movimientos repetitivos.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">Síntomas</h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Una de las principales manifestaciones es el dolor. Las células
+      inflamatorias dentro del tendón causan un dolor punzante que reduce la
+      funcionalidad, lo que puede generar una rotura o una tendinosis.
+    </h3>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt="Imagen de fractura de tibia y peroné"
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">Causas</h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Una lesión en el tendón puede ocurrirle a cualquier persona: desde
+      profesionistas que pasan largas horas frente a una computadora, debido a
+      problemas ergonómicos, hasta personas que realizan actividades físicas
+      regularmente y deportistas de alto rendimiento.
+      <br />
+      <br />
+      También puede presentarse en personas de edad avanzada, debido a la disminución
+      de la vascularización de los tendones. La tendinitis tiene mayor probabilidad
+      de manifestarse en personas con enfermedades sistémicas como artritis reumatoide,
+      esclerosis sistémica, gota, artritis reactiva y diabetes. En algunos casos,
+      ciertos medicamentos pueden aumentar el riesgo de tendinopatías o roturas tendinosas.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Síntomas de la tendinitis
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Sensibilidad al tacto y dolor que aparece y desaparece de forma intensa,
+      empeorando durante movimientos activos o al aplicar resistencia contra el
+      movimiento natural.
+      <br />
+      <br />
+      Por otro lado, la tendinosis es una degeneración del colágeno del tendón como
+      respuesta a un desgaste crónico. Si no se le da la atención adecuada para que
+      sane o el descanso suficiente, esta degeneración provoca debilidad, dolor y
+      rigidez.
+      <br />
+      <br />
+      Ambas patologías pueden denominarse tendinopatía, término general que hace
+      referencia a un trastorno del tendón. Las causas pueden variar, pero alrededor
+      del 30 al 50 % de las lesiones se producen por actividades deportivas.
+    </h3>
+  </Observer>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Síntomas de la tendinosis
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      La tendinosis resulta de un tendón que no ha sanado adecuadamente, y para
+      que esto ocurra pasa por varias etapas.
+      <br />
+      <br />
+      La primera etapa sucede cuando el tendón se lesiona por primera vez.
+      <br />
+      <br />
+      En la segunda etapa, se altera la condición general del tendón, generando un
+      desgaste constante.
+      <br />
+      <br />
+      Finalmente, en la tercera etapa, ocurre apoptosis celular y neovascularización,
+      lo que se manifiesta en debilidad, desgarres o aumento del dolor.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">Diferencias</h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      La tendinitis tiene un tiempo de recuperación de 3 a 4 días en casos
+      agudos, mientras que la tendinosis toma de 2 a 3 meses.
+      <br />
+      <br />
+      En casos crónicos, la tendinitis puede requerir de 4 a 6 semanas para recuperarse,
+      y la tendinosis, de 3 a 6 meses.
+      <br />
+      <br />
+      La tendinitis tiene como causa principal la sobrecarga repentina, movimientos
+      repetitivos o algún trauma agudo, puede manifestarse con dolor agudo, inflamación
+      y calor, por otra parte, la tendinosis tiene como principal causa un exceso
+      de desgaste, falta de descanso o recuperación entre lesiones previas. Su dolor
+      se manifiesta de forma crónica, se presenta debilidad, rigidez y no se presenta
+      una inflamación.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Evolución ante tratamiento conservador
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      En la tendinitis, se recomienda descanso relativo, medicamentos
+      antiinflamatorios, aplicación de hielo o uso de férulas. En la tendinosis,
+      se busca estimular la formación de colágeno mediante fisioterapia. Sin
+      embargo, si no hay mejora significativa, será necesario recurrir a la
+      cirugía.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Evolución postoperatoria
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Tras una cirugía, la tendinitis tiene un 95 % de éxito, con un tiempo de
+      recuperación de 3 a 4 semanas. En el caso de la tendinosis, el éxito
+      postoperatorio varía entre el 70 % y 85 %, con una recuperación más
+      prolongada de 4 a 6 meses.
+      <br />
+      <br />
+      En la mayoría de los casos una tendinitis desaparece si se llevan a cabo las
+      recomendaciones del médico: Reposo, medicamentos antinflamatorios, sin embargo,
+      es esencial acudir a las citas de seguimiento para poder descartar alguna sintomatología
+      crónica que requiera una evaluación más profunda.
+      <br />
+      <br />
+      Si tú, algún amigo o familiar presentan alguno de los síntomas platicados en
+      este blog por un periodo prolongado, es fundamental que no lo pasen por alto.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      El diagnóstico y tratamiento oportuno son clave para evitar que estas
+      afecciones progresen y afecten tu calidad de vida. Como especialista en
+      traumatología, estoy aquí para ayudarte.
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      No dudes en contactarme, ya sea por mensaje o llamada, para resolver
+      cualquier duda, evaluar tu caso o agendar una valoración. Juntos
+      encontraremos la mejor solución.
+    </h3>
+  </Observer>
+</article>
+
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <!-- <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  /> -->
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>
