@@ -82,7 +82,7 @@ function Blogs() {
       link: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
     },
     {
-      img: "/9.Card.webp",
+      img: "/10.Card.webp",
       fecha: "Enero 2025",
       titulo: "Tendinitis y tendinosis: causas, diferencias y tratamiento ",
       texto:

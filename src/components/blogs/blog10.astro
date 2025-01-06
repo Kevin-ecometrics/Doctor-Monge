@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
-import Image1 from "@public/blog9-1.webp";
-import Image2 from "@public/blog9-2.webp";
+import Image1 from "@public/blog10-1.webp";
+import Image2 from "@public/blog10-2.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
 let author = "YVLB";
@@ -116,15 +116,6 @@ const id = 10;
     </h3>
   </Observer>
 
-  <ObserverImage client:visible>
-    <div class="flex justify-center items-center">
-      <Image
-        src={Image2}
-        alt="Imagen de fractura de tibia y peroné"
-        class="fade-up object-cover mb-16"
-      />
-    </div>
-  </ObserverImage>
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">Causas</h2>
   </Observer>
@@ -167,6 +158,7 @@ const id = 10;
       del 30 al 50 % de las lesiones se producen por actividades deportivas.
     </h3>
   </Observer>
+
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
       Síntomas de la tendinosis
@@ -189,6 +181,15 @@ const id = 10;
       lo que se manifiesta en debilidad, desgarres o aumento del dolor.
     </h3>
   </Observer>
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt="Imagen de fractura de tibia y peroné"
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">Diferencias</h2>
