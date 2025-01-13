@@ -31,7 +31,7 @@ function Blogs() {
       link: "/blogs/Lesion-de-Ligamento-Cruzado-Anterior",
     },
     {
-      img: "/4.Card.webp",
+      img: "/El doctor Ricardo Monge inspecciona minuciosamente cada estudio para un diagnostico completo.webp",
       fecha: "Julio 2024",
       titulo:
         "Osteoporosis: Una condición silenciosa que afecta a la mitad de la población mayor de 50 años",
@@ -40,7 +40,7 @@ function Blogs() {
       link: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
     },
     {
-      img: "/5.Card.webp",
+      img: "/Realiza tus infiltraciones articulares con el Dr. Monge en Tijuana.webp",
       fecha: "Agosto 2024",
       titulo: "Infiltraciones en la Rodilla con Ácido Hialurónico",
       texto:
@@ -48,7 +48,7 @@ function Blogs() {
       link: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
     },
     {
-      img: "/6.Card.webp",
+      img: "/Invierte en tu bienestar con un tratamiento adecuado para ti con el Dr. Monge.webp",
       fecha: "Septiembre 2024",
       titulo: "Tratamiento Conservador vs Cirugía",
       texto:
@@ -56,7 +56,7 @@ function Blogs() {
       link: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
     },
     {
-      img: "/7.Card.webp",
+      img: "/El Dr. Ricardo Monge te invita a leer el blog donde explica que es la ostesintesis y como puede fallar.webp",
       fecha: "Octubre 2024",
       titulo: "Rechazo de Material en Osteosíntesis",
       texto:
@@ -64,7 +64,7 @@ function Blogs() {
       link: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
     },
     {
-      img: "/8.Card.webp",
+      img: "/El Hallux Valgus o Juanete puede  limitar tu movilidad el Dr monge te explica mas.webp",
       fecha: "Noviembre 2024",
       titulo:
         "Juanetes: Síntomas, detección y tipos de cirugía para eliminarlos",
@@ -73,7 +73,7 @@ function Blogs() {
       link: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
     },
     {
-      img: "/9.Card.webp",
+      img: "/El doctor Monge experto en infiltraciones te platica mas sobre ellas en este blog.webp",
       fecha: "Diciembre 2024",
       titulo:
         "Infiltraciones de Rodilla: Opciones y beneficios para la osteoartritis",
@@ -82,7 +82,7 @@ function Blogs() {
       link: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
     },
     {
-      img: "/10.Card.webp",
+      img: "/Visita el blog para conocer los detalles entre cada uno con el DR Ricardo Monge.webp",
       fecha: "Enero 2025",
       titulo: "Tendinitis y tendinosis: causas, diferencias y tratamiento ",
       texto:

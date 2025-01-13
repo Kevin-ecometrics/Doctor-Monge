@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
-import Image1 from "@public/blog10-1.webp";
-import Image2 from "@public/blog10-2.webp";
+import Image1 from "@public/El DR Monge explica la causa de la tendinitis.webp";
+import Image2 from "@public/El DR Monge explica brevemente los sintomas de la tendinsis.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
 let author = "YVLB";
@@ -95,17 +95,13 @@ const id = 10;
   </Observer>
 
   <Observer client:visible>
-    <h3 class="text-xl mb-16">
+    <h3 class="text-xl mb-8">
       La tendinitis es la inflamación del tendón que resulta de un
       microdesgarre. Esto sucede cuando la parte musculotendinosa (unión entre
       el músculo y el tendón, donde se transmite la fuerza) se sobrecarga con
       una fuerza de tracción repentina o con tensión y esfuerzo constantes
       debido a movimientos repetitivos.
     </h3>
-  </Observer>
-
-  <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Síntomas</h2>
   </Observer>
 
   <Observer client:visible>
@@ -185,7 +181,8 @@ const id = 10;
     <div class="flex justify-center items-center">
       <Image
         src={Image2}
-        alt="Imagen de fractura de tibia y peroné"
+        alt="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        title="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
         class="fade-up object-cover mb-16"
       />
     </div>

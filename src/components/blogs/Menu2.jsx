@@ -23,7 +23,7 @@ const blogsURL = [
   },
   {
     id: 6,
-    url: "/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
+    url: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
   },
   {
     id: 7,
