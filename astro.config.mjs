@@ -15,7 +15,11 @@ export default defineConfig({
     react(),
     robotsTxt(),
     sitemap(),
-    partytown(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
     playformCompress(),
   ],
 });

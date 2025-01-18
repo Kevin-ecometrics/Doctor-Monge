@@ -1,9 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Blogs.css";
+import ReactGA from "react-ga4";
 
 function Blogs() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const TRACKING_ID = "G-ML4B63MEC1"; // your Measurement ID
+
+  useEffect(() => {
+    ReactGA.initialize(TRACKING_ID);
+    // Send pageview with a custom path
+    ReactGA.send({ hitType: "pageview", page: "/blogs" });
+  }, []);
+
+  const handleClicked = () => {
+    // Verifica si ReactGA está disponible y si la función 'event' existe
+    if (typeof ReactGA !== "undefined" && typeof ReactGA.event === "function") {
+      ReactGA.event({
+        category: "Blog",
+        action: "Click",
+        label: "Leer más",
+      });
+      console.log("Evento de clic 'click' enviado");
+    } else {
+      console.error("Google Analytics no está cargado correctamente.");
+    }
+  };
 
   const blogItem = [
     {
@@ -177,6 +199,7 @@ function Blogs() {
                         className="text-white z-10 hover:text-blue-600"
                         href={item.link}
                         rel="noopener noreferrer"
+                        onClick={handleClicked}
                       >
                         Leer tema
                       </a>
