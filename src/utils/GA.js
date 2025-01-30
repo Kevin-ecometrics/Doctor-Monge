@@ -1,7 +1,7 @@
 import ReactGA from "react-ga4";
 
-// Configuración de Google Analytics
-const trackingId = "G-XXXXXXXXXX"; // Reemplaza con tu ID de seguimiento
-ReactGA.initialize(trackingId);
+if (typeof window !== "undefined") {
+  ReactGA.initialize("G-ML4B63MEC1", { debug: true }); // Reemplaza con tu ID de seguimiento
+}
 
 export default ReactGA;
