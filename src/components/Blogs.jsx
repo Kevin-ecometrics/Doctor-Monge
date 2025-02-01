@@ -5,16 +5,24 @@ import ReactGA from "../utils/GA";
 function Blogs() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleClicked = () => {
-    // Verifica si ReactGA está disponible y si la función 'event' existe
-    if (typeof ReactGA !== "undefined" && typeof ReactGA.event === "function") {
+  const handleClicked = (e) => {
+    e.preventDefault(); // ¡Clave! Detiene la navegación inmediata
+    const link = e.currentTarget.href; // Guarda el href antes del async
+
+    if (typeof ReactGA !== "undefined") {
       ReactGA.event({
         category: "button_click",
         action: "Click",
+        label: "Leer tema", // Añade label para mejor tracking
       });
-      console.log("Evento de clic 'click' enviado");
+      console.log("Evento enviado ✅");
+
+      // Retraso para asegurar el envío
+      setTimeout(() => {
+        window.location.href = link; // Navega después de 300ms
+      }, 1000);
     } else {
-      console.error("Google Analytics no está cargado correctamente.");
+      console.error("Error: ReactGA no cargado");
     }
   };
 
@@ -102,6 +110,14 @@ function Blogs() {
         "En este blog te platicaré sobre la tendinitis y la tendinosis, sus causas, diferencias y tratamiento.",
       link: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
     },
+    {
+      img: "/Visita el blog para conocer los detalles entre cada uno con el DR Ricardo Monge.webp",
+      fecha: "Febrero 2025",
+      titulo: "Tendinitis y tendinosis: causas, diferencias y tratamiento ",
+      texto:
+        "En este blog te platicaré sobre la tendinitis y la tendinosis, sus causas, diferencias y tratamiento.",
+      link: "/blogs/Como-saber-si-es-artritis-o-artrosis",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();
@@ -187,11 +203,13 @@ function Blogs() {
                   <div className="items-center gap-2 group">
                     <p className="absolute inset-0 flex items-end p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       <a
-                        className="text-white z-10 hover:text-blue-600"
+                        className="text-white z-10 hover:text-blue-600 cursor-pointer"
                         href={item.link}
                         rel="noopener noreferrer"
+                        onClick={handleClicked} // Handler aquí
+                        role="button" // Accesibilidad
                       >
-                        <button onClick={handleClicked}>Leer tema</button>
+                        Leer tema
                       </a>
                       {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
