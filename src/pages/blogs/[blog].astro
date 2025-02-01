@@ -191,6 +191,18 @@ const blogs = [
     keywords: "Tendinitis y tendinosis causas, diferencias y tratamiento ",
     id: 10,
   },
+  {
+    titulo: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+    ruta: "/blogs/Como-saber-si-es-artritis-o-artrosis",
+    blogTitle: "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento",
+    date: "Enero 2025",
+    title:
+      "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento para la Recuperación Efectiva",
+    description:
+      "Descubre las causas, diferencias y tratamientos para la tendinitis y tendinosis. Conoce cómo recuperarte de estas lesiones en los tendones de forma efectiva.",
+    keywords: "Tendinitis y tendinosis causas, diferencias y tratamiento ",
+    id: 11,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -280,6 +292,12 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
     "/La tendinosis y tendinitis son a menudo confundidos el DR Monge te explicara.webp";
   date = "Enero 2025";
   content = "Blog10";
+  blogTitle = "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento";
+} else if (blog === "Como-saber-si-es-artritis-o-artrosis") {
+  image =
+    "/La tendinosis y tendinitis son a menudo confundidos el DR Monge te explicara.webp";
+  date = "Enero 2025";
+  content = "Blog11";
   blogTitle = "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento";
 } else {
   image = "/fondoDefault.png";
