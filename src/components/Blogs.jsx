@@ -65,7 +65,7 @@ function Blogs() {
       fecha: "Agosto 2024",
       titulo: "Infiltraciones en la Rodilla con Ácido Hialurónico",
       texto:
-        "¿Te han recomendado infiltraciones en la rodilla con ácido hialurónico? En este blog te platicaré sobre este procedimiento conservador que ha demostrado ser muy eficaz.",
+        "Hola que tal, el día de hoy te escribo acerca de las infiltraciones de rodilla con ácido hialurónico, los candidatos, consideraciones y expectativas. Quédate a leer el blog",
       link: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
     },
     {
@@ -73,7 +73,7 @@ function Blogs() {
       fecha: "Septiembre 2024",
       titulo: "Tratamiento Conservador vs Cirugía",
       texto:
-        "En este blog te platicaré sobre las diferencias entre un tratamiento conservador y una cirugía, y cómo saber cuál es el mejor para ti.",
+        "En este blog abordaremos de forma resumida lo más conveniente para tratar una hernia discal cervical, ¿Será un tratamiento conservador o la cirugía?",
       link: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
     },
     {
@@ -81,7 +81,7 @@ function Blogs() {
       fecha: "Octubre 2024",
       titulo: "Rechazo de Material en Osteosíntesis",
       texto:
-        "En este blog te platicaré sobre el rechazo de material en osteosíntesis y cómo detectarlo a tiempo para evitar complicaciones.",
+        "¿Es cierto que tu cuerpo rechazo el material? En este blog te platico brevemente el fallo en la osteosíntesis en tu fractura.",
       link: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
     },
     {
@@ -90,7 +90,7 @@ function Blogs() {
       titulo:
         "Juanetes: Síntomas, detección y tipos de cirugía para eliminarlos",
       texto:
-        "En este blog te platicaré sobre los juanetes, cómo detectarlos y los tipos de cirugía que existen para eliminarlos.",
+        "El padecimiento más común que a simple vista no se ve, te platico sobre el hallux valgus (Juanetes) Todo lo que debes saber sobre sus causas, tratamiento y mucho más.",
       link: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
     },
     {
@@ -99,7 +99,7 @@ function Blogs() {
       titulo:
         "Infiltraciones de Rodilla: Opciones y beneficios para la osteoartritis",
       texto:
-        "En este blog te platicaré sobre las infiltraciones de rodilla, sus opciones y beneficios para la osteoartritis.",
+        "El día de hoy platicamos sobre las opciones de infiltraciones para tratar de forma conservadora la osteoartritis como: la cortisona, Plasma rico en plaquetas y ácido hialurónico.",
       link: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
     },
     {
@@ -107,7 +107,7 @@ function Blogs() {
       fecha: "Enero 2025",
       titulo: "Tendinitis y tendinosis: causas, diferencias y tratamiento ",
       texto:
-        "En este blog te platicaré sobre la tendinitis y la tendinosis, sus causas, diferencias y tratamiento.",
+        "Te comparto brevemente la diferencias entre tendinitis, la inflamación del tendón que si no es tratada se puede convertir en una tendinosis, da clic para continuar leyendo.",
       link: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
     },
     {
