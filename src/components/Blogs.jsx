@@ -111,11 +111,12 @@ function Blogs() {
       link: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
     },
     {
-      img: "/Visita el blog para conocer los detalles entre cada uno con el DR Ricardo Monge.webp",
+      img: "/Artritis y artrosis Conoce las diferencias con el traumatologo ortopedista Ricardo Monge.webp",
       fecha: "Febrero 2025",
-      titulo: "Tendinitis y tendinosis: causas, diferencias y tratamiento ",
+      titulo:
+        "¿Cómo Saber si es artritis o artrosis? Síntomas y  Diferencias Clave ",
       texto:
-        "En este blog te platicaré sobre la tendinitis y la tendinosis, sus causas, diferencias y tratamiento.",
+        "El DR. Ricardo Monge explica la diferencia clave de la artritis una enfermedad autoinmune y artrosis un padecimiento degenerativo articular.",
       link: "/blogs/Como-saber-si-es-artritis-o-artrosis",
     },
   ];

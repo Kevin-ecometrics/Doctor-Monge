@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
-import Image1 from "@public/El DR Monge explica la causa de la tendinitis.webp";
-import Image2 from "@public/El DR Monge explica brevemente los sintomas de la tendinsis.webp";
+import Image1 from "@public/Radiografia comparativa entre una mano con artritis y artrosis.webp";
+import Image2 from "@public/La artritis y artrosis afectan principalmente a mujeres.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
 let author = "YVLB";
@@ -55,6 +55,13 @@ const id = 11;
 <article
   class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
 >
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-8 font-semibold">
+      ¿Es artritis o es artrosis? Diferencias entre cada una y opciones de
+      tratamiento.
+    </h2>
+  </Observer>
+
   <Observer client:visible>
     <h3 class="text-xl mb-16">
       Aunque ambas se derivan de una inflamación articular, la artritis es una
