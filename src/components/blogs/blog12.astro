@@ -1,0 +1,347 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/La columna lumbar contiene 5 discos intervertebrales que amortiguan impactos.webp";
+import Image2 from "@public/La parte posterior y laterales de los discos lumbares son mas debiles y susceptibles a lastimarse.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+];
+
+const blogActual = "lumbalgia-tipos-factores-de-riesgos-y-tratamientos";
+
+const id = 12;
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-8 font-semibold">
+      Lumbalgia tipos, factores de riesgo y hábitos efectivos
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      El dolor de espalda es uno de los diagnósticos más comunes en la consulta
+      de ortopedia, afectando aproximadamente a 80 de cada 100 personas. Es muy
+      probable que en algún momento de tu vida lo experimentes.Este dolor se
+      localiza en la región lumbar, es decir, en la parte baja de la espalda y
+      la cintura, y puede irradiarse hacia los glúteos y muslos.
+      <br />
+      <br />
+      En la mayoría de los casos, la lumbalgia es de origen mecano-postural, lo que
+      significa que no siempre está relacionada con una hernia o una lesión específica.
+      Muchas personas con lumbalgia presentan alteraciones posturales, lo que hace
+      que el cuerpo adopte posiciones que pueden parecer cómodas en el momento, pero
+      que a largo plazo generan más dolor. <br />
+      <br />
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      ¿Qué sucede en los discos lumbares?
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Los discos intervertebrales se dividen en cinco y desempeñan un papel
+      fundamental en la distribución de las cargas de compresión sobre la
+      columna vertebral. Actúan como amortiguadores, absorbiendo impactos y
+      manteniendo el espacio entre los cuerpos vertebrales, lo que aporta
+      flexibilidad a la columna. Su principal fuente de nutrición proviene de
+      las placas terminales, a través de la absorción de fluidos durante los
+      movimientos de la columna. Sin embargo, la exposición a fuerzas excesivas
+      y posturas prolongadas de alta presión, como estar mucho tiempo de pie o
+      sentado, puede dificultar este proceso de nutrición, aunque sus funciones
+      sean protectoras son muy susceptibles a sufrir hernias y otros trastornos
+      discales
+      <br />
+      <br />
+    </h3>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt="Imagen de fractura de tibia y peroné"
+        class="object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-4 font-semibold">
+      ¿Lumbalgia aguda, subaguda o crónica? Principales diferencias
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-4 font-semibold">Lumbalgia aguda</h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Se trata de un dolor repentino en la parte baja de la espalda, que puede
+      manifestarse como un chasquido seguido de dolor intenso y que dura menos
+      de 6 semanas. Suele estar asociado con esfuerzos físicos intensos, malas
+      posturas o movimientos bruscos.
+      <br />
+      <br />
+      <strong class="text-white text-2xl">Tratamiento: </strong>
+      <br />
+      <br />
+
+      Reposo relativo: Evitar actividades que impliquen esfuerzos pesados.
+      <br />
+      <br />
+
+      Medicamentos: Antiinflamatorios.
+      <br />
+      <br />
+
+      Fisioterapia: Ejercicios suaves para fortalecer los músculos de la
+      espalda.
+      <br />
+      <br />
+      Terapias alternativas: Compresas frías o calientes, masajes y acupuntura.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">Lumbalgia subaguda</h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      curre después de la fase aguda y se caracteriza por molestias persistentes
+      en la parte baja de la espalda durante un período de 6 semanas a 3 meses.
+      <br />
+      <br />
+      <strong class="text-white text-2xl"> Tratamiento: </strong>
+      <br />
+      <br />
+      Ejercicios de fortalecimiento: Programas de rehabilitación específicos. Medicamentos:
+      Antiinflamatorios no esteroideos y analgésicos. Terapias complementarias: Electroterapia,
+      terapia manual y Radiofrecuencia lumbar: Técnica que utiliza ondas electromagnéticas
+      para generar calor en los tejidos del cuerpo, con el objetivo de aliviar el
+      dolor, mejorar la circulación sanguínea y reducir la inflamación.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Lumbalgia crónica o severa
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Es un dolor persistente que dura más de 3 meses y puede llegar a causar
+      incapacidad. Este tipo de dolor puede ser debilitante y requiere un
+      enfoque de tratamiento más intensivo.
+      <br />
+      <br />
+      <strong class="text-white text-2xl"> Tratamiento: </strong>
+      <br />
+      <br />Programa multidisciplinario: Coordinación entre médico especialista
+      y fisioterapeuta. Medicamentos: Analgésicos fuertes y relajantes
+      musculares. Procedimientos intervencionistas: Radiofrecuencia lumbar para
+      el alivio del dolor crónico.
+    </h3>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        title="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Lumbalgia neuropática
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Se produce por la compresión o daño de los nervios debido a hernias
+      discales o estenosis espinal. Se caracteriza por un dolor intenso en la
+      parte baja de la espalda, que puede irradiarse hacia las piernas y los
+      glúteos, acompañado de hipersensibilidad al tacto.
+      <br />
+      <br />
+      <strong class="text-white text-2xl"> Tratamiento: </strong>
+      <br />
+      <br />Inyecciones: Antiinflamatorias para reducir la inflamación de los
+      nervios.
+      <br />
+      <br />
+      Medicamentos: Analgésicos neuropáticos.
+      <br />
+      <br />
+      Fisioterapia: Ejercicios para descomprimir los nervios afectados.
+      <br />
+      <br />
+      Radiofrecuencia lumbar: Procedimiento para aliviar el dolor neuropático.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Factores que propician la lumbalgia
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Talla y peso: El sobrepeso aumenta la carga sobre la quinta vértebra
+      lumbar y el sacro, incrementando el riesgo de lumbalgia.
+      <br />
+      <br />
+      Tabaquismo.
+      <br />
+      <br />
+
+      Trabajo físicamente pesado.
+      <br />
+      <br />
+
+      Posturas de trabajo estáticas.
+      <br />
+      <br />
+
+      Movimientos repetitivos sin descanso.
+      <br />
+      <br />
+
+      Flexiones y giros frecuentes del tronco.
+      <br />
+      <br />
+
+      Levantamientos y movimientos bruscos.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Cómo mantener una espalda sana
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Tener una espalda saludable no significa solo mantener una postura
+      erguida, sino también ser consciente de nuestros movimientos y hábitos.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Medidas de higiene postural:
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Cada 45 minutos, levántate y estira si pasas largos periodos en la misma
+      posición. Duerme sobre un colchón firme, con un cojín entre las rodillas
+      si duermes de lado, o boca arriba.
+      <br />
+      <br />
+      Al sentarte, apoya la espalda en el respaldo de la silla. <br />
+      <br />
+
+      Para levantar un objeto del suelo, flexiona las caderas y las rodillas en
+      lugar de doblar la espalda. <br />
+      <br />
+
+      Si necesitas mover algo pesado, sujétalo cerca del pecho. <br />
+      <br />
+
+      Si es posible, divide la carga en partes más pequeñas. <br />
+      <br />
+
+      En el trabajo, usa sillas ergonómicas y mantén una postura adecuada. <br
+      />
+      <br />
+
+      Si pasas mucho tiempo de pie, apoya un pie sobre un banco y alterna la
+      postura con frecuencia. <br />
+      <br />
+
+      Evita giros bruscos del tronco, mejor gira con todo el cuerpo. <br />
+      <br />
+
+      No hagas esfuerzos excesivos ni movimientos forzados del tronco. <br />
+      <br />
+
+      Consulta a tu médico especialista si el dolor no disminuye, si presentas
+      pérdida de fuerza o sensibilidad en las piernas e incontinencia urinaria
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Te invito a escribirme si tienes alguna duda, me encuentro en Tijuana, si
+      deseas una asesoría ortopédica será un placer poderte acompañar, mandarme
+      mensaje para agendar una
+    </h2>
+  </Observer>
+</article>
+
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <!-- <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  /> -->
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>

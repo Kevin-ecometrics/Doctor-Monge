@@ -119,6 +119,14 @@ function Blogs() {
         "El DR. Ricardo Monge explica la diferencia clave de la artritis una enfermedad autoinmune y artrosis un padecimiento degenerativo articular.",
       link: "/blogs/Como-saber-si-es-artritis-o-artrosis",
     },
+    {
+      img: "/El DR Monge explica en su blog de forma breve todo sobre la lumbalgia.webp",
+      fecha: "Febero 2025",
+      titulo: "Lumbalgia: Tipos, Factores de Riesgo y Tratamientos",
+      texto:
+        "¿Tienes dolor de espalda? Hoy te invito a profundizar sobre la lumbalgia que afecta el 80% de la población. Causas, síntomas y tratamientos en mi blog.",
+      link: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();
