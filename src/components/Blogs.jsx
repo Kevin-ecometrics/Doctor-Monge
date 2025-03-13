@@ -132,7 +132,7 @@ function Blogs() {
       fecha: "Marzo 2025",
       titulo: "Fractura de Humero proximal en adultos mayores",
       texto:
-        "La fractura de húmero proximal es una lesión común en adultos mayores. En este blog te explico cómo se diagnostica y trata esta lesión.",
+        "Acompaña al Dr. Ricardo Monge mientras explica cómo reducir el riesgo de fracturas en adultos mayores mediante hábitos saludables, adaptaciones en el hogar para prevenir caídas, ejercicios recomendados y el tiempo estimado de rehabilitación.",
       link: "/blogs/fractura-de-humero-proximal-en-adultos-mayores",
     },
   ];
