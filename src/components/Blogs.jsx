@@ -127,6 +127,14 @@ function Blogs() {
         "¿Tienes dolor de espalda? Hoy te invito a profundizar sobre la lumbalgia que afecta el 80% de la población. Causas, síntomas y tratamientos en mi blog.",
       link: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
     },
+    {
+      img: "/Fractura-Humero-Proximal-Adultos-Mayores-Cuidados-Terapias-Tiempo-Recuperacion-Dr-Ricardo-Monge.webp",
+      fecha: "Marzo 2025",
+      titulo: "Fractura de Humero proximal en adultos mayores",
+      texto:
+        "La fractura de húmero proximal es una lesión común en adultos mayores. En este blog te explico cómo se diagnostica y trata esta lesión.",
+      link: "/blogs/fractura-de-humero-proximal-en-adultos-mayores",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();
