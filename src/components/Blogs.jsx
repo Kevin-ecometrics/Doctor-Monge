@@ -32,15 +32,15 @@ function Blogs() {
       fecha: "Abril 2024",
       titulo: "Fractura de Tibia y Peroné",
       texto:
-        "Todo lo que debes saber sobre las fracturas de tibia y peroné, unas de las lesiones más complejas e interesantes atendidas en la traumatología. En este blog nos gustaría que nos acompañes a identificar por qué son tan únicas en cada paciente.",
+        "Todo lo que debes saber sobre las fracturas de tibia y peroné unas de las más complejas e interesantes atendidas en la traumatología. En este blog nos gustaría que nos acompañes a identificar porque son tan únicas en cada paciente",
       link: "/blogs/Fractura-de-tibia-y-Perone",
     },
     {
       img: "/Todo lo que debes saber sobre una de las lesiones mas comunes en ortopedia.png",
       fecha: "Mayo 2024",
-      titulo: "Pseudoartrosis y retraso de consolidación óse",
+      titulo: "Pseudoartrosis y retraso de consolidación ósea",
       texto:
-        "Seguramente conoces a alguien que está, o tú estás, en una situación complicada con la sanación de una fractura. En este blog abordaremos por qué algunas fracturas tardan en sanar o no sanan completamente.",
+        "En este blog abordaremos junto con el Dr. Ricardo Monge Experto Ortopedia por qué unas fracturas tardan en sanar o no sanan completamente.",
       link: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion",
     },
     {
@@ -48,7 +48,7 @@ function Blogs() {
       fecha: "Junio 2024",
       titulo: "Lesión de Ligamento Cruzado Anterior",
       texto:
-        "Descubre en este blog todas las causas que hacen a las mujeres más propensas a lesiones de LCA y cómo, gracias a la artroscopia, pueden reincorporarse sin complicaciones a su vida diaria.",
+        " Descubre en este blog todas las causas que hacen a las mujeres más propensas a lesiones por LCA y como gracias a la artroscopia un procedimiento ortopédico mínimo invasivo pueden reincorporarse sin complicaciones a su vida diaria",
       link: "/blogs/Lesion-de-Ligamento-Cruzado-Anterior",
     },
     {
@@ -57,23 +57,24 @@ function Blogs() {
       titulo:
         "Osteoporosis: Una condición silenciosa que afecta a la mitad de la población mayor de 50 años",
       texto:
-        "Te platico sobre una condición en los huesos que, como ortopedista, sé que genera bastantes dudas y estrés a partir de los 50 años.",
+        "El Dr. Ricardo Monge traumatólogo ortopedista en Tijuana explica lo que debes saber sobre la osteoporosis una afección en los huesos cuyos síntomas no suelen percibirse en las primeras etapas",
       link: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
     },
     {
       img: "/Realiza tus infiltraciones articulares con el Dr. Monge en Tijuana.webp",
       fecha: "Agosto 2024",
-      titulo: "Infiltraciones en la Rodilla con Ácido Hialurónico",
+      titulo:
+        "Infiltraciones con ácido hialurónico para tratamiento de artrosis de rodilla",
       texto:
-        "Hola que tal, el día de hoy te escribo acerca de las infiltraciones de rodilla con ácido hialurónico, los candidatos, consideraciones y expectativas. Quédate a leer el blog",
+        "¿Te han recomendado infiltraciones con ácido hialurónico? Profundiza con el Dr. experto en infiltraciones sobre este procedimiento conservador en ortopedia que ha demostrado ser muy eficaz. ",
       link: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
     },
     {
       img: "/Invierte en tu bienestar con un tratamiento adecuado para ti con el Dr. Monge.webp",
       fecha: "Septiembre 2024",
-      titulo: "Tratamiento Conservador vs Cirugía",
+      titulo: "Tratamiento conservador vs cirugía en hernia discal ",
       texto:
-        "En este blog abordaremos de forma resumida lo más conveniente para tratar una hernia discal cervical, ¿Será un tratamiento conservador o la cirugía?",
+        "En este blog el Dr. Ricardo Monge traumatólogo ortopedista especializado en lesiones y cirugía platicará sobre las diferencias entre un tratamiento conservador y una cirugía ortopédica de hernia discal cervical y como saber cuál es la mejor opción para ti ",
       link: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
     },
     {
@@ -81,58 +82,58 @@ function Blogs() {
       fecha: "Octubre 2024",
       titulo: "Rechazo de Material en Osteosíntesis",
       texto:
-        "¿Es cierto que tu cuerpo rechazo el material? En este blog te platico brevemente el fallo en la osteosíntesis en tu fractura.",
+        "Es cierto que tu cuerpo rechazó el material? En este blog el Dr. Monge traumatólogo ortopedista te platica todo sobre el rechazo de material en osteosíntesis y como detectarlo a tiempo para evitar complicaciones.",
       link: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
     },
     {
       img: "/El Hallux Valgus o Juanete puede  limitar tu movilidad el Dr monge te explica mas.webp",
       fecha: "Noviembre 2024",
       titulo:
-        "Juanetes: Síntomas, detección y tipos de cirugía para eliminarlos",
+        "Hallux valgus un padecimiento que afecta a hasta el 35% de la población ",
       texto:
-        "El padecimiento más común que a simple vista no se ve, te platico sobre el hallux valgus (Juanetes) Todo lo que debes saber sobre sus causas, tratamiento y mucho más.",
+        "e invitamos a conocer las causas de la mano del Dr. Ricardo Monge traumatólogo experto que te explicará las causas por las que los juanetes aparecen y como se lleva a cabo su diagnóstico y cirugía. ",
       link: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
     },
     {
       img: "/El doctor Monge experto en infiltraciones te platica mas sobre ellas en este blog.webp",
       fecha: "Diciembre 2024",
       titulo:
-        "Infiltraciones de Rodilla: Opciones y beneficios para la osteoartritis",
+        "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis",
       texto:
-        "El día de hoy platicamos sobre las opciones de infiltraciones para tratar de forma conservadora la osteoartritis como: la cortisona, Plasma rico en plaquetas y ácido hialurónico.",
+        "En este blog abordaremos las opciones de tratamientos ortopédicos conservadores para tratar la osteoartritis como las infiltraciones de: Corticoides, plasma rico en plaquetas y ácido hialurónico. ",
       link: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
     },
     {
       img: "/Visita el blog para conocer los detalles entre cada uno con el DR Ricardo Monge.webp",
       fecha: "Enero 2025",
-      titulo: "Tendinitis y tendinosis: causas, diferencias y tratamiento ",
+      titulo: "Tendinitis y tendinosis: Causas diferencias y tratamientos  ",
       texto:
-        "Te comparto brevemente la diferencias entre tendinitis, la inflamación del tendón que si no es tratada se puede convertir en una tendinosis, da clic para continuar leyendo.",
+        "El Dr. Ricardo Monge, especialista en traumatología y ortopedia, te aclara las diferencias entre la tendinitis, que es la inflamación del tendón, y la tendinosis, que es la complicación que surge cuando no se trata a tiempo. ",
       link: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
     },
     {
       img: "/Artritis y artrosis Conoce las diferencias con el traumatologo ortopedista Ricardo Monge.webp",
       fecha: "Febrero 2025",
       titulo:
-        "¿Cómo Saber si es artritis o artrosis? Síntomas y  Diferencias Clave ",
+        "¿Cómo saber si es artritis o artrosis? Síntomas y Diferencias Clave  ",
       texto:
-        "El DR. Ricardo Monge explica la diferencia clave de la artritis una enfermedad autoinmune y artrosis un padecimiento degenerativo articular.",
+        "El Dr. Ricardo Monge explica la diferencia clave de la artritis una enfermedad autoinmune y artrosis un padecimiento degenerativo articular. ",
       link: "/blogs/Como-saber-si-es-artritis-o-artrosis",
     },
     {
       img: "/El DR Monge explica en su blog de forma breve todo sobre la lumbalgia.webp",
       fecha: "Febero 2025",
-      titulo: "Lumbalgia: Tipos, Factores de Riesgo y Tratamientos",
+      titulo: "Lumbalgia: Tipos, Factores de Riesgo y Tratamientos ",
       texto:
-        "¿Tienes dolor de espalda? Hoy te invito a profundizar sobre la lumbalgia que afecta el 80% de la población. Causas, síntomas y tratamientos en mi blog.",
+        "¿Sufres de dolor de espalda? El Dr. Ricardo Monge, especialista en ortopedia, analiza en detalle esta condición que impacta al 80% de las personas. Descubre las causas, los síntomas más comunes y los tratamientos ortopédicos disponibles para aliviar esta molestia. ",
       link: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
     },
     {
       img: "/Fractura-Humero-Proximal-Adultos-Mayores-Cuidados-Terapias-Tiempo-Recuperacion-Dr-Ricardo-Monge.webp",
       fecha: "Marzo 2025",
-      titulo: "Fractura de Humero proximal en adultos mayores",
+      titulo: "Fractura de humero proximal en adultos mayores ",
       texto:
-        "Acompaña al Dr. Ricardo Monge mientras explica cómo reducir el riesgo de fracturas en adultos mayores mediante hábitos saludables, adaptaciones en el hogar para prevenir caídas, ejercicios recomendados y el tiempo estimado de rehabilitación.",
+        "Acompaña al Dr. Ricardo Monge mientras explica cómo disminuir el riesgo de fracturas en adultos mayores con hábitos saludables, ajustes en el hogar para evitar caídas, ejercicios recomendados y el tiempo de rehabilitación necesario. ",
       link: "/blogs/fractura-de-humero-proximal-en-adultos-mayores",
     },
   ];
@@ -182,7 +183,7 @@ function Blogs() {
         </button>
         <div className="text-start">
           <h1 className="font-medium text-[42px] mb-16 px-8">
-            Conoce más sobre Ortopedia y Traumatología
+            Conoce más sobre ortopedia y traumatología en mis blogs{" "}
           </h1>
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:mb-0 mb-16">
             <AnimatePresence mode="popLayout">

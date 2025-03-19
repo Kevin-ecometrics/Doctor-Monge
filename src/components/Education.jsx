@@ -15,7 +15,7 @@ const Education = () => {
       years: "2013 - 2018",
       university: "Universidad Xochicalco",
       description:
-        "La universidad cuenta con 50 años de calidad y prestigio con múltiples acreditaciones como La Asociación Mexicana de Facultades y Escuelas de Medicina, A.C., O.M.S. , COMAEM, COMAPROD, convirtiéndola en una las mejores universidades para la licenciatura en medina.",
+        "La universidad cuenta con 50 años de calidad y prestigio con múltiples acreditaciones como La Asociación Mexicana de Facultades y Escuelas de Medicina, A.C., O.M.S. , COMAEM, COMAPROD, convirtiéndola en una las mejores universidades para la licenciatura en medina. ",
     },
     {
       logo: "/Ricardo Monge es un medico especialista avalado por la UNAM.png",
@@ -24,7 +24,7 @@ const Education = () => {
       years: "2018 - 2021",
       university: "Universidad Nacional Autónoma de México.",
       description:
-        " Hospital General del Estado de Sonora, avalado por la U.N.A.M. certificado y miembro del Consejo Mexicano de Ortopedia.",
+        "Especialidad en traumatología y Ortopedia otorgada en el Hospital General del Estado de Sonora, avalado por la U.N.A.M. certificado y miembro del Consejo Mexicano de Ortopedia. ",
     },
     {
       logo: "/Ricardo Monge pertenece a una de las organizaciones de ortopedia y traumatologia mas grande de america latina.png",
@@ -33,7 +33,7 @@ const Education = () => {
       years: "2021 - 2022",
       university: "4to. Lugar Nacional FEMECOT 2022",
       description:
-        " Investigación de Incidencia de lesión del ligamento nucal en esguince cervical valorado por ultrasonido en el Hospital General del Estado de Sonora.",
+        "Realicé Investigación de Incidencia de lesión del ligamento nucal en esguince cervical valorado por ultrasonido en el Hospital General del Estado de Sonora para mi certificación como médico especialista en traumatología y ortopedia",
     },
   ];
 
@@ -46,16 +46,18 @@ const Education = () => {
       <div className="lg:w-full flex flex-col justify-center lg:flex-row lg:justify-between items-center">
         <div>
           <h1 className="text-[42px] font-medium text-center lg:text-start">
-            Trayectoria Académica
+            Trayectoria académica en traumatología y ortopedia{" "}
           </h1>
           <h2 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
-            Me he preparado en las mejores instituciones para brindarte
-            tratamiento de excelencia y acompañamiento de calidad, así como
-            brindarte la información absolutamente necesaria para que comprendas
-            tu lesión o patología y poderla tratar. 
+            Me he preparado en las mejores instituciones de traumatología y
+            ortopedia en México para brindarte tratamiento de excelencia y
+            acompañamiento de calidad, así como ortogarte la información
+            absolutamente necesaria para que comprendas tu lesión ortopédica o
+            patología y poderla tratar.
           </h2>
           <h2 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
-            Número de Cédula profesional: 129001837660539
+            Número de Cédula profesional como médico especialista en
+            traumatología y ortopedia: 12900183 7660539{" "}
           </h2>
         </div>
         <div className="py-6 lg:py-0">

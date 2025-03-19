@@ -44,13 +44,16 @@ function Partners() {
     <div>
       <main class="flex justify-center lg:justify-start flex-col lg:w-[80%] mx-auto items-center lg:items-start py-16 lg:py-48 ">
         <h1 class="text-[42px] font-medium mb-4 px-8 lg:px-0 text-center">
-          Colegios Médicos
+          Colegios Médicos avalados en Ortopedia y Traumatología nacional e
+          internacional{" "}
         </h1>
         <h2 class="font-bold text-[#969596] text-[16px] mb-8 px-8 lg:px-0 lg:mb-16">
-          Miembro activo de varios colegios e instituciones especializadas me
-          continúan preparando y actualizando mediante seminarios y congresos
-          con el fin de seguir brindando una alta calidad de atención para
-          paciente actuales y futuros.
+          Miembro activo de los colegios e instituciones más prestigiados
+          especializados en traumatología y ortopedia que me continúan
+          preparando y actualizando. Constantmente acudo a seminarios y
+          congresos con el fin de seguir brindando una alta calidad de atención
+          para mis pacientes con complicaciones traumatológicas y lesiones
+          ortopédicas.
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:w-full">
           {partners.map((partner, index) => (

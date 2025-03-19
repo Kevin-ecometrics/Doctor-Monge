@@ -67,9 +67,13 @@ function Contact() {
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 px-8 gap-16 w-[80%] mx-auto z-10">
         <div>
-          <h1 className="font-medium text-[42px]">Contacto</h1>
+          <h1 className="font-medium text-[42px]">
+            {" "}
+            Contacto para Dr. Ricardo Monge Romero
+          </h1>
           <p className="font-bold text-[#969596] text-[16px] mb-12">
-            Encuéntrame en:
+            Me encuentro cerca de ti a 10 minutos de la frontera de San Ysidro
+            en Tijuana{" "}
           </p>
           <div className="*:font-medium *:text-[16px] mb-12">
             <p>Fray Servando Teresa de Mier #1351, Núm.</p>
@@ -184,14 +188,16 @@ function Contact() {
         </div>
         <div>
           <h1 className="text-[32px] font-bold mb-2">
-            ¿Tienes alguna pregunta?
+            ¿Tienes alguna pregunta para mí?{" "}
           </h1>
           <h2 className="text-[25px] font-medium mb-10">
-            Te invito a preguntarme más sobre Ortopedia y Traumatología.
+            Te invito a preguntarme tus dudas en Ortopedia y Traumatología y si
+            quieres saber más, visita te dejo mis redes sociales{" "}
           </h2>
           <h1 className="font-medium mb-10 text-[20px] text-blue-500">
-            ¿Deseas agendar tu cita? Con gusto, solo escribe tus datos para
-            comenzar o llámanos{" "}
+            Deseas agendar tu cita de valoración ortopédica? Con gusto, solo
+            escríbeme tus datos para comenzar o llámanos para agendar directo a
+            recepción de mi consultorio
           </h1>
           <h2></h2>
           <form className="mt-8 mb-24 lg:mb-8" onSubmit={handleSubmit}>

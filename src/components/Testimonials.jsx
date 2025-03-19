@@ -3,29 +3,29 @@ import { motion, useInView } from "framer-motion";
 
 const testimonials = [
   {
-    text: "Excelente atención y gran profesionalismo, toda explicación por parte del Doctor Ricardo es detallada y armónica para su comprensión",
+    text: "Excelente atención y gran profesionalismo, toda explicación por parte del Doctor Ricardo Romero es detallada y armónica para su comprensión en traumatología y ortopedia. ",
     name: "Alan Cota",
-    topic: "Hombro",
+    topic: "Padecimiento de Hombro",
   },
   {
-    text: "El Dr. Ricardo Monge, a quien visité por vez primera, revisó de forma muy amplia y detallada mi padecimiento, y con su explicación me quedó totalmente claro el tratamiento a seguir para mi recuperación. Excelente",
+    text: " El Dr. Ricardo Monge a quien visité por vez primera en Tijuana me revisó de forma muy amplia y detallada mi padecimiento, y con su explicación me quedó totalmente claro el tratamiento a seguir para mi recuperación. Excelente atención",
     name: "Leticia R",
-    topic: "Columna ",
+    topic: "Lesiones de Columna  ",
   },
   {
-    text: "Bastante profesional, explica cada detalle de los procedimientos posibles y recomendó la mejor acción. Me he sentido de maravilla y quede muy agradecido con el Dr. Monge",
-    name: "Francisco Pérez",
-    topic: "Rodilla ",
+    text: "El Doctor fue bastante profesional, explica cada detalle de los procedimientos posibles y me recomendó la mejor acción. Me he sentido de maravilla y quede muy agradecido con el Dr. Monge ",
+    name: "Felipe Pérez",
+    topic: "Ortopedia en Rodillas",
   },
   {
-    text: "Mi experiencia con el Dr. Monge fue muy buena, nos explicó perfectamente todo, apenas empiezo un tratamiento con él pero la atención fue excelente y el trato muy amable. ¡Lo recomiendo!",
+    text: "Mi experiencia con el Dr. Monge en Tijuana fue muy buena, nos explicó perfectamente todo, apenas empiezo un tratamiento ortopédico con él, la atención fue excelente y el trato muy amable. ¡¡Lo recomiendo!! ",
     name: "Nelly Toledo",
-    topic: "Rodilla ",
+    topic: "Lesiones de Rodilla ",
   },
   {
-    text: "Excelente doctor, muy explícito en sus palabras , tanto profesional como humana, ambas cosas totalmente diferentes , certero y sabio en sus diagnósticos ,lo recomiendo ampliamente gracias doctor en lo personal por su enorme ayuda y ante todo paciencia a todas mis dudas con amabilidad que me las respondió al momento",
+    text: "Excelente doctor, muy explícito en sus palabras, tanto profesional como humana, ambas cosas totalmente diferentes, certero y sabio en sus diagnósticos, lo recomiendo ampliamente en Tijuana, gracias doctor en lo personal por su enorme ayuda y ante todo paciencia a todas mis dudas con amabilidad que me las respondió al momento. ",
     name: "Alicia Garza Soltero",
-    topic: "Cadera ",
+    topic: "Cirugía de Cadera ",
   },
 ];
 
@@ -88,8 +88,8 @@ function Testimonials() {
           </svg>
 
           <h1 className="font-semibold text-[29px] lg:text-[42px] py-4 lg:py-16">
-            Encontramos el mejor tratamiento ortopedista para cada paciente en
-            Tijuana
+            Encontramos el tratamiento ortopedista perfecto para aliviar a cada
+            paciente en Tijuana
           </h1>
         </div>
         <div>
