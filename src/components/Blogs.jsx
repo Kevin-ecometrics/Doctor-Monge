@@ -91,7 +91,7 @@ function Blogs() {
       titulo:
         "Hallux valgus un padecimiento que afecta a hasta el 35% de la población ",
       texto:
-        "e invitamos a conocer las causas de la mano del Dr. Ricardo Monge traumatólogo experto que te explicará las causas por las que los juanetes aparecen y como se lleva a cabo su diagnóstico y cirugía. ",
+        "Te invitamos a conocer las causas de la mano del Dr. Ricardo Monge traumatólogo experto que te explicará las causas por las que los juanetes aparecen y como se lleva a cabo su diagnóstico y cirugía. ",
       link: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
     },
     {
@@ -161,31 +161,30 @@ function Blogs() {
       <main className="flex justify-center items-center py-24 md:py-24 md:h-screen relative">
         <button
           onClick={handlePrev}
-          className="hidden md:block absolute left-4 md:left-36 top-1/2 transform -translate-y-1/2 px-4 py-2 text-white rounded"
+          className="hidden md:block absolute left-4 md:left-32 top-1/2 transform -translate-y-1/2 px-4 py-2 z-50 text-white rounded"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
+            width="31"
+            height="57"
+            viewBox="0 0 31 57"
             fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="Previous Slide"
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M5 12l14 0" />
-            <path d="M5 12l6 6" />
-            <path d="M5 12l6 -6" />
+            <path
+              d="M28.2861 54.6339L2.41885 28.1918L28.861 2.32457"
+              stroke="#969596"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
         </button>
         <div className="text-start">
           <h1 className="font-medium text-[42px] mb-16 px-8">
             Conoce más sobre ortopedia y traumatología en mis blogs{" "}
           </h1>
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:mb-0 mb-16">
+          <div className="flex flex-col md:flex-row justify-center gap-8 md:mb-0 mb-16">
             <AnimatePresence mode="popLayout">
               {displayedItems.map((item, index) => (
                 <motion.div
@@ -260,24 +259,23 @@ function Blogs() {
         </div>
         <button
           onClick={handleNext}
-          className="hidden md:block absolute right-4 md:right-36 top-1/2 transform -translate-y-1/2 px-4 py-2 text-white rounded"
+          className="hidden md:block absolute right-4 md:right-32 top-1/2 transform -translate-y-1/2 px-4 py-2 text-white rounded z-50"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
+            width="31"
+            height="57"
+            viewBox="0 0 31 57"
             fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="Next Slide"
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M5 12l14 0" />
-            <path d="M13 18l6 -6" />
-            <path d="M13 6l6 6" />
+            <path
+              d="M2.42188 2L28.5781 28.1562L2.42188 54.3125"
+              stroke="#969596"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
         </button>
 
@@ -287,21 +285,20 @@ function Blogs() {
             className="absolute left-4 top-1/2 transform -translate-y-1/2 px-4 py-2 text-white rounded"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
+              width="31"
+              height="57"
+              viewBox="0 0 31 57"
               fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Next Slide"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M5 12l14 0" />
-              <path d="M13 18l6 -6" />
-              <path d="M13 6l6 6" />
+              <path
+                d="M2.42188 2L28.5781 28.1562L2.42188 54.3125"
+                stroke="#969596"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
           <button
@@ -309,21 +306,20 @@ function Blogs() {
             className="absolute right-4 top-1/2 transform -translate-y-1/2 px-4 py-2 text-white rounded"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
+              width="31"
+              height="57"
+              viewBox="0 0 31 57"
               fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Previous Slide"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M5 12l14 0" />
-              <path d="M5 12l6 6" />
-              <path d="M5 12l6 -6" />
+              <path
+                d="M28.2861 54.6339L2.41885 28.1918L28.861 2.32457"
+                stroke="#969596"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
         </div>

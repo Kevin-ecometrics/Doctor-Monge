@@ -57,7 +57,8 @@ const Education = () => {
           </h2>
           <h2 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
             Número de Cédula profesional como médico especialista en
-            traumatología y ortopedia: 12900183 7660539{" "}
+            traumatología y ortopedia:{" "}
+            <strong className="text-white font-bold">12900183</strong>{" "}
           </h2>
         </div>
         <div className="py-6 lg:py-0">

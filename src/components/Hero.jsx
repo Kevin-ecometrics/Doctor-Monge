@@ -29,9 +29,9 @@ function Hero() {
               className="mb-8 "
             />
             <h2 className="mb-8 font-semibold lg:w-[500px] text-[18px] text-[#969596] hidden lg:block">
-              Soy traumatólogo ortopedista, doctor en lesiones articulares,
-              reemplazo de cadera, rodilla, patologías de hombro y cirugía de
-              columna en Tijuana B.C.
+              Soy traumatólogo ortopedista, especialista en lesiones
+              articulares, reemplazo de cadera, rodilla, patologías de hombro y
+              cirugía de columna en Tijuana B.C.
             </h2>
           </section>
           <div className="w-[400px] h-[400px] lg:h-screen lg:w-full lg:absolute lg:translate-x-4 translate-x-[-40px] top-[-150px] hidden lg:block">
