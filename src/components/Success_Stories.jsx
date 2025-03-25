@@ -149,9 +149,9 @@ const SuccessStories = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0 }}
             >
-              <h1 className="font-bold text-[25px] lg:text-[50px] mb-2">
+              <h2 className="font-bold text-[25px] lg:text-[50px] mb-2">
                 {content[currentIndex].title}
-              </h1>
+              </h2>
               <h2 className="font-bold text-[70px] lg:text-[80px] mb-2">
                 {content[currentIndex].title2}
               </h2>

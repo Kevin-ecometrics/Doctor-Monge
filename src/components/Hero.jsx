@@ -28,11 +28,11 @@ function Hero() {
               height={500}
               className="mb-8 "
             />
-            <h2 className="mb-8 font-semibold lg:w-[500px] text-[18px] text-[#969596] hidden lg:block">
+            <h1 className="mb-8 font-semibold lg:w-[500px] text-[18px] text-[#969596] hidden lg:block">
               Soy traumatólogo ortopedista, especialista en lesiones
               articulares, reemplazo de cadera, rodilla, patologías de hombro y
               cirugía de columna en Tijuana B.C.
-            </h2>
+            </h1>
           </section>
           <div className="w-[400px] h-[400px] lg:h-screen lg:w-full lg:absolute lg:translate-x-4 translate-x-[-40px] top-[-150px] hidden lg:block">
             <motion.img
@@ -59,10 +59,11 @@ function Hero() {
               src="/herom.webp"
               alt="El doctor Ricardo Monge es especialista en ortopedia y traumatología especializado en lesiones musculo esqueléticas de rodilla, cadera y espalda"
             />
-            <h2 className="mb-8 font-semibold lg:w-[500px] md:text-[28px] lg:text-[18px] text-[#969596]">
-              Soy especialista en lesiones articulares, reemplazo de cadera,
-              rodilla, patologías de hombro y cirugía de columna en Tijuana B.C.
-            </h2>
+            <h1 className="mb-8 font-semibold lg:w-[500px] md:text-[28px] lg:text-[18px] text-[#969596]">
+              Soy traumatólogo ortopedista, especialista en lesiones
+              articulares, reemplazo de cadera, rodilla, patologías de hombro y
+              cirugía de columna en Tijuana B.C.
+            </h1>
           </div>
         </div>
       </main>

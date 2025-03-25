@@ -33,15 +33,15 @@ let skills = [
       <div
         class="flex flex-col justify-end items-end mb-4 sm:mb-8 px-3 sm:px-6"
       >
-        <h1 class="text-[16px] sm:text-[20px] font-bold">Años de</h1>
-        <h1 class="text-[16px] sm:text-[20px] font-bold">práctica</h1>
-        <h1 class="text-[16px] sm:text-[20px] font-bold">ortopédica y</h1>
-        <h1 class="text-[16px] sm:text-[20px] font-bold">traumatológica</h1>
+        <h2 class="text-[16px] sm:text-[20px] font-bold">Años</h2>
+        <h2 class="text-[16px] sm:text-[20px] font-bold">de práctica</h2>
+        <h2 class="text-[16px] sm:text-[20px] font-bold">ortopédica y</h2>
+        <h2 class="text-[16px] sm:text-[20px] font-bold">traumatológica</h2>
         <div class="flex justify-between items-end gap-2 sm:gap-4">
           <div class="border-b border-white w-28 lg:w-16"></div>
-          <h1 class="text-[16px] sm:text-[20px] font-bold">
+          <h2 class="text-[16px] sm:text-[20px] font-bold">
             aliviando a pacientes
-          </h1>
+          </h2>
         </div>
       </div>
     </div>
@@ -52,8 +52,8 @@ let skills = [
       <h3 class="font-bold text-[#969596] text-[18px] mb-2">
         Soy el tipo de médico que se interesa conocer tu caso particular y
         acompañarte a comprender tu enfermedad o lesión para comenzar juntos con
-        el tratamiento ideal para ti Permíteme ser el médico Ortopedista que
-        está cerca de ti en Tijuana y San Diego
+        el tratamiento ideal para tí. <br />
+        Ser el médico Ortopedista que está cerca de ti en Tijuana y San Diego
       </h3>
       <h2 class="text-[22px] font-semibold">
         Áreas destacadas en cirugía ortopédica
@@ -62,7 +62,7 @@ let skills = [
         {
           skills.map((skill) => (
             <>
-              <div class="mb-1 text-lg font-medium ">{skill.name}</div>
+              <h2 class="mb-1 text-lg font-medium ">{skill.name}</h2>
               <div class="lg:w-96 bg-gray-200 rounded-full h-2.5 mb-4 ">
                 <div class="bg-blue-600 h-2.5 rounded-full animate-width" />
               </div>

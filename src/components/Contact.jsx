@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { motion, useInView } from "framer-motion";
+
 function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const ref = useRef(null);
@@ -67,18 +68,25 @@ function Contact() {
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 px-8 gap-16 w-[80%] mx-auto z-10">
         <div>
-          <h1 className="font-medium text-[42px]">
+          <h3 className="font-medium text-[42px] mb-2">
             {" "}
             Contacto para Dr. Ricardo Monge Romero
-          </h1>
-          <p className="font-bold text-[#969596] text-[16px] mb-12">
+          </h3>
+          <h1 className="font-bold text-[#969596] text-[16px] mb-8">
             Me encuentro cerca de ti a 10 minutos de la frontera de San Ysidro
             en Tijuana{" "}
-          </p>
-          <div className="*:font-medium *:text-[16px] mb-12">
-            <p>Fray Servando Teresa de Mier #1351, Núm.</p>
-            <p>Interior 809-810, Zona Urbana Río, C.P.</p>
-            <p>22010 Tijuana, B.C., México</p>
+          </h1>
+          <div className="*:font-medium *:text-[16px] mb-12 ">
+            <a
+              href="https://g.co/kgs/bGEUyuJ"
+              target="_blank"
+              className="hover:text-blue-500"
+              rel="noopener noreferrer"
+            >
+              <h3>Fray Servando Teresa de Mier #1351, Núm.</h3>
+              <h3>Interior 809-810, Zona Urbana Río, C.P.</h3>
+              <h3>22010 Tijuana, B.C., México</h3>
+            </a>
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col">
@@ -109,22 +117,22 @@ function Contact() {
                     <path d="M14 16l1 0" />
                     <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
                   </svg>
-                  <p
+                  <h3
                     className="font-medium text-[29px]"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     664 976 3510
-                  </p>
+                  </h3>
                 </a>
               </div>
-              <p className="mb-2 font-bold text-[#969596]">
+              <h3 className="mb-2 font-bold text-[#969596]">
                 Horario de atención:
-              </p>
-              <p className="font-medium">
+              </h3>
+              <h3 className="font-medium">
                 Lunes a Viernes de 10am-2pm y 4pm-6pm.
-              </p>
-              <p className="mb-4 font-medium">Sábados de 10am-2pm.</p>
+              </h3>
+              <h3 className="mb-4 font-medium">Sábados de 10am-2pm.</h3>
             </div>
 
             <div className="mb-8 group">
@@ -148,13 +156,13 @@ function Contact() {
                   <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
                   <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                 </svg>
-                <p
+                <h3
                   className="font-medium text-[29px]  "
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   664 169 0650
-                </p>
+                </h3>
               </a>
             </div>
             <div className="mb-8 group">
@@ -179,27 +187,49 @@ function Contact() {
                   <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
                   <path d="M3 7l9 6l9 -6" />
                 </svg>
-                <p className="font-bold text-[18px]">
+                <h3 className="font-bold text-[18px]">
                   pacientes@mongeortopedia.com{" "}
-                </p>
+                </h3>
               </a>
             </div>
           </div>
         </div>
         <div>
-          <h1 className="text-[32px] font-bold mb-2">
+          <h2 className="text-[32px] font-bold mb-2">
             ¿Tienes alguna pregunta para mí?{" "}
-          </h1>
-          <h2 className="text-[25px] font-medium mb-10">
-            Te invito a preguntarme tus dudas en Ortopedia y Traumatología y si
-            quieres saber más, visita te dejo mis redes sociales{" "}
           </h2>
-          <h1 className="font-medium mb-10 text-[20px] text-blue-500">
-            Deseas agendar tu cita de valoración ortopédica? Con gusto, solo
-            escríbeme tus datos para comenzar o llámanos para agendar directo a
-            recepción de mi consultorio
-          </h1>
-          <h2></h2>
+          <h3 className="text-[25px] font-medium mb-10">
+            Te invito a preguntarme tus dudas en Ortopedia y Traumatología y si
+            quieres saber más visita{" "}
+            <div className="flex gap-4 items-center">
+              <a
+                href="https://www.tiktok.com/@elmongedelaortopedia"
+                target="_blank"
+              >
+                <img
+                  src="/Tiktok.svg"
+                  alt="Logo de Tiktok"
+                  title="Logo de Instagram"
+                  className="w-8"
+                />{" "}
+              </a>
+              <a
+                href="https://www.instagram.com/drmonge.ortho/?hl=es"
+                target="_blank"
+              >
+                <img
+                  src="Instagram.svg"
+                  alt="Logo de Instagram"
+                  title="Logo de Instagram"
+                  className="w-8"
+                />
+              </a>
+            </div>
+          </h3>
+          <h3 className="font-medium mb-10 text-[20px] text-blue-500">
+            ¿Deseas agendar tu cita de valoración ortopédica? Con gusto, solo
+            escríbeme tus datos para comenzar
+          </h3>
           <form className="mt-8 mb-24 lg:mb-8" onSubmit={handleSubmit}>
             <div class="relative z-0 w-full mb-5 group">
               <input

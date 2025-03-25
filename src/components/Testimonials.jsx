@@ -106,12 +106,12 @@ function Testimonials() {
                 <h2 className="mb-8 font-normal text-[22px] text-[#ACACAD]">
                   {testimonial.text}
                 </h2>
-                <h3 className="mb-8 font-normal text-[24px]">
+                <h2 className="mb-8 font-normal text-[24px]">
                   {testimonial.name}
-                </h3>
-                <h3 className="font-medium text-[22px] text-[#D9D9D9] mb-16">
+                </h2>
+                <h2 className="font-medium text-[22px] text-[#D9D9D9] mb-16">
                   {testimonial.topic}
-                </h3>
+                </h2>
               </motion.div>
             ))}
           </section>

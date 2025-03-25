@@ -48,18 +48,18 @@ const Education = () => {
           <h1 className="text-[42px] font-medium text-center lg:text-start">
             Trayectoria académica en traumatología y ortopedia{" "}
           </h1>
-          <h2 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
+          <h3 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
             Me he preparado en las mejores instituciones de traumatología y
             ortopedia en México para brindarte tratamiento de excelencia y
             acompañamiento de calidad, así como ortogarte la información
             absolutamente necesaria para que comprendas tu lesión ortopédica o
             patología y poderla tratar.
-          </h2>
-          <h2 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
+          </h3>
+          <h4 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
             Número de Cédula profesional como médico especialista en
             traumatología y ortopedia:{" "}
             <strong className="text-white font-bold">12900183</strong>{" "}
-          </h2>
+          </h4>
         </div>
         <div className="py-6 lg:py-0">
           <button
@@ -90,15 +90,15 @@ const Education = () => {
             />
           </div>
           <div>
-            <h2 className="text-[#969596] font-bold text-[14px] mb-4">
+            <h3 className="text-[#969596] font-bold text-[14px] mb-4">
               {item.years}
-            </h2>
-            <h1 className="font-bold text-[18px]">{item.university}</h1>
+            </h3>
+            <h3 className="font-bold text-[18px]">{item.university}</h3>
           </div>
           <div>
-            <p className="text-[#969596] font-bold text-[14px]">
+            <h4 className="text-[#969596] font-bold text-[14px]">
               {item.description}
-            </p>
+            </h4>
           </div>
         </motion.div>
       ))}
