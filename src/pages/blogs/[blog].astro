@@ -64,6 +64,11 @@ export function getStaticPaths() {
         blog: "fractura-de-humero-proximal-en-adultos-mayores",
       },
     },
+    {
+      params: {
+        blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+      },
+    },
   ];
 }
 
@@ -235,6 +240,18 @@ const blogs = [
     keywords: "Fractura de húmero proximal, adulto mayor, recuperación",
     id: 13,
   },
+  {
+    titulo: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+    ruta: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+    blogTitle:
+      "¿Es necesaria una segunda cirugía para tratar la pseudoartrosis?",
+    date: "Marzo 2025",
+    title: "¿Es necesaria una segunda cirugía para tratar la pseudoartrosis?",
+    description:
+      "Aprende sobre ortopedia y traumatología con Dr. Ricardo Monge. Descrubre sobre la cirugía por pseudoartrosis más que una cirugía es un rescate óseo. ",
+    keywords: "",
+    id: 14,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -344,6 +361,14 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   date = "Marzo 2025";
   content = "Blog13";
   blogTitle = "Fractura de Húmero Proximal en Adultos Mayores";
+} else if (
+  blog === "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis"
+) {
+  image = "/bannerblog14.webp";
+  date = "Marzo 2025";
+  content = "Blog14";
+  blogTitle =
+    "¿Es necesaria una segunda cirugía para tratar la pseudoartrosis?";
 } else {
   image = "/fondoDefault.png";
 }

@@ -1,0 +1,231 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/blog14.webp";
+import Image2 from "@public/blog14-2.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+];
+
+const blogActual =
+  "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis";
+
+const id = 14;
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Si, o si será indispensable realizar una intervención quirúrgica. El
+      objetivo de esta cirugía es abordar dos factores que pudieron fallar: La
+      biología del hueso y la inestabilidad mecánica de la fractura.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      ¿Cómo se determina la necesidad de una segunda cirugía ortopédica?
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Es fundamental mantener un seguimiento constante con tu médico
+      especialista o buscar una segunda opinión. Entre el tercer y cuarto mes
+      postoperatorio, puede identificarse un retraso en la consolidación ósea.
+      Si no se actúa a tiempo, este problema podría evolucionar a una
+      pseudoartrosis hacia el octavo o noveno mes, para esta etapa el hueso y el
+      cuerpo se han agotado su capacidad biológica natural de reparación. En
+      este punto, ya dio todo, la única solución efectiva será someter esa
+      fractura a cirugía, ya que el organismo no podrá completar el proceso por
+      sí solo.
+      <br />
+      <br />
+      Durante tu valoración o segunda opinión, además de tu examen físico, se te
+      solicitarán estudios imagenológicos exhaustivos (Radiografías o tomografías)
+      para diseñar un plan quirúrgico preciso y actuar en la brevedad, minimizando
+      complicaciones futuras. Un hallazgo clave en estos estudios es la presencia
+      de callos óseos aislados en los extremos de la fractura, que no embonan o conectan
+      entre sí. En su lugar, se observa una articulación falsa que genera inestabilidad
+      dolor crónico e incomodidad funcional.
+      <br />
+      <br />
+    </h3>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt="Imagen de fractura de tibia y peroné"
+        class="object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-4 font-semibold">
+      Riesgos y estadísticas: ¿Qué tan común es este escenario?
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Aunque la idea de una segunda cirugía puede resultar abrumadora, es la
+      única alternativa para reavivar el hueso y reactivar la consolidación ósea
+      y lograr resultados óptimos. La pseudoartrosis afecta aproximadamente al 4
+      % de los pacientes, especialmente en fracturas de huesos largos (fémur,
+      tibia y húmero) Cuando se trata de fracturas expuestas el riesgo aumenta
+      hasta un 30% aunque sigue siendo una complicación relativamente baja.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Más que una cirugía: Un rescate óseo
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-8">
+      Cuando los pacientes ya se han enfrentado a una cirugía previa y a un
+      proceso de recuperación, la aparición de pseudoartrosis y una segunda
+      cirugía suele generar preocupación y resistencia. Sin embargo, esta
+      intervención busca rescatar el foco de fractura mediante dos enfoques:
+    </h3>
+
+    <h2 class="text-white text-3xl mb-8 font-semibold">
+      Falla mecánica (inestabilidad)
+    </h2>
+    <ul class="text-xl list-disc px-6 space-y-2">
+      <li>Eliminando la articulación falsa.</li>
+      <li>
+        Reemplazando el sistema de fijación (placas, tornillos o clavos
+        intramedulares).
+      </li>
+      <li>
+        Fresado de los bordes de la fractura para dejar solo tejido
+        vascularizado.
+      </li>
+      <li>
+        Mejorando la compresión y estabilidad entre fragmentos de la fractura.
+      </li>
+    </ul>
+    <br />
+    <h2 class="text-3xl mb-8 font-semibold">
+      <strong class="text-white"
+        >Falla biológica (pseudoartrosis infectada):
+      </strong>
+      Las infecciones pueden originarse desde la fractura inicial, durante la cirugía,
+      o incluso por focos distantes (urinarios, dentales)
+    </h2>
+    <ul class="text-xl list-disc px-6 space-y-2">
+      <li>Limpieza quirúrgica profunda del tejido infectado.</li>
+      <li>Retiro de implantes y fijación externa temporal.</li>
+      <li>
+        Injertos óseos (propios o de donante) para estimular la regeneración.
+      </li>
+      <li>
+        Tratamiento antibiótico prolongado (intravenoso y posteriormente oral).
+      </li>
+    </ul>
+    <br />
+    <br />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        title="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Recuperación: Paciencia y disciplina
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Al ser una reintervención, el proceso de consolidación puede ser más
+      lento. Factores como fracturas múltiples, daño en tejidos blandos,
+      osteoporosis, anemia severa, trastornos tiroideos o edad avanzada pueden
+      influir en la rehabilitación. Por ello, es crucial seguir al pie de la
+      letra las indicaciones de tu médico traumatólogo ortopedista y
+      fisioterapeuta.
+      <br />
+      <br />
+      ¿Necesitas una evaluación personalizada por un traumatólogo ortopedista en
+      Tijuana? Si tu fractura aun no sana o te genera molestias, te invito a mi consultorio
+      en Torre Norte 2, en a 10 minutos de la línea de san Ysidro para poder evaluar
+      y apoyarte a conocer a profundidad tu diagnóstico y juntos trabajar en tu plan
+      de tratamiento si es un retraso de consolidación o conocer los detalles sobre
+      técnicas quirúrgicas si se trata de una pseudoartrosis.
+    </h3>
+  </Observer>
+</article>
+
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <!-- <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  /> -->
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>

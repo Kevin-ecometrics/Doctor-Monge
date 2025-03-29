@@ -2,12 +2,18 @@
 const { image, title, date } = Astro.props;
 ---
 
-<div>
+<div class="relative">
+  <!-- Imagen de fondo -->
   <img
     src={image}
     alt="fondo"
     class="w-full h-screen object-cover object-center"
   />
+
+  <!-- Fondo negro con opacidad -->
+  <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+  <!-- Contenido -->
   <div class="lg:w-[60%]">
     <div
       class="hidden lg:flex lg:flex-col lg:items-start lg:justify-center lg:absolute lg:left-48 lg:top-1/2 lg:bottom-1/2"

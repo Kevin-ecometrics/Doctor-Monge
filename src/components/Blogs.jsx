@@ -136,6 +136,15 @@ function Blogs() {
         "Acompaña al Dr. Ricardo Monge mientras explica cómo disminuir el riesgo de fracturas en adultos mayores con hábitos saludables, ajustes en el hogar para evitar caídas, ejercicios recomendados y el tiempo de rehabilitación necesario. ",
       link: "/blogs/fractura-de-humero-proximal-en-adultos-mayores",
     },
+    {
+      img: "/cardblog14.webp",
+      fecha: "Marzo 2025",
+      titulo:
+        "¿Es necesaria una segunda cirugía ortopédica por pseudoartrosis? ",
+      texto:
+        "¿Qué hacer si tu hueso no logra consolidarse? La pseudoartrosis ocurre y se forma una falsa articulación. Te invitamos a leer el blog del cirujano traumatólogo ortopedista Ricardo Monge para conocer más detalles. ",
+      link: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();
@@ -205,7 +214,7 @@ function Blogs() {
                   <p className="absolute inset-0 flex items-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     {item.fecha}
                   </p>
-                  <h2 className="text-hover-blue font-bold absolute inset-0 flex items-start px-4 py-16 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200 ">
+                  <h2 className="text-hover-blue font-bold absolute inset-0 flex items-start px-4 py-12 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200 ">
                     <a
                       className="text-white z-10 hover:text-blue-600"
                       href={item.link}
