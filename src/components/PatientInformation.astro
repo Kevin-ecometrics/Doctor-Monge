@@ -34,16 +34,18 @@ const Information = [
 ---
 
 <div
-  class="md:h-screen flex justify-center items-start flex-col w-[80%] mx-auto"
+  class="h-screen flex md:justify-center md:items-start flex-col w-[80%] mx-auto"
 >
-  <h1 class="font-medium text-[42px]">Fichas Técnicas</h1>
-  <p class="font-bold text-[16px] text-[#969596] mb-8">
+  <h1 class="font-medium text-[21px] md:text-[42px] mt-16 md:mt-0">
+    Fichas Técnicas
+  </h1>
+  <p class="font-bold text-[14px] md:text-[16px] text-[#969596] mb-8">
     Archivos disponibles para descargar. Léelos en línea o descárgalos en tu
     teléfono.
   </p>
   <div class="w-full relative">
     <div
-      class="bg-black text-white p-8 max-h-[410px] scrollbar-blue overflow-y-auto"
+      class="bg-black text-white p-8 md:max-h-[410px] max-h-[480px] scrollbar-blue overflow-y-auto"
     >
       {
         Information.map((item, index) => (
@@ -72,6 +74,11 @@ const Information = [
               {/* Tercera columna: Texto */}
               <div>
                 <h3 class="text-xl text-[#969596]">{item.text}</h3>
+                <div class="py-4 md:hidden block">
+                  <a class="mb-8 bg-blue-500 px-4 py-2" href={item.link}>
+                    Ver Ficha Tecnica
+                  </a>
+                </div>
               </div>
             </div>
             {/* Línea divisora después de cada fila */}

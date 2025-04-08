@@ -1,5 +1,5 @@
 ---
-import FichaPDF1 from "@components/fichas/FichaPDF1";
+import FichaPDF from "@components/fichas/FichaPDF";
 import Layout from "@layouts/LayoutBlog.astro";
 import { slide } from "astro:transitions";
 export function getStaticPaths() {
@@ -59,10 +59,14 @@ const year = new Date().getFullYear();
               <p class="text-6xl font-semibold">{fichaData.bannerDate}</p>
             </div>
           </section>
-          <section class="px-16 mt-16 border-white border-t-4 border-b-4 py-8">
-            <FichaPDF1 client:load />
+          <section class="md:px-16 mt-16 border-white border-t-4 border-b-4 py-8">
+            <FichaPDF
+              title="1. Recomendaciones para una columna sana.pdf"
+              pdf="/ficha1.pdf"
+              client:only="react"
+            />
           </section>
-          <footer class="flex justify-center items-center flex-col h-20">
+          <footer class="flex justify-center items-center flex-col py-4 px-8 text-center">
             <p class="text-sm">
               All rights reserved by Doctor Monge. {year} ©{" "}
               <a href="/" class="hover:text-blue-500 hover:underline">
@@ -74,7 +78,7 @@ const year = new Date().getFullYear();
                 target="_blank"
                 class="hover:text-blue-500 hover:underline"
               >
-                <strong>ecommetrica.com</strong>
+                <strong>Ecommetrica.com</strong>
               </a>
             </p>
           </footer>
