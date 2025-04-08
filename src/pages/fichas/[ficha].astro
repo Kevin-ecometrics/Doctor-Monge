@@ -1,0 +1,115 @@
+---
+import FichaPDF1 from "@components/fichas/FichaPDF1";
+import Layout from "@layouts/LayoutBlog.astro";
+import { slide } from "astro:transitions";
+export function getStaticPaths() {
+  return [
+    { params: { ficha: "ficha1" } },
+    { params: { ficha: "ficha2" } },
+    { params: { ficha: "ficha3" } },
+  ];
+}
+
+const fichasData = {
+  ficha1: {
+    title: "Dr Monge | Ficha 1",
+    description: "Descripción de la ficha 1.",
+    keywords: "ficha1, doctor, monge",
+    bannerTitle: "December 17, 2024",
+    bannerDate: "Titulo original del documento",
+  },
+  ficha2: {
+    title: "Dr Monge | Ficha 2",
+    description: "Descripción de la ficha 2.",
+    keywords: "ficha2, doctor, monge",
+    bannerTitle: "December 17, 2024",
+    bannerDate: "Titulo original del documento",
+  },
+  ficha3: {
+    title: "Dr Monge | Ficha 3",
+    description: "Descripción de la ficha 3.",
+    keywords: "ficha3, doctor, monge",
+    bannerTitle: "December 17, 2024",
+    bannerDate: "Titulo original del documento",
+  },
+};
+
+const { ficha } = Astro.params;
+const fichaData = fichasData[ficha as keyof typeof fichasData];
+const year = new Date().getFullYear();
+---
+
+<Layout
+  title={fichaData.title}
+  description={fichaData.description}
+  keywords={fichaData.keywords}
+>
+  <div
+    class="text-white"
+    transition:animate={slide({
+      duration: "0.8s",
+    })}
+  >
+    {
+      ficha === "ficha1" && (
+        <>
+          <section class="bg-[url(/ficha.jpg)] bg-cover bg-no-repeat h-[700px] relative">
+            <div class="absolute left-16 bottom-32">
+              <h1 class="text-2xl font-bold mb-4">{fichaData.bannerTitle}</h1>
+              <p class="text-6xl font-semibold">{fichaData.bannerDate}</p>
+            </div>
+          </section>
+          <section class="px-16 mt-16 border-white border-t-4 border-b-4 py-8">
+            <FichaPDF1 client:load />
+          </section>
+          <footer class="flex justify-center items-center flex-col h-20">
+            <p class="text-sm">
+              All rights reserved by Doctor Monge. {year} ©{" "}
+              <a href="/" class="hover:text-blue-500 hover:underline">
+                <strong> mongeortopedia.com</strong>
+              </a>{" "}
+              is powered by{" "}
+              <a
+                href="https://ecommetrica.com/"
+                target="_blank"
+                class="hover:text-blue-500 hover:underline"
+              >
+                <strong>ecommetrica.com</strong>
+              </a>
+            </p>
+          </footer>
+        </>
+      )
+    }
+    {
+      ficha === "ficha2" && (
+        <>
+          <section class="bg-[url(/ficha.jpg)] bg-cover bg-no-repeat h-[700px] relative">
+            <div class="absolute left-16 bottom-32">
+              <h1 class="text-2xl font-bold mb-4">{fichaData.bannerTitle}</h1>
+              <p class="text-6xl font-semibold">{fichaData.bannerDate}</p>
+            </div>
+          </section>
+          <section class="px-16 mt-16 border-white border-t-4 border-b-4 py-8">
+            <p>Contenido especial para ficha 2.</p>
+          </section>
+        </>
+      )
+    }
+    {
+      ficha === "ficha3" && (
+        <>
+          <section class="bg-[url(/ficha.jpg)] bg-cover bg-no-repeat h-[700px] relative">
+            <div class="absolute left-16 bottom-32">
+              <h1 class="text-2xl font-bold mb-4">{fichaData.bannerTitle}</h1>
+              <p class="text-6xl font-semibold">{fichaData.bannerDate}</p>
+            </div>
+          </section>
+          <section class="px-16 mt-16 border-white border-t-4 border-b-4 py-8">
+            <p>Contenido especial para ficha 3.</p>
+          </section>
+        </>
+      )
+    }
+  </div>
+</Layout>

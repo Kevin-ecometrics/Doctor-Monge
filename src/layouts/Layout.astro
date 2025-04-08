@@ -23,11 +23,11 @@ const { title, description, keywords } = Astro.props;
     <meta name="keywords" content={keywords} />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={Astro.url} />
+    <link rel="canonical" href={Astro.url.href} />
     <meta name="author" content="Doctor Monge" />
     <meta name="publisher" content="Ecommetrica" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:url" content="https://mongeortopedia.com" />
+    <meta property="og:url" content="https://mongeortopedia.com/" />
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
@@ -112,6 +112,286 @@ const { title, description, keywords } = Astro.props;
       fbq("init", "487515010536352");
 
       fbq("track", "PageView");
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Dr Ricardo Monge",
+        "url": "https://mongeortopedia.com/",
+        "specialty": "Traumatólogo ortopedista",
+        "description": "Soy traumatólogo ortopedista, especialista en lesiones articulares, reemplazo de cadera, rodilla, patologías de hombro y cirugía de columna en Tijuana B.C.",
+        "telephone": "+52 664 976 3510",
+        "email": "pacientes@mongeortopedia.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Fray Servando Teresa de Mier 1351-Interior 809-810, Zona Urbana Rio Tijuana",
+          "addressLocality": "Tijuana",
+          "addressRegion": "Baja California",
+          "postalCode": "22010",
+          "addressCountry": "MX",
+          "openingHours": "Mo-Fr 10:00-18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/drmonge.ortho",
+          "https://www.instagram.com/drmonge.ortho",
+          "https://www.tiktok.com/@elmongedelaortopedia",
+          "https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
+        ],
+        "knowsLanguage": ["es", "en"],
+        "paymentAccepted": "Efectivo, Tarjeta",
+        "hasMap": "https://maps.app.goo.gl/32KM4WsuAu5csZgG6",
+        "wheelchairAccessible": true,
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Ortopedia",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Artroplastia de la cadera con prótesis total"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Artroplastia rodilla con prótesis total"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Artroscopia de rodilla"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cirugía de hernia discal cervical"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cirugía de lesiones en ligamentos y meniscos"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Hernia de disco lumbar"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Manejo del dolor en columna y cirugía de columna"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Reconstrucción ligamentos cruzados de rodilla por artroscopia"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Reducción ortopédica e inmovilización de fracturas y/o luxaciones"
+              }
+            }
+          ],
+          "alumniOf": [
+            {
+              "@type": "EducationalOrganization",
+              "name": "Universidad Xochicalco",
+              "url": "https://www.xochicalco.edu.mx"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "Universidad Nacional Autónoma de México",
+              "url": "https://www.unam.mx"
+            }
+          ],
+          "award": [
+            {
+              "@type": "Award",
+              "name": "4to. Lugar Nacional FEMECOT 2022",
+              "description": "Realicé Investigación de Incidencia de lesión del ligamento nucal en esguince cervical valorado por ultrasonido en el Hospital General del Estado de Sonora para mi certificación como médico especialista en traumatología y ortopedia",
+              "dateReceived": "2022"
+            }
+          ]
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Dr Ricardo Monge",
+        "description": "Soy traumatólogo ortopedista, especialista en lesiones articulares, reemplazo de cadera, rodilla, patologías de hombro y cirugía de columna en Tijuana B.C.",
+        "medicalSpecialty": "Orthopedics",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Fray Servando Teresa de Mier 1351-Interior 809-810, Zona Urbana Rio Tijuana",
+          "addressLocality": "Tijuana",
+          "addressRegion": "Baja California",
+          "postalCode": "22010",
+          "addressCountry": "MX"
+        },
+        "telephone": "+52 664 976 3510",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "4",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "datePublished": "2023-01-15",
+            "reviewBody": "Definitivamente una de las mejores consultas a las que hemos asistido, mi madre esta pasando por un proceso largo de recuperacion y es grato encontrarse con personas que aman su profesion como es el doctor Ricardo.",
+            "author": {
+              "@type": "Person",
+              "name": "Surplus EAC"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "datePublished": "2023-02-20",
+            "reviewBody": "El Dr. Ricardo Monge Romero ofrece una atención al cliente excepcional, combinada con un amplio conocimiento en traumatología.",
+            "author": {
+              "@type": "Person",
+              "name": "Mario Ortiz"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "datePublished": "2023-03-10",
+            "reviewBody": "Nos gustó mucho su trato y el tratamiento que nos dio. Mi hija evolucionó favorablemente.",
+            "author": {
+              "@type": "Person",
+              "name": "Alejandra Monraz"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "Un doctor al que le importan al 100% sus pacientes y se toma el tiempo de explicar los tratamientos y como seguirlos para mejorar la salud de los mismos.",
+            "author": {
+              "@type": "Person",
+              "name": "Adrian Pliego"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "Excelente doctor, explica todo muy bien y es muy atento. Todo al 100%.",
+            "author": {
+              "@type": "Person",
+              "name": "Denisse Limon"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "Excelente Dr, muy profesional, te brinda la mejor atención y te explica paso a paso cada cosa responde todas las dudas que tengas, es muy amable, super recomendado, a demás las instalaciones están muy bonitas y muy limpias 100 %recomendado 🙂",
+            "author": {
+              "@type": "Person",
+              "name": "MICHELLE MORENO"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "Excelente el trato del Dr. Monge! Su espacio de trabajo limpio y seguro. Gracias por la paciencia y tiempo que se tomó para explicarme perfectamente y de una manera entendible! despejó todas mis dudas, trato amable,respetuoso y atento. Excelente atención y servicio! 100% Recomendado ☝️",
+            "author": {
+              "@type": "Person",
+              "name": "Perla Rob"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "Excelente traumatólogo, su servicio es excelente te explica a detalle y no deja nada de dudas. Súper profesional y atento. Sin duda lo recomiendo al cien por ciento. Muchas gracias!",
+            "author": {
+              "@type": "Person",
+              "name": "Ramon Dominguez"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "Excelente Dr. Un gran ser humano ya que Tiene mucha empatía contesta todas tus dudas, es muy amable su trato lo recomiendo muchísimo, muchas gracias dr bendiciones!!",
+            "author": {
+              "@type": "Person",
+              "name": "Denise Gmz"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "Excelente Doctor, me dio una asesoría donde pude tener más claridad de los pasos a seguir en mi situación, muy agradecienda por la información que me brindó :)",
+            "author": {
+              "@type": "Person",
+              "name": "Lizeth Araiza"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          }
+        ]
+      }
     </script>
     <ViewTransitions />
   </head>

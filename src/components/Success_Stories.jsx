@@ -81,7 +81,7 @@ const SuccessStories = () => {
       title: "Lesiones en",
       title2: "meniscos",
       subtitle:
-        "son responsables del casi 50 % de la trasmisión de fuerza a través de la rodilla y actúan como estabilizadores secundarios. Esta es una de las lesiones de rodilla más comunes te invito a conocer tratamiento ",
+        "Son responsables del casi 50 % de la trasmisión de fuerza a través de la rodilla y actúan como estabilizadores secundarios. Esta es una de las lesiones de rodilla más comunes te invito a conocer tratamiento ",
       background:
         "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png",
       link: "/procedimientos/lesiones-en-meniscos",

@@ -20,11 +20,10 @@ const { title, description, keywords } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="https://mongeortopedia.com/preview.png" />
-
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="keywords" content={keywords} />
-    <link rel="canonical" href={Astro.url} />
+    <link rel="canonical" href={Astro.url.href} />
     <meta name="author" content="Doctor Monge" />
     <meta name="publisher" content="Ecommetrica" />
     <meta name="robots" content="index, follow" />

@@ -1,0 +1,106 @@
+---
+const Information = [
+  {
+    icon: "/ficha1.webp",
+    title: "Guía para Columna Sana",
+    text: "En este documento encontrarás ejercicios y recomendaciones ilustradas de higiene de columna.",
+    link: "/fichas/ficha1",
+  },
+  {
+    icon: "/ficha2.webp",
+    title: "Instrucciones postoperatorias de Reemplazo total de cadera",
+    text: "En este documento podrás encontrar pautas y recomendaciones necesarias para tu recuperación.",
+    link: "/fichas/ficha2",
+  },
+  {
+    icon: "/ficha3.webp",
+    title: "Instrucciones postoperatorias de Reemplazo total de rodilla",
+    text: "Te comparto cuidados y recomendaciones para una reincorporación exitosa en tus actividades diarias.",
+    link: "/fichas/ficha3",
+  },
+  {
+    icon: "/ficha4.webp",
+    title: "Instrucciones postoperatorias de artroscopia de rodilla",
+    text: "En este documento te resumo los cuidados y consejos clave para una recuperación exitosa.",
+    link: "/fichas/ficha4",
+  },
+  {
+    icon: "/ficha5.webp",
+    title: "Recomendaciones generales preoperatorias",
+    text: "Te presento puntos claves para que puedas conocer los pasos previos a tu intervención.",
+    link: "/fichas/ficha5",
+  },
+];
+---
+
+<div
+  class="md:h-screen flex justify-center items-start flex-col w-[80%] mx-auto"
+>
+  <h1 class="font-medium text-[42px]">Fichas Técnicas</h1>
+  <p class="font-bold text-[16px] text-[#969596] mb-8">
+    Archivos disponibles para descargar. Léelos en línea o descárgalos en tu
+    teléfono.
+  </p>
+  <div class="w-full relative">
+    <div
+      class="bg-black text-white p-8 max-h-[410px] scrollbar-blue overflow-y-auto"
+    >
+      {
+        Information.map((item, index) => (
+          <>
+            {/* Fila completa para cada elemento */}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              {/* Primera columna: Imagen */}
+              <div class="flex justify-start">
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  title={item.title}
+                  class="w-20 h-20"
+                />
+              </div>
+              {/* Segunda columna: PDF y título */}
+              <div class="flex flex-col items-start">
+                <p class="text-xl text-[#969596] mb-2">PDF</p>
+                <a
+                  href={item.link}
+                  class="text-white cursor-pointer hover:text-[#005692] font-bold text-2xl"
+                >
+                  {item.title}
+                </a>
+              </div>
+              {/* Tercera columna: Texto */}
+              <div>
+                <h3 class="text-xl text-[#969596]">{item.text}</h3>
+              </div>
+            </div>
+            {/* Línea divisora después de cada fila */}
+            {index + 1 !== Information.length && (
+              <hr class="my-4 border-t border-[#969596]" />
+            )}
+          </>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .scrollbar-blue::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .scrollbar-blue::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+  }
+
+  .scrollbar-blue::-webkit-scrollbar-thumb {
+    background: #005692;
+    border-radius: 10px;
+  }
+
+  .scrollbar-blue::-webkit-scrollbar-thumb:hover {
+    background: #003d66;
+  }
+</style>
