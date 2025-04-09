@@ -12,11 +12,11 @@ export function getStaticPaths() {
 
 const fichasData = {
   ficha1: {
-    title: "Dr Monge | Ficha 1",
-    description: "Descripción de la ficha 1.",
-    keywords: "ficha1, doctor, monge",
-    bannerTitle: "December 17, 2024",
-    bannerDate: "Titulo original del documento",
+    title: "Dr Monge | Recomendaciones para una columna sana",
+    description: "Descripción de la ficha técnica.",
+    keywords: "ficha-tecnica, doctor, monge",
+    bannerTitle: "8 de Abril, 2025",
+    bannerDate: "Recomendaciones para una columna sana",
   },
   ficha2: {
     title: "Dr Monge | Ficha 2",
@@ -53,13 +53,13 @@ const year = new Date().getFullYear();
     {
       ficha === "ficha1" && (
         <>
-          <section class="bg-[url(/ficha.jpg)] bg-cover bg-no-repeat h-[700px] relative">
+          <section class="bg-[url(/banner-ficha.jpg)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute left-16 bottom-32">
               <h1 class="text-2xl font-bold mb-4">{fichaData.bannerTitle}</h1>
               <p class="text-6xl font-semibold">{fichaData.bannerDate}</p>
             </div>
           </section>
-          <section class="md:px-16 mt-16 border-white border-t-4 border-b-4 py-8">
+          <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
             <FichaPDF
               title="1. Recomendaciones para una columna sana.pdf"
               pdf="/ficha1.pdf"

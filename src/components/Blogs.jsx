@@ -145,6 +145,15 @@ function Blogs() {
         "¿Qué hacer si tu hueso no logra consolidarse? La pseudoartrosis ocurre y se forma una falsa articulación. Te invitamos a leer el blog del cirujano traumatólogo ortopedista Ricardo Monge para conocer más detalles. ",
       link: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
     },
+    {
+      img: "/cardblog15.webp",
+      fecha: "Abril 2025",
+      titulo:
+        "¿El dolor persiste pero la radiografía dice que todo está bien? Podrías estar frente a una fractura oculta.",
+      texto:
+        "Acompaña al Dr. Ricardo Monge y descubre cómo se originan estas lesiones invisibles y qué métodos existen para detectarlas a tiempo.",
+      link: "/blogs/fracturas-ocultas-diagnostico-tijuana",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();

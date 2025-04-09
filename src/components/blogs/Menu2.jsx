@@ -3,51 +3,55 @@ import React, { useEffect, useState } from "react";
 const blogsURL = [
   {
     id: 1,
-    url: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis/",
+    url: "/blogs/fracturas-ocultas-diagnostico-tijuana/",
   },
   {
     id: 2,
-    url: "/blogs/fractura-de-humero-proximal-en-adultos-mayores/",
+    url: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis/",
   },
   {
     id: 3,
-    url: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos/",
+    url: "/blogs/fractura-de-humero-proximal-en-adultos-mayores/",
   },
   {
     id: 4,
-    url: "/blogs/Como-saber-si-es-artritis-o-artrosis/",
+    url: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos/",
   },
   {
     id: 5,
-    url: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento/",
+    url: "/blogs/Como-saber-si-es-artritis-o-artrosis/",
   },
   {
     id: 6,
-    url: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis/",
+    url: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento/",
   },
   {
     id: 7,
-    url: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos/",
+    url: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis/",
   },
   {
     id: 8,
-    url: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas/",
+    url: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos/",
   },
   {
     id: 9,
-    url: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical/",
+    url: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas/",
   },
   {
     id: 10,
-    url: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
+    url: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical/",
   },
   {
     id: 11,
+    url: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
+  },
+  {
+    id: 12,
     url: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor/",
   },
-  { id: 12, url: "/blogs/Lesion-de-Ligamento-cruzado-anterior/" },
-  { id: 13, url: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion/" },
-  { id: 14, url: "/blogs/Fractura-de-tibia-y-Perone/" },
+  { id: 13, url: "/blogs/Lesion-de-Ligamento-cruzado-anterior/" },
+  { id: 14, url: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion/" },
+  { id: 15, url: "/blogs/Fractura-de-tibia-y-Perone/" },
 ];
 
 const Menu2 = () => {

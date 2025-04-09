@@ -69,6 +69,11 @@ export function getStaticPaths() {
         blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
       },
     },
+    {
+      params: {
+        blog: "fracturas-ocultas-diagnostico-tijuana",
+      },
+    },
   ];
 }
 
@@ -249,8 +254,19 @@ const blogs = [
     title: "¿Es necesaria una segunda cirugía para tratar la pseudoartrosis?",
     description:
       "Aprende sobre ortopedia y traumatología con Dr. Ricardo Monge. Descrubre sobre la cirugía por pseudoartrosis más que una cirugía es un rescate óseo. ",
-    keywords: "",
+    keywords: "pseudoartrosis, cirugía, tratamiento",
     id: 14,
+  },
+  {
+    titulo: "fracturas-ocultas-diagnostico-tijuana",
+    ruta: "/blogs/fracturas-ocultas-diagnostico-tijuana",
+    blogTitle: "Fracturas Ocultas: Diagnóstico y Tratamiento",
+    date: "Abril 2025",
+    title: "Fracturas invisibles: ¿Por qué no siempre se ven en radiografías?",
+    description:
+      "Acompaña a conocer las principales causas y factores riesgo de una fractura oculta con Ricardo Monge cirujano traumatólogo ortopedista en Tijuana.",
+    keywords: "fracturas ocultas, diagnóstico, tratamiento",
+    id: 15,
   },
 ];
 
@@ -369,6 +385,11 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   content = "Blog14";
   blogTitle =
     "¿Es necesaria una segunda cirugía para tratar la pseudoartrosis?";
+} else if (blog === "fracturas-ocultas-diagnostico-tijuana") {
+  image = "/bannerblog15.webp";
+  date = "Abril 2025";
+  content = "Blog15";
+  blogTitle = "Fracturas ocultas: Lo que las radiografías no siempre revelan";
 } else {
   image = "/fondoDefault.png";
 }
