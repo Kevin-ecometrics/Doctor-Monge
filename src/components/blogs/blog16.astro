@@ -1,0 +1,288 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/blog15.webp";
+import Image2 from "@public/blog15-2.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+];
+
+const blogActual =
+  "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular";
+
+const id = 16;
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      ¿Tuviste alguna caída reciente o practicas deporte con frecuencia y notas
+      un dolor fuerte persistente e inflamación? ¿Acudiste al médico y en tus
+      radiografías no se observó nada anormal?
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Podría tratarse de una fractura oculta, te platico de que se tratan ese
+      dolor que no se ve en radiografías.
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl text-white font-semibold mb-8">
+      ¿Qué es una fractura oculta?
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      Es aquella lesión que no muestra signos evidentes y por tanto pasa
+      desapercibida en la radiografía simple. Por lo que durante tu evaluación
+      física realizamos ciertos movimientos específicos y pruebas clínicas para
+      localizar el dolor.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-4 font-semibold">
+      Después, solicitamos estudios de imagen avanzados como:
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
+      <li>Tomografía computarizada (TC)</li>
+      <li>
+        Resonancia magnética (RM) que ha demostrado ser una prueba de imagen de
+        alta sensibilidad para el diagnóstico de estas fracturas por su alta
+        resolución.
+      </li>
+      <li>
+        Gammagrafía ósea que es un examen que permite detectar anomalías en los
+        huesos mediante la inyección de un radiotrazador.
+      </li>
+    </ol>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt="Imagen de fractura de tibia y peroné"
+        class="object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-8 font-semibold">
+      Zonas más comunes de fracturas ocultas
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-8">Las áreas frecuentes incluyen:</h3>
+
+    <ul class="text-xl list-disc px-6 space-y-2 mb-4">
+      <li>Cadera</li>
+      <li>Columna vertebral</li>
+      <li>Tibia (espinilla)</li>
+      <li>Codo</li>
+      <li>Tobillo</li>
+      <li>Muñeca</li>
+    </ul>
+    <h3 class="text-xl mb-8">
+      Estas dos últimas, por su complejidad anatómica, son propensas a fracturas
+      inadvertidas. Las mujeres tienen mayor predisposición debido a factores
+      hormonales como la osteoporosis posmenopáusica.
+    </h3>
+
+    <h2 class="text-3xl mb-8 font-semibold text-white">
+      Las fracturas ocultas pueden producirse por:
+    </h2>
+    <h3 class="text-xl mb-8">Traumatismos: Caídas o impactos directos.</h3>
+    <h2 class="text-3xl mb-8 font-semibold text-white">
+      Fracturas por estrés:
+    </h2>
+    <h3 class="text-xl mb-8">
+      Actividades repetitivas (correr, lanzar objetos, marchar). Aumento brusco
+      de la intensidad deportiva que pueden generar micro fisuras que, al no
+      cicatrizar a tiempo, progresan a fracturas completas.
+    </h3>
+    <h2 class="text-3xl mb-8 font-semibold text-white">
+      Fracturas por insuficiencia:
+    </h2>
+    <h3 class="text-xl mb-8">
+      Huesos debilitados (osteoporosis, tumores, quimioterapia) que se fracturan
+      ante mínimos esfuerzos.
+    </h3>
+    <br />
+    <br />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        title="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">Factores de riesgo:</h2>
+  </Observer>
+  <Observer client:visible>
+    <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
+      <li>Pérdida de masa ósea (osteoporosis).</li>
+      <li>Enfermedades genéticas (osteogénesis imperfecta).</li>
+      <li>Artritis reumatoide.</li>
+      <li>Trastornos hormonales (amenorrea, menopausia).</li>
+      <li>Desnutrición o trastornos alimentarios.</li>
+      <li>Consumo excesivo de alcohol o tabaco.</li>
+      <li>Uso prolongado de corticoides o antiinflamatorios.</li>
+      <li>Insuficiencia renal crónica.</li>
+    </ol>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      Síntomas clave de una fractura oculta
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
+      <li>Dolor localizado que persiste incluso en reposo.</li>
+      <li>Inflamación constante.</li>
+      <li>Sensibilidad al tacto en la zona afectada.</li>
+      <li>Limitación funcional progresiva.</li>
+    </ol>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-4 font-semibold">Tratamiento</h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-3xl text-white font-semibold mb-8">
+      Varía según la gravedad y ubicación de la fractura:
+    </h3>
+    <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
+      <li>Inmovilización: Férulas o yeso.</li>
+      <li>Descarga de peso: Muletas o bastones.</li>
+      <li>Modificación de actividades: Reposo deportivo temporal.</li>
+      <li>
+        Suplementación: Calcio, vitamina D y bifosfonatos en casos de
+        osteoporosis.
+      </li>
+      <li>Cirugía: En fracturas inestables o con riesgo de necrosis</li>
+    </ol>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-4">
+      Es importante no prolongar e ignorar los malestares por mucho tiempo, si
+      bien el cuerpo es muy noble y se recupera por sí solo, en ocasiones esto
+      no basta y se necesita intervención, ya sea porque el problema es más
+      grave o porque el organismo ha alcanzado su límite. En el caso de las
+      fracturas ocultas si no se tratan a tiempo pueden derivar en
+      complicaciones como pseudoartrosis o deformidades.
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-4">
+      Si tienes más dudas sobre esto, te gustaría agendar una consulta
+      ortopédica, con gusto te apoyo, puedes escribirme y te responderé en la
+      brevedad de lo posible.
+      <strong class="text-white font-bold">
+        Me puedes encontrar en Torre Norte 2 en Tijuana Baja California
+      </strong>
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-4">
+      Si no vives en Tijuana, pero te gustaría recibir una asesoría ortopédica a
+      distancia te puedo apoyar con gusto puedes agendar para comenzar <a
+        class="cursor-pointer text-white hover:text-blue-600"
+        href="https://wa.me/526641690650"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        664 169 0650
+      </a>
+    </h3>
+  </Observer>
+</article>
+
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <!-- <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  /> -->
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>

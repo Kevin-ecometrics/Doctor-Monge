@@ -74,6 +74,11 @@ export function getStaticPaths() {
         blog: "fracturas-ocultas-diagnostico-tijuana",
       },
     },
+    {
+      params: {
+        blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+      },
+    },
   ];
 }
 
@@ -268,6 +273,18 @@ const blogs = [
     keywords: "fracturas ocultas, diagnóstico, tratamiento",
     id: 15,
   },
+  {
+    titulo: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+    ruta: "/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+    blogTitle:
+      "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ",
+    date: "Abril 2025",
+    title: "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ",
+    description:
+      "El Dr. Ricardo Monge, experto en artroscopia de rodilla en Tijuana, responde tus dudas sobre la cirugía de mínima invasión con máximos resultados. ",
+    keywords: "artroscopia de rodilla, desgaste articular, tratamiento",
+    id: 16,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -390,6 +407,14 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   date = "Abril 2025";
   content = "Blog15";
   blogTitle = "Fracturas ocultas: Lo que las radiografías no siempre revelan";
+} else if (
+  blog === "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular"
+) {
+  image = "/bannerblog16.webp";
+  date = "Abril 2025";
+  content = "Blog16";
+  blogTitle =
+    "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ";
 } else {
   image = "/fondoDefault.png";
 }
