@@ -11,6 +11,13 @@
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <url>
+        <loc>https://mongeortopedia.com/blogs/fracturas-ocultas-diagnostico-tijuana/</loc>
+        <lastmod>2025-02-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     
     <url>
         <loc>https://mongeortopedia.com/blogs/Como-saber-si-es-artritis-o-artrosis/</loc>
@@ -150,6 +157,38 @@
         <lastmod>2024-09-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://mongeortopedia.com/fichas/recomendaciones-para-una-columna-sana</loc>
+        <lastmod>2025-04-14</lastmod>
+        <changefreq>monthly</changefreq>
+
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://mongeortopedia.com/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-cadera</loc>
+        <lastmod>2025-04-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://mongeortopedia.com/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-rodilla</loc>
+        <lastmod>2025-04-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://mongeortopedia.com/fichas/instrucciones-postoperatorias-de-artroscopia-de-rodilla</loc>
+        <lastmod>2025-04-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://mongeortopedia.com/fichas/recomendaciones-generales-preoperatorias</loc>
+        <lastmod>2025-04-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
 </urlset>

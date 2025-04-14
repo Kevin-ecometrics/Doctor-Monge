@@ -6,8 +6,6 @@ import "react-pdf/dist/Page/TextLayer.css";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import {
   FacebookShareButton,
-  FacebookMessengerIcon,
-  FacebookMessengerShareButton,
   WhatsappShareButton,
   FacebookIcon,
   WhatsappIcon,
@@ -36,7 +34,7 @@ const Viewer = ({ title, pdf }) => {
   const downloadPDF = () => {
     const link = document.createElement("a");
     link.href = pdf;
-    link.download = "Recomendaciones_para_una_columna_sana.pdf";
+    link.download = `${title}`;
     link.click();
   };
 
@@ -59,21 +57,36 @@ const Viewer = ({ title, pdf }) => {
 
       <main className="md:h-screen flex overflow-hidden text-black">
         {/* Sidebar */}
-        <div className="border-r-2 border-gray-400 px-3 w-80 p-2 h-full md:block hidden">
-          <div className="px-2 py-3 border-b-2 text-center font-semibold text-lg text-white mb-4">
-            Paginas
+        <div className="border-r-2 border-gray-300 bg-gray-100 px-4 w-80 p-4 h-full md:block hidden">
+          {/* Título del sidebar */}
+          <div className="px-2 py-4 border-b-2 text-center font-semibold text-lg text-[#005692] mb-4">
+            Páginas de la Ficha
           </div>
-          <div className="h-full w-auto overflow-auto flex flex-col items-center text-black">
+
+          {/* Lista de miniaturas de páginas */}
+          <div className="h-full w-auto overflow-y-auto  flex flex-col items-center gap-4">
             <Document file={pdf} onLoadSuccess={onDocLoad}>
               {Array.from({ length: totalPages }, (_, index) => (
                 <div
                   key={index}
                   onClick={() => setPageNumber(index + 1)}
-                  className={`border-[4px] cursor-pointer relative rounded my-2 ${
-                    pageNumber === index + 1 ? "border-green-700" : ""
+                  className={`cursor-pointer relative rounded-lg mt-4 mb-4 overflow-hidden shadow-md transition transform hover:scale-105 ${
+                    pageNumber === index + 1
+                      ? "border-4 border-[#005692]"
+                      : "border border-gray-300"
                   }`}
                 >
-                  <Page height={180} pageNumber={index + 1} />
+                  <Page height={150} pageNumber={index + 1} />
+                  {/* Indicador de página */}
+                  <div
+                    className={`absolute bottom-0 left-0 right-0 text-center py-1 text-sm font-semibold ${
+                      pageNumber === index + 1
+                        ? "bg-[#005692] text-white"
+                        : "bg-gray-200 text-gray-700"
+                    }`}
+                  >
+                    Página {index + 1}
+                  </div>
                 </div>
               ))}
             </Document>
@@ -83,20 +96,42 @@ const Viewer = ({ title, pdf }) => {
         {/* Main Viewer */}
         <div className="h-full w-full flex flex-col bg-slate-100">
           {/* Header */}
-          <div className="bg-white py-2 px-4 flex flex-col items-center">
-            <div className="font-semibold text-lg text-[#005692]">{title}</div>
-            <div className="flex items-center gap-2">
-              <IoIosArrowBack
-                className="cursor-pointer"
+          <div className="bg-white py-4 px-6 flex flex-col md:flex-row justify-between items-start gap-4 md:items-center shadow-md">
+            {/* Título del PDF */}
+            <div className="flex flex-col items-start">
+              <div className="font-bold text-xl text-[#005692]">{title}</div>
+              <div className="text-sm text-gray-500">
+                Página {pageNumber} de {totalPages}
+              </div>
+            </div>
+
+            {/* Controles de navegación */}
+            <div className="flex items-center gap-4">
+              <button
                 onClick={() => changePage("prev")}
-              />
-              <span>
-                {pageNumber} of {totalPages}
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 hover:bg-[#005692] hover:text-white transition"
+              >
+                <IoIosArrowBack className="text-2xl" />
+              </button>
+              <span className="text-gray-600 font-medium">
+                {pageNumber} / {totalPages}
               </span>
-              <IoIosArrowForward
-                className="cursor-pointer"
+              <button
                 onClick={() => changePage("next")}
-              />
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 hover:bg-[#005692] hover:text-white transition"
+              >
+                <IoIosArrowForward className="text-2xl" />
+              </button>
+            </div>
+
+            {/* Botón de descarga */}
+            <div>
+              <button
+                onClick={downloadPDF}
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
+              >
+                Descargar
+              </button>
             </div>
           </div>
 
@@ -142,13 +177,6 @@ const Viewer = ({ title, pdf }) => {
             <FacebookShareButton url={shareUrl} quote="¡Mira este documento!">
               <FacebookIcon size={32} round={true} />
             </FacebookShareButton>
-            <FacebookMessengerShareButton
-              url={shareUrl}
-              appId="123456789"
-              title="¡Mira este documento!"
-            >
-              <FacebookMessengerIcon size={32} round={true} />
-            </FacebookMessengerShareButton>
             <WhatsappShareButton url={shareUrl} title="¡Mira este documento!">
               <WhatsappIcon size={32} round={true} />
             </WhatsappShareButton>
@@ -184,12 +212,6 @@ const Viewer = ({ title, pdf }) => {
         <FacebookShareButton url={shareUrl} quote="¡Mira este documento!">
           <FacebookIcon size={32} round={true} />
         </FacebookShareButton>
-        <FacebookMessengerShareButton
-          url={shareUrl}
-          title="¡Mira este documento!"
-        >
-          <FacebookMessengerIcon size={32} round={true} />
-        </FacebookMessengerShareButton>
         <WhatsappShareButton url={shareUrl} title="¡Mira este documento!">
           <WhatsappIcon size={32} round={true} />
         </WhatsappShareButton>
