@@ -154,12 +154,14 @@ function Blogs() {
         "Acompaña al Dr. Ricardo Monge y descubre cómo se originan estas lesiones invisibles y qué métodos existen para detectarlas a tiempo.",
       link: "/blogs/fracturas-ocultas-diagnostico-tijuana",
     },
-    // {
-    //   img: "/cardblog15.webp",
-    //   fecha: "Abril 2025",
-    //   titulo: "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ",
-
-    // }
+    {
+      img: "/cardblog15.webp",
+      fecha: "Abril 2025",
+      titulo:
+        "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ",
+      texto:
+        "El Dr. Ricardo Monge, experto en artroscopia de rodilla en Tijuana, responde tus dudas sobre la cirugía de mínima invasión con máximos resultados. ",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();
