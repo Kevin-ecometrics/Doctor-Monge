@@ -43,7 +43,7 @@ function Partners() {
   return (
     <div>
       <main class="flex justify-center lg:justify-start flex-col lg:w-[80%] mx-auto items-center lg:items-start py-16 lg:py-48 ">
-        <h2 class="text-[42px] font-medium mb-4 px-8 lg:px-0 text-center">
+        <h2 class="text-[30px] md:text-[42px] font-medium mb-4 px-8 lg:px-0 md:text-center">
           Colegios y consejos Médicos avalados nacional e internacionalmente en
           Ortopedia y Traumatología a los que pertenezco
         </h2>

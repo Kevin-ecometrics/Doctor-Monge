@@ -45,7 +45,7 @@ const Education = () => {
     <main className="lg:w-[80%] lg:mx-auto py-16 lg:py-44" ref={ref}>
       <div className="lg:w-full flex flex-col justify-center lg:flex-row lg:justify-between items-center">
         <div>
-          <h1 className="text-[42px] font-medium text-center lg:text-start">
+          <h1 className="text-[30px] md:text-[42px] font-medium text-center lg:text-start mb-4">
             Trayectoria académica en traumatología y ortopedia{" "}
           </h1>
           <h3 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">

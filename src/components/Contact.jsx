@@ -66,9 +66,9 @@ function Contact() {
           zIndex: "-1",
         }}
       />
-      <div className="grid grid-cols-1 lg:grid-cols-2 px-8 gap-16 w-[80%] mx-auto z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 px-8 gap-16 lg:w-[80%] mx-auto z-10">
         <div>
-          <h3 className="font-medium text-[42px] mb-2">
+          <h3 className="font-medium text-[30px] md:text-[42px] mb-2">
             {" "}
             Contacto para Dr. Ricardo Monge Romero
           </h3>

@@ -87,7 +87,7 @@ function Testimonials() {
             />
           </svg>
 
-          <h1 className="font-semibold text-[29px] lg:text-[42px] py-4 lg:py-16">
+          <h1 className="font-semibold text-[30px] lg:text-[42px] py-4 lg:py-16">
             Encontramos el tratamiento ortopedista perfecto para aliviar a cada
             paciente en Tijuana
           </h1>

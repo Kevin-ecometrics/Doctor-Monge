@@ -82,7 +82,7 @@ import PatientInformation from "@components/PatientInformation.astro";
       <Partners client:visible />
     </section>
     <section id="section8" class="snap-start">
-      <Blogs client:load />
+      <Blogs client:only="react" />
     </section>
     <section id="section9" class="snap-start">
       <Contact client:visible />
@@ -144,6 +144,7 @@ import PatientInformation from "@components/PatientInformation.astro";
         document.querySelector("#section6"),
         document.querySelector("#section7"),
         document.querySelector("#section8"),
+        document.querySelector("#section9"),
       ].filter(Boolean) as HTMLElement[];
 
       if (mainElement && scrollBar instanceof HTMLElement) {

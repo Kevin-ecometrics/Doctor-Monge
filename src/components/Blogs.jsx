@@ -1,9 +1,33 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Blogs.css";
 import ReactGA from "../utils/GA";
 function Blogs() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef();
+  const isDesktop = window.innerWidth >= 768;
+
+  const handleDragEndDesktop = (event, info) => {
+    const offset = info.offset.x;
+    const velocity = info.velocity.x;
+
+    if (offset < -100 || velocity < -500) {
+      handleNextDesktop(); // Arrastró a la izquierda
+    } else if (offset > 100 || velocity > 500) {
+      handlePrevDesktop(); // Arrastró a la derecha
+    }
+  };
+
+  const handleDragEnd = (event, info) => {
+    const offset = info.offset.x;
+    const velocity = info.velocity.x;
+
+    if (offset < -100 || velocity < -500) {
+      handleNext(); // Arrastró a la izquierda
+    } else if (offset > 100 || velocity > 500) {
+      handlePrev(); // Arrastró a la derecha
+    }
+  };
 
   const handleClicked = (e) => {
     e.preventDefault(); // ¡Clave! Detiene la navegación inmediata
@@ -154,18 +178,28 @@ function Blogs() {
         "Acompaña al Dr. Ricardo Monge y descubre cómo se originan estas lesiones invisibles y qué métodos existen para detectarlas a tiempo.",
       link: "/blogs/fracturas-ocultas-diagnostico-tijuana",
     },
-    // {
-    //   img: "/cardblog15.webp",
-    //   fecha: "Abril 2025",
-    //   titulo:
-    //     "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ",
-    //   texto:
-    //     "El Dr. Ricardo Monge, experto en artroscopia de rodilla en Tijuana, responde tus dudas sobre la cirugía de mínima invasión con máximos resultados. ",
-    //   link: "/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
-    // },
+    {
+      img: "/cardblog16.webp",
+      fecha: "Abril 2025",
+      titulo:
+        "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ",
+      texto:
+        "El Dr. Ricardo Monge, experto en artroscopia de rodilla en Tijuana, responde tus dudas sobre la cirugía de mínima invasión con máximos resultados. ",
+      link: "/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+    },
   ];
 
   const reversedBlogItem = [...blogItem].reverse();
+
+  const handleNextDesktop = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 3) % blogItem.length);
+  };
+
+  const handlePrevDesktop = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 3 + blogItem.length) % blogItem.length
+    );
+  };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % blogItem.length);
@@ -182,6 +216,22 @@ function Blogs() {
     reversedBlogItem[(currentIndex + 1) % blogItem.length],
     reversedBlogItem[(currentIndex + 2) % blogItem.length],
   ];
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowRight") {
+        handleNext();
+      } else if (event.key === "ArrowLeft") {
+        handlePrev();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleNext, handlePrev]);
 
   return (
     <div>
@@ -208,10 +258,18 @@ function Blogs() {
           </svg>
         </button>
         <div className="text-start">
-          <h1 className="font-medium text-[42px] mb-16 px-8">
+          <h1 className="font-medium text-[30px] md:text-[42px] mb-16 px-8">
             Conoce más sobre ortopedia y traumatología en mis blogs{" "}
           </h1>
-          <div className="flex flex-col md:flex-row justify-center gap-8 md:mb-0 mb-16">
+          <motion.div
+            ref={containerRef}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            {...(isDesktop
+              ? { onDragEnd: handleDragEndDesktop }
+              : { onDragEnd: handleDragEnd })}
+            className="flex flex-col md:flex-row justify-center items-center gap-8 md:mb-0 mb-16 cursor-grab active:cursor-grabbing"
+          >
             <AnimatePresence mode="popLayout">
               {displayedItems.map((item, index) => (
                 <motion.div
@@ -226,7 +284,8 @@ function Blogs() {
                 >
                   <img
                     src={item.img}
-                    alt=""
+                    alt={item.titulo}
+                    title={item.titulo}
                     className="transition-opacity duration-200 group-hover:opacity-50"
                   />
                   <p className="absolute inset-0 flex items-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">
@@ -255,34 +314,12 @@ function Blogs() {
                       >
                         Leer tema
                       </a>
-                      {/* <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="text-white"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        fill="none"
-                        c
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path
-                          stroke="none"
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        ></path>
-                        <path d="M5 12l14 0"></path>
-                        <path d="M15 16l4 -4"></path>
-                        <path d="M15 8l4 4"></path>
-                      </svg> */}
                     </p>
                   </div>
                 </motion.div>
               ))}
             </AnimatePresence>
-          </div>
+          </motion.div>
         </div>
         <button
           onClick={handleNext}
