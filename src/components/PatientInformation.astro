@@ -3,24 +3,24 @@ const Information = [
   {
     icon: "/ficha1.webp",
     title: "Recomendaciones para una columna sana",
-    text: "Mis recomendaciones técnicas en ortopedia Pongo a tu disponibilidad para descargar estos documentos con recomendaciones en traumatología y ortopedia, los puedes leer en línea y descargar para tí.",
+    text: "En este documento encontrarás ejercicios y recomendaciones ilustradas de higiene de columna.",
     link: "/fichas/recomendaciones-para-una-columna-sana/",
   },
   {
     icon: "/ficha2.webp",
-    title: "Instrucciones postoperatorias de Reemplazo total de cadera",
+    title: "Guía postoperatorias de Reemplazo total de cadera",
     text: "En este documento podrás encontrar pautas y recomendaciones necesarias para tu recuperación.",
     link: "/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-cadera/",
   },
   {
     icon: "/ficha3.webp",
-    title: "Instrucciones postoperatorias de Reemplazo total de rodilla",
+    title: "Guía postoperatorias de Reemplazo total de rodilla",
     text: "Te comparto cuidados y recomendaciones para una reincorporación exitosa en tus actividades diarias.",
     link: "/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-rodilla/",
   },
   {
     icon: "/ficha4.webp",
-    title: "Instrucciones postoperatorias de artroscopia de rodilla",
+    title: "Guía postoperatorias de artroscopia de rodilla",
     text: "En este documento te resumo los cuidados y consejos clave para una recuperación exitosa.",
     link: "/fichas/instrucciones-postoperatorias-de-artroscopia-de-rodilla/",
   },
@@ -37,15 +37,14 @@ const Information = [
   class="h-screen flex md:justify-center md:items-start flex-col w-[80%] mx-auto"
 >
   <h1 class="font-medium text-[21px] md:text-[42px] mt-16 md:mt-0">
-    Fichas Técnicas
+    Orto tips y guías para descargar
   </h1>
   <p class="font-bold text-[14px] md:text-[16px] text-[#969596] mb-8">
-    Archivos disponibles para descargar. Léelos en línea o descárgalos en tu
-    teléfono.
+    Archivos disponibles. Visualízalos en línea o descárgalos a tu móvil.
   </p>
   <div class="w-full relative">
     <div
-      class="bg-black text-white p-8 md:max-h-[410px] max-h-[480px] scrollbar-blue overflow-y-auto"
+      class="bg-black text-white py-16 px-8 w-[90%] md:max-h-[550px] max-h-[480px] scrollbar-blue overflow-y-auto"
     >
       {
         Information.map((item, index) => (
@@ -53,12 +52,12 @@ const Information = [
             {/* Fila completa para cada elemento */}
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
               {/* Primera columna: Imagen */}
-              <div class="flex justify-start">
+              <div class="flex justify-center">
                 <img
                   src={item.icon}
                   alt={item.title}
                   title={item.title}
-                  class="w-20 h-20"
+                  class="w-32 h-32"
                 />
               </div>
               {/* Segunda columna: PDF y título */}
