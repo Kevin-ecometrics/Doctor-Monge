@@ -39,6 +39,12 @@ const Viewer = ({ title, pdf }) => {
   };
 
   const copyLink = () => {
+    const link = document.createElement("input");
+    link.value = shareUrl;
+    document.body.appendChild(link);
+    link.select();
+    document.execCommand("copy");
+    document.body.removeChild(link);
     toast.success("Enlace copiado al portapapeles");
   };
 

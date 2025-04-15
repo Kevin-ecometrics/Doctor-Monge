@@ -67,7 +67,7 @@ function MenuFicha() {
         {/* Encabezado del menú */}
         <div className="flex items-center justify-between mb-6 mt-16 md:mt-0">
           <h3 className="text-2xl font-semibold">
-            Fichas Tecnicas Disponibles
+            Orto tips y guías para pacientes
           </h3>
           <button
             onClick={toggleMenu}
