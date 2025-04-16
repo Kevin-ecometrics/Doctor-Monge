@@ -45,6 +45,8 @@ const blogActual =
   "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis";
 
 const id = 9;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -52,7 +54,9 @@ const id = 9;
 >
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      <strong class="text-white font-bold"> La osteoartritis (OA) </strong>
+      <strong class="text-white font-bold">
+        {isEnglish ? "Osteoarthritis (OA)" : "La osteoartritis (OA)"}
+      </strong>
       es una enfermedad crónica que se desarrolla cuando el cartílago que protege
       y amortigua los extremos de los huesos comienza a desgastarse debido a diversos
       factores, como el envejecimiento, lesiones repetitivas, sobrecarga mecánica,

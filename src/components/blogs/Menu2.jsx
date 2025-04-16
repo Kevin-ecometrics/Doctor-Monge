@@ -58,12 +58,75 @@ const blogsURL = [
   { id: 16, url: "/blogs/Fractura-de-tibia-y-Perone/" },
 ];
 
+const blogsURLEN = [
+  {
+    id: 1,
+    url: "/en/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular/",
+  },
+  {
+    id: 2,
+    url: "/en/blogs/fracturas-ocultas-diagnostico-tijuana/",
+  },
+  {
+    id: 3,
+    url: "/en/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis/",
+  },
+  {
+    id: 4,
+    url: "/en/blogs/fractura-de-humero-proximal-en-adultos-mayores/",
+  },
+  {
+    id: 5,
+    url: "/en/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos/",
+  },
+  {
+    id: 6,
+    url: "/en/blogs/Como-saber-si-es-artritis-o-artrosis/",
+  },
+  {
+    id: 7,
+    url: "/en/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento/",
+  },
+  {
+    id: 8,
+    url: "/en/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis/",
+  },
+  {
+    id: 9,
+    url: "/en/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos/",
+  },
+  {
+    id: 10,
+    url: "/en/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas/",
+  },
+  {
+    id: 11,
+    url: "/en/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical/",
+  },
+  {
+    id: 12,
+    url: "/en/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
+  },
+  {
+    id: 13,
+    url: "/en/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor/",
+  },
+  { id: 14, url: "/en/blogs/Lesion-de-Ligamento-cruzado-anterior/" },
+  { id: 15, url: "/en/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion/" },
+  { id: 16, url: "/en/blogs/Fractura-de-tibia-y-Perone/" },
+];
+
 const Menu2 = () => {
   const [currentIndex, setCurrentIndex] = useState(-1);
+  const [currentBlogs, setCurrentBlogs] = useState(blogsURL);
 
   useEffect(() => {
     const currentPath = window.location.pathname;
-    const index = blogsURL.findIndex((blog) => blog.url === currentPath);
+    const isEnglish = currentPath.startsWith("/en/blogs/");
+    const selectedBlogs = isEnglish ? blogsURLEN : blogsURL;
+    setCurrentBlogs(selectedBlogs);
+
+    const index = selectedBlogs.findIndex((blog) => blog.url === currentPath);
     if (index !== -1) {
       setCurrentIndex(index);
     } else {
@@ -79,7 +142,7 @@ const Menu2 = () => {
     <section className="bottom-0 right-0 fixed mb-4 mr-4">
       <div className="flex items-center justify-center space-x-4">
         {currentIndex > 0 && (
-          <a href={blogsURL[currentIndex - 1].url}>
+          <a href={currentBlogs[currentIndex - 1].url}>
             <button
               aria-label="Go to previous blog"
               className="p-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-full shadow-lg hover:from-blue-700 hover:to-blue-900 transition duration-300 transform hover:scale-110"
@@ -122,8 +185,8 @@ const Menu2 = () => {
             <path d="M10 12h4v4h-4z"></path>
           </svg>
         </button>
-        {currentIndex < blogsURL.length - 1 && (
-          <a href={blogsURL[currentIndex + 1].url}>
+        {currentIndex < currentBlogs.length - 1 && (
+          <a href={currentBlogs[currentIndex + 1].url}>
             <button
               aria-label="Go to next blog"
               className="p-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-full shadow-lg hover:from-blue-700 hover:to-blue-900 transition duration-300 transform hover:scale-110"
