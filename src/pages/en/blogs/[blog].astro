@@ -1,0 +1,491 @@
+---
+import Background from "@components/blogs/background.astro";
+import Layout from "@layouts/LayoutBlog.astro";
+import Content from "@components/blogs/content.astro";
+import Doctorialia from "@components/icons/Doctoralia.astro";
+import Facebook from "@components/icons/Facebook.astro";
+import Instagram from "@components/icons/Instagram.astro";
+import Tiktok from "@components/icons/Tiktok.astro";
+import { slide } from "astro:transitions";
+import Menu from "@components/blogs/Menu";
+
+export function getStaticPaths() {
+  return [
+    { params: { blog: "Fractura-de-tibia-y-Perone" } },
+    { params: { blog: "Pseudoartrosis-y-Retraso-de-Consolidacion" } },
+    { params: { blog: "Lesion-de-Ligamento-cruzado-anterior" } },
+    {
+      params: {
+        blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+      },
+    },
+    {
+      params: {
+        blog: "Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+      },
+    },
+    {
+      params: {
+        blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+      },
+    },
+    {
+      params: {
+        blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+      },
+    },
+    {
+      params: {
+        blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+      },
+    },
+    {
+      params: {
+        blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+      },
+    },
+    {
+      params: {
+        blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+      },
+    },
+    {
+      params: {
+        blog: "Como-saber-si-es-artritis-o-artrosis",
+      },
+    },
+    {
+      params: {
+        blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+      },
+    },
+    {
+      params: {
+        blog: "fractura-de-humero-proximal-en-adultos-mayores",
+      },
+    },
+    {
+      params: {
+        blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+      },
+    },
+    {
+      params: {
+        blog: "fracturas-ocultas-diagnostico-tijuana",
+      },
+    },
+    {
+      params: {
+        blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+      },
+    },
+  ];
+}
+
+const blogs = [
+  {
+    titulo: "Fractura-de-tibia-y-Perone",
+    ruta: "/blogs/Fractura-de-tibia-y-Perone",
+    date: "Abril 2024",
+    blogTitle: "Fractura de Tibia y Peroné",
+    title: "Fracturas de Tibia y Peroné: Guía de Tratamiento y Recuperación ",
+    description:
+      "Descubre todo sobre las fracturas de tibia y peroné: causas, síntomas, tratamientos conservadores quirúrgicos, consejos y rehabilitación eficaz.",
+    keywords:
+      "fracturas de tibia y peroné, tratamiento y rehabilitación de fractura",
+    id: 1,
+  },
+  {
+    titulo: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+    ruta: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion",
+    blogTitle: "Pseudoartrosis y Retraso de Consolidación",
+    date: "Mayo 2024",
+    title: "Complicaciones de Fracturas: Pseudoartrosis y Consolidación ",
+    description:
+      " Explora las causas y tratamientos de complicaciones en fracturas, pseudoartrosis y retraso en la consolidación. Conoce cómo optimizar la recuperación. ",
+    keywords: "complicaciones fracturas pseudoartrosis tratamiento ",
+    id: 2,
+  },
+  {
+    titulo: "Lesion-de-Ligamento-cruzado-anterior",
+    ruta: "/blogs/Lesion-de-Ligamento-cruzado-anterior",
+    blogTitle: "Lesión de Ligamento Cruzado Anterior",
+    date: "Junio 2024",
+
+    title: "Recuperación de Lesión de Ligamento Cruzado Anterior en Mujeres ",
+    description:
+      "Descubre por qué las mujeres son más propensas a las lesiones de LCA y cómo la artroscopia puede ayudar en una recuperación rápida y efectiva. ",
+    keywords:
+      "lesión de ligamento cruzado anterior, recuperación de LCA, artroscopia",
+    id: 3,
+  },
+  {
+    titulo:
+      "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+    ruta: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+    blogTitle: "Osteoporosis: Una condición silenciosa",
+    date: "Julio 2024",
+    title:
+      "Osteoporosis: Una condición silenciosa que afecta a la mitad de la población mayor de 50 años",
+    description:
+      "Conoce más sobre la osteoporosis, una enfermedad que afecta a millones de personas mayores de 50 años. Descubre sus causas, síntomas y tratamientos.",
+    keywords:
+      "osteoporosis, enfermedad silenciosa, tratamiento de osteoporosis",
+    id: 4,
+  },
+  {
+    titulo:
+      "Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+    ruta: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+    blogTitle: "Infiltraciones en la Rodilla con Ácido Hialurónico",
+    date: "Agosto 2024",
+    title:
+      "Infiltraciones en la Rodilla con Ácido Hialurónico para Tratamiento de Artrosis de Rodilla",
+    description:
+      "Descubre cómo las infiltraciones con ácido hialurónico pueden ayudar en el tratamiento de la artrosis de rodilla, aliviando el dolor y mejorando la movilidad.",
+    keywords:
+      "infiltraciones rodilla, ácido hialurónico, tratamiento artrosis rodilla",
+    id: 5,
+  },
+  {
+    titulo:
+      "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+    ruta: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+    date: "Septiembre 2024",
+    blogTitle: "Tratamiento Conservador vs Cirugía",
+    title:
+      "Tratamiento Conservador vs Cirugía: Cuando un Tratamiento Conservador Falla y Requiere Intervención Quirúrgica en Hernia Discal Cervical",
+    description:
+      "Explora las diferencias entre el tratamiento conservador y la cirugía para la hernia discal cervical, y cuándo es necesario optar por la intervención quirúrgica.",
+    keywords:
+      "tratamiento conservador, cirugía, hernia discal cervical, intervención quirúrgica",
+    id: 6,
+  },
+  {
+    titulo:
+      "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+    ruta: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+    blogTitle: "Rechazo de Material en Osteosíntesis",
+    title:
+      "¿Por qué se dice que el cuerpo rechazó el material? Factores Asociados al Fallo en la Osteosíntesis de Fracturas",
+    date: "Octubre 2024",
+
+    description:
+      "Conoce los factores que pueden llevar al fallo en la osteosíntesis de fracturas y por qué a veces se dice que el cuerpo rechazó el material.",
+    keywords:
+      "rechazo de material, fallo osteosíntesis, fracturas, factores asociados",
+    id: 7,
+  },
+  {
+    titulo: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+    ruta: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+    blogTitle:
+      "Juanetes: sintomas, Detección y Tipos de Cirugía para Eliminarlos",
+    title: "Juanetes: sintomas, Detección y Tipos de Cirugía para Eliminarlos",
+    date: "Noviembre 2024",
+
+    description:
+      "Descubre todo sobre los juanetes: síntomas, detección y tipos de cirugía para eliminarlos. Conoce cómo tratar y prevenir esta afección en los pies.",
+    keywords: "juanetes, cirugía de juanetes, tratamiento de juanetes",
+    id: 8,
+  },
+  {
+    titulo:
+      "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+    ruta: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+    blogTitle:
+      "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis",
+    title:
+      "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis",
+    date: "Diciembre 2024",
+
+    description:
+      "Descubre las opciones y beneficios de las infiltraciones de rodilla para el tratamiento de la osteoartritis. Conoce cómo aliviar el dolor y mejorar la movilidad.",
+    keywords: "Tendinitis y tendinosis causas, diferencias y tratamiento ",
+    id: 9,
+  },
+  {
+    titulo: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+    ruta: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+    blogTitle: "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento",
+    date: "Enero 2025",
+    title:
+      "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento para la Recuperación Efectiva",
+    description:
+      "Descubre las causas, diferencias y tratamientos para la tendinitis y tendinosis. Conoce cómo recuperarte de estas lesiones en los tendones de forma efectiva.",
+    keywords: "Tendinitis y tendinosis causas, diferencias y tratamiento ",
+    id: 10,
+  },
+  {
+    titulo: "Como-saber-si-es-artritis-o-artrosis",
+    ruta: "/blogs/Como-saber-si-es-artritis-o-artrosis",
+    blogTitle: "¿Cómo Saber si es artritis o artrosis? ",
+    date: "Febrero 2025",
+    title:
+      "¿Cómo Saber si es artritis o artrosis? Síntomas y  Diferencias Clave ",
+    description:
+      "El DR. Ricardo Monge explica la diferencia clave de la artritis una enfermedad autoinmune y artrosis un padecimiento degenerativo articular.",
+    keywords: "Artritis, Artrosis ,Síntomas",
+    id: 11,
+  },
+  {
+    titulo: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+    ruta: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+    blogTitle: "¿Cómo Saber si es artritis o artrosis? ",
+    date: "Febrero 2025",
+    title: "Lumbalgia: Tipos, Factores de Riesgo y Tratamientos",
+    description:
+      " Es muy probable que en algún momento de tu vida lo experimentes.Este dolor se localiza en la región lumbar, es decir, en la parte baja de la espalda y la cintura, y puede irradiarse hacia los glúteos y muslos. ",
+    keywords: "Lumbalgia, higiene postural, espalda sana ",
+    id: 12,
+  },
+  {
+    titulo: "fractura-de-humero-proximal-en-adultos-mayores",
+    ruta: "/blogs/fractura-de-humero-proximal-en-adultos-mayores",
+    blogTitle: "Fractura de Humero Proximal en Adultos Mayores",
+    date: "Marzo 2025",
+    title: "Fractura de humero proximal en Adultos Mayores",
+    description:
+      "Causas, tipos de fractura, tiempo de recuperación, explicados por el Dr. Ricardo Monge especialista en lesiones musculoesqueleticas en adulto mayor.",
+    keywords: "Fractura de húmero proximal, adulto mayor, recuperación",
+    id: 13,
+  },
+  {
+    titulo: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+    ruta: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+    blogTitle:
+      "¿Es necesaria una segunda cirugía para tratar la pseudoartrosis?",
+    date: "Marzo 2025",
+    title: "¿Es necesaria una segunda cirugía para tratar la pseudoartrosis?",
+    description:
+      "Aprende sobre ortopedia y traumatología con Dr. Ricardo Monge. Descrubre sobre la cirugía por pseudoartrosis más que una cirugía es un rescate óseo. ",
+    keywords: "pseudoartrosis, cirugía, tratamiento",
+    id: 14,
+  },
+  {
+    titulo: "fracturas-ocultas-diagnostico-tijuana",
+    ruta: "/blogs/fracturas-ocultas-diagnostico-tijuana",
+    blogTitle: "Fracturas Ocultas: Diagnóstico y Tratamiento",
+    date: "Abril 2025",
+    title: "Fracturas invisibles: ¿Por qué no siempre se ven en radiografías?",
+    description:
+      "Acompaña a conocer las principales causas y factores riesgo de una fractura oculta con Ricardo Monge cirujano traumatólogo ortopedista en Tijuana.",
+    keywords: "fracturas ocultas, diagnóstico, tratamiento",
+    id: 15,
+  },
+  {
+    titulo: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+    ruta: "/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+    blogTitle:
+      "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ",
+    date: "Abril 2025",
+    title: "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ",
+    description:
+      "El Dr. Ricardo Monge, experto en artroscopia de rodilla en Tijuana, responde tus dudas sobre la cirugía de mínima invasión con máximos resultados. ",
+    keywords: "artroscopia de rodilla, desgaste articular, tratamiento",
+    id: 16,
+  },
+];
+
+const { blog } = Astro.params;
+const blogActual = blogs.find((b) => b.titulo === blog);
+const asideTitulo = blogActual?.titulo;
+
+let image;
+let date;
+let content;
+let blogTitle;
+if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
+  image = "/El Dr. Monge tiene experiencia en artroscopia.png";
+  date = "Junio 2024";
+  content = "Blog3";
+  blogTitle = "Lesión de Ligamento Cruzado Anterior";
+} else if (blog === "Pseudoartrosis-y-Retraso-de-Consolidacion") {
+  image =
+    "/Tu decides junto con el Dr. Monge cual es el tratamiento mas adecuado para ti.png";
+  date = "Mayo 2024";
+  content = "Blog2";
+  blogTitle = "Pseudoartrosis y Retraso de Consolidación";
+} else if (blog === "Fractura-de-tibia-y-Perone") {
+  image =
+    "/El Dr. Monge ayuda a los pacientes a conocer sus malestares y tratarnos.png";
+  date = "Abril 2024";
+  content = "Blog1";
+  blogTitle = "Fractura de Tibia y Peroné";
+} else if (
+  blog ===
+  "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor"
+) {
+  image = "/El Dr. Monge se juntara en tu diagnostico y tratamiento.webp";
+  date = "Julio 2024";
+  content = "Blog4";
+  blogTitle =
+    "Osteoporosis: Una condición silenciosa que afecta a la mitad de la población mayor de 50 años";
+} else if (
+  blog ===
+  "Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla"
+) {
+  image =
+    "/El Dr. Monge es experto en tratamientos conservadores como las infiltraciones.webp";
+  date = "Agosto 2024";
+  content = "Blog5";
+  blogTitle = "Infiltraciones en la Rodilla con Ácido Hialurónico";
+} else if (
+  blog ===
+  "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical"
+) {
+  image =
+    "/El Dr Ricardo Monge realiza cirugias de hernia discal cervical con precision.webp";
+  date = "Septiembre 2024";
+  content = "Blog6";
+  blogTitle = "Tratamiento Conservador vs Cirugía";
+} else if (
+  blog ===
+  "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas"
+) {
+  image =
+    "/Una Inestabilidad en una  fractura puede causar fallo en la  osteosintesis.webp";
+  date = "Octubre 2024";
+  content = "Blog7";
+  blogTitle = "Rechazo de Material en Osteosíntesis";
+} else if (
+  blog === "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos"
+) {
+  image =
+    "/Los juanetes es una deformidad que pasa en el primer dedo donde se va angulando.webp";
+  date = "Noviembre 2024";
+  content = "Blog8";
+  blogTitle =
+    "Juanetes: Síntomas, Detección y Tipos de Cirugía para Eliminarlos";
+} else if (
+  blog ===
+  "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis"
+) {
+  image =
+    "/Las infiltraciones alivian el dolor e inflamación mejorando la movilidad.webp";
+  date = "Diciembre 2024";
+  content = "Blog9";
+  blogTitle =
+    "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis";
+} else if (
+  blog === "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento"
+) {
+  image =
+    "/La tendinosis y tendinitis son a menudo confundidos el DR Monge te explicara.webp";
+  date = "Enero 2025";
+  content = "Blog10";
+  blogTitle = "Tendinitis y Tendinosis: Causas, Diferencias y Tratamiento";
+} else if (blog === "Como-saber-si-es-artritis-o-artrosis") {
+  image =
+    "/El traumatologo ortopedista Ricardo Monge explica los aspectos claves entre artritis y artrosis.webp";
+  date = "Febrero 2025";
+  content = "Blog11";
+  blogTitle =
+    "¿Cómo Saber si es artritis o artrosis? Síntomas y  Diferencias Clave ";
+} else if (blog === "lumbalgia-tipos-factores-de-riesgos-y-tratamientos") {
+  image =
+    "/La lumbalgia es uno de los diagnosticos mas comunes en consulta con el doctor Ricardo Monge.webp";
+  date = "Febrero 2025";
+  content = "Blog12";
+  blogTitle = "Lumbalgia: Tipos, Factores de Riesgo y Tratamientos";
+} else if (blog === "fractura-de-humero-proximal-en-adultos-mayores") {
+  image =
+    "/Fractura-Humero-Proximal-Personas-Mayores-Por-que-ocurre-como-tratarla-Dr-Ricardo-Monge-lesiones-musculoesqueleticas.webp";
+  date = "Marzo 2025";
+  content = "Blog13";
+  blogTitle = "Fractura de Húmero Proximal en Adultos Mayores";
+} else if (
+  blog === "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis"
+) {
+  image = "/bannerblog14.webp";
+  date = "Marzo 2025";
+  content = "Blog14";
+  blogTitle =
+    "¿Es necesaria una segunda cirugía para tratar la pseudoartrosis?";
+} else if (blog === "fracturas-ocultas-diagnostico-tijuana") {
+  image = "/bannerblog15.webp";
+  date = "Abril 2025";
+  content = "Blog15";
+  blogTitle = "Fracturas ocultas: Lo que las radiografías no siempre revelan";
+} else if (
+  blog === "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular"
+) {
+  image = "/bannerblog16.webp";
+  date = "Abril 2025";
+  content = "Blog16";
+  blogTitle =
+    "Artroscopia de Rodilla: La Solución Rápida para el Desgaste Articular";
+} else {
+  image = "/fondoDefault.png";
+}
+---
+
+<Layout
+  title={blogActual?.title ?? "Título predeterminado"}
+  description={blogActual?.description ?? "Descripción predeterminada"}
+  keywords={blogActual?.keywords ?? "palabras, clave, predeterminadas"}
+>
+  <main
+    transition:animate={slide({
+      duration: "0.8s",
+    })}
+  >
+    <div
+      class="fixed flex flex-col items-center justify-center h-screen gap-4 px-14 z-20"
+    >
+      <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
+      <a
+        href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
+        target="_blank"
+        class="lg:block hidden mb-2"
+      >
+        <Facebook class="cursor-pointer" />
+      </a>
+      <a
+        href="https://www.tiktok.com/@elmongedelaortopedia"
+        target="_blank"
+        class="lg:block hidden mb-2"
+      >
+        <Tiktok class="cursor-pointer" />
+      </a>
+      <a
+        href="https://www.instagram.com/drmonge.ortho/?hl=es"
+        target="_blank"
+        class="lg:block hidden mb-2"
+      >
+        <Instagram class="cursor-pointer" />
+      </a>
+      <a
+        href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
+        target="_blank"
+        class="lg:block hidden mb-2"
+      >
+        <Doctorialia class="cursor-pointer" />
+      </a>
+
+      <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
+    </div>
+
+    <Menu client:visible titulo={asideTitulo} blogs={blogs} />
+
+    <Background image={image} title={blogTitle} date={date} />
+
+    <div class="flex flex-col md:flex-row px-0 md:px-8">
+      <Content content={content} />
+      <!-- <Aside client:visible titulo={asideTitulo} blogs={blogs} /> -->
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    color: white;
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    overflow-x: hidden;
+  }
+</style>

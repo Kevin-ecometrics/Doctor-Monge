@@ -1,0 +1,169 @@
+---
+import Layout from "@layouts/LayoutBlog.astro";
+import Doctorialia from "@components/icons/Doctoralia.astro";
+import Facebook from "@components/icons/Facebook.astro";
+import Instagram from "@components/icons/Instagram.astro";
+import Tiktok from "@components/icons/Tiktok.astro";
+import Video from "@components/procedimientos/video.astro";
+import { slide } from "astro:transitions";
+import Content from "@components/procedimientos/content.astro";
+import Background from "@components/procedimientos/background.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { procedimiento: "protesis-total-de-cadera" } },
+    { params: { procedimiento: "protesis-total-de-rodilla" } },
+    { params: { procedimiento: "hernia-de-disco-lumbar" } },
+    { params: { procedimiento: "lesion-por-lca" } },
+    { params: { procedimiento: "hernia-discal-cervical" } },
+    { params: { procedimiento: "lesiones-en-meniscos" } },
+  ];
+}
+
+const { procedimiento } = Astro.params;
+const procedimientos = [
+  { nombre: "Protesis total de cadera", ruta: "protesis-total-de-cadera" },
+  { nombre: "Protesis total de rodilla", ruta: "protesis-total-de-rodilla" },
+  { nombre: "Hernia de disco lumbar", ruta: "hernia-de-disco-lumbar" },
+  { nombre: "Lesion por LCA", ruta: "lesion-por-lca" },
+  { nombre: "Hernia discal cervical", ruta: "hernia-discal-cervical" },
+  { nombre: "Lesiones en meniscos", ruta: "lesiones-en-meniscos" },
+];
+
+const otrosProcedimientos = procedimientos.filter(
+  (p) => p.ruta !== procedimiento
+);
+
+let videoId;
+let title;
+let content;
+let background;
+if (procedimiento === "protesis-total-de-cadera") {
+  videoId = "chCbV1H6Bfc";
+  title = "Protesis total de cadera";
+  (background = "/Protesis%20total%20de%20cadera%20en%20Tijuana.png"),
+    (content =
+      "Hola, ¿qué tal? Me gustaría hablar un poquito sobre artroplastia total de cadera. Es una de las cirugías que más se realizan en el mundo, aproximadamente un millón al año, y es una de las cirugías que revolucionó la ortopedia y como tratamos el desgaste de cadera. Básicamente cura.  [2.1s] el desgaste de cadera en sus últimas etapas después de que ya les dimos todo el tratamiento conservador con inyecciones con terapia y cuando ya no hay de otra más que operar durante la cirugía lo que hacemos es quitar cartílago y hueso de la cadera y de los dos componentes del fémur y del acetábulo y reemplazarlo normalmente por componentes metálicos los cuales van a cumplir o reemplazar la función de las mismas la recomendación primordial para este tipo de cirugía es el dolor y la discapacidad   \n\nPrincipalmente el dolor, una persona puede vivir con una discapacidad si ella o él lo quiere de esa manera, pero con el dolor pues ya se vuelve un poquito menos tolerable y es cuando se sugiere más este tipo de cirugías la edad también es un factor a considerar cuando sí es cierto que en muchos pacientes se les recomienda cuando sea lo más tardado posible una tercera edad también se puede hacer pacientes jóvenes con mucho dolor y mucha incapacidad secundario a un desgaste por cualquier causa ");
+} else if (procedimiento === "protesis-total-de-rodilla") {
+  videoId = "L7cK3LPXG6M";
+  title = "Protesis total de rodilla";
+  (background = "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png"),
+    (content =
+      "Te platico brevemente sobre la artroplastia total de rodilla o la prótesis total de rodilla. Es el único tratamiento que se considera curativo del desgaste, porque lo que se hace es que se quitan los elementos que crean la inflamación y precisamente el desgaste. En cuanto a la rodilla lo que hacemos en la cirugía es quitar el cartílago y parte del hueso para acomodar nuevos componentes que van a cumplir las funciones de lo que quitamos que normalmente es en el fémur, en la tibia y a veces en la patela que es el hueso chiquito que está enfrente de la rodilla. Como toda cirugía requiere una buena planeación, varios tipos de estudios para poder ver cuáles son los tipos de cortes, el tipo de alineación y el balanceo que se necesita hacer en la rodilla para que te quede estable.  \n\nSi tienes alguna duda o alguna pregunta no dudes en mandar mensaje o llamarnos para poderte resolverlo. ");
+} else if (procedimiento === "hernia-de-disco-lumbar") {
+  videoId = "8eHj2y9fdDQ";
+  title = "Hernia de disco lumbar";
+  (background =
+    "/protesis%20total%20de%20rodilla%20en%20Tijuana%20consulta.png"),
+    (content =
+      "Una causa común de dolor de espalda pueden ser las hernias de disco lumbares, pueden ser tanto del puro dolor de espalda o que están acompañados de ciatalgia, que es básicamente el dolor del ciático. Este tipo de dolor tiene dos elementos principales, uno mecánico y uno químico. El mecánico es el hecho de que la hernia está aplastando una estructura, que en este caso es la raíz nerviosa, y causa el dolor. El otro es el químico, es lo que la lesión o la hernia de disco empieza a secretar y esas sustancias que secreta empiezan a irritar todo lo que tiene alrededor, que normalmente es la raíz nerviosa. Para valorar las hernias necesitamos dos tipos de estudio. Uno son los rayos X, porque los rayos X, cuando sí vemos el hueso y no vemos la hernia, vemos otro tipo de lesiones que pudieran lastimarlas.   \n\nLa raíz y la otra es la resonancia magnética donde vemos directamente los discos las raíces qué tan libres están y qué tan grande está la hernia o la lesión del disco la gran mayoría de las hernias de disco se tratan de manera conservadora como es esto terapia infiltraciones medicamentos y cuidados de la columna aproximadamente como el 60 o 70 por ciento de las hernias no se les va a hacer cirugía pero las demás que se portan mal que no les va a bien con el tratamiento conservador o que cumplen con ciertos criterios que ya la hacen quirúrgica de entrada pues son las que vamos a operar. Si tienes más preguntas sobre las hernias de disco te invito a mandar mensaje o a llamarnos para agendar tu cita. ");
+} else if (procedimiento === "lesion-por-lca") {
+  videoId = "jOZHKQQUgCk";
+  title = "Lesión por LCA";
+  (background =
+    "/Lesiones%20en%20ligamento%20cruzado%20anterior%20tratamiento%20conservador%20en%20Tijuana.png"),
+    (content =
+      "Para que tu rodilla funcione de una manera adecuada depende de muchas estructuras que le van a brindar estabilidad. Entre tendones, ligamentos, la misma forma de los huesos, los meniscos, hay unas estructuras que se llaman ligamentos cruzados, uno anterior y uno posterior, o sea uno que va enfrente y uno que va atrás. El ligamento cruzado anterior es una de las estructuras más importante es que da más estabilidad a la rodilla. Le brinda casi un 80-85% de estabilidad como un estabilizador primario. Lo que ayuda el cruzado anterior es para que la tibia no se vaya hacia enfrente y no rote de más, por ponerlo así. Una ruptura de este ligamento lo que va a provocar es que hay inestabilidad en tu rodilla, lo cual va a hacer que se lastimen los meniscos y el cartílago y te va a provocar un desgaste temprano.   \n\nCuando algunas personas sí pueden hacer un tratamiento conservador dependiendo de la lesión, la gran mayoría necesita una reconstrucción porque se necesita regresar esa función, ese ligamento para que esa rodilla siga estando estable y prevenir el desgaste temprano.  \n\nSi tienes alguna pregunta, alguna duda, no dudes en llamarnos o mandar mensaje para poderte resolver. ");
+} else if (procedimiento === "hernia-discal-cervical") {
+  videoId = "l7v9k-3KmE8";
+  title = "Hernia discal cervical";
+  (background =
+    "/Hernia%20de%20disco%20lumbar%20cirugia%20y%20tratamiento%20en%20Tijuana.png"),
+    (content =
+      "Cuando hablamos de dolor de cuello, algo relativamente común son las hernias de disco. Las hernias de disco son cuando hay una lesión en el disco intervertebral,  el cual sirve para protegernos de las cargas que pasan a través de la columna. Se hace el chichón o la hernia y va a aplastar una raíz nerviosa. Esa raíz nerviosa se encarga en todo el cuerpo de comunicarnos con el exterior. La hernia lo que va a hacer es aplastar una raíz nerviosa y esa raíz nerviosa va a responder con dolor, disminución de esfuerzo, disminución de la sensibilidad. Cuando la gran mayoría se puede tratar de una manera conservadora, con terapia, con analgésicos, con infiltraciones, algunos necesitan de cirugía. \n\nLa cirugía básicamente consiste en quitar ese disfraz, y reemplazarlo por algo en este caso hay veces de que ponemos una caja que va a reemplazar ese espacio y se pone algo para proteger esa caja o en otros casos se puede poner una prótesis de disco, aunque es menos común en algunos pacientes pueden requerir ese tipo de cosas el objetivo es quitar el disco dañado y reemplazarlo por algo que pueda mantener el espacio y pueden estar libres las raíces. \n\nSi tienes alguna pregunta no dudes en mandar mensaje o llamarnos para responderte ");
+} else if (procedimiento === "lesiones-en-meniscos") {
+  videoId = "Zwr3UnBo2bE";
+  title = "Lesiones en meniscos";
+  (background =
+    "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png"),
+    (content =
+      "Les platico un poquito de lo que son los meniscos. Los meniscos son unas estructuras fibrocartilaginosas que están dentro de la rodilla. Son como empaques. Y lo que nos ayuda es establecer o ayudar un poquito con las fuerzas que pasan a través de la rodilla para proteger el cartílago. Una nos ayuda para esa estructura y para protegerla y la otra es de que también son estabilizadores muy importantes en la rodilla. Esas estructuras se pueden lastimar y cuando se lastiman los meniscos se necesitan valorar para ver si son aptos para repararlos o suturarlos de una manera especial y la otra es quitar la parte del menisco que no sirve. Pero esto depende de cada paciente, el tipo de lesión, ya que no todas se pueden reparar, pero la idea es tratar de reparar   \n\npara regresarle la función y que tu rodilla siga funcionando de una manera adecuada y prevenir el desgaste temprano. ¿Tienes alguna duda, alguna pregunta? No dudes en mandar mensaje o llamarnos. ");
+}
+---
+
+<Layout
+  title="Dr. Ricardo Monge especialista en traumatología en Tijuana"
+  description="Recibe la atención en ortopedia con el Dr. Ricardo Monge especializado en lesiones musculoesqueléticas en rodillas, cadera y columna en Tijuana."
+  keywords="Ortopedista, Traumatólogo, Tijuana, Baja California, Dr. Ricardo Monge"
+>
+  <main>
+    <div
+      class="fixed flex flex-col items-center justify-center h-screen gap-4 px-14 z-20"
+    >
+      <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
+      <a
+        href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
+        target="_blank"
+        class="lg:block hidden mb-2"
+      >
+        <Facebook class="cursor-pointer" />
+      </a>
+      <a
+        href="https://www.tiktok.com/@elmongedelaortopedia"
+        target="_blank"
+        class="lg:block hidden mb-2"
+      >
+        <Tiktok class="cursor-pointer" />
+      </a>
+      <a
+        href="https://www.instagram.com/drmonge.ortho/?hl=es"
+        target="_blank"
+        class="lg:block hidden mb-2"
+      >
+        <Instagram class="cursor-pointer" />
+      </a>
+      <a
+        href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
+        target="_blank"
+        class="lg:block hidden mb-2"
+      >
+        <Doctorialia class="cursor-pointer" />
+      </a>
+      <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
+    </div>
+    <section
+      transition:animate={slide({
+        duration: "0.8s",
+      })}
+    >
+      <Background background={background} />
+      <Video videoId={videoId} />
+      <Content title={title} content={content} />
+      <hr />
+      <footer class="text-white p-4 mt-8 mb-8">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+          <h3 class="text-lg font-semibold mb-4">Otros Procedimientos</h3>
+          <div class="w-full flex justify-center">
+            <ul class="flex flex-wrap gap-4 justify-center">
+              {
+                otrosProcedimientos.map((p) => (
+                  <li>
+                    <a
+                      href={`/procedimientos/${p.ruta}`}
+                      class="text-blue-500 hover:text-blue-300 transition-colors duration-300"
+                    >
+                      {p.nombre}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    color: white;
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    overflow-x: hidden;
+  }
+</style>

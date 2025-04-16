@@ -1,0 +1,283 @@
+---
+import FichaPDF from "@components/fichas/FichaPDF";
+import MenuFicha from "@components/fichas/MenuFicha";
+import Layout from "@layouts/LayoutBlog.astro";
+import { slide } from "astro:transitions";
+export function getStaticPaths() {
+  return [
+    { params: { ficha: "recomendaciones-para-una-columna-sana" } },
+    {
+      params: {
+        ficha: "instrucciones-postoperatorias-de-reemplazo-total-de-cadera",
+      },
+    },
+    {
+      params: {
+        ficha: "instrucciones-postoperatorias-de-reemplazo-total-de-rodilla",
+      },
+    },
+    {
+      params: {
+        ficha: "instrucciones-postoperatorias-de-artroscopia-de-rodilla",
+      },
+    },
+    { params: { ficha: "recomendaciones-generales-preoperatorias" } },
+  ];
+}
+
+const fichasData = {
+  "recomendaciones-para-una-columna-sana": {
+    title: "Dr Monge | Recomendaciones para una columna sana",
+    description: "Descripción de la ficha técnica.",
+    keywords: "ficha-tecnica, doctor, monge",
+    bannerTitle: "8 de Marzo, 2025",
+    bannerDate: "Recomendaciones para una columna sana",
+  },
+  "instrucciones-postoperatorias-de-reemplazo-total-de-cadera": {
+    title:
+      "Dr Monge | Instrucciones postoperatorias de Reemplazo total de cadera",
+    description: "Descripción de la ficha técnica.",
+    keywords: "ficha-tecnica, doctor, monge",
+    bannerTitle: "27 de Marzo, 2025",
+    bannerDate: "Instrucciones postoperatorias de Reemplazo total de cadera",
+  },
+  "instrucciones-postoperatorias-de-reemplazo-total-de-rodilla": {
+    title:
+      "Dr Monge | Instrucciones postoperatorias de Reemplazo total de rodilla",
+    description: "Descripción de la ficha técnica.",
+    keywords: "ficha-tecnica, doctor, monge",
+    bannerTitle: "1 de Abril, 2025",
+    bannerDate: "Instrucciones postoperatorias de Reemplazo total de rodilla",
+  },
+  "instrucciones-postoperatorias-de-artroscopia-de-rodilla": {
+    title: "Dr Monge | Instrucciones postoperatorias de artroscopia de rodilla",
+    description: "Descripción de la ficha técnica.",
+    keywords: "ficha-tecnica, doctor, monge",
+    bannerTitle: "8 de Abril, 2025",
+    bannerDate: "Instrucciones postoperatorias de artroscopia de rodilla",
+  },
+  "recomendaciones-generales-preoperatorias": {
+    title: "Dr Monge | Recomendaciones generales preoperatorias",
+    description: "Descripción de la ficha técnica.",
+    keywords: "ficha-tecnica, doctor, monge",
+    bannerTitle: "14 de Abril, 2025",
+    bannerDate: "Recomendaciones generales preoperatorias",
+  },
+};
+
+const { ficha } = Astro.params;
+const fichaData = fichasData[ficha as keyof typeof fichasData];
+const year = new Date().getFullYear();
+---
+
+<Layout
+  title={fichaData.title}
+  description={fichaData.description}
+  keywords={fichaData.keywords}
+>
+  <div
+    class="text-white relative"
+    transition:animate={slide({
+      duration: "0.8s",
+    })}
+  >
+    {
+      ficha === "recomendaciones-para-una-columna-sana" && (
+        <>
+          <section class="bg-[url(/banner-ficha-mobile.webp)] md:bg-[url(/banner-ficha.webp)] bg-cover bg-no-repeat h-[700px] relative">
+            <div class="absolute inset-0 bg-black bg-opacity-30" />
+
+            <div class="absolute left-4 md:left-16 bottom-32">
+              <p class="md:text-6xl text-3xl mb-4 font-semibold">
+                {fichaData.bannerDate}
+              </p>
+              <h1 class="text-2xl font-bold ">{fichaData.bannerTitle}</h1>
+            </div>
+          </section>
+          <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
+            <FichaPDF
+              title="1. Recomendaciones para una columna sana.pdf"
+              pdf="/Recomendaciones-para-una-Columna-Vertebral-Sana.pdf"
+              client:only="react"
+            />
+          </section>
+          <footer class="flex justify-center items-center flex-col py-4 px-8 text-center">
+            <p class="text-sm">
+              All rights reserved by Doctor Monge. {year} ©{" "}
+              <a href="/" class="hover:text-blue-500 hover:underline">
+                <strong> mongeortopedia.com</strong>
+              </a>{" "}
+              is powered by{" "}
+              <a
+                href="https://ecommetrica.com/"
+                target="_blank"
+                class="hover:text-blue-500 hover:underline"
+              >
+                <strong>Ecommetrica.com</strong>
+              </a>
+            </p>
+          </footer>
+        </>
+      )
+    }
+    {
+      ficha ===
+        "instrucciones-postoperatorias-de-reemplazo-total-de-cadera" && (
+        <>
+          <section class="bg-[url(/banner-ficha2-mobile.webp)] md:bg-[url(/banner-ficha2.webp)] bg-cover bg-no-repeat h-[700px] relative">
+            <div class="absolute inset-0 bg-black bg-opacity-30" />
+
+            <div class="absolute left-4 md:left-16 bottom-32">
+              <p class="md:text-6xl text-3xl mb-4 font-semibold">
+                {fichaData.bannerDate}
+              </p>{" "}
+              <h1 class="text-2xl font-bold mb-4">{fichaData.bannerTitle}</h1>
+            </div>
+          </section>
+          <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
+            <FichaPDF
+              title="2. Instrucciones postoperatorias de reemplazo total de cadera.pdf"
+              pdf="/instrucciones-postopera.pdf"
+              client:only="react"
+            />
+          </section>
+          <footer class="flex justify-center items-center flex-col py-4 px-8 text-center">
+            <p class="text-sm">
+              All rights reserved by Doctor Monge. {year} ©{" "}
+              <a href="/" class="hover:text-blue-500 hover:underline">
+                <strong> mongeortopedia.com</strong>
+              </a>{" "}
+              is powered by{" "}
+              <a
+                href="https://ecommetrica.com/"
+                target="_blank"
+                class="hover:text-blue-500 hover:underline"
+              >
+                <strong>Ecommetrica.com</strong>
+              </a>
+            </p>
+          </footer>
+        </>
+      )
+    }
+    {
+      ficha ===
+        "instrucciones-postoperatorias-de-reemplazo-total-de-rodilla" && (
+        <>
+          <section class="bg-[url(/banner-ficha3-mobile.webp)] md:bg-[url(/banner-ficha3.webp)] bg-cover bg-no-repeat h-[700px] relative">
+            <div class="absolute inset-0 bg-black bg-opacity-30" />
+
+            <div class="absolute left-4 md:left-16 bottom-32">
+              <p class="md:text-6xl text-3xl mb-4 font-semibold">
+                {fichaData.bannerDate}
+              </p>{" "}
+              <h1 class="text-2xl font-bold mb-4">{fichaData.bannerTitle}</h1>
+            </div>
+          </section>
+          <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
+            <FichaPDF
+              title="3. Instrucciones postoperatorias de reemplazo total de rodilla.pdf"
+              pdf="/Instrucciones-Postoperatorias-para-paciente-de-reemplazo-total-de-rodilla.pdf"
+              client:only="react"
+            />
+          </section>
+          <footer class="flex justify-center items-center flex-col py-4 px-8 text-center">
+            <p class="text-sm">
+              All rights reserved by Doctor Monge. {year} ©{" "}
+              <a href="/" class="hover:text-blue-500 hover:underline">
+                <strong> mongeortopedia.com</strong>
+              </a>{" "}
+              is powered by{" "}
+              <a
+                href="https://ecommetrica.com/"
+                target="_blank"
+                class="hover:text-blue-500 hover:underline"
+              >
+                <strong>Ecommetrica.com</strong>
+              </a>
+            </p>
+          </footer>
+        </>
+      )
+    }
+    {
+      ficha === "instrucciones-postoperatorias-de-artroscopia-de-rodilla" && (
+        <>
+          <section class="bg-[url(/banner-ficha4-mobile.webp)] md:bg-[url(/banner-ficha4.webp)] bg-cover bg-no-repeat h-[700px] relative">
+            <div class="absolute inset-0 bg-black bg-opacity-30" />
+
+            <div class="absolute left-4 md:left-16 bottom-32">
+              <p class="md:text-6xl text-3xl mb-4 font-semibold">
+                {fichaData.bannerDate}
+              </p>{" "}
+              <h1 class="text-2xl font-bold mb-4">{fichaData.bannerTitle}</h1>
+            </div>
+          </section>
+          <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
+            <FichaPDF
+              title="4. Instrucciones postoperatorias de astroscopia de rodilla.pdf"
+              pdf="/instrucciones-postoperatorias-para-paciente-artroscopia-de-rodilla.pdf"
+              client:only="react"
+            />
+          </section>
+          <footer class="flex justify-center items-center flex-col py-4 px-8 text-center">
+            <p class="text-sm">
+              All rights reserved by Doctor Monge. {year} ©{" "}
+              <a href="/" class="hover:text-blue-500 hover:underline">
+                <strong> mongeortopedia.com</strong>
+              </a>{" "}
+              is powered by{" "}
+              <a
+                href="https://ecommetrica.com/"
+                target="_blank"
+                class="hover:text-blue-500 hover:underline"
+              >
+                <strong>Ecommetrica.com</strong>
+              </a>
+            </p>
+          </footer>
+        </>
+      )
+    }
+    {
+      ficha === "recomendaciones-generales-preoperatorias" && (
+        <>
+          <section class="bg-[url(/banner-ficha5-mobile.webp)] md:bg-[url(/banner-ficha5.webp)] bg-cover bg-no-repeat h-[700px] relative">
+            <div class="absolute inset-0 bg-black bg-opacity-30" />
+
+            <div class="absolute left-4 md:left-16 bottom-32">
+              <p class="md:text-6xl text-3xl mb-4 font-semibold">
+                {fichaData.bannerDate}
+              </p>{" "}
+              <h1 class="text-2xl font-bold mb-4">{fichaData.bannerTitle}</h1>
+            </div>
+          </section>
+          <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
+            <FichaPDF
+              title="5. Recocomendaciones generales preoperatorias.pdf"
+              pdf="/documentos-de-preparacion.pdf"
+              client:only="react"
+            />
+          </section>
+          <footer class="flex justify-center items-center flex-col py-4 px-8 text-center">
+            <p class="text-sm">
+              All rights reserved by Doctor Monge. {year} ©{" "}
+              <a href="/" class="hover:text-blue-500 hover:underline">
+                <strong> mongeortopedia.com</strong>
+              </a>{" "}
+              is powered by{" "}
+              <a
+                href="https://ecommetrica.com/"
+                target="_blank"
+                class="hover:text-blue-500 hover:underline"
+              >
+                <strong>Ecommetrica.com</strong>
+              </a>
+            </p>
+          </footer>
+        </>
+      )
+    }
+    <MenuFicha client:only="react" />
+  </div>
+</Layout>

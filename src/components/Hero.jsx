@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-function Hero() {
+function Hero({ URL }) {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [animationKey, setAnimationKey] = useState(0);
@@ -28,11 +28,24 @@ function Hero() {
               height={500}
               className="mb-8 "
             />
-            <h1 className="mb-8 font-semibold lg:w-[500px] text-[18px] text-[#969596] hidden lg:block">
-              Soy traumatólogo ortopedista, especialista en lesiones
-              articulares, reemplazo de cadera, rodilla, patologías de hombro y
-              cirugía de columna en Tijuana B.C.
-            </h1>
+            {URL ? (
+              <div>
+                <h1 className="mb-8 font-semibold lg:w-[500px] text-[18px] text-[#969596] hidden lg:block">
+                  I am an orthopedic traumatologist, specialist in joint
+                  injuries, hip and knee hip and knee replacement, shoulder
+                  pathologies and spine surgery in Tijuana B.C. spine surgery in
+                  Tijuana B.C.
+                </h1>
+              </div>
+            ) : (
+              <div>
+                <h1 className="mb-8 font-semibold lg:w-[500px] text-[18px] text-[#969596] hidden lg:block">
+                  Soy traumatólogo ortopedista, especialista en lesiones
+                  articulares, reemplazo de cadera, rodilla, patologías de
+                  hombro y cirugía de columna en Tijuana B.C.
+                </h1>
+              </div>
+            )}
           </section>
           <div className="w-[400px] h-[400px] lg:h-screen lg:w-full lg:absolute lg:translate-x-4 translate-x-[-40px] top-[-150px] hidden lg:block">
             <motion.img

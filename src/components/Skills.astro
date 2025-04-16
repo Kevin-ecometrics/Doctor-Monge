@@ -4,6 +4,8 @@ let skills = [
   { name: "Artroscopia de hombro y rodilla  ", percentage: "10%" },
   { name: "Cirugía de columna ", percentage: "10%" },
 ];
+
+const { URL } = Astro.props;
 ---
 
 <main class="flex flex-col sm:flex-row lg:h-screen items-center py-4 sm:py-16">
@@ -46,9 +48,18 @@ let skills = [
       </div>
     </div>
     <div class="lg:py-0 py-4">
-      <h2 class="text-[30px] md:text-[35px] font-semibold text-wrap">
-        Sobre mi práctica como traumatólogo-ortopedista
-      </h2>
+      {
+        URL ? (
+          <h2 class="text-[30px] md:text-[35px] font-semibold text-wrap">
+            About my practice as an orthopedic-traumatologist
+          </h2>
+        ) : (
+          <h2 class="text-[30px] md:text-[35px] font-semibold text-wrap">
+            Sobre mi práctica como traumatólogo-ortopedista
+          </h2>
+        )
+      }
+
       <h3 class="font-bold text-[#969596] text-[18px] mb-2">
         Soy el tipo de médico que se interesa conocer tu caso particular y
         acompañarte a comprender tu enfermedad o lesión para comenzar juntos con
