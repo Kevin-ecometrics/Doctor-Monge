@@ -95,7 +95,7 @@ const SuccessStories = ({ URL }) => {
       subtitle:
         "This surgery has one of the highest success rates. It's normal to feel anxious before this orthopedic procedure, so in this vlog I explain everything you need to know as a knee specialist trauma surgeon.",
       background: "/Protesis%20total%20de%20cadera%20en%20Tijuana.png",
-      link: "/procedimientos/protesis-total-de-rodilla",
+      link: "/en/procedimientos/protesis-total-de-rodilla",
     },
     {
       title: "Total hip",
@@ -103,7 +103,7 @@ const SuccessStories = ({ URL }) => {
       subtitle:
         "In this vlog we'll explore one of the most performed trauma surgeries worldwide with over 1 million patients each year. I'll explain what it involves and who are candidates.",
       background: "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png",
-      link: "/procedimientos/protesis-total-de-cadera",
+      link: "/en/procedimientos/protesis-total-de-cadera",
     },
     {
       title: "Lumbar disc",
@@ -112,7 +112,7 @@ const SuccessStories = ({ URL }) => {
         "Did you know lumbar disc herniation radiculopathy is one of the leading causes of orthopedic disability worldwide? I'd like to discuss the surgical intervention, a trauma procedure that decompresses the affected nerve root.",
       background:
         "/protesis%20total%20de%20rodilla%20en%20Tijuana%20consulta.png",
-      link: "/procedimientos/hernia-de-disco-lumbar",
+      link: "/en/procedimientos/hernia-de-disco-lumbar",
     },
     {
       title: "Anterior cruciate",
@@ -121,7 +121,7 @@ const SuccessStories = ({ URL }) => {
         "The anterior cruciate ligament is one of the knee's most important stabilizers, providing 85% of its stability. Join me as I discuss orthopedics and how this injury is treated.",
       background:
         "/Lesiones%20en%20ligamento%20cruzado%20anterior%20tratamiento%20conservador%20en%20Tijuana.png",
-      link: "/procedimientos/lesion-por-lca",
+      link: "/en/procedimientos/lesion-por-lca",
     },
     {
       title: "Cervical disc",
@@ -130,7 +130,7 @@ const SuccessStories = ({ URL }) => {
         "A herniation occurs when the discs that dissipate forces along the spine are damaged, compressing nerve roots. I invite you to watch this vlog to learn about its orthopedic treatment.",
       background:
         "/Hernia%20de%20disco%20lumbar%20cirugia%20y%20tratamiento%20en%20Tijuana.png",
-      link: "/procedimientos/hernia-discal-cervical",
+      link: "/en/procedimientos/hernia-discal-cervical",
     },
     {
       title: "Meniscal",
@@ -139,7 +139,7 @@ const SuccessStories = ({ URL }) => {
         "The menisci are responsible for nearly 50% of force transmission through the knee and act as secondary stabilizers. This is one of the most common knee injuries - I invite you to learn about its treatment.",
       background:
         "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png",
-      link: "/procedimientos/lesiones-en-meniscos",
+      link: "/en/procedimientos/lesiones-en-meniscos",
     },
   ];
 
@@ -177,7 +177,11 @@ const SuccessStories = ({ URL }) => {
           style={{
             backgroundSize: "cover",
             backgroundPosition: "center",
-            backgroundImage: `url(${URL ? content_en[currentIndex].background : content_es[currentIndex].background})`,
+            backgroundImage: `url(${
+              URL
+                ? content_en[currentIndex].background
+                : content_es[currentIndex].background
+            })`,
           }}
         >
           <div className="flex justify-center lg:justify-between items-center h-screen lg:w-[1400px] m-auto px-28">
