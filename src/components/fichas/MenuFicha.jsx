@@ -26,8 +26,34 @@ const fichas = [
   },
 ];
 
+const fichasEN = [
+  {
+    title: "Recommendations for a healthy spine",
+    link: "/en/fichas/recomendaciones-para-una-columna-sana/",
+  },
+  {
+    title: "Postoperative instructions for total hip replacement",
+    link: "/en/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-cadera/",
+  },
+  {
+    title: "Postoperative instructions for total knee replacement",
+    link: "/en/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-rodilla/",
+  },
+  {
+    title: "Postoperative instructions for knee arthroscopy",
+    link: "/en/fichas/instrucciones-postoperatorias-de-artroscopia-de-rodilla/",
+  },
+  {
+    title: "General preoperative recommendations",
+    link: "/en/fichas/recomendaciones-generales-preoperatorias/",
+  },
+];
+
 function MenuFicha() {
   const [isOpen, setIsOpen] = useState(false);
+  const URL = window.location.href;
+  const isEnglish = URL.includes("/en/");
+  const fichasToUse = isEnglish ? fichasEN : fichas;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -67,7 +93,9 @@ function MenuFicha() {
         {/* Encabezado del menú */}
         <div className="flex items-center justify-between mb-6 mt-16 md:mt-0">
           <h3 className="text-2xl font-semibold">
-            Orto tips y guías para pacientes
+            {isEnglish
+              ? "Orto tips and guides for patients"
+              : "Orto tips y guías para pacientes"}
           </h3>
           <button
             onClick={toggleMenu}
@@ -79,7 +107,7 @@ function MenuFicha() {
 
         {/* Lista de enlaces */}
         <ul className="space-y-4">
-          {fichas.map((ficha, index) => (
+          {fichasToUse.map((ficha, index) => (
             <li key={index}>
               <a
                 href={ficha.link}

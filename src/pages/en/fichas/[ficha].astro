@@ -27,41 +27,39 @@ export function getStaticPaths() {
 
 const fichasData = {
   "recomendaciones-para-una-columna-sana": {
-    title: "Dr Monge | Recomendaciones para una columna sana",
-    description: "Descripción de la ficha técnica.",
-    keywords: "ficha-tecnica, doctor, monge",
-    bannerTitle: "8 de Marzo, 2025",
-    bannerDate: "Recomendaciones para una columna sana",
+    title: "Dr Monge | Recommendations for a healthy spine",
+    description: "Technical sheet description.",
+    keywords: "technical-sheet, doctor, monge",
+    bannerTitle: "March 8, 2025",
+    bannerDate: "Recommendations for a healthy spine",
   },
   "instrucciones-postoperatorias-de-reemplazo-total-de-cadera": {
-    title:
-      "Dr Monge | Instrucciones postoperatorias de Reemplazo total de cadera",
-    description: "Descripción de la ficha técnica.",
-    keywords: "ficha-tecnica, doctor, monge",
-    bannerTitle: "27 de Marzo, 2025",
-    bannerDate: "Instrucciones postoperatorias de Reemplazo total de cadera",
+    title: "Dr Monge | Postoperative instructions for total hip replacement",
+    description: "Technical sheet description.",
+    keywords: "technical-sheet, doctor, monge",
+    bannerTitle: "March 27, 2025",
+    bannerDate: "Postoperative instructions for total hip replacement",
   },
   "instrucciones-postoperatorias-de-reemplazo-total-de-rodilla": {
-    title:
-      "Dr Monge | Instrucciones postoperatorias de Reemplazo total de rodilla",
-    description: "Descripción de la ficha técnica.",
-    keywords: "ficha-tecnica, doctor, monge",
-    bannerTitle: "1 de Abril, 2025",
-    bannerDate: "Instrucciones postoperatorias de Reemplazo total de rodilla",
+    title: "Dr Monge | Postoperative instructions for total knee replacement",
+    description: "Technical sheet description.",
+    keywords: "technical-sheet, doctor, monge",
+    bannerTitle: "April 1, 2025",
+    bannerDate: "Postoperative instructions for total knee replacement",
   },
   "instrucciones-postoperatorias-de-artroscopia-de-rodilla": {
-    title: "Dr Monge | Instrucciones postoperatorias de artroscopia de rodilla",
-    description: "Descripción de la ficha técnica.",
-    keywords: "ficha-tecnica, doctor, monge",
-    bannerTitle: "8 de Abril, 2025",
-    bannerDate: "Instrucciones postoperatorias de artroscopia de rodilla",
+    title: "Dr Monge | Postoperative instructions for knee arthroscopy",
+    description: "Technical sheet description.",
+    keywords: "technical-sheet, doctor, monge",
+    bannerTitle: "April 8, 2025",
+    bannerDate: "Postoperative instructions for knee arthroscopy",
   },
   "recomendaciones-generales-preoperatorias": {
-    title: "Dr Monge | Recomendaciones generales preoperatorias",
-    description: "Descripción de la ficha técnica.",
-    keywords: "ficha-tecnica, doctor, monge",
-    bannerTitle: "14 de Abril, 2025",
-    bannerDate: "Recomendaciones generales preoperatorias",
+    title: "Dr Monge | General preoperative recommendations",
+    description: "Technical sheet description.",
+    keywords: "technical-sheet, doctor, monge",
+    bannerTitle: "April 14, 2025",
+    bannerDate: "General preoperative recommendations",
   },
 };
 
@@ -96,7 +94,7 @@ const year = new Date().getFullYear();
           </section>
           <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
             <FichaPDF
-              title="1. Recomendaciones para una columna sana.pdf"
+              title="1. Recommendations for a Healthy Vertebral Spine.pdf"
               pdf="/Recomendaciones-para-una-Columna-Vertebral-Sana.pdf"
               client:only="react"
             />
@@ -136,7 +134,7 @@ const year = new Date().getFullYear();
           </section>
           <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
             <FichaPDF
-              title="2. Instrucciones postoperatorias de reemplazo total de cadera.pdf"
+              title="2. Postoperative instructions for total hip replacement.pdf"
               pdf="/instrucciones-postopera.pdf"
               client:only="react"
             />
@@ -176,7 +174,7 @@ const year = new Date().getFullYear();
           </section>
           <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
             <FichaPDF
-              title="3. Instrucciones postoperatorias de reemplazo total de rodilla.pdf"
+              title="3. Total knee replacement postoperative instructions.pdf"
               pdf="/Instrucciones-Postoperatorias-para-paciente-de-reemplazo-total-de-rodilla.pdf"
               client:only="react"
             />
@@ -215,7 +213,7 @@ const year = new Date().getFullYear();
           </section>
           <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
             <FichaPDF
-              title="4. Instrucciones postoperatorias de astroscopia de rodilla.pdf"
+              title="4. Knee astroscopy postoperative instructions.pdf"
               pdf="/instrucciones-postoperatorias-para-paciente-artroscopia-de-rodilla.pdf"
               client:only="react"
             />
@@ -254,7 +252,7 @@ const year = new Date().getFullYear();
           </section>
           <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
             <FichaPDF
-              title="5. Recocomendaciones generales preoperatorias.pdf"
+              title="5. General preoperative recommendations.pdf"
               pdf="/documentos-de-preparacion.pdf"
               client:only="react"
             />

@@ -16,6 +16,8 @@ const pdfWorker = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version
 pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
 
 const Viewer = ({ title, pdf }) => {
+  const URL = window.location.href;
+  const isEnglish = URL.includes("/en/");
   const [totalPages, setTotalPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -66,7 +68,7 @@ const Viewer = ({ title, pdf }) => {
         <div className="border-r-2 border-gray-300 bg-gray-100 px-4 w-80 p-4 h-full md:block hidden">
           {/* Título del sidebar */}
           <div className="px-2 py-4 border-b-2 text-center font-semibold text-lg text-[#005692] mb-4">
-            Páginas de la Ficha
+            {isEnglish ? "Pages of the Document" : "Páginas del Documento"}
           </div>
 
           {/* Lista de miniaturas de páginas */}
@@ -91,7 +93,7 @@ const Viewer = ({ title, pdf }) => {
                         : "bg-gray-200 text-gray-700"
                     }`}
                   >
-                    Página {index + 1}
+                    {isEnglish ? "Page" : "Página"} {index + 1}
                   </div>
                 </div>
               ))}
@@ -107,7 +109,8 @@ const Viewer = ({ title, pdf }) => {
             <div className="flex flex-col items-start">
               <div className="font-bold text-xl text-[#005692]">{title}</div>
               <div className="text-sm text-gray-500">
-                Página {pageNumber} de {totalPages}
+                {isEnglish ? "Page" : "Página"} {pageNumber}{" "}
+                {isEnglish ? "of" : "de"} {totalPages}
               </div>
             </div>
 
@@ -136,7 +139,7 @@ const Viewer = ({ title, pdf }) => {
                 onClick={downloadPDF}
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
               >
-                Descargar
+                {isEnglish ? "Download" : "Descargar"}
               </button>
             </div>
           </div>
