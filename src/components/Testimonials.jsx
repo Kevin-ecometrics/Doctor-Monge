@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const testimonials = [
+const testimonials_es = [
   {
     text: "Excelente atención y gran profesionalismo, toda explicación por parte del Doctor Ricardo Romero es detallada y armónica para su comprensión en traumatología y ortopedia. ",
     name: "Alan Cota",
@@ -29,8 +29,37 @@ const testimonials = [
   },
 ];
 
-function Testimonials() {
+const testimonials_en = [
+  {
+    text: "Excellent attention and great professionalism, Dr. Ricardo Romero provides detailed and clear explanations for understanding traumatology and orthopedics.",
+    name: "Alan Cota",
+    topic: "Shoulder Condition",
+  },
+  {
+    text: "Dr. Ricardo Monge, whom I visited for the first time in Tijuana, examined my condition very thoroughly and explained everything clearly about the treatment needed for my recovery. Excellent care.",
+    name: "Leticia R",
+    topic: "Spinal Injuries",
+  },
+  {
+    text: "The doctor was very professional, explained every detail of possible procedures and recommended the best course of action. I felt wonderful and was very grateful to Dr. Monge.",
+    name: "Felipe Pérez",
+    topic: "Knee Orthopedics",
+  },
+  {
+    text: "My experience with Dr. Monge in Tijuana was excellent. He explained everything perfectly. I'm just starting orthopedic treatment with him - the attention was outstanding and the treatment very kind. I recommend him!",
+    name: "Nelly Toledo",
+    topic: "Knee Injuries",
+  },
+  {
+    text: "Excellent doctor, very clear in his explanations, both professional and humane. Accurate and wise in his diagnoses. I highly recommend him in Tijuana. Thank you doctor personally for your enormous help and above all, patience with all my questions which you answered kindly immediately.",
+    name: "Alicia Garza Soltero",
+    topic: "Hip Surgery",
+  },
+];
+
+function Testimonials({ URL }) {
   const [currentTestimonial, setCurrentTestimonial] = useState(1);
+  const testimonials = URL ? testimonials_en : testimonials_es;
 
   const variants = {
     hidden: { opacity: 0, x: -100 },
@@ -88,32 +117,35 @@ function Testimonials() {
           </svg>
 
           <h1 className="font-semibold text-[30px] lg:text-[42px] py-4 lg:py-16">
-            Encontramos el tratamiento ortopedista perfecto para aliviar a cada
-            paciente en Tijuana
+            {URL
+              ? "We find the perfect orthopedic treatment to relieve each patient in Tijuana"
+              : "Encontramos el tratamiento ortopedista perfecto para aliviar a cada paciente en Tijuana"}
           </h1>
         </div>
         <div>
           <section className="flex justify-center items-center flex-col">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial="hidden"
-                animate={currentTestimonial === index ? "visible" : "exit"}
-                variants={variants}
-                transition={{ duration: 0.5 }}
-                className={currentTestimonial === index ? "block" : "hidden"}
-              >
-                <h2 className="mb-8 font-normal text-[22px] text-[#ACACAD]">
-                  {testimonial.text}
-                </h2>
-                <h2 className="mb-8 font-normal text-[24px]">
-                  {testimonial.name}
-                </h2>
-                <h2 className="font-medium text-[22px] text-[#D9D9D9] mb-16">
-                  {testimonial.topic}
-                </h2>
-              </motion.div>
-            ))}
+            {(URL ? testimonials_en : testimonials_es).map(
+              (testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial="hidden"
+                  animate={currentTestimonial === index ? "visible" : "exit"}
+                  variants={variants}
+                  transition={{ duration: 0.5 }}
+                  className={currentTestimonial === index ? "block" : "hidden"}
+                >
+                  <h2 className="mb-8 font-normal text-[22px] text-[#ACACAD]">
+                    {testimonial.text}
+                  </h2>
+                  <h2 className="mb-8 font-normal text-[24px]">
+                    {testimonial.name}
+                  </h2>
+                  <h2 className="font-medium text-[22px] text-[#D9D9D9] mb-16">
+                    {testimonial.topic}
+                  </h2>
+                </motion.div>
+              )
+            )}
           </section>
 
           <div className="flex justify-start items-center gap-4 lg:mb-0 mb-40 ">

@@ -3,7 +3,7 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { motion, useInView } from "framer-motion";
 
-function Contact() {
+function Contact({ URL }) {
   const [isLoading, setIsLoading] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -27,12 +27,16 @@ function Contact() {
         data
       );
       console.log(response);
-      toast.success("Mensaje enviado correctamente");
+      toast.success(
+        URL ? "Message sent successfully" : "Mensaje enviado correctamente"
+      );
       setIsLoading(false);
       e.target.reset();
     } catch (error) {
       console.error(error);
-      toast.error("Ocurrió un error al enviar el mensaje");
+      toast.error(
+        URL ? "Error sending message" : "Ocurrió un error al enviar el mensaje"
+      );
     }
   };
   useEffect(() => {
@@ -69,12 +73,14 @@ function Contact() {
       <div className="grid grid-cols-1 lg:grid-cols-2 px-8 gap-16 lg:w-[80%] mx-auto z-10">
         <div>
           <h3 className="font-medium text-[30px] md:text-[42px] mb-2">
-            {" "}
-            Contacto para Dr. Ricardo Monge Romero
+            {URL
+              ? "Contact Dr. Ricardo Monge Romero"
+              : "Contacto para Dr. Ricardo Monge Romero"}
           </h3>
           <h1 className="font-bold text-[#969596] text-[16px] mb-8">
-            Me encuentro cerca de ti a 10 minutos de la frontera de San Ysidro
-            en Tijuana{" "}
+            {URL
+              ? "I'm located just 10 minutes from the San Ysidro border in Tijuana"
+              : "Me encuentro cerca de ti a 10 minutos de la frontera de San Ysidro en Tijuana"}
           </h1>
           <div className="*:font-medium *:text-[16px] mb-12 ">
             <a
@@ -127,12 +133,16 @@ function Contact() {
                 </a>
               </div>
               <h3 className="mb-2 font-bold text-[#969596]">
-                Horario de atención:
+                {URL ? "Office hours:" : "Horario de atención:"}
               </h3>
               <h3 className="font-medium">
-                Lunes a Viernes de 10am-2pm y 4pm-6pm.
+                {URL
+                  ? "Monday to Friday from 10am-2pm and 4pm-6pm."
+                  : "Lunes a Viernes de 10am-2pm y 4pm-6pm."}
               </h3>
-              <h3 className="mb-4 font-medium">Sábados de 10am-2pm.</h3>
+              <h3 className="mb-4 font-medium">
+                {URL ? "Saturdays from 10am-2pm." : "Sábados de 10am-2pm."}
+              </h3>
             </div>
 
             <div className="mb-8 group">
@@ -196,11 +206,12 @@ function Contact() {
         </div>
         <div>
           <h2 className="text-[32px] font-bold mb-2">
-            ¿Tienes alguna pregunta para mí?{" "}
+            {URL ? "Contact me" : "Contáctame"}
           </h2>
           <h3 className="text-[25px] font-medium mb-10">
-            Te invito a preguntarme tus dudas en Ortopedia y Traumatología y si
-            quieres saber más visita{" "}
+            {URL
+              ? "Feel free to ask me your questions about Orthopedics and Traumatology. For more content visit"
+              : "Te invito a preguntarme tus dudas en Ortopedia y Traumatología y si quieres saber más visita"}
             <div className="flex gap-4 items-center">
               <a
                 href="https://www.tiktok.com/@elmongedelaortopedia"
@@ -208,27 +219,28 @@ function Contact() {
               >
                 <img
                   src="/Tiktok.svg"
-                  alt="Logo de Tiktok"
-                  title="Logo de Instagram"
+                  alt={URL ? "TikTok logo" : "Logo de Tiktok"}
+                  title={URL ? "TikTok" : "Logo de Instagram"}
                   className="w-8"
-                />{" "}
+                />
               </a>
               <a
                 href="https://www.instagram.com/drmonge.ortho/?hl=es"
                 target="_blank"
               >
                 <img
-                  src="Instagram.svg"
-                  alt="Logo de Instagram"
-                  title="Logo de Instagram"
+                  src="/Instagram.svg"
+                  alt={URL ? "Instagram logo" : "Logo de Instagram"}
+                  title={URL ? "Instagram" : "Logo de Instagram"}
                   className="w-8"
                 />
               </a>
             </div>
           </h3>
           <h3 className="font-medium mb-10 text-[20px] text-blue-500">
-            ¿Deseas agendar tu cita de valoración ortopédica? Con gusto, solo
-            escríbeme tus datos para comenzar
+            {URL
+              ? "Would you like to schedule your orthopedic evaluation? Just send me your information to get started"
+              : "¿Deseas agendar tu cita de valoración ortopédica? Con gusto, solo escríbeme tus datos para comenzar"}
           </h3>
           <form className="mt-8 mb-24 lg:mb-8" onSubmit={handleSubmit}>
             <div class="relative z-0 w-full mb-5 group">
@@ -244,7 +256,7 @@ function Contact() {
                 for="nombre"
                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-1 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Nombre:
+                {URL ? "Name:" : "Nombre:"}
               </label>
             </div>
             <div class="relative z-0 w-full mb-5 group">
@@ -260,7 +272,7 @@ function Contact() {
                 for="correo"
                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-1 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Correo:
+                {URL ? "Email:" : "Correo:"}
               </label>
             </div>
             <div class="relative z-0 w-full mb-5 group">
@@ -275,23 +287,30 @@ function Contact() {
                 for="mensaje"
                 class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
-                Mensaje:
+                {URL ? "Message:" : "Mensaje:"}
               </label>
             </div>
             <button
               type="submit"
               disabled={isLoading}
-              class="text-white bg-blue-700 hover:bg-blue-800  focus:outline-none text-[13px] font-medium w-full sm:w-[400px] px-5 py-2.5 text-center"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none text-[13px] font-medium w-full sm:w-[400px] px-5 py-2.5 text-center"
             >
-              {isLoading ? "Enviando..." : "Hacer cita"}
+              {isLoading
+                ? URL
+                  ? "Sending..."
+                  : "Enviando..."
+                : URL
+                  ? "Schedule appointment"
+                  : "Hacer cita"}
             </button>
           </form>
           <Toaster position="top-right" />
         </div>
       </div>{" "}
-      <footer className=" absolute bottom-10 left-10 lg:left-20">
+      <footer className=" absolute bottom-2 left-10 lg:left-20">
         <p className="text-sm">
-          All rights reserved by Doctor Monge. {year} ©{" "}
+          {URL ? "All rights reserved by" : "Todos los derechos reservados por"}
+          Doctor Monge. {year} ©{" "}
           <a href="/" className="hover:text-blue-500 hover:underline">
             <strong> mongeortopedia.com</strong>
           </a>{" "}

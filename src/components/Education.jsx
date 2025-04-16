@@ -1,13 +1,13 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const Education = () => {
+const Education = ({ URL }) => {
   const [showImages, setShowImages] = useState(false);
   const ref = useRef(null);
   const isVisible = useInView(ref);
   const [hoverIndex, setHoverIndex] = useState(null);
 
-  const educationData = [
+  const educationData_es = [
     {
       logo: "/Ricardo Monge  obtuvo su titulo  como medico  general en una prestigiosa  universidad en Tijuana Baja California.png",
       hoverLogo: "/xochicalco.png",
@@ -37,27 +37,60 @@ const Education = () => {
     },
   ];
 
+  const educationData_en = [
+    {
+      logo: "/Ricardo Monge  obtuvo su titulo  como medico  general en una prestigiosa  universidad en Tijuana Baja California.png",
+      hoverLogo: "/xochicalco.png",
+      alt: "Dr. Ricardo Monge trained at one of the best universities in Tijuana with a comprehensive educational model",
+      years: "2013 - 2018",
+      university: "Xochicalco University",
+      description:
+        "The university has 50 years of quality and prestige with multiple accreditations including the Mexican Association of Medical Schools, WHO, COMAEM, and COMAPROD, making it one of the best universities for medical studies.",
+    },
+    {
+      logo: "/Ricardo Monge es un medico especialista avalado por la UNAM.png",
+      hoverLogo: "/unam.png",
+      alt: "Dr. Ricardo Monge was certified by one of the most recognized medical schools in Mexico for his trauma specialist training",
+      years: "2018 - 2021",
+      university: "National Autonomous University of Mexico",
+      description:
+        "Specialization in Traumatology and Orthopedics at the General Hospital of Sonora, certified by UNAM and member of the Mexican Council of Orthopedics.",
+    },
+    {
+      logo: "/Ricardo Monge pertenece a una de las organizaciones de ortopedia y traumatologia mas grande de america latina.png",
+      hoverLogo: "/femecot.png",
+      alt: "Ricardo Monge belongs to an institution that promotes knowledge and continuous improvement in orthopedic and trauma medical practice",
+      years: "2021 - 2022",
+      university: "4th National Place FEMECOT 2022",
+      description:
+        "Conducted research on nuchal ligament injury incidence in cervical sprain evaluated by ultrasound at the General Hospital of Sonora for my certification as a specialist in traumatology and orthopedics.",
+    },
+  ];
+
   const handleButtonClick = () => {
     setShowImages(!showImages);
   };
+
+  const currentData = URL ? educationData_en : educationData_es;
 
   return (
     <main className="lg:w-[80%] lg:mx-auto py-16 lg:py-44" ref={ref}>
       <div className="lg:w-full flex flex-col justify-center lg:flex-row lg:justify-between items-center">
         <div>
           <h1 className="text-[30px] md:text-[42px] font-medium text-center lg:text-start mb-4">
-            Trayectoria académica en traumatología y ortopedia{" "}
+            {URL
+              ? "Academic trajectory in traumatology and orthopedics"
+              : "Trayectoria académica en traumatología y ortopedia"}{" "}
           </h1>
           <h3 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
-            Me he preparado en las mejores instituciones de traumatología y
-            ortopedia en México para brindarte tratamiento de excelencia y
-            acompañamiento de calidad, así como ortogarte la información
-            absolutamente necesaria para que comprendas tu lesión ortopédica o
-            patología y poderla tratar.
+            {URL
+              ? "I have trained at the best traumatology and orthopedic institutions in Mexico to provide you with excellent treatment and quality care, as well as giving you absolutely necessary information to understand your orthopedic injury or pathology and how to treat it."
+              : "Me he preparado en las mejores instituciones de traumatología y ortopedia en México para brindarte tratamiento de excelencia y acompañamiento de calidad, así como ortogarte la información absolutamente necesaria para que comprendas tu lesión ortopédica o patología y poderla tratar."}
           </h3>
           <h4 className="font-bold text-[16px] text-[#969596] text-center lg:text-start px-8 lg:px-0 lg:w-[70%]">
-            Número de Cédula profesional como médico especialista en
-            traumatología y ortopedia:{" "}
+            {URL
+              ? "Professional license number as a specialist in traumatology and orthopedics:"
+              : "Número de Cédula profesional como médico especialista en traumatología y ortopedia:"}
             <strong className="text-white font-bold">12900183</strong>{" "}
           </h4>
         </div>
@@ -65,13 +98,13 @@ const Education = () => {
           <button
             className="bg-blue-700 hover:bg-blue-900 text-white px-8 py-2 whitespace-nowrap"
             onClick={handleButtonClick}
-            aria-label="Ver Títulos"
+            aria-label={URL ? "View Degrees" : "Ver Títulos"}
           >
-            Ver Títulos
+            {URL ? "View Degrees" : "Ver Títulos"}
           </button>
         </div>
       </div>
-      {educationData.map((item, index) => (
+      {(URL ? educationData_en : educationData_en).map((item, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0, y: -100 }}
@@ -107,7 +140,7 @@ const Education = () => {
           <div className="bg-white p-5 rounded shadow-lg flex flex-col items-end">
             <div className="w-full flex justify-center items-center">
               <h2 className="text-xl font-bold text-black mb-4 uppercase">
-                Títulos
+                {URL ? "Degrees" : "Títulos"}
               </h2>
             </div>
             <div className="flex lg:flex-row flex-col justify-center items-center gap-8">
@@ -127,7 +160,7 @@ const Education = () => {
                 className="bg-red-500 hover:bg-red-700 px-2 py-1 rounded-md m-2 w-[200px]"
                 onClick={handleButtonClick}
               >
-                Cerrar
+                {URL ? "Close" : "Cerrar"}
               </button>
             </div>
           </div>

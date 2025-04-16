@@ -75,19 +75,19 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
       <Success client:visible URL={isEnglish} />
     </section>
     <section id="section5" class="snap-start">
-      <Education client:visible />
+      <Education client:visible URL={isEnglish} />
     </section>
     <section id="section6" class="snap-start">
-      <Testimonials client:visible />
+      <Testimonials client:visible URL={isEnglish} />
     </section>
     <section id="section7" class="snap-start">
-      <Partners client:visible />
+      <Partners client:visible URL={isEnglish} />
     </section>
     <section id="section8" class="snap-start">
-      <Blogs client:only="react" />
+      <Blogs client:only="react" URL={isEnglish} />
     </section>
     <section id="section9" class="snap-start">
-      <Contact client:visible />
+      <Contact client:visible URL={isEnglish} />
     </section>
     <div class="scroll-menu">
       <div class="scroll-bar"></div>

@@ -2,55 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Blogs.css";
 import ReactGA from "../utils/GA";
-function Blogs() {
+
+function Blogs({ URL }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef();
   const isDesktop = window.innerWidth >= 768;
 
-  const handleDragEndDesktop = (event, info) => {
-    const offset = info.offset.x;
-    const velocity = info.velocity.x;
-
-    if (offset < -100 || velocity < -500) {
-      handleNextDesktop(); // Arrastró a la izquierda
-    } else if (offset > 100 || velocity > 500) {
-      handlePrevDesktop(); // Arrastró a la derecha
-    }
-  };
-
-  const handleDragEnd = (event, info) => {
-    const offset = info.offset.x;
-    const velocity = info.velocity.x;
-
-    if (offset < -100 || velocity < -500) {
-      handleNext(); // Arrastró a la izquierda
-    } else if (offset > 100 || velocity > 500) {
-      handlePrev(); // Arrastró a la derecha
-    }
-  };
-
-  const handleClicked = (e) => {
-    e.preventDefault(); // ¡Clave! Detiene la navegación inmediata
-    const link = e.currentTarget.href; // Guarda el href antes del async
-
-    if (typeof ReactGA !== "undefined") {
-      ReactGA.event({
-        category: "button_click",
-        action: "Click",
-        label: "Leer tema", // Añade label para mejor tracking
-      });
-      console.log("Evento enviado ✅");
-
-      // Retraso para asegurar el envío
-      setTimeout(() => {
-        window.location.href = link; // Navega después de 300ms
-      }, 1000);
-    } else {
-      console.error("Error: ReactGA no cargado");
-    }
-  };
-
-  const blogItem = [
+  const blogItem_es = [
     {
       img: "/Cuando tienes una lesion que no mejora acude con el Dr Monge experto en lesiones musculoesqueleticas.png",
       fecha: "Abril 2024",
@@ -189,6 +147,184 @@ function Blogs() {
     },
   ];
 
+  const blogItem_en = [
+    {
+      img: "/Cuando tienes una lesion que no mejora acude con el Dr Monge experto en lesiones musculoesqueleticas.png",
+      fecha: "April 2024",
+      titulo: "Tibia and Fibula Fracture",
+      texto:
+        "Everything you need to know about tibia and fibula fractures, some of the most complex and interesting cases in traumatology. Join us as we explore why these fractures are so unique for each patient.",
+      link: "/blogs/Fractura-de-tibia-y-Perone",
+    },
+    {
+      img: "/Todo lo que debes saber sobre una de las lesiones mas comunes en ortopedia.png",
+      fecha: "May 2024",
+      titulo: "Nonunion and Delayed Bone Healing",
+      texto:
+        "In this blog, Dr. Ricardo Monge, Orthopedic Specialist, explains why some fractures take longer to heal or don't heal completely.",
+      link: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion",
+    },
+    {
+      img: "/Si sufres de dolor en hueso o articulaciones a acude con tu medico ortopedista para una valoracion.png",
+      fecha: "June 2024",
+      titulo: "Anterior Cruciate Ligament (ACL) Injury",
+      texto:
+        "Discover all the reasons why women are more prone to ACL injuries and how arthroscopy, a minimally invasive orthopedic procedure, can help them return to daily activities without complications.",
+      link: "/blogs/Lesion-de-Ligamento-Cruzado-Anterior",
+    },
+    {
+      img: "/El doctor Ricardo Monge inspecciona minuciosamente cada estudio para un diagnostico completo.webp",
+      fecha: "July 2024",
+      titulo:
+        "Osteoporosis: A Silent Condition Affecting Half of Population Over 50",
+      texto:
+        "Dr. Ricardo Monge, orthopedic traumatologist in Tijuana, explains what you should know about osteoporosis, a bone condition whose symptoms often go unnoticed in early stages.",
+      link: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+    },
+    {
+      img: "/Realiza tus infiltraciones articulares con el Dr. Monge en Tijuana.webp",
+      fecha: "August 2024",
+      titulo: "Hyaluronic Acid Injections for Knee Osteoarthritis Treatment",
+      texto:
+        "Have you been recommended hyaluronic acid injections? Learn more about this effective conservative orthopedic treatment from an injection specialist.",
+      link: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+    },
+    {
+      img: "/Invierte en tu bienestar con un tratamiento adecuado para ti con el Dr. Monge.webp",
+      fecha: "September 2024",
+      titulo: "Conservative Treatment vs Surgery for Herniated Disc",
+      texto:
+        "Dr. Ricardo Monge, orthopedic trauma specialist in injuries and surgery, discusses the differences between conservative treatment and cervical disc herniation surgery, and how to know which option is best for you.",
+      link: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+    },
+    {
+      img: "/El Dr. Ricardo Monge te invita a leer el blog donde explica que es la ostesintesis y como puede fallar.webp",
+      fecha: "October 2024",
+      titulo: "Implant Rejection in Osteosynthesis",
+      texto:
+        "Is it true your body rejected the implant? Dr. Monge, orthopedic traumatologist, explains everything about implant rejection in osteosynthesis and how to detect it early to avoid complications.",
+      link: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+    },
+    {
+      img: "/El Hallux Valgus o Juanete puede  limitar tu movilidad el Dr monge te explica mas.webp",
+      fecha: "November 2024",
+      titulo: "Hallux Valgus: A Condition Affecting Up to 35% of Population",
+      texto:
+        "Learn about the causes of bunions from expert traumatologist Dr. Ricardo Monge, who will explain why bunions develop and how they are diagnosed and surgically treated.",
+      link: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+    },
+    {
+      img: "/El doctor Monge experto en infiltraciones te platica mas sobre ellas en este blog.webp",
+      fecha: "December 2024",
+      titulo: "Knee Injections: Options and Benefits for Osteoarthritis",
+      texto:
+        "This blog covers conservative orthopedic treatment options for osteoarthritis including injections of: Corticosteroids, Platelet-Rich Plasma (PRP), and Hyaluronic Acid.",
+      link: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+    },
+    {
+      img: "/Visita el blog para conocer los detalles entre cada uno con el DR Ricardo Monge.webp",
+      fecha: "January 2025",
+      titulo: "Tendinitis vs Tendinosis: Causes, Differences and Treatments",
+      texto:
+        "Dr. Ricardo Monge, specialist in traumatology and orthopedics, explains the differences between tendinitis (tendon inflammation) and tendinosis (the complication that arises when not treated promptly).",
+      link: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+    },
+    {
+      img: "/Artritis y artrosis Conoce las diferencias con el traumatologo ortopedista Ricardo Monge.webp",
+      fecha: "February 2025",
+      titulo:
+        "How to Tell if It's Arthritis or Osteoarthritis? Key Symptoms and Differences",
+      texto:
+        "Dr. Ricardo Monge explains the key difference between arthritis (an autoimmune disease) and osteoarthritis (a degenerative joint condition).",
+      link: "/blogs/Como-saber-si-es-artritis-o-artrosis",
+    },
+    {
+      img: "/El DR Monge explica en su blog de forma breve todo sobre la lumbalgia.webp",
+      fecha: "February 2025",
+      titulo: "Low Back Pain: Types, Risk Factors and Treatments",
+      texto:
+        "Suffering from back pain? Dr. Ricardo Monge, orthopedic specialist, analyzes in detail this condition that affects 80% of people. Discover the causes, most common symptoms, and available orthopedic treatments to relieve this discomfort.",
+      link: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+    },
+    {
+      img: "/Fractura-Humero-Proximal-Adultos-Mayores-Cuidados-Terapias-Tiempo-Recuperacion-Dr-Ricardo-Monge.webp",
+      fecha: "March 2025",
+      titulo: "Proximal Humerus Fracture in Elderly Adults",
+      texto:
+        "Join Dr. Ricardo Monge as he explains how to reduce fracture risk in elderly adults through healthy habits, home adjustments to prevent falls, recommended exercises, and necessary rehabilitation time.",
+      link: "/blogs/fractura-de-humero-proximal-en-adultos-mayores",
+    },
+    {
+      img: "/cardblog14.webp",
+      fecha: "March 2025",
+      titulo: "Is a Second Orthopedic Surgery Needed for Nonunion?",
+      texto:
+        "What to do if your bone fails to heal? Nonunion occurs and forms a false joint. Read more details from orthopedic trauma surgeon Dr. Ricardo Monge.",
+      link: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+    },
+    {
+      img: "/cardblog15.webp",
+      fecha: "April 2025",
+      titulo:
+        "Persistent Pain But Normal X-ray? You Might Have an Occult Fracture",
+      texto:
+        "Join Dr. Ricardo Monge to discover how these invisible injuries originate and what methods exist to detect them early.",
+      link: "/blogs/fracturas-ocultas-diagnostico-tijuana",
+    },
+    {
+      img: "/cardblog16.webp",
+      fecha: "April 2025",
+      titulo: "Knee Pain? Arthroscopy for Joint Wear Treatment",
+      texto:
+        "Dr. Ricardo Monge, knee arthroscopy expert in Tijuana, answers your questions about this minimally invasive surgery with maximum results.",
+      link: "/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+    },
+  ];
+
+  const handleDragEndDesktop = (event, info) => {
+    const offset = info.offset.x;
+    const velocity = info.velocity.x;
+
+    if (offset < -100 || velocity < -500) {
+      handleNextDesktop(); // Arrastró a la izquierda
+    } else if (offset > 100 || velocity > 500) {
+      handlePrevDesktop(); // Arrastró a la derecha
+    }
+  };
+
+  const handleDragEnd = (event, info) => {
+    const offset = info.offset.x;
+    const velocity = info.velocity.x;
+
+    if (offset < -100 || velocity < -500) {
+      handleNext(); // Arrastró a la izquierda
+    } else if (offset > 100 || velocity > 500) {
+      handlePrev(); // Arrastró a la derecha
+    }
+  };
+
+  const handleClicked = (e) => {
+    e.preventDefault(); // ¡Clave! Detiene la navegación inmediata
+    const link = e.currentTarget.href; // Guarda el href antes del async
+
+    if (typeof ReactGA !== "undefined") {
+      ReactGA.event({
+        category: "button_click",
+        action: "Click",
+        label: "Leer tema", // Añade label para mejor tracking
+      });
+      console.log("Evento enviado ✅");
+
+      // Retraso para asegurar el envío
+      setTimeout(() => {
+        window.location.href = link; // Navega después de 300ms
+      }, 1000);
+    } else {
+      console.error("Error: ReactGA no cargado");
+    }
+  };
+
+  const blogItem = URL ? blogItem_en : blogItem_es;
   const reversedBlogItem = [...blogItem].reverse();
 
   const handleNextDesktop = () => {
@@ -246,7 +382,7 @@ function Blogs() {
             viewBox="0 0 31 57"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            aria-label="Previous Slide"
+            aria-label={URL ? "Previous" : "Anterior"}
           >
             <path
               d="M28.2861 54.6339L2.41885 28.1918L28.861 2.32457"
@@ -259,7 +395,9 @@ function Blogs() {
         </button>
         <div className="text-start">
           <h1 className="font-medium text-[30px] md:text-[42px] mb-16 px-8">
-            Conoce más sobre ortopedia y traumatología en mis blogs{" "}
+            {URL
+              ? "Learn more about orthopedics and traumatology in my blogs"
+              : "Conoce más sobre ortopedia y traumatología en mis blogs"}
           </h1>
           <motion.div
             ref={containerRef}
@@ -312,7 +450,7 @@ function Blogs() {
                         onClick={handleClicked} // Handler aquí
                         role="button" // Accesibilidad
                       >
-                        Leer tema
+                        {URL ? "Read blog" : "Leer tema"}
                       </a>
                     </p>
                   </div>
