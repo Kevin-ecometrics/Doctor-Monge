@@ -4,6 +4,9 @@ import Tiktok from "../components/icons/Tiktok.astro";
 import Instagram from "../components/icons/Instagram.astro";
 import Doctorialia from "../components/icons/Doctoralia.astro";
 import Hamburger from "./icons/Hamburger.astro";
+import { MdLanguage } from "react-icons/md";
+
+const URL = Astro.url.pathname.startsWith("/en/");
 ---
 
 <nav
@@ -47,7 +50,19 @@ import Hamburger from "./icons/Hamburger.astro";
     </button>
   </div>
   <ul class="flex flex-col space-y-8 py-16 p-4 hover:*:text-blue-500 font-bold">
-    <li><a href="#section1">INICIO</a></li>
+    {
+      URL ? (
+      <li><a href="#section1">HOME</a></li>
+    <li><a href="#section2">SKILLS</a></li>
+    <li><a href="#section3">ORTO TIPS</a></li>
+    <li><a href="#section4">PROCEDURES</a></li>
+    <li><a href="#section5">EDUCATION</a></li>
+    <li><a href="#section6">TESTIMONIALS</a></li>
+    <li><a href="#section7">PARTNERS</a></li>
+    <li><a href="#section8">BLOG</a></li>
+    <li><a href="#section9">CONTACT</a></li>
+      ) : (
+      <li><a href="#section1">INICIO</a></li>
     <li><a href="#section2">HABILIDADES</a></li>
     <li><a href="#section3">ORTO TIPS</a></li>
     <li><a href="#section4">PROCEDIMIENTOS</a></li>
@@ -56,6 +71,19 @@ import Hamburger from "./icons/Hamburger.astro";
     <li><a href="#section7">SOCIOS</a></li>
     <li><a href="#section8">BLOG</a></li>
     <li><a href="#section9">CONTACTO</a></li>
+      )
+    }
+
+    <li class="flex items-center gap-2">
+      <MdLanguage />
+
+      <button
+        id="language-toggle"
+        class="text-white hover:text-blue-500 text-lg"
+      >
+        <span id="language-text">ENGLISH</span>
+      </button>
+    </li>
   </ul>
   <div class="flex justify-start px-4 gap-4 mt-16 md:mt-8">
     <a
@@ -100,6 +128,30 @@ import Hamburger from "./icons/Hamburger.astro";
   const links = document.querySelectorAll(
     "aside a"
   ) as NodeListOf<HTMLAnchorElement>;
+  const languageToggle = document.getElementById(
+    "language-toggle"
+  ) as HTMLButtonElement;
+  const languageText = document.getElementById("language-text") as HTMLElement;
+
+  // Update language button text based on current route
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentUrl = window.location.pathname;
+    if (currentUrl.startsWith("/en/")) {
+      languageText.textContent = "ESPAÑOL";
+    } else {
+      languageText.textContent = "ENGLISH";
+    }
+  });
+
+  // Language toggle logic
+  languageToggle.addEventListener("click", () => {
+    const currentUrl = window.location.pathname;
+    if (currentUrl.startsWith("/en/")) {
+      window.location.href = currentUrl.replace("/en/", "/") || "/";
+    } else {
+      window.location.href = "/en/" + (currentUrl === "/" ? "" : currentUrl);
+    }
+  });
 
   function highlightCurrentSectionLink() {
     const sections = Array.from(
