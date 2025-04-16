@@ -1,5 +1,7 @@
 ---
-const Information = [
+const { URL } = Astro.props;
+
+const Information_es = [
   {
     icon: "/ficha1.webp",
     title: "Recomendaciones para una columna sana",
@@ -32,24 +34,63 @@ const Information = [
   },
 ];
 
-const { URL } = Astro.props;
+const Information_en = [
+  {
+    icon: "/ficha1.webp",
+    title: "Recommendations for a healthy spine",
+    text: "This document contains illustrated spine hygiene exercises and recommendations.",
+    link: "/fichas/recomendaciones-para-una-columna-sana/",
+  },
+  {
+    icon: "/ficha2.webp",
+    title: "Postoperative Guide for Total Hip Replacement",
+    text: "This document provides necessary guidelines and recommendations for your recovery.",
+    link: "/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-cadera/",
+  },
+  {
+    icon: "/ficha3.webp",
+    title: "Postoperative Guide for Total Knee Replacement",
+    text: "Here you'll find care instructions and recommendations for a successful return to daily activities.",
+    link: "/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-rodilla/",
+  },
+  {
+    icon: "/ficha4.webp",
+    title: "Postoperative Guide for Knee Arthroscopy",
+    text: "This document summarizes key care tips and advice for a successful recovery.",
+    link: "/fichas/instrucciones-postoperatorias-de-artroscopia-de-rodilla/",
+  },
+  {
+    icon: "/ficha5.webp",
+    title: "General Preoperative Recommendations",
+    text: "This guide outlines key steps to prepare for your upcoming procedure.",
+    link: "/fichas/recomendaciones-generales-preoperatorias/",
+  },
+];
 ---
 
 <div
   class="h-screen flex md:justify-center md:items-start flex-col w-[80%] mx-auto"
 >
   <h1 class="font-medium text-[21px] md:text-[42px] mt-16 md:mt-0">
-    Orto tips y guías para descargar
+    {
+      URL
+        ? "Ortho tips and guides to download"
+        : "Orto tips y guías para descargar"
+    }
   </h1>
   <p class="font-bold text-[14px] md:text-[16px] text-[#969596] mb-8">
-    Archivos disponibles. Visualízalos en línea o descárgalos a tu móvil.
+    {
+      URL
+        ? "Available files. View them online or download them to your mobile."
+        : "Archivos disponibles. Visualízalos en línea o descárgalos a tu móvil."
+    }
   </p>
   <div class="w-full relative">
     <div
       class="bg-black text-white py-16 px-8 w-[90%] md:max-h-[550px] max-h-[480px] scrollbar-blue overflow-y-auto"
     >
       {
-        Information.map((item, index) => (
+        (URL ? Information_en : Information_es).map((item, index) => (
           <>
             {/* Fila completa para cada elemento */}
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
@@ -77,13 +118,13 @@ const { URL } = Astro.props;
                 <h3 class="text-lg text-[#969596]">{item.text}</h3>
                 <div class="py-4 md:hidden block">
                   <a class="mb-8 bg-blue-500 px-4 py-2" href={item.link}>
-                    Ver Ficha Tecnica
+                    {URL ? "View Technical Sheet" : "Ver Ficha Técnica"}
                   </a>
                 </div>
               </div>
             </div>
             {/* Línea divisora después de cada fila */}
-            {index + 1 !== Information.length && (
+            {index + 1 !== (URL ? Information_en : Information_es).length && (
               <hr class="my-4 border-t border-[#969596]" />
             )}
           </>

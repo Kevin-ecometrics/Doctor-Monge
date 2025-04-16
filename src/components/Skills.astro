@@ -1,8 +1,14 @@
 ---
-let skills = [
-  { name: "Artroplastia de cadera y rodilla ", percentage: "10%" },
-  { name: "Artroscopia de hombro y rodilla  ", percentage: "10%" },
-  { name: "Cirugía de columna ", percentage: "10%" },
+let skills_en = [
+  { name: "Hip and knee arthroplasty", percentage: "10%" },
+  { name: "Shoulder and knee arthroscopy", percentage: "10%" },
+  { name: "Spine surgery", percentage: "10%" },
+];
+
+let skills_es = [
+  { name: "Artroplastia de cadera y rodilla", percentage: "10%" },
+  { name: "Artroscopia de hombro y rodilla", percentage: "10%" },
+  { name: "Cirugía de columna", percentage: "10%" },
 ];
 
 const { URL } = Astro.props;
@@ -35,47 +41,59 @@ const { URL } = Astro.props;
       <div
         class="flex flex-col justify-end items-end mb-4 sm:mb-8 px-3 sm:px-6"
       >
-        <h2 class="text-[16px] sm:text-[20px] font-bold">Años</h2>
-        <h2 class="text-[16px] sm:text-[20px] font-bold">de práctica</h2>
-        <h2 class="text-[16px] sm:text-[20px] font-bold">ortopédica y</h2>
-        <h2 class="text-[16px] sm:text-[20px] font-bold">traumatológica</h2>
+        <h2 class="text-[16px] sm:text-[20px] font-bold">
+          {URL ? "Years" : "Años"}
+        </h2>
+        <h2 class="text-[16px] sm:text-[20px] font-bold">
+          {URL ? "of orthopedic" : "de práctica"}
+        </h2>
+        <h2 class="text-[16px] sm:text-[20px] font-bold">
+          {URL ? "and trauma" : "ortopédica y"}
+        </h2>
+        <h2 class="text-[16px] sm:text-[20px] font-bold">
+          {URL ? "practice" : "traumatológica"}
+        </h2>
         <div class="flex justify-between items-end gap-2 sm:gap-4">
           <div class="border-b border-white w-28 lg:w-16"></div>
           <h2 class="text-[16px] sm:text-[20px] font-bold">
-            aliviando a pacientes
+            {URL ? "helping patients" : "aliviando a pacientes"}
           </h2>
         </div>
       </div>
     </div>
     <div class="lg:py-0 py-4">
-      {
-        URL ? (
-          <h2 class="text-[30px] md:text-[35px] font-semibold text-wrap">
-            About my practice as an orthopedic-traumatologist
-          </h2>
-        ) : (
-          <h2 class="text-[30px] md:text-[35px] font-semibold text-wrap">
-            Sobre mi práctica como traumatólogo-ortopedista
-          </h2>
-        )
-      }
+      <h2 class="text-[30px] md:text-[35px] font-semibold text-wrap">
+        {
+          URL
+            ? "About my practice as an orthopedic-traumatologist"
+            : "Sobre mi práctica como traumatólogo-ortopedista"
+        }
+      </h2>
 
       <h3 class="font-bold text-[#969596] text-[18px] mb-2">
-        Soy el tipo de médico que se interesa conocer tu caso particular y
-        acompañarte a comprender tu enfermedad o lesión para comenzar juntos con
-        el tratamiento ideal para tí. <br />
-        Ser el médico Ortopedista que está cerca de ti en Tijuana y San Diego
+        {
+          URL
+            ? "I'm the kind of doctor who takes interest in understanding your particular case and guiding you through your illness or injury to begin together with the ideal treatment for you. Being the orthopedic surgeon who is close to you in Tijuana and San Diego."
+            : "Soy el tipo de médico que se interesa conocer tu caso particular y acompañarte a comprender tu enfermedad o lesión para comenzar juntos con el tratamiento ideal para tí. Ser el médico Ortopedista que está cerca de ti en Tijuana y San Diego."
+        }
       </h3>
       <h2 class="text-[22px] font-semibold">
-        Áreas destacadas en cirugía ortopédica
+        {
+          URL
+            ? "Specialized areas in orthopedic surgery"
+            : "Áreas destacadas en cirugía ortopédica"
+        }
       </h2>
       <div class="py-4 lg:py-8 mb-8">
         {
-          skills.map((skill) => (
+          (URL ? skills_en : skills_es).map((skill) => (
             <>
               <h2 class="mb-1 text-lg font-medium ">{skill.name}</h2>
               <div class="lg:w-96 bg-gray-200 rounded-full h-2.5 mb-4 ">
-                <div class="bg-blue-600 h-2.5 rounded-full animate-width" />
+                <div
+                  class="bg-blue-600 h-2.5 rounded-full animate-width"
+                  style={`width: ${skill.percentage}`}
+                />
               </div>
             </>
           ))

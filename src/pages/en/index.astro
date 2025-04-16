@@ -68,10 +68,10 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
       <Skills URL={isEnglish} />
     </section>
     <section id="section3" class="snap-start">
-      <PatientInformation />
+      <PatientInformation URL={isEnglish} />
     </section>
     <section id="section4" class="snap-start">
-      <Success client:visible />
+      <Success client:visible URL={isEnglish} />
     </section>
     <section id="section5" class="snap-start">
       <Education client:visible />

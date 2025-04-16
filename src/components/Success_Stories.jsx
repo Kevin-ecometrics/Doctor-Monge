@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const SuccessStories = () => {
+const SuccessStories = ({ URL }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
@@ -33,7 +33,7 @@ const SuccessStories = () => {
     };
   }, []);
 
-  const content = [
+  const content_es = [
     {
       title: "Prótesis total de",
       title2: "rodilla",
@@ -54,7 +54,7 @@ const SuccessStories = () => {
       title: "Hernia de",
       title2: "disco lumbar",
       subtitle:
-        "¿Sabías que la radiculopatía por hernia en disco lumbar es una de las principales causas de discapacidad ortopédica en todo el mundo?  Me gustaría hablar sobre la intervención quirúrgica, una práctica en traumatología donde se realiza una descompresión de la raíz nerviosa afectada. ",
+        "¿Sabías que la radiculopatía por hernia en disco lumbar es una de las principales causas de discapacidad ortopédica en todo el mundo? Me gustaría hablar sobre la intervención quirúrgica, una práctica en traumatología donde se realiza una descompresión de la raíz nerviosa afectada.",
       background:
         "/protesis%20total%20de%20rodilla%20en%20Tijuana%20consulta.png",
       link: "/procedimientos/hernia-de-disco-lumbar",
@@ -63,7 +63,7 @@ const SuccessStories = () => {
       title: "Lesion de",
       title2: "L.C.A.",
       subtitle:
-        "El ligamento cruzado anterior es uno de los estabilizadores más importantes de la rodilla que le da el 85% de su estabilidad, acompáñame te platico de ortopedia y de cómo se aborda esta lesión. ",
+        "El ligamento cruzado anterior es uno de los estabilizadores más importantes de la rodilla que le da el 85% de su estabilidad, acompáñame te platico de ortopedia y de cómo se aborda esta lesión.",
       background:
         "/Lesiones%20en%20ligamento%20cruzado%20anterior%20tratamiento%20conservador%20en%20Tijuana.png",
       link: "/procedimientos/lesion-por-lca",
@@ -72,7 +72,7 @@ const SuccessStories = () => {
       title: "Hernia discal",
       title2: "cervical",
       subtitle:
-        "Una hernia se produce cuando el disco que se encargan de disipar las fuerzas que recorren la columna se dañan, por tanto, se aplasta las raíces nerviosas.  Te invito a ver este videoblog para conocer su tratamiento ortopédico.",
+        "Una hernia se produce cuando el disco que se encargan de disipar las fuerzas que recorren la columna se dañan, por tanto, se aplasta las raíces nerviosas. Te invito a ver este videoblog para conocer su tratamiento ortopédico.",
       background:
         "/Hernia%20de%20disco%20lumbar%20cirugia%20y%20tratamiento%20en%20Tijuana.png",
       link: "/procedimientos/hernia-discal-cervical",
@@ -81,7 +81,62 @@ const SuccessStories = () => {
       title: "Lesiones en",
       title2: "meniscos",
       subtitle:
-        "Son responsables del casi 50 % de la trasmisión de fuerza a través de la rodilla y actúan como estabilizadores secundarios. Esta es una de las lesiones de rodilla más comunes te invito a conocer tratamiento ",
+        "Son responsables del casi 50 % de la trasmisión de fuerza a través de la rodilla y actúan como estabilizadores secundarios. Esta es una de las lesiones de rodilla más comunes te invito a conocer tratamiento.",
+      background:
+        "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png",
+      link: "/procedimientos/lesiones-en-meniscos",
+    },
+  ];
+
+  const content_en = [
+    {
+      title: "Total knee",
+      title2: "replacement",
+      subtitle:
+        "This surgery has one of the highest success rates. It's normal to feel anxious before this orthopedic procedure, so in this vlog I explain everything you need to know as a knee specialist trauma surgeon.",
+      background: "/Protesis%20total%20de%20cadera%20en%20Tijuana.png",
+      link: "/procedimientos/protesis-total-de-rodilla",
+    },
+    {
+      title: "Total hip",
+      title2: "replacement",
+      subtitle:
+        "In this vlog we'll explore one of the most performed trauma surgeries worldwide with over 1 million patients each year. I'll explain what it involves and who are candidates.",
+      background: "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png",
+      link: "/procedimientos/protesis-total-de-cadera",
+    },
+    {
+      title: "Lumbar disc",
+      title2: "herniation",
+      subtitle:
+        "Did you know lumbar disc herniation radiculopathy is one of the leading causes of orthopedic disability worldwide? I'd like to discuss the surgical intervention, a trauma procedure that decompresses the affected nerve root.",
+      background:
+        "/protesis%20total%20de%20rodilla%20en%20Tijuana%20consulta.png",
+      link: "/procedimientos/hernia-de-disco-lumbar",
+    },
+    {
+      title: "Anterior cruciate",
+      title2: "ligament (ACL) injury",
+      subtitle:
+        "The anterior cruciate ligament is one of the knee's most important stabilizers, providing 85% of its stability. Join me as I discuss orthopedics and how this injury is treated.",
+      background:
+        "/Lesiones%20en%20ligamento%20cruzado%20anterior%20tratamiento%20conservador%20en%20Tijuana.png",
+      link: "/procedimientos/lesion-por-lca",
+    },
+    {
+      title: "Cervical disc",
+      title2: "herniation",
+      subtitle:
+        "A herniation occurs when the discs that dissipate forces along the spine are damaged, compressing nerve roots. I invite you to watch this vlog to learn about its orthopedic treatment.",
+      background:
+        "/Hernia%20de%20disco%20lumbar%20cirugia%20y%20tratamiento%20en%20Tijuana.png",
+      link: "/procedimientos/hernia-discal-cervical",
+    },
+    {
+      title: "Meniscal",
+      title2: "injuries",
+      subtitle:
+        "The menisci are responsible for nearly 50% of force transmission through the knee and act as secondary stabilizers. This is one of the most common knee injuries - I invite you to learn about its treatment.",
       background:
         "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png",
       link: "/procedimientos/lesiones-en-meniscos",
@@ -89,12 +144,14 @@ const SuccessStories = () => {
   ];
 
   function incrementIndex() {
+    const content = URL ? content_en : content_es;
     setCurrentIndex((prevIndex) => (prevIndex + 1) % content.length);
     setAnimate(true);
     setAnimationKey((prevKey) => prevKey + 1);
   }
 
   function decrementIndex() {
+    const content = URL ? content_en : content_es;
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + content.length) % content.length
     );
@@ -120,7 +177,7 @@ const SuccessStories = () => {
           style={{
             backgroundSize: "cover",
             backgroundPosition: "center",
-            backgroundImage: `url(${content[currentIndex].background})`,
+            backgroundImage: `url(${URL ? content_en[currentIndex].background : content_es[currentIndex].background})`,
           }}
         >
           <div className="flex justify-center lg:justify-between items-center h-screen lg:w-[1400px] m-auto px-28">
@@ -150,21 +207,34 @@ const SuccessStories = () => {
               transition={{ duration: 1.0 }}
             >
               <h2 className="font-bold text-[25px] lg:text-[50px] mb-2">
-                {content[currentIndex].title}
+                {URL
+                  ? content_en[currentIndex].title
+                  : content_es[currentIndex].title}
               </h2>
               <h2 className="font-bold text-[70px] lg:text-[80px] mb-2">
-                {content[currentIndex].title2}
+                {URL
+                  ? content_en[currentIndex].title2
+                  : content_es[currentIndex].title2}
               </h2>
               <h3 className="font-bold text-[14px] lg:text-[18px] text-[#969596] mb-8 lg:w-[70%]">
-                {content[currentIndex].subtitle}
+                {URL
+                  ? content_en[currentIndex].subtitle
+                  : content_es[currentIndex].subtitle}
               </h3>
               <button className="bg-blue-500 hover:bg-blue-700 px-8 py-2 mb-12">
-                <a className="text-sm" href={content[currentIndex].link}>
-                  Conocer más
+                <a
+                  className="text-sm"
+                  href={
+                    URL
+                      ? content_en[currentIndex].link
+                      : content_es[currentIndex].link
+                  }
+                >
+                  {URL ? "Learn more" : "Conoce más"}
                 </a>
               </button>
               <div className="flex justify-center items-center gap-4">
-                {content.map((item, index) => (
+                {(URL ? content_en : content_es).map((item, index) => (
                   <svg
                     className="cursor-pointer"
                     key={index}
