@@ -50,6 +50,8 @@ const blogsRutas = [
 const blogActual = "Como-saber-si-es-artritis-o-artrosis";
 
 const id = 11;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -57,53 +59,61 @@ const id = 11;
 >
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-8 font-semibold">
-      ¿Es artritis o es artrosis? Diferencias entre cada una y opciones de
-      tratamiento.
+      {
+        isEnglish
+          ? "Is it arthritis or osteoarthritis? Differences between each and treatment options."
+          : "¿Es artritis o es artrosis? Diferencias entre cada una y opciones de tratamiento."
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Aunque ambas se derivan de una inflamación articular, la artritis es una
-      enfermedad autoinmune mientras que la artrosis es un desgaste de las
-      articulaciones. <br />
+      {
+        isEnglish
+          ? ""
+          : "Aunque ambas se derivan de una inflamación articular, la artritis es una enfermedad autoinmune mientras que la artrosis es un desgaste de las articulaciones. "
+      }
+      <br />
       <br />
     </h3>
   </Observer>
 
   <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Artritis</h2>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {isEnglish ? "" : "Artritis"}
+    </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Como sabemos, una articulación es el punto de unión entre dos o más huesos
-      junto con los tejidos blandos que lo rodean. Existen más de 100 formas de
-      artritis que pueden afectar las articulaciones, pero las más comunes son
-      osteoartritis y artritis reumatoidea.
-      <br />
-      <br />
-      En la artritis reumatoidea, la inflamación del revestimiento de la articulación,
-      es decir, el tejido sinovial en los huesos, conduce al daño de la articulación,
-      y en conjunto puede afectar vasos sanguíneos y los pulmones, especialmente
-      del cartílago y los huesos, que puede generar una erosión, inestabilidad, fibrosis
-      dentro de la articulación y deformidades severas.
-      <br />
-      <br />
+      {
+        isEnglish
+          ? ""
+          : "Como sabemos, una articulación es el punto de unión entre dos o más huesos junto con los tejidos blandos que lo rodean. Existen más de 100 formas de artritis que pueden afectar las articulaciones, pero las más comunes son osteoartritis y artritis reumatoidea."
+      }
 
-      Algunas causas de la artritis son las lesiones, mala alineación de los
-      miembros, infecciones, enfermedades autoinmunes, depósitos anormales en
-      las articulaciones como la gota. De la misma forma, algunas artritis se
-      desarrollan o afectan en diferentes tiempos o intensidades.
       <br />
       <br />
-
-      Alrededor del 60% de personas con artritis son mujeres; aunque se puede
-      dar en cualquier parte del cuerpo, usualmente, la artritis reumatoidea
-      afecta a las muñecas, nudillos, pies , cuello y articulaciones en las
-      extremidades. Las articulaciones no son lo único que afecta; la artritis
-      también puede generar problemas en el corazón, pulmones, sangre, nervios,
-      ojos y piel.
+      {
+        isEnglish
+          ? ""
+          : "En la artritis reumatoidea, la inflamación del revestimiento de la articulación, es decir, el tejido sinovial en los huesos, conduce al daño de la articulación, y en conjunto puede afectar vasos sanguíneos y los pulmones, especialmente del cartílago y los huesos, que puede generar una erosión, inestabilidad, fibrosis dentro de la articulación y deformidades severas."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? ""
+          : "Algunas causas de la artritis son las lesiones, mala alineación de los miembros, infecciones, enfermedades autoinmunes, depósitos anormales en las articulaciones como la gota. De la misma forma, algunas artritis se desarrollan o afectan en diferentes tiempos o intensidades."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? ""
+          : "Alrededor del 60% de personas con artritis son mujeres; aunque se puede dar en cualquier parte del cuerpo, usualmente, la artritis reumatoidea afecta a las muñecas, nudillos, pies , cuello y articulaciones en las extremidades. Las articulaciones no son lo único que afecta; la artritis también puede generar problemas en el corazón, pulmones, sangre, nervios, ojos y piel."
+      }
       <br />
       <br />
     </h3>
@@ -120,92 +130,113 @@ const id = 11;
   </ObserverImage>
 
   <Observer client:visible>
-    <h2 class="text-white text-4xl mb-4 font-semibold">Síntomas:</h2>
+    <h2 class="text-white text-4xl mb-4 font-semibold">
+      {isEnglish ? "" : "Síntomas:"}
+    </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-8">
-      Dolor articular tanto en reposo como en movimiento combinado con hinchazón
-      y calor, rigidez prolongada, cansancio inusual o poca energía, fiebre
-      ocasional y pérdida del apetito.
+      {
+        isEnglish
+          ? ""
+          : "Dolor articular tanto en reposo como en movimiento combinado con hinchazón y calor, rigidez prolongada, cansancio inusual o poca energía, fiebre ocasional y pérdida del apetito."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Suele presentarse en ambos lados o extremidades del cuerpo. Si no recibe
-      tratamiento, la artritis puede empeorar y provocar mayores consecuencias
-      para la salud; factores como estrés, demasiada actividad física o
-      suspensión repentina de medicamentos pueden ser factores desencadenantes
+      {
+        isEnglish
+          ? ""
+          : "Suele presentarse en ambos lados o extremidades del cuerpo. Si no recibe tratamiento, la artritis puede empeorar y provocar mayores consecuencias para la salud; factores como estrés, demasiada actividad física o suspensión repentina de medicamentos pueden ser factores desencadenantes"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Doblamiento de los dedos, es decir, que puede provocar que los dedos se
-      doblen en cuello de cisne, donde el dedo se dobla y la articulación
-      central se estira y la articulación más externa se curva hacia adentro.
-    </h3>
-  </Observer>
-
-  <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Artrosis</h2>
-  </Observer>
-  <Observer client:visible>
-    <h3 class="text-xl mb-16">
-      La artrosis, o también llamada osteoartrosis, es una enfermedad articular
-      degenerativa que afecta los tejidos blandos de la articulación, afectando
-      también el hueso y cartílago, este último desintegrándose y siendo el más
-      afectado.
-      <br />
-      <br />
-      El cartílago que amortigua y protege los extremos de los huesos y permite el
-      movimiento de la articulación, al momento de la artrosis, pierde sus propiedades,
-      haciéndose más ligero y delgado hasta desintegrarse, haciendo que los extremos
-      de los huesos rocen directamente, generando dolor.
-      <br />
-      <br />
-
-      Con frecuencia se da en la columna cervical, hombro, dedos de las manos,
-      cadera, rodilla y dedos del pie. Se divide en primaria y secundaria,
-      siendo la primera una causa indefinida y la segunda asociada a patologías
-      como gota, diabetes mellitus, displasias óseas y hemocromatosis.
-      <br />
-      <br />
-    </h3>
-  </Observer>
-
-  <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Síntomas:</h2>
-  </Observer>
-  <Observer client:visible>
-    <h3 class="text-xl mb-16">
-      Dolor, como síntoma principal, de características mecánicas. Se inicia con
-      la función articular y disminuyen con el reposo. El dolor nocturno es
-      raro, apareciendo solo en fases avanzadas. La intensidad del dolor es
-      variable según la persona. 
-      <br />
-      <br />
-      Rigidez articular, localizada, matutina y que desaparece después de la movilización
-      en pocos minutos. Deformidad articular secundaria a la reacción osteofítica
-      más evidentes en manos, pies y rodillas. Es, en muchas ocasiones, el motivo
-      de consulta en caso de ausencia de dolor.
-      <br />
-      <br />
-      Crujidos: Son frecuentes y fáciles de reproducir en la exploración, no teniendo
-      importancia si se presenta de manera aislada y quistes subcutáneos
+      {
+        isEnglish
+          ? ""
+          : "Doblamiento de los dedos, es decir, que puede provocar que los dedos se doblen en cuello de cisne, donde el dedo se dobla y la articulación central se estira y la articulación más externa se curva hacia adentro."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Similitudes en diagnóstico entre artritis y artrosis
+      {isEnglish ? "" : "Artrosis"}
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Ambas enfermedades provocan dolor en una o varias articulaciones a la vez.
-      Con la predominancia en mujeres.
+      {
+        isEnglish
+          ? ""
+          : "La artrosis, o también llamada osteoartrosis, es una enfermedad articular degenerativa que afecta los tejidos blandos de la articulación, afectando también el hueso y cartílago, este último desintegrándose y siendo el más afectado."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? ""
+          : "El cartílago que amortigua y protege los extremos de los huesos y permite el movimiento de la articulación, al momento de la artrosis, pierde sus propiedades, haciéndose más ligero y delgado hasta desintegrarse, haciendo que los extremos de los huesos rocen directamente, generando dolor."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? ""
+          : "Con frecuencia se da en la columna cervical, hombro, dedos de las manos, cadera, rodilla y dedos del pie. Se divide en primaria y secundaria, siendo la primera una causa indefinida y la segunda asociada a patologías como gota, diabetes mellitus, displasias óseas y hemocromatosis."
+      }
+      <br />
+      <br />
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {isEnglish ? "" : "Síntomas:"}
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      {
+        isEnglish
+          ? ""
+          : "Dolor, como síntoma principal, de características mecánicas. Se inicia con la función articular y disminuyen con el reposo. El dolor nocturno es raro, apareciendo solo en fases avanzadas. La intensidad del dolor es variable según la persona. "
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? ""
+          : "Rigidez articular, localizada, matutina y que desaparece después de la movilización en pocos minutos. Deformidad articular secundaria a la reacción osteofítica más evidentes en manos, pies y rodillas. Es, en muchas ocasiones, el motivo de consulta en caso de ausencia de dolor."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? ""
+          : "Crujidos: Son frecuentes y fáciles de reproducir en la exploración, no teniendo importancia si se presenta de manera aislada y quistes subcutáneos"
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {isEnglish ? "" : "Similitudes en diagnóstico entre artritis y artrosis"}
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      {
+        isEnglish
+          ? ""
+          : "Ambas enfermedades provocan dolor en una o varias articulaciones a la vez. Con la predominancia en mujeres."
+      }
     </h3>
   </Observer>
   <ObserverImage client:visible>
@@ -221,30 +252,30 @@ const id = 11;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Diferencias entre artritis y artrosis
+      {isEnglish ? "" : "Diferencias entre artritis y artrosis"}
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      En la artritis, el líquido sinovial se esparce por la articulación en
-      lugar de que sea reabsorbido, lo que genera una inflamación y ocasiona una
-      erosión del hueso y del cartílago. Puede ser crónico o consecuencia de
-      otras enfermedades. Mientras que la artrosis es un proceso degenerativo
-      que afecta al cartílago, que funciona como almohadilla, en este caso, al
-      desgastarse genera un roce constante entre los huesos, provocando mucho
-      malestar y la pérdida de flexibilidad en las articulaciones.
+      {
+        isEnglish
+          ? ""
+          : "En la artritis, el líquido sinovial se esparce por la articulación en lugar de que sea reabsorbido, lo que genera una inflamación y ocasiona una erosión del hueso y del cartílago. Puede ser crónico o consecuencia de otras enfermedades. Mientras que la artrosis es un proceso degenerativo que afecta al cartílago, que funciona como almohadilla, en este caso, al desgastarse genera un roce constante entre los huesos, provocando mucho malestar y la pérdida de flexibilidad en las articulaciones."
+      }
       <br />
       <br />
-      Otra gran diferencia es que la artritis es una enfermedad autoinmune que puede
-      ser multifactorial, por ejemplo, debido a traumatismos, infecciones, enfermedades,
-      y la artrosis está más asociada al envejecimiento, sobrepeso, sobreesfuerzo.
+      {
+        isEnglish
+          ? ""
+          : "Otra gran diferencia es que la artritis es una enfermedad autoinmune que puede ser multifactorial, por ejemplo, debido a traumatismos, infecciones, enfermedades, y la artrosis está más asociada al envejecimiento, sobrepeso, sobreesfuerzo."
+      }
       <br />
       <br />
-
-      El dolor en la artritis es continuo y tienden a inflamarse con un cambio
-      de temperatura acompañado con la pérdida del apetito. Mientras que la
-      artrosis se produce al realizar el movimiento, y genera ruido o
-      chasquidos.
+      {
+        isEnglish
+          ? ""
+          : "El dolor en la artritis es continuo y tienden a inflamarse con un cambio de temperatura acompañado con la pérdida del apetito. Mientras que la artrosis se produce al realizar el movimiento, y genera ruido o chasquidos."
+      }
       <br />
       <br />
     </h3>
@@ -252,35 +283,40 @@ const id = 11;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Tratamiento para artritis y artrosis
+      {isEnglish ? "" : "Tratamiento para artritis y artrosis"}
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Artritis: Se recomiendan los antiinflamatorios, el reposo relativo,
-      actividad física de bajo impacto con apoyo de un fisioterapeuta; en casos
-      severos será necesaria una cirugía de reemplazo de la articulación o
-      autoinjertos.
+      {
+        isEnglish
+          ? ""
+          : "Artritis: Se recomiendan los antiinflamatorios, el reposo relativo, actividad física de bajo impacto con apoyo de un fisioterapeuta; en casos severos será necesaria una cirugía de reemplazo de la articulación o autoinjertos."
+      }
       <br />
       <br />
-      Artrosis: Se recomienda un acompañamiento con fisioterapia, ejercicio aeróbico
-      como natación y caminata, tratamiento farmacológico con sulfato de glucosamina
-      y condroitín sulfato, que estimula la síntesis de matriz extracelular del cartílago,
-      infiltraciones de ácido hialurónico y plasma rico en plaquetas.
+      {
+        isEnglish
+          ? ""
+          : "Artrosis: Se recomienda un acompañamiento con fisioterapia, ejercicio aeróbico como natación y caminata, tratamiento farmacológico con sulfato de glucosamina y condroitín sulfato, que estimula la síntesis de matriz extracelular del cartílago, infiltraciones de ácido hialurónico y plasma rico en plaquetas."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Si presentas dolores y molestias prolongadas en alguna articulación, te
-      invito a una consulta de valoración para descartar o diferenciar alguna de
-      estas afecciones y llevar a cabo un diagnóstico detallado y un plan de
-      tratamiento.
+      {
+        isEnglish
+          ? ""
+          : "Si presentas dolores y molestias prolongadas en alguna articulación, te invito a una consulta de valoración para descartar o diferenciar alguna de estas afecciones y llevar a cabo un diagnóstico detallado y un plan de tratamiento."
+      }
       <br />
       <br />
-      Me puedes encontrar en Tijuana, muy cerca de la línea fronteriza, en zona Río.
-      Si tienes alguna duda, te invito a escribir en los comentarios; será un gusto
-      poder apoyarles a resolver sus dudas.
+      {
+        isEnglish
+          ? ""
+          : "Me puedes encontrar en Tijuana, muy cerca de la línea fronteriza, en zona Río. Si tienes alguna duda, te invito a escribir en los comentarios; será un gusto poder apoyarles a resolver sus dudas."
+      }
     </h3>
   </Observer>
 </article>

@@ -100,20 +100,18 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Este tipo de infiltraciones es muy eficaz para el alivio del dolor a muy
-      corto plazo. Normalmente, se aplican con anestesia para minimizar las
-      molestias al momento de hacer efecto. Otra razón importante para
-      combinarla es que permite confirmar que el medicamento se encuentra en el
-      tejido lesionado. Posteriormente, se requiere una visita de valoración
-      después de dos semanas. Cabe recalcar que este tipo de infiltraciones no
-      se recomiendan más de tres veces en un año. <br />
-      <br /> Para llevar a cabo es necesario pausar la ingesta de medicamentos anticoagulantes
-      o suplementos con efecto anticoagulante para evitar moretones o algún sangrado.
-      Durante la aplicación, se limpia la zona de la rodilla y con ayuda de un ecógrafo,
-      se puede visualizar el avance de la aguja en la rodilla para mayor precisión.
-      Algunas personas presentan enrojecimiento y una sensación de calor en el pecho
-      y el rostro. Es normal experimentar dolor en la rodilla e hinchazón durante
-      las primeras 24 a 48 horas. Se recomienda reposo relativo.
+      {
+        isEnglish
+          ? "This type of infiltration is very effective for very short-term pain relief. They are usually applied with anesthesia to minimize discomfort when they take effect. Another important reason to combine it is to confirm that the medication is in the injured tissue. Subsequently, an evaluation visit is required after two weeks. It should be noted that this type of infiltration is not recommended more than three times in a year."
+          : "Este tipo de infiltraciones es muy eficaz para el alivio del dolor a muy corto plazo. Normalmente, se aplican con anestesia para minimizar las molestias al momento de hacer efecto. Otra razón importante para combinarla es que permite confirmar que el medicamento se encuentra en el tejido lesionado. Posteriormente, se requiere una visita de valoración después de dos semanas. Cabe recalcar que este tipo de infiltraciones no se recomiendan más de tres veces en un año."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "To perform the procedure it is necessary to pause the intake of anticoagulant medications or supplements with anticoagulant effect to avoid bruising or bleeding. During the application, the knee area is cleaned and with the help of an ultrasound scanner, the advancement of the needle in the knee can be visualized for greater precision. Some people have redness and a feeling of warmth in the chest and face. It is normal to experience knee pain and swelling during the first 24 to 48 hours. Relative rest is recommended."
+          : "Para llevar a cabo es necesario pausar la ingesta de medicamentos anticoagulantes o suplementos con efecto anticoagulante para evitar moretones o algún sangrado. Durante la aplicación, se limpia la zona de la rodilla y con ayuda de un ecógrafo, se puede visualizar el avance de la aguja en la rodilla para mayor precisión. Algunas personas presentan enrojecimiento y una sensación de calor en el pecho y el rostro. Es normal experimentar dolor en la rodilla e hinchazón durante las primeras 24 a 48 horas. Se recomienda reposo relativo."
+      }
     </h3>
   </Observer>
 
@@ -129,29 +127,35 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-4 font-semibold">
-      Infiltraciones de plasma rico en plaquetas (PRP)
+      {
+        isEnglish
+          ? "Infiltrations with platelet-rich plasma (PRP)"
+          : "Infiltraciones de plasma rico en plaquetas (PRP)"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      El plasma es un componente natural de la sangre, rico en proteínas, entre
-      otras propiedades. Mientras que el plasma rico en plaquetas es un
-      concentrado con un número mayor de plaquetas que las que se encuentran en
-      la sangre usualmente. Entre sus propiedades se encuentran los factores de
-      crecimiento de las plaquetas, que son indispensables para que las lesiones
-      sanen adecuadamente. <br />
-      <br /> Para llevar a cabo la infiltración, primero se requiere la extracción
-      de sangre del paciente para ser centrifugada este proceso permite aislar el
-      PRP, que puede contener 3 a 5 veces más plaquetas de lo normal. Con frecuencia
-      estas plaquetas son activadas por medio de sustancias como trombina, cloruro
-      de calcio, gluconato de calcio, lo que estimula los factores de crecimiento
-      esenciales para que se regeneren los tejidos. Finalmente, se realiza la reinyección
-      del plasma, la cual se lleva a cabo con ayuda de un ecógrafo para localizar
-      con precisión la lesión. <br />
-      <br /> En el caso de esta infiltración, no se puede aplicar anestesia previamente,
-      ya que modifica la estructura y la función de la sustancia, lo que la haría
-      menos efectiva. Se recomienda reposo relativo una vez aplicada.
+      {
+        isEnglish
+          ? "Plasma is a natural component of blood, rich in proteins, among other properties. While platelet-rich plasma is a concentrate with a higher number of platelets than those usually found in the blood. Among its properties are the platelet growth factors, which are indispensable for injuries to heal properly."
+          : "El plasma es un componente natural de la sangre, rico en proteínas, entre otras propiedades. Mientras que el plasma rico en plaquetas es un concentrado con un número mayor de plaquetas que las que se encuentran en la sangre usualmente. Entre sus propiedades se encuentran los factores de crecimiento de las plaquetas, que son indispensables para que las lesiones sanen adecuadamente."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "In order to carry out the infiltration, the patient's blood must first be drawn and centrifuged. This process allows the isolation of the PRP, which may contain 3 to 5 times more platelets than normal. Often these platelets are activated by means of substances such as thrombin, calcium chloride, calcium gluconate, which stimulates the growth factors essential for tissue regeneration. Finally, plasma reinjection is performed, which is carried out with the aid of an ultrasound scanner to precisely locate the lesion."
+          : "Para llevar a cabo la infiltración, primero se requiere la extracción de sangre del paciente para ser centrifugada este proceso permite aislar el PRP, que puede contener 3 a 5 veces más plaquetas de lo normal. Con frecuencia estas plaquetas son activadas por medio de sustancias como trombina, cloruro de calcio, gluconato de calcio, lo que estimula los factores de crecimiento esenciales para que se regeneren los tejidos. Finalmente, se realiza la reinyección del plasma, la cual se lleva a cabo con ayuda de un ecógrafo para localizar con precisión la lesión."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "In the case of this infiltration, anesthesia cannot be applied previously, since it modifies the structure and function of the substance, which would make it less effective. Relative rest is recommended once applied."
+          : "En el caso de esta infiltración, no se puede aplicar anestesia previamente, ya que modifica la estructura y la función de la sustancia, lo que la haría menos efectiva. Se recomienda reposo relativo una vez aplicada."
+      }
       <br />
       <br />
     </h3>
@@ -159,45 +163,61 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Infiltraciones con ácido hialurónico
+      {
+        isEnglish
+          ? "Infiltrations with hyaluronic acid"
+          : "Infiltraciones con ácido hialurónico"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      El ácido hialurónico es una sustancia natural que se encuentra en el
-      líquido sinovial de las articulaciones, brindando lubricación y
-      amortiguación. Sin embargo, las afecciones articulares como la
-      osteoartritis generan una disminución de esta sustancia y por
-      consiguiente, un desgaste, fricción y dolor. <br />
-      <br /> Las infiltraciones de ácido hialurónico devuelven la lubricación de
-      la articulación, reduciendo la fricción y la inflamación. Al igual que las
-      infiltraciones ricas en plaquetas, estas se aplican sin anestesia para evitar
-      modificar la sustancia y su efecto. <br />
-      <br /> Te invito a leer más a detalle acerca de este procedimiento en mi blog:
+      {
+        isEnglish
+          ? "Hyaluronic acid is a natural substance found in the synovial fluid of the joints, providing lubrication and cushioning. However, joint conditions such as osteoarthritis lead to a decrease in this substance and consequently to wear, friction and pain."
+          : "El ácido hialurónico es una sustancia natural que se encuentra en el líquido sinovial de las articulaciones, brindando lubricación y amortiguación. Sin embargo, las afecciones articulares como la osteoartritis generan una disminución de esta sustancia y por consiguiente, un desgaste, fricción y dolor."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "Hyaluronic acid injections restore joint lubrication, reducing friction and inflammation. As with platelet-rich infiltrations, these are applied without anesthesia to avoid modifying the substance and its effect."
+          : "Las infiltraciones de ácido hialurónico devuelven la lubricación de la articulación, reduciendo la fricción y la inflamación. Al igual que las infiltraciones ricas en plaquetas, estas se aplican sin anestesia para evitar modificar la sustancia y su efecto. "
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "I invite you to read more about this procedure in detail on my blog:"
+          : "Te invito a leer más a detalle acerca de este procedimiento en mi blog:"
+      }
       <a
-        href="/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/"
+        href={isEnglish
+          ? "/en/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/"
+          : "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/"}
         class="text-white font-bold hover:underline"
       >
-        https://mongeortopedia.com/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/
+        {
+          isEnglish
+            ? "https://mongeortopedia.com/en/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/"
+            : "https://mongeortopedia.com/blogs/infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/"
+        }
       </a>
       <br />
       <br />
-      Durante tu visita con tu traumatólogo de confianza, se evalúan múltiples aspectos
-      para diagnosticar y sobre todo, recomendar el tratamiento más adecuado. En
-      caso de buscar postergar una cirugía, siempre está la opción de un tratamiento
-      conservador multidisciplinario. Este incluye ayudas ortopédicas como bastones,
-      muletas, andadores, vendajes, terapia con un fisioterapeuta, así como asistencia
-      nutricional que proporcione al paciente una dieta balanceada y nutritiva. Si
-      es necesario, se recomienda una dieta específica para reducir la carga en las
-      articulaciones. Todo esto debe ir acompañado de la realización rigurosa de
-      consultas de seguimiento. <br />
-      <br /> Cabe recalcar que este tipo de infiltraciones no curan la osteoartritis,
-      pero disminuyen el dolor y la inflamación lo suficiente para que el cuerpo
-      pueda continuar su trabajo de sanar o sobrellevarla con menos molestias.Cada
-      paciente es único, y no necesariamente el dolor en la rodilla es señal de una
-      afección u osteoartritis y no todos los pacientes son candidatos. Por ello,
-      es fundamental realizar un diagnóstico detallado e individualizado.
+      {
+        isEnglish
+          ? "During your visit with your trusted orthopedic surgeon, multiple aspects are evaluated to diagnose and, above all, recommend the most appropriate treatment. If you are looking to postpone surgery, there is always the option of a multidisciplinary conservative treatment. This includes orthopedic aids such as canes, crutches, walkers, bandages, therapy with a physiotherapist, as well as nutritional assistance that provides the patient with a balanced and nutritious diet. If necessary, a specific diet is recommended to reduce the load on the joints. All this should be accompanied by rigorous follow-up consultations."
+          : "Durante tu visita con tu traumatólogo de confianza, se evalúan múltiples aspectos para diagnosticar y sobre todo, recomendar el tratamiento más adecuado. En caso de buscar postergar una cirugía, siempre está la opción de un tratamiento conservador multidisciplinario. Este incluye ayudas ortopédicas como bastones, muletas, andadores, vendajes, terapia con un fisioterapeuta, así como asistencia nutricional que proporcione al paciente una dieta balanceada y nutritiva. Si es necesario, se recomienda una dieta específica para reducir la carga en las articulaciones. Todo esto debe ir acompañado de la realización rigurosa de consultas de seguimiento."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "It should be emphasized that this type of infiltration does not cure osteoarthritis, but reduces pain and inflammation sufficiently so that the body can continue its work of healing or cope with it with less discomfort.Each patient is unique, and not necessarily knee pain is a sign of a condition or osteoarthritis and not all patients are candidates. Therefore, a detailed and individualized diagnosis is essential."
+          : "Cabe recalcar que este tipo de infiltraciones no curan la osteoartritis, pero disminuyen el dolor y la inflamación lo suficiente para que el cuerpo pueda continuar su trabajo de sanar o sobrellevarla con menos molestias.Cada paciente es único, y no necesariamente el dolor en la rodilla es señal de una afección u osteoartritis y no todos los pacientes son candidatos. Por ello, es fundamental realizar un diagnóstico detallado e individualizado."
+      }
     </h3>
   </Observer>
 
@@ -212,9 +232,11 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
   </ObserverImage>
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Si tienes más dudas, escríbeme y con gusto te apoyo a resolver tus dudas,
-      me encuentro en la ciudad de Tijuana y estoy a tu disposición para
-      trabajar juntos para hallar una solución 100% a tu medida.
+      {
+        isEnglish
+          ? "If you have more questions, write me and I will gladly help you solve your doubts, I am located in the city of Tijuana and I am at your disposal to work together to find a solution 100% tailored to your needs."
+          : "Si tienes más dudas, escríbeme y con gusto te apoyo a resolver tus dudas, me encuentro en la ciudad de Tijuana y estoy a tu disposición para trabajar juntos para hallar una solución 100% a tu medida."
+      }
     </h2>
   </Observer>
 </article>

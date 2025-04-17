@@ -47,6 +47,8 @@ const blogsRutas = [
 const blogActual = "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento";
 
 const id = 10;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -54,27 +56,29 @@ const id = 10;
 >
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      A menudo, los pacientes vienen a consulta por un malestar e inflamación en
-      los tendones en alguna parte del cuerpo. Las zonas más comunes son: codo,
-      talón, hombro, rodilla, cadera y muñeca. Sin embargo, lo que parece a
-      simple vista un dolor, rigidez o sensibilidad pudiera ser una tendinitis
-      o, en realidad, una tendinosis. Por ello, me gustaría hablar de sus
-      principales características, diferencias y tratamiento. <br />
+      {
+        isEnglish
+          ? "Patients often come for consultation because of discomfort and inflammation in the tendons somewhere in the body. The most common areas are: elbow, heel, shoulder, knee, hip and wrist. However, what appears at first glance to be pain, stiffness or tenderness could be tendinitis or, in fact, tendinosis. Therefore, I would like to talk about their main characteristics, differences and treatment."
+          : "A menudo, los pacientes vienen a consulta por un malestar e inflamación en los tendones en alguna parte del cuerpo. Las zonas más comunes son: codo, talón, hombro, rodilla, cadera y muñeca. Sin embargo, lo que parece a simple vista un dolor, rigidez o sensibilidad pudiera ser una tendinitis o, en realidad, una tendinosis. Por ello, me gustaría hablar de sus principales características, diferencias y tratamiento."
+      }
+      <br />
       <br />
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Tendones y ligamentos
+      {isEnglish ? "Tendons and ligaments" : "Tendones y ligamentos"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Los tendones son tejidos que conectan los músculos con los huesos; estos
-      tienen la función de mover el hueso, mientras que los ligamentos son un
-      tejido fibroso que une los huesos entre sí, brindando estabilidad.
+      {
+        isEnglish
+          ? "Tendons are tissues that connect the muscles to the bones; they have the function of moving the bone, while ligaments are a fibrous tissue that binds the bones together, providing stability."
+          : "Los tendones son tejidos que conectan los músculos con los huesos; estos tienen la función de mover el hueso, mientras que los ligamentos son un tejido fibroso que une los huesos entre sí, brindando estabilidad."
+      }
     </h3>
   </Observer>
 
@@ -90,91 +94,119 @@ const id = 10;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-4 font-semibold">
-      ¿Qué es la tendinitis y cómo identificarla?
+      {
+        isEnglish
+          ? "What is tendinitis and how to identify it?"
+          : "¿Qué es la tendinitis y cómo identificarla?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-8">
-      La tendinitis es la inflamación del tendón que resulta de un
-      microdesgarre. Esto sucede cuando la parte musculotendinosa (unión entre
-      el músculo y el tendón, donde se transmite la fuerza) se sobrecarga con
-      una fuerza de tracción repentina o con tensión y esfuerzo constantes
-      debido a movimientos repetitivos.
+      {
+        isEnglish
+          ? "Tendonitis is inflammation of the tendon resulting from a microtear. This happens when the musculotendinous part (junction between the muscle and the tendon, where force is transmitted) is overloaded with a sudden tensile force or with constant tension and strain due to repetitive movements."
+          : "La tendinitis es la inflamación del tendón que resulta de un microdesgarre. Esto sucede cuando la parte musculotendinosa (unión entre el músculo y el tendón, donde se transmite la fuerza) se sobrecarga con una fuerza de tracción repentina o con tensión y esfuerzo constantes debido a movimientos repetitivos."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Una de las principales manifestaciones es el dolor. Las células
-      inflamatorias dentro del tendón causan un dolor punzante que reduce la
-      funcionalidad, lo que puede generar una rotura o una tendinosis.
-    </h3>
-  </Observer>
-
-  <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Causas</h2>
-  </Observer>
-  <Observer client:visible>
-    <h3 class="text-xl mb-16">
-      Una lesión en el tendón puede ocurrirle a cualquier persona: desde
-      profesionistas que pasan largas horas frente a una computadora, debido a
-      problemas ergonómicos, hasta personas que realizan actividades físicas
-      regularmente y deportistas de alto rendimiento.
-      <br />
-      <br />
-      También puede presentarse en personas de edad avanzada, debido a la disminución
-      de la vascularización de los tendones. La tendinitis tiene mayor probabilidad
-      de manifestarse en personas con enfermedades sistémicas como artritis reumatoide,
-      esclerosis sistémica, gota, artritis reactiva y diabetes. En algunos casos,
-      ciertos medicamentos pueden aumentar el riesgo de tendinopatías o roturas tendinosas.
+      {
+        isEnglish
+          ? "One of the main manifestations is pain. Inflammatory cells within the tendon cause stabbing pain that reduces functionality, which can lead to rupture or tendinosis."
+          : "Una de las principales manifestaciones es el dolor. Las células inflamatorias dentro del tendón causan un dolor punzante que reduce la funcionalidad, lo que puede generar una rotura o una tendinosis."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Síntomas de la tendinitis
+      {isEnglish ? "Causes" : "Causas"}
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Sensibilidad al tacto y dolor que aparece y desaparece de forma intensa,
-      empeorando durante movimientos activos o al aplicar resistencia contra el
-      movimiento natural.
+      {
+        isEnglish
+          ? "A tendon injury can happen to anyone: from professionals who spend long hours in front of a computer, due to ergonomic problems, to people who perform regular physical activities and high-performance athletes."
+          : "Una lesión en el tendón puede ocurrirle a cualquier persona: desde profesionistas que pasan largas horas frente a una computadora, debido a problemas ergonómicos, hasta personas que realizan actividades físicas regularmente y deportistas de alto rendimiento."
+      }
+
       <br />
       <br />
-      Por otro lado, la tendinosis es una degeneración del colágeno del tendón como
-      respuesta a un desgaste crónico. Si no se le da la atención adecuada para que
-      sane o el descanso suficiente, esta degeneración provoca debilidad, dolor y
-      rigidez.
-      <br />
-      <br />
-      Ambas patologías pueden denominarse tendinopatía, término general que hace
-      referencia a un trastorno del tendón. Las causas pueden variar, pero alrededor
-      del 30 al 50 % de las lesiones se producen por actividades deportivas.
+      {
+        isEnglish
+          ? "It can also occur in the elderly, due to decreased vascularization of the tendons. Tendinitis is more likely to occur in people with systemic diseases such as rheumatoid arthritis, systemic sclerosis, gout, reactive arthritis and diabetes. In some cases, certain medications may increase the risk of tendinopathies or tendon ruptures."
+          : "También puede presentarse en personas de edad avanzada, debido a la disminución de la vascularización de los tendones. La tendinitis tiene mayor probabilidad de manifestarse en personas con enfermedades sistémicas como artritis reumatoide, esclerosis sistémica, gota, artritis reactiva y diabetes. En algunos casos, ciertos medicamentos pueden aumentar el riesgo de tendinopatías o roturas tendinosas."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Síntomas de la tendinosis
+      {isEnglish ? "Symptoms of tendinitis" : "Síntomas de la tendinitis"}
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      La tendinosis resulta de un tendón que no ha sanado adecuadamente, y para
-      que esto ocurra pasa por varias etapas.
+      {
+        isEnglish
+          ? "Sensitivity to touch and pain that comes and goes intensely, worsening during active movements or when applying resistance against natural movement."
+          : "Sensibilidad al tacto y dolor que aparece y desaparece de forma intensa, empeorando durante movimientos activos o al aplicar resistencia contra el movimiento natural."
+      }
       <br />
       <br />
-      La primera etapa sucede cuando el tendón se lesiona por primera vez.
+      {
+        isEnglish
+          ? "Tendinosis, on the other hand, is a degeneration of tendon collagen in response to chronic wear and tear. If not given proper attention to heal or sufficient rest, this degeneration leads to weakness, pain and stiffness."
+          : "Por otro lado, la tendinosis es una degeneración del colágeno del tendón como respuesta a un desgaste crónico. Si no se le da la atención adecuada para que sane o el descanso suficiente, esta degeneración provoca debilidad, dolor y rigidez."
+      }
       <br />
       <br />
-      En la segunda etapa, se altera la condición general del tendón, generando un
-      desgaste constante.
+      {
+        isEnglish
+          ? "Both pathologies can be referred to as tendinopathy, a general term referring to a tendon disorder. The causes can vary, but about 30 to 50% of injuries are caused by sports activities."
+          : "Ambas patologías pueden denominarse tendinopatía, término general que hace referencia a un trastorno del tendón. Las causas pueden variar, pero alrededor del 30 al 50 % de las lesiones se producen por actividades deportivas."
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {isEnglish ? "Symptoms of tendinosis" : "Síntomas de la tendinosis"}
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      {
+        isEnglish
+          ? "Tendinosis results from a tendon that has not healed properly, and for this to occur it goes through several stages."
+          : "La tendinosis resulta de un tendón que no ha sanado adecuadamente, y para que esto ocurra pasa por varias etapas."
+      }
       <br />
       <br />
-      Finalmente, en la tercera etapa, ocurre apoptosis celular y neovascularización,
-      lo que se manifiesta en debilidad, desgarres o aumento del dolor.
+      {
+        isEnglish
+          ? "The first stage occurs when the tendon is first injured."
+          : "La primera etapa sucede cuando el tendón se lesiona por primera vez."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "In the second stage, the general condition of the tendon is altered, generating constant wear and tear."
+          : "En la segunda etapa, se altera la condición general del tendón, generando un desgaste constante."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "Finally, in the third stage, cell apoptosis and neovascularization occur, which is manifested by weakness, tears or increased pain."
+          : "Finalmente, en la tercera etapa, ocurre apoptosis celular y neovascularización, lo que se manifiesta en debilidad, desgarres o aumento del dolor."
+      }
     </h3>
   </Observer>
   <ObserverImage client:visible>
@@ -189,78 +221,100 @@ const id = 10;
   </ObserverImage>
 
   <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Diferencias</h2>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {isEnglish ? "Differences" : "Diferencias"}
+    </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      La tendinitis tiene un tiempo de recuperación de 3 a 4 días en casos
-      agudos, mientras que la tendinosis toma de 2 a 3 meses.
+      {
+        isEnglish
+          ? "Tendinitis has a recovery time of 3 to 4 days in acute cases, while tendinosis takes 2 to 3 months."
+          : "La tendinitis tiene un tiempo de recuperación de 3 a 4 días en casos agudos, mientras que la tendinosis toma de 2 a 3 meses."
+      }
+
       <br />
       <br />
-      En casos crónicos, la tendinitis puede requerir de 4 a 6 semanas para recuperarse,
-      y la tendinosis, de 3 a 6 meses.
+      {
+        isEnglish
+          ? "In chronic cases, tendinitis may require 4 to 6 weeks to recover, and tendinosis, 3 to 6 months."
+          : "En casos crónicos, la tendinitis puede requerir de 4 a 6 semanas para recuperarse, y la tendinosis, de 3 a 6 meses."
+      }
+
       <br />
       <br />
-      La tendinitis tiene como causa principal la sobrecarga repentina, movimientos
-      repetitivos o algún trauma agudo, puede manifestarse con dolor agudo, inflamación
-      y calor, por otra parte, la tendinosis tiene como principal causa un exceso
-      de desgaste, falta de descanso o recuperación entre lesiones previas. Su dolor
-      se manifiesta de forma crónica, se presenta debilidad, rigidez y no se presenta
-      una inflamación.
+      {
+        isEnglish
+          ? "The main cause of tendinitis is sudden overload, repetitive movements or some acute trauma, it can manifest with acute pain, inflammation and heat, on the other hand, tendinosis has as main cause an excess of wear, lack of rest or recovery between previous injuries. Its pain manifests itself chronically, weakness, stiffness and inflammation are not present."
+          : "La tendinitis tiene como causa principal la sobrecarga repentina, movimientos repetitivos o algún trauma agudo, puede manifestarse con dolor agudo, inflamación y calor, por otra parte, la tendinosis tiene como principal causa un exceso de desgaste, falta de descanso o recuperación entre lesiones previas. Su dolor se manifiesta de forma crónica, se presenta debilidad, rigidez y no se presenta una inflamación."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Evolución ante tratamiento conservador
+      {
+        isEnglish
+          ? "Evolution in the face of conservative treatment"
+          : "Evolución ante tratamiento conservador"
+      }
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      En la tendinitis, se recomienda descanso relativo, medicamentos
-      antiinflamatorios, aplicación de hielo o uso de férulas. En la tendinosis,
-      se busca estimular la formación de colágeno mediante fisioterapia. Sin
-      embargo, si no hay mejora significativa, será necesario recurrir a la
-      cirugía.
+      {
+        isEnglish
+          ? "In tendinitis, relative rest, anti-inflammatory drugs, ice application or use of splints are recommended. In tendinosis, the aim is to stimulate collagen formation through physiotherapy. However, if there is no significant improvement, surgery will be necessary."
+          : "En la tendinitis, se recomienda descanso relativo, medicamentos antiinflamatorios, aplicación de hielo o uso de férulas. En la tendinosis, se busca estimular la formación de colágeno mediante fisioterapia. Sin embargo, si no hay mejora significativa, será necesario recurrir a la cirugía."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Evolución postoperatoria
+      {isEnglish ? "Postoperative evolution" : "Evolución postoperatoria"}
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Tras una cirugía, la tendinitis tiene un 95 % de éxito, con un tiempo de
-      recuperación de 3 a 4 semanas. En el caso de la tendinosis, el éxito
-      postoperatorio varía entre el 70 % y 85 %, con una recuperación más
-      prolongada de 4 a 6 meses.
+      {
+        isEnglish
+          ? "After surgery, tendinitis has a 95% success rate, with a recovery time of 3 to 4 weeks. In the case of tendinosis, postoperative success varies between 70% and 85%, with a longer recovery of 4 to 6 months."
+          : "Tras una cirugía, la tendinitis tiene un 95 % de éxito, con un tiempo de recuperación de 3 a 4 semanas. En el caso de la tendinosis, el éxito postoperatorio varía entre el 70 % y 85 %, con una recuperación más prolongada de 4 a 6 meses."
+      }
       <br />
       <br />
-      En la mayoría de los casos una tendinitis desaparece si se llevan a cabo las
-      recomendaciones del médico: Reposo, medicamentos antinflamatorios, sin embargo,
-      es esencial acudir a las citas de seguimiento para poder descartar alguna sintomatología
-      crónica que requiera una evaluación más profunda.
+      {
+        isEnglish
+          ? "In most cases tendinitis disappears if the doctor's recommendations are followed: rest, anti-inflammatory drugs, however, it is essential to attend follow-up appointments to rule out any chronic symptomatology that requires further evaluation."
+          : "En la mayoría de los casos una tendinitis desaparece si se llevan a cabo las recomendaciones del médico: Reposo, medicamentos antinflamatorios, sin embargo, es esencial acudir a las citas de seguimiento para poder descartar alguna sintomatología crónica que requiera una evaluación más profunda."
+      }
       <br />
       <br />
-      Si tú, algún amigo o familiar presentan alguno de los síntomas platicados en
-      este blog por un periodo prolongado, es fundamental que no lo pasen por alto.
+      {
+        isEnglish
+          ? "If you, a friend or family member have any of the symptoms discussed in this blog for a prolonged period of time, it is essential that you do not overlook them."
+          : "Si tú, algún amigo o familiar presentan alguno de los síntomas platicados en este blog por un periodo prolongado, es fundamental que no lo pasen por alto."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      El diagnóstico y tratamiento oportuno son clave para evitar que estas
-      afecciones progresen y afecten tu calidad de vida. Como especialista en
-      traumatología, estoy aquí para ayudarte.
+      {
+        isEnglish
+          ? "Early diagnosis and treatment are key to prevent these conditions from progressing and affecting your quality of life. As a specialist in traumatology, I am here to help you."
+          : "El diagnóstico y tratamiento oportuno son clave para evitar que estas afecciones progresen y afecten tu calidad de vida. Como especialista en traumatología, estoy aquí para ayudarte."
+      }
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      No dudes en contactarme, ya sea por mensaje o llamada, para resolver
-      cualquier duda, evaluar tu caso o agendar una valoración. Juntos
-      encontraremos la mejor solución.
+      {
+        isEnglish
+          ? "Do not hesitate to contact me, either by message or call, to resolve any questions, evaluate your case or schedule an assessment. Together we will find the best solution."
+          : "No dudes en contactarme, ya sea por mensaje o llamada, para resolver cualquier duda, evaluar tu caso o agendar una valoración. Juntos encontraremos la mejor solución."
+      }
     </h3>
   </Observer>
 </article>
