@@ -1,25 +1,93 @@
 ---
+import { FaHome, FaShieldAlt, FaFileContract } from "react-icons/fa";
+
 const currentYear = new Date().getFullYear();
+
+interface Props {
+  URL: boolean;
+  PreviousLink?: string;
+  NextLink?: string;
+  PreviousName?: string;
+  NextName?: string;
+}
+
+const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
 ---
 
 <hr />
-<footer class="text-center p-4">
-  <p>&copy; {currentYear} Doctor Monge. Todos los derechos reservados.</p>
-  <nav>
-    <ul class="list-none p-0 mt-2 flex justify-center gap-4">
-      <li>
-        <a href="/privacy-policy" class="text-blue-500 hover:underline"
-          >Política de Privacidad</a
-        >
-      </li>
-      <li>
-        <a href="/terms-of-service" class="text-blue-500 hover:underline"
-          >Términos de Servicio</a
-        >
-      </li>
-      <li>
-        <a href="/contact" class="text-blue-500 hover:underline">Contacto</a>
-      </li>
-    </ul>
-  </nav>
+<footer class="text-center p-6">
+  <div class="max-w-6xl mx-auto">
+    {/* Main Navigation Links */}
+    <nav class="mb-6">
+      <ul class="list-none p-0 flex flex-wrap justify-center gap-4 md:gap-8">
+        <li>
+          <a
+            href={URL ? "/en/" : "/"}
+            class="flex items-center gap-2 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
+          >
+            <FaHome className="text-lg" />
+            {URL ? "Home" : "Inicio"}
+          </a>
+        </li>
+        <li>
+          <a
+            href={URL ? "/en/privacy" : "/privacidad"}
+            class="flex items-center gap-2 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
+          >
+            <FaShieldAlt className="text-lg" />
+            {URL ? "Privacy Policy" : "Política de Privacidad"}
+          </a>
+        </li>
+        <li>
+          <a
+            href={URL ? "/en/terms" : "/terminos"}
+            class="flex items-center gap-2 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
+          >
+            <FaFileContract className="text-lg" />
+            {URL ? "Terms" : "Términos"}
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    {/* Previous/Next Navigation */}
+    {
+      (PreviousLink || NextLink) && (
+        <nav class="mb-6">
+          <ul class="list-none p-0 flex justify-center gap-8">
+            {PreviousLink && (
+              <li>
+                <a
+                  href={PreviousLink}
+                  class="flex items-center gap-1 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
+                >
+                  {PreviousName}
+                </a>
+              </li>
+            )}
+            {NextLink && (
+              <li>
+                <a
+                  href={NextLink}
+                  class="flex items-center gap-1 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
+                >
+                  {NextName}
+                </a>
+              </li>
+            )}
+          </ul>
+        </nav>
+      )
+    }
+
+    {/* Copyright */}
+    <p class="text-gray-600 dark:text-gray-300 text-sm">
+      &copy; {currentYear}
+      {
+        URL
+          ? "Dr. Monge. All rights reserved."
+          : "Dr. Monge. Todos los derechos reservados."
+      }
+    </p>
+  </div>
 </footer>

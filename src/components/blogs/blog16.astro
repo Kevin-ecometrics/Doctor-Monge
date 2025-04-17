@@ -516,4 +516,12 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
-<Footer />
+<Footer
+  URL={isEnglish}
+  NextLink={isEnglish
+    ? "hidden-fractures-diagnosis-tijuana"
+    : "fracturas-ocultas-diagnostico-tijuana"}
+  NextName={isEnglish
+    ? "Hidden fractures diagnosis tijuana"
+    : "Fracturas ocultas diagnóstico tijuana"}
+/>

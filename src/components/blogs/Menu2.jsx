@@ -61,59 +61,68 @@ const blogsURL = [
 const blogsURLEN = [
   {
     id: 1,
-    url: "/en/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular/",
+    url: "/en/blogs/knee-pain-arthroscopy-to-treat-joint-wear",
   },
   {
     id: 2,
-    url: "/en/blogs/fracturas-ocultas-diagnostico-tijuana/",
+    url: "/en/blogs/hidden-fractures-diagnosis-tijuana",
   },
   {
     id: 3,
-    url: "/en/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis/",
+    url: "/en/blogs/is-a-second-surgery-necessary-to-treat-pseudoarthrosis",
   },
   {
     id: 4,
-    url: "/en/blogs/fractura-de-humero-proximal-en-adultos-mayores/",
+    url: "/en/blogs/proximal-humerus-fracture-in-older-adults",
   },
   {
     id: 5,
-    url: "/en/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos/",
+    url: "/en/blogs/low-back-pain-types-risk-factors-and-treatments",
   },
   {
     id: 6,
-    url: "/en/blogs/Como-saber-si-es-artritis-o-artrosis/",
+    url: "/en/blogs/how-to-tell-if-its-arthritis-or-osteoarthritis",
   },
   {
     id: 7,
-    url: "/en/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento/",
+    url: "/en/blogs/tendinitis-and-tendinosis-causes-differences-and-treatment",
   },
   {
     id: 8,
-    url: "/en/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis/",
+    url: "/en/blogs/knee-injections-options-and-benefits-for-osteoarthritis",
   },
   {
     id: 9,
-    url: "/en/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos/",
+    url: "/en/blogs/bunions-symptoms-detection-and-types-of-surgery-to-remove-them",
   },
   {
     id: 10,
-    url: "/en/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas/",
+    url: "/en/blogs/why-is-it-said-that-the-body-rejects-material-factors-associated-with-failure-in-fracture-osteosynthesis",
   },
   {
     id: 11,
-    url: "/en/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical/",
+    url: "/en/blogs/conservative-treatment-vs-surgery-when-conservative-treatment-fails-and-requires-surgical-intervention-for-cervical-disc-herniation",
   },
   {
     id: 12,
-    url: "/en/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
+    url: "/en/blogs/knee-injections-with-hyaluronic-acid-for-knee-osteoarthritis-treatment",
   },
   {
     id: 13,
-    url: "/en/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor/",
+    url: "/en/blogs/osteoporosis-a-silent-condition-affecting-half-the-population-over-50",
   },
-  { id: 14, url: "/en/blogs/Lesion-de-Ligamento-cruzado-anterior/" },
-  { id: 15, url: "/en/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion/" },
-  { id: 16, url: "/en/blogs/Fractura-de-tibia-y-Perone/" },
+  {
+    id: 14,
+    url: "/en/blogs/anterior-cruciate-ligament-injury",
+  },
+  {
+    id: 15,
+    url: "/en/blogs/pseudoarthrosis-and-delayed-union",
+  },
+  {
+    id: 16,
+    url: "/en/blogs/tibia-and-fibula-fracture",
+  },
 ];
 
 const Menu2 = () => {
