@@ -6,6 +6,7 @@ import Image1 from "@public/blog16.webp";
 import Image2 from "@public/blog16-2.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
 let author = "YVLB";
 let comment =
   "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
@@ -380,41 +381,127 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
   <Observer client:visible>
     <h3 class="text-2xl mb-4">
       {
-        isEnglish
-          ? "The <strong class='text-white font-bold'>success</strong> depends not only on surgery, but on a multidisciplinary team and a <strong class='text-white font-bold'>personalized rehabilitation</strong> plan. That's why choosing an <strong class='text-white font-bold'>experienced specialist</strong> is key."
-          : "El <strong class='text-white font-bold'>éxito</strong> no solo depende de la cirugía, sino de un equipo multidisciplinario y un plan de <strong class='text-white font-bold'>rehabilitación personalizado</strong>. Por eso, elegir a un <strong class='text-white font-bold'>especialista con experiencia</strong>, es clave."
-      }
-      <br />
-      <br />
-
-      {
-        isEnglish
-          ? "If you're looking for an <strong class='text-white font-bold'>orthopedic trauma surgeon</strong> specialized in <strong class='text-white font-bold'>knee arthroscopy</strong> in Tijuana, you're one step away from recovering your <strong class='text-white font-bold'>mobility</strong> and <strong class='text-white font-bold'>quality of life</strong>."
-          : "Si buscas un <strong class='text-white font-bold'>cirujano traumatólogo ortopedista</strong> especializado en <strong class='text-white font-bold'>artroscopia de rodilla</strong> en Tijuana, estás a un paso de recuperar tu <strong class='text-white font-bold'>movilidad</strong> y <strong class='text-white font-bold'>calidad de vida</strong>."
-      }
-      <br />
-      <br />
-
-      {
-        isEnglish
-          ? "<strong class='text-white font-bold'>Arthroscopy</strong> is the most advanced and <strong class='text-white font-bold'>minimally invasive</strong> solution to treat <strong class='text-white font-bold'>knee injuries</strong>, with less time in the operating room and <strong class='text-white font-bold'>faster recovery</strong>."
-          : "La <strong class='text-white font-bold'>artroscopia</strong> es la solución más avanzada y <strong class='text-white font-bold'>mínimamente invasiva</strong> para tratar <strong class='text-white font-bold'>lesiones de rodilla</strong>, con menor tiempo en el quirófano, <strong class='text-white font-bold'>recuperación más rápida</strong>."
-      }
-      <br />
-      <br />
-
-      {
-        isEnglish
-          ? "If you'd like to schedule an <strong class='text-white font-bold'>evaluation consultation</strong> in Tijuana, I invite you to my office at <strong class='text-white font-bold'>Torre Norte 2</strong>, 10 minutes from the <strong class='text-white font-bold'>San Ysidro-Tijuana</strong> border."
-          : "Si te gustaría agendar una <strong class='text-white font-bold'>consulta de valoración</strong> en Tijuana, te invito a mi consultorio <strong class='text-white font-bold'>Torre Norte 2</strong>, a 10 minutos de la línea <strong class='text-white font-bold'>San Ysidro- Tijuana</strong>."
-      }
-      <br />
-      <br />
-
-      {
-        isEnglish
-          ? "It would be a pleasure to accompany you toward a <strong class='text-white font-bold'>pain-free knee</strong> and <strong class='text-white font-bold'>independence in your mobility</strong>."
-          : "Será un placer poder acompañarte hacia una <strong class='text-white font-bold'>rodilla sin dolor</strong> y una <strong class='text-white font-bold'>independencia hacia tu movilidad</strong>."
+        isEnglish ? (
+          <>
+            The <strong class="text-white font-bold">success</strong> depends
+            not only on surgery, but on a multidisciplinary team and a{" "}
+            <strong class="text-white font-bold">
+              personalized rehabilitation
+            </strong>{" "}
+            plan. That's why choosing an{" "}
+            <strong class="text-white font-bold">experienced specialist</strong>{" "}
+            is key.
+            <>
+              <br />
+              <br />
+            </>
+            If you're looking for an{" "}
+            <strong class="text-white font-bold">
+              orthopedic trauma surgeon
+            </strong>{" "}
+            specialized in{" "}
+            <strong class="text-white font-bold">knee arthroscopy</strong> in
+            Tijuana, you're one step away from recovering your{" "}
+            <strong class="text-white font-bold">mobility</strong> and{" "}
+            <strong class="text-white font-bold">quality of life</strong>.
+            <>
+              <br />
+              <br />
+            </>
+            <strong class="text-white font-bold">Arthroscopy</strong> is the
+            most advanced and{" "}
+            <strong class="text-white font-bold">minimally invasive</strong>{" "}
+            solution to treat{" "}
+            <strong class="text-white font-bold">knee injuries</strong>, with
+            less time in the operating room and{" "}
+            <strong class="text-white font-bold">faster recovery</strong>.
+            <>
+              <br />
+              <br />
+            </>
+            If you'd like to schedule an{" "}
+            <strong class="text-white font-bold">
+              evaluation consultation
+            </strong>{" "}
+            in Tijuana, I invite you to my office at{" "}
+            <strong class="text-white font-bold">Torre Norte 2</strong>, 10
+            minutes from the{" "}
+            <strong class="text-white font-bold">San Ysidro-Tijuana</strong>{" "}
+            border.
+            <>
+              <br />
+              <br />
+            </>
+            It would be a pleasure to accompany you toward a{" "}
+            <strong class="text-white font-bold">pain-free knee</strong> and{" "}
+            <strong class="text-white font-bold">
+              independence in your mobility
+            </strong>
+            .
+          </>
+        ) : (
+          <>
+            El <strong class="text-white font-bold">éxito</strong> no solo
+            depende de la cirugía, sino de un equipo multidisciplinario y un
+            plan de{" "}
+            <strong class="text-white font-bold">
+              rehabilitación personalizado
+            </strong>
+            . Por eso, elegir a un{" "}
+            <strong class="text-white font-bold">
+              especialista con experiencia
+            </strong>
+            , es clave.
+            <>
+              <br />
+              <br />
+            </>
+            Si buscas un{" "}
+            <strong class="text-white font-bold">
+              cirujano traumatólogo ortopedista
+            </strong>{" "}
+            especializado en{" "}
+            <strong class="text-white font-bold">artroscopia de rodilla</strong>{" "}
+            en Tijuana, estás a un paso de recuperar tu{" "}
+            <strong class="text-white font-bold">movilidad</strong> y{" "}
+            <strong class="text-white font-bold">calidad de vida</strong>.
+            <>
+              <br />
+              <br />
+            </>
+            La <strong class="text-white font-bold">artroscopia</strong> es la
+            solución más avanzada y{" "}
+            <strong class="text-white font-bold">mínimamente invasiva</strong>{" "}
+            para tratar{" "}
+            <strong class="text-white font-bold">lesiones de rodilla</strong>,
+            con menor tiempo en el quirófano,{" "}
+            <strong class="text-white font-bold">
+              recuperación más rápida
+            </strong>
+            .
+            <>
+              <br />
+              <br />
+            </>
+            Si te gustaría agendar una{" "}
+            <strong class="text-white font-bold">consulta de valoración</strong>{" "}
+            en Tijuana, te invito a mi consultorio{" "}
+            <strong class="text-white font-bold">Torre Norte 2</strong>, a 10
+            minutos de la línea{" "}
+            <strong class="text-white font-bold">San Ysidro- Tijuana</strong>.
+            <>
+              <br />
+              <br />
+            </>
+            Será un placer poder acompañarte hacia una{" "}
+            <strong class="text-white font-bold">rodilla sin dolor</strong> y
+            una{" "}
+            <strong class="text-white font-bold">
+              independencia hacia tu movilidad
+            </strong>
+            .
+          </>
+        )
       }
     </h3>
   </Observer>
@@ -429,3 +516,4 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
+<Footer />
