@@ -8,6 +8,8 @@ import {
   FaShieldAlt,
   FaFileContract,
   FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 
@@ -27,7 +29,78 @@ const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
 <hr />
 <footer class="p-8 text-white">
   <div class="max-w-7xl mx-auto">
-    {/* Main Footer Content */}
+    {/* Navegación centrada - Mobile y Desktop */}
+    <div class="text-center mb-8">
+      {
+        (PreviousLink || NextLink) && (
+          <nav>
+            <div class="md:hidden">
+              <ul class="list-none p-0 flex flex-col items-center gap-4">
+                {NextLink && (
+                  <li>
+                    <a
+                      href={NextLink}
+                      class="flex items-center gap-2 font-medium px-6 py-2 rounded-full
+                           bg-gray-800 hover:bg-blue-600 transition-all duration-300
+                           hover:shadow-lg hover:translate-y-[-2px] w-fit"
+                    >
+                      <FaArrowLeft className="text-blue-400" />
+                      {NextName}
+                    </a>
+                  </li>
+                )}
+                {PreviousLink && (
+                  <li>
+                    <a
+                      href={PreviousLink}
+                      class="flex items-center gap-2 font-medium px-6 py-2 rounded-full
+                           bg-gray-800 hover:bg-blue-600 transition-all duration-300
+                           hover:shadow-lg hover:translate-y-[-2px] w-fit"
+                    >
+                      {PreviousName}
+                      <FaArrowRight className="text-blue-400" />
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+
+            <div class="hidden md:block">
+              <ul class="list-none p-0 flex justify-center gap-6">
+                {NextLink && (
+                  <li>
+                    <a
+                      href={NextLink}
+                      class="flex items-center gap-2 font-medium px-6 py-2 rounded-full
+                           bg-gray-800 hover:bg-blue-600 transition-all duration-300
+                           hover:shadow-lg hover:translate-y-[-2px]"
+                    >
+                      <FaArrowLeft className="text-blue-400" />
+                      {NextName}
+                    </a>
+                  </li>
+                )}
+                {PreviousLink && (
+                  <li>
+                    <a
+                      href={PreviousLink}
+                      class="flex items-center gap-2 font-medium px-6 py-2 rounded-full
+                           bg-gray-800 hover:bg-blue-600 transition-all duration-300
+                           hover:shadow-lg hover:translate-y-[-2px]"
+                    >
+                      {PreviousName}
+                      <FaArrowRight className="text-blue-400" />
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+          </nav>
+        )
+      }
+    </div>
+
+    {/* Contenido en between */}
     <div class="flex flex-col md:flex-row justify-between items-center gap-8">
       {/* Left Section - Logo and Address */}
       <div class="flex-1 flex flex-col justify-start items-start">
@@ -35,21 +108,40 @@ const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
           <img
             src="/El doctor Ricardo Monge es  ortopedista especialista en rodilla cadera y espalda.png"
             alt={URL ? "Dr. Monge Logo" : "Logo del Dr. Monge"}
-            class="transition-transform
-            duration-300
-            group-hover:scale-105"
+            class="transition-transform duration-300 group-hover:scale-105"
           />
         </a>
 
-        <div
-          class="flex items-start gap-3 text-sm text-gray-300 hover:text-white transition-colors"
-        >
-          <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-blue-400" />
-          <address class="not-italic">
-            Fray Servando Teresa de Mier 1351-interior 810,<br />
-            Zona Urbana Rio Tijuana,<br />
-            22010 Tijuana, B.C.
-          </address>
+        <div class="flex flex-col gap-3">
+          <div
+            class="flex items-start gap-3 text-sm text-gray-300 hover:text-white transition-colors"
+          >
+            <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-blue-400" />
+            <address class="not-italic">
+              Fray Servando Teresa de Mier 1351-interior 810,<br />
+              Zona Urbana Rio Tijuana,<br />
+              22010 Tijuana, B.C.
+            </address>
+          </div>
+
+          <div
+            class="flex items-center gap-3 text-sm text-gray-300 hover:text-white transition-colors"
+          >
+            <FaEnvelope className="flex-shrink-0 text-blue-400" />
+            <a
+              href="mailto:pacientes@mongeortopedia.com"
+              class="hover:underline">pacientes@mongeortopedia.com</a
+            >
+          </div>
+
+          <div
+            class="flex items-center gap-3 text-sm text-gray-300 hover:text-white transition-colors"
+          >
+            <FaPhoneAlt className="flex-shrink-0 text-blue-400" />
+            <a href="tel:+526649763510" class="hover:underline"
+              >+52 664 976 3510</a
+            >
+          </div>
         </div>
       </div>
 
@@ -106,44 +198,6 @@ const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
             </li>
           </ul>
         </nav>
-
-        {/* Previous/Next Navigation - Mobile only */}
-        <div class="md:hidden mt-6">
-          {
-            (PreviousLink || NextLink) && (
-              <nav>
-                <ul class="list-none p-0 flex justify-center gap-8">
-                  {NextLink && (
-                    <li>
-                      <a
-                        href={NextLink}
-                        class="flex items-center gap-1 font-medium px-4 py-2 rounded-full
-                             bg-gray-800 hover:bg-blue-600 transition-all duration-300
-                             hover:shadow-lg hover:translate-y-[-2px]"
-                      >
-                        <FaArrowLeft className="text-blue-400" />
-                        {NextName}
-                      </a>
-                    </li>
-                  )}
-                  {PreviousLink && (
-                    <li>
-                      <a
-                        href={PreviousLink}
-                        class="flex items-center gap-1 font-medium px-4 py-2 rounded-full
-                             bg-gray-800 hover:bg-blue-600 transition-all duration-300
-                             hover:shadow-lg hover:translate-y-[-2px]"
-                      >
-                        {PreviousName}
-                        <FaArrowRight className="text-blue-400" />
-                      </a>
-                    </li>
-                  )}
-                </ul>
-              </nav>
-            )
-          }
-        </div>
       </div>
 
       {/* Right Section - Social Media */}
@@ -197,53 +251,21 @@ const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
       </div>
     </div>
 
-    {/* Previous/Next Navigation - Desktop */}
-    <div class="hidden md:block mt-8">
-      {
-        (PreviousLink || NextLink) && (
-          <nav>
-            <ul class="list-none p-0 flex justify-center gap-12">
-              {NextLink && (
-                <li>
-                  <a
-                    href={NextLink}
-                    class="flex items-center gap-2 font-medium px-6 py-3 rounded-full
-                         bg-gray-800 hover:bg-blue-600 transition-all duration-300
-                         hover:shadow-lg hover:translate-y-[-3px]"
-                  >
-                    <FaArrowLeft className="text-blue-400" />
-                    {NextName}
-                  </a>
-                </li>
-              )}
-              {PreviousLink && (
-                <li>
-                  <a
-                    href={PreviousLink}
-                    class="flex items-center gap-2 font-medium px-6 py-3 rounded-full
-                         bg-gray-800 hover:bg-blue-600 transition-all duration-300
-                         hover:shadow-lg hover:translate-y-[-3px]"
-                  >
-                    {PreviousName}
-                    <FaArrowRight className="text-blue-400" />
-                  </a>
-                </li>
-              )}
-            </ul>
-          </nav>
-        )
-      }
-    </div>
-
     {/* Copyright */}
     <div class="mt-10 text-center">
       <p class="text-gray-400 text-sm">
-        &copy; {currentYear}
+        &copy; {currentYear}{" "}
         {
           URL
-            ? "Dr. Monge. All rights reserved."
-            : "Dr. Monge. Todos los derechos reservados."
+            ? "Dr. Monge. All rights reserved. Developed by "
+            : "Dr. Monge. Todos los derechos reservados. Desarrollado por "
         }
+        <a
+          href="https://ecommetrica.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-400 hover:underline">Ecommetrica</a
+        >
       </p>
       <p class="text-gray-500 text-xs mt-2">
         {
