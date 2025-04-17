@@ -518,10 +518,10 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 </section>
 <Footer
   URL={isEnglish}
-  NextLink={isEnglish
+  PreviousLink={isEnglish
     ? "hidden-fractures-diagnosis-tijuana"
     : "fracturas-ocultas-diagnostico-tijuana"}
-  NextName={isEnglish
-    ? "Hidden fractures diagnosis tijuana"
-    : "Fracturas ocultas diagnóstico tijuana"}
+  PreviousName={isEnglish
+    ? "Hidden Fractures Diagnosis"
+    : "Diagnóstico de Fracturas Ocultas"}
 />

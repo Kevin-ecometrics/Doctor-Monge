@@ -6,6 +6,7 @@ import Image1 from "@public/Retardo de consolidacion osea el Dr. Monge te platic
 import Image2 from "@public/Estabilidad y alineacion de fragmentos oseos.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
 
 let author = "YVLB";
 let comment = {
@@ -288,3 +289,18 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
+<Footer
+  URL={isEnglish}
+  PreviousLink={isEnglish
+    ? "conservative-treatment-vs-surgery-when-conservative-treatment-fails-and-requires-surgical-intervention-for-cervical-disc-herniation"
+    : "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical"}
+  PreviousName={isEnglish
+    ? "Conservative Treatment vs Surgery"
+    : "Tratamiento Conservador vs Cirugía"}
+  NextLink={isEnglish
+    ? "bunions-symptoms-detection-and-types-of-surgery-to-remove-them"
+    : "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos"}
+  NextName={isEnglish
+    ? "Bunions: Symptoms and Treatment"
+    : "Juanetes: Síntomas y Tratamiento"}
+/>

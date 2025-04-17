@@ -2,6 +2,7 @@
 import Observer from "@components/blogs/Observer";
 import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
+import Footer from "./Footer.astro";
 
 let author = "YVLB";
 let comment = {
@@ -266,3 +267,12 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
+<Footer
+  URL={isEnglish}
+  NextLink={isEnglish
+    ? "pseudoarthrosis-and-delayed-union"
+    : "Pseudoartrosis-y-Retraso-de-Consolidacion"}
+  NextName={isEnglish
+    ? "Pseudoarthrosis and Delayed Union"
+    : "Pseudoartrosis y Retraso de Consolidación"}
+/>

@@ -6,6 +6,7 @@ import Image1 from "@public/Las infiltraciones son un complemento perfecto para 
 import Image2 from "@public/Las infiltraciones pueden ser de corticosteroides PRP Y Acido hialuronico.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
 let author = "YVLB";
 let comment =
   "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
@@ -251,3 +252,16 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
+<Footer
+  URL={isEnglish}
+  PreviousLink={isEnglish
+    ? "bunions-symptoms-detection-and-types-of-surgery-to-remove-them"
+    : "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos"}
+  PreviousName={isEnglish
+    ? "Bunions: Symptoms and Treatment"
+    : "Juanetes: Síntomas y Tratamiento"}
+  NextLink={isEnglish
+    ? "tendinitis-and-tendinosis-causes-differences-and-treatment"
+    : "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento"}
+  NextName={isEnglish ? "Tendinitis and Tendinosis" : "Tendinitis y Tendinosis"}
+/>

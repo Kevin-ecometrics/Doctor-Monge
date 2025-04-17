@@ -6,6 +6,7 @@ import Image1 from "@public/Radiografia-paciente-fractura-humero-dos-partes.webp
 import Image2 from "@public/Radiografia-Fractura-Dislocacion-dos-partes.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
 let author = "YVLB";
 let comment =
   "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
@@ -591,3 +592,18 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
+<Footer
+  URL={isEnglish}
+  PreviousLink={isEnglish
+    ? "low-back-pain-types-risk-factors-and-treatments"
+    : "lumbalgia-tipos-factores-de-riesgos-y-tratamientos"}
+  PreviousName={isEnglish
+    ? "Low Back Pain: Types and Treatments"
+    : "Lumbalgia: Tipos y Tratamientos"}
+  NextLink={isEnglish
+    ? "is-a-second-surgery-necessary-to-treat-pseudoarthrosis"
+    : "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis"}
+  NextName={isEnglish
+    ? "Is a Second Surgery Necessary?"
+    : "¿Es necesaria una segunda cirugía?"}
+/>

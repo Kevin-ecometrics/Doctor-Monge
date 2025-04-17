@@ -6,6 +6,7 @@ import Image1 from "@public/blog14.webp";
 import Image2 from "@public/blog14-2.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
 let author = "YVLB";
 let comment =
   "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
@@ -293,3 +294,18 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
+<Footer
+  URL={isEnglish}
+  PreviousLink={isEnglish
+    ? "proximal-humerus-fracture-in-older-adults"
+    : "fractura-de-humero-proximal-en-adultos-mayores"}
+  PreviousName={isEnglish
+    ? "Proximal Humerus Fracture"
+    : "Fractura de Húmero Proximal"}
+  NextLink={isEnglish
+    ? "hidden-fractures-diagnosis-tijuana"
+    : "fracturas-ocultas-diagnostico-tijuana"}
+  NextName={isEnglish
+    ? "Hidden Fractures Diagnosis"
+    : "Diagnóstico de Fracturas Ocultas"}
+/>

@@ -2,6 +2,7 @@
 import Observer from "@components/blogs/Observer";
 import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
+import Footer from "./Footer.astro";
 
 let author = "YVLB";
 let comment = {
@@ -339,3 +340,10 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
+<Footer
+  URL={isEnglish}
+  PreviousLink={isEnglish ? "tibia-and-fibula-fracture" : "Fractura-de-tibia-y-Perone"}
+  PreviousName={isEnglish ? "Tibia and Fibula Fracture" : "Fractura de Tibia y Peroné"}
+  NextLink={isEnglish ? "anterior-cruciate-ligament-injury" : "Lesion-de-Ligamento-cruzado-anterior"}
+  NextName={isEnglish ? "Anterior Cruciate Ligament Injury" : "Lesión de Ligamento Cruzado Anterior"}
+/>

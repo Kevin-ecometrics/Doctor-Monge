@@ -6,6 +6,7 @@ import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
 
 let author = "YVLB";
 let comment = {
@@ -360,3 +361,18 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
+<Footer
+  URL={isEnglish}
+  PreviousLink={isEnglish
+    ? "knee-injections-with-hyaluronic-acid-for-knee-osteoarthritis-treatment"
+    : "Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla"}
+  PreviousName={isEnglish
+    ? "Knee Injections with Hyaluronic Acid"
+    : "Infiltraciones con Ácido Hialurónico"}
+  NextLink={isEnglish
+    ? "why-is-it-said-that-the-body-rejects-material-factors-associated-with-failure-in-fracture-osteosynthesis"
+    : "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas"}
+  NextName={isEnglish
+    ? "Material Rejection in Osteosynthesis"
+    : "Rechazo de Material en Osteosíntesis"}
+/>

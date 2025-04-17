@@ -6,6 +6,7 @@ import Image1 from "@public/Una de las zonas mas afectadas por la osteoporosis e
 import Image2 from "@public/La osteoporosis  provoca que los  huesos del pie se fracturen con más facilidad.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
 
 let author = "YVLB";
 let comment = {
@@ -545,3 +546,18 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
+<Footer
+  URL={isEnglish}
+  PreviousLink={isEnglish
+    ? "anterior-cruciate-ligament-injury"
+    : "Lesion-de-Ligamento-cruzado-anterior"}
+  PreviousName={isEnglish
+    ? "Anterior Cruciate Ligament Injury"
+    : "Lesión de Ligamento Cruzado Anterior"}
+  NextLink={isEnglish
+    ? "knee-injections-with-hyaluronic-acid-for-knee-osteoarthritis-treatment"
+    : "Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla"}
+  NextName={isEnglish
+    ? "Knee Injections with Hyaluronic Acid"
+    : "Infiltraciones con Ácido Hialurónico"}
+/>

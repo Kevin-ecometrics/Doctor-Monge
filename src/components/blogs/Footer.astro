@@ -1,5 +1,15 @@
 ---
-import { FaHome, FaShieldAlt, FaFileContract } from "react-icons/fa";
+import Doctoralia from "@components/icons/Doctoralia.astro";
+import Facebook from "@components/icons/Facebook.astro";
+import Instagram from "@components/icons/Instagram.astro";
+import Tiktok from "@components/icons/Tiktok.astro";
+import {
+  FaHome,
+  FaShieldAlt,
+  FaFileContract,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 
 const currentYear = new Date().getFullYear();
 
@@ -15,79 +25,233 @@ const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
 ---
 
 <hr />
-<footer class="text-center p-6">
-  <div class="max-w-6xl mx-auto">
-    {/* Main Navigation Links */}
-    <nav class="mb-6">
-      <ul class="list-none p-0 flex flex-wrap justify-center gap-4 md:gap-8">
-        <li>
-          <a
-            href={URL ? "/en/" : "/"}
-            class="flex items-center gap-2 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
-          >
-            <FaHome className="text-lg" />
-            {URL ? "Home" : "Inicio"}
-          </a>
-        </li>
-        <li>
-          <a
-            href={URL ? "/en/privacy" : "/privacidad"}
-            class="flex items-center gap-2 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
-          >
-            <FaShieldAlt className="text-lg" />
-            {URL ? "Privacy Policy" : "Política de Privacidad"}
-          </a>
-        </li>
-        <li>
-          <a
-            href={URL ? "/en/terms" : "/terminos"}
-            class="flex items-center gap-2 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
-          >
-            <FaFileContract className="text-lg" />
-            {URL ? "Terms" : "Términos"}
-          </a>
-        </li>
-      </ul>
-    </nav>
+<footer class="p-8 text-white">
+  <div class="max-w-7xl mx-auto">
+    {/* Main Footer Content */}
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+      {/* Left Section - Logo and Address */}
+      <div class="flex-1 flex flex-col justify-start items-start">
+        <a href={URL ? "/en/" : "/"} class="flex items-center mb-4 group">
+          <img
+            src="/El doctor Ricardo Monge es  ortopedista especialista en rodilla cadera y espalda.png"
+            alt={URL ? "Dr. Monge Logo" : "Logo del Dr. Monge"}
+            class="transition-transform
+            duration-300
+            group-hover:scale-105"
+          />
+        </a>
 
-    {/* Previous/Next Navigation */}
-    {
-      (PreviousLink || NextLink) && (
-        <nav class="mb-6">
-          <ul class="list-none p-0 flex justify-center gap-8">
-            {PreviousLink && (
-              <li>
-                <a
-                  href={PreviousLink}
-                  class="flex items-center gap-1 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
+        <div
+          class="flex items-start gap-3 text-sm text-gray-300 hover:text-white transition-colors"
+        >
+          <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-blue-400" />
+          <address class="not-italic">
+            Fray Servando Teresa de Mier 1351-interior 810,<br />
+            Zona Urbana Rio Tijuana,<br />
+            22010 Tijuana, B.C.
+          </address>
+        </div>
+      </div>
+
+      {/* Center Section - Navigation Links */}
+      <div class="flex-1">
+        <nav>
+          <ul
+            class="list-none p-0 flex flex-wrap justify-center gap-6 md:gap-8"
+          >
+            <li>
+              <a
+                href={URL ? "/en/" : "/"}
+                class="flex items-center gap-2 font-medium transition-all duration-300
+                       hover:text-blue-400 hover:translate-x-1 px-3 py-1 rounded-lg
+                       hover:bg-gray-800 hover:shadow-lg"
+              >
+                <FaHome className="text-xl text-blue-400" />
+                <span
+                  class="relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-blue-400 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300"
                 >
-                  {PreviousName}
-                </a>
-              </li>
-            )}
-            {NextLink && (
-              <li>
-                <a
-                  href={NextLink}
-                  class="flex items-center gap-1 text-white hover:text-blue-600 hover:underline font-medium transition-colors"
+                  {URL ? "Home" : "Inicio"}
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href={URL ? "/en/privacy" : "/privacidad"}
+                class="flex items-center gap-2 font-medium transition-all duration-300
+                       hover:text-blue-400 hover:translate-x-1 px-3 py-1 rounded-lg
+                       hover:bg-gray-800 hover:shadow-lg"
+              >
+                <FaShieldAlt className="text-xl text-blue-400" />
+                <span
+                  class="relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-blue-400 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300"
                 >
-                  {NextName}
-                </a>
-              </li>
-            )}
+                  {URL ? "Privacy" : "Privacidad"}
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href={URL ? "/en/terms" : "/terminos"}
+                class="flex items-center gap-2 font-medium transition-all duration-300
+                       hover:text-blue-400 hover:translate-x-1 px-3 py-1 rounded-lg
+                       hover:bg-gray-800 hover:shadow-lg"
+              >
+                <FaFileContract className="text-xl text-blue-400" />
+                <span
+                  class="relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-blue-400 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300"
+                >
+                  {URL ? "Terms" : "Términos"}
+                </span>
+              </a>
+            </li>
           </ul>
         </nav>
-      )
-    }
+
+        {/* Previous/Next Navigation - Mobile only */}
+        <div class="md:hidden mt-6">
+          {
+            (PreviousLink || NextLink) && (
+              <nav>
+                <ul class="list-none p-0 flex justify-center gap-8">
+                  {NextLink && (
+                    <li>
+                      <a
+                        href={NextLink}
+                        class="flex items-center gap-1 font-medium px-4 py-2 rounded-full
+                             bg-gray-800 hover:bg-blue-600 transition-all duration-300
+                             hover:shadow-lg hover:translate-y-[-2px]"
+                      >
+                        <FaArrowLeft className="text-blue-400" />
+                        {NextName}
+                      </a>
+                    </li>
+                  )}
+                  {PreviousLink && (
+                    <li>
+                      <a
+                        href={PreviousLink}
+                        class="flex items-center gap-1 font-medium px-4 py-2 rounded-full
+                             bg-gray-800 hover:bg-blue-600 transition-all duration-300
+                             hover:shadow-lg hover:translate-y-[-2px]"
+                      >
+                        {PreviousName}
+                        <FaArrowRight className="text-blue-400" />
+                      </a>
+                    </li>
+                  )}
+                </ul>
+              </nav>
+            )
+          }
+        </div>
+      </div>
+
+      {/* Right Section - Social Media */}
+      <div class="flex-1 flex justify-end">
+        <div class="flex flex-col items-end">
+          <div class="flex gap-5 mb-3">
+            <a
+              href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-blue-400 transition-all duration-300
+                      p-2 rounded-full hover:bg-gray-800 hover:scale-110"
+            >
+              <Facebook className="text-2xl" />
+            </a>
+            <a
+              href="https://www.instagram.com/drmonge.ortho/?hl=es"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-blue-400 transition-all duration-300
+                      p-2 rounded-full hover:bg-gray-800 hover:scale-110"
+            >
+              <Instagram className="text-2xl" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@elmongedelaortopedia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-blue-400 transition-all duration-300
+                      p-2 rounded-full hover:bg-gray-800 hover:scale-110"
+            >
+              <Tiktok className="text-2xl" />
+            </a>
+            <a
+              href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white hover:text-blue-400 transition-all duration-300
+                      p-2 rounded-full hover:bg-gray-800 hover:scale-110"
+            >
+              <Doctoralia className="text-2xl" />
+            </a>
+          </div>
+          <div class="text-sm text-gray-300 text-right mb-2">
+            {URL ? "Follow us" : "Síguenos"}
+          </div>
+          <div class="text-xs text-gray-500">
+            {URL ? "Connect with us" : "Conéctate con nosotros"}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Previous/Next Navigation - Desktop */}
+    <div class="hidden md:block mt-8">
+      {
+        (PreviousLink || NextLink) && (
+          <nav>
+            <ul class="list-none p-0 flex justify-center gap-12">
+              {NextLink && (
+                <li>
+                  <a
+                    href={NextLink}
+                    class="flex items-center gap-2 font-medium px-6 py-3 rounded-full
+                         bg-gray-800 hover:bg-blue-600 transition-all duration-300
+                         hover:shadow-lg hover:translate-y-[-3px]"
+                  >
+                    <FaArrowLeft className="text-blue-400" />
+                    {NextName}
+                  </a>
+                </li>
+              )}
+              {PreviousLink && (
+                <li>
+                  <a
+                    href={PreviousLink}
+                    class="flex items-center gap-2 font-medium px-6 py-3 rounded-full
+                         bg-gray-800 hover:bg-blue-600 transition-all duration-300
+                         hover:shadow-lg hover:translate-y-[-3px]"
+                  >
+                    {PreviousName}
+                    <FaArrowRight className="text-blue-400" />
+                  </a>
+                </li>
+              )}
+            </ul>
+          </nav>
+        )
+      }
+    </div>
 
     {/* Copyright */}
-    <p class="text-gray-600 dark:text-gray-300 text-sm">
-      &copy; {currentYear}
-      {
-        URL
-          ? "Dr. Monge. All rights reserved."
-          : "Dr. Monge. Todos los derechos reservados."
-      }
-    </p>
+    <div class="mt-10 text-center">
+      <p class="text-gray-400 text-sm">
+        &copy; {currentYear}
+        {
+          URL
+            ? "Dr. Monge. All rights reserved."
+            : "Dr. Monge. Todos los derechos reservados."
+        }
+      </p>
+      <p class="text-gray-500 text-xs mt-2">
+        {
+          URL
+            ? "Traumatology and Orthopedics | Tijuana, Mexico"
+            : "Traumatología y Ortopedia | Tijuana, México"
+        }
+      </p>
+    </div>
   </div>
 </footer>
