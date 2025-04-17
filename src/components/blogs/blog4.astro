@@ -8,9 +8,14 @@ import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
 
 let author = "YVLB";
-let comment =
-  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
-let business = "Paciente";
+let comment = {
+  es: "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.",
+  en: "Excellent attention, took the necessary time to explain in detail as well as the physical examination. I felt truly cared for with a good prognosis for resolution.",
+};
+let business = {
+  es: "Paciente",
+  en: "Patient",
+};
 
 const blogsRutas = [
   {
@@ -34,6 +39,8 @@ const blogActual =
   "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor";
 
 const id = 4;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -41,177 +48,500 @@ const id = 4;
 >
   <Observer client:visible>
     <h1 class="text-2xl md:text-5xl text-white font-semibold mb-24 md:mt-32">
-      ¿Qué es la osteoporosis y como afecta al cuerpo?
+      {
+        isEnglish
+          ? "What is osteoporosis and how does it affect the body?"
+          : "¿Qué es la osteoporosis y como afecta al cuerpo?"
+      }
     </h1>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24 mt-12">
-      La osteoporosis es una condición en la que los huesos se vuelven más
-      frágiles y propensos a fracturas debido a un desequilibrio en el proceso
-      de remodelación ósea. En lugar de mantener el calcio y el fosfato
-      necesarios para su densidad y fortaleza, el hueso reabsorbe estos
-      minerales en exceso, debilitando su estructura.
-      <br />
-      <br />
-
-       Esta condición afecta tanto a hombres como a mujeres, donde el alto
-      índice de casos se da pasando la mediana edad, sin embargo, las mujeres
-      son 4 veces más propensas debido a condicionales hormonales de la
-      menopausia.
-      <br />
-      <br />
-       Es una condición que no genera síntomas visibles por ello se le conoce como
-      silenciosa, uno puede enterarse hasta que el hueso se fracture, que usualmente
-      suelen ser fracturas de cadera, vertebras de la columna y la muñeca.
+      {
+        isEnglish ? (
+          <>
+            <p>
+              Osteoporosis is a condition in which bones become more fragile and
+              prone to fractures due to an imbalance in the bone remodeling
+              process. Instead of maintaining the calcium and phosphate needed
+              for their density and strength, the bone reabsorbs these minerals
+              excessively, weakening its structure.
+            </p>
+            <p>
+              <br /> This condition affects both men and women, with the highest
+              incidence occurring after middle age. However, women are 4 times
+              more likely to develop it due to hormonal conditions related to
+              menopause.
+            </p>
+            <p>
+              <br /> It's a condition that doesn't produce visible symptoms,
+              which is why it's known as silent. One might only become aware of
+              it when a bone fractures, which usually occurs in the hip, spinal
+              vertebrae, and wrist.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              La osteoporosis es una condición en la que los huesos se vuelven
+              más frágiles y propensos a fracturas debido a un desequilibrio en
+              el proceso de remodelación ósea. En lugar de mantener el calcio y
+              el fosfato necesarios para su densidad y fortaleza, el hueso
+              reabsorbe estos minerales en exceso, debilitando su estructura.
+            </p>
+            <p>
+              Esta condición afecta tanto a hombres como a mujeres, donde el
+              alto índice de casos se da pasando la mediana edad, sin embargo,
+              las mujeres son 4 veces más propensas debido a condicionales
+              hormonales de la menopausia.
+            </p>
+            <p>
+              Es una condición que no genera síntomas visibles por ello se le
+              conoce como silenciosa, uno puede enterarse hasta que el hueso se
+              fracture, que usualmente suelen ser fracturas de cadera, vertebras
+              de la columna y la muñeca.
+            </p>
+          </>
+        )
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
-      Causas de la osteoporosis
+      {isEnglish ? "Causes of osteoporosis" : "Causas de la osteoporosis"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24 mt-12">
-      Bajo peso corporal y huesos delgados: Las personas con estas
-      características tienen riesgo de padecer esta afección <br />
-      <br /> Herencia: Si algún familiar tiene antecedentes o padecen de osteoporosis
-      aumenta el riesgo. <br />
-      <br /> Cambios hormonales: La disminución de estrógeno después de la menopausia.
-      <br />
-      <br />
-      Alimentación: Una alimentación deficiente de calcio, proteínas y vitaminas
-      entre ellas la D aumenta el riesgo de pérdida ósea y osteoporosis <br />
-      <br /> Medicamentos: Cierto uso de medicamentos por tiempo prolongado tiene
-      efectos secundarios en la salud ósea <br />
-      <br /> Estilo de vida: Los malos hábitos como fumar, beber alcohol, ser sedentario
-      puede afectar en la salud de los huesos.
+      {
+        isEnglish ? (
+          <>
+            <>
+              <p>
+                <strong>Low body weight and thin bones:</strong> People with
+                these characteristics are at risk of developing this condition.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Heredity:</strong> If any family member has a history of
+                osteoporosis, the risk increases.
+              </p>
+              <br />
+            </>
+            <p>
+              <strong>Hormonal changes:</strong> The decrease in estrogen after
+              menopause.
+            </p>
+            <>
+              <p>
+                <strong>Diet:</strong> A diet deficient in calcium, proteins and
+                vitamins including vitamin D increases the risk of bone loss and
+                osteoporosis.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Medications:</strong> Certain long-term medications have
+                side effects on bone health.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Lifestyle:</strong> Bad habits like smoking, drinking
+                alcohol, and being sedentary can affect bone health.
+              </p>
+            </>
+          </>
+        ) : (
+          <>
+            <>
+              <p>
+                <strong>Bajo peso corporal y huesos delgados:</strong> Las
+                personas con estas características tienen riesgo de padecer esta
+                afección.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Herencia:</strong> Si algún familiar tiene antecedentes
+                o padecen de osteoporosis aumenta el riesgo.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Cambios hormonales:</strong> La disminución de estrógeno
+                después de la menopausia.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Alimentación:</strong> Una alimentación deficiente de
+                calcio, proteínas y vitaminas entre ellas la D aumenta el riesgo
+                de pérdida ósea y osteoporosis.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Medicamentos:</strong> Cierto uso de medicamentos por
+                tiempo prolongado tiene efectos secundarios en la salud ósea.
+              </p>
+              <br />
+            </>
+            <p>
+              <strong>Estilo de vida:</strong> Los malos hábitos como fumar,
+              beber alcohol, ser sedentario puede afectar en la salud de los
+              huesos.
+            </p>
+          </>
+        )
+      }
     </h4>
   </Observer>
 
   <ObserverImage client:visible>
     <div class="flex justify-center items-center">
-      <Image src={Image1} alt="Osteoporosis" class="fade-up object-cover" />
+      <Image
+        src={Image1}
+        alt={isEnglish ? "Osteoporosis" : "Osteoporosis"}
+        class="fade-up object-cover"
+      />
     </div>
   </ObserverImage>
 
   <Observer client:visible>
     <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
-      ¿Cómo se diagnostica y mide la osteoporosis?
+      {
+        isEnglish
+          ? "How is osteoporosis diagnosed and measured?"
+          : "¿Cómo se diagnostica y mide la osteoporosis?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24 mt-12">
-      El estudio para valorar la densidad ósea se llama densitometría ósea. La
-      densidad mineral ósea es la cantidad de masa por unidad de volumen o por
-      unidad de área. El objetivo del DMO brindar un diagnóstico o pronostico.  
-      <br />
-      <br />
-      De acuerdo con el contenido mineral óseo podemos dividir los estados clínicos
-      de la Osteoporosis en etapas: 
-      <br />
-      <br />
-       Normal: densidad mineral ósea -1 desviación estándar. 
-      <br />
-      <br />
-       Osteopenia o DMO baja: densidad mineral óseo entre -1 y -2.5 desviación estándar. 
-      <br />
-      <br />
-       Osteoporosis: densidad mineral ósea -2.5 desviación estándar. 
-      <br />
-      <br />
-       Osteoporosis Establecida o con fractura: densidad mineral óseo por debajo
-      de 2.5  
-      <br />
-      <br />
-      Los resultados se obtienen por medio del cálculo de FRAX una herramienta que
-      permie calcular el riesgo de fractura a partir de la densitometría y el historial
-      clínico.
+      {
+        isEnglish ? (
+          <>
+            <>
+              <p>
+                The study to assess bone density is called bone densitometry.
+                Bone mineral density is the amount of mass per unit volume or
+                per unit area. The objective of BMD is to provide a diagnosis or
+                prognosis.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                According to the bone mineral content, we can divide the
+                clinical stages of Osteoporosis into phases:
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Normal:</strong> bone mineral density -1 standard
+                deviation.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Osteopenia or low BMD:</strong> bone mineral density
+                between -1 and -2.5 standard deviations.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Osteoporosis:</strong> bone mineral density -2.5
+                standard deviations.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Established osteoporosis or with fracture:</strong> bone
+                mineral density below 2.5.
+              </p>
+              <br />
+            </>
+            <p>
+              The results are obtained through the FRAX calculation, a tool that
+              allows calculating the fracture risk based on densitometry and
+              clinical history.
+            </p>
+          </>
+        ) : (
+          <>
+            <>
+              <p>
+                El estudio para valorar la densidad ósea se llama densitometría
+                ósea. La densidad mineral ósea es la cantidad de masa por unidad
+                de volumen o por unidad de área. El objetivo del DMO brindar un
+                diagnóstico o pronostico.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                De acuerdo con el contenido mineral óseo podemos dividir los
+                estados clínicos de la Osteoporosis en etapas:
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Normal:</strong> densidad mineral ósea -1 desviación
+                estándar.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Osteopenia o DMO baja:</strong> densidad mineral óseo
+                entre -1 y -2.5 desviación estándar.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Osteoporosis:</strong> densidad mineral ósea -2.5
+                desviación estándar.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Osteoporosis Establecida o con fractura:</strong>{" "}
+                densidad mineral óseo por debajo de 2.5.
+              </p>
+              <br />
+            </>
+            <p>
+              Los resultados se obtienen por medio del cálculo de FRAX una
+              herramienta que permite calcular el riesgo de fractura a partir de
+              la densitometría y el historial clínico.
+            </p>
+          </>
+        )
+      }
     </h4>
   </Observer>
 
   <ObserverImage client:visible>
     <div class="flex justify-center items-center">
-      <Image src={Image2} alt="Osteoporosis" class="fade-up object-cover" />
+      <Image
+        src={Image2}
+        alt={isEnglish ? "Osteoporosis" : "Osteoporosis"}
+        class="fade-up object-cover"
+      />
     </div>
   </ObserverImage>
 
   <Observer client:visible>
     <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
-      Tipos de osteoporosis
+      {isEnglish ? "Types of osteoporosis" : "Tipos de osteoporosis"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24 mt-12">
-      Osteoporosis juvenil idiopática: Aparece una desmineralización del hueso
-      entre los 8 y 12 años se caracterizada por dolor de espalda, pies y
-      extremosidades, dificultares para caminar, suele resolverse con
-      tratamiento y una vez pasada la pubertad. <br />
-      <br /> Osteoporosis tipo I: Se da en una etapa postmenopáusica en mujeres debido
-      a la falta de estrógenos.
-      <br />
-      <br />Osteoporosis tipo II: Es producida por el envejecimiento.
+      {
+        isEnglish ? (
+          <>
+            <p>
+              <strong>Juvenile idiopathic osteoporosis:</strong> Bone
+              demineralization appears between 8 and 12 years old, characterized
+              by back, foot and extremity pain, difficulty walking, usually
+              resolves with treatment and after puberty.
+            </p>
+            <>
+              <p>
+                <strong>Type I osteoporosis:</strong> Occurs in postmenopausal
+                women due to lack of estrogen.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Type II osteoporosis:</strong> Caused by aging.
+              </p>
+              <br />
+            </>
+          </>
+        ) : (
+          <>
+            <p>
+              <strong>Osteoporosis juvenil idiopática:</strong> Aparece una
+              desmineralización del hueso entre los 8 y 12 años se caracterizada
+              por dolor de espalda, pies y extremosidades, dificultares para
+              caminar, suele resolverse con tratamiento y una vez pasada la
+              pubertad.
+            </p>
+            <>
+              <p>
+                <strong>Osteoporosis tipo I:</strong> Se da en una etapa
+                postmenopáusica en mujeres debido a la falta de estrógenos.
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Osteoporosis tipo II:</strong> Es producida por el
+                envejecimiento.
+              </p>
+              <br />
+            </>
+          </>
+        )
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
-      Tratamiento
+      {isEnglish ? "Treatment" : "Tratamiento"}
     </h2>
   </Observer>
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24 mt-12">
-      Depende de cada caso será el abordaje, los medicamentos más recetados son
-      los bisfosfonatos que inhiben la reabsorción ósea, a su vez están las
-      inyecciones de denosumab, claro todos complementados con un plan
-      nutricional rico en calcio, vitamina D, Omega 3 y suplementos. Otro
-      abordaje a esta condición es la terapia de reemplazo hormonal que será un
-      tratamiento que llevará a cabo un endocrinólogo para administrar el
-      medicamento más adecuado.
+      {
+        isEnglish ? (
+          <>
+            <p>
+              The approach depends on each case. The most prescribed medications
+              are bisphosphonates that inhibit bone resorption, along with
+              denosumab injections, all complemented with a nutritional plan
+              rich in calcium, vitamin D, Omega 3 and supplements. Another
+              approach to this condition is hormone replacement therapy, which
+              will be a treatment carried out by an endocrinologist to
+              administer the most appropriate medication.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              Depende de cada caso será el abordaje, los medicamentos más
+              recetados son los bisfosfonatos que inhiben la reabsorción ósea, a
+              su vez están las inyecciones de denosumab, claro todos
+              complementados con un plan nutricional rico en calcio, vitamina D,
+              Omega 3 y suplementos. Otro abordaje a esta condición es la
+              terapia de reemplazo hormonal que será un tratamiento que llevará
+              a cabo un endocrinólogo para administrar el medicamento más
+              adecuado.
+            </p>
+          </>
+        )
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h2 class="fade-up text-white text-4xl mb-24 mt-12 font-semibold">
-      Recomendaciones
+      {isEnglish ? "Recommendations" : "Recomendaciones"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24 mt-12">
-      Alimentación y suplementación  <br />
-      <br />
-
-      Evitar fumar  <br />
-      <br />
-
-      Realizar ejercicios de resistencia y fuerza <br />
-      <br />
-
-      Evitar el consumo de alcohol  <br />
-      <br />
-
-      Utilizar zapatos adecuados, para disminuir el riesgo de caídas e impactos
-      que puedan generar una lesión o fractura grave <br />
-      <br />
-
-      Adaptar espacios: Con iluminación adecuada, barras de agarre en las
-      regaderas, escaleras y suelas antideslizantes.
+      {
+        isEnglish ? (
+          <>
+            <>
+              <p>
+                <strong>Diet and supplementation</strong>
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Avoid smoking</strong>
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Perform resistance and strength exercises</strong>
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Avoid alcohol consumption</strong>
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Use appropriate shoes</strong> to reduce the risk of
+                falls and impacts that could cause serious injury or fracture
+              </p>
+              <br />
+            </>
+            <p>
+              <strong>Adapt spaces:</strong> With adequate lighting, grab bars
+              in showers, stairs and non-slip soles.
+            </p>
+          </>
+        ) : (
+          <>
+            <>
+              <p>
+                <strong>Alimentación y suplementación</strong>
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Evitar fumar</strong>
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Realizar ejercicios de resistencia y fuerza</strong>
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Evitar el consumo de alcohol</strong>
+              </p>
+              <br />
+            </>
+            <>
+              <p>
+                <strong>Utilizar zapatos adecuados,</strong> para disminuir el
+                riesgo de caídas e impactos que puedan generar una lesión o
+                fractura grave
+              </p>
+              <br />
+            </>
+            <p>
+              <strong>Adaptar espacios:</strong> Con iluminación adecuada,
+              barras de agarre en las regaderas, escaleras y suelas
+              antideslizantes.
+            </p>
+          </>
+        )
+      }
     </h4>
   </Observer>
 </article>
 
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
-  <!-- <Comments
-    client:visible
-    author={author}
-    comment={comment}
-    business={business}
-  /> -->
-
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>

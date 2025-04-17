@@ -2,10 +2,16 @@
 import Observer from "@components/blogs/Observer";
 import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
+
 let author = "YVLB";
-let comment =
-  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
-let business = "Paciente";
+let comment = {
+  es: "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.",
+  en: "Excellent attention, took the necessary time to explain in detail as well as the physical examination. I felt truly cared for with a good prognosis for resolution.",
+};
+let business = {
+  es: "Paciente",
+  en: "Patient",
+};
 
 const blogsRutas = [
   {
@@ -28,6 +34,8 @@ const blogsRutas = [
 const blogActual = "Pseudoartrosis-y-Retraso-de-Consolidacion";
 
 const id = 2;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -35,253 +43,299 @@ const id = 2;
 >
   <Observer client:visible>
     <h1 class="text-2xl md:text-5xl text-white font-semibold mb-24 md:mt-32">
-      Complicaciones en procedimientos médicos: pseudoartrosis y retraso de
-      consolidación ósea
+      {
+        isEnglish
+          ? "Complications in medical procedures: Pseudoartrosis and delayed bone consolidation"
+          : "Complicaciones en procedimientos médicos: Pseudoartrosis y retraso de consolidación ósea"
+      }
     </h1>
   </Observer>
 
   <Observer client:visible>
     <h3 class="fade-up text-2xl font-bold mb-24 text-white">
-      ¿Porque algunas fracturas se comportan bien y otras mal?
+      {
+        isEnglish
+          ? "Why do some fractures behave well and others poorly?"
+          : "¿Porque algunas fracturas se comportan bien y otras mal?"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      Nuestro cuerpo y cada estructura se nutren de la sangre y el oxígeno.
-      cuando hay una fractura lo afectado no solo es el hueso sino todos los
-      tejidos alrededor el hueso, para que sane requiere de sangre y oxígeno y
-      al quebrarse se interrumpe, es un proceso complicado y tiene muchos
-      factores a considerar, pero la meta final es optimizar las condiciones de
-      tu lesión y cuerpo para que logre recuperarse.
+      {
+        isEnglish
+          ? `Our body and each structure are nourished by blood and oxygen. When there's a fracture, not only the bone is affected but all the surrounding tissues. To heal, it requires blood and oxygen, which are interrupted when broken. This is a complex process with many factors to consider, but the ultimate goal is to optimize the conditions of your injury and body for recovery.`
+          : `Nuestro cuerpo y cada estructura se nutren de la sangre y el oxígeno. cuando hay una fractura lo afectado no solo es el hueso sino todos los tejidos alrededor el hueso, para que sane requiere de sangre y oxígeno y al quebrarse se interrumpe, es un proceso complicado y tiene muchos factores a considerar, pero la meta final es optimizar las condiciones de tu lesión y cuerpo para que logre recuperarse.`
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h3 class="fade-up text-2xl font-bold mb-24 text-white">
-      ¿Qué sucede durante la consolidación ósea?
+      {
+        isEnglish
+          ? "What happens during bone consolidation?"
+          : "¿Qué sucede durante la consolidación ósea?"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h3 class="fade-up text-xl mb-16">
-      Existen dos tipos la primaria y secundaria
+      {
+        isEnglish
+          ? "There are two types: primary and secondary"
+          : "Existen dos tipos la primaria y secundaria"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      Entendemos como consolidación primaria del hueso a la curación de la
-      fractura sin la formación del callo y apoyo de material como placas,
-      tornillos, clavos para fijar y estabilizar la posición de la fractura.
+      {
+        isEnglish
+          ? `We understand primary bone consolidation as the healing of the fracture without callus formation and with the support of materials like plates, screws, or nails to fix and stabilize the fracture position.`
+          : `Entendemos como consolidación primaria del hueso a la curación de la fractura sin la formación del callo y apoyo de material como placas, tornillos, clavos para fijar y estabilizar la posición de la fractura.`
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      Por otra parte, en la consolidación secundaria todas las fracturas
-      sometidas a un proceso de inmovilización con material que este puede ser,
-      por ejemplo: yeso que no requieren ser estabilizada quirúrgicamente,
-      tienen tendencia a la curación por deformación de un callo.
+      {
+        isEnglish
+          ? `On the other hand, in secondary consolidation, all fractures subjected to an immobilization process with materials (such as casts) that don't require surgical stabilization tend to heal through callus formation.`
+          : `Por otra parte, en la consolidación secundaria todas las fracturas sometidas a un proceso de inmovilización con material que este puede ser, por ejemplo: yeso que no requieren ser estabilizada quirúrgicamente, tienen tendencia a la curación por deformación de un callo.`
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h3 class="fade-up text-2xl mb-16 font-bold text-white">
-      Se desarrolla en tres fases:  Inflamatoria, reparadora y la de
-      remodelación
+      {
+        isEnglish
+          ? "It develops in three phases: Inflammatory, reparative, and remodeling"
+          : "Se desarrolla en tres fases: Inflamatoria, reparadora y la de remodelación"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      La primera ocurre en las primeras 24 a 48 hrs iniciando un proceso
-      inflamatorio donde sucede una activación y migración de células al sitio
-      de la lesión formándose un coagulo entre los tejidos y hueso afectado.
+      {
+        isEnglish
+          ? `The first occurs within the first 24 to 48 hours, initiating an inflammatory process where cell activation and migration to the injury site occurs, forming a clot between the tissues and affected bone.`
+          : `La primera ocurre en las primeras 24 a 48 hrs iniciando un proceso inflamatorio donde sucede una activación y migración de células al sitio de la lesión formándose un coagulo entre los tejidos y hueso afectado.`
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      En la fase reparadora o callo blando se empieza a formar el callo que hace
-      unos puentes desde ambas puntas del hueso quebrado, resultando en la
-      restauración de la circulación medular. Esto transcurre en un lapso de dos
-      semanas este proceso esta influenciado por causas mecánicas y humorales.
-      Posterior a esto está la formación del callo duro que es donde se puede
-      apreciar ya con radiografías la presencia de calcificación y osificación
-      progresiva.
+      {
+        isEnglish
+          ? `In the reparative phase or soft callus, the callus begins to form, creating bridges from both ends of the broken bone, resulting in the restoration of medullary circulation. This occurs over a period of two weeks and is influenced by mechanical and humoral causes. Following this is the formation of the hard callus, where calcification and progressive ossification can already be seen on X-rays.`
+          : `En la fase reparadora o callo blando se empieza a formar el callo que hace unos puentes desde ambas puntas del hueso quebrado, resultando en la restauración de la circulación medular. Esto transcurre en un lapso de dos semanas este proceso esta influenciado por causas mecánicas y humorales. Posterior a esto está la formación del callo duro que es donde se puede apreciar ya con radiografías la presencia de calcificación y osificación progresiva.`
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      En la última fase, la fase de remodelación ocurre en un periodo de 3 a 5
-      meses, consiste en que se forma un hueso inmaduro como cartílago que se
-      remodela gradualmente gracias a los osteoclastos, que son las células
-      encargadas de reparar los huesos devolviéndolos a su estado original.
+      {
+        isEnglish
+          ? `In the last phase, the remodeling phase occurs over a period of 3 to 5 months. It consists of the formation of immature bone like cartilage that gradually remodels thanks to osteoclasts, the cells responsible for repairing bones and returning them to their original state.`
+          : `En la última fase, la fase de remodelación ocurre en un periodo de 3 a 5 meses, consiste en que se forma un hueso inmaduro como cartílago que se remodela gradualmente gracias a los osteoclastos, que son las células encargadas de reparar los huesos devolviéndolos a su estado original.`
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h3 class="fade-up text-2xl font-bold mb-16 py-4 text-white">
-      Los trastornos de la consolidación
+      {
+        isEnglish
+          ? "Consolidation disorders"
+          : "Los trastornos de la consolidación"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
       <strong class="text-white font-bold text-2xl">
-        Retardo de consolidación:
+        {isEnglish ? "Consolidation delay:" : "Retardo de consolidación:"}
       </strong>
       <br />
-      En la que existe una alteración evolutiva de la fractura que está bien reducida
-      e inmovilizada, sin embargo, después de un tiempo para de consolidar y no se
-      percibe una unión ósea completa y se sigue percibiendo la fractura en las radiografías
+      {
+        isEnglish
+          ? `In which there is an evolutionary alteration of the fracture that is well reduced and immobilized, however, after a time it stops consolidating and no complete bone union is perceived, and the fracture continues to be visible on X-rays.`
+          : `En la que existe una alteración evolutiva de la fractura que está bien reducida e inmovilizada, sin embargo, después de un tiempo para de consolidar y no se percibe una unión ósea completa y se sigue percibiendo la fractura en las radiografías`
+      }
       <br /><br />
-      <strong class="text-white font-bold text-2xl"> Pseudoartrosis: </strong>
+      <strong class="text-white font-bold text-2xl">
+        {isEnglish ? "Pseudoartrosis:" : "Pseudoartrosis:"}
+      </strong>
       <br />
-      Que es la ausencia absoluta de consolidación de una fractura apareciendo una
-      falsa articulación en la parte de la epífisis, metáfisis o diáfisis siendo
-      esta ultima la más frecuente. La pseudoartrosis presenta además esclerosis
-      de los bordes de la fractura y pseudocápsula periostal y particularmente una
-      movilidad extraña, pero sin dolor en la zona de la fractura.
+      {
+        isEnglish
+          ? `Which is the absolute absence of fracture consolidation, appearing as a false joint in the part of the epiphysis, metaphysis or diaphysis, the latter being the most frequent. Pseudoartrosis also presents sclerosis of the fracture edges and periosteal pseudocapsule, and particularly strange mobility, but without pain in the fracture area.`
+          : `Que es la ausencia absoluta de consolidación de una fractura apareciendo una falsa articulación en la parte de la epífisis, metáfisis o diáfisis siendo esta ultima la más frecuente. La pseudoartrosis presenta además esclerosis de los bordes de la fractura y pseudocápsula periostal y particularmente una movilidad extraña, pero sin dolor en la zona de la fractura.`
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
-    <h3 class="fade-up text-2xl font-bold mb-16 text-white">Causas</h3>
+    <h3 class="fade-up text-2xl font-bold mb-16 text-white">
+      {isEnglish ? "Causes" : "Causas"}
+    </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      Existen diferentes factores, entre ellos pueden ser:
+      {
+        isEnglish
+          ? "There are different factors, among them may be:"
+          : "Existen diferentes factores, entre ellos pueden ser:"
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <ul class="fade-up list-decimal px-4 mb-16 text-white">
       <li class="fade-up font-bold text-xl">
-        Traumatismos de alto impacto, contracturas mutisegmentadas, fracturas
-        abiertas que se hayan infectado.
+        {
+          isEnglish
+            ? "High-impact trauma, multi-segmented fractures, open fractures that have become infected."
+            : "Traumatismos de alto impacto, contracturas mutisegmentadas, fracturas abiertas que se hayan infectado."
+        }
       </li>
-      <li class="fade-up font-bold
-      text-xl">Edad</li>
       <li class="fade-up font-bold text-xl">
-        Malos hábitos como fumar en abundancia.
+        {isEnglish ? "Age" : "Edad"}
       </li>
-      <li class="fade-up font-bold
-      text-xl">
-        Enfermedades sistémicas como diabetes, lupus, hipotiroidismo y
-        osteopatía descalificante.
+      <li class="fade-up font-bold text-xl">
+        {
+          isEnglish
+            ? "Bad habits like heavy smoking."
+            : "Malos hábitos como fumar en abundancia."
+        }
       </li>
-      <li class="fade-up font-bold
-    text-xl">
-        Consolidación viciosa, que ocurre por una mala técnica de reducción de
-        la fractura.
+      <li class="fade-up font-bold text-xl">
+        {
+          isEnglish
+            ? "Systemic diseases like diabetes, lupus, hypothyroidism, and disqualifying osteopathy."
+            : "Enfermedades sistémicas como diabetes, lupus, hipotiroidismo y osteopatía descalificante."
+        }
+      </li>
+      <li class="fade-up font-bold text-xl">
+        {
+          isEnglish
+            ? "Vicious consolidation, which occurs due to poor fracture reduction technique."
+            : "Consolidación viciosa, que ocurre por una mala técnica de reducción de la fractura."
+        }
       </li>
     </ul>
   </Observer>
 
   <Observer client:visible>
     <h3 class="fade-up text-2xl font-bold mb-16 text-white">
-      Tratamiento para retraso de consolidación ósea
+      {
+        isEnglish
+          ? "Treatment for consolidation delay"
+          : "Tratamiento para retraso de consolidación ósea"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      Para ello será indispensable corregir la causa que lo provoca o mantiene,
-      por ejemplo, corregir la mala inmovilización, tratar la infección,
-      estimular la extremidad y retirar cuerpos extraños.
+      {
+        isEnglish
+          ? "It will be essential to correct the cause that provokes or maintains it, for example, correcting poor immobilization, treating infection, stimulating the limb, and removing foreign bodies."
+          : "Para ello será indispensable corregir la causa que lo provoca o mantiene, por ejemplo, corregir la mala inmovilización, tratar la infección, estimular la extremidad y retirar cuerpos extraños."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h3 class="fade-up text-2xl font-bold mb-16 text-white">
-      Tratamiento para Pseudoartrosis
+      {isEnglish ? "Treatment for Pseudoartrosis" : "Tratamiento para Pseudoartrosis"}
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      El abordaje dependerá de los tipos de pseudoartrosis por ejemplo la
-      hipertrófica donde se debe asegurar la estabilidad, una pseudoartrosis
-      infectada será necesaria tratarla con antibióticos y una pseudoartrosis
-      atrófica se deberá eliminar el tejido fibroso desde la altura de la
-      fractura hasta el hueso sano algunos abordajes pueden ser con:
+      {
+        isEnglish
+          ? `The approach will depend on the types of pseudoartrosis. For example, hypertrophic pseudoartrosis where stability must be ensured, an infected pseudoartrosis will need to be treated with antibiotics, and atrophic pseudoartrosis will require removal of fibrous tissue from the fracture height to healthy bone. Some approaches may include:`
+          : `El abordaje dependerá de los tipos de pseudoartrosis por ejemplo la hipertrófica donde se debe asegurar la estabilidad, una pseudoartrosis infectada será necesaria tratarla con antibióticos y una pseudoartrosis atrófica se deberá eliminar el tejido fibroso desde la altura de la fractura hasta el hueso sano algunos abordajes pueden ser con:`
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
-    <h3 class="fade-up text-2xl font-bold mb-16 text-white">Injertos</h3>
+    <h3 class="fade-up text-2xl font-bold mb-16 text-white">
+      {isEnglish ? "Grafts" : "Injertos"}
+    </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      Los injertos son la opción más adecuada por no presentar reacciones de
-      inmunológicas o infecciones. Estos pueden ser un autoinjerto de cresta
-      iliaca: es la zona donde se presenta mayor capacidad osteoinductiva
-      Vascularizados: brindan soporte mecánico y vascular se utiliza para casos
-      complejos
+      {
+        isEnglish
+          ? `Grafts are the most suitable option as they don't present immunological reactions or infections. These can be iliac crest autografts: the area with the greatest osteoinductive capacity. Vascularized grafts: provide mechanical and vascular support used for complex cases.`
+          : `Los injertos son la opción más adecuada por no presentar reacciones de inmunológicas o infecciones. Estos pueden ser un autoinjerto de cresta iliaca: es la zona donde se presenta mayor capacidad osteoinductiva Vascularizados: brindan soporte mecánico y vascular se utiliza para casos complejos`
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
-    <h3 class="fade-up text-2xl font-bold mb-16 text-white">Osteosíntesis</h3>
+    <h3 class="fade-up text-2xl font-bold mb-16 text-white">
+      {isEnglish ? "Osteosynthesis" : "Osteosíntesis"}
+    </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-8">
-      Una de las ventajas de la fijación en el caso de pseudoartrosis es la
-      vascularización del hueso y los tejidos permitiendo que se regeneren con
-      más rapidez.
-      <br />
-      <br />
-      <strong class="text-white"> Clavos intramedulares: </strong>
-      Permiten estabilidad de carga y micromovilidad ideal en pseudoartrosis de huesos
-      largos.
+      {isEnglish
+        ? <>
+            <p>One of the advantages of fixation in cases of pseudoartrosis is the vascularization of the bone and tissues, allowing them to regenerate more quickly.</p>
+           <br><p><span class="text-white">Intramedullary nails:</span> They allow load stability and micromobility ideal for pseudoartrosis of long bones.</p>
+          </>
+        : <>
+            <p>Una de las ventajas de la fijación en el caso de pseudoartrosis es la vascularización del hueso y los tejidos permitiendo que se regeneren con más rapidez.</p>
+            <p><span class="text-white">Clavos intramedulares:</span> Permiten estabilidad de carga y micromovilidad ideal en pseudoartrosis de huesos largos.</p>
+          </>}
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-16">
-      Existen múltiples abordajes individualizados que toman en cuenta todos los
-      factores presentes de los trastornos de consolidación y pseudoartrosis
-      para lograr el objetivo e incorporar al paciente a su calidad y vida digna
-      nuevamente. Hablar de las complicaciones en procedimientos es un tema que
-      a veces no se habla mucho, una complicación es un evento no deseado que
-      puede ocurrir a pesar de un tratamiento adecuado, puede ser desde
-      infecciones, efectos secundarios con medicamentos y como vimos hoy un
-      retraso en consolidación y una pseudoartrosis. Cualquier procedimiento por
-      más mínimo que sea puede traer una complicación, pese a que el porcentaje
-      del evento puede ser muy bajo nunca es un cero, lo que hacemos como
-      médicos especialistas en traumatología y ortopedia para minimizar el
-      porcentaje de alguna complicación, es optimizarte como paciente y tomar
-      medidas específicas para lo que pueda aumentar el riesgo y tratarlo de
-      disminuir lo mejor posible
+      {
+        isEnglish
+          ? 
+            <p>There are multiple individualized approaches that take into account all the present factors of consolidation disorders and pseudoartrosis to achieve the goal and reintegrate the patient to their quality and dignified life again. Talking about complications in procedures is a topic that is sometimes not discussed much. A complication is an unwanted event that can occur despite adequate treatment, ranging from infections, side effects with medications, and as we saw today, delayed consolidation and pseudoartrosis. Any procedure, no matter how minimal, can bring a complication. Although the percentage of the event may be very low, it's never zero. What we do as specialist physicians in traumatology and orthopedics to minimize the percentage of any complication is to optimize you as a patient and take specific measures for what may increase the risk and treat it to reduce it as much as possible.</p>
+          : 
+            <p>Existen múltiples abordajes individualizados que toman en cuenta todos los factores presentes de los trastornos de consolidación y pseudoartrosis para lograr el objetivo e incorporar al paciente a su calidad y vida digna nuevamente. Hablar de las complicaciones en procedimientos es un tema que a veces no se habla mucho, una complicación es un evento no deseado que puede ocurrir a pesar de un tratamiento adecuado, puede ser desde infecciones, efectos secundarios con medicamentos y como vimos hoy un retraso en consolidación y una pseudoartrosis. Cualquier procedimiento por más mínimo que sea puede traer una complicación, pese a que el porcentaje del evento puede ser muy bajo nunca es un cero, lo que hacemos como médicos especialistas en traumatología y ortopedia para minimizar el porcentaje de alguna complicación, es optimizarte como paciente y tomar medidas específicas para lo que pueda aumentar el riesgo y tratarlo de disminuir lo mejor posible</p>
+          }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h3 class="fade-up text-2xl font-bold mb-24 text-white">
-      Es importantísimo como tu médico especialista, ser siempre justos con tu
-      condición médica y no brindar expectativas que no corresponde, preguntar,
-      platicar y conoce todo sobre tu padecimiento, es tu derecho como paciente.
-      <br />
-      <br />
-      Si tienes una duda mándame mensaje o agenda tu cita para comenzar, estoy cerca
-      de ti en Tijuana
+      {
+        isEnglish
+          ? 
+            <p>It is extremely important as your specialist physician to always be fair with your medical condition and not provide expectations that don't correspond. Ask, talk, and know everything about your condition it's your right as a patient.</p>
+           <br> <p>If you have any questions, send me a message or schedule your appointment to begin. I'm close to you in Tijuana.</p> <br><br>
+          : 
+            <p>Es importantísimo como tu médico especialista, ser siempre justos con tu condición médica y no brindar expectativas que no corresponde, preguntar, platicar y conoce todo sobre tu padecimiento, es tu derecho como paciente.</p>
+            <p>Si tienes una duda mándame mensaje o agenda tu cita para comenzar, estoy cerca de ti en Tijuana.</p>
+      }
     </h3>
   </Observer>
 </article>
 
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
-  <!-- <Comments
-    client:visible
-    author={author}
-    comment={comment}
-    business={business}
-  /> -->
-
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>

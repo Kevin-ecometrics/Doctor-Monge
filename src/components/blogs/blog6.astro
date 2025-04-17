@@ -8,9 +8,14 @@ import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
 
 let author = "YVLB";
-let comment =
-  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
-let business = "Paciente";
+let comment = {
+  es: "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.",
+  en: "Excellent care, took the necessary time to explain in detail along with the physical examination. I felt truly cared for with a good resolution prognosis.",
+};
+let business = {
+  es: "Paciente",
+  en: "Patient",
+};
 
 const blogsRutas = [
   {
@@ -37,6 +42,8 @@ const blogActual =
   "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical";
 
 const id = 6;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -44,84 +51,218 @@ const id = 6;
 >
   <Observer client:visible>
     <h1 class="text-2xl md:text-5xl text-white font-semibold mb-16 md:mt-32">
-      Tratamiento conservador vs cirugía: Cuando un tratamiento conservador
-      falla y requiere intervención quirúrgica en hernia discal cervical.
+      {
+        isEnglish
+          ? "Conservative Treatment vs Surgery: When conservative management fails and surgical intervention is needed for cervical disc herniation"
+          : "Tratamiento conservador vs cirugía: Cuando un tratamiento conservador falla y requiere intervención quirúrgica en hernia discal cervical."
+      }
     </h1>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-xl mb-24 font-semibold">
-      Hola me gustaría hablarte de los tratamientos conservadores ya no son
-      suficientes y la intervención quirúrgica es la última línea de tratamiento
-      en traumatología
+      {
+        isEnglish
+          ? "I'd like to discuss when conservative treatments become insufficient and surgical intervention becomes the final treatment option in orthopedics"
+          : "Hola me gustaría hablarte de los tratamientos conservadores ya no son suficientes y la intervención quirúrgica es la última línea de tratamiento en traumatología"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Una intervención quirúrgica no es tan intimidante como suena, al
-      contrario, es una solución permanente a un dolor que ha sido persistente y
-      que afecta tu calidad de vida. Una hernia de disco puede generar un dolor
-      que se extiende desde el cuello, los hombros hasta los brazos, se puede
-      percibir como un hormigueo o entumecimiento de brazos. Este es un dolor
-      que puede llegar a ser constante, pero difícil de identificar o puede
-      llegar a ser agudo y fácil de localizar. <br />
-      <br /> La hernia se produce cuando el anillo fibroso que es su capa externa
-      protectora se desgarra y el núcleo pulposo que es el que amortigua se filtra.
-      Los niveles más comunes donde se presentan las hernias de cisco cervical son
-      C5-C6. Puedes experimentar un dolor, hormigueo en pulgares, debilidad en los
-      bíceps o antebrazos. Los niveles C6-C7 se presenta con entumecimiento, hormigueo
-      y dolor los tríceps Los síntomas de dolor pueden durar unos días o convertirse
-      en un dolor crónico, de 6 a 12 semanas, aunque el disco no se cure.
+      {
+        isEnglish ? (
+          <>
+            <>
+              <p>
+                Surgery isn't as intimidating as it sounds - it's actually a
+                permanent solution for persistent pain affecting your quality of
+                life. A herniated disc can cause pain radiating from the neck
+                through shoulders to arms, manifesting as tingling or numbness.
+                This pain may be constant but hard to pinpoint, or sharp and
+                easily localized.
+              </p>
+              <br />
+            </>
+            <p>
+              The herniation occurs when the fibrous outer ring tears, allowing
+              the cushioning nucleus pulposus to leak out. The most common
+              cervical disc herniation levels are C5-C6 (causing thumb tingling,
+              bicep/forearm weakness) and C6-C7 (tricep numbness/tingling/pain).
+              Symptoms may last days or become chronic (6-12 weeks), even if the
+              disc doesn't fully heal.
+            </p>
+          </>
+        ) : (
+          <>
+            <>
+              <p>
+                Una intervención quirúrgica no es tan intimidante como suena, al
+                contrario, es una solución permanente a un dolor que ha sido
+                persistente y que afecta tu calidad de vida. Una hernia de disco
+                puede generar un dolor que se extiende desde el cuello, los
+                hombros hasta los brazos, se puede percibir como un hormigueo o
+                entumecimiento de brazos. Este es un dolor que puede llegar a
+                ser constante, pero difícil de identificar o puede llegar a ser
+                agudo y fácil de localizar.
+              </p>
+              <br />
+            </>
+            <p>
+              La hernia se produce cuando el anillo fibroso que es su capa
+              externa protectora se desgarra y el núcleo pulposo que es el que
+              amortigua se filtra. Los niveles más comunes donde se presentan
+              las hernias de cisco cervical son C5-C6. Puedes experimentar un
+              dolor, hormigueo en pulgares, debilidad en los bíceps o
+              antebrazos. Los niveles C6-C7 se presenta con entumecimiento,
+              hormigueo y dolor los tríceps Los síntomas de dolor pueden durar
+              unos días o convertirse en un dolor crónico, de 6 a 12 semanas,
+              aunque el disco no se cure.
+            </p>
+          </>
+        )
+      }
     </h3>
   </Observer>
+
   <ObserverImage client:visible>
     <div class="flex justify-center items-center">
       <Image
         src={Image1}
-        alt="Hernia discal cervical"
+        alt={isEnglish ? "Cervical disc herniation" : "Hernia discal cervical"}
         class="fade-up object-cover mb-16"
       />
     </div>
   </ObserverImage>
+
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-24 font-semibold">
-      Tratamiento conservador
+      {isEnglish ? "Conservative Treatment" : "Tratamiento conservador"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Durante el tratamiento conservador se busca mejorar hábitos evitar
-      movimientos que puedan generar dolor. Se pueden aplicar tratamientos como:
-      Terapia de calor que es aplicar una compresa caliente durante 15 a 20
-      minutos o terapia de frio aplicar hielo durante 20 minutos. Otro abordaje
-      es con medicamentos antiinflamatorios, fisioterapia para fortalecer y
-      estirar el cuello y uno de los tratamientos más comunes es acudir a que te
-      administren esteroides orales o inyectados. Si el dolor se prolongó más de
-      12 semanas o genera una discapacidad grave sin mejoría es necesario
-      considerar una intervención quirúrgica.
+      {
+        isEnglish ? (
+          <>
+            <p>
+              Conservative treatment focuses on improving habits and avoiding
+              painful movements. Approaches include:
+            </p>
+            <ul class="list-disc pl-5 mb-4">
+              <li>Heat therapy (15-20 minute warm compresses)</li>
+              <li>Cold therapy (20 minute ice applications)</li>
+              <li>Anti-inflammatory medications</li>
+              <li>Physical therapy for neck strengthening/stretching</li>
+              <li>Oral or injected steroids</li>
+            </ul>
+            <p>
+              If pain persists beyond 12 weeks or causes significant disability
+              without improvement, surgical intervention should be considered.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              Durante el tratamiento conservador se busca mejorar hábitos evitar
+              movimientos que puedan generar dolor. Se pueden aplicar
+              tratamientos como:
+            </p>
+            <ul class="list-disc pl-5 mb-4">
+              <li>
+                Terapia de calor que es aplicar una compresa caliente durante 15
+                a 20 minutos
+              </li>
+              <li>Terapia de frio aplicar hielo durante 20 minutos</li>
+              <li>Medicamentos antiinflamatorios</li>
+              <li>Fisioterapia para fortalecer y estirar el cuello</li>
+              <li>Esteroides orales o inyectados</li>
+            </ul>
+            <p>
+              Si el dolor se prolongó más de 12 semanas o genera una
+              discapacidad grave sin mejoría es necesario considerar una
+              intervención quirúrgica.
+            </p>
+          </>
+        )
+      }
     </h3>
   </Observer>
+
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-24 font-semibold">
-      Preparación para una cirugía
+      {isEnglish ? "Surgical Preparation" : "Preparación para una cirugía"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Dejar el cigarro si o si, es importante eliminar la nicotina de los
-      hábitos ya que puede generar complicaciones con mayor riesgo de
-      infecciones y una demora en la fusión del hueso. 2 semanas previas Es
-      necesario estudios de laboratorio, electrocardiograma y radiografías Se
-      pausará la toma de suplementos, vitaminas y anticoagulantes como aspirina
-      y antiinflamatorios como ibuprofeno y naproxeno Se recomienda apagarse al
-      100% a un plan alimenticio saludable, evitando malos hábitos como fumar e
-      ingerir bebidas alcohólicas. 1 semana previa Asegurarse que su casa sea
-      segura y accesible de transitar, sin obstáculos para que tu proceso de
-      recuperación sea lo más cómodo posible que te permita movilizarse solo lo
-      esencial.
+      {
+        isEnglish ? (
+          <>
+            <p>
+              <strong>Essential pre-surgery steps:</strong>
+            </p>
+            <p>
+              <strong>• Quit smoking absolutely</strong> - nicotine increases
+              infection risks and delays bone fusion
+            </p>
+            <p>
+              <strong>2 weeks before:</strong>
+            </p>
+            <ul class="list-disc pl-5 mb-4">
+              <li>Complete lab tests, EKG and X-rays</li>
+              <li>
+                Discontinue supplements, vitamins and blood thinners (aspirin,
+                ibuprofen, naproxen)
+              </li>
+              <li>Commit to healthy eating, eliminating alcohol and tobacco</li>
+            </ul>
+            <p>
+              <strong>1 week before:</strong>
+            </p>
+            <p>
+              • Prepare your home - remove obstacles for safe, comfortable
+              recovery mobility
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              <strong>Preparativos esenciales pre-cirugía:</strong>
+            </p>
+            <p>
+              <strong>• Dejar el cigarro si o si</strong> - la nicotina puede
+              generar complicaciones con mayor riesgo de infecciones y demora en
+              la fusión del hueso
+            </p>
+            <p>
+              <strong>2 semanas previas:</strong>
+            </p>
+            <ul class="list-disc pl-5 mb-4">
+              <li>
+                Estudios de laboratorio, electrocardiograma y radiografías
+              </li>
+              <li>
+                Pausar suplementos, vitaminas y anticoagulantes como aspirina y
+                antiinflamatorios
+              </li>
+              <li>
+                Adoptar un plan alimenticio saludable, evitando alcohol y tabaco
+              </li>
+            </ul>
+            <p>
+              <strong>1 semana previa:</strong>
+            </p>
+            <p>
+              • Asegurar que tu casa sea segura y accesible para el proceso de
+              recuperación
+            </p>
+          </>
+        )
+      }
     </h3>
   </Observer>
 
@@ -129,52 +270,93 @@ const id = 6;
     <div class="flex justify-center items-center">
       <Image
         src={Image2}
-        alt="Cirugía discal cervical"
+        alt={isEnglish ? "Cervical disc surgery" : "Cirugía discal cervical"}
         class="fade-up object-cover mb-16"
       />
     </div>
   </ObserverImage>
+
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-24 font-semibold">
-      Cirugía discal cervical
+      {isEnglish ? "Cervical Disc Surgery" : "Cirugía discal cervical"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Disectomia cervical anterior y fusión espinal En esta intervención se
-      extirpa el disco mediante una incisión de unas 1 a 2 pulgadas en la parte
-      frontal del cuello, una vez extirpa el espacio discal se prepara para que
-      las vértebras adyacentes se fusionen, y se añade una placa para aumentar
-      estabilidad y mejorar la tasa de fusión. Sustitución del disco cervical Al
-      igual que la cirugía anterior, primero se extirpa el disco que esta dañado
-      mediante la misma incisión del cuello, la diferencia es que se implanta un
-      disco (prótesis) en el espacio discal, permitiendo que esta prótesis imite
-      la forma y función. Discectomia cervical posterior Esta intervención es
-      igual que la Disectomia cervical anterior y fusión espinal excepto que el
-      abordaje es por la parte de atrás del cuello Después del procedimiento Se
-      administrarán medicamentos para controlar el dolor. <br />
-      <br /> Se le darán recomendaciones nutricionales ya que normalmente se pierde
-      el apetito. También se darán recomendaciones para moverse y vestir de forma
-      cómoda y segura. El tratamiento conservador puede ser para unos y para otros
-      puede representar una cuestión de riesgo, pero el fracaso del tratamiento conservador
-      no debe desalentar o dar indicación que la cirugía no funcionará, al contrario,
-      las cirugías presentan excelentes resultados con bajas tasas de complicaciones,
-      ofreciendo alivio permanente. No hay nada que preocuparse en las intervenciones
-      quirúrgicas cuando se trata de manos expertas en traumatología y ortopedia.
-      Si tienes una consulta o te gustaría agendar, mándame mensaje o llama directo
-      a oficina para agendar.
+      {
+        isEnglish ? (
+          <>
+            <p>
+              <strong>Anterior Cervical Discectomy and Fusion (ACDF):</strong>
+            </p>
+            <p>• 1-2 inch neck incision to remove damaged disc</p>
+            <p>• Adjacent vertebrae fused with stabilizing plate</p>
+            <br />
+            <p>
+              <strong>Cervical Disc Replacement:</strong>
+            </p>
+            <p>• Similar approach but implants artificial disc prosthesis</p>
+            <br />
+            <p>
+              <strong>Posterior Cervical Discectomy:</strong>
+            </p>
+            <p>• Disc removal through back-of-neck incision</p>
+            <br />
+            <p>
+              <strong>Post-operative care includes:</strong>
+            </p>
+            <p>• Pain management medications</p>
+            <p>• Nutritional guidance (appetite often decreases)</p>
+            <p>• Safe movement/dressing instructions</p>
+            <br />
+            <p>
+              Failed conservative treatment doesn't mean surgery won't work -
+              cervical procedures have excellent success rates with low
+              complications when performed by skilled orthopedic specialists.
+              Contact me to discuss your case or schedule a consultation.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              <strong>Disectomia cervical anterior y fusión espinal:</strong>
+            </p>
+            <p>
+              • Incisión de 1-2 pulgadas en cuello para extraer disco dañado
+            </p>
+            <p>• Fusión vertebral con placa estabilizadora</p>
+            <br />
+            <p>
+              <strong>Sustitución del disco cervical:</strong>
+            </p>
+            <p>• Similar pero implanta prótesis discal artificial</p>
+            <br />
+            <p>
+              <strong>Discectomia cervical posterior:</strong>
+            </p>
+            <p>• Extracción mediante incisión posterior</p>
+            <br />
+            <p>
+              <strong>Cuidados postoperatorios:</strong>
+            </p>
+            <p>• Medicamentos para el dolor</p>
+            <p>• Guía nutricional (pérdida común de apetito)</p>
+            <p>• Instrucciones para moverse/vestirse</p>
+            <br />
+            <p>
+              El fracaso del tratamiento conservador no indica que la cirugía
+              fallará - estos procedimientos tienen excelentes resultados con
+              bajas complicaciones cuando son realizados por especialistas.
+              Contáctame para evaluar tu caso o agendar consulta.
+            </p>
+          </>
+        )
+      }
     </h3>
   </Observer>
 </article>
 
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
-  <!-- <Comments
-    client:visible
-    author={author}
-    comment={comment}
-    business={business}
-  /> -->
-
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>

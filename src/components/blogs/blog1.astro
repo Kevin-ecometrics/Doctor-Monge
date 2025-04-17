@@ -4,9 +4,14 @@ import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
 
 let author = "YVLB";
-let comment =
-  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
-let business = "Paciente";
+let comment = {
+  es: "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.",
+  en: "Excellent care, took the necessary time to explain in detail along with the physical examination. I felt truly cared for with a good resolution prognosis.",
+};
+let business = {
+  es: "Paciente",
+  en: "Patient",
+};
 
 const blogsRutas = [
   {
@@ -38,193 +43,226 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 >
   <Observer client:visible>
     <h1 class="text-2xl md:text-5xl text-white font-semibold mb-16 md:mt-32">
-      Fractura de tibia y Perone
+      {isEnglish ? "Tibia and Fibula Fracture" : "Fractura de tibia y Perone"}
     </h1>
   </Observer>
 
   <Observer client:visible>
     <h3 class="animate-fade-up font-semibold text-xl mb-16">
-      Una de las fracturas con más incidencias en el mundo, te presento los
-      puntos claves que debes conocer sobre este tipo de lesiones
+      {
+        isEnglish
+          ? "One of the most common fractures worldwide, here are the key points you should know about this type of injury"
+          : "Una de las fracturas con más incidencias en el mundo, te presento los puntos claves que debes conocer sobre este tipo de lesiones"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="animate-fade-up text-xl mb-16">
-      Cuando te fracturas un hueso, el cuerpo inmediatamente empieza un proceso
-      muy complejo. No solo es el hueso lo que se lastima sino todo lo que lo
-      rodea, ya que al fracturarse o quebrarse se libera energía o también
-      llamada implosión que lastima los tejidos alrededor. Durante la fractura,
-      el hueso empieza a sangrar y ese sangrado creará un coágulo que,
-      dependiendo de ciertos estímulos, químicos o mecánicos, se convertirá en
-      hueso. A este proceso se llama consolidación primaria o secundaria,
-      depende de cuál lesión es, cómo tu ortopedista va a solucionar ese
-      conflicto.
+      {
+        isEnglish
+          ? "When you fracture a bone, the body immediately begins a very complex process. Not only is the bone injured but everything around it, since when it fractures or breaks, energy is released (also called implosion) that damages the surrounding tissues. During the fracture, the bone begins to bleed and that bleeding will create a clot that, depending on certain chemical or mechanical stimuli, will become bone. This process is called primary or secondary consolidation, depending on which injury it is and how your orthopedic surgeon will solve that problem."
+          : "Cuando te fracturas un hueso, el cuerpo inmediatamente empieza un proceso muy complejo. No solo es el hueso lo que se lastima sino todo lo que lo rodea, ya que al fracturarse o quebrarse se libera energía o también llamada implosión que lastima los tejidos alrededor. Durante la fractura, el hueso empieza a sangrar y ese sangrado creará un coágulo que, dependiendo de ciertos estímulos, químicos o mecánicos, se convertirá en hueso. A este proceso se llama consolidación primaria o secundaria, depende de cuál lesión es, cómo tu ortopedista va a solucionar ese conflicto."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h4 class="animate-fade-up text-xl mb-16">
-      El tratamiento es variado, entre los cuales se puede hacer de forma
-      conservadora o quirúrgica. Hay tres aspectos fundamentales para que tu
-      médico opte por el más conveniente, que son:
+      {
+        isEnglish
+          ? "Treatment varies, which can be done conservatively or surgically. There are three fundamental aspects for your doctor to choose the most convenient one, which are:"
+          : "El tratamiento es variado, entre los cuales se puede hacer de forma conservadora o quirúrgica. Hay tres aspectos fundamentales para que tu médico opte por el más conveniente, que son:"
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <ul class="animate-fade-up list-decimal mb-16 px-6 text-white">
-      <li class="animate-fade-up font-bold text-xl">Tipo de fractura.</li>
       <li class="animate-fade-up font-bold text-xl">
-        Condición de salud general.
+        {isEnglish ? "Type of fracture" : "Tipo de fractura"}
       </li>
       <li class="animate-fade-up font-bold text-xl">
-        Como están los tejidos alrededor de la fractura.
+        {isEnglish ? "General health condition" : "Condición de salud general"}
+      </li>
+      <li class="animate-fade-up font-bold text-xl">
+        {
+          isEnglish
+            ? "Condition of tissues around the fracture"
+            : "Como están los tejidos alrededor de la fractura"
+        }
       </li>
     </ul>
   </Observer>
 
   <Observer client:visible>
     <h3 class="animate-fade-up text-2xl font-bold mb-16 text-white">
-      ¿Como se fractura la tibia y el peroné?
+      {
+        isEnglish
+          ? "How do the tibia and fibula fracture?"
+          : "¿Como se fractura la tibia y el peroné?"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="animate-fade-up text-xl mb-16">
-      Las fracturas de tibia y el peroné son las fracturas de huesos largos más
-      frecuentes que pueden ocurrir por diversos motivos, los más comunes son:
-      Por un impacto directo causado por alguna caída, rotación forzada,
-      accidentes vehiculares, practicar algún deporte de impacto como futbol
-      americano, incluso fútbol y por sobrecarga y desgaste debido a factores
-      degenerativos o edad.
+      {
+        isEnglish
+          ? "Tibia and fibula fractures are the most common long bone fractures that can occur for various reasons, the most common being: Direct impact caused by a fall, forced rotation, vehicle accidents, practicing impact sports like American football, even soccer, and due to overload and wear from degenerative factors or age."
+          : "Las fracturas de tibia y el peroné son las fracturas de huesos largos más frecuentes que pueden ocurrir por diversos motivos, los más comunes son: Por un impacto directo causado por alguna caída, rotación forzada, accidentes vehiculares, practicar algún deporte de impacto como futbol americano, incluso fútbol y por sobrecarga y desgaste debido a factores degenerativos o edad."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h3 class="animate-fade-up text-2xl font-bold mb-16 text-white">
-      ¿Qué tratamiento es el óptimo para una fractura de tibia y peroné?
+      {
+        isEnglish
+          ? "What is the optimal treatment for a tibia and fibula fracture?"
+          : "¿Qué tratamiento es el óptimo para una fractura de tibia y peroné?"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="animate-fade-up text-xl mb-16">
-      Dependerá si la fractura está cerca de la rodilla, del tobillo o justo en
-      el centro, y del estado de salud general del paciente, ya que de esto
-      dependerá su abordaje, ahora bien, es importante atender lo antes posible
-      para identificar si requiere tratamiento quirúrgico, para evitar fibrosis
-      o una complicación mayor y conseguir una recuperación ágil y finalmente
-      una reanudación exitosa de sus actividades diarias. 
+      {
+        isEnglish
+          ? "It will depend if the fracture is near the knee, the ankle or right in the center, and the patient's general health condition, since this will determine the approach. It's important to attend as soon as possible to identify if surgical treatment is required, to avoid fibrosis or a major complication and achieve an agile recovery and finally a successful resumption of daily activities."
+          : "Dependerá si la fractura está cerca de la rodilla, del tobillo o justo en el centro, y del estado de salud general del paciente, ya que de esto dependerá su abordaje, ahora bien, es importante atender lo antes posible para identificar si requiere tratamiento quirúrgico, para evitar fibrosis o una complicación mayor y conseguir una recuperación ágil y finalmente una reanudación exitosa de sus actividades diarias."
+      }
       <br />
       <br />
-      Si la fractura es estable y los fragmentos óseos están alineados, se recomienda
-      un tratamiento conservador con inmovilización utilizar férula o yeso para inmovilizar
-      la pierna mientras sana la fractura.
+      {
+        isEnglish
+          ? "If the fracture is stable and the bone fragments are aligned, conservative treatment with immobilization is recommended using a splint or cast to immobilize the leg while the fracture heals."
+          : "Si la fractura es estable y los fragmentos óseos están alineados, se recomienda un tratamiento conservador con inmovilización utilizar férula o yeso para inmovilizar la pierna mientras sana la fractura."
+      }
       <br />
       <br />
-      Si la fractura es severa es decir si esta multifragmentada o esta desplazada
-      y los huesos no se alinean será necesario realizar una reducción que consiste
-      en la manipulación de los fragmentos óseos para volverlos a su estado original,
-      posterior a ello se van a utilizar dispositivos de fijación externa como marcos
-      de metal para mantener el hueso en su lugar, estos se colocan fuera del cuerpo
-      y se unen a los huesos.
+      {
+        isEnglish
+          ? "If the fracture is severe, meaning if it is multi-fragmented or displaced and the bones don't align, a reduction will be necessary which consists of manipulating the bone fragments to return them to their original state, afterwards external fixation devices like metal frames will be used to keep the bone in place, these are placed outside the body and attached to the bones."
+          : "Si la fractura es severa es decir si esta multifragmentada o esta desplazada y los huesos no se alinean será necesario realizar una reducción que consiste en la manipulación de los fragmentos óseos para volverlos a su estado original, posterior a ello se van a utilizar dispositivos de fijación externa como marcos de metal para mantener el hueso en su lugar, estos se colocan fuera del cuerpo y se unen a los huesos."
+      }
       <br /><br />
-      En otros casos será necesario una intervención quirúrgica para corregir la
-      fractura mediante placas, tornillos o clavos intramedulares para mantener los
-      huesos en su lugar mientras se curan.
+      {
+        isEnglish
+          ? "In other cases, surgical intervention will be necessary to correct the fracture using plates, screws or intramedullary nails to keep the bones in place while they heal."
+          : "En otros casos será necesario una intervención quirúrgica para corregir la fractura mediante placas, tornillos o clavos intramedulares para mantener los huesos en su lugar mientras se curan."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h3 class="animate-fade-up text-2xl font-bold mb-16 text-white">
-      Cuando hablamos de fracturas abiertas de tibia y peroné nos referimos a...
+      {
+        isEnglish
+          ? "When we talk about open tibia and fibula fractures we refer to..."
+          : "Cuando hablamos de fracturas abiertas de tibia y peroné nos referimos a..."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="animate-fade-up text-xl mb-16">
-      Que implica una lesión considerable en el hueso y en los tejidos alrededor
-      por tanto es urgente atender en la brevedad.  
+      {
+        isEnglish
+          ? "Which implies considerable injury to the bone and surrounding tissues therefore urgent attention is needed."
+          : "Que implica una lesión considerable en el hueso y en los tejidos alrededor por tanto es urgente atender en la brevedad."
+      }
       <br />
       <br />
-      Primero con antibioterapia para tratar cualquier agente patógeno en la herida.
+      {
+        isEnglish
+          ? "First with antibiotic therapy to treat any pathogens in the wound."
+          : "Primero con antibioterapia para tratar cualquier agente patógeno en la herida."
+      }
       <br />
-      Segundo se debe realizar un desbridamiento que es la remoción del tejido muerto
-      o dañado para mejorar el proceso de sanación.
+      {
+        isEnglish
+          ? "Second, debridement must be performed which is the removal of dead or damaged tissue to improve the healing process."
+          : "Segundo se debe realizar un desbridamiento que es la remoción del tejido muerto o dañado para mejorar el proceso de sanación."
+      }
       <br />
-      Posteriormente se debe estabilizar pata mejorar el flujo vascular reducir el
-      dolor para realizar el cierre de la herida.
+      {
+        isEnglish
+          ? "Subsequently, stabilization should be performed to improve vascular flow, reduce pain to perform wound closure."
+          : "Posteriormente se debe estabilizar pata mejorar el flujo vascular reducir el dolor para realizar el cierre de la herida."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h3 class="animate-fade-up text-2xl font-bold mb-16 text-white">
-      Recuperación y rehabilitación
+      {
+        isEnglish
+          ? "Recovery and rehabilitation"
+          : "Recuperación y rehabilitación"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="animate-fade-up text-xl mb-16">
-      Independientemente del método de tratamiento utilizado, la rehabilitación
-      es esencial para la recuperación completa. Depende en que semana de
-      consolidación es cuando se va a ir permitiendo de forma paulatina realizar
-      movimientos, por ejemplo: colocar el dedo de pie al piso, poco a poco
-      pisando de forma parcial y posteriormente con todo el peso completo y
-      trasladarse, al ser un hueso largo demora es un poco más en sanar,
-      factores como fumar pueden alentar o perjudicar el proceso de
-      consolidación y cicatrización provocando incluso infecciones.
+      {
+        isEnglish
+          ? "Regardless of the treatment method used, rehabilitation is essential for complete recovery. It depends on which week of consolidation it is when gradual movements will be allowed, for example: placing the toe on the floor, little by little stepping partially and later with full weight and moving. Being a long bone, it takes a little longer to heal. Factors like smoking can slow down or harm the consolidation and healing process even causing infections."
+          : "Independientemente del método de tratamiento utilizado, la rehabilitación es esencial para la recuperación completa. Depende en que semana de consolidación es cuando se va a ir permitiendo de forma paulatina realizar movimientos, por ejemplo: colocar el dedo de pie al piso, poco a poco pisando de forma parcial y posteriormente con todo el peso completo y trasladarse, al ser un hueso largo demora es un poco más en sanar, factores como fumar pueden alentar o perjudicar el proceso de consolidación y cicatrización provocando incluso infecciones."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h3 class="animate-fade-up text-2xl font-bold mb-16 text-white">
-      Alimentación y hábitos recomendados
+      {
+        isEnglish
+          ? "Recommended diet and habits"
+          : "Alimentación y hábitos recomendados"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h4 class="text-xl mb-16 animate-fade-up">
-      Durante el proceso de consolidación ósea los tejidos requieren de
-      proteínas y minerales por tanto es indispensable tener un régimen
-      alimenticio.
+      {
+        isEnglish
+          ? "During the bone consolidation process, tissues require proteins and minerals therefore it is essential to have a dietary regimen."
+          : "Durante el proceso de consolidación ósea los tejidos requieren de proteínas y minerales por tanto es indispensable tener un régimen alimenticio."
+      }
       <br />
       <br />
-      El consumo de proteínas es fundamental para favorecer la consolidación de los
-      huesos después de una fractura. Las proteínas de alta calidad, presentes en
-      alimentos como carne pollo y especialmente en pescados ricos en omega 3 son
-      esenciales. Estos alimentos no solo aportan proteína si no también calcio y
-      nutrientes clave para fortalecer los huesos y acelerar su consolidación.
+      {
+        isEnglish
+          ? "Protein consumption is essential to promote bone consolidation after a fracture. High-quality proteins, present in foods like chicken meat and especially in fish rich in omega 3 are essential. These foods not only provide protein but also calcium and key nutrients to strengthen bones and accelerate their consolidation."
+          : "El consumo de proteínas es fundamental para favorecer la consolidación de los huesos después de una fractura. Las proteínas de alta calidad, presentes en alimentos como carne pollo y especialmente en pescados ricos en omega 3 son esenciales. Estos alimentos no solo aportan proteína si no también calcio y nutrientes clave para fortalecer los huesos y acelerar su consolidación."
+      }
       <br />
       <br />
-      Otros alimentos que aportan un gran valor nutricional son la linaza, nueces
-      y huevo que son ricos en ácidos grasos y omega 3. Alimentos como las acelgas,
-      espinacas, naranjas limones y soya tienen altas concentraciones de vitaminas
-      C y D y calcio.
+      {
+        isEnglish
+          ? "Other foods that provide great nutritional value are flaxseed, walnuts and eggs which are rich in fatty acids and omega 3. Foods like chard, spinach, oranges lemons and soy have high concentrations of vitamins C and D and calcium."
+          : "Otros alimentos que aportan un gran valor nutricional son la linaza, nueces y huevo que son ricos en ácidos grasos y omega 3. Alimentos como las acelgas, espinacas, naranjas limones y soya tienen altas concentraciones de vitaminas C y D y calcio."
+      }
       <br />
       <br />
-      Confía en el proceso de recuperación. Cada fractura de tibia y peroné es única,
-      y el tratamiento debe ser 100 % personalizado según tu situación específica.
-      La tibia y el peroné son huesos clave para la movilidad, por lo que su recuperación
-      adecuada requiere un enfoque especializado. Acude a un médico traumatólogo,
-      quien evaluará tu caso de manera integral y diseñará el tratamiento más adecuado
-      para tus necesidades, asegurando una recuperación óptima y segura.
+      {
+        isEnglish
+          ? "Trust the recovery process. Each tibia and fibula fracture is unique, and the treatment must be 100% personalized according to your specific situation. The tibia and fibula are key bones for mobility, so their proper recovery requires a specialized approach. See an orthopedic trauma surgeon, who will evaluate your case comprehensively and design the most appropriate treatment for your needs, ensuring optimal and safe recovery."
+          : "Confía en el proceso de recuperación. Cada fractura de tibia y peroné es única, y el tratamiento debe ser 100 % personalizado según tu situación específica. La tibia y el peroné son huesos clave para la movilidad, por lo que su recuperación adecuada requiere un enfoque especializado. Acude a un médico traumatólogo, quien evaluará tu caso de manera integral y diseñará el tratamiento más adecuado para tus necesidades, asegurando una recuperación óptima y segura."
+      }
       <br />
       <br />
-      Me encuentro en Tijuana muy cerca de ti, si tienes alguna consulta no dudes
-      en escribir y si te interesa una revisión agenda para comenzar.  Como medico
-      ortopédico traumatológico, te acompañaré en este proceso con terapia manual,
-      ejercicios y técnicas de movilización junto con un fisioterapeuta para que
-      combine ejercicios de fuerza, flexibilidad y movilidad.
+      {
+        isEnglish
+          ? "I'm located in Tijuana very close to you, if you have any questions don't hesitate to write and if you're interested in an evaluation schedule to begin. As an orthopedic trauma surgeon, I'll accompany you in this process with manual therapy, exercises and mobilization techniques along with a physical therapist to combine strength, flexibility and mobility exercises."
+          : "Me encuentro en Tijuana muy cerca de ti, si tienes alguna consulta no dudes en escribir y si te interesa una revisión agenda para comenzar. Como medico ortopédico traumatológico, te acompañaré en este proceso con terapia manual, ejercicios y técnicas de movilización junto con un fisioterapeuta para que combine ejercicios de fuerza, flexibilidad y movilidad."
+      }
     </h4>
   </Observer>
 </article>
 
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
-  <!-- <Comments
-    client:visible
-    author={author}
-    comment={comment}
-    business={business}
-  /> -->
-
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>

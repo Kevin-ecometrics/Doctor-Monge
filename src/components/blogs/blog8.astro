@@ -6,10 +6,16 @@ import Image1 from "@public/Los juanetes pueden generar dolor callos y deformida
 import Image2 from "@public/Antes y despues La unica solucion para los juanetes es la cirugia.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
+
 let author = "YVLB";
-let comment =
-  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
-let business = "Paciente";
+let comment = {
+  es: "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.",
+  en: "Excellent care, took the necessary time to explain in detail along with the physical examination. I felt truly cared for with a good resolution prognosis.",
+};
+let business = {
+  es: "Paciente",
+  en: "Patient",
+};
 
 const blogsRutas = [
   {
@@ -42,6 +48,8 @@ const blogActual =
   "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos";
 
 const id = 8;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -49,72 +57,119 @@ const id = 8;
 >
   <Observer client:visible>
     <h1 class="text-2xl md:text-5xl text-white font-semibold mb-16 md:mt-32">
-      Hola, ¿qué tal? Te cuento acerca del hallux valgus (HV), también conocido
-      como juanete.
+      {
+        isEnglish
+          ? "Hello, how are you? Let me tell you about hallux valgus (HV), also known as bunions."
+          : "Hola, ¿qué tal? Te cuento acerca del hallux valgus (HV), también conocido como juanete."
+      }
     </h1>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Se trata de una desviación lateral del dedo gordo del pie y una desviación
-      medial del primer metatarsiano. Este problema también puede presentarse en
-      la base del dedo pequeño del pie.
+      {
+        isEnglish
+          ? "It involves a lateral deviation of the big toe and a medial deviation of the first metatarsal. This problem can also occur at the base of the little toe."
+          : "Se trata de una desviación lateral del dedo gordo del pie y una desviación medial del primer metatarsiano. Este problema también puede presentarse en la base del dedo pequeño del pie."
+      }
       <br />
       <br />
-      Los juanetes o hallux valgus son un padecimiento bastante común que, a simple
-      vista, no se percibe, ya que la mayoría del tiempo utilizamos calzado. Según
-      múltiples estudios, los juanetes tienen una prevalencia de hasta el 35% en
-      la población general.
+      {
+        isEnglish
+          ? "Bunions or hallux valgus are quite common conditions that, at first glance, aren't noticeable since we wear shoes most of the time. According to multiple studies, bunions have a prevalence of up to 35% in the general population."
+          : "Los juanetes o hallux valgus son un padecimiento bastante común que, a simple vista, no se percibe, ya que la mayoría del tiempo utilizamos calzado. Según múltiples estudios, los juanetes tienen una prevalencia de hasta el 35% en la población general."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      La aparición de juanetes puede deberse a múltiples causas
+      {
+        isEnglish
+          ? "The appearance of bunions can be due to multiple causes"
+          : "La aparición de juanetes puede deberse a múltiples causas"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Se puede dar por numerosas etiologías, ya sea por factores hereditarios,
-      biomecánicos, traumáticos y metabólicos.
+      {
+        isEnglish
+          ? "It can occur due to numerous etiologies, whether hereditary, biomechanical, traumatic, or metabolic factors."
+          : "Se puede dar por numerosas etiologías, ya sea por factores hereditarios, biomecánicos, traumáticos y metabólicos."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-4 font-semibold">
-      Entre los factores biomecánicos participan alteraciones del pie como:
+      {
+        isEnglish
+          ? "Among the biomechanical factors are foot alterations such as:"
+          : "Entre los factores biomecánicos participan alteraciones del pie como:"
+      }
     </h2>
     <ul class="list-decimal mb-8 px-5">
       <li>Gastrocnemio sóleo</li>
       <li>Gastrocnemio</li>
-      <li>Pie plano</li>
-      <li>Flexión dorsal de la primera falange o hipermovilidad de esta</li>
+      <li>{isEnglish ? "Flat feet" : "Pie plano"}</li>
+      <li>
+        {
+          isEnglish
+            ? "Dorsal flexion of the first phalanx or hypermobility of this"
+            : "Flexión dorsal de la primera falange o hipermovilidad de esta"
+        }
+      </li>
     </ul>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-4 font-semibold">
-      Artritis y alteraciones metabólicas:
+      {
+        isEnglish
+          ? "Arthritis and metabolic alterations:"
+          : "Artritis y alteraciones metabólicas:"
+      }
     </h2>
     <ul class="list-decimal mb-8 px-5">
-      <li>Artritis gotosa</li>
-      <li>Artritis reumatoide</li>
-      <li>Trastornos del tejido conectivo</li>
+      <li>{isEnglish ? "Gouty arthritis" : "Artritis gotosa"}</li>
+      <li>{isEnglish ? "Rheumatoid arthritis" : "Artritis reumatoide"}</li>
+      <li>
+        {
+          isEnglish
+            ? "Connective tissue disorders"
+            : "Trastornos del tejido conectivo"
+        }
+      </li>
     </ul>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-4 font-semibold">
-      Lesiones traumáticas:
+      {isEnglish ? "Traumatic injuries:" : "Lesiones traumáticas:"}
     </h2>
     <ul class="list-decimal mb-8 px-5">
-      <li>Daño intraarticular</li>
-      <li>Dislocaciones</li>
-      <li>Deformidad estructural</li>
-      <li>Mala alineación de la superficie articular</li>
-      <li>Metatarsiano con longitud anormal</li>
-      <li>Torsión tibial externa</li>
+      <li>{isEnglish ? "Intra-articular damage" : "Daño intraarticular"}</li>
+      <li>{isEnglish ? "Dislocations" : "Dislocaciones"}</li>
+      <li>{isEnglish ? "Structural deformity" : "Deformidad estructural"}</li>
+      <li>
+        {
+          isEnglish
+            ? "Malalignment of the articular surface"
+            : "Mala alineación de la superficie articular"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Abnormal metatarsal length"
+            : "Metatarsiano con longitud anormal"
+        }
+      </li>
+      <li>
+        {isEnglish ? "External tibial torsion" : "Torsión tibial externa"}
+      </li>
     </ul>
   </Observer>
 
@@ -122,177 +177,251 @@ const id = 8;
     <div class="flex justify-center items-center">
       <Image
         src={Image1}
-        alt="Imagen de fractura de tibia y peroné"
+        alt={isEnglish
+          ? "Bunions can cause pain, calluses and foot deformity"
+          : "Imagen de fractura de tibia y peroné"}
         class="object-cover mb-16"
       />
     </div>
   </ObserverImage>
+
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Factores hereditarios:
+      {isEnglish ? "Hereditary factors:" : "Factores hereditarios:"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Incluyen alteraciones en la fórmula metatarsiana, presencia de pie plano y
-      la hiperlaxitud ligamentaria. En el caso de juanetes juveniles, se han
-      demostrado factores hereditarios maternos en un 94% de los casos.
-    </h3>
-  </Observer>
-
-  <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Edad:</h2>
-  </Observer>
-
-  <Observer client:visible>
-    <h3 class="text-xl mb-16">
-      Las personas mayores de 60 años tienen más probabilidad de presentar
-      juanetes debido a cambios en las posturas, aumento de la presión plantar y
-      cambios cinemáticos articulares.
+      {
+        isEnglish
+          ? "They include alterations in the metatarsal formula, presence of flat feet and ligamentous hyperlaxity. In the case of juvenile bunions, maternal hereditary factors have been demonstrated in 94% of cases."
+          : "Incluyen alteraciones en la fórmula metatarsiana, presencia de pie plano y la hiperlaxitud ligamentaria. En el caso de juanetes juveniles, se han demostrado factores hereditarios maternos en un 94% de los casos."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Calzado inadecuado y carga excesiva:
+      {isEnglish ? "Age:" : "Edad:"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Los zapatos estrechos o que terminan en punta, así como los de tacón,
-      generan mayor presión sobre la zona de la primera articulación
-      metatarsofalángica. Si, además, el paciente está constantemente caminando
-      o de pie, esto puede agravar la condición.
+      {
+        isEnglish
+          ? "People over 60 years old are more likely to develop bunions due to changes in posture, increased plantar pressure and joint kinematic changes."
+          : "Las personas mayores de 60 años tienen más probabilidad de presentar juanetes debido a cambios en las posturas, aumento de la presión plantar y cambios cinemáticos articulares."
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {
+        isEnglish
+          ? "Inappropriate footwear and excessive load:"
+          : "Calzado inadecuado y carga excesiva:"
+      }
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      {
+        isEnglish
+          ? "Narrow or pointed shoes, as well as high heels, generate more pressure on the area of the first metatarsophalangeal joint. If, in addition, the patient is constantly walking or standing, this can aggravate the condition."
+          : "Los zapatos estrechos o que terminan en punta, así como los de tacón, generan mayor presión sobre la zona de la primera articulación metatarsofalángica. Si, además, el paciente está constantemente caminando o de pie, esto puede agravar la condición."
+      }
       <br />
       <br />
-      En el caso de las bailarinas de ballet, el trauma repetitivo, donde hay una
-      marcha excesiva y un aumento de apoyo, se ha relacionado con una progresión.
-    </h3>
-  </Observer>
-
-  <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Síntomas:</h2>
-  </Observer>
-
-  <Observer client:visible>
-    <h3 class="text-xl mb-16">
-      Los síntomas pueden incluir un aumento del dolor con el uso de calzado
-      estrecho o al caminar con este por largos periodos, abultamiento en la
-      parte exterior del dedo gordo del pie, hinchazón y enrojecimiento
-      alrededor del dedo del pie, y callos entre el primer y segundo dedo.
+      {
+        isEnglish
+          ? "In the case of ballet dancers, repetitive trauma, where there is excessive walking and increased support, has been linked to progression."
+          : "En el caso de las bailarinas de ballet, el trauma repetitivo, donde hay una marcha excesiva y un aumento de apoyo, se ha relacionado con una progresión."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Complicaciones que pueden generar los juanetes:
+      {isEnglish ? "Symptoms:" : "Síntomas:"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      El hallux valgus avanza con el paso de las semanas y meses. Es bastante
-      común que los pacientes, tras convivir con la deformidad por un tiempo
-      prolongado, decidan tratarse cuando esta condición les impide realizar sus
-      actividades de forma funcional, lo cual puede generar complicaciones como:
+      {
+        isEnglish
+          ? "Symptoms may include increased pain when wearing tight shoes or walking in them for long periods, bulging on the outside of the big toe, swelling and redness around the toe, and calluses between the first and second toes."
+          : "Los síntomas pueden incluir un aumento del dolor con el uso de calzado estrecho o al caminar con este por largos periodos, abultamiento en la parte exterior del dedo gordo del pie, hinchazón y enrojecimiento alrededor del dedo del pie, y callos entre el primer y segundo dedo."
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {
+        isEnglish
+          ? "Complications that bunions can generate:"
+          : "Complicaciones que pueden generar los juanetes:"
+      }
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      {
+        isEnglish
+          ? "Hallux valgus progresses over weeks and months. It's quite common for patients, after living with the deformity for a prolonged time, to decide to treat it when this condition prevents them from performing their activities functionally, which can generate complications such as:"
+          : "El hallux valgus avanza con el paso de las semanas y meses. Es bastante común que los pacientes, tras convivir con la deformidad por un tiempo prolongado, decidan tratarse cuando esta condición les impide realizar sus actividades de forma funcional, lo cual puede generar complicaciones como:"
+      }
     </h3>
     <ul class="list-decimal mb-8 px-5">
       <li>
-        Bursitis: Sucede cuando las bolsas sinoviales de las articulaciones del
-        dedo sufren rigidez e hinchazón
+        {
+          isEnglish
+            ? "Bursitis: Occurs when the synovial bursae of the toe joints become stiff and swollen"
+            : "Bursitis: Sucede cuando las bolsas sinoviales de las articulaciones del dedo sufren rigidez e hinchazón"
+        }
       </li>
       <li>
-        Dedo en martillo: Cuando un dedo del pie se dobla hacia abajo y
-        permanece en posición fija, parecido a una garra
+        {
+          isEnglish
+            ? "Hammer toe: When a toe bends downward and remains in a fixed position, similar to a claw"
+            : "Dedo en martillo: Cuando un dedo del pie se dobla hacia abajo y permanece en posición fija, parecido a una garra"
+        }
       </li>
       <li>
-        Metatarsalgia: Dolor e inflamación en la parte delantera de la planta
-        del pie, en la base de los huesos metatarsianos
+        {
+          isEnglish
+            ? "Metatarsalgia: Pain and inflammation in the front part of the sole of the foot, at the base of the metatarsal bones"
+            : "Metatarsalgia: Dolor e inflamación en la parte delantera de la planta del pie, en la base de los huesos metatarsianos"
+        }
       </li>
     </ul>
   </Observer>
 
   <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Diagnóstico:</h2>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {isEnglish ? "Diagnosis:" : "Diagnóstico:"}
+    </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Se lleva a cabo mediante una exploración clínica, donde se evalúa la
-      duración de los síntomas del paciente, su cambio de actividad y el tipo de
-      calzado que utiliza con frecuencia. Posteriormente, se observa el caminar
-      del paciente, se realiza la palpación y se complementa con una radiografía
-      simple para evaluar la patología articular y medir la deformidad angular.
-      Según el caso, pueden requerirse otras radiografías del pie, como:
+      {
+        isEnglish
+          ? "It is carried out through a clinical examination, where the duration of the patient's symptoms, their change in activity and the type of footwear they frequently use are evaluated. Subsequently, the patient's gait is observed, palpation is performed and it is complemented with a simple radiograph to evaluate the joint pathology and measure the angular deformity. Depending on the case, other foot radiographs may be required, such as:"
+          : "Se lleva a cabo mediante una exploración clínica, donde se evalúa la duración de los síntomas del paciente, su cambio de actividad y el tipo de calzado que utiliza con frecuencia. Posteriormente, se observa el caminar del paciente, se realiza la palpación y se complementa con una radiografía simple para evaluar la patología articular y medir la deformidad angular. Según el caso, pueden requerirse otras radiografías del pie, como:"
+      }
     </h3>
     <ul class="mb-8 list-decimal">
-      <li>Anteposterior</li>
-      <li>Lateral oblicua</li>
-      <li>Lateral</li>
-      <li>Proyecciones axiales para obsevar los sesamoideos</li>
+      <li>{isEnglish ? "Anteroposterior" : "Anteposterior"}</li>
+      <li>{isEnglish ? "Lateral oblique" : "Lateral oblicua"}</li>
+      <li>{isEnglish ? "Lateral" : "Lateral"}</li>
+      <li>
+        {
+          isEnglish
+            ? "Axial projections to observe the sesamoids"
+            : "Proyecciones axiales para obsevar los sesamoideos"
+        }
+      </li>
     </ul>
     <h2 class="text-4xl text-white mb-16 font-bold">
-      Tratamiento de juanetes o hallux valgus
+      {
+        isEnglish
+          ? "Treatment of bunions or hallux valgus"
+          : "Tratamiento de juanetes o hallux valgus"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Previo a la cirugía:
+      {isEnglish ? "Prior to surgery:" : "Previo a la cirugía:"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Se recomiendan medidas para aminorar el dolor, como el uso de un calzado
-      especial:
+      {
+        isEnglish
+          ? "Measures are recommended to reduce pain, such as the use of special footwear:"
+          : "Se recomiendan medidas para aminorar el dolor, como el uso de un calzado especial:"
+      }
     </h3>
     <ul class="list-decimal mb-8 px-5">
       <li>
-        Tratamiento farmacológico: Administración intraarticular de
-        antiinflamatorios esteroideos para controlar la inflamación y disminuir
-        el dolor en etapas iniciales, aunque no eliminará el problema
+        {
+          isEnglish
+            ? "Pharmacological treatment: Intra-articular administration of steroidal anti-inflammatories to control inflammation and reduce pain in initial stages, although it will not eliminate the problem"
+            : "Tratamiento farmacológico: Administración intraarticular de antiinflamatorios esteroideos para controlar la inflamación y disminuir el dolor en etapas iniciales, aunque no eliminará el problema"
+        }
       </li>
       <li>
-        Tratamiento sintomático: Separadores y protecciones de silicona pueden
-        ofrecer alivio de presión, pero el tratamiento conservador no restaura
-        el pie a la normalidad
+        {
+          isEnglish
+            ? "Symptomatic treatment: Silicone separators and protections can offer pressure relief, but conservative treatment does not restore the foot to normal"
+            : "Tratamiento sintomático: Separadores y protecciones de silicona pueden ofrecer alivio de presión, pero el tratamiento conservador no restaura el pie a la normalidad"
+        }
       </li>
     </ul>
   </Observer>
 
   <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Cirugía:</h2>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {isEnglish ? "Surgery:" : "Cirugía:"}
+    </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Es la solución definitiva para eliminar la deformidad y el dolor crónico
-      del pie, permitiendo que vuelva a la normalidad. Existen más de 100 tipos
-      de cirugía para el hallux valgus, y la técnica quirúrgica depende de la
-      cantidad de corrección requerida.
+      {
+        isEnglish
+          ? "It is the definitive solution to eliminate the deformity and chronic pain of the foot, allowing it to return to normal. There are more than 100 types of surgery for hallux valgus, and the surgical technique depends on the amount of correction required."
+          : "Es la solución definitiva para eliminar la deformidad y el dolor crónico del pie, permitiendo que vuelva a la normalidad. Existen más de 100 tipos de cirugía para el hallux valgus, y la técnica quirúrgica depende de la cantidad de corrección requerida."
+      }
       <br />
       <br />
-      Algunos procedimientos pueden incluir: <br />
-      <br />
-
-      Remoción parcial de la cabeza del metatarsiano (bunionectomía).
-      <br />
-      <br />
-
-      Ajuste de los tejidos blandos que rodean la articulación del dedo gordo
-      del pie.
+      {
+        isEnglish
+          ? "Some procedures may include:"
+          : "Algunos procedimientos pueden incluir:"
+      }
       <br />
       <br />
 
-      Osteotomía para reposicionar los huesos.
+      {
+        isEnglish
+          ? "Partial removal of the metatarsal head (bunionectomy)."
+          : "Remoción parcial de la cabeza del metatarsiano (bunionectomía)."
+      }
       <br />
       <br />
 
-      Unión o fijación de la articulación entre el metatarsiano y la parte media
-      del pie.
+      {
+        isEnglish
+          ? "Adjustment of the soft tissues surrounding the big toe joint."
+          : "Ajuste de los tejidos blandos que rodean la articulación del dedo gordo del pie."
+      }
+      <br />
+      <br />
+
+      {
+        isEnglish
+          ? "Osteotomy to reposition bones."
+          : "Osteotomía para reposicionar los huesos."
+      }
+      <br />
+      <br />
+
+      {
+        isEnglish
+          ? "Union or fixation of the joint between the metatarsal and the middle part of the foot."
+          : "Unión o fijación de la articulación entre el metatarsiano y la parte media del pie."
+      }
     </h3>
   </Observer>
 
@@ -300,7 +429,9 @@ const id = 8;
     <div class="flex justify-center items-center">
       <Image
         src={Image2}
-        alt="Imagen de fractura de tibia y peroné"
+        alt={isEnglish
+          ? "Before and after: The only solution for bunions is surgery"
+          : "Imagen de fractura de tibia y peroné"}
         class="fade-up object-cover mb-16"
       />
     </div>
@@ -308,59 +439,80 @@ const id = 8;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Rehabilitación después de la cirugía:
+      {
+        isEnglish
+          ? "Rehabilitation after surgery:"
+          : "Rehabilitación después de la cirugía:"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Reposo relativo e inicio de movimientos pasivos continuos.
+      {
+        isEnglish
+          ? "Relative rest and initiation of continuous passive movements."
+          : "Reposo relativo e inicio de movimientos pasivos continuos."
+      }
       <br />
       <br />
-      Apoyo del talón con calzado postoperatorio.
+      {
+        isEnglish
+          ? "Heel support with postoperative footwear."
+          : "Apoyo del talón con calzado postoperatorio."
+      }
       <br />
       <br />
 
-      Elevación del pie y uso de vendaje elástico para mejorar la circulación.
+      {
+        isEnglish
+          ? "Elevation of the foot and use of elastic bandage to improve circulation."
+          : "Elevación del pie y uso de vendaje elástico para mejorar la circulación."
+      }
       <br />
       <br />
 
-      Ejercicios de fortalecimiento del flexor propio del primer dedo del pie,
-      según indique el especialista.
+      {
+        isEnglish
+          ? "Strengthening exercises of the flexor of the first toe, as indicated by the specialist."
+          : "Ejercicios de fortalecimiento del flexor propio del primer dedo del pie, según indique el especialista."
+      }
       <br /><br />
-      Reeducación del caminar una vez que se pueda realizar apoyo plantígrado.
-    </h3>
-  </Observer>
-
-  <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Recomendaciones:</h2>
-  </Observer>
-
-  <Observer client:visible>
-    <h3 class="text-xl mb-16">
-      Es importante no ignorar ninguna señal o dolor en la zona de los pies,
-      especialmente en los dedos. Aunque sea una zona poco visible, es
-      indispensable una atención inmediata para prevenir una deformación mayor y
-      sus complicaciones.
+      {
+        isEnglish
+          ? "Gait re-education once plantigrade support can be performed."
+          : "Reeducación del caminar una vez que se pueda realizar apoyo plantígrado."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Si tienes más preguntas, te invito a agendar una consulta de valoración.
-      Mi consultorio está cerca de ti y a tu disposición para apoyarte con tu
-      malestar
+      {isEnglish ? "Recommendations:" : "Recomendaciones:"}
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      {
+        isEnglish
+          ? "It is important not to ignore any signal or pain in the area of the feet, especially in the toes. Although it is a little visible area, immediate attention is essential to prevent greater deformation and its complications."
+          : "Es importante no ignorar ninguna señal o dolor en la zona de los pies, especialmente en los dedos. Aunque sea una zona poco visible, es indispensable una atención inmediata para prevenir una deformación mayor y sus complicaciones."
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {
+        isEnglish
+          ? "If you have more questions, I invite you to schedule an evaluation consultation. My office is close to you and at your disposal to help you with your discomfort."
+          : "Si tienes más preguntas, te invito a agendar una consulta de valoración. Mi consultorio está cerca de ti y a tu disposición para apoyarte con tu malestar"
+      }
     </h2>
   </Observer>
 </article>
 
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
-  <!-- <Comments
-    client:visible
-    author={author}
-    comment={comment}
-    business={business}
-  /> -->
-
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>

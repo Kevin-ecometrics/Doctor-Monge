@@ -2,10 +2,16 @@
 import Observer from "@components/blogs/Observer";
 import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
+
 let author = "YVLB";
-let comment =
-  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
-let business = "Paciente";
+let comment = {
+  es: "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.",
+  en: "Excellent attention, took the necessary time to explain in detail as well as the physical examination. I felt truly cared for with a good prognosis for resolution.",
+};
+let business = {
+  es: "Paciente",
+  en: "Patient",
+};
 
 const blogsRutas = [
   {
@@ -28,6 +34,8 @@ const blogsRutas = [
 const blogActual = "Lesion-de-Ligamento-cruzado-anterior";
 
 const id = 3;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -37,205 +45,315 @@ const id = 3;
     <h1
       class="fade-up text-2xl md:text-5xl font-bold mb-16 md:mt-32 text-white"
     >
-      Lesión de Ligamento cruzado anterior: las lesiones que son 4 veces más
-      comunes en mujeres.
+      {
+        isEnglish
+          ? "Anterior Cruciate Ligament Injury: Injuries That Are 4 Times More Common in Women"
+          : "Lesión de Ligamento cruzado anterior: las lesiones que son 4 veces más comunes en mujeres."
+      }
     </h1>
   </Observer>
 
   <Observer client:visible>
     <h2 class="fade-up text-white text-xl mb-16 font-semibold">
-      Cómo la artroscopia puede ayudar con la recuperación permanente.
+      {
+        isEnglish
+          ? "How arthroscopy can help with permanent recovery"
+          : "Cómo la artroscopia puede ayudar con la recuperación permanente."
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      Hola, Soy Ricardo Monge, me gustaría abordar una de lesiones más comunes
-      en mujeres y como se interviene como traumatólogo especialista en la
-      reconstrucción de ligamentos cruzados anteriores de rodilla por
-      artroscopia.
+      {
+        isEnglish ? (
+          <>
+            <p>
+              Hello, I'm Ricardo Monge, I'd like to address one of the most
+              common injuries in women and how it's treated as a trauma
+              specialist in anterior cruciate ligament reconstruction through
+              arthroscopy.
+            </p>
+            <p>
+              The knee is a joint with many structures that need to work in
+              harmony to stay balanced and function efficiently. The muscles,
+              ligaments and tendons work synchronously so that in every range of
+              motion you give it, it remains balanced and in place.
+            </p>
+            <p>
+              The anterior cruciate ligament is located in the center of the
+              knee, connecting the tibia bone to the femur. It's one of the main
+              stabilizers of the knee, responsible for preventing displacement
+              of the tibia under the femur. When it ruptures or overstretches,
+              there's an imbalance in these structures that can cause discomfort
+              such as loss of range of motion, swelling and pain due to
+              overloading of the knee parts.
+            </p>
+            <p>
+              You may wonder: How exactly can it get injured? This happens when
+              the knee twists or hyperextends or receives a direct blow. This
+              will cause a popping sound followed by instability or...
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              Hola, Soy Ricardo Monge, me gustaría abordar una de lesiones más
+              comunes en mujeres y como se interviene como traumatólogo
+              especialista en la reconstrucción de ligamentos cruzados
+              anteriores de rodilla por artroscopia.
+            </p>
+            <p>
+              La rodilla es una articulación con muchas estructuras, estas
+              estructuras necesitan trabajar en armonía para estar balanceadas y
+              trabajar de manera eficiente. Los músculos ligamentos y tendones
+              funcionan sincrónicamente para que en cada rango que tú le das de
+              movimiento y se mantenga balanceado y en su lugar.
+            </p>
+            <p>
+              El ligamento cruzado interior se encuentra en el centro de la
+              rodilla, que conecta el hueso de la tibia con el fémur. Es uno de
+              los principales estabilizadores de la rodilla encargándose de
+              evitar el desplazamiento de la tibia bajo el fémur. Cuando se
+              rompe o estira de más, es cuando viene un desbalance de estas
+              estructuras que puede ocasionar molestias como perdida del rango
+              de movimiento, hinchazon y dolor debido a que se sobrecargan las
+              partes de la rodilla.
+            </p>
+            <p>
+              Tal vez te preguntas: ¿Como se puede lesionar exactamente? Esto
+              sucede cuando la rodilla se tuerce o se hiperextiende o recibe un
+              golpe directo. Lo que hará que se escuche un chasquido seguido de
+              una inestabilidad o
+            </p>
+          </>
+        )
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="fade-up text-2xl font-bold mb-8 text-white">
+      {
+        isEnglish
+          ? "Why are women more prone to ACL injuries?"
+          : "¿Porque las mujeres son más propensas a las lesiones por LCA?"
+      }
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24">
+      {
+        isEnglish
+          ? "The higher incidence of anterior cruciate ligament injuries in women is attributed to anatomical, hormonal and biomechanical factors."
+          : "La mayor incidencia de lesiones de ligamento cruzado anterior en mujeres se le atribuye a factores, anatómicos, hormonales y biomecánicos."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24">
+      <strong class="fade-up text-white">
+        {isEnglish ? "Anatomical factors:" : "Factores anatómicos:"}
+      </strong>
       <br />
-      La rodilla es una articulación con muchas estructuras, estas estructuras necesitan
-      trabajar en armonía para estar balanceadas y trabajar de manera eficiente.
-      Los músculos ligamentos y tendones funcionan sincrónicamente para que en cada
-      rango que tú le das de movimiento y se mantenga balanceado y en su lugar.
-      <br />
-      El ligamento cruzado interior se encuentra en el centro de la rodilla, que
-      conecta el hueso de la tibia con el fémur. Es uno de los principales estabilizadores
-      de la rodilla encargándose de evitar el desplazamiento de la tibia bajo el
-      fémur. Cuando se rompe o estira de más, es cuando viene un desbalance de estas
-      estructuras que puede ocasionar molestias como perdida del rango de movimiento,
-      hinchazon y dolor debido a que se sobrecargan las partes de la rodilla.
-      <br />
-      Tal vez te preguntas: ¿Como se puede lesionar exactamente? Esto sucede cuando
-      la rodilla se tuerce o se hiperextiende o recibe un golpe directo. Lo que hará
-      que se escuche un chasquido seguido de una inestabilidad o
+      {
+        isEnglish
+          ? "The anterior cruciate ligaments in women are thinner compared to men's, the wider pelvis, shorter femur, and the angles formed between the patellar tendon and the tibia make them more prone to injury due to the increased angle that generates more stress on the ACL compared to men."
+          : "Los ligamentos cruzados anteriores en mujeres son más delgados en comparación con los de los hombres, la pelvis más ancha, fémur más corto, los ángulos formados entre el tendón rotuliano y la tibia las hacen más propensas a lastimarse por el aumento del ángulo que les generar mayor cantidad de estrés en el LCA en comparación del hombre."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h2 class="fade-up text-2xl font-bold mb-8 text-white">
-      ¿Porque las mujeres son más propensas a las lesiones por LCA?
+      {isEnglish ? "Hormonal factors" : "Factores hormonales"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      La mayor incidencia de lesiones de ligamento cruzado anterior en mujeres
-      se le atribuye a factores, anatómicos, hormonales y biomecánicos.
-    </h4>
-  </Observer>
-
-  <Observer client:visible>
-    <h4 class="fade-up text-xl mb-24">
-      <strong class="fade-up text-white"> Factores anatómicos: </strong>
-      Los ligamentos cruzados anteriores en mujeres son más delgados en comparación
-      con los de los hombres, la pelvis más ancha, fémur más corto, los ángulos formados
-      entre el tendón rotuliano y la tibia las hacen más propensas a lastimarse por
-      el aumento del ángulo que les generar mayor cantidad de estrés en el LCA en
-      comparación del hombre.
+      {
+        isEnglish
+          ? "During the follicular and luteal phases of the menstrual cycle, when estrogen and progesterone levels are highest, changes occur in the proliferation and synthesis of fibroblasts that function to secrete collagen, which helps maintain the structural framework of tissues. This causes ligament laxity and therefore an injury risk during these phases."
+          : "Durante la fase folicular y la fase lútera del ciclo menstrual es cuando los niveles de estrógeno y progesterona son más altos y producen cambios en la proliferación y síntesis de fibroblastos que desempeñan la función de secretar colágeno, que ayuda a mantener el marco estructural de los tejidos. Lo cual provoca que exista una laxitud del ligamento y por tanto un riesgo de lesión durante estas fases."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h2 class="fade-up text-2xl font-bold mb-8 text-white">
-      Factores hormonales
+      {isEnglish ? "Biomechanical factors" : "Factores biomecánicos"}
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      Durante la fase folicular y la fase lútera del ciclo menstrual es cuando
-      los niveles de estrógeno y progesterona son más altos y producen cambios
-      en la proliferación y síntesis de fibroblastos que desempeñan la función
-      de secretar colágeno, que ayuda a mantener el marco estructural de los
-      tejidos. Lo cual provoca que exista una laxitud del ligamento y por tanto
-      un riesgo de lesión durante estas fases.
+      {
+        isEnglish
+          ? "During certain movements, female athletes tend to have greater internal rotation and hip adduction which causes greater knee valgus and therefore greater load on the anterior cruciate ligament. Landing also influences because many athletes tend to land with less knee flexion and greater quadriceps participation, which generates more tension on the ligament."
+          : "Durante ciertos movimientos las mujeres deportistas tienen a tener mayor rotación interna y aducción de la cadera lo provoca un mayor valgo de la rodilla y por tanto una mayor carga del ligamento cruzado anterior. El aterrizaje también influye debido a que muchas atletas suelen aterrizar con una flexión menor de la rodilla y una mayor participación del cuádriceps lo que genera más tensión en el ligamento."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h2 class="fade-up text-2xl font-bold mb-8 text-white">
-      Factores biomecánicos
+      {
+        isEnglish
+          ? "Why is arthroscopy the best option for an ACL injury?"
+          : "¿Por qué una artroscopia es la mejor opción para una lesión de LCA?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      Durante ciertos movimientos las mujeres deportistas tienen a tener mayor
-      rotación interna y aducción de la cadera lo provoca un mayor valgo de la
-      rodilla y por tanto una mayor carga del ligamento cruzado anterior. El
-      aterrizaje también influye debido a que muchas atletas suelen aterrizar
-      con una flexión menor de la rodilla y una mayor participación del
-      cuádriceps lo que genera más tensión en el ligamento.
+      {
+        isEnglish
+          ? "Arthroscopy is one of the least invasive interventions with a 95% success rate and is one of the most performed in the world with about 2 million patients per year. It's a procedure with a quick recovery time due to smaller incisions and a very low risk percentage since complications such as infections or clots are avoided."
+          : "La artroscopia es una de las intervenciones no invasivas con una tasa de éxito del 95% y es una de las más realizadas en el mundo con cerca de 2 millones de pacientes al año, es un procedimiento con un tiempo de recuperación rápido debido a las incisiones más pequeñas y con un porcentaje muy bajo de riego ya que se evita complicaciones como infecciones o coágulos."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="fade-up text-xl mb-24">
+      {
+        isEnglish
+          ? "If a damaged ACL is not treated, it can generate greater instability and stress on the knee with a high probability of meniscus rupture. Therefore, arthroscopy is a quick and efficient way to resolve an injury."
+          : "Si un LCA dañado no se atiende puede generar mayor inestabilidad y estrés a la rodilla con una alta probabilidad de una ruptura de meniscos. Por tanto, la artroscopia es una forma rápida y eficiente de resolver una lesión."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h2 class="fade-up text-2xl font-bold mb-8 text-white">
-      ¿Por qué una artroscopia es la mejor opción para una lesión de LCA?
+      {
+        isEnglish
+          ? "What happens during an anterior cruciate ligament arthroscopy?"
+          : "¿Qué sucede durante una artroscopia de Ligamento Cruzado anterior?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      La artroscopia es una de las intervenciones no invasivas con una tasa de
-      éxito del 95% y es una de las más realizadas en el mundo con cerca de 2
-      millones de pacientes al año, es un procedimiento con un tiempo de
-      recuperación rápido debido a las incisiones más pequeñas y con un
-      porcentaje muy bajo de riego ya que se evita complicaciones como
-      infecciones o coágulos.
+      {
+        isEnglish
+          ? "During arthroscopy, through a small incision, a camera is inserted into the center of the knee where the ACL is located, which is transmitted via a screen that allows us to examine the ligaments and other tissues of the knee. The tissue, depending on its condition, may only require reconstruction if the damage is severe, it's replaced with your own tissue, usually tissue can be taken from a patellar tendon, a quadriceps tendon or a graft from a cadaver."
+          : "Durante la artroscopia mediante una pequeña incisión se inserta una cámara en el centro de la rodilla donde se encuentra el LCA que se trasmite mediante una pantalla que nos permite revisar los ligamentos y otros tejidos de la rodilla. El tejido dependiendo el estado puede solo requerir una reconstrucción en caso de que el daño sea severo es reemplazado por un tejido propio, usualmente se puede tomar tejido de un tendón de la rótula, un tendón del cuádriceps o bien un injerto de un cadáver."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      Si un LCA dañado no se atiende puede generar mayor inestabilidad y estrés
-      a la rodilla con una alta probabilidad de una ruptura de meniscos. Por
-      tanto, la artroscopia es una forma rápida y eficiente de resolver una
-      lesión.
+      {
+        isEnglish
+          ? "During this procedure, other incisions will be made around the knee and other instruments will be introduced to repair the ACL or replace it if necessary."
+          : "Durante este procedimiento se hará otras incisiones alrededor de la rodilla y se introducirán otros instrumentos para reparar el LCA o si es necesario reemplazar."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h2 class="fade-up text-2xl font-bold mb-8 text-white">
-      ¿Qué sucede durante una artroscopia de Ligamento Cruzado anterior?
+      {
+        isEnglish
+          ? "What to expect after an ACL arthroscopy?"
+          : "¿Qué esperar después de una artroscopia de LCA?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      Durante la artroscopia mediante una pequeña incisión se inserta una cámara
-      en el centro de la rodilla donde se encuentra el LCA que se trasmite
-      mediante una pantalla que nos permite revisar los ligamentos y otros
-      tejidos de la rodilla. El tejido dependiendo el estado puede solo requerir
-      una reconstrucción en caso de que el daño sea severo es reemplazado por un
-      tejido propio, usualmente se puede tomar tejido de un tendón de la rótula,
-      un tendón del cuádriceps o bien un injerto de un cadáver.
-    </h4>
-  </Observer>
-
-  <Observer client:visible>
-    <h4 class="fade-up text-xl mb-24">
-      Durante este procedimiento se hará otras incisiones alrededor de la
-      rodilla y se introducirán otros instrumentos para reparar el LCA o si es
-      necesario reemplazar.
-    </h4>
-  </Observer>
-
-  <Observer client:visible>
-    <h2 class="fade-up text-2xl font-bold mb-8 text-white">
-      ¿Qué esperar después de una artroscopia de LCA ?
-    </h2>
-  </Observer>
-
-  <Observer client:visible>
-    <h4 class="fade-up text-xl mb-24">
-      Lo más recomendable sería el uso de muletas los primeros días, evitar
-      estar de pie o caminar por tiempo prolongado
+      {
+        isEnglish
+          ? "The most advisable would be the use of crutches the first few days, avoid standing or walking for prolonged periods"
+          : "Lo más recomendable sería el uso de muletas los primeros días, evitar estar de pie o caminar por tiempo prolongado"
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <ul class="fade-up list-decimal text-white px-4 mb-24">
       <li class="fade-up font-bold text-xl">
-        Se recomienda tener una dieta rica en proteínas, vitaminas y minerales
+        {
+          isEnglish
+            ? "A diet rich in proteins, vitamins and minerals is recommended"
+            : "Se recomienda tener una dieta rica en proteínas, vitaminas y minerales"
+        }
       </li>
-      <li class="fade-up font-bold text-xl">Aplicar comprensas frías</li>
       <li class="fade-up font-bold text-xl">
-        Mantener una compresión adecuada para disminuir la hinchazón
+        {isEnglish ? "Apply cold compresses" : "Aplicar comprensas frías"}
       </li>
-      <li class="fade-up font-bold text-xl">Mantener la pierna elevada</li>
       <li class="fade-up font-bold text-xl">
-        Seguir puntualmente la receta medica
+        {
+          isEnglish
+            ? "Maintain adequate compression to reduce swelling"
+            : "Mantener una compresión adecuada para disminuir la hinchazón"
+        }
+      </li>
+      <li class="fade-up font-bold text-xl">
+        {isEnglish ? "Keep the leg elevated" : "Mantener la pierna elevada"}
+      </li>
+      <li class="fade-up font-bold text-xl">
+        {
+          isEnglish
+            ? "Follow the medical prescription precisely"
+            : "Seguir puntualmente la receta medica"
+        }
       </li>
     </ul>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      Realizar las indicaciones recomendadas en el tiempo estipulado hasta que
-      se recomiende complementarlo con un fisioterapeuta para comenzar la
-      rehabilitacion del rango de movimiento y fuerza.
-      <br />
-      <br />
-      Recuerda acudir a tus visitas de seguimiento y ser muy paciente, cada quien
-      tiene un proceso de recuperación diferente, no siempre se trata de la rapidez
-      si no de la estabilidad y salud que el cuerpo requiere.
-      <br />
-      <br />
-      Cualquier duda o comentario házmelo saber, agenda tu cita para poder apoyarte.
+      {
+        isEnglish ? (
+          <>
+            <p>
+              Perform the recommended instructions within the stipulated time
+              until it's recommended to complement it with a physiotherapist to
+              begin rehabilitation of range of motion and strength.
+            </p>
+            <p>
+              Remember to attend your follow-up visits and be very patient,
+              everyone has a different recovery process, it's not always about
+              speed but about the stability and health that the body requires.
+            </p>
+            <p>
+              Any questions or comments let me know, schedule your appointment
+              so I can help you.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              Realizar las indicaciones recomendadas en el tiempo estipulado
+              hasta que se recomiende complementarlo con un fisioterapeuta para
+              comenzar la rehabilitacion del rango de movimiento y fuerza.
+            </p>
+            <p>
+              Recuerda acudir a tus visitas de seguimiento y ser muy paciente,
+              cada quien tiene un proceso de recuperación diferente, no siempre
+              se trata de la rapidez si no de la estabilidad y salud que el
+              cuerpo requiere.
+            </p>
+            <p>
+              Cualquier duda o comentario házmelo saber, agenda tu cita para
+              poder apoyarte.
+            </p>
+          </>
+        )
+      }
     </h4>
   </Observer>
 </article>
 
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
-  <!-- <Comments
-    client:visible
-    author={author}
-    comment={comment}
-    business={business}
-  /> -->
-
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>

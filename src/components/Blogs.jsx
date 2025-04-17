@@ -159,7 +159,7 @@ function Blogs({ URL }) {
     {
       img: "/Todo lo que debes saber sobre una de las lesiones mas comunes en ortopedia.png",
       fecha: "May 2024",
-      titulo: "Nonunion and Delayed Bone Healing",
+      titulo: "Pseudoartrosis and Delayed Bone Healing",
       texto:
         "In this blog, Dr. Ricardo Monge, Orthopedic Specialist, explains why some fractures take longer to heal or don't heal completely.",
       link: "/en/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion",
@@ -257,9 +257,9 @@ function Blogs({ URL }) {
     {
       img: "/cardblog14.webp",
       fecha: "March 2025",
-      titulo: "Is a Second Orthopedic Surgery Needed for Nonunion?",
+      titulo: "Is a Second Orthopedic Surgery Needed for Pseudoartrosis?",
       texto:
-        "What to do if your bone fails to heal? Nonunion occurs and forms a false joint. Read more details from orthopedic trauma surgeon Dr. Ricardo Monge.",
+        "What to do if your bone fails to heal? Pseudoartrosis occurs and forms a false joint. Read more details from orthopedic trauma surgeon Dr. Ricardo Monge.",
       link: "/en/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
     },
     {

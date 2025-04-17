@@ -8,9 +8,14 @@ import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
 
 let author = "YVLB";
-let comment =
-  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
-let business = "Paciente";
+let comment = {
+  es: "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.",
+  en: "Excellent care, took the necessary time to explain in detail along with the physical examination. I felt truly cared for with a good resolution prognosis.",
+};
+let business = {
+  es: "Paciente",
+  en: "Patient",
+};
 
 const blogsRutas = [
   {
@@ -34,6 +39,8 @@ const blogActual =
   "Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla";
 
 const id = 5;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -41,160 +48,227 @@ const id = 5;
 >
   <Observer client:visible>
     <h1 class="text-2xl md:text-5xl text-white font-semibold mb-16 md:mt-32">
-      ¿Qué son las infiltraciones?
+      {isEnglish ? "What are infiltrations?" : "¿Qué son las infiltraciones?"}
     </h1>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      La infiltración es la introducción de un líquido a través de los poros de
-      un objeto solido, básicamente es una inyección en un lugar específico
-      anatómico, donde queremos que realice una acción en específico.
+      {
+        isEnglish
+          ? "Infiltration is the introduction of a liquid through the pores of a solid object, basically it's an injection in a specific anatomical place where we want it to perform a specific action."
+          : "La infiltración es la introducción de un líquido a través de los poros de un objeto solido, básicamente es una inyección en un lugar específico anatómico, donde queremos que realice una acción en específico."
+      }
       <br />
       <br />
-      En la ortopedia utilizamos una gran variedad de infiltraciones para tratar
-      patologías donde el común denominador es un tejido que se lastimó y que está
-      secretando sustancias que lo inflaman. Lo que se busca hacer es disminuir la
-      desinflamación inyectando una sustancia para disminuir el dolor para que el
-      cuerpo se pueda recuperar.
+      {
+        isEnglish
+          ? "In orthopedics we use a wide variety of infiltrations to treat pathologies where the common denominator is a tissue that was injured and is secreting substances that inflame it. What we seek to do is reduce inflammation by injecting a substance to reduce pain so the body can recover."
+          : "En la ortopedia utilizamos una gran variedad de infiltraciones para tratar patologías donde el común denominador es un tejido que se lastimó y que está secretando sustancias que lo inflaman. Lo que se busca hacer es disminuir la desinflamación inyectando una sustancia para disminuir el dolor para que el cuerpo se pueda recuperar."
+      }
     </h4>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      ¿Por qué se utilizan en las rodillas?
+      {
+        isEnglish
+          ? "Why are they used in knees?"
+          : "¿Por qué se utilizan en las rodillas?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      El Hialuronato de sodio se localiza en el líquido articular o sinovial,
-      gracias a este las articulaciones se encuentran lubricadas y pueden
-      funcionar ya que amortigua y protege los extremos de los huesos reduciendo
-      la fricción.  <br />
-      <br /> Sin embargo, mientras se va desgastando la rodilla este peso molecular
-      va disminuyendo, debido a que comienza a tener más actividad de una enzima
-      que se llama:Hialuronidasa que deshace el ácido hialuronato, lo que va a provocar
-      un desgaste del cartílago articular ya que no tiene ese gel que amortigua y
-      lubrica.  <br />
-      <br /> Hay múltiples sustancias que se pueden utilizar, desde antiinflamatorios
-      no esteroideos, hasta los esteroideos, analgésicos y ácido hialurónico, que
-      se pueden poner en diferentes partes del cuerpo, pero comúnmente se utiliza
-      dentro de las articulaciones. <br />
-      <br /> En el caso de los antiinflamatorios esteroideos, que es lo que comúnmente
-      se utiliza, no se recomienda hacer más de tres veces al año, ya que pueden
-      tener efectos secundarios en el cartílago alrededor o en el tendón.
+      {
+        isEnglish
+          ? "Sodium hyaluronate is found in the synovial fluid, thanks to this the joints are lubricated and can function as it cushions and protects the ends of the bones reducing friction."
+          : "El Hialuronato de sodio se localiza en el líquido articular o sinovial, gracias a este las articulaciones se encuentran lubricadas y pueden funcionar ya que amortigua y protege los extremos de los huesos reduciendo la fricción."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "However, as the knee wears out, this molecular weight decreases, because it begins to have more activity of an enzyme called: Hyaluronidase that breaks down hyaluronic acid, which will cause wear of the articular cartilage since it doesn't have that gel that cushions and lubricates."
+          : "Sin embargo, mientras se va desgastando la rodilla este peso molecular va disminuyendo, debido a que comienza a tener más actividad de una enzima que se llama: Hialuronidasa que deshace el ácido hialuronato, lo que va a provocar un desgaste del cartílago articular ya que no tiene ese gel que amortigua y lubrica."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "There are multiple substances that can be used, from non-steroidal anti-inflammatories to steroidal ones, analgesics and hyaluronic acid, which can be placed in different parts of the body, but are commonly used within joints."
+          : "Hay múltiples sustancias que se pueden utilizar, desde antiinflamatorios no esteroideos, hasta los esteroideos, analgésicos y ácido hialurónico, que se pueden poner en diferentes partes del cuerpo, pero comúnmente se utiliza dentro de las articulaciones."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "In the case of steroidal anti-inflammatories, which is what is commonly used, it is not recommended to do more than three times a year, as they can have side effects on the surrounding cartilage or tendon."
+          : "En el caso de los antiinflamatorios esteroideos, que es lo que comúnmente se utiliza, no se recomienda hacer más de tres veces al año, ya que pueden tener efectos secundarios en el cartílago alrededor o en el tendón."
+      }
     </h4>
   </Observer>
+
   <ObserverImage client:visible>
     <div class="flex justify-center items-center">
       <Image
         src={Image1}
-        alt="Infiltraciones en la rodilla"
+        alt={isEnglish
+          ? "Hyaluronic acid in the knee relieves pain and improves mobility"
+          : "Infiltraciones en la rodilla"}
         class="fade-up object-cover py-8"
       />
     </div>
   </ObserverImage>
+
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Pacientes recomendados para infiltraciones de ácido hialurónico
+      {
+        isEnglish
+          ? "Recommended patients for hyaluronic acid injections"
+          : "Pacientes recomendados para infiltraciones de ácido hialurónico"
+      }
     </h2>
   </Observer>
+
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      Este tipo de infiltraciones se recomienda para tratar lesiones del
-      cartílago en articulaciones de carga como la rodilla en personas: <br />
-      <br /> Que tienen artrosis de rodilla, tendinitis bursitis <br />
-      <br /> Paciente con lesiones en meniscos <br />
-      <br /> Cuando los medicamentos antinflamatorios o analgésicos no están teniendo
-      los resultados esperados para aminorar el dolor.
+      {
+        isEnglish
+          ? "This type of infiltration is recommended to treat cartilage injuries in weight-bearing joints like the knee in people:"
+          : "Este tipo de infiltraciones se recomienda para tratar lesiones del cartílago en articulaciones de carga como la rodilla en personas:"
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "Who have knee osteoarthritis, tendinitis bursitis"
+          : "Que tienen artrosis de rodilla, tendinitis bursitis"
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "Patients with meniscus injuries"
+          : "Paciente con lesiones en meniscos"
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "When anti-inflammatory or analgesic medications are not having the expected results to reduce pain."
+          : "Cuando los medicamentos antinflamatorios o analgésicos no están teniendo los resultados esperados para aminorar el dolor."
+      }
     </h4>
   </Observer>
+
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      ¿Cómo se aplica el ácido hialurónico en la rodilla?
+      {
+        isEnglish
+          ? "How is hyaluronic acid applied in the knee?"
+          : "¿Cómo se aplica el ácido hialurónico en la rodilla?"
+      }
     </h2>
   </Observer>
+
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      Es un procedimiento bastante breve y ambulatorio, donde el paciente estará
-      sentado en un ángulo que permita maniobrar su rodilla, posterior se
-      procede a desinfectar la zona, y se coloca el ácido hialurónico de alto
-      peso molecular sobre una sola zona de la rodilla, y este líquido va a ser
-      distribuido por toda la rodilla.
+      {
+        isEnglish
+          ? "It's a fairly brief outpatient procedure where the patient will be seated at an angle that allows maneuvering their knee, then the area is disinfected, and the high molecular weight hyaluronic acid is placed on a single area of the knee, and this liquid will be distributed throughout the knee."
+          : "Es un procedimiento bastante breve y ambulatorio, donde el paciente estará sentado en un ángulo que permita maniobrar su rodilla, posterior se procede a desinfectar la zona, y se coloca el ácido hialurónico de alto peso molecular sobre una sola zona de la rodilla, y este líquido va a ser distribuido por toda la rodilla."
+      }
       <br />
       <br />
-      La reacción de los pacientes varia, algunos pacientes experimentales un poquito
-      de dolor, calor o hinchazón tras recibir la inyección, estos síntomas desaparecen
-      en un par de horas y es recomendable la aplicación de comprensas frías para
-      aliviar el dolor, también seguir indicaciones como no permanecer de pie o realizar
-      ejercicio o esfuerzos durante los primeros días. Es normal que cada paciente
-      experimente una sensación diferente puesto que cada rodilla es única, por ejemplo
-      existen pacientes que experimentan una sensación de alivio a los pocos días,
-      otros después de un par de semanas.
+      {
+        isEnglish
+          ? "Patient reactions vary, some patients experience a little pain, heat or swelling after receiving the injection, these symptoms disappear in a couple of hours and it's recommended to apply cold compresses to relieve pain, also follow instructions such as not standing or exercising or making efforts during the first days. It's normal for each patient to experience a different sensation since each knee is unique, for example there are patients who experience a feeling of relief after a few days, others after a couple of weeks."
+          : "La reacción de los pacientes varia, algunos pacientes experimentales un poquito de dolor, calor o hinchazón tras recibir la inyección, estos síntomas desaparecen en un par de horas y es recomendable la aplicación de comprensas frías para aliviar el dolor, también seguir indicaciones como no permanecer de pie o realizar ejercicio o esfuerzos durante los primeros días. Es normal que cada paciente experimente una sensación diferente puesto que cada rodilla es única, por ejemplo existen pacientes que experimentan una sensación de alivio a los pocos días, otros después de un par de semanas."
+      }
     </h4>
   </Observer>
+
   <ObserverImage client:visible>
     <div class="flex justify-center items-center">
       <Image
         src={Image2}
-        alt="Infiltraciones en la rodilla"
+        alt={isEnglish
+          ? "Hyaluronic acid injections act as lubricant and shock absorber"
+          : "Infiltraciones en la rodilla"}
         class="fade-up object-cover py-8"
       />
     </div>
   </ObserverImage>
+
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Que esperar después de una infiltración
+      {
+        isEnglish
+          ? "What to expect after an infiltration"
+          : "Que esperar después de una infiltración"
+      }
     </h2>
   </Observer>
+
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      Se recomienda mantener reposo de 48 a 72 horas, evitar movimientos como
-      estirar, agacharse durante las primeras 24 horas se recomienda aplicar
-      hielo o compresas frías
+      {
+        isEnglish
+          ? "It is recommended to rest for 48 to 72 hours, avoid movements like stretching, bending over during the first 24 hours it is recommended to apply ice or cold compresses"
+          : "Se recomienda mantener reposo de 48 a 72 horas, evitar movimientos como estirar, agacharse durante las primeras 24 horas se recomienda aplicar hielo o compresas frías"
+      }
     </h4>
   </Observer>
+
   <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Consideraciones</h2>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {isEnglish ? "Considerations" : "Consideraciones"}
+    </h2>
   </Observer>
+
   <Observer client:visible>
     <h4 class="fade-up text-xl mb-24">
-      La marca de ácido hialurónico que se utilice sea debe cumplir con los
-      pesos moleculares adecuados que se miden en Daltons. Lo ideal  sería de 6
-      millones , 500mil o 1.5 millones. Otra modalidad de aplicación consiste en
-      colocar 3 inyecciones de dos millones.   <br />
+      {
+        isEnglish
+          ? "The brand of hyaluronic acid used must meet the appropriate molecular weights measured in Daltons. Ideally it would be 6 million, 500 thousand or 1.5 million. Another application modality consists of placing 3 injections of two million."
+          : "La marca de ácido hialurónico que se utilice sea debe cumplir con los pesos moleculares adecuados que se miden en Daltons. Lo ideal sería de 6 millones, 500mil o 1.5 millones. Otra modalidad de aplicación consiste en colocar 3 inyecciones de dos millones."
+      }
       <br />
-
-      Su funcionalidad y duración depende del grado del desgaste y las
-      características propias de la rodilla. Es importante dar seguimiento con
-      tu traumatólogo para monitorear los avances, así como seguir las
-      indicciones de ejercicios para rodilla.   <br />
       <br />
-
-      Se recomienda llevar una dieta adecuada para evitar sobrecarga a la
-      rodilla <br />
+      {
+        isEnglish
+          ? "Its functionality and duration depends on the degree of wear and the knee's own characteristics. It's important to follow up with your traumatologist to monitor progress, as well as follow the knee exercise instructions."
+          : "Su funcionalidad y duración depende del grado del desgaste y las características propias de la rodilla. Es importante dar seguimiento con tu traumatólogo para monitorear los avances, así como seguir las indicciones de ejercicios para rodilla."
+      }
       <br />
-
-      Es esencial llevar un estilo de vida libre de alcohol y tabaco ya que
-      estos proliferan un mayor daño a los huesos y articulaciones<br />
       <br />
-
+      {
+        isEnglish
+          ? "It is recommended to maintain an adequate diet to avoid overloading the knee"
+          : "Se recomienda llevar una dieta adecuada para evitar sobrecarga a la rodilla"
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "It is essential to maintain a lifestyle free of alcohol and tobacco as these proliferate greater damage to bones and joints"
+          : "Es esencial llevar un estilo de vida libre de alcohol y tabaco ya que estos proliferan un mayor daño a los huesos y articulaciones"
+      }
+      <br />
+      <br />
       <strong class="text-white text-2xl">
-        Si tienes alguna duda con gusto te apoyo escribe en contacto o en mis
-        redes para comenzar tu atención ortopédica.
+        {
+          isEnglish
+            ? "If you have any questions I'll gladly help you, write in contact or on my networks to begin your orthopedic care."
+            : "Si tienes alguna duda con gusto te apoyo escribe en contacto o en mis redes para comenzar tu atención ortopédica."
+        }
       </strong>
     </h4>
   </Observer>
 </article>
 
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
-  <!-- <Comments
-    client:visible
-    author={author}
-    comment={comment}
-    business={business}
-  /> -->
-
   <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
 </section>
