@@ -19,6 +19,12 @@ function Menu({ blogs, titulo }) {
     startIndex + blogsPerPage
   );
 
+  const isEnglish = "/en/blogs/";
+  const isSpanish = "/blogs/";
+  const isCurrentPath = window.location.pathname.includes(isEnglish)
+    ? isEnglish + titulo
+    : isSpanish + titulo;
+
   return (
     <div>
       <div className="relative z-50">
@@ -57,7 +63,7 @@ function Menu({ blogs, titulo }) {
                 key={index}
                 href={blog.ruta}
                 className={`block p-3 text-center rounded-lg transition duration-300 transform hover:scale-105 ${
-                  blog.ruta === "/blogs/" + titulo
+                  blog.ruta === isCurrentPath
                     ? "text-blue-400 bg-gray-700"
                     : "text-white bg-gray-800 hover:bg-gray-700"
                 }`}

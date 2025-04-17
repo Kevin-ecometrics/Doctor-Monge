@@ -466,7 +466,7 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
       <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
     </div>
 
-    <Menu client:visible titulo={asideTitulo} blogs={blogs} />
+    <Menu client:only="react" titulo={asideTitulo} blogs={blogs} />
 
     <Background image={image} title={blogTitle} date={date} />
 

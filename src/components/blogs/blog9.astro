@@ -57,41 +57,44 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
       <strong class="text-white font-bold">
         {isEnglish ? "Osteoarthritis (OA)" : "La osteoartritis (OA)"}
       </strong>
-      es una enfermedad crónica que se desarrolla cuando el cartílago que protege
-      y amortigua los extremos de los huesos comienza a desgastarse debido a diversos
-      factores, como el envejecimiento, lesiones repetitivas, sobrecarga mecánica,
-      entre otros. Este desgaste altera la estructura de la articulación, lo que
-      desencadena procesos inflamatorios y deterioro progresivo del tejido.
+      {
+        isEnglish
+          ? "is a chronic disease that develops when the cartilage that protects and cushions the ends of the bones and cushions the ends of the bones begins to wear down due to various factors, such as aging factors, such as aging, repetitive injuries, mechanical overload, among others, among others. This wear and tear alters the structure of the joint, which triggers inflammatory processes and inflammatory processes and progressive deterioration of the tissue."
+          : "es una enfermedad crónica que se desarrolla cuando el cartílago que protege y amortigua los extremos de los huesos comienza a desgastarse debido a diversos factores, como el envejecimiento, lesiones repetitivas, sobrecarga mecánica, entre otros. Este desgaste altera la estructura de la articulación, lo que desencadena procesos inflamatorios y deterioro progresivo del tejido."
+      }
       <br />
       <br />
-      La OA puede causar discapacidad y es uno de los trastornos más frecuentes en
-      la población, con una frecuencia del 30% en personas de 45 a 60 años, y una
-      más alta, del 80%, en personas de 80 años. Esta ocurre cuando se rompe el equilibrio
-      dinámico entre la lesión y la reparación de los tejidos. El daño al cartílago
-      provoca que los huesos se rocen directamente, generando fricción, dolor, inflamación
-      y rigidez, especialmente al realizar movimientos y en casos más graves, al
-      estar en reposo. <br />
-      <br /> Las partes móviles de la articulación son las que comienzan a sufrir
-      primero, ya que se produce una pérdida ósea progresiva en el cartílago articular,
-      haciéndolo rugoso y erosionándolo poco a poco. En la mayoría de los casos,
-      debido a la relación entre el cartílago articular y la membrana sinovial, la
-      OA afecta a la articulación en su totalidad. <br />
-      <br /> Este es un problema bastante común, muy incapacitante y renuente al
-      tratamiento, debido a que, una vez que inicia el proceso de desgaste de una
-      articulación, nada lo detiene, y es cuestión de tiempo que progrese hasta requerir
-      una cirugía. Sin embargo, existen tratamientos conservadores que permiten prolongar
-      este procedimiento. Hablamos entonces de terapias físicas e infiltraciones
-      con antiinflamatorios, ácido hialurónico y terapias biológicas como el plasma
-      rico en plaquetas. Cada uno de estos tiene sus propias indicaciones específicas,
-      ya que puede ser útil para algunos pacientes y para otros no. Te explico: <br
-      />
+      {
+        isEnglish
+          ? "OA can cause disability and is one of the most common disorders in the population, with a frequency of 30% in people aged 45 to 60 years, and a higher frequency of 80% in people aged 80 years. This occurs when the dynamic balance between tissue injury and repair is disrupted. Damage to cartilage causes bones to rub directly against each other, generating friction, pain, inflammation, and stiffness, especially when moving and in more severe cases, at rest."
+          : "La OA puede causar discapacidad y es uno de los trastornos más frecuentes en la población, con una frecuencia del 30% en personas de 45 a 60 años, y una más alta, del 80%, en personas de 80 años. Esta ocurre cuando se rompe el equilibrio dinámico entre la lesión y la reparación de los tejidos. El daño al cartílago provoca que los huesos se rocen directamente, generando fricción, dolor, inflamación y rigidez, especialmente al realizar movimientos y en casos más graves, al estar en reposo."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "The mobile parts of the joint are the first to suffer, as there is a progressive loss of bone in the articular cartilage, making it rough and eroding it little by little. In most cases, due to the relationship between the articular cartilage and the synovial membrane, OA affects the joint as a whole."
+          : "Las partes móviles de la articulación son las que comienzan a sufrir primero, ya que se produce una pérdida ósea progresiva en el cartílago articular, haciéndolo rugoso y erosionándolo poco a poco. En la mayoría de los casos, debido a la relación entre el cartílago articular y la membrana sinovial, la OA afecta a la articulación en su totalidad."
+      }
+      <br />
+      <br />
+      {
+        isEnglish
+          ? "This is a very common problem, very disabling and reluctant to treatment, because, once the process of joint wear begins, nothing stops it, and it is a matter of time before it progresses to the point of requiring surgery. However, there are conservative treatments that allow prolonging this procedure. We speak then of physical therapies and infiltrations with anti-inflammatory drugs, hyaluronic acid and biological therapies such as platelet-rich plasma. Each of these has its own specific indications, as it may be useful for some patients and not for others. Let me explain:"
+          : "Este es un problema bastante común, muy incapacitante y renuente al tratamiento, debido a que, una vez que inicia el proceso de desgaste de una articulación, nada lo detiene, y es cuestión de tiempo que progrese hasta requerir una cirugía. Sin embargo, existen tratamientos conservadores que permiten prolongar este procedimiento. Hablamos entonces de terapias físicas e infiltraciones con antiinflamatorios, ácido hialurónico y terapias biológicas como el plasma rico en plaquetas. Cada uno de estos tiene sus propias indicaciones específicas, ya que puede ser útil para algunos pacientes y para otros no. Te explico: "
+      }
+      <br />
       <br />
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Infiltraciones con glucocorticoides o cortisona
+      {
+        isEnglish
+          ? "Infiltrations with corticosteroids or cortisone"
+          : "Infiltraciones con glucocorticoides o cortisona"
+      }
     </h2>
   </Observer>
 
