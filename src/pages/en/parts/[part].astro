@@ -5,56 +5,56 @@ import Layout from "@layouts/LayoutBlog.astro";
 import { slide } from "astro:transitions";
 export function getStaticPaths() {
   return [
-    { params: { ficha: "recomendaciones-para-una-columna-sana" } },
+    { params: { part: "recommendations-for-healthy-spine" } },
     {
       params: {
-        ficha: "instrucciones-postoperatorias-de-reemplazo-total-de-cadera",
+        part: "total-hip-replacement-postoperative-instructions",
       },
     },
     {
       params: {
-        ficha: "instrucciones-postoperatorias-de-reemplazo-total-de-rodilla",
+        part: "total-knee-replacement-postoperative-instructions",
       },
     },
     {
       params: {
-        ficha: "instrucciones-postoperatorias-de-artroscopia-de-rodilla",
+        part: "knee-arthroscopy-postoperative-instructions",
       },
     },
-    { params: { ficha: "recomendaciones-generales-preoperatorias" } },
+    { params: { part: "general-preoperative-recommendations" } },
   ];
 }
 
 const fichasData = {
-  "recomendaciones-para-una-columna-sana": {
+  "recommendations-for-healthy-spine": {
     title: "Dr Monge | Recommendations for a healthy spine",
     description: "Technical sheet description.",
     keywords: "technical-sheet, doctor, monge",
     bannerTitle: "March 8, 2025",
     bannerDate: "Recommendations for a healthy spine",
   },
-  "instrucciones-postoperatorias-de-reemplazo-total-de-cadera": {
+  "total-hip-replacement-postoperative-instructions": {
     title: "Dr Monge | Postoperative instructions for total hip replacement",
     description: "Technical sheet description.",
     keywords: "technical-sheet, doctor, monge",
     bannerTitle: "March 27, 2025",
     bannerDate: "Postoperative instructions for total hip replacement",
   },
-  "instrucciones-postoperatorias-de-reemplazo-total-de-rodilla": {
+  "total-knee-replacement-postoperative-instructions": {
     title: "Dr Monge | Postoperative instructions for total knee replacement",
     description: "Technical sheet description.",
     keywords: "technical-sheet, doctor, monge",
     bannerTitle: "April 1, 2025",
     bannerDate: "Postoperative instructions for total knee replacement",
   },
-  "instrucciones-postoperatorias-de-artroscopia-de-rodilla": {
+  "knee-arthroscopy-postoperative-instructions": {
     title: "Dr Monge | Postoperative instructions for knee arthroscopy",
     description: "Technical sheet description.",
     keywords: "technical-sheet, doctor, monge",
     bannerTitle: "April 8, 2025",
     bannerDate: "Postoperative instructions for knee arthroscopy",
   },
-  "recomendaciones-generales-preoperatorias": {
+  "general-preoperative-recommendations": {
     title: "Dr Monge | General preoperative recommendations",
     description: "Technical sheet description.",
     keywords: "technical-sheet, doctor, monge",
@@ -63,8 +63,8 @@ const fichasData = {
   },
 };
 
-const { ficha } = Astro.params;
-const fichaData = fichasData[ficha as keyof typeof fichasData];
+const { part } = Astro.params;
+const fichaData = fichasData[part as keyof typeof fichasData];
 const year = new Date().getFullYear();
 ---
 
@@ -80,7 +80,7 @@ const year = new Date().getFullYear();
     })}
   >
     {
-      ficha === "recomendaciones-para-una-columna-sana" && (
+      part === "recommendations-for-healthy-spine" && (
         <>
           <section class="bg-[url(/banner-ficha-mobile.webp)] md:bg-[url(/banner-ficha.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -119,8 +119,7 @@ const year = new Date().getFullYear();
       )
     }
     {
-      ficha ===
-        "instrucciones-postoperatorias-de-reemplazo-total-de-cadera" && (
+      part === "total-hip-replacement-postoperative-instructions" && (
         <>
           <section class="bg-[url(/banner-ficha2-mobile.webp)] md:bg-[url(/banner-ficha2.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -159,8 +158,7 @@ const year = new Date().getFullYear();
       )
     }
     {
-      ficha ===
-        "instrucciones-postoperatorias-de-reemplazo-total-de-rodilla" && (
+      part === "total-knee-replacement-postoperative-instructions" && (
         <>
           <section class="bg-[url(/banner-ficha3-mobile.webp)] md:bg-[url(/banner-ficha3.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -199,7 +197,7 @@ const year = new Date().getFullYear();
       )
     }
     {
-      ficha === "instrucciones-postoperatorias-de-artroscopia-de-rodilla" && (
+      part === "knee-arthroscopy-postoperative-instructions" && (
         <>
           <section class="bg-[url(/banner-ficha4-mobile.webp)] md:bg-[url(/banner-ficha4.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -238,7 +236,7 @@ const year = new Date().getFullYear();
       )
     }
     {
-      ficha === "recomendaciones-generales-preoperatorias" && (
+      part === "general-preoperative-recommendations" && (
         <>
           <section class="bg-[url(/banner-ficha5-mobile.webp)] md:bg-[url(/banner-ficha5.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />

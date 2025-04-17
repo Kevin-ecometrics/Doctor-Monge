@@ -29,23 +29,23 @@ const fichas = [
 const fichasEN = [
   {
     title: "Recommendations for a healthy spine",
-    link: "/en/fichas/recomendaciones-para-una-columna-sana/",
+    link: "/en/parts/recommendations-for-healthy-spine/",
   },
   {
     title: "Postoperative instructions for total hip replacement",
-    link: "/en/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-cadera/",
+    link: "/en/parts/total-hip-replacement-postoperative-instructions/",
   },
   {
     title: "Postoperative instructions for total knee replacement",
-    link: "/en/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-rodilla/",
+    link: "/en/parts/total-knee-replacement-postoperative-instructions/",
   },
   {
     title: "Postoperative instructions for knee arthroscopy",
-    link: "/en/fichas/instrucciones-postoperatorias-de-artroscopia-de-rodilla/",
+    link: "/en/parts/knee-arthroscopy-postoperative-instructions/",
   },
   {
     title: "General preoperative recommendations",
-    link: "/en/fichas/recomendaciones-generales-preoperatorias/",
+    link: "/en/parts/general-preoperative-recommendations/",
   },
 ];
 
