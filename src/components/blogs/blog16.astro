@@ -66,6 +66,8 @@ const blogActual =
   "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular";
 
 const id = 16;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -73,39 +75,71 @@ const id = 16;
 >
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      ¿Dolor de Rodilla?  La Artroscopia Puede Ser Tu Mejor Aliada
+      {
+        isEnglish
+          ? "Knee Pain? Arthroscopy Could Be Your Best Ally"
+          : "¿Dolor de Rodilla? La Artroscopia Puede Ser Tu Mejor Aliada"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      La rodilla es una de las articulaciones más complejas, ya que tiene muchas
-      estructuras que necesitan trabajar en armonía para estar balanceadas y
-      hagan su trabajo de una manera eficiente.
+      {
+        isEnglish
+          ? "The knee is one of the most complex joints, as it has many structures that need to work in harmony to stay balanced and function efficiently."
+          : "La rodilla es una de las articulaciones más complejas, ya que tiene muchas estructuras que necesitan trabajar en armonía para estar balanceadas y hagan su trabajo de una manera eficiente."
+      }
       <br />
       <br />
-      Los músculos, ligamentos y tendones van a funcionar de una manera sincrónica
-      para que cada rango que des se mantenga balanceados y en su lugar. Cuando hay
-      un desbalance o desgaste de estas estructuras, puede haber ciertas molestias
-      debido a que se sobrecargan estas partes.
+      {
+        isEnglish
+          ? "Muscles, ligaments and tendons function synchronously so every movement remains balanced and in place. When there's imbalance or wear in these structures, certain discomforts may appear due to overloading these parts."
+          : "Los músculos, ligamentos y tendones van a funcionar de una manera sincrónica para que cada rango que des se mantenga balanceados y en su lugar. Cuando hay un desbalance o desgaste de estas estructuras, puede haber ciertas molestias debido a que se sobrecargan estas partes."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-4 font-semibold">
-      ¿Qué ocurre en una Rodilla con desgaste?
+      {
+        isEnglish
+          ? "What happens in a knee with wear?"
+          : "¿Qué ocurre en una Rodilla con desgaste?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-4">
-      El cartílago se desgasta y los huesos pueden rozar entre sí, volviéndose
-      ásperos e irregulares. Esto puede deberse a:
+      {
+        isEnglish
+          ? "The cartilage wears down and bones may rub against each other, becoming rough and irregular. This may be due to:"
+          : "El cartílago se desgasta y los huesos pueden rozar entre sí, volviéndose ásperos e irregulares. Esto puede deberse a:"
+      }
     </h3>
     <ol class="text-xl list-decimal px-6 space-y-2 mb-8">
-      <li>Artrosis degenerativa (desgaste por edad o uso excesivo).</li>
-      <li>Traumatismos (fracturas o lesiones deportivas).</li>
-      <li>Enfermedades inflamatorias (artritis reumatoide, gota).</li>
+      <li>
+        {
+          isEnglish
+            ? "Degenerative osteoarthritis (wear from age or overuse)"
+            : "Artrosis degenerativa (desgaste por edad o uso excesivo)"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Trauma (fractures or sports injuries)"
+            : "Traumatismos (fracturas o lesiones deportivas)"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Inflammatory diseases (rheumatoid arthritis, gout)"
+            : "Enfermedades inflamatorias (artritis reumatoide, gota)"
+        }
+      </li>
     </ol>
   </Observer>
 
@@ -113,58 +147,73 @@ const id = 16;
     <div class="flex justify-center items-center">
       <Image
         src={Image1}
-        alt="Imagen de fractura de tibia y peroné"
+        alt={isEnglish
+          ? "Image of knee anatomy showing wear"
+          : "Imagen de fractura de tibia y peroné"}
         class="object-cover mb-16"
       />
     </div>
   </ObserverImage>
 
   <Observer client:visible>
-    <h2 class="text-white text-4xl mb-8 font-semibold">Síntomas comunes:</h2>
+    <h2 class="text-white text-4xl mb-8 font-semibold">
+      {isEnglish ? "Common symptoms:" : "Síntomas comunes:"}
+    </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Cuando la superficie articular se deteriora, se hace irregular y empieza a
-      manifestarse con dolor, disminución de la movilidad y dificultad para
-      caminar. Pueden también aparecer derrames o bloqueos articulares que
-      incrementan todavía más el dolor.
+      {
+        isEnglish
+          ? "When the articular surface deteriorates, it becomes irregular and begins to manifest with pain, decreased mobility and difficulty walking. Joint effusions or blockages may also appear that further increase pain."
+          : "Cuando la superficie articular se deteriora, se hace irregular y empieza a manifestarse con dolor, disminución de la movilidad y dificultad para caminar. Pueden también aparecer derrames o bloqueos articulares que incrementan todavía más el dolor."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-8 font-semibold">
-      Una solución Mínimamente Invasiva y breve ¿En qué consiste?
+      {
+        isEnglish
+          ? "A minimally invasive and brief solution - What does it consist of?"
+          : "Una solución Mínimamente Invasiva y breve ¿En qué consiste?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Es un procedimiento quirúrgico mínimamente invasivo que permite abordar,
-      mediante pequeñas incisiones llamadas portales y un artroscopio, que es
-      una camarita milimétrica, que permite reparar daños internos sin necesidad
-      de hacer una cirugía abierta, lo que la hace ser una técnica bastante
-      breve.
+      {
+        isEnglish
+          ? "It's a minimally invasive surgical procedure that allows addressing internal damage through small incisions called portals and an arthroscope, which is a millimeter-sized camera, without needing open surgery, making it a quite brief technique."
+          : "Es un procedimiento quirúrgico mínimamente invasivo que permite abordar, mediante pequeñas incisiones llamadas portales y un artroscopio, que es una camarita milimétrica, que permite reparar daños internos sin necesidad de hacer una cirugía abierta, lo que la hace ser una técnica bastante breve."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-8 font-semibold">
-      Proceso quirúrgico de una artroscopia de rodilla
+      {
+        isEnglish
+          ? "Surgical process of knee arthroscopy"
+          : "Proceso quirúrgico de una artroscopia de rodilla"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      1. Durante esta operación, el paciente usualmente se coloca boca arriba en
-      la mesa de intervención con la rodilla flexionada o semiflexionada, con un
-      manguito de isquemia alrededor del muslo para compresión y así reducir el
-      sangrado.
+      1. {
+        isEnglish
+          ? "During this operation, the patient is usually placed supine on the operating table with the knee flexed or semi-flexed, with a tourniquet around the thigh for compression to reduce bleeding."
+          : "Durante esta operación, el paciente usualmente se coloca boca arriba en la mesa de intervención con la rodilla flexionada o semiflexionada, con un manguito de isquemia alrededor del muslo para compresión y así reducir el sangrado."
+      }
       <br />
       <br />
-      2. Se realizan de dos a 3 incisiones por las que se introduce el artroscopio
-      y los instrumentos especializados, lo que le permite examinar la articulación
-      con gran detalle. Ahí se repara la zona afectada, después se drena el líquido
-      articular, se suturan los portales y se aplica un vendaje estéril.
+      2. {
+        isEnglish
+          ? "Two to three incisions are made through which the arthroscope and specialized instruments are introduced, allowing detailed examination of the joint. The affected area is repaired, then joint fluid is drained, portals are sutured and a sterile dressing is applied."
+          : "Se realizan de dos a 3 incisiones por las que se introduce el artroscopio y los instrumentos especializados, lo que le permite examinar la articulación con gran detalle. Ahí se repara la zona afectada, después se drena el líquido articular, se suturan los portales y se aplica un vendaje estéril."
+      }
     </h3>
   </Observer>
 
@@ -172,8 +221,12 @@ const id = 16;
     <div class="flex justify-center items-center">
       <Image
         src={Image2}
-        alt="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
-        title="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        alt={isEnglish
+          ? "DR. Ricardo Monge explains knee arthroscopy procedure"
+          : "El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio"}
+        title={isEnglish
+          ? "DR. Ricardo Monge explains knee arthroscopy procedure"
+          : "El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio"}
         class="fade-up object-cover mb-16"
       />
     </div>
@@ -181,127 +234,191 @@ const id = 16;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-8 font-semibold">
-      Candidatos para artroscopia
+      {isEnglish ? "Candidates for arthroscopy" : "Candidatos para artroscopia"}
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-8">
-      Cada caso tiene sus particularidades, sin embargo, se pueden tratar con
-      artroscopia:
+      {
+        isEnglish
+          ? "Each case has its particularities, however, the following can be treated with arthroscopy:"
+          : "Cada caso tiene sus particularidades, sin embargo, se pueden tratar con artroscopia:"
+      }
     </h3>
     <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
-      <li>Rotura de meniscos (lesión común en deportistas).</li>
       <li>
-        Daño en el cartílago (limpieza o microfracturas para estimular
-        regeneración).
+        {
+          isEnglish
+            ? "Meniscus tears (common injury in athletes)"
+            : "Rotura de meniscos (lesión común en deportistas)"
+        }
       </li>
       <li>
-        Reconstrucción de ligamentos cruzados (tras roturas por giros bruscos).
+        {
+          isEnglish
+            ? "Cartilage damage (cleaning or microfractures to stimulate regeneration)"
+            : "Daño en el cartílago (limpieza o microfracturas para estimular regeneración)"
+        }
       </li>
       <li>
-        Extracción de cuerpos libres (fragmentos de hueso o cartílago que flotan
-        en la articulación).
+        {
+          isEnglish
+            ? "Cruciate ligament reconstruction (after tears from sudden twists)"
+            : "Reconstrucción de ligamentos cruzados (tras roturas por giros bruscos)"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Removal of loose bodies (bone or cartilage fragments floating in the joint)"
+            : "Extracción de cuerpos libres (fragmentos de hueso o cartílago que flotan en la articulación)"
+        }
       </li>
     </ol>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-8 font-semibold">
-      Recuperación Postoperatoria y Rehabilitación
+      {
+        isEnglish
+          ? "Postoperative Recovery and Rehabilitation"
+          : "Recuperación Postoperatoria y Rehabilitación"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
-    <h3 class="text-xl mb-8">Primeras 24-48 horas:</h3>
+    <h3 class="text-xl mb-8">
+      {isEnglish ? "First 24-48 hours:" : "Primeras 24-48 horas:"}
+    </h3>
     <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
-      <li>Carga parcial con ayuda de muletas (evitar apoyo total).</li>
-      <li>Uso de hielo para reducir inflamación.</li>
-      <li>Medicación analgésica y antiinflamatoria.</li>
+      <li>
+        {
+          isEnglish
+            ? "Partial weight-bearing with crutches (avoid full support)"
+            : "Carga parcial con ayuda de muletas (evitar apoyo total)"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Ice use to reduce inflammation"
+            : "Uso de hielo para reducir inflamación"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Analgesic and anti-inflammatory medication"
+            : "Medicación analgésica y antiinflamatoria"
+        }
+      </li>
     </ol>
-    <h3 class="text-xl mb-8">Primeras Semanas:</h3>
+    <h3 class="text-xl mb-8">
+      {isEnglish ? "First Weeks:" : "Primeras Semanas:"}
+    </h3>
     <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
-      <li>Retiro del vendaje y cuidados de las heridas.</li>
-      <li>Ejercicios suaves de movilización (flexión/extensión).</li>
-      <li>Fisioterapia guiada para recuperar fuerza y flexibilidad.</li>
+      <li>
+        {
+          isEnglish
+            ? "Dressing removal and wound care"
+            : "Retiro del vendaje y cuidados de las heridas"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Gentle mobilization exercises (flexion/extension)"
+            : "Ejercicios suaves de movilización (flexión/extensión)"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Guided physiotherapy to regain strength and flexibility"
+            : "Fisioterapia guiada para recuperar fuerza y flexibilidad"
+        }
+      </li>
     </ol>
   </Observer>
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-8 font-semibold">
-      Claves para una Buena Recuperación:
+      {
+        isEnglish
+          ? "Keys for Good Recovery:"
+          : "Claves para una Buena Recuperación:"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
       <li>
-        Seguir las indicaciones del fisioterapeuta: Evita cicatrices fibrosas y
-        rigidez.
+        {
+          isEnglish
+            ? "Follow physiotherapist's instructions: Prevents fibrous scars and stiffness"
+            : "Seguir las indicaciones del fisioterapeuta: Evita cicatrices fibrosas y rigidez"
+        }
       </li>
       <li>
-        La inflamación es una respuesta universal al daño del tejido
-        independientemente que este se haya corregido o arreglado, si continua y
-        genera dolorr es importante acudir a valoración
+        {
+          isEnglish
+            ? "Inflammation is a universal response to tissue damage regardless of whether it has been corrected or repaired. If it continues and causes pain, it's important to seek evaluation"
+            : "La inflamación es una respuesta universal al daño del tejido independientemente que este se haya corregido o arreglado, si continua y genera dolor es importante acudir a valoración"
+        }
       </li>
       <li>
-        Paciencia: La recuperación total puede tardar semanas o meses,
-        dependiendo de la lesión.
+        {
+          isEnglish
+            ? "Patience: Complete recovery may take weeks or months, depending on the injury"
+            : "Paciencia: La recuperación total puede tardar semanas o meses, dependiendo de la lesión"
+        }
       </li>
     </ol>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-2xl mb-4">
-      El <strong class="text-white font-bold">éxito</strong> no solo depende de la
-      cirugía, sino de un equipo multidisciplinario y un plan de <strong
-        class="text-white font-bold">rehabilitación personalizado</strong
-      >. Por eso, elegir a un <strong class="text-white font-bold"
-        >especialista con experiencia</strong
-      >, es clave.
+      {
+        isEnglish
+          ? "The <strong class='text-white font-bold'>success</strong> depends not only on surgery, but on a multidisciplinary team and a <strong class='text-white font-bold'>personalized rehabilitation</strong> plan. That's why choosing an <strong class='text-white font-bold'>experienced specialist</strong> is key."
+          : "El <strong class='text-white font-bold'>éxito</strong> no solo depende de la cirugía, sino de un equipo multidisciplinario y un plan de <strong class='text-white font-bold'>rehabilitación personalizado</strong>. Por eso, elegir a un <strong class='text-white font-bold'>especialista con experiencia</strong>, es clave."
+      }
       <br />
       <br />
 
-      Si buscas un <strong class="text-white font-bold"
-        >cirujano traumatólogo ortopedista</strong
-      > especializado en
-      <strong class="text-white font-bold">artroscopia de rodilla</strong> en Tijuana,
-      estás a un paso de recuperar tu
-      <strong class="text-white font-bold">movilidad</strong> y <strong
-        class="text-white font-bold">calidad de vida</strong
-      >.
+      {
+        isEnglish
+          ? "If you're looking for an <strong class='text-white font-bold'>orthopedic trauma surgeon</strong> specialized in <strong class='text-white font-bold'>knee arthroscopy</strong> in Tijuana, you're one step away from recovering your <strong class='text-white font-bold'>mobility</strong> and <strong class='text-white font-bold'>quality of life</strong>."
+          : "Si buscas un <strong class='text-white font-bold'>cirujano traumatólogo ortopedista</strong> especializado en <strong class='text-white font-bold'>artroscopia de rodilla</strong> en Tijuana, estás a un paso de recuperar tu <strong class='text-white font-bold'>movilidad</strong> y <strong class='text-white font-bold'>calidad de vida</strong>."
+      }
       <br />
       <br />
 
-      La <strong class="text-white font-bold">artroscopia</strong> es la solución
-      más avanzada y <strong class="text-white font-bold"
-        >mínimamente invasiva</strong
-      > para tratar <strong class="text-white font-bold"
-        >lesiones de rodilla</strong
-      >, con menor tiempo en el quirófano, <strong class="text-white font-bold"
-        >recuperación más rápida</strong
-      >.
+      {
+        isEnglish
+          ? "<strong class='text-white font-bold'>Arthroscopy</strong> is the most advanced and <strong class='text-white font-bold'>minimally invasive</strong> solution to treat <strong class='text-white font-bold'>knee injuries</strong>, with less time in the operating room and <strong class='text-white font-bold'>faster recovery</strong>."
+          : "La <strong class='text-white font-bold'>artroscopia</strong> es la solución más avanzada y <strong class='text-white font-bold'>mínimamente invasiva</strong> para tratar <strong class='text-white font-bold'>lesiones de rodilla</strong>, con menor tiempo en el quirófano, <strong class='text-white font-bold'>recuperación más rápida</strong>."
+      }
       <br />
       <br />
 
-      Si te gustaría agendar una <strong class="text-white font-bold"
-        >consulta de valoración</strong
-      > en Tijuana, te invito a mi consultorio <strong
-        class="text-white font-bold">Torre Norte 2</strong
-      >, a 10 minutos de la línea <strong class="text-white font-bold"
-        >San Ysidro- Tijuana</strong
-      >.
+      {
+        isEnglish
+          ? "If you'd like to schedule an <strong class='text-white font-bold'>evaluation consultation</strong> in Tijuana, I invite you to my office at <strong class='text-white font-bold'>Torre Norte 2</strong>, 10 minutes from the <strong class='text-white font-bold'>San Ysidro-Tijuana</strong> border."
+          : "Si te gustaría agendar una <strong class='text-white font-bold'>consulta de valoración</strong> en Tijuana, te invito a mi consultorio <strong class='text-white font-bold'>Torre Norte 2</strong>, a 10 minutos de la línea <strong class='text-white font-bold'>San Ysidro- Tijuana</strong>."
+      }
       <br />
       <br />
 
-      Será un placer poder acompañarte hacia una <strong
-        class="text-white font-bold">rodilla sin dolor</strong
-      > y una
-      <strong class="text-white font-bold"
-        >independencia hacia tu movilidad</strong
-      >.
+      {
+        isEnglish
+          ? "It would be a pleasure to accompany you toward a <strong class='text-white font-bold'>pain-free knee</strong> and <strong class='text-white font-bold'>independence in your mobility</strong>."
+          : "Será un placer poder acompañarte hacia una <strong class='text-white font-bold'>rodilla sin dolor</strong> y una <strong class='text-white font-bold'>independencia hacia tu movilidad</strong>."
+      }
     </h3>
   </Observer>
 </article>
-
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
   <!-- <Comments
     client:visible

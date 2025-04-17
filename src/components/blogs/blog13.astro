@@ -56,6 +56,8 @@ const blogsRutas = [
 const blogActual = "fractura-de-humero-proximal-en-adultos-mayores";
 
 const id = 13;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -63,44 +65,55 @@ const id = 13;
 >
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-8 font-semibold">
-      Fractura de Húmero proximal en Adultos mayores: Tratamientos y Tiempos de
-      Recuperación Explicados
+      {
+        isEnglish
+          ? "Proximal Humerus Fracture in Older Adults: Treatments and Recovery Times Explained"
+          : "Fractura de Húmero proximal en Adultos mayores: Tratamientos y Tiempos de Recuperación Explicados"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Te explico brevemente que es el húmero, es el hueso más largo del brazo,
-      une la articulación del hombro con la del codo. En él se encuentran e
-      interceptan varios músculos por ejemplo bíceps, tríceps y el deltoides.
+      {
+        isEnglish
+          ? "Let me briefly explain what the humerus is - it's the longest bone in the arm, connecting the shoulder joint to the elbow. Several muscles intersect here, including the biceps, triceps, and deltoid."
+          : "Te explico brevemente que es el húmero, es el hueso más largo del brazo, une la articulación del hombro con la del codo. En él se encuentran e interceptan varios músculos por ejemplo bíceps, tríceps y el deltoides."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      ¿Sufriste una caída sobre tu brazo extendido y fracturaste el húmero?
+      {
+        isEnglish
+          ? "Did you fall on your outstretched arm and fracture your humerus?"
+          : "¿Sufriste una caída sobre tu brazo extendido y fracturaste el húmero?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Las fracturas del húmero proximal son la tercera causa de fracturas cerca
-      del 75% se da en adultos mayores de 65 años con hueso osteoporótico
-      después de una caída. Una fractura de húmero puede ser dolorosa y limitar
-      considerablemente la movilidad del brazo.
+      {
+        isEnglish
+          ? "Proximal humerus fractures are the third most common fractures, with about 75% occurring in adults over 65 with osteoporotic bone after a fall. A humerus fracture can be painful and significantly limit arm mobility."
+          : "Las fracturas del húmero proximal son la tercera causa de fracturas cerca del 75% se da en adultos mayores de 65 años con hueso osteoporótico después de una caída. Una fractura de húmero puede ser dolorosa y limitar considerablemente la movilidad del brazo."
+      }
       <br />
       <br />
-      Además de la edad y la osteoporosis, otros factores de riesgo incluyen deficiencia
-      de vitamina D, antecedentes de caídas previas o el uso prolongado de ciertos
-      medicamentos como corticoides que pueden ocasionar cambios degenerativos en
-      las articulaciones haciéndolas más rígidas, generando un debilitamiento.
-
+      {
+        isEnglish
+          ? "Besides age and osteoporosis, other risk factors include vitamin D deficiency, history of previous falls, or prolonged use of certain medications like corticosteroids that can cause degenerative changes in joints, making them stiffer and weaker."
+          : "Además de la edad y la osteoporosis, otros factores de riesgo incluyen deficiencia de vitamina D, antecedentes de caídas previas o el uso prolongado de ciertos medicamentos como corticoides que pueden ocasionar cambios degenerativos en las articulaciones haciéndolas más rígidas, generando un debilitamiento."
+      }
       <br />
       <br />
-
-      Además, las articulaciones pueden experimentar cambios degenerativos que
-      reducen la flexibilidad y aumentan la rigidez, favoreciendo la aparición
-      de problemas articulares y haciendo más probables las caídas.
+      {
+        isEnglish
+          ? "Additionally, joints can undergo degenerative changes that reduce flexibility and increase stiffness, promoting joint problems and making falls more likely."
+          : "Además, las articulaciones pueden experimentar cambios degenerativos que reducen la flexibilidad y aumentan la rigidez, favoreciendo la aparición de problemas articulares y haciendo más probables las caídas."
+      }
       <br />
       <br />
     </h3>
@@ -110,7 +123,9 @@ const id = 13;
     <div class="flex justify-center items-center">
       <Image
         src={Image1}
-        alt="Imagen de fractura de tibia y peroné"
+        alt={isEnglish
+          ? "Image of proximal humerus fracture"
+          : "Imagen de fractura de tibia y peroné"}
         class="object-cover mb-16"
       />
     </div>
@@ -118,59 +133,99 @@ const id = 13;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-4 font-semibold">
-      ¿Como se fractura el húmero proximal?
+      {
+        isEnglish
+          ? "How does proximal humerus fracture occur?"
+          : "¿Como se fractura el húmero proximal?"
+      }
     </h2>
   </Observer>
 
-  <!-- <Observer client:visible>
-    <h2 class="text-white text-4xl mb-4 font-semibold">Lumbalgia aguda</h2>
-  </Observer> -->
-
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Es casi instintivo al caer extender o como dicen, meter los brazos, lo que
-      puede generar esta fractura. Las caídas no necesariamente deben ser
-      aparatosas o de alto impacto para que se pueda lesionar y fracturar el
-      humero; con la edad y la pérdida ósea, se puede ser más propenso.
+      {
+        isEnglish
+          ? "When falling, it's almost instinctive to extend or 'put out' your arms, which can cause this fracture. Falls don't necessarily need to be dramatic or high-impact to injure and fracture the humerus; with age and bone loss, one becomes more prone."
+          : "Es casi instintivo al caer extender o como dicen, meter los brazos, lo que puede generar esta fractura. Las caídas no necesariamente deben ser aparatosas o de alto impacto para que se pueda lesionar y fracturar el humero; con la edad y la pérdida ósea, se puede ser más propenso."
+      }
       <br />
       <br />
-      Edad, salud ósea, alimentación y complejidad de la caída juegan un papel determinante
-      para llevar a cabo un tratamiento específico. A menudo pacientes presentan
-      osteoporosis, desgaste considerable, diabetes que puede colocarlos en una situación
-      vulnerable en el proceso de sanación de su fracturar.
+      {
+        isEnglish
+          ? "Age, bone health, nutrition, and complexity of the fall play a determining role in choosing a specific treatment. Often patients present with osteoporosis, significant wear, or diabetes which can place them in a vulnerable situation during the fracture healing process."
+          : "Edad, salud ósea, alimentación y complejidad de la caída juegan un papel determinante para llevar a cabo un tratamiento específico. A menudo pacientes presentan osteoporosis, desgaste considerable, diabetes que puede colocarlos en una situación vulnerable en el proceso de sanación de su fracturar."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Tipos de fracturas en el húmero según la clasificación de Neer
+      {
+        isEnglish
+          ? "Types of humerus fractures according to Neer classification"
+          : "Tipos de fracturas en el húmero según la clasificación de Neer"
+      }
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-8">
-      La clasificación de Neer divide las fracturas del húmero proximal en
-      cuatro tipos, según su complejidad:
+      {
+        isEnglish
+          ? "The Neer classification divides proximal humerus fractures into four types, according to their complexity:"
+          : "La clasificación de Neer divide las fracturas del húmero proximal en cuatro tipos, según su complejidad:"
+      }
     </h3>
 
     <ul class="text-xl list-decimal px-6 space-y-2">
       <li>
-        <strong class="text-white">Fractura sin desplazamiento:</strong>
-        El hueso se rompe, pero las partes quedan en su lugar.
+        <strong class="text-white"
+          >{
+            isEnglish
+              ? "Non-displaced fracture:"
+              : "Fractura sin desplazamiento:"
+          }</strong
+        >
+        {
+          isEnglish
+            ? "The bone breaks but the parts remain in place."
+            : "El hueso se rompe, pero las partes quedan en su lugar."
+        }
       </li>
       <li>
-        <strong class="text-white"> Fractura en dos partes: </strong>
-        Un fragmento del hueso se mueve, generalmente en la zona del cuello del húmero
-        o en las tuberosidades (partes sobresalientes del hueso).
+        <strong class="text-white"
+          >{
+            isEnglish ? "Two-part fracture:" : "Fractura en dos partes:"
+          }</strong
+        >
+        {
+          isEnglish
+            ? "One fragment of the bone moves, usually in the area of the humeral neck or the tuberosities (protruding parts of the bone)."
+            : "Un fragmento del hueso se mueve, generalmente en la zona del cuello del húmero o en las tuberosidades (partes sobresalientes del hueso)."
+        }
       </li>
       <li>
-        <strong class="text-white"> Fractura en tres partes: </strong>
-        Dos fragmentos del hueso se desplazan, lo que puede generar una deformidad
-        en el hombro.
+        <strong class="text-white"
+          >{
+            isEnglish ? "Three-part fracture:" : "Fractura en tres partes:"
+          }</strong
+        >
+        {
+          isEnglish
+            ? "Two bone fragments are displaced, which can cause shoulder deformity."
+            : "Dos fragmentos del hueso se desplazan, lo que puede generar una deformidad en el hombro."
+        }
       </li>
       <li>
-        <strong class="text-white"> Fractura en cuatro partes: </strong>
-        Es la más grave, ya que se desplazan todas las partes del hueso, aumentando
-        el riesgo de complicaciones como la falta de circulación en el área afectada.
+        <strong class="text-white"
+          >{
+            isEnglish ? "Four-part fracture:" : "Fractura en cuatro partes:"
+          }</strong
+        >
+        {
+          isEnglish
+            ? "The most severe, as all parts of the bone are displaced, increasing the risk of complications such as lack of circulation in the affected area."
+            : "Es la más grave, ya que se desplazan todas las partes del hueso, aumentando el riesgo de complicaciones como la falta de circulación en el área afectada."
+        }
       </li>
     </ul>
     <br />
@@ -179,16 +234,20 @@ const id = 13;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Tratamiento conservador y quirúrgico
+      {
+        isEnglish
+          ? "Conservative and surgical treatment"
+          : "Tratamiento conservador y quirúrgico"
+      }
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      El tratamiento dependerá del tipo de fractura. Para fracturas mínimamente
-      desplazadas, se recomienda inmovilización. En fracturas más complejas,
-      puede ser necesaria una cirugía, como la osteosíntesis con placas y
-      tornillos, el uso de clavos intramedulares o en casos más severos, una
-      artroplastia de hombro.
+      {
+        isEnglish
+          ? "Treatment will depend on the type of fracture. For minimally displaced fractures, immobilization is recommended. In more complex fractures, surgery may be necessary, such as osteosynthesis with plates and screws, the use of intramedullary nails, or in more severe cases, a shoulder arthroplasty."
+          : "El tratamiento dependerá del tipo de fractura. Para fracturas mínimamente desplazadas, se recomienda inmovilización. En fracturas más complejas, puede ser necesaria una cirugía, como la osteosíntesis con placas y tornillos, el uso de clavos intramedulares o en casos más severos, una artroplastia de hombro."
+      }
     </h3>
   </Observer>
 
@@ -196,8 +255,12 @@ const id = 13;
     <div class="flex justify-center items-center">
       <Image
         src={Image2}
-        alt="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
-        title="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        alt={isEnglish
+          ? "DR. Ricardo Monge simply explains proximal humerus fractures"
+          : "El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio"}
+        title={isEnglish
+          ? "DR. Ricardo Monge simply explains proximal humerus fractures"
+          : "El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio"}
         class="fade-up object-cover mb-16"
       />
     </div>
@@ -205,59 +268,127 @@ const id = 13;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      ¿Cómo es el día a día con un tratamiento conservador?
+      {
+        isEnglish
+          ? "What is daily life like with conservative treatment?"
+          : "¿Cómo es el día a día con un tratamiento conservador?"
+      }
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Durante la primera semana, el dolor y la incomodidad son inevitables. Es
-      fundamental mantener reposo relativo, pero asegurando el movimiento de la
-      mano, dedos, muñeca y codo para reducir inflamación y evitar rigidez.
+      {
+        isEnglish
+          ? "During the first week, pain and discomfort are inevitable. It's essential to maintain relative rest but ensuring movement of the hand, fingers, wrist and elbow to reduce inflammation and prevent stiffness."
+          : "Durante la primera semana, el dolor y la incomodidad son inevitables. Es fundamental mantener reposo relativo, pero asegurando el movimiento de la mano, dedos, muñeca y codo para reducir inflamación y evitar rigidez."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Fases de recuperación
+      {isEnglish ? "Recovery phases" : "Fases de recuperación"}
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
       <ul class="text-xl list-decimal px-6 space-y-2">
-        <li>Control del dolor.</li>
+        <li>{isEnglish ? "Pain control" : "Control del dolor"}</li>
         <li>
-          Aprendizaje de movimientos para actividades cotidianas (vestirse,
-          asearse, dormir con inmovilización).
+          {
+            isEnglish
+              ? "Learning movements for daily activities (dressing, grooming, sleeping with immobilization)."
+              : "Aprendizaje de movimientos para actividades cotidianas (vestirse, asearse, dormir con inmovilización)."
+          }
         </li>
-        <li>Movimientos pasivos y ejercicios periescapulares.</li>
-        <li>Movilización activa de muñeca y dedos.</li>
-        <li>Ejercicios isométricos e isotónicos para mantener fuerza.</li>
         <li>
-          <strong class="text-white">Fase II (2-6 semanas):</strong>
+          {
+            isEnglish
+              ? "Passive movements and periscapular exercises"
+              : "Movimientos pasivos y ejercicios periescapulares"
+          }
+        </li>
+        <li>
+          {
+            isEnglish
+              ? "Active mobilization of wrist and fingers"
+              : "Movilización activa de muñeca y dedos"
+          }
+        </li>
+        <li>
+          {
+            isEnglish
+              ? "Isometric and isotonic exercises to maintain strength"
+              : "Ejercicios isométricos e isotónicos para mantener fuerza"
+          }
+        </li>
+        <li>
+          <strong class="text-white"
+            >{
+              isEnglish ? "Phase II (2-6 weeks):" : "Fase II (2-6 semanas):"
+            }</strong
+          >
         </li>
         <ul class="text-xl list-disc px-6 space-y-2">
           <li>
-            Si no hay riesgo de desplazamiento, se puede reducir el uso de la
-            inmovilización y comenzar ejercicios de movilidad.
+            {
+              isEnglish
+                ? "If there's no risk of displacement, immobilization use can be reduced and mobility exercises begun."
+                : "Si no hay riesgo de desplazamiento, se puede reducir el uso de la inmovilización y comenzar ejercicios de movilidad."
+            }
           </li>
         </ul>
         <li>
-          <strong class="text-white"> Fase III (6-12 semanas): </strong>
+          <strong class="text-white"
+            >{
+              isEnglish ? "Phase III (6-12 weeks):" : "Fase III (6-12 semanas):"
+            }</strong
+          >
         </li>
         <ul class="text-xl list-disc px-6 space-y-2">
-          <li>Se busca recuperar el máximo rango de movilidad activa.</li>
-          <li>Fortalecimiento de la musculatura del hombro.</li>
-          <li>Retorno progresivo a actividades diarias y deportivas.</li>
+          <li>
+            {
+              isEnglish
+                ? "Aim to recover maximum active range of motion"
+                : "Se busca recuperar el máximo rango de movilidad activa"
+            }
+          </li>
+          <li>
+            {
+              isEnglish
+                ? "Strengthening shoulder muscles"
+                : "Fortalecimiento de la musculatura del hombro"
+            }
+          </li>
+          <li>
+            {
+              isEnglish
+                ? "Gradual return to daily and sports activities"
+                : "Retorno progresivo a actividades diarias y deportivas"
+            }
+          </li>
         </ul>
         <li>
-          <strong class="text-white"> Fase IV (3-6 meses): </strong>
+          <strong class="text-white"
+            >{
+              isEnglish ? "Phase IV (3-6 months):" : "Fase IV (3-6 meses):"
+            }</strong
+          >
         </li>
         <ul class="text-xl list-disc px-6 space-y-2">
-          <li>Maximizar la fuerza y el rango articular con fisioterapia.</li>
           <li>
-            Incorporación progresiva de deportes como natación. Deportes de
-            contacto como baloncesto o fútbol dependerán del grado de
-            consolidación ósea.
+            {
+              isEnglish
+                ? "Maximize strength and joint range with physiotherapy"
+                : "Maximizar la fuerza y el rango articular con fisioterapia"
+            }
+          </li>
+          <li>
+            {
+              isEnglish
+                ? "Gradual incorporation of sports like swimming. Contact sports like basketball or soccer will depend on the degree of bone consolidation."
+                : "Incorporación progresiva de deportes como natación. Deportes de contacto como baloncesto o fútbol dependerán del grado de consolidación ósea."
+            }
           </li>
         </ul>
       </ul>
@@ -266,22 +397,41 @@ const id = 13;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Prevención de fracturas de húmero en adultos mayores
+      {
+        isEnglish
+          ? "Prevention of humerus fractures in older adults"
+          : "Prevención de fracturas de húmero en adultos mayores"
+      }
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
       <h3 class="text-xl mb-16">
-        <strong class="text-white text-2xl">Hábitos</strong>
+        <strong class="text-white text-2xl"
+          >{isEnglish ? "Habits" : "Hábitos"}</strong
+        >
         <br /><br />
         <ul class="text-xl list-disc px-6 space-y-2">
-          <li>Mantener una alimentación rica en calcio y vitamina D.</li>
-          <li>Realizar ejercicios de fortalecimiento óseo y equilibrio.</li>
           <li>
-            Acudir a una consulta de valoración con un especialista, no es
-            necesario que algo duela, se trata de prevención que permite conocer
-            sobre la densidad y calidad ósea del paciente y si este requiere
-            suplementos para mejorar su salud ósea y articular.
+            {
+              isEnglish
+                ? "Maintain a diet rich in calcium and vitamin D"
+                : "Mantener una alimentación rica en calcio y vitamina D"
+            }
+          </li>
+          <li>
+            {
+              isEnglish
+                ? "Perform bone strengthening and balance exercises"
+                : "Realizar ejercicios de fortalecimiento óseo y equilibrio"
+            }
+          </li>
+          <li>
+            {
+              isEnglish
+                ? "Attend an evaluation consultation with a specialist - it's not necessary to wait for pain, this is about prevention that allows knowing about the patient's bone density and quality and whether they require supplements to improve their bone and joint health."
+                : "Acudir a una consulta de valoración con un especialista, no es necesario que algo duela, se trata de prevención que permite conocer sobre la densidad y calidad ósea del paciente y si este requiere suplementos para mejorar su salud ósea y articular."
+            }
           </li>
         </ul>
       </h3>
@@ -291,22 +441,44 @@ const id = 13;
   <Observer client:visible>
     <h3 class="text-xl mb-16">
       <h3 class="text-xl mb-16">
-        <strong class="text-2xl text-white">Espacios </strong>
+        <strong class="text-2xl text-white"
+          >{isEnglish ? "Spaces" : "Espacios"}</strong
+        >
         <br /><br />
-        La gran mayoría de las caídas y fracturas óseas se producen en el domicilio,
-        por lo que es ahí donde se deben adoptar las principales medidas preventivas:
+        {
+          isEnglish
+            ? "The vast majority of falls and bone fractures occur at home, which is where the main preventive measures should be taken:"
+            : "La gran mayoría de las caídas y fracturas óseas se producen en el domicilio, por lo que es ahí donde se deben adoptar las principales medidas preventivas:"
+        }
         <br /><br />
         <ul class="text-xl list-disc px-6 space-y-2">
-          <li>Quitar las alfombras para evitar tropezar con los bordes.</li>
-          <li>Acondicionar baños, regaderas.</li>
           <li>
-            Reubicar objetos en zonas altas para no tener que usar algún banco o
-            algo que pueda resbalarse y generar una caída.
+            {
+              isEnglish
+                ? "Remove rugs to avoid tripping on edges"
+                : "Quitar las alfombras para evitar tropezar con los bordes"
+            }
           </li>
           <li>
-            Si hay escaleras, bajarlas y subirlas apoyándose en el pasamanos,
-            iluminarlas correctamente y asegurar el apoyo correcto del pie en
-            cada escalón.
+            {
+              isEnglish
+                ? "Adapt bathrooms, showers"
+                : "Acondicionar baños, regaderas"
+            }
+          </li>
+          <li>
+            {
+              isEnglish
+                ? "Relocate objects in high areas so you don't need to use a stool or something that could slip and cause a fall."
+                : "Reubicar objetos en zonas altas para no tener que usar algún banco o algo que pueda resbalarse y generar una caída."
+            }
+          </li>
+          <li>
+            {
+              isEnglish
+                ? "If there are stairs, go up and down holding onto the handrail, illuminate them properly and ensure proper foot support on each step."
+                : "Si hay escaleras, bajarlas y subirlas apoyándose en el pasamanos, iluminarlas correctamente y asegurar el apoyo correcto del pie en cada escalón."
+            }
           </li>
         </ul>
       </h3>
@@ -315,37 +487,55 @@ const id = 13;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Ejercicios en casa recomendados para la rehabilitación de húmero
+      {
+        isEnglish
+          ? "Recommended home exercises for humerus rehabilitation"
+          : "Ejercicios en casa recomendados para la rehabilitación de húmero"
+      }
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      A continuación, te comparto tres ejercicios sencillos que puedes realizar
-      en casa para mejorar la movilidad de tu hombro después de la
-      inmovilización. Es importante realizar 10 repeticiones de cada uno y
-      complementarlo con el protocolo de rehabilitación de tu fisioterapeuta.
-
+      {
+        isEnglish
+          ? "Below I share three simple exercises you can do at home to improve your shoulder mobility after immobilization. It's important to do 10 repetitions of each and complement them with your physiotherapist's rehabilitation protocol."
+          : "A continuación, te comparto tres ejercicios sencillos que puedes realizar en casa para mejorar la movilidad de tu hombro después de la inmovilización. Es importante realizar 10 repeticiones de cada uno y complementarlo con el protocolo de rehabilitación de tu fisioterapeuta."
+      }
       <br />
       <br />
 
-      <strong class="text-white"> Ejercicios pendulares: </strong>
-      de pie junto a una mesa, nos apoyamos en ella con la mano sana, nos inclinamos
-      y realizamos movimientos hacia delante y atrás y hacia los lados en ambos sentidos.
-
+      <strong class="text-white"
+        >{isEnglish ? "Pendulum exercises:" : "Ejercicios pendulares:"}</strong
+      >
+      {
+        isEnglish
+          ? "Stand next to a table, lean on it with your healthy hand, bend forward and make movements forward and backward and side to side in both directions."
+          : "de pie junto a una mesa, nos apoyamos en ella con la mano sana, nos inclinamos y realizamos movimientos hacia delante y atrás y hacia los lados en ambos sentidos."
+      }
       <br />
       <br />
 
-      <strong class="text-white"> Elevación: </strong>
-      Nos colocamos frente a una pared y vamos reptando con los dedos de las manos
-      hacia arriba hasta llegar lo más alto posible. Descender lentamente hasta la
-      posición inicial.
+      <strong class="text-white"
+        >{isEnglish ? "Elevation:" : "Elevación:"}</strong
+      >
+      {
+        isEnglish
+          ? "Stand facing a wall and crawl your fingers upward as high as possible. Slowly descend to the starting position."
+          : "Nos colocamos frente a una pared y vamos reptando con los dedos de las manos hacia arriba hasta llegar lo más alto posible. Descender lentamente hasta la posición inicial."
+      }
       <br />
       <br />
 
-      <strong class="text-white"> Estiramientos posteriores: </strong>
-      Pasamos la mano del brazo afectado por encima del hombro contrario, colocando
-      la mano del brazo sano sobre el codo Nos ayudamos con el brazo sano para intentar
-      llegar a tocar la barbilla.
+      <strong class="text-white"
+        >{
+          isEnglish ? "Posterior stretches:" : "Estiramientos posteriores:"
+        }</strong
+      >
+      {
+        isEnglish
+          ? "Pass the hand of the affected arm over the opposite shoulder, placing the hand of the healthy arm on the elbow. Use the healthy arm to help try to touch your chin."
+          : "Pasamos la mano del brazo afectado por encima del hombro contrario, colocando la mano del brazo sano sobre el codo Nos ayudamos con el brazo sano para intentar llegar a tocar la barbilla."
+      }
       <br />
       <br />
     </h3>
@@ -353,37 +543,44 @@ const id = 13;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      ¿Cuándo puedo volver a hacer deporte tras una fractura de húmero?
+      {
+        isEnglish
+          ? "When can I return to sports after a humerus fracture?"
+          : "¿Cuándo puedo volver a hacer deporte tras una fractura de húmero?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Deportes de bajo impacto, como la natación, pueden retomarse a partir del
-      tercer mes, mientras que deportes de contacto dependerán de la
-      consolidación ósea y la recomendación que te de tu médico especialista.
+      {
+        isEnglish
+          ? "Low-impact sports like swimming can be resumed after the third month, while contact sports will depend on bone consolidation and your specialist doctor's recommendation."
+          : "Deportes de bajo impacto, como la natación, pueden retomarse a partir del tercer mes, mientras que deportes de contacto dependerán de la consolidación ósea y la recomendación que te de tu médico especialista."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Recibir atención médica especializada de inmediato es clave ante una
-      fractura de húmero proximal. Sin embargo, el éxito en la recuperación no
-      solo depende del tratamiento inicial, sino también de la colaboración con
-      fisioterapeutas y especialistas en rehabilitación.
+      {
+        isEnglish
+          ? "Receiving specialized medical attention immediately is key for a proximal humerus fracture. However, recovery success doesn't just depend on initial treatment, but also on collaboration with physiotherapists and rehabilitation specialists."
+          : "Recibir atención médica especializada de inmediato es clave ante una fractura de húmero proximal. Sin embargo, el éxito en la recuperación no solo depende del tratamiento inicial, sino también de la colaboración con fisioterapeutas y especialistas en rehabilitación."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16 text-white">
-      Un plan de recuperación personalizado es fundamental para garantizar la
-      restauración de la movilidad y la independencia, aunque el proceso puede
-      ser desafiante, la meta es clara: Recuperar la funcionalidad y llevar una
-      vida sin dolor.
+      {
+        isEnglish
+          ? "A personalized recovery plan is essential to ensure restoration of mobility and independence. Although the process can be challenging, the goal is clear: Regain functionality and live a pain-free life."
+          : "Un plan de recuperación personalizado es fundamental para garantizar la restauración de la movilidad y la independencia, aunque el proceso puede ser desafiante, la meta es clara: Recuperar la funcionalidad y llevar una vida sin dolor."
+      }
     </h3>
   </Observer>
 </article>
-
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
   <!-- <Comments
     client:visible

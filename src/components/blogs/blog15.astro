@@ -62,6 +62,8 @@ const blogsRutas = [
 const blogActual = "fracturas-ocultas-diagnostico-tijuana";
 
 const id = 15;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -69,51 +71,76 @@ const id = 15;
 >
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      ¿Tuviste alguna caída reciente o practicas deporte con frecuencia y notas
-      un dolor fuerte persistente e inflamación? ¿Acudiste al médico y en tus
-      radiografías no se observó nada anormal?
+      {
+        isEnglish
+          ? "Have you had a recent fall or do you practice sports frequently and notice persistent severe pain and swelling? Did you visit a doctor and your X-rays showed nothing abnormal?"
+          : "¿Tuviste alguna caída reciente o practicas deporte con frecuencia y notas un dolor fuerte persistente e inflamación? ¿Acudiste al médico y en tus radiografías no se observó nada anormal?"
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Podría tratarse de una fractura oculta, te platico de que se tratan ese
-      dolor que no se ve en radiografías.
+      {
+        isEnglish
+          ? "It could be a hidden fracture - let me tell you about this pain that doesn't show up on X-rays"
+          : "Podría tratarse de una fractura oculta, te platico de que se tratan ese dolor que no se ve en radiografías."
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-3xl text-white font-semibold mb-8">
-      ¿Qué es una fractura oculta?
+      {
+        isEnglish
+          ? "What is a hidden fracture?"
+          : "¿Qué es una fractura oculta?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Es aquella lesión que no muestra signos evidentes y por tanto pasa
-      desapercibida en la radiografía simple. Por lo que durante tu evaluación
-      física realizamos ciertos movimientos específicos y pruebas clínicas para
-      localizar el dolor.
+      {
+        isEnglish
+          ? "It's an injury that shows no obvious signs and therefore goes unnoticed on simple X-rays. During your physical evaluation we perform specific movements and clinical tests to locate the pain."
+          : "Es aquella lesión que no muestra signos evidentes y por tanto pasa desapercibida en la radiografía simple. Por lo que durante tu evaluación física realizamos ciertos movimientos específicos y pruebas clínicas para localizar el dolor."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-4 font-semibold">
-      Después, solicitamos estudios de imagen avanzados como:
+      {
+        isEnglish
+          ? "Then we request advanced imaging studies such as:"
+          : "Después, solicitamos estudios de imagen avanzados como:"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
-      <li>Tomografía computarizada (TC)</li>
       <li>
-        Resonancia magnética (RM) que ha demostrado ser una prueba de imagen de
-        alta sensibilidad para el diagnóstico de estas fracturas por su alta
-        resolución.
+        {
+          isEnglish
+            ? "Computed tomography (CT)"
+            : "Tomografía computarizada (TC)"
+        }
       </li>
       <li>
-        Gammagrafía ósea que es un examen que permite detectar anomalías en los
-        huesos mediante la inyección de un radiotrazador.
+        {
+          isEnglish
+            ? "Magnetic resonance imaging (MRI) which has proven to be a highly sensitive imaging test for diagnosing these fractures due to its high resolution."
+            : "Resonancia magnética (RM) que ha demostrado ser una prueba de imagen de alta sensibilidad para el diagnóstico de estas fracturas por su alta resolución."
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Bone scan which is an exam that detects bone abnormalities through injection of a radioactive tracer."
+            : "Gammagrafía ósea que es un examen que permite detectar anomalías en los huesos mediante la inyección de un radiotrazador."
+        }
       </li>
     </ol>
   </Observer>
@@ -122,7 +149,9 @@ const id = 15;
     <div class="flex justify-center items-center">
       <Image
         src={Image1}
-        alt="Imagen de fractura de tibia y peroné"
+        alt={isEnglish
+          ? "Image of tibia and fibula fracture"
+          : "Imagen de fractura de tibia y peroné"}
         class="object-cover mb-16"
       />
     </div>
@@ -130,44 +159,67 @@ const id = 15;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-8 font-semibold">
-      Zonas más comunes de fracturas ocultas
+      {
+        isEnglish
+          ? "Most common areas for hidden fractures"
+          : "Zonas más comunes de fracturas ocultas"
+      }
     </h2>
   </Observer>
   <Observer client:visible>
-    <h3 class="text-xl mb-8">Las áreas frecuentes incluyen:</h3>
+    <h3 class="text-xl mb-8">
+      {isEnglish ? "Frequent areas include:" : "Las áreas frecuentes incluyen:"}
+    </h3>
 
     <ul class="text-xl list-disc px-6 space-y-2 mb-4">
-      <li>Cadera</li>
-      <li>Columna vertebral</li>
-      <li>Tibia (espinilla)</li>
-      <li>Codo</li>
-      <li>Tobillo</li>
-      <li>Muñeca</li>
+      <li>{isEnglish ? "Hip" : "Cadera"}</li>
+      <li>{isEnglish ? "Spine" : "Columna vertebral"}</li>
+      <li>{isEnglish ? "Tibia (shinbone)" : "Tibia (espinilla)"}</li>
+      <li>{isEnglish ? "Elbow" : "Codo"}</li>
+      <li>{isEnglish ? "Ankle" : "Tobillo"}</li>
+      <li>{isEnglish ? "Wrist" : "Muñeca"}</li>
     </ul>
     <h3 class="text-xl mb-8">
-      Estas dos últimas, por su complejidad anatómica, son propensas a fracturas
-      inadvertidas. Las mujeres tienen mayor predisposición debido a factores
-      hormonales como la osteoporosis posmenopáusica.
+      {
+        isEnglish
+          ? "These last two, due to their anatomical complexity, are prone to unnoticed fractures. Women have greater predisposition due to hormonal factors like postmenopausal osteoporosis."
+          : "Estas dos últimas, por su complejidad anatómica, son propensas a fracturas inadvertidas. Las mujeres tienen mayor predisposición debido a factores hormonales como la osteoporosis posmenopáusica."
+      }
     </h3>
 
     <h2 class="text-3xl mb-8 font-semibold text-white">
-      Las fracturas ocultas pueden producirse por:
-    </h2>
-    <h3 class="text-xl mb-8">Traumatismos: Caídas o impactos directos.</h3>
-    <h2 class="text-3xl mb-8 font-semibold text-white">
-      Fracturas por estrés:
+      {
+        isEnglish
+          ? "Hidden fractures can be caused by:"
+          : "Las fracturas ocultas pueden producirse por:"
+      }
     </h2>
     <h3 class="text-xl mb-8">
-      Actividades repetitivas (correr, lanzar objetos, marchar). Aumento brusco
-      de la intensidad deportiva que pueden generar micro fisuras que, al no
-      cicatrizar a tiempo, progresan a fracturas completas.
+      {
+        isEnglish
+          ? "Trauma: Falls or direct impacts."
+          : "Traumatismos: Caídas o impactos directos."
+      }
     </h3>
     <h2 class="text-3xl mb-8 font-semibold text-white">
-      Fracturas por insuficiencia:
+      {isEnglish ? "Stress fractures:" : "Fracturas por estrés:"}
     </h2>
     <h3 class="text-xl mb-8">
-      Huesos debilitados (osteoporosis, tumores, quimioterapia) que se fracturan
-      ante mínimos esfuerzos.
+      {
+        isEnglish
+          ? "Repetitive activities (running, throwing objects, marching). Sudden increase in sports intensity that can generate micro cracks which, if not healed in time, progress to complete fractures."
+          : "Actividades repetitivas (correr, lanzar objetos, marchar). Aumento brusco de la intensidad deportiva que pueden generar micro fisuras que, al no cicatrizar a tiempo, progresan a fracturas completas."
+      }
+    </h3>
+    <h2 class="text-3xl mb-8 font-semibold text-white">
+      {isEnglish ? "Insufficiency fractures:" : "Fracturas por insuficiencia:"}
+    </h2>
+    <h3 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Weakened bones (osteoporosis, tumors, chemotherapy) that fracture with minimal effort."
+          : "Huesos debilitados (osteoporosis, tumores, quimioterapia) que se fracturan ante mínimos esfuerzos."
+      }
     </h3>
     <br />
     <br />
@@ -177,90 +229,198 @@ const id = 15;
     <div class="flex justify-center items-center">
       <Image
         src={Image2}
-        alt="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
-        title="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        alt={isEnglish
+          ? "DR. Ricardo Monge simply explains the main symptoms of hidden fractures"
+          : "El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio"}
+        title={isEnglish
+          ? "DR. Ricardo Monge simply explains the main symptoms of hidden fractures"
+          : "El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio"}
         class="fade-up object-cover mb-16"
       />
     </div>
   </ObserverImage>
 
   <Observer client:visible>
-    <h2 class="text-white text-4xl mb-16 font-semibold">Factores de riesgo:</h2>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {isEnglish ? "Risk factors:" : "Factores de riesgo:"}
+    </h2>
   </Observer>
   <Observer client:visible>
     <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
-      <li>Pérdida de masa ósea (osteoporosis).</li>
-      <li>Enfermedades genéticas (osteogénesis imperfecta).</li>
-      <li>Artritis reumatoide.</li>
-      <li>Trastornos hormonales (amenorrea, menopausia).</li>
-      <li>Desnutrición o trastornos alimentarios.</li>
-      <li>Consumo excesivo de alcohol o tabaco.</li>
-      <li>Uso prolongado de corticoides o antiinflamatorios.</li>
-      <li>Insuficiencia renal crónica.</li>
+      <li>
+        {
+          isEnglish
+            ? "Bone mass loss (osteoporosis)"
+            : "Pérdida de masa ósea (osteoporosis)"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Genetic diseases (osteogenesis imperfecta)"
+            : "Enfermedades genéticas (osteogénesis imperfecta)"
+        }
+      </li>
+      <li>{isEnglish ? "Rheumatoid arthritis" : "Artritis reumatoide"}</li>
+      <li>
+        {
+          isEnglish
+            ? "Hormonal disorders (amenorrhea, menopause)"
+            : "Trastornos hormonales (amenorrea, menopausia)"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Malnutrition or eating disorders"
+            : "Desnutrición o trastornos alimentarios"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Excessive alcohol or tobacco consumption"
+            : "Consumo excesivo de alcohol o tabaco"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Prolonged use of corticosteroids or anti-inflammatories"
+            : "Uso prolongado de corticoides o antiinflamatorios"
+        }
+      </li>
+      <li>
+        {isEnglish ? "Chronic kidney failure" : "Insuficiencia renal crónica"}
+      </li>
     </ol>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Síntomas clave de una fractura oculta
+      {
+        isEnglish
+          ? "Key symptoms of a hidden fracture"
+          : "Síntomas clave de una fractura oculta"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
-      <li>Dolor localizado que persiste incluso en reposo.</li>
-      <li>Inflamación constante.</li>
-      <li>Sensibilidad al tacto en la zona afectada.</li>
-      <li>Limitación funcional progresiva.</li>
+      <li>
+        {
+          isEnglish
+            ? "Localized pain that persists even at rest"
+            : "Dolor localizado que persiste incluso en reposo"
+        }
+      </li>
+      <li>{isEnglish ? "Constant swelling" : "Inflamación constante"}</li>
+      <li>
+        {
+          isEnglish
+            ? "Tenderness to touch in the affected area"
+            : "Sensibilidad al tacto en la zona afectada"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Progressive functional limitation"
+            : "Limitación funcional progresiva"
+        }
+      </li>
     </ol>
   </Observer>
 
   <Observer client:visible>
-    <h2 class="text-white text-4xl mb-4 font-semibold">Tratamiento</h2>
+    <h2 class="text-white text-4xl mb-4 font-semibold">
+      {isEnglish ? "Treatment" : "Tratamiento"}
+    </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-3xl text-white font-semibold mb-8">
-      Varía según la gravedad y ubicación de la fractura:
+      {
+        isEnglish
+          ? "Varies according to the severity and location of the fracture:"
+          : "Varía según la gravedad y ubicación de la fractura:"
+      }
     </h3>
     <ol class="text-xl list-decimal px-6 space-y-2 mb-16">
-      <li>Inmovilización: Férulas o yeso.</li>
-      <li>Descarga de peso: Muletas o bastones.</li>
-      <li>Modificación de actividades: Reposo deportivo temporal.</li>
       <li>
-        Suplementación: Calcio, vitamina D y bifosfonatos en casos de
-        osteoporosis.
+        {
+          isEnglish
+            ? "Immobilization: Splints or cast"
+            : "Inmovilización: Férulas o yeso"
+        }
       </li>
-      <li>Cirugía: En fracturas inestables o con riesgo de necrosis</li>
+      <li>
+        {
+          isEnglish
+            ? "Weight offloading: Crutches or canes"
+            : "Descarga de peso: Muletas o bastones"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Activity modification: Temporary sports rest"
+            : "Modificación de actividades: Reposo deportivo temporal"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Supplementation: Calcium, vitamin D and bisphosphonates in cases of osteoporosis"
+            : "Suplementación: Calcio, vitamina D y bifosfonatos en casos de osteoporosis"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Surgery: For unstable fractures or those with necrosis risk"
+            : "Cirugía: En fracturas inestables o con riesgo de necrosis"
+        }
+      </li>
     </ol>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-2xl mb-4">
-      Es importante no prolongar e ignorar los malestares por mucho tiempo, si
-      bien el cuerpo es muy noble y se recupera por sí solo, en ocasiones esto
-      no basta y se necesita intervención, ya sea porque el problema es más
-      grave o porque el organismo ha alcanzado su límite. En el caso de las
-      fracturas ocultas si no se tratan a tiempo pueden derivar en
-      complicaciones como pseudoartrosis o deformidades.
+      {
+        isEnglish
+          ? "It's important not to prolong and ignore discomfort for too long. While the body is very resilient and recovers on its own, sometimes this isn't enough and intervention is needed, either because the problem is more serious or because the body has reached its limit. In the case of hidden fractures, if not treated in time they can lead to complications like nonunion or deformities."
+          : "Es importante no prolongar e ignorar los malestares por mucho tiempo, si bien el cuerpo es muy noble y se recupera por sí solo, en ocasiones esto no basta y se necesita intervención, ya sea porque el problema es más grave o porque el organismo ha alcanzado su límite. En el caso de las fracturas ocultas si no se tratan a tiempo pueden derivar en complicaciones como pseudoartrosis o deformidades."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-2xl mb-4">
-      Si tienes más dudas sobre esto, te gustaría agendar una consulta
-      ortopédica, con gusto te apoyo, puedes escribirme y te responderé en la
-      brevedad de lo posible.
+      {
+        isEnglish
+          ? "If you have more questions about this or would like to schedule an orthopedic consultation, I'd be happy to help. You can message me and I'll respond as soon as possible."
+          : "Si tienes más dudas sobre esto, te gustaría agendar una consulta ortopédica, con gusto te apoyo, puedes escribirme y te responderé en la brevedad de lo posible."
+      }
       <strong class="text-white font-bold">
-        Me puedes encontrar en Torre Norte 2 en Tijuana Baja California
+        {
+          isEnglish
+            ? "You can find me at Torre Norte 2 in Tijuana, Baja California"
+            : "Me puedes encontrar en Torre Norte 2 en Tijuana Baja California"
+        }
       </strong>
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-2xl mb-4">
-      Si no vives en Tijuana, pero te gustaría recibir una asesoría ortopédica a
-      distancia te puedo apoyar con gusto puedes agendar para comenzar <a
+      {
+        isEnglish
+          ? "If you don't live in Tijuana but would like to receive remote orthopedic advice, I'd be happy to help. You can schedule an appointment to begin at"
+          : "Si no vives en Tijuana, pero te gustaría recibir una asesoría ortopédica a distancia te puedo apoyar con gusto puedes agendar para comenzar"
+      }
+      <a
         class="cursor-pointer text-white hover:text-blue-600"
         href="https://wa.me/526641690650"
         target="_blank"
@@ -271,7 +431,6 @@ const id = 15;
     </h3>
   </Observer>
 </article>
-
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
   <!-- <Comments
     client:visible

@@ -60,6 +60,8 @@ const blogActual =
   "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis";
 
 const id = 14;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <article
@@ -67,38 +69,38 @@ const id = 14;
 >
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Si, o si será indispensable realizar una intervención quirúrgica. El
-      objetivo de esta cirugía es abordar dos factores que pudieron fallar: La
-      biología del hueso y la inestabilidad mecánica de la fractura.
+      {
+        isEnglish
+          ? "Yes, surgical intervention will be absolutely necessary. The goal of this surgery is to address two factors that may have failed: The biology of the bone and the mechanical instability of the fracture."
+          : "Si, o si será indispensable realizar una intervención quirúrgica. El objetivo de esta cirugía es abordar dos factores que pudieron fallar: La biología del hueso y la inestabilidad mecánica de la fractura."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      ¿Cómo se determina la necesidad de una segunda cirugía ortopédica?
+      {
+        isEnglish
+          ? "How is the need for a second orthopedic surgery determined?"
+          : "¿Cómo se determina la necesidad de una segunda cirugía ortopédica?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Es fundamental mantener un seguimiento constante con tu médico
-      especialista o buscar una segunda opinión. Entre el tercer y cuarto mes
-      postoperatorio, puede identificarse un retraso en la consolidación ósea.
-      Si no se actúa a tiempo, este problema podría evolucionar a una
-      pseudoartrosis hacia el octavo o noveno mes, para esta etapa el hueso y el
-      cuerpo se han agotado su capacidad biológica natural de reparación. En
-      este punto, ya dio todo, la única solución efectiva será someter esa
-      fractura a cirugía, ya que el organismo no podrá completar el proceso por
-      sí solo.
+      {
+        isEnglish
+          ? "It's essential to maintain constant follow-up with your specialist doctor or seek a second opinion. Between the third and fourth postoperative month, a delay in bone consolidation can be identified. If not addressed in time, this problem could evolve into nonunion (pseudoarthrosis) by the eighth or ninth month. By this stage, the bone and body have exhausted their natural biological repair capacity. At this point, the only effective solution will be to undergo surgery, as the body cannot complete the process on its own."
+          : "Es fundamental mantener un seguimiento constante con tu médico especialista o buscar una segunda opinión. Entre el tercer y cuarto mes postoperatorio, puede identificarse un retraso en la consolidación ósea. Si no se actúa a tiempo, este problema podría evolucionar a una pseudoartrosis hacia el octavo o noveno mes, para esta etapa el hueso y el cuerpo se han agotado su capacidad biológica natural de reparación. En este punto, ya dio todo, la única solución efectiva será someter esa fractura a cirugía, ya que el organismo no podrá completar el proceso por sí solo."
+      }
       <br />
       <br />
-      Durante tu valoración o segunda opinión, además de tu examen físico, se te
-      solicitarán estudios imagenológicos exhaustivos (Radiografías o tomografías)
-      para diseñar un plan quirúrgico preciso y actuar en la brevedad, minimizando
-      complicaciones futuras. Un hallazgo clave en estos estudios es la presencia
-      de callos óseos aislados en los extremos de la fractura, que no embonan o conectan
-      entre sí. En su lugar, se observa una articulación falsa que genera inestabilidad
-      dolor crónico e incomodidad funcional.
+      {
+        isEnglish
+          ? "During your evaluation or second opinion, in addition to your physical examination, comprehensive imaging studies (X-rays or CT scans) will be requested to design a precise surgical plan and act promptly, minimizing future complications. A key finding in these studies is the presence of isolated bone calluses at the fracture ends that don't fit or connect with each other. Instead, a false joint is observed that generates instability, chronic pain and functional discomfort."
+          : "Durante tu valoración o segunda opinión, además de tu examen físico, se te solicitarán estudios imagenológicos exhaustivos (Radiografías o tomografías) para diseñar un plan quirúrgico preciso y actuar en la brevedad, minimizando complicaciones futuras. Un hallazgo clave en estos estudios es la presencia de callos óseos aislados en los extremos de la fractura, que no embonan o conectan entre sí. En su lugar, se observa una articulación falsa que genera inestabilidad dolor crónico e incomodidad funcional."
+      }
       <br />
       <br />
     </h3>
@@ -108,7 +110,9 @@ const id = 14;
     <div class="flex justify-center items-center">
       <Image
         src={Image1}
-        alt="Imagen de fractura de tibia y peroné"
+        alt={isEnglish
+          ? "Image of tibia and fibula fracture"
+          : "Imagen de fractura de tibia y peroné"}
         class="object-cover mb-16"
       />
     </div>
@@ -116,67 +120,122 @@ const id = 14;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-4 font-semibold">
-      Riesgos y estadísticas: ¿Qué tan común es este escenario?
+      {
+        isEnglish
+          ? "Risks and statistics: How common is this scenario?"
+          : "Riesgos y estadísticas: ¿Qué tan común es este escenario?"
+      }
     </h2>
   </Observer>
 
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Aunque la idea de una segunda cirugía puede resultar abrumadora, es la
-      única alternativa para reavivar el hueso y reactivar la consolidación ósea
-      y lograr resultados óptimos. La pseudoartrosis afecta aproximadamente al 4
-      % de los pacientes, especialmente en fracturas de huesos largos (fémur,
-      tibia y húmero) Cuando se trata de fracturas expuestas el riesgo aumenta
-      hasta un 30% aunque sigue siendo una complicación relativamente baja.
+      {
+        isEnglish
+          ? "Although the idea of a second surgery may seem overwhelming, it's the only alternative to revive the bone, reactivate bone consolidation and achieve optimal results. Nonunion affects approximately 4% of patients, especially in long bone fractures (femur, tibia and humerus). When it comes to open fractures, the risk increases to 30%, although it remains a relatively low complication."
+          : "Aunque la idea de una segunda cirugía puede resultar abrumadora, es la única alternativa para reavivar el hueso y reactivar la consolidación ósea y lograr resultados óptimos. La pseudoartrosis afecta aproximadamente al 4 % de los pacientes, especialmente en fracturas de huesos largos (fémur, tibia y húmero) Cuando se trata de fracturas expuestas el riesgo aumenta hasta un 30% aunque sigue siendo una complicación relativamente baja."
+      }
     </h3>
   </Observer>
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Más que una cirugía: Un rescate óseo
+      {
+        isEnglish
+          ? "More than surgery: A bone rescue"
+          : "Más que una cirugía: Un rescate óseo"
+      }
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-8">
-      Cuando los pacientes ya se han enfrentado a una cirugía previa y a un
-      proceso de recuperación, la aparición de pseudoartrosis y una segunda
-      cirugía suele generar preocupación y resistencia. Sin embargo, esta
-      intervención busca rescatar el foco de fractura mediante dos enfoques:
+      {
+        isEnglish
+          ? "When patients have already faced previous surgery and a recovery process, the appearance of nonunion and a second surgery often generates concern and resistance. However, this intervention seeks to rescue the fracture focus through two approaches:"
+          : "Cuando los pacientes ya se han enfrentado a una cirugía previa y a un proceso de recuperación, la aparición de pseudoartrosis y una segunda cirugía suele generar preocupación y resistencia. Sin embargo, esta intervención busca rescatar el foco de fractura mediante dos enfoques:"
+      }
     </h3>
 
     <h2 class="text-white text-3xl mb-8 font-semibold">
-      Falla mecánica (inestabilidad)
+      {
+        isEnglish
+          ? "Mechanical failure (instability)"
+          : "Falla mecánica (inestabilidad)"
+      }
     </h2>
     <ul class="text-xl list-disc px-6 space-y-2">
-      <li>Eliminando la articulación falsa.</li>
       <li>
-        Reemplazando el sistema de fijación (placas, tornillos o clavos
-        intramedulares).
+        {
+          isEnglish
+            ? "Eliminating the false joint"
+            : "Eliminando la articulación falsa"
+        }
       </li>
       <li>
-        Fresado de los bordes de la fractura para dejar solo tejido
-        vascularizado.
+        {
+          isEnglish
+            ? "Replacing the fixation system (plates, screws or intramedullary nails)"
+            : "Reemplazando el sistema de fijación (placas, tornillos o clavos intramedulares)"
+        }
       </li>
       <li>
-        Mejorando la compresión y estabilidad entre fragmentos de la fractura.
+        {
+          isEnglish
+            ? "Milling the fracture edges to leave only vascularized tissue"
+            : "Fresado de los bordes de la fractura para dejar solo tejido vascularizado"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Improving compression and stability between fracture fragments"
+            : "Mejorando la compresión y estabilidad entre fragmentos de la fractura"
+        }
       </li>
     </ul>
     <br />
     <h2 class="text-3xl mb-8 font-semibold">
-      <strong class="text-white"
-        >Falla biológica (pseudoartrosis infectada):
+      <strong class="text-white">
+        {
+          isEnglish
+            ? "Biological failure (infected nonunion):"
+            : "Falla biológica (pseudoartrosis infectada):"
+        }
       </strong>
-      Las infecciones pueden originarse desde la fractura inicial, durante la cirugía,
-      o incluso por focos distantes (urinarios, dentales)
+      {
+        isEnglish
+          ? "Infections can originate from the initial fracture, during surgery, or even from distant foci (urinary, dental)"
+          : "Las infecciones pueden originarse desde la fractura inicial, durante la cirugía, o incluso por focos distantes (urinarios, dentales)"
+      }
     </h2>
     <ul class="text-xl list-disc px-6 space-y-2">
-      <li>Limpieza quirúrgica profunda del tejido infectado.</li>
-      <li>Retiro de implantes y fijación externa temporal.</li>
       <li>
-        Injertos óseos (propios o de donante) para estimular la regeneración.
+        {
+          isEnglish
+            ? "Deep surgical cleaning of infected tissue"
+            : "Limpieza quirúrgica profunda del tejido infectado"
+        }
       </li>
       <li>
-        Tratamiento antibiótico prolongado (intravenoso y posteriormente oral).
+        {
+          isEnglish
+            ? "Removal of implants and temporary external fixation"
+            : "Retiro de implantes y fijación externa temporal"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Bone grafts (own or donor) to stimulate regeneration"
+            : "Injertos óseos (propios o de donante) para estimular la regeneración"
+        }
+      </li>
+      <li>
+        {
+          isEnglish
+            ? "Prolonged antibiotic treatment (intravenous and subsequently oral)"
+            : "Tratamiento antibiótico prolongado (intravenoso y posteriormente oral)"
+        }
       </li>
     </ul>
     <br />
@@ -187,8 +246,12 @@ const id = 14;
     <div class="flex justify-center items-center">
       <Image
         src={Image2}
-        alt="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
-        title="El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio "
+        alt={isEnglish
+          ? "DR. Ricardo Monge simply explains the main symptoms of nonunion"
+          : "El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio"}
+        title={isEnglish
+          ? "DR. Ricardo Monge simply explains the main symptoms of nonunion"
+          : "El DR. Ricardo Monge explica de forma sencilla los principales sintomas de la tendinitis que es un proceso agudo inflamatorio"}
         class="fade-up object-cover mb-16"
       />
     </div>
@@ -196,29 +259,30 @@ const id = 14;
 
   <Observer client:visible>
     <h2 class="text-white text-4xl mb-16 font-semibold">
-      Recuperación: Paciencia y disciplina
+      {
+        isEnglish
+          ? "Recovery: Patience and discipline"
+          : "Recuperación: Paciencia y disciplina"
+      }
     </h2>
   </Observer>
   <Observer client:visible>
     <h3 class="text-xl mb-16">
-      Al ser una reintervención, el proceso de consolidación puede ser más
-      lento. Factores como fracturas múltiples, daño en tejidos blandos,
-      osteoporosis, anemia severa, trastornos tiroideos o edad avanzada pueden
-      influir en la rehabilitación. Por ello, es crucial seguir al pie de la
-      letra las indicaciones de tu médico traumatólogo ortopedista y
-      fisioterapeuta.
+      {
+        isEnglish
+          ? "Being a reoperation, the consolidation process may be slower. Factors such as multiple fractures, soft tissue damage, osteoporosis, severe anemia, thyroid disorders or advanced age can influence rehabilitation. Therefore, it's crucial to follow your orthopedic trauma surgeon and physiotherapist's instructions to the letter."
+          : "Al ser una reintervención, el proceso de consolidación puede ser más lento. Factores como fracturas múltiples, daño en tejidos blandos, osteoporosis, anemia severa, trastornos tiroideos o edad avanzada pueden influir en la rehabilitación. Por ello, es crucial seguir al pie de la letra las indicaciones de tu médico traumatólogo ortopedista y fisioterapeuta."
+      }
       <br />
       <br />
-      ¿Necesitas una evaluación personalizada por un traumatólogo ortopedista en
-      Tijuana? Si tu fractura aun no sana o te genera molestias, te invito a mi consultorio
-      en Torre Norte 2, en a 10 minutos de la línea de san Ysidro para poder evaluar
-      y apoyarte a conocer a profundidad tu diagnóstico y juntos trabajar en tu plan
-      de tratamiento si es un retraso de consolidación o conocer los detalles sobre
-      técnicas quirúrgicas si se trata de una pseudoartrosis.
+      {
+        isEnglish
+          ? "Do you need a personalized evaluation by an orthopedic trauma surgeon in Tijuana? If your fracture hasn't healed yet or causes discomfort, I invite you to my office in Torre Norte 2, just 10 minutes from the San Ysidro border, to evaluate and help you understand your diagnosis in depth and together work on your treatment plan if it's a consolidation delay or learn about surgical techniques if it's nonunion."
+          : "¿Necesitas una evaluación personalizada por un traumatólogo ortopedista en Tijuana? Si tu fractura aun no sana o te genera molestias, te invito a mi consultorio en Torre Norte 2, en a 10 minutos de la línea de san Ysidro para poder evaluar y apoyarte a conocer a profundidad tu diagnóstico y juntos trabajar en tu plan de tratamiento si es un retraso de consolidación o conocer los detalles sobre técnicas quirúrgicas si se trata de una pseudoartrosis."
+      }
     </h3>
   </Observer>
 </article>
-
 <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
   <!-- <Comments
     client:visible

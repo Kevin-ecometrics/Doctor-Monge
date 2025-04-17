@@ -154,7 +154,7 @@ function Blogs({ URL }) {
       titulo: "Tibia and Fibula Fracture",
       texto:
         "Everything you need to know about tibia and fibula fractures, some of the most complex and interesting cases in traumatology. Join us as we explore why these fractures are so unique for each patient.",
-      link: "/en/blogs/Fractura-de-tibia-y-Perone",
+      link: "/en/blogs/tibia-and-fibula-fracture",
     },
     {
       img: "/Todo lo que debes saber sobre una de las lesiones mas comunes en ortopedia.png",
@@ -162,7 +162,7 @@ function Blogs({ URL }) {
       titulo: "Pseudoartrosis and Delayed Bone Healing",
       texto:
         "In this blog, Dr. Ricardo Monge, Orthopedic Specialist, explains why some fractures take longer to heal or don't heal completely.",
-      link: "/en/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion",
+      link: "/en/blogs/pseudoarthrosis-and-delayed-union",
     },
     {
       img: "/Si sufres de dolor en hueso o articulaciones a acude con tu medico ortopedista para una valoracion.png",
@@ -170,7 +170,7 @@ function Blogs({ URL }) {
       titulo: "Anterior Cruciate Ligament (ACL) Injury",
       texto:
         "Discover all the reasons why women are more prone to ACL injuries and how arthroscopy, a minimally invasive orthopedic procedure, can help them return to daily activities without complications.",
-      link: "/en/blogs/Lesion-de-Ligamento-Cruzado-Anterior",
+      link: "/en/blogs/anterior-cruciate-ligament-injury",
     },
     {
       img: "/El doctor Ricardo Monge inspecciona minuciosamente cada estudio para un diagnostico completo.webp",
@@ -179,7 +179,7 @@ function Blogs({ URL }) {
         "Osteoporosis: A Silent Condition Affecting Half of Population Over 50",
       texto:
         "Dr. Ricardo Monge, orthopedic traumatologist in Tijuana, explains what you should know about osteoporosis, a bone condition whose symptoms often go unnoticed in early stages.",
-      link: "/en/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+      link: "/en/blogs/osteoporosis-a-silent-condition-affecting-half-the-population-over-50",
     },
     {
       img: "/Realiza tus infiltraciones articulares con el Dr. Monge en Tijuana.webp",
@@ -187,7 +187,7 @@ function Blogs({ URL }) {
       titulo: "Hyaluronic Acid Injections for Knee Osteoarthritis Treatment",
       texto:
         "Have you been recommended hyaluronic acid injections? Learn more about this effective conservative orthopedic treatment from an injection specialist.",
-      link: "/en/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+      link: "/en/blogs/knee-injections-with-hyaluronic-acid-for-knee-osteoarthritis-treatment",
     },
     {
       img: "/Invierte en tu bienestar con un tratamiento adecuado para ti con el Dr. Monge.webp",
@@ -195,7 +195,7 @@ function Blogs({ URL }) {
       titulo: "Conservative Treatment vs Surgery for Herniated Disc",
       texto:
         "Dr. Ricardo Monge, orthopedic trauma specialist in injuries and surgery, discusses the differences between conservative treatment and cervical disc herniation surgery, and how to know which option is best for you.",
-      link: "/en/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+      link: "/en/blogs/conservative-treatment-vs-surgery-when-conservative-treatment-fails-and-requires-surgical-intervention-for-cervical-disc-herniation",
     },
     {
       img: "/El Dr. Ricardo Monge te invita a leer el blog donde explica que es la ostesintesis y como puede fallar.webp",
@@ -203,7 +203,7 @@ function Blogs({ URL }) {
       titulo: "Implant Rejection in Osteosynthesis",
       texto:
         "Is it true your body rejected the implant? Dr. Monge, orthopedic traumatologist, explains everything about implant rejection in osteosynthesis and how to detect it early to avoid complications.",
-      link: "/en/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+      link: "/en/blogs/why-is-it-said-that-the-body-rejects-material-factors-associated-with-failure-in-fracture-osteosynthesis",
     },
     {
       img: "/El Hallux Valgus o Juanete puede  limitar tu movilidad el Dr monge te explica mas.webp",
@@ -211,7 +211,7 @@ function Blogs({ URL }) {
       titulo: "Hallux Valgus: A Condition Affecting Up to 35% of Population",
       texto:
         "Learn about the causes of bunions from expert traumatologist Dr. Ricardo Monge, who will explain why bunions develop and how they are diagnosed and surgically treated.",
-      link: "/en/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+      link: "/en/blogs/bunions-symptoms-detection-and-types-of-surgery-to-remove-them",
     },
     {
       img: "/El doctor Monge experto en infiltraciones te platica mas sobre ellas en este blog.webp",
@@ -219,7 +219,7 @@ function Blogs({ URL }) {
       titulo: "Knee Injections: Options and Benefits for Osteoarthritis",
       texto:
         "This blog covers conservative orthopedic treatment options for osteoarthritis including injections of: Corticosteroids, Platelet-Rich Plasma (PRP), and Hyaluronic Acid.",
-      link: "/en/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+      link: "/en/blogs/knee-injections-options-and-benefits-for-osteoarthritis",
     },
     {
       img: "/Visita el blog para conocer los detalles entre cada uno con el DR Ricardo Monge.webp",
@@ -227,7 +227,7 @@ function Blogs({ URL }) {
       titulo: "Tendinitis vs Tendinosis: Causes, Differences and Treatments",
       texto:
         "Dr. Ricardo Monge, specialist in traumatology and orthopedics, explains the differences between tendinitis (tendon inflammation) and tendinosis (the complication that arises when not treated promptly).",
-      link: "/en/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+      link: "/en/blogs/tendinitis-and-tendinosis-causes-differences-and-treatment",
     },
     {
       img: "/Artritis y artrosis Conoce las diferencias con el traumatologo ortopedista Ricardo Monge.webp",
@@ -236,7 +236,7 @@ function Blogs({ URL }) {
         "How to Tell if It's Arthritis or Osteoarthritis? Key Symptoms and Differences",
       texto:
         "Dr. Ricardo Monge explains the key difference between arthritis (an autoimmune disease) and osteoarthritis (a degenerative joint condition).",
-      link: "/en/blogs/Como-saber-si-es-artritis-o-artrosis",
+      link: "/en/blogs/how-to-tell-if-its-arthritis-or-osteoarthritis",
     },
     {
       img: "/El DR Monge explica en su blog de forma breve todo sobre la lumbalgia.webp",
@@ -244,7 +244,7 @@ function Blogs({ URL }) {
       titulo: "Low Back Pain: Types, Risk Factors and Treatments",
       texto:
         "Suffering from back pain? Dr. Ricardo Monge, orthopedic specialist, analyzes in detail this condition that affects 80% of people. Discover the causes, most common symptoms, and available orthopedic treatments to relieve this discomfort.",
-      link: "/en/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+      link: "/en/blogs/low-back-pain-types-risk-factors-and-treatments",
     },
     {
       img: "/Fractura-Humero-Proximal-Adultos-Mayores-Cuidados-Terapias-Tiempo-Recuperacion-Dr-Ricardo-Monge.webp",
@@ -252,7 +252,7 @@ function Blogs({ URL }) {
       titulo: "Proximal Humerus Fracture in Elderly Adults",
       texto:
         "Join Dr. Ricardo Monge as he explains how to reduce fracture risk in elderly adults through healthy habits, home adjustments to prevent falls, recommended exercises, and necessary rehabilitation time.",
-      link: "/en/blogs/fractura-de-humero-proximal-en-adultos-mayores",
+      link: "/en/blogs/proximal-humerus-fracture-in-older-adults",
     },
     {
       img: "/cardblog14.webp",
@@ -260,7 +260,7 @@ function Blogs({ URL }) {
       titulo: "Is a Second Orthopedic Surgery Needed for Pseudoartrosis?",
       texto:
         "What to do if your bone fails to heal? Pseudoartrosis occurs and forms a false joint. Read more details from orthopedic trauma surgeon Dr. Ricardo Monge.",
-      link: "/en/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+      link: "/en/blogs/is-a-second-surgery-necessary-to-treat-pseudoarthrosis",
     },
     {
       img: "/cardblog15.webp",
@@ -269,7 +269,7 @@ function Blogs({ URL }) {
         "Persistent Pain But Normal X-ray? You Might Have an Occult Fracture",
       texto:
         "Join Dr. Ricardo Monge to discover how these invisible injuries originate and what methods exist to detect them early.",
-      link: "/en/blogs/fracturas-ocultas-diagnostico-tijuana",
+      link: "/en/blogs/hidden-fractures-diagnosis-tijuana",
     },
     {
       img: "/cardblog16.webp",
@@ -277,7 +277,7 @@ function Blogs({ URL }) {
       titulo: "Knee Pain? Arthroscopy for Joint Wear Treatment",
       texto:
         "Dr. Ricardo Monge, knee arthroscopy expert in Tijuana, answers your questions about this minimally invasive surgery with maximum results.",
-      link: "/en/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+      link: "/en/blogs/knee-pain-arthroscopy-to-treat-joint-wear",
     },
   ];
 
