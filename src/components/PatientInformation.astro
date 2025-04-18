@@ -3,31 +3,36 @@ const { URL } = Astro.props;
 
 const Information_es = [
   {
-    icon: "/ficha1.webp",
+    icon: "/ficha1bl.webp",
+    hoverIcon: "/ficha1.webp",
     title: "Recomendaciones para una columna sana",
     text: "En este documento encontrarás ejercicios y recomendaciones ilustradas de higiene de columna.",
     link: "/fichas/recomendaciones-para-una-columna-sana/",
   },
   {
-    icon: "/ficha2.webp",
+    icon: "/ficha2bl.webp",
+    hoverIcon: "/ficha2.webp",
     title: "Guía postoperatorias de Reemplazo total de cadera",
     text: "En este documento podrás encontrar pautas y recomendaciones necesarias para tu recuperación.",
     link: "/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-cadera/",
   },
   {
-    icon: "/ficha3.webp",
+    icon: "/ficha3bl.webp",
+    hoverIcon: "/ficha3.webp",
     title: "Guía postoperatorias de Reemplazo total de rodilla",
     text: "Te comparto cuidados y recomendaciones para una reincorporación exitosa en tus actividades diarias.",
     link: "/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-rodilla/",
   },
   {
-    icon: "/ficha4.webp",
+    icon: "/ficha4bl.webp",
+    hoverIcon: "/ficha4.webp",
     title: "Guía postoperatorias de artroscopia de rodilla",
     text: "En este documento te resumo los cuidados y consejos clave para una recuperación exitosa.",
     link: "/fichas/instrucciones-postoperatorias-de-artroscopia-de-rodilla/",
   },
   {
-    icon: "/ficha5.webp",
+    icon: "/ficha5bl.webp",
+    hoverIcon: "/ficha5.webp",
     title: "Recomendaciones generales preoperatorias",
     text: "Te presento puntos claves para que puedas conocer los pasos previos a tu intervención.",
     link: "/fichas/recomendaciones-generales-preoperatorias/",
@@ -36,31 +41,36 @@ const Information_es = [
 
 const Information_en = [
   {
-    icon: "/ficha1.webp",
+    icon: "/ficha1bl.webp",
+    hoverIcon: "/ficha1.webp",
     title: "Recommendations for a healthy spine",
     text: "This document contains illustrated spine hygiene exercises and recommendations.",
     link: "/en/parts/recommendations-for-healthy-spine/",
   },
   {
-    icon: "/ficha2.webp",
+    icon: "/ficha2bl.webp",
+    hoverIcon: "/ficha2.webp",
     title: "Postoperative Guide for Total Hip Replacement",
     text: "This document provides necessary guidelines and recommendations for your recovery.",
     link: "/en/parts/total-hip-replacement-postoperative-instructions/",
   },
   {
-    icon: "/ficha3.webp",
+    icon: "/ficha3bl.webp",
+    hoverIcon: "/ficha3.webp",
     title: "Postoperative Guide for Total Knee Replacement",
     text: "Here you'll find care instructions and recommendations for a successful return to daily activities.",
     link: "/en/parts/total-knee-replacement-postoperative-instructions/",
   },
   {
-    icon: "/ficha4.webp",
+    icon: "/ficha4bl.webp",
+    hoverIcon: "/ficha4.webp",
     title: "Postoperative Guide for Knee Arthroscopy",
     text: "This document summarizes key care tips and advice for a successful recovery.",
     link: "/en/parts/knee-arthroscopy-postoperative-instructions/",
   },
   {
-    icon: "/ficha5.webp",
+    icon: "/ficha5bl.webp",
+    hoverIcon: "/ficha5.webp",
     title: "General Preoperative Recommendations",
     text: "This guide outlines key steps to prepare for your upcoming procedure.",
     link: "/en/parts/general-preoperative-recommendations/",
@@ -94,14 +104,18 @@ const Information_en = [
           <>
             {/* Fila completa para cada elemento */}
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              {/* Primera columna: Imagen */}
+              {/* Contenedor de imagen modificado */}
               <div class="flex justify-center">
-                <a href={item.link}>
+                <a href={item.link} class="relative block w-32 h-32">
                   <img
                     src={item.icon}
                     alt={item.title}
-                    title={item.title}
-                    class="w-32 h-32"
+                    class="absolute top-0 left-0 w-full h-full transition-opacity duration-300 hover:opacity-0"
+                  />
+                  <img
+                    src={item.hoverIcon}
+                    alt={item.title}
+                    class="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100"
                   />
                 </a>
               </div>
@@ -155,3 +169,14 @@ const Information_en = [
     background: #003d66;
   }
 </style>
+<script>
+  // Este script puede ir al final de tu componente
+  document.querySelectorAll(".hover-image").forEach((img) => {
+    if (img instanceof HTMLImageElement && img.parentElement) {
+      img.parentElement.style.setProperty(
+        "--hover-image",
+        `url(${img.dataset.hover})`
+      );
+    }
+  });
+</script>
