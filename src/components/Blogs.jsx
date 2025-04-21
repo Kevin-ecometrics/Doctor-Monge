@@ -31,7 +31,7 @@ function Blogs({ URL }) {
       titulo: "Lesión de Ligamento Cruzado Anterior",
       texto:
         " Descubre en este blog todas las causas que hacen a las mujeres más propensas a lesiones por LCA y como gracias a la artroscopia un procedimiento ortopédico mínimo invasivo pueden reincorporarse sin complicaciones a su vida diaria",
-      link: "/blogs/Lesion-de-Ligamento-Cruzado-Anterior",
+      link: "/blogs/Lesion-de-Ligamento-cruzado-anterior",
     },
     {
       img: "/El doctor Ricardo Monge inspecciona minuciosamente cada estudio para un diagnostico completo.webp",
@@ -43,7 +43,7 @@ function Blogs({ URL }) {
       link: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
     },
     {
-      img: "/Realiza tus infiltraciones articulares con el Dr. Monge en Tijuana.webp",
+      img: "/Doctor Ortopedista aplicando Acido hialuronico.webp",
       fecha: "Agosto 2024",
       titulo:
         "Infiltraciones con ácido hialurónico para tratamiento de artrosis de rodilla",
@@ -52,7 +52,7 @@ function Blogs({ URL }) {
       link: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
     },
     {
-      img: "/Invierte en tu bienestar con un tratamiento adecuado para ti con el Dr. Monge.webp",
+      img: "/Doctor Ortopedista hablando sobre Tratamiento conservador vs Tradicional con paciente.webp",
       fecha: "Septiembre 2024",
       titulo: "Tratamiento conservador vs cirugía en hernia discal ",
       texto:
@@ -60,7 +60,7 @@ function Blogs({ URL }) {
       link: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
     },
     {
-      img: "/El Dr. Ricardo Monge te invita a leer el blog donde explica que es la ostesintesis y como puede fallar.webp",
+      img: "/Doctor Ortopedista explicando por que se dice que el cuerpo rechaza el material.webp",
       fecha: "Octubre 2024",
       titulo: "Rechazo de Material en Osteosíntesis",
       texto:
@@ -77,7 +77,7 @@ function Blogs({ URL }) {
       link: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
     },
     {
-      img: "/El doctor Monge experto en infiltraciones te platica mas sobre ellas en este blog.webp",
+      img: "/Doctor Ortopedista aplicando Infiltraciones en Rodilla.webp",
       fecha: "Diciembre 2024",
       titulo:
         "Infiltraciones de rodilla: Opciones y beneficios para la osteoartritis",
@@ -103,7 +103,7 @@ function Blogs({ URL }) {
       link: "/blogs/Como-saber-si-es-artritis-o-artrosis",
     },
     {
-      img: "/El DR Monge explica en su blog de forma breve todo sobre la lumbalgia.webp",
+      img: "/Doctor Ortopedista examinando una Lumbalgia en paciente.webp",
       fecha: "Febero 2025",
       titulo: "Lumbalgia: Tipos, Factores de Riesgo y Tratamientos ",
       texto:
@@ -111,7 +111,7 @@ function Blogs({ URL }) {
       link: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
     },
     {
-      img: "/Fractura-Humero-Proximal-Adultos-Mayores-Cuidados-Terapias-Tiempo-Recuperacion-Dr-Ricardo-Monge.webp",
+      img: "/Doctor haciendo examen para detectar una fractura Humero.webp",
       fecha: "Marzo 2025",
       titulo: "Fractura de humero proximal en adultos mayores ",
       texto:
@@ -119,7 +119,7 @@ function Blogs({ URL }) {
       link: "/blogs/fractura-de-humero-proximal-en-adultos-mayores",
     },
     {
-      img: "/cardblog14.webp",
+      img: "/Doctor Ortopedista detectando una Pseudoartrosis en Radiografia.webp",
       fecha: "Marzo 2025",
       titulo:
         "¿Es necesaria una segunda cirugía ortopédica por pseudoartrosis? ",
@@ -128,7 +128,7 @@ function Blogs({ URL }) {
       link: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
     },
     {
-      img: "/cardblog15.webp",
+      img: "/Doctor Ortopedista revisando para detectar una posible Fractura Oculta.webp",
       fecha: "Abril 2025",
       titulo:
         "¿El dolor persiste pero la radiografía dice que todo está bien? Podrías estar frente a una fractura oculta.",
@@ -137,7 +137,7 @@ function Blogs({ URL }) {
       link: "/blogs/fracturas-ocultas-diagnostico-tijuana",
     },
     {
-      img: "/cardblog16.webp",
+      img: "/Dolor de Rodilla Artroscopia Dr Ricardo Monge Tijuana.webp",
       fecha: "Abril 2025",
       titulo:
         "¿Dolor de Rodilla? Artroscopia para tratar el desgaste articular ",
@@ -182,7 +182,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/osteoporosis-a-silent-condition-affecting-half-the-population-over-50",
     },
     {
-      img: "/Realiza tus infiltraciones articulares con el Dr. Monge en Tijuana.webp",
+      img: "/Doctor Ortopedista aplicando Acido hialuronico.webp",
       fecha: "August 2024",
       titulo: "Hyaluronic Acid Injections for Knee Osteoarthritis Treatment",
       texto:
@@ -190,7 +190,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/knee-injections-with-hyaluronic-acid-for-knee-osteoarthritis-treatment",
     },
     {
-      img: "/Invierte en tu bienestar con un tratamiento adecuado para ti con el Dr. Monge.webp",
+      img: "/Doctor Ortopedista hablando sobre Tratamiento conservador vs Tradicional con paciente.webp",
       fecha: "September 2024",
       titulo: "Conservative Treatment vs Surgery for Herniated Disc",
       texto:
@@ -198,7 +198,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/conservative-treatment-vs-surgery-when-conservative-treatment-fails-and-requires-surgical-intervention-for-cervical-disc-herniation",
     },
     {
-      img: "/El Dr. Ricardo Monge te invita a leer el blog donde explica que es la ostesintesis y como puede fallar.webp",
+      img: "/Doctor Ortopedista explicando por que se dice que el cuerpo rechaza el material.webp",
       fecha: "October 2024",
       titulo: "Implant Rejection in Osteosynthesis",
       texto:
@@ -214,7 +214,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/bunions-symptoms-detection-and-types-of-surgery-to-remove-them",
     },
     {
-      img: "/El doctor Monge experto en infiltraciones te platica mas sobre ellas en este blog.webp",
+      img: "/Doctor Ortopedista aplicando Infiltraciones en Rodilla.webp",
       fecha: "December 2024",
       titulo: "Knee Injections: Options and Benefits for Osteoarthritis",
       texto:
@@ -239,7 +239,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/how-to-tell-if-its-arthritis-or-osteoarthritis",
     },
     {
-      img: "/El DR Monge explica en su blog de forma breve todo sobre la lumbalgia.webp",
+      img: "/Doctor Ortopedista examinando una Lumbalgia en paciente.webp",
       fecha: "February 2025",
       titulo: "Low Back Pain: Types, Risk Factors and Treatments",
       texto:
@@ -247,7 +247,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/low-back-pain-types-risk-factors-and-treatments",
     },
     {
-      img: "/Fractura-Humero-Proximal-Adultos-Mayores-Cuidados-Terapias-Tiempo-Recuperacion-Dr-Ricardo-Monge.webp",
+      img: "/Doctor haciendo examen para detectar una fractura Humero.webp",
       fecha: "March 2025",
       titulo: "Proximal Humerus Fracture in Elderly Adults",
       texto:
@@ -255,7 +255,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/proximal-humerus-fracture-in-older-adults",
     },
     {
-      img: "/cardblog14.webp",
+      img: "/Doctor Ortopedista detectando una Pseudoartrosis en Radiografia.webp",
       fecha: "March 2025",
       titulo: "Is a Second Orthopedic Surgery Needed for Pseudoartrosis?",
       texto:
@@ -263,7 +263,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/is-a-second-surgery-necessary-to-treat-pseudoarthrosis",
     },
     {
-      img: "/cardblog15.webp",
+      img: "/Doctor Ortopedista revisando para detectar una posible Fractura Oculta.webp",
       fecha: "April 2025",
       titulo:
         "Persistent Pain But Normal X-ray? You Might Have an Occult Fracture",
@@ -272,7 +272,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/hidden-fractures-diagnosis-tijuana",
     },
     {
-      img: "/cardblog16.webp",
+      img: "/Dolor de Rodilla Artroscopia Dr Ricardo Monge Tijuana.webp",
       fecha: "April 2025",
       titulo: "Knee Pain? Arthroscopy for Joint Wear Treatment",
       texto:
