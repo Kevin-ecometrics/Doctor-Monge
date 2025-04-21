@@ -1,0 +1,61 @@
+---
+import Footer from "@components/terminos/footer.astro";
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<section
+  class="bg-gradient-to-r from-blue-800 to-[#005692] flex items-center justify-center h-64 text-white"
+  aria-labelledby="terms-title"
+>
+  <h1 id="terms-title" class="text-4xl font-bold tracking-tight">
+    {isEnglish ? "Terms and Conditions" : "Términos y Condiciones"}
+  </h1>
+</section>
+
+<div class="flex flex-col">
+  <main class="flex-grow max-w-4xl mx-auto px-6 py-12 text-white">
+    <article class="space-y-8">
+      <p class="text-lg leading-relaxed">
+        {
+          isEnglish
+            ? "The mongeortopedia.com website contains direct contact with our customer service staff."
+            : "La página de mongeortopedia.com contiene el contacto directo con nuestro personal de atención al cliente."
+        }
+      </p>
+
+      <p class="border-t border-gray-500 pt-6 leading-relaxed">
+        {
+          isEnglish
+            ? "All reservations made on the website go directly to our reception schedule."
+            : "Toda reservación realizada en la página es directa a nuestra agenda en la recepción."
+        }
+      </p>
+
+      <p class="leading-relaxed">
+        {
+          isEnglish
+            ? "Appointments are confirmed by phone and must be attended by the patient within the period of 48 hrs to 24 hrs before the appointment."
+            : "Las citas son confirmadas por teléfono y deberán ser atendidas por el paciente en el periodo de 48 hrs a 24 hrs antes de la cita."
+        }
+      </p>
+
+      <p class="leading-relaxed">
+        {
+          isEnglish
+            ? "Unconfirmed appointments may be considered as canceled by the patient."
+            : "Citas no confirmadas podrán ser consideradas como canceladas por el paciente."
+        }
+      </p>
+
+      <p class="border-t border-gray-500 pt-6 leading-relaxed">
+        {
+          isEnglish
+            ? "Any situation regarding changes or refunds must be notified by email to pacientes@mongeortopedia.com, sending a description of the problem or reason for cancellation."
+            : "Toda situación que se presente por cambio o devolución deberá ser notificada por correo electrónico a pacientes@mongeortopedia.com, enviando una descripción del problema o razón de la cancelación."
+        }
+      </p>
+    </article>
+  </main>
+
+  <Footer URL={isEnglish} />
+</div>

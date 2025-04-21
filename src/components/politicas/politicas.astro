@@ -1,0 +1,174 @@
+---
+import Footer from "@components/politicas/footer.astro";
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<section
+  class="bg-gradient-to-r from-blue-800 to-[#005692] flex items-center justify-center h-64 text-white"
+  aria-labelledby="privacy-title"
+>
+  <h1 id="privacy-title" class="text-4xl font-bold tracking-tight">
+    {isEnglish ? "Privacy Notice" : "Aviso de Privacidad"}
+  </h1>
+</section>
+
+<div class="flex flex-col">
+  <main class="flex-grow max-w-4xl mx-auto px-6 py-12 text-white">
+    <article class="space-y-8 text-lg leading-relaxed">
+      <p class="font-semibold">
+        {
+          isEnglish
+            ? "This privacy notice explains how Monge Ortopedia ('we', 'our', or 'us') collects, processes, and protects information obtained through our website. We do not sell, share, or disclose your information to third parties, except as described in this notice."
+            : "Este aviso de privacidad explica cómo Monge Ortopedia ('nosotros', 'nuestro' o 'nos') recopila, procesa y protege la información obtenida a través de nuestro sitio web. No vendemos, compartimos ni divulgamos su información a terceros, excepto como se describe en este aviso."
+        }
+      </p>
+
+      <h2 class="text-2xl font-bold pt-8">
+        {isEnglish ? "Introduction" : "Introducción"}
+      </h2>
+      <p>
+        {
+          isEnglish
+            ? "We are committed to protecting your privacy and confidentiality. We understand that visitors to our site are concerned about their privacy, which is why we handle your personal information with the utmost care and security. Our privacy policy complies with the European Union's General Data Protection Regulation (GDPR)."
+            : "Estamos comprometidos a proteger su privacidad y confidencialidad. Entendemos que los visitantes de nuestro sitio están preocupados por su privacidad, y por eso tratamos su información personal con el máximo cuidado y seguridad. Nuestra política de privacidad cumple con el Reglamento General de Protección de Datos (GDPR) de la UE."
+        }
+      </p>
+
+      <h2 class="text-2xl font-bold pt-8">
+        {
+          isEnglish
+            ? "Legal Bases for Processing Your Data"
+            : "Bases Legales para el Procesamiento de sus Datos"
+        }
+      </h2>
+
+      <h3 class="text-xl font-semibold pt-4">
+        {
+          isEnglish
+            ? "1. Processing Based on Contractual Obligations"
+            : "1. Procesamiento Basado en Obligaciones Contractuales"
+        }
+      </h3>
+      <p>
+        {
+          isEnglish
+            ? "If you become a patient or agree to our terms and conditions, a contract is formed between you and us. We process your data to fulfill our contractual obligations, including sending appointments, reminders, and recommendations."
+            : "Si se convierte en paciente o acepta nuestros términos y condiciones, se forma un contrato entre usted y nosotros. Procesamos sus datos para cumplir con nuestras obligaciones contractuales, incluyendo el envío de citas, recordatorios y recomendaciones."
+        }
+      </p>
+
+      <h3 class="text-xl font-semibold pt-4">
+        {
+          isEnglish
+            ? "2. Processing Based on Your Consent"
+            : "2. Procesamiento Basado en su Consentimiento"
+        }
+      </h3>
+      <p>
+        {
+          isEnglish
+            ? "In cases where there is no contractual relationship, such as browsing the site or sending us inquiries, we request your consent to process personal information. You may withdraw your consent at any time by contacting us."
+            : "En los casos en los que no exista una relación contractual, como al navegar por el sitio o enviarnos consultas, solicitamos su consentimiento para procesar información personal. Siempre puede retirar su consentimiento comunicándose con nosotros."
+        }
+      </p>
+
+      <h3 class="text-xl font-semibold pt-4">
+        {
+          isEnglish
+            ? "3. Processing Based on Legal Obligations"
+            : "3. Procesamiento Basado en Obligaciones Legales"
+        }
+      </h3>
+      <p>
+        {
+          isEnglish
+            ? "We are legally required to process certain data, for example, to comply with tax, accounting, and medical obligations. In these cases, we use your information solely in compliance with those legal duties."
+            : "Estamos obligados por ley a procesar ciertos datos, por ejemplo, para cumplir con requerimientos fiscales, contables y médicos. En estos casos, utilizamos su información únicamente en cumplimiento de dichas obligaciones legales."
+        }
+      </p>
+
+      <h2 class="text-2xl font-bold pt-8">
+        {
+          isEnglish
+            ? "How We Use Your Information"
+            : "Cómo Usamos su Información"
+        }
+      </h2>
+      <p>
+        {
+          isEnglish
+            ? "We use the data you provide to send you communications, optimize website content, respond to your inquiries, and, if applicable, offer personalized orthopedic services. We do not share your information with unauthorized third parties."
+            : "Utilizamos los datos que proporciona para enviarle comunicaciones, optimizar el contenido del sitio web, responder sus consultas y, si aplica, ofrecerle servicios ortopédicos personalizados. No compartimos su información con terceros no autorizados."
+        }
+      </p>
+
+      <h2 class="text-2xl font-bold pt-8">
+        {
+          isEnglish
+            ? "Automatic Data Collection"
+            : "Recopilación Automática de Datos"
+        }
+      </h2>
+      <p>
+        {
+          isEnglish
+            ? "We use Google Analytics to analyze website usage and improve performance. This includes information such as approximate location, device type, visit duration, and pages viewed. This data is collected anonymously and is not used to personally identify you."
+            : "Utilizamos Google Analytics para analizar el uso del sitio web y mejorar su rendimiento. Esto incluye información como su ubicación aproximada, dispositivo, duración de visita y páginas consultadas. Esta información se recopila de manera anónima y no se utiliza para identificarlo personalmente."
+        }
+      </p>
+
+      <h2 class="text-2xl font-bold pt-8">
+        {isEnglish ? "Handling Complaints" : "Manejo de Quejas"}
+      </h2>
+      <p>
+        {
+          isEnglish
+            ? "If we receive a complaint about posted content or the way we collect data, we will investigate and remove the content if necessary. If you have any privacy concerns, please contact us."
+            : "Si recibimos una queja sobre el contenido publicado o la forma en que recopilamos datos, investigaremos y eliminaremos el contenido si es necesario. Si tiene alguna inquietud sobre su privacidad, no dude en escribirnos."
+        }
+      </p>
+
+      <h2 class="text-2xl font-bold pt-8">
+        {
+          isEnglish
+            ? "Communication and Data Storage"
+            : "Comunicación y Almacenamiento de Datos"
+        }
+      </h2>
+      <p>
+        {
+          isEnglish
+            ? "When you contact us by phone, email, or through a site form, we collect the data you provide and store it securely. This information may include your name, email, phone number, and reason for contact."
+            : "Cuando nos contacta, ya sea por teléfono, correo electrónico o mediante un formulario del sitio, recopilamos los datos que nos proporciona y los almacenamos de manera segura. Esta información puede incluir nombre, correo electrónico, número telefónico y motivo de contacto."
+        }
+      </p>
+      <p>
+        {
+          isEnglish
+            ? "We securely retain this information online for a maximum period of three months. We may also store it as part of a medical record within our medical management system, if applicable."
+            : "Conservamos esta información de forma segura durante un período máximo de tres meses en línea. También podemos conservarla como expediente clínico dentro de nuestro sistema de gestión médica, si aplica."
+        }
+      </p>
+
+      <h2 class="text-2xl font-bold pt-8">
+        {isEnglish ? "Contact Us" : "Contáctenos"}
+      </h2>
+      <p>
+        {
+          isEnglish
+            ? "If you have questions about this privacy notice or wish to exercise your rights of access, correction, cancellation, or objection, you may contact us directly:"
+            : "Si tiene preguntas sobre este aviso de privacidad o desea ejercer sus derechos de acceso, rectificación, cancelación u oposición, puede contactarnos directamente:"
+        }
+      </p>
+      <p class="text-base">
+        📧 pacientes@mongeortopedia.com<br />
+        🌐 <a
+          href="https://mongeortopedia.com"
+          class="text-blue-300 hover:underline">https://mongeortopedia.com</a
+        >
+      </p>
+    </article>
+  </main>
+
+  <Footer URL={isEnglish} />
+</div>
