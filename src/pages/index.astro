@@ -105,6 +105,12 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
         overflow-x: hidden;
       }
 
+      .sticky {
+        position: sticky;
+        background-color: rgba(0, 0, 0, 0.5); /* Asegúrate de que sea visible */
+        padding: 1rem;
+      }
+
       /* scrollbar */
       .scroll-menu {
         position: fixed;

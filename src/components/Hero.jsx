@@ -15,13 +15,24 @@ function Hero({ URL }) {
   return (
     <div className="h-full">
       <main
-        className="px-16 py-28 lg:py-0 lg:h-screen"
+        className="px-16 py-28 lg:py-0 lg:h-screen relative"
         style={{
           backgroundImage: "url('/background.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
+        <div className="fixed z-50 bottom-6 left-[7vh] font-bold text-xl hidden md:block">
+          {URL ? (
+            <a href="/" className="cursor-pointer hover:text-blue-500">
+              ES
+            </a>
+          ) : (
+            <a href="/en/" className="cursor-pointer hover:text-blue-500">
+              EN
+            </a>
+          )}
+        </div>
         <div className="flex justify-center items-start lg:h-screen flex-col lg:px-16">
           <section ref={ref} className="z-10">
             <img

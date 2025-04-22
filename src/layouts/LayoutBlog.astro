@@ -11,6 +11,8 @@ import "@fontsource-variable/inter";
 import Navbar from "../components/blogs/navbar";
 
 const { title, description, keywords } = Astro.props;
+
+const URL = Astro.url.pathname.startsWith("/en/");
 ---
 
 <!doctype html>
@@ -132,7 +134,7 @@ const { title, description, keywords } = Astro.props;
         src="https://www.facebook.com/tr?id=487515010536352&ev=PageView&noscript=1"
       /></noscript
     >
-    <Navbar client:load />
+    <Navbar client:load URL={URL} />
     <slot />
     <style is:global>
       html {

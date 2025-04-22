@@ -7,6 +7,8 @@ import Hamburger from "./icons/Hamburger.astro";
 import { MdLanguage } from "react-icons/md";
 
 const URL = Astro.url.pathname.startsWith("/en/");
+
+const YEAR = new Date().getFullYear();
 ---
 
 <nav
@@ -116,8 +118,15 @@ const URL = Astro.url.pathname.startsWith("/en/");
     </a>
   </div>
   <footer class="flex flex-col p-4 bottom-0">
-    <h1 class="text-[15px]">© Doctor Monge. 2024</h1>
-    <h1 class="text-[15px]">Todos los derechos reservados</h1>
+
+    <h1 class="text-[15px]">© Doctor Monge. {YEAR}</h1>
+    {
+      URL ? (
+      <h1 class="text-[15px]">All rights reserved</h1>
+    ) : (
+      <h1 class="text-[15px]">Todos los derechos reservados</h1>
+    ) 
+    }
   </footer>
 </aside>
 
@@ -213,7 +222,7 @@ const URL = Astro.url.pathname.startsWith("/en/");
     const backButton = document.getElementById("back-button");
     if (backButton) {
       backButton.addEventListener("click", () => {
-        window.location.href = "/";
+        window.location.href = URL ? "/en/" : "/";
       });
     }
   });

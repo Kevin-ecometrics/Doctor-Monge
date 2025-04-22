@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({ URL }) => {
   useEffect(() => {
     const backButton = document.getElementById("back-button");
     if (backButton) {
       backButton.addEventListener("click", () => {
-        window.location.href = "/";
+        window.location.href = URL ? "/en/" : "/";
       });
     }
-  }, []);
+  }, [URL]);
 
   return (
     <nav className="flex justify-start items-center fixed px-4 sm:px-8 md:px-14 py-4 sm:py-8 z-50">
