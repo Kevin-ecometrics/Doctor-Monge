@@ -424,6 +424,7 @@ function Blogs({ URL }) {
                     src={item.img}
                     alt={item.titulo}
                     title={item.titulo}
+                    loading="lazy"
                     className="transition-opacity duration-200 group-hover:opacity-50"
                   />
                   <p className="absolute inset-0 flex items-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">

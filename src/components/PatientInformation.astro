@@ -109,11 +109,13 @@ const Information_en = [
                 <a href={item.link} class="relative block w-32 h-32">
                   <img
                     src={item.icon}
+                    loading="lazy"
                     alt={item.title}
                     class="absolute top-0 left-0 w-full h-full transition-opacity duration-300 hover:opacity-0"
                   />
                   <img
                     src={item.hoverIcon}
+                    loading="lazy"
                     alt={item.title}
                     class="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100"
                   />

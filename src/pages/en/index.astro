@@ -62,7 +62,7 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     </div>
 
     <section id="section1" class="snap-start">
-      <Hero client:load URL={isEnglish} />
+      <Hero client:visible URL={isEnglish} />
     </section>
     <section id="section2" class="snap-start">
       <Skills URL={isEnglish} />

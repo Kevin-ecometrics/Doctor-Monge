@@ -220,6 +220,7 @@ function Contact({ URL }) {
                 <img
                   src="/Tiktok.svg"
                   alt={URL ? "TikTok logo" : "Logo de Tiktok"}
+                  loading="lazy"
                   title={URL ? "TikTok" : "Logo de Instagram"}
                   className="w-8"
                 />
@@ -231,6 +232,7 @@ function Contact({ URL }) {
                 <img
                   src="/Instagram.svg"
                   alt={URL ? "Instagram logo" : "Logo de Instagram"}
+                  loading="lazy"
                   title={URL ? "Instagram" : "Logo de Instagram"}
                   className="w-8"
                 />
@@ -300,8 +302,8 @@ function Contact({ URL }) {
                   ? "Sending..."
                   : "Enviando..."
                 : URL
-                  ? "Schedule appointment"
-                  : "Hacer cita"}
+                ? "Schedule appointment"
+                : "Hacer cita"}
             </button>
           </form>
           <Toaster position="top-right" />

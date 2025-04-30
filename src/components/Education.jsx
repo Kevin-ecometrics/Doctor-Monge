@@ -104,7 +104,7 @@ const Education = ({ URL }) => {
           </button>
         </div>
       </div>
-      {(URL ? educationData_en : educationData_en).map((item, index) => (
+      {currentData.map((item, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0, y: -100 }}
@@ -115,6 +115,8 @@ const Education = ({ URL }) => {
           <div>
             <img
               src={hoverIndex === index ? item.hoverLogo : item.logo}
+              loading="eager"
+              fetchPriority="high"
               className="w-24"
               alt={item.alt}
               onMouseEnter={() => setHoverIndex(index)}
@@ -146,11 +148,13 @@ const Education = ({ URL }) => {
             <div className="flex lg:flex-row flex-col justify-center items-center gap-8">
               <img
                 src="/Ricardo Monge es un medico certificado por las mejores universidades de Mexico.png"
+                loading="lazy"
                 alt="Ricardo monge concluyo sus estudios de forma destacable en las mejores universidades de medicina en México"
                 className="mx-auto size-72  lg:size-full  "
               />
               <img
                 src="/Ricardo Monge  especialista en cirugia y manejo de lesiones muscoloesqueleticas.png"
+                loading="lazy"
                 alt="Ricardo monge egresó como médico especializado en lesiones musculo esqueléticas"
                 className="mx-auto size-72 lg:size-full"
               />

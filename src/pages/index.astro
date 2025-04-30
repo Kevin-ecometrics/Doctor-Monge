@@ -63,7 +63,7 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     </div>
 
     <section id="section1" class="snap-start">
-      <Hero client:load URL={isEnglish} />
+      <Hero client:idle URL={isEnglish} />
     </section>
     <section id="section2" class="snap-start">
       <Skills URL={isEnglish} />
@@ -72,22 +72,22 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
       <PatientInformation URL={isEnglish} />
     </section>
     <section id="section4" class="snap-start">
-      <Success client:visible URL={isEnglish} />
+      <Success client:idle URL={isEnglish} />
     </section>
     <section id="section5" class="snap-start">
-      <Education client:visible URL={isEnglish} />
+      <Education client:idle URL={isEnglish} />
     </section>
     <section id="section6" class="snap-start">
-      <Testimonials client:visible URL={isEnglish} />
+      <Testimonials client:idle URL={isEnglish} />
     </section>
     <section id="section7" class="snap-start">
-      <Partners client:visible URL={isEnglish} />
+      <Partners client:idle URL={isEnglish} />
     </section>
     <section id="section8" class="snap-start">
       <Blogs client:only="react" URL={isEnglish} />
     </section>
     <section id="section9" class="snap-start">
-      <Contact client:visible URL={isEnglish} />
+      <Contact client:idle URL={isEnglish} />
     </section>
     <div class="scroll-menu">
       <div class="scroll-bar"></div>
@@ -107,7 +107,7 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
       .sticky {
         position: sticky;
-        background-color: rgba(0, 0, 0, 0.5); /* Asegúrate de que sea visible */
+        background-color: rgba(0, 0, 0, 0.5); /* Asegúrate de que sea idle */
         padding: 1rem;
       }
 
