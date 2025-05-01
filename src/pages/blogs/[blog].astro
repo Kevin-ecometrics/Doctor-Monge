@@ -79,6 +79,11 @@ export function getStaticPaths() {
         blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
       },
     },
+    {
+      params: {
+        blog: "la-mejor-dupla-ortopedica-en-tijuana",
+      },
+    },
   ];
 }
 
@@ -285,6 +290,17 @@ const blogs = [
     keywords: "artroscopia de rodilla, desgaste articular, tratamiento",
     id: 16,
   },
+  {
+    titulo: "la-mejor-dupla-ortopedica-en-tijuana",
+    ruta: "/blogs/la-mejor-dupla-ortopedica-en-tijuana",
+    blogTitle: "La mejor dupla ortopédica en Tijuana",
+    date: "Abril 2025",
+    title: "La mejor dupla ortopédica en Tijuana",
+    description:
+      "Conoce al Dr. Ricardo Monge y su equipo de especialistas en ortopedia y traumatología en Tijuana. Juntos, ofrecen atención integral para lesiones musculoesqueléticas.",
+    keywords: "dupla ortopédica, Tijuana, atención integral",
+    id: 17,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -416,6 +432,12 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   content = "Blog16";
   blogTitle =
     "Artroscopia de Rodilla: La Solución Rápida para el Desgaste Articular";
+} else if (blog === "la-mejor-dupla-ortopedica-en-tijuana") {
+  image =
+    "/La mejor dupla ortopedica en Tijuana Dr Monge Orotpedista Traumatologo.webp";
+  date = "Abril 2025";
+  content = "Blog17";
+  blogTitle = "La mejor dupla ortopédica en Tijuana";
 } else {
   image = "/fondoDefault.png";
 }

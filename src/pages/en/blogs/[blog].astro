@@ -79,6 +79,11 @@ export function getStaticPaths() {
         blog: "knee-pain-arthroscopy-to-treat-joint-wear",
       },
     },
+    {
+      params: {
+        blog: "the-best-orthopedic-duo-in-tijuana",
+      },
+    },
   ];
 }
 
@@ -273,6 +278,17 @@ const blogs = [
     keywords: "knee arthroscopy, joint wear, treatment",
     id: 16,
   },
+  {
+    titulo: "the-best-orthopedic-duo-in-tijuana",
+    ruta: "/en/blogs/the-best-orthopedic-duo-in-tijuana",
+    blogTitle: "The Best Orthopedic Duo in Tijuana",
+    date: "May 2025",
+    title: "The Best Orthopedic Duo in Tijuana",
+    description:
+      "Discover the best orthopedic duo in Tijuana, Dr. Ricardo Monge and Dr. Luis Monge, and how they can help you with your orthopedic needs.",
+    keywords: "orthopedic duo, Tijuana, orthopedic care",
+    id: 17,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -394,6 +410,12 @@ if (blog === "anterior-cruciate-ligament-injury") {
   date = "April 2025";
   content = "Blog16";
   blogTitle = "Knee Arthroscopy: The Quick Solution for Joint Wear";
+} else if (blog === "the-best-orthopedic-duo-in-tijuana") {
+  image =
+    "/La mejor dupla ortopedica en Tijuana Dr Monge Orotpedista Traumatologo.webp";
+  date = "April 2025";
+  content = "Blog17";
+  blogTitle = "The Best Orthopedic Duo in Tijuana";
 } else {
   image = "/fondoDefault.png";
 }

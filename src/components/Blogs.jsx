@@ -145,6 +145,14 @@ function Blogs({ URL }) {
         "El Dr. Ricardo Monge, experto en artroscopia de rodilla en Tijuana, responde tus dudas sobre la cirugía de mínima invasión con máximos resultados. ",
       link: "/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
     },
+    {
+      img: "/la mejor dupla ortopedica en Tijuana Doctores ortopedistas Traumatologos.webp",
+      fecha: "Abril 2025",
+      titulo: "La mejor dupla ortopédica en Tijuana",
+      texto:
+        "En este blog te platicamos sobre la excelencia que se transmite: Padre e hijo, Ricardo Monge López y Ricardo Monge Romero, líderes en cirugía mínimamente invasiva y soluciones articulares innovadoras.",
+      link: "/blogs/la-mejor-dupla-ortopedica-en-tijuana",
+    },
   ];
 
   const blogItem_en = [
@@ -278,6 +286,14 @@ function Blogs({ URL }) {
       texto:
         "Dr. Ricardo Monge, knee arthroscopy expert in Tijuana, answers your questions about this minimally invasive surgery with maximum results.",
       link: "/en/blogs/knee-pain-arthroscopy-to-treat-joint-wear",
+    },
+    {
+      img: "/la mejor dupla ortopedica en Tijuana Doctores ortopedistas Traumatologos.webp",
+      fecha: "April 2025",
+      titulo: "The best orthopedic duo in Tijuana",
+      texto:
+        "In this blog we tell you about the excellence that is transmitted: Father and son, Ricardo Monge López and Ricardo Monge Romero, leaders in minimally invasive surgery and innovative joint solutions.",
+      link: "/en/blogs/the-best-orthopedic-duo-in-tijuana",
     },
   ];
 

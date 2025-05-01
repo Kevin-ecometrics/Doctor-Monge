@@ -39,7 +39,7 @@ const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
                 {NextLink && (
                   <li>
                     <a
-                      href={NextLink}
+                      href={`${URL ? "/en/blogs/" : "/blogs/"}${NextLink}/`}
                       class="flex items-center gap-2 font-medium px-6 py-2 rounded-full
                            bg-gray-800 hover:bg-blue-600 transition-all duration-300
                            hover:shadow-lg hover:translate-y-[-2px] w-fit"
@@ -52,7 +52,7 @@ const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
                 {PreviousLink && (
                   <li>
                     <a
-                      href={PreviousLink}
+                      href={`${URL ? "/en/blogs/" : "/blogs/"}${PreviousLink}/`}
                       class="flex items-center gap-2 font-medium px-6 py-2 rounded-full
                            bg-gray-800 hover:bg-blue-600 transition-all duration-300
                            hover:shadow-lg hover:translate-y-[-2px] w-fit"
@@ -70,7 +70,7 @@ const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
                 {NextLink && (
                   <li>
                     <a
-                      href={NextLink}
+                      href={`${URL ? "/en/blogs/" : "/blogs/"}${NextLink}/`}
                       class="flex items-center gap-2 font-medium px-6 py-2 rounded-full
                            bg-gray-800 hover:bg-blue-600 transition-all duration-300
                            hover:shadow-lg hover:translate-y-[-2px]"
@@ -83,7 +83,7 @@ const { URL, PreviousLink, PreviousName, NextLink, NextName } = Astro.props;
                 {PreviousLink && (
                   <li>
                     <a
-                      href={PreviousLink}
+                      href={`${URL ? "/en/blogs/" : "/blogs/"}${PreviousLink}/`}
                       class="flex items-center gap-2 font-medium px-6 py-2 rounded-full
                            bg-gray-800 hover:bg-blue-600 transition-all duration-300
                            hover:shadow-lg hover:translate-y-[-2px]"

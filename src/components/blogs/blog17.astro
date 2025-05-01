@@ -1,0 +1,333 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/La mejor dupla ortopedica en Tijuana  Dr Monge Ortopedista traumatologo.webp";
+import Image2 from "@public/La mejor dupla ortopedica Dr Monge Ortopedista traumatologo.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+];
+
+const blogActual = "la-mejor-dupla-ortopedica-en-tijuana";
+
+const id = 17;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-16 font-semibold">
+      {
+        isEnglish
+          ? "Orthopedic Surgeons in Tijuana with over 40 years of experience: Father and son united to provide you with top-tier medical care. Ricardo Monge López and Ricardo Monge Romero"
+          : "Ortopedistas en Tijuana con más de 40 años de experiencia: Padre e hijo unidos para brindarte atención médica de primer nivel.  Ricardo Monge López y Ricardo Monge Romero"
+      }
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-16 font-bold">
+      {
+        isEnglish
+          ? "From minimally invasive surgery and joint replacements to conservative in-office treatments, you can trust you'll be in the best hands to recover your mobility, independence and quality of life."
+          : "Desde cirugía mínimamente invasiva y reemplazos articulares hasta tratamientos conservadores en consultorio, puedes confiar en que estarás en las mejores manos para recuperar tu movilidad, independencia y calidad de vida. "
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {
+        isEnglish
+          ? "Dr. Ricardo Luis Monge López (Father)"
+          : "El Dr. Ricardo Luis Monge López  (Padre)"
+      }
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Renowned expert in Spine Surgery, with extensive experience in: Hip and knee joint replacement, ACL reconstruction, knee, hip and shoulder arthroscopy, and minimally invasive foot and spine surgery."
+          : "Destacado experto en Cirugía de Columna, con una amplia experiencia en: Reemplazo articular de cadera y rodilla, ligamento cruzado, artroscopía de rodilla, cadera y hombro y cirugía mínimamente invasiva de pie y columna.  "
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Previously served as president of the Mexican Society of Spine Endoscopy, president of the College of Orthopedics and Traumatology of Tijuana, and delegate for Baja California of the Mexican Council of Orthopedics and Traumatology."
+          : "Fungiendo previamente como presidente de Sociedad mexicana de endoscopia de columna, A.C, presidente del Colegio de Ortopedia y traumatología de Tijuana, A.C.  y delegado por Baja California del Consejo Mexicano de Ortopedia y Ttraumatología, A.C.  "
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Additionally, he has been a national and international speaker on Spinal Surgery and Minimally Invasive Foot Surgery topics in Mexico, United States, Spain, Germany, and Colombia."
+          : "Además, ha sido conferencista nacional e internacional de temas de Cirugía de Columna Vertebral y Cirugía Mínima Invasiva de Pies en México, Estados Unidos, España, Alemania, Colombia.  "
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {
+        isEnglish
+          ? "Dr. Ricardo Luis Monge Romero (Son)"
+          : "El Dr. Ricardo Luis Monge Romero (Hijo) "
+      }
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Expert in hip and knee arthroplasty, shoulder and knee arthroscopy, and spine surgery, with focus on complex joint injuries. Member of the Mexican Federation of Colleges of Orthopedics and Traumatology, Mexican Council of Orthopedics and Traumatology, Arthroscopy Association of North America, American Academy of Orthopaedic Surgeons, and the Mexican Association of Reconstructive Joint Surgery and Arthroscopy."
+          : "Es un experto en artroplastia de cadera y rodilla, artroscopia de hombro y rodilla y cirugía de columna, con enfoque en lesiones articulares complejas. Miembro  de la Federación Mexicana de Colegios de Ortopedia y Traumatología A.C. , del Consejo Mexicano de Ortopedia y Traumatología, del Arthroscopy Association of North America, American Academy of Orthopaedic Surgeons y la Asociacion Mexicana de Cirugia Reconstructiva Articular y Artroscopia, A. C   "
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Together they perform high-complexity surgeries, undoubtedly an expert duo that puts all their knowledge and experience into action for the health of their patients. Additionally, they have a highly trained surgical team for successful outcomes and recovery."
+          : "Juntos realizan cirugías de alto grado de complejidad, sin duda una dupla de expertos que ponen todos sus conocimientos y experiencia en acción en pro de la salud de sus pacientes. Además, cuentan con un equipo quirúrgico altamente capacitado para resultados placenteros y una recuperación exitosa.   "
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Their discipline and passion for evolution leads them to practice medicine with the highest standards. They reinforce their knowledge by regularly attending conferences and specialized meetings:"
+          : "Su disciplina y pasión por evolucionar los lleva a practicar la medicina con los más altos estándares. Refuerzan sus conocimientos asistiendo regularmente a conferencias y encuentros especializados:   "
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <ol class="list-decimal list-inside text-xl">
+      <li class="text-white mb-4 font-bold">
+        {
+          isEnglish
+            ? "AAOS 2025 (one of the most important orthopedic congresses in the world)."
+            : "AAOS 2025 (uno de los congresos ortopédicos más importantes del mundo). "
+        }
+      </li>
+      <li class="text-white mb-4 font-bold">
+        {
+          isEnglish
+            ? "Shoulder and knee arthroscopic surgery course in China, invited by the Silk Road Health International Training Program (organized by Bio Advance Med, AK Medical Institute, Delta Hospital and China International Cultural Exchange Center)."
+            : "Curso de cirugía artroscópica de hombro y rodilla en China, invitados por el Programa Internacional de Capacitación Silk Road Health (organizado por Bio Advance Med, Instituto AK Medical, Delta Hospital y el Centro Internacional de Intercambio Cultural de China). "
+        }
+      </li>
+    </ol>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish
+          ? "The best orthopedic duo in Tijuana - Dr. Monge Orthopedic Trauma Surgeon"
+          : "La mejor dupla ortopedica en Tijuana  Dr Monge Ortopedista traumatologo"}
+        title={isEnglish
+          ? "The best orthopedic duo in Tijuana - Dr. Monge Orthopedic Trauma Surgeon"
+          : "La mejor dupla ortopedica en Tijuana  Dr Monge Ortopedista traumatologo"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Together they have written clinical cases such as for the Mexican Association of Joint Reconstruction and Arthroscopy Surgery (AMECRA) in the April 2025 gazette"
+          : "Juntos han escrito casos clínicos como en la Asociación Mexicana de Cirugía y Reconstrucción Articular y Artroscopia A.C. (AMECRA) en la gaceta de abril 2025 "
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-2xl mb-16 font-bold text-white">
+      {isEnglish ? "We invite you to read:" : "Te invitamos a leer: "}
+    </h3>
+  </Observer>
+  <FichaPDF
+    title={isEnglish ? "Monge Clinical Case.pdf" : "Caso clinico Monge.pdf"}
+    pdf="/caso clinico monge.pdf"
+    client:only="react"
+  />
+  <Observer client:visible>
+    <h3 class="text-xl mb-16 font-bold mt-8">
+      {
+        isEnglish
+          ? "Undoubtedly, what distinguishes this orthopedic duo besides their cutting-edge procedures are their firm values and principles that allow them to build a solid and transparent relationship with each patient"
+          : "Sin duda algo que distingue a la dupla ortopédica además de sus procedimientos de vanguardia, son sus firmes valores y principios que les permite construir una relación sólida y con transparencia con cada paciente"
+      }
+    </h3>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "In their practice they seek excellence by providing:"
+          : "Dentro de su práctica buscan la excelencia proporcionando: "
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-xl mb-8 font-semibold text-white">
+      {
+        isEnglish
+          ? "Honest and committed care: Providing accessible information, being decisive and empathetic."
+          : " Atención honesta y comprometida:  Brindando información accesible, siendo resolutivos y empáticos. "
+      }
+    </h4>
+    <h4 class="text-xl mb-8 font-semibold text-white">
+      {
+        isEnglish
+          ? "Strong values: They prioritize wellbeing, dignifying each case with respect and warmth"
+          : "Valores firmes: Priorizan el bienestar, dignificando cada caso con respeto y calidez "
+      }
+    </h4>
+    <h4 class="text-xl mb-8 font-semibold text-white">
+      {
+        isEnglish
+          ? "Community: They seek to educate and raise awareness, sharing knowledge so their patients and general public can make informed decisions about their health."
+          : "Comunidad: Buscan educar y concientizar, compartiendo conocimiento para que sus pacientes y público general tome decisiones informadas sobre su salud.  "
+      }
+    </h4>
+  </Observer>
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish
+          ? "The best orthopedic duo Dr. Monge Orthopedic Trauma Surgeon"
+          : "La mejor dupla ortopedica Dr Monge Ortopedista traumatologo "}
+        title={isEnglish
+          ? "The best orthopedic duo Dr. Monge Orthopedic Trauma Surgeon"
+          : "La mejor dupla ortopedica Dr Monge Ortopedista traumatologo "}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-8 font-semibold">
+      {
+        isEnglish
+          ? "Why choose your surgery and treatment with Drs. Ricardo Monge López and Ricardo Monge Romero?"
+          : "¿Por qué elegir tu cirugía y tratamiento con los Doctores Ricardo Monge López y Ricardo Monge Romero? "
+      }
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Precise diagnoses and customized strategies from conservative treatment to complex surgeries. Transparency by providing information and tools that allow you to understand and manage your condition."
+          : "Diagnósticos precisos y estrategias a tu medida desde tratamiento conservador a cirugías complejas  Transparencia brindando información y herramientas que te permitan entender y manejar tu condición. "
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Transparency by providing information and tools that allow you to understand and manage your condition."
+          : "ransparencia brindando información y herramientas que te permitan entender y manejar tu condición."
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "If you would like to schedule a consultation with either doctor for evaluation, they are located in the Torre Norte 2 building, 10 minutes from the San Ysidro-Tijuana border."
+          : "Si te gustaría agendar una consulta con alguno de los doctores para valoración, se encuentran en el edificio Torre Norte 2, a 10 minutos de la línea San Ysidro- Tijuana. "
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-8 font-semibold">
+      {
+        isEnglish
+          ? "Your health in the best hands with 4 decades of experience"
+          : "Tu salud en las mejores manos con 4 décadas de experiencia  "
+      }
+    </h2>
+  </Observer>
+</article>
+<section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+  <!-- <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  /> -->
+
+  <Form client:visible blogs={blogsRutas} blogActual={blogActual} idForm={id} />
+</section>
+<Footer
+  URL={isEnglish}
+  PreviousLink={isEnglish
+    ? "knee-pain-arthroscopy-to-treat-joint-wear"
+    : "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular"}
+  PreviousName={isEnglish
+    ? "Knee Pain? Arthroscopy to Treat Articular Wear"
+    : "La artroscopia para tratar el desgaste articular"}
+/>

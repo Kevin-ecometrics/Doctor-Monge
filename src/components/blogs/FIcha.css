@@ -1,0 +1,25 @@
+/* Estilo para navegadores modernos */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar */
+    height: 12px; /* Altura del scrollbar horizontal */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #005692; /* Color del scrollbar */
+    border-radius: 12px; /* Bordes redondeados */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #00457a; /* Color al pasar el mouse */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Color del fondo del track */
+    border-radius: 12px;
+  }
+  
+  /* Estilo para Firefox */
+  * {
+    scrollbar-color: #005692 #f0f0f0; /* Color del scrollbar y del track */
+    scrollbar-width: thin; /* Grosor del scrollbar */
+  }
