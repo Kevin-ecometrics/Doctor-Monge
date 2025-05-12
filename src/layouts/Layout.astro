@@ -117,6 +117,7 @@ const { title, description, keywords } = Astro.props;
         "name": "Dr Ricardo Monge",
         "url": "https://mongeortopedia.com/",
         "specialty": "Traumatólogo ortopedista",
+        "medicalSpecialty": "Orthopedics",
         "description": "Soy traumatólogo ortopedista, especialista en lesiones articulares, reemplazo de cadera, rodilla, patologías de hombro y cirugía de columna en Tijuana B.C.",
         "telephone": "+52 664 976 3510",
         "email": "pacientes@mongeortopedia.com",
@@ -126,9 +127,9 @@ const { title, description, keywords } = Astro.props;
           "addressLocality": "Tijuana",
           "addressRegion": "Baja California",
           "postalCode": "22010",
-          "addressCountry": "MX",
-          "openingHours": "Mo-Fr 10:00-18:00"
+          "addressCountry": "MX"
         },
+        "openingHours": "Mo-Fr 10:00-18:00",
         "sameAs": [
           "https://www.facebook.com/drmonge.ortho",
           "https://www.instagram.com/drmonge.ortho",
@@ -206,50 +207,30 @@ const { title, description, keywords } = Astro.props;
                 "name": "Reducción ortopédica e inmovilización de fracturas y/o luxaciones"
               }
             }
-          ],
-          "alumniOf": [
-            {
-              "@type": "EducationalOrganization",
-              "name": "Universidad Xochicalco",
-              "url": "https://www.xochicalco.edu.mx"
-            },
-            {
-              "@type": "EducationalOrganization",
-              "name": "Universidad Nacional Autónoma de México",
-              "url": "https://www.unam.mx"
-            }
-          ],
-          "award": [
-            {
-              "@type": "Award",
-              "name": "4to. Lugar Nacional FEMECOT 2022",
-              "description": "Realicé Investigación de Incidencia de lesión del ligamento nucal en esguince cervical valorado por ultrasonido en el Hospital General del Estado de Sonora para mi certificación como médico especialista en traumatología y ortopedia",
-              "dateReceived": "2022"
-            }
           ]
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Dr Ricardo Monge",
-        "description": "Soy traumatólogo ortopedista, especialista en lesiones articulares, reemplazo de cadera, rodilla, patologías de hombro y cirugía de columna en Tijuana B.C.",
-        "medicalSpecialty": "Orthopedics",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Fray Servando Teresa de Mier 1351-Interior 809-810, Zona Urbana Rio Tijuana",
-          "addressLocality": "Tijuana",
-          "addressRegion": "Baja California",
-          "postalCode": "22010",
-          "addressCountry": "MX"
         },
-        "telephone": "+52 664 976 3510",
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "Universidad Xochicalco",
+            "url": "https://www.xochicalco.edu.mx"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "Universidad Nacional Autónoma de México",
+            "url": "https://www.unam.mx"
+          }
+        ],
+        "award": {
+          "@type": "Award",
+          "name": "4to. Lugar Nacional FEMECOT 2022",
+          "description": "Realicé Investigación de Incidencia de lesión del ligamento nucal en esguince cervical valorado por ultrasonido en el Hospital General del Estado de Sonora para mi certificación como médico especialista en traumatología y ortopedia",
+          "dateReceived": "2022"
+        },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5",
-          "reviewCount": "4",
+          "reviewCount": "9",
           "bestRating": "5",
           "worstRating": "1"
         },
@@ -257,11 +238,8 @@ const { title, description, keywords } = Astro.props;
           {
             "@type": "Review",
             "datePublished": "2023-01-15",
-            "reviewBody": "Definitivamente una de las mejores consultas a las que hemos asistido, mi madre esta pasando por un proceso largo de recuperacion y es grato encontrarse con personas que aman su profesion como es el doctor Ricardo.",
-            "author": {
-              "@type": "Person",
-              "name": "Surplus EAC"
-            },
+            "reviewBody": "Definitivamente una de las mejores consultas a las que hemos asistido...",
+            "author": { "@type": "Person", "name": "Surplus EAC" },
             "reviewRating": {
               "@type": "Rating",
               "ratingValue": "5",
@@ -271,11 +249,8 @@ const { title, description, keywords } = Astro.props;
           {
             "@type": "Review",
             "datePublished": "2023-02-20",
-            "reviewBody": "El Dr. Ricardo Monge Romero ofrece una atención al cliente excepcional, combinada con un amplio conocimiento en traumatología.",
-            "author": {
-              "@type": "Person",
-              "name": "Mario Ortiz"
-            },
+            "reviewBody": "El Dr. Ricardo Monge Romero ofrece una atención al cliente excepcional...",
+            "author": { "@type": "Person", "name": "Mario Ortiz" },
             "reviewRating": {
               "@type": "Rating",
               "ratingValue": "5",
@@ -285,11 +260,8 @@ const { title, description, keywords } = Astro.props;
           {
             "@type": "Review",
             "datePublished": "2023-03-10",
-            "reviewBody": "Nos gustó mucho su trato y el tratamiento que nos dio. Mi hija evolucionó favorablemente.",
-            "author": {
-              "@type": "Person",
-              "name": "Alejandra Monraz"
-            },
+            "reviewBody": "Nos gustó mucho su trato y el tratamiento que nos dio...",
+            "author": { "@type": "Person", "name": "Alejandra Monraz" },
             "reviewRating": {
               "@type": "Rating",
               "ratingValue": "5",
@@ -298,11 +270,8 @@ const { title, description, keywords } = Astro.props;
           },
           {
             "@type": "Review",
-            "reviewBody": "Un doctor al que le importan al 100% sus pacientes y se toma el tiempo de explicar los tratamientos y como seguirlos para mejorar la salud de los mismos.",
-            "author": {
-              "@type": "Person",
-              "name": "Adrian Pliego"
-            },
+            "reviewBody": "Un doctor al que le importan al 100% sus pacientes...",
+            "author": { "@type": "Person", "name": "Adrian Pliego" },
             "reviewRating": {
               "@type": "Rating",
               "ratingValue": "5",
@@ -311,11 +280,8 @@ const { title, description, keywords } = Astro.props;
           },
           {
             "@type": "Review",
-            "reviewBody": "Excelente doctor, explica todo muy bien y es muy atento. Todo al 100%.",
-            "author": {
-              "@type": "Person",
-              "name": "Denisse Limon"
-            },
+            "reviewBody": "Excelente doctor, explica todo muy bien y es muy atento...",
+            "author": { "@type": "Person", "name": "Denisse Limon" },
             "reviewRating": {
               "@type": "Rating",
               "ratingValue": "5",
@@ -324,11 +290,8 @@ const { title, description, keywords } = Astro.props;
           },
           {
             "@type": "Review",
-            "reviewBody": "Excelente Dr, muy profesional, te brinda la mejor atención y te explica paso a paso cada cosa responde todas las dudas que tengas, es muy amable, super recomendado, a demás las instalaciones están muy bonitas y muy limpias 100 %recomendado 🙂",
-            "author": {
-              "@type": "Person",
-              "name": "MICHELLE MORENO"
-            },
+            "reviewBody": "Excelente Dr, muy profesional, te brinda la mejor atención...",
+            "author": { "@type": "Person", "name": "MICHELLE MORENO" },
             "reviewRating": {
               "@type": "Rating",
               "ratingValue": "5",
@@ -337,11 +300,8 @@ const { title, description, keywords } = Astro.props;
           },
           {
             "@type": "Review",
-            "reviewBody": "Excelente el trato del Dr. Monge! Su espacio de trabajo limpio y seguro. Gracias por la paciencia y tiempo que se tomó para explicarme perfectamente y de una manera entendible! despejó todas mis dudas, trato amable,respetuoso y atento. Excelente atención y servicio! 100% Recomendado ☝️",
-            "author": {
-              "@type": "Person",
-              "name": "Perla Rob"
-            },
+            "reviewBody": "Excelente el trato del Dr. Monge!...",
+            "author": { "@type": "Person", "name": "Perla Rob" },
             "reviewRating": {
               "@type": "Rating",
               "ratingValue": "5",
@@ -350,11 +310,8 @@ const { title, description, keywords } = Astro.props;
           },
           {
             "@type": "Review",
-            "reviewBody": "Excelente traumatólogo, su servicio es excelente te explica a detalle y no deja nada de dudas. Súper profesional y atento. Sin duda lo recomiendo al cien por ciento. Muchas gracias!",
-            "author": {
-              "@type": "Person",
-              "name": "Ramon Dominguez"
-            },
+            "reviewBody": "Excelente traumatólogo, su servicio es excelente...",
+            "author": { "@type": "Person", "name": "Ramon Dominguez" },
             "reviewRating": {
               "@type": "Rating",
               "ratingValue": "5",
@@ -363,24 +320,8 @@ const { title, description, keywords } = Astro.props;
           },
           {
             "@type": "Review",
-            "reviewBody": "Excelente Dr. Un gran ser humano ya que Tiene mucha empatía contesta todas tus dudas, es muy amable su trato lo recomiendo muchísimo, muchas gracias dr bendiciones!!",
-            "author": {
-              "@type": "Person",
-              "name": "Denise Gmz"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5"
-            }
-          },
-          {
-            "@type": "Review",
-            "reviewBody": "Excelente Doctor, me dio una asesoría donde pude tener más claridad de los pasos a seguir en mi situación, muy agradecienda por la información que me brindó :)",
-            "author": {
-              "@type": "Person",
-              "name": "Lizeth Araiza"
-            },
+            "reviewBody": "Excelente Dr. Un gran ser humano...",
+            "author": { "@type": "Person", "name": "Denise Gmz" },
             "reviewRating": {
               "@type": "Rating",
               "ratingValue": "5",
@@ -390,6 +331,7 @@ const { title, description, keywords } = Astro.props;
         ]
       }
     </script>
+
     <ViewTransitions />
   </head>
   <body>

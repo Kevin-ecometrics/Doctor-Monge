@@ -1,0 +1,39 @@
+---
+const { videoTitle, videoDescription, videoId, uploadDate, duration } = Astro.props;
+
+const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+const publisherName = "Ricardo Monge";
+const publisherLogo = "https://mongeortopedia.com/El%20doctor%20Ricardo%20Monge%20es%20%20ortopedista%20especialista%20en%20rodilla%20cadera%20y%20espalda.png";
+const contentUrl = `https://www.youtube.com/watch?v=${videoId}`;
+---
+
+<script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": videoTitle,
+      "description": videoDescription,
+      "thumbnailUrl": thumbnailUrl,
+      "uploadDate": uploadDate,
+      "duration": duration,
+      "embedUrl": embedUrl,
+      "contentUrl": contentUrl,
+      "publisher": {
+        "@type": "Organization",
+        "name": publisherName,
+        "logo": {
+          "@type": "ImageObject",
+          "url": publisherLogo,
+          "width": 219,
+          "height": 40
+        }
+      },
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "WatchAction" },
+        "userInteractionCount": 100
+      }
+    })}
+  </script>
+

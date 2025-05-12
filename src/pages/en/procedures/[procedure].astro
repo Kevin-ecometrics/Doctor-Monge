@@ -1,5 +1,5 @@
 ---
-import Layout from "@layouts/LayoutBlog.astro";
+import Layout from "@layouts/LayoutProcedimiento.astro";
 import Doctorialia from "@components/icons/Doctoralia.astro";
 import Facebook from "@components/icons/Facebook.astro";
 import Instagram from "@components/icons/Instagram.astro";
@@ -82,68 +82,68 @@ const URL = Astro.url.pathname.startsWith("/en/");
 ---
 
 <Layout
-  title="Dr. Ricardo Monge especialista en traumatología en Tijuana"
-  description="Recibe la atención en ortopedia con el Dr. Ricardo Monge especializado en lesiones musculoesqueléticas en rodillas, cadera y columna en Tijuana."
-  keywords="Ortopedista, Traumatólogo, Tijuana, Baja California, Dr. Ricardo Monge"
->
-  <main>
-    <div
-      class="fixed flex flex-col items-center justify-center h-screen gap-4 px-14 z-20"
-    >
-      <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
-      <a
-        href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
-        target="_blank"
-        class="lg:block hidden mb-2"
-      >
-        <Facebook class="cursor-pointer" />
-      </a>
-      <a
-        href="https://www.tiktok.com/@elmongedelaortopedia"
-        target="_blank"
-        class="lg:block hidden mb-2"
-      >
-        <Tiktok class="cursor-pointer" />
-      </a>
-      <a
-        href="https://www.instagram.com/drmonge.ortho/?hl=es"
-        target="_blank"
-        class="lg:block hidden mb-2"
-      >
-        <Instagram class="cursor-pointer" />
-      </a>
-      <a
-        href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
-        target="_blank"
-        class="lg:block hidden mb-2"
-      >
-        <Doctorialia class="cursor-pointer" />
-      </a>
-      <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
-    </div>
-    <section
-      transition:animate={slide({
-        duration: "0.8s",
-      })}
-    >
-      <Background background={background} />
-      <Video videoId={videoId} />
-      <Content title={title} content={content} />
-      <hr />
-      <Footer otrosProcedimientos={otrosProcedimientos} URL={URL} />
-    </section>
-  </main>
+  title={`Dr. Ricardo Monge - ${title}`}
+  description={`Consultation for ${title} in Tijuana. Learn about treatments, procedures, and expert care by Dr. Ricardo Monge.`}
+  keywords={`Orthopedic specialist, ${title}, Tijuana, Dr. Ricardo Monge, surgery, treatment`}
+/>
 
-  <style>
-    main {
-      color: white;
-      overflow-y: auto;
-      height: 100vh;
-      position: relative;
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      scrollbar-width: none;
-      overflow-x: hidden;
-    }
-  </style>
-</Layout>
+<main>
+  <div
+    class="fixed flex flex-col items-center justify-center h-screen gap-4 px-14 z-20"
+  >
+    <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
+    <a
+      href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
+      target="_blank"
+      class="lg:block hidden mb-2"
+    >
+      <Facebook class="cursor-pointer" />
+    </a>
+    <a
+      href="https://www.tiktok.com/@elmongedelaortopedia"
+      target="_blank"
+      class="lg:block hidden mb-2"
+    >
+      <Tiktok class="cursor-pointer" />
+    </a>
+    <a
+      href="https://www.instagram.com/drmonge.ortho/?hl=es"
+      target="_blank"
+      class="lg:block hidden mb-2"
+    >
+      <Instagram class="cursor-pointer" />
+    </a>
+    <a
+      href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana"
+      target="_blank"
+      class="lg:block hidden mb-2"
+    >
+      <Doctorialia class="cursor-pointer" />
+    </a>
+    <div class="border-r border-gray-200 h-48 lg:block hidden z-10"></div>
+  </div>
+  <section
+    transition:animate={slide({
+      duration: "0.8s",
+    })}
+  >
+    <Background background={background} />
+    <Video videoId={videoId} />
+    <Content title={title} content={content} />
+    <hr />
+    <Footer otrosProcedimientos={otrosProcedimientos} URL={URL} />
+  </section>
+</main>
+
+<style>
+  main {
+    color: white;
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    overflow-x: hidden;
+  }
+</style>
