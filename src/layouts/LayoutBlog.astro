@@ -13,6 +13,10 @@ import Navbar from "../components/blogs/navbar";
 const { title, description, keywords } = Astro.props;
 
 const URL = Astro.url.pathname.startsWith("/en/");
+
+const canonicalUrl = Astro.url.href.endsWith("/")
+  ? Astro.url.href
+  : Astro.url.href + "/";
 ---
 
 <!doctype html>
@@ -25,7 +29,7 @@ const URL = Astro.url.pathname.startsWith("/en/");
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="keywords" content={keywords} />
-    <link rel="canonical" href={Astro.url.href} />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="author" content="Doctor Monge" />
     <meta name="publisher" content="Ecommetrica" />
     <meta name="robots" content="index, follow" />

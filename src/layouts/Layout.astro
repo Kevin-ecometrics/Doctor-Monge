@@ -11,6 +11,10 @@ interface Props {
 import "@fontsource-variable/inter";
 
 const { title, description, keywords } = Astro.props;
+
+const canonicalUrl = Astro.url.href.endsWith("/")
+  ? Astro.url.href
+  : Astro.url.href + "/";
 ---
 
 <!doctype html>
@@ -23,7 +27,7 @@ const { title, description, keywords } = Astro.props;
     <meta name="keywords" content={keywords} />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={Astro.url.href} />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="author" content="Doctor Monge" />
     <meta name="publisher" content="Ecommetrica" />
     <meta name="robots" content="index, follow" />
