@@ -88,7 +88,7 @@ const YEAR = new Date().getFullYear();
       </button>
     </li>
   </ul>
-  <div class="flex justify-start px-4 gap-4 mt-16 md:mt-8">
+  <div class="flex justify-start px-4 gap-4 mt-16 md:mt-8 z-50">
     <a
       href="https://www.facebook.com/drmonge.ortho/?locale=ms_MY"
       target="_blank"
@@ -204,6 +204,13 @@ const YEAR = new Date().getFullYear();
 
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
+      const href = link.getAttribute("href");
+      if (href && href.startsWith("http")){
+      // Permitir que los enlaces externos funcionen normalmente
+        return; 
+      }
+
+      // Prevenir el comportamiento predeterminado solo para enlaces internos
       event.preventDefault();
       const currentTarget = event.currentTarget as HTMLElement;
       if (currentTarget) {
