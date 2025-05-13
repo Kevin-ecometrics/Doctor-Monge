@@ -5,14 +5,62 @@ interface Props {
   title: string;
   description: string;
   keywords: string;
+  videoTitle: string;
+  videoDescription: string;
+  videoId: string;
+  uploadDate: string;
+  duration: string;
 }
 
 import "@fontsource-variable/inter";
 import Navbar from "../components/blogs/navbar";
 
-const { title, description, keywords } = Astro.props;
+const {
+  title,
+  description,
+  keywords,
+  videoTitle,
+  videoDescription,
+  videoId,
+  uploadDate,
+  duration,
+} = Astro.props;
 
 const URL = Astro.url.pathname.startsWith("/en/");
+
+const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+const publisherName = "Ricardo Monge";
+const publisherLogo =
+  "https://mongeortopedia.com/El%20doctor%20Ricardo%20Monge%20es%20%20ortopedista%20especialista%20en%20rodilla%20cadera%20y%20espalda.png";
+const contentUrl = `https://www.youtube.com/watch?v=${videoId}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: videoTitle,
+  description: videoDescription,
+  thumbnailUrl: thumbnailUrl,
+  uploadDate: uploadDate,
+  duration: duration,
+  embedUrl: embedUrl,
+  contentUrl: contentUrl,
+  publisher: {
+    "@type": "Organization",
+    name: publisherName,
+    logo: {
+      "@type": "ImageObject",
+      url: publisherLogo,
+      width: 219,
+      height: 40,
+    },
+  },
+  interactionStatistic: {
+    "@type": "InteractionCounter",
+    interactionType: { "@type": "WatchAction" },
+    userInteractionCount: 100,
+  },
+};
 
 const canonicalUrl = Astro.url.href.endsWith("/")
   ? Astro.url.href
@@ -83,6 +131,7 @@ const canonicalUrl = Astro.url.href.endsWith("/")
 
       gtag("config", "AW-11309383024");
     </script>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <ViewTransitions />
     <!-- Meta Pixel Code -->

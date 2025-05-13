@@ -112,6 +112,11 @@ const URL = Astro.url.pathname.startsWith("/en/");
   title={`Dr. Ricardo Monge - ${title}`}
   description={`Consultation for ${title} in Tijuana. Learn about treatments, procedures, and expert care by Dr. Ricardo Monge.`}
   keywords={`${keywords}`}
+  videoTitle={`${title}`}
+  videoDescription={`${content}`}
+  videoId={`${videoId}`}
+  uploadDate={`${uploadDate}`}
+  duration={`${duration}`}
 />
 
 <main>
@@ -155,13 +160,6 @@ const URL = Astro.url.pathname.startsWith("/en/");
     })}
   >
     <Background background={background} />
-    <Schema
-      videoTitle={title}
-      videoDescription={content}
-      videoId={videoId}
-      uploadDate={uploadDate}
-      duration={duration}
-    />
     <Video videoId={videoId} />
     <Content title={title} content={content} />
     <hr />

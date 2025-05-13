@@ -113,6 +113,11 @@ const URL = Astro.url.pathname.startsWith("/en/");
   title={`Dr. Ricardo Monge - ${title}`}
   description={`Consulta sobre ${title} en Tijuana. Conoce los tratamientos y procedimientos especializados realizados por el Dr. Ricardo Monge, experto en ortopedia y traumatología en Tijuana.`}
   keywords={`${keywords}`}
+  videoTitle={`${title}`}
+  videoDescription={`${content}`}
+  videoId={`${videoId}`}
+  uploadDate={`${uploadDate}`}
+  duration={`${duration}`}
 >
   <main>
     <div
@@ -155,13 +160,6 @@ const URL = Astro.url.pathname.startsWith("/en/");
       })}
     >
       <Background background={background} />
-      <Schema
-        videoTitle={title}
-        videoDescription={content}
-        videoId={videoId}
-        uploadDate={uploadDate}
-        duration={duration}
-      />
       <Video videoId={videoId} />
       <Content title={title} content={content} />
       <hr />
