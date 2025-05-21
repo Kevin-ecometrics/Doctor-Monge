@@ -84,6 +84,11 @@ export function getStaticPaths() {
         blog: "la-mejor-dupla-ortopedica-en-tijuana",
       },
     },
+    {
+      params: {
+        blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+      },
+    },
   ];
 }
 
@@ -301,6 +306,18 @@ const blogs = [
     keywords: "dupla ortopédica, Tijuana, atención integral",
     id: 17,
   },
+  {
+    titulo:
+      "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+    ruta: "/blogs/eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+    blogTitle: "Desgarros meniscales: Tipos, rehabilitación y cuándo operar",
+    date: "Mayo 2025",
+    title: "Desgarros meniscales: Tipos, rehabilitación y cuándo operar",
+    description:
+      "¿Dolor de rodilla? El DR. Ricardo Monge te explica la clasificación, síntomas, diagnosticos, tratamiento conservador y artroscopia, posoperatorios y más.",
+    keywords: "Meniscos, desgarro menisco, artroscopia en Tijuana",
+    id: 18,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -438,6 +455,15 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   date = "Abril 2025";
   content = "Blog17";
   blogTitle = "La mejor dupla ortopédica en Tijuana";
+} else if (
+  blog ===
+  "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco"
+) {
+  image =
+    "/Desgarros Meniscales Tipos rehabilitacion y cuando operar articulo por el ortopedista y traumatologo en Tijuana.webp";
+  date = "Mayo 2025";
+  content = "Blog18";
+  blogTitle = "Desgarros Meniscales: Tratamiento Conservador vs. Quirúrgico";
 } else {
   image = "/fondoDefault.png";
 }

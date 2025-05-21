@@ -1,0 +1,597 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/Desgarros Meniscales  Tipos rehabilitacion y cuando operar articulo por el doctor Ricardo Monge ortopedista y traumatologo.webp";
+import Image2 from "@public/Meniscales  Tipos rehabilitacion y cuando operar articulo por el doctor Ricardo Monge ortopedista y traumatologo en Tijuana.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+];
+
+const blogActual =
+  "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco";
+
+const id = 18;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16 font-bold">
+      {
+        isEnglish
+          ? "The lateral and medial menisci are fibrocartilaginous structures composed of collagen, proteoglycans, glycoproteins, and cellular elements. They consist of approximately 70% water and have a crescent shape. Together, they cover about 70% of the tibial articular surface and perform essential functions such as load distribution, providing stability in all planes, and acting as stabilizers that rotate similarly to a hinge, preventing knee displacement. Additionally, they play a crucial role in shock absorption, preventing wear on the cartilage that covers the knee joints."
+          : "Los meniscos lateral y medial son estructuras fibrocartilaginosas compuestas por colágeno, proteoglicanos, glucoproteínas y elementos celulares. Están constituidos aproximadamente por un 70 % de agua y tienen forma de medialuna. En conjunto, cubren cerca del 70 % de la superficie articular de la tibia y cumplen funciones esenciales, como distribuir la carga, brindar estabilidad en todos los planos y actuar como estabilizadores que rotan de manera similar a una bisagra, evitando el desplazamiento de la rodilla. Además, desempeñan un papel fundamental en la absorción de impactos, previniendo el desgaste del cartílago que recubre las articulaciones de la rodilla."
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {isEnglish ? "Meniscal Tears" : "Desgarros Meniscales"}
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Meniscal tears are one of the most common knee injuries, especially among athletes, although anyone can suffer them at any age due to acute trauma or degenerative changes associated with aging."
+          : "Los desgarros de meniscos son una de las lesiones de rodilla más comunes, especialmente en deportistas, aunque cualquier persona puede sufrirlos a cualquier edad debido a un traumatismo agudo o a cambios degenerativos propios del envejecimiento."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Tears are classified based on their appearance and the location in the meniscus where the damage occurs."
+          : "Los desgarros se clasifican según su aspecto y la ubicación en el menisco donde ocurre el daño."
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {isEnglish ? "Isolated Meniscal Tears" : "Desgarros Meniscales Aislados"}
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? `These injuries typically occur when there are twisting forces or "sudden turns" in the knee, especially when bearing significant weight (such as landing from a jump or changing direction quickly). The menisci, which act as shock absorbers, can be damaged by these types of movements. Risk situations include positions with high degrees of flexion, such as kneeling, squatting, lifting or carrying heavy objects, and performing activities involving rapid acceleration or deceleration.`
+          : `Estas lesiones suelen ocurrir cuando hay fuerzas de torsión o "giros bruscos" en la rodilla, especialmente si al mismo tiempo se soporta mucho peso (como al aterrizar de un salto o cambiar de dirección rápidamente). Los meniscos, que actúan como amortiguadores, pueden sufrir daños por este tipo de movimientos. Las situaciones de riesgo incluyen posiciones con altos grados de flexión, como arrodillarse, ponerse en cuclillas, levantar o cargar objetos pesados y realizar actividades que implican aceleración o desaceleración rápidas.`
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {isEnglish ? "Complex Meniscal Tears" : "Desgarros Meniscales Complejos"}
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "A traumatic impact on the knee can also cause tears along with the primary stabilizing ligaments, such as the anterior cruciate ligament (ACL) and the medial collateral ligament (MCL). After the age of 40, relatively less force is required to cause a tear in people with degenerative changes in the menisci, often associated with osteoarthritis (OA)."
+          : "Un impacto traumático en la rodilla también puede ocasionar desgarros en conjunto con los ligamentos estabilizadores primarios, como el ligamento cruzado anterior (LCA) y el ligamento colateral medial (LCM). A partir de los 40 años, se requiere relativamente menos fuerza para causar un desgarro en personas con cambios degenerativos en los meniscos, frecuentemente asociados a la osteoartritis (OA)."
+      }
+    </h4>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish
+          ? "The best orthopedic duo in Tijuana - Dr. Monge Orthopedic Trauma Surgeon"
+          : "La mejor dupla ortopedica en Tijuana  Dr Monge Ortopedista traumatologo"}
+        title={isEnglish
+          ? "The best orthopedic duo in Tijuana - Dr. Monge Orthopedic Trauma Surgeon"
+          : "La mejor dupla ortopedica en Tijuana  Dr Monge Ortopedista traumatologo"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {
+        isEnglish
+          ? "Types of Meniscal Tears"
+          : "Formas de Desgarros en Meniscos"
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <ol class="list-decimal list-inside mb-8 space-y-4">
+      <li class="text-xl">
+        <strong class="text-white">
+          {isEnglish ? "Longitudinal Tear:" : "Desgarro Longitudinal:"}
+        </strong>
+        {
+          isEnglish
+            ? "Occurs along the length of the meniscus, usually on the outer edge."
+            : "Ocurre a lo largo del menisco, generalmente en el borde externo."
+        }
+      </li>
+      <li class="text-xl">
+        <strong class="text-white">
+          {isEnglish ? "Radial Tear:" : "Desgarro Radial:"}
+        </strong>
+        {
+          isEnglish
+            ? "Extends from the inner edge outward."
+            : "Se extiende desde el borde interno hacia el exterior."
+        }
+      </li>
+      <li class="text-xl">
+        <strong class="text-white">
+          {isEnglish ? "Horizontal Tear:" : "Desgarro Horizontal:"}
+        </strong>
+        {
+          isEnglish
+            ? "Often caused by wear and tear, separates an upper and lower portion of the meniscus."
+            : "A menudo causado por el desgaste, separa una porción superior e inferior del menisco."
+        }
+      </li>
+      <li class="text-xl">
+        <strong class="text-white">
+          {isEnglish ? "Bucket Handle Tear:" : "Desgarro en Asa:"}
+        </strong>
+        {
+          isEnglish
+            ? "A fragment of the meniscus displaces toward the center of the knee, resembling a bucket handle. This type of tear requires surgery as it can block the joint."
+            : "Un fragmento del menisco se desplaza hacia el centro de la rodilla, asemejándose a un asa. Este tipo de desgarro requiere cirugía, ya que puede bloquear la articulación."
+        }
+      </li>
+      <li class="text-xl">
+        <strong class="text-white">
+          {isEnglish ? "Parrot-Beak Tear:" : "Desgarro en Pico de Loro:"}
+        </strong>
+        {
+          isEnglish
+            ? "Caused by compression and shearing forces. Depending on symptoms, it can be repaired or may require partial meniscectomy."
+            : "Provocado por fuerzas de compresión y cizallamiento. Dependiendo de los síntomas, puede repararse o requerir una meniscectomía parcial."
+        }
+      </li>
+      <li class="text-xl">
+        <strong class="text-white">
+          {isEnglish ? "Flap Tear:" : "Desgarro de Solapa:"}
+        </strong>
+        {
+          isEnglish
+            ? "A small fragment breaks off and may become trapped in the joint, causing knee locking. Generally requires surgery to remove it."
+            : "Un pequeño fragmento se desprende y puede quedar atrapado en la articulación, causando bloqueos en la rodilla. Generalmente requiere cirugía para retirarlo."
+        }
+      </li>
+    </ol>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-3xl mb-8 font-semibold text-white">
+      {
+        isEnglish
+          ? "Symptoms of Meniscal Tears"
+          : "Síntomas de los Desgarros Meniscales"
+      }
+    </h4>
+    <h4 class="text-xl mb-8 font-semibold">
+      {
+        isEnglish
+          ? "Meniscal tears can cause a popping sensation in the knee at the time of injury. Most people can continue walking immediately after the trauma, but once the adrenaline subsides or with rest, symptoms of pain, stiffness, and swelling begin to appear."
+          : "Los desgarros meniscales pueden provocar una sensación de explosión en la rodilla en el momento de la lesión. La mayoría de las personas pueden seguir caminando inmediatamente después del trauma, pero una vez que baja la adrenalina o se guarda reposo, comienzan a aparecer los síntomas de dolor, rigidez e inflamación."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-white text-4xl mb-8 font-semibold">
+      {isEnglish ? "Main Symptoms:" : "Principales Síntomas:"}
+    </h2>
+    <ol class="list-decimal list-inside mb-8 space-y-4">
+      <li class="text-xl">
+        {isEnglish ? "Pain" : "Dolor"}
+      </li>
+      <li class="text-xl">
+        {isEnglish ? "Stiffness and swelling" : "Rigidez e inflamación"}
+      </li>
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "Locking or catching of the knee"
+            : "Fijación o bloqueo de la rodilla"
+        }
+      </li>
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "Sensation of the knee giving way"
+            : "Sensación de que la rodilla se desprende"
+        }
+      </li>
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "Inability to move the knee through its full range of motion"
+            : "Incapacidad para mover la rodilla en todo su rango de movimiento"
+        }
+      </li>
+    </ol>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-white text-4xl mb-8 font-semibold">
+      {
+        isEnglish
+          ? "Diagnosis of Meniscal Tears"
+          : "Diagnóstico de los Desgarros Meniscales"
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-2xl text-white font-semibold mb-8">
+      {isEnglish ? "McMurray Test" : "Prueba de McMurray"}
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "During this test, the patient lies down with legs extended and relaxed. Then, the specialist lifts the leg and bends it toward the chest while applying pressure on the knee and heel. The movement is repeated by rotating the knee sideways to evaluate the menisci. If there is a tear, the patient may experience pain, an audible click, or a popping sensation in the joint."
+          : "Durante esta prueba, el paciente se recuesta con las piernas extendidas y relajadas. Luego, el especialista levanta la pierna y la dobla hacia el pecho mientras aplica presión sobre la rodilla y el talón. El movimiento se repite girando la rodilla hacia los lados para evaluar los meniscos. Si existe un desgarro, el paciente puede experimentar dolor, un clic audible o una sensación de chasquido en la articulación."
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-2xl text-white font-semibold mb-8">
+      {isEnglish ? "Apley Test" : "Prueba de Apley"}
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The patient lies face down, and the specialist flexes the knee to 90 degrees while applying pressure and rotating the foot to identify possible discomfort during rotational movement."
+          : "El paciente se coloca boca abajo, y el especialista flexiona la rodilla a 90 grados mientras aplica presión y rota el pie para identificar posibles molestias durante el movimiento rotacional."
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-2xl text-white font-semibold mb-8">
+      {isEnglish ? "Thessaly Test" : "Prueba de Tesalia"}
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The patient stands on one leg, supported on the ground, while the specialist holds them with extended hands. Then, the patient flexes the knee to 5° and rotates the femur over the tibia medially and laterally three times. The test is positive if the patient feels discomfort in the joint line or perceives locking or clicking."
+          : "El paciente se mantiene de pie sobre una pierna, apoyado en el suelo, mientras el especialista lo sostiene con las manos extendidas. Luego, el paciente flexiona la rodilla a 5° y rota el fémur sobre la tibia medial y lateralmente tres veces. La prueba es positiva si el paciente siente molestias en la línea articular o percibe un bloqueo o chasquido."
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-2xl text-white font-semibold mb-8">
+      {isEnglish ? "Ege's Test" : "Prueba de Ege"}
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The patient performs a sumo-style squat, with feet pointing outward, and then slowly stands up. Subsequently, they perform another squat with feet pointing inward. The test is positive if pain or clicking is felt around 90° of flexion."
+          : "El paciente realiza una sentadilla estilo sumo, con los pies apuntando hacia afuera y luego se levanta lentamente. Posteriormente, hace otra sentadilla con los pies apuntando hacia adentro. La prueba es positiva si se siente dolor o chasquido alrededor de los 90° de flexión."
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-2xl text-white font-semibold mb-8">
+      {isEnglish ? "Finochietto's Test" : "Prueba de Finochietto"}
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The patient lies down with the knee flexed at 90 degrees and the foot resting on the examination table. The specialist applies inward pressure using the forearm until discomfort or a jump in the joint is perceived."
+          : "El paciente se recuesta con la rodilla flexionada a 90 grados y el pie apoyado en la camilla. El especialista aplica presión hacia adentro utilizando el antebrazo hasta que se perciba una sensación de incomodidad o un salto en la articulación."
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h4 class="text-4xl text-white font-bold mb-8">
+      {
+        isEnglish
+          ? "Conservative Treatment or Arthroscopy? What's Better for a Meniscal Injury?"
+          : "¿Tratamiento conservador o artroscopia? ¿Qué es mejor para una lesión de menisco?"
+      }
+    </h4>
+  </Observer>
+  <Observer client:visible>
+    <h2 class="text-xl mb-8">
+      {
+        isEnglish
+          ? `When discussing meniscal injuries, the key to deciding between conservative treatment or surgical intervention lies in the zone of the tear. If the injury occurs in the so-called "red zone"—the outer part of the meniscus with good blood flow—there's a possibility it may heal on its own. However, when the tear affects the inner two-thirds, the "white zone" with poor blood supply, the options change. Here, blood nutrients don't reach with the same intensity, so tears in this area rarely heal on their own and, in many cases, end up requiring surgery.`
+          : `Cuando hablamos de lesiones en los meniscos, la clave para decidir entre un tratamiento conservador o una intervención quirúrgica radica en la zona del desgarro. Si la lesión ocurre en la conocida "zona roja" —la parte externa del menisco con buen flujo sanguíneo— existe la posibilidad de que se cure por sí sola. Sin embargo, cuando el desgarro afecta los dos tercios internos, la llamada "zona blanca" con poco riego sanguíneo, las opciones cambian. Aquí, los nutrientes de la sangre no llegan con la misma intensidad, por lo que los desgarros en esta área difícilmente se curan solos y, en muchos casos, terminan en cirugía.`
+      }
+    </h2>
+  </Observer>
+  <Observer client:visible>
+    <h2 class="text-4xl font-semibold mb-8 text-white">
+      {isEnglish ? "Conservative Treatment" : "Tratamiento conservador"}
+    </h2>
+    <h3 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Conservative treatment is usually the first option when meniscal injuries are mild, asymptomatic, or with controlled symptoms, without joint locking or effusion. This approach is ideal for tears smaller than 1 cm, injuries in the red zone, and radial meniscal tears of less"
+          : "El tratamiento conservador suele ser la primera opción cuando las lesiones meniscales son leves, asintomáticas o con síntomas controlados, sin bloqueo articular ni derrame. Este enfoque es ideal para desgarros menores de 1 cm, lesiones en la zona roja y rupturas meniscales radiales de menos"
+      }
+    </h3>
+    <h3 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "One of the most commonly used methods in sports medicine is the famous RICE (Rest, Ice, Compression, Elevation). It's a simple but effective treatment for mild to moderate tissue injuries. Here's how to do it:"
+          : "Uno de los métodos más utilizados en el ámbito deportivo es el famoso RICE (Rest, Ice, Compression, Elevation), que en español significa Reposo, Hielo, Compresión y Elevación. Es un tratamiento sencillo pero efectivo para lesiones leves a moderadas en los tejidos. Aquí te explico cómo hacerlo:"
+      }
+    </h3>
+  </Observer>
+  <Observer client:visible>
+    <h3 class="mb-4">
+      <strong class="text-white text-xl">
+        {isEnglish ? "Rest: " : "Reposo: "}
+      </strong>
+      <span class="text-xl mb-8">
+        {
+          isEnglish
+            ? "Avoid any activity that could aggravate the injury. If the pain is severe, using crutches may be a good option to avoid putting weight on the knee."
+            : "Evita cualquier actividad que pueda agravar la lesión. Si el dolor es intenso, usar muletas puede ser una buena opción para no cargar peso en la rodilla."
+        }
+      </span>
+    </h3>
+    <h3 class="mb-4">
+      <strong class="text-white text-xl">
+        {isEnglish ? "Ice: " : "Hielo: "}
+      </strong>
+      <span class="text-xl mb-8">
+        {
+          isEnglish
+            ? "Apply cold compresses for 20 minutes, several times a day. However, never place ice directly on the skin."
+            : "Aplica compresas frías durante 20 minutos, varias veces al día. Eso sí, nunca pongas el hielo directamente sobre la piel."
+        }
+      </span>
+    </h3>
+    <h3 class="mb-4">
+      <strong class="text-white text-xl">
+        {isEnglish ? "Compression: " : "Compresión: "}
+      </strong>
+      <span class="text-xl mb-8">
+        {
+          isEnglish
+            ? "Use an elastic bandage to reduce swelling and prevent excessive bleeding."
+            : "Usa una venda elástica para reducir la inflamación y evitar el sangrado excesivo."
+        }
+      </span>
+    </h3>
+    <h3 class="mb-4">
+      <strong class="text-white text-xl">
+        {isEnglish ? "Elevation: " : "Elevación: "}
+      </strong>
+      <span class="text-xl mb-8">
+        {
+          isEnglish
+            ? "Keep the leg elevated above heart level to minimize swelling."
+            : "Mantén la pierna en alto, por encima del nivel del corazón, para minimizar la inflamación."
+        }
+      </span>
+    </h3>
+    <h3 class="text-xl mb-4">
+      {
+        isEnglish
+          ? "In addition to RICE, it's essential to maintain range of motion with isometric and isotonic exercises that strengthen the muscles without compromising the meniscus."
+          : "Además del RICE, es fundamental mantener el rango de movimiento con ejercicios isométricos e isotónicos que fortalezcan los músculos sin comprometer el menisco."
+      }
+    </h3>
+  </Observer>
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish
+          ? "The best orthopedic duo Dr. Monge Orthopedic Trauma Surgeon"
+          : "La mejor dupla ortopedica Dr Monge Ortopedista traumatologo "}
+        title={isEnglish
+          ? "The best orthopedic duo Dr. Monge Orthopedic Trauma Surgeon"
+          : "La mejor dupla ortopedica Dr Monge Ortopedista traumatologo "}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+  <Observer client:visible>
+    <h3 class="text-4xl font-semibold mb-8 text-white">
+      {
+        isEnglish
+          ? "When to Opt for Arthroscopy?"
+          : "¿Cuándo optar por la artroscopia?"
+      }
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Arthroscopy is a minimally invasive intervention recommended when the tear is more severe, there's joint locking, or the injury doesn't respond to conservative treatments."
+          : "La artroscopia es una intervención mínimamente invasiva que se recomienda cuando el desgarro es más severo, hay bloqueo articular o la lesión no responde a los tratamientos conservadores."
+      }
+    </h4>
+    <h4 class="text-xl mb-4">
+      <strong class="text-white">
+        {isEnglish ? "Partial Meniscectomy:" : "Meniscectomía parcial:"}
+      </strong>
+      <span>
+        {
+          isEnglish
+            ? " In this procedure, the damaged meniscal tissue is removed. It usually allows early weight-bearing and faster recovery, but it's important to note that the more meniscal tissue is removed, the higher the risk of long-term joint degeneration."
+            : " En este procedimiento se retira el tejido dañado del menisco. Suele permitir un apoyo temprano y una recuperación más rápida, pero hay que tener en cuenta que cuanto más tejido meniscal se elimine, mayor será el riesgo de degeneración articular a largo plazo."
+        }
+      </span>
+    </h4>
+    <h4 class="text-xl mb-8">
+      <strong class="text-white">
+        {isEnglish ? "Meniscus Repair:" : "Reparación de menisco:"}
+      </strong>
+      <span>
+        {
+          isEnglish
+            ? " If the type of tear allows it, suturing the torn portions can be an option. This approach has a longer recovery time but is key to preserving the meniscus structure and avoiding future joint problems."
+            : " Si el tipo de desgarro lo permite, se puede optar por suturar las partes desgarradas. Esta opción tiene un tiempo de recuperación más largo, pero es clave para preservar la estructura del menisco y evitar futuros problemas articulares."
+        }
+      </span>
+    </h4>
+    <h1 class="text-4xl font-bold mb-8 text-white">
+      {
+        isEnglish
+          ? "Frequently Asked Questions About Meniscal Tears"
+          : "Preguntas frecuentes sobre desgarro de meniscos"
+      }
+    </h1>
+
+    <h3 class="text-2xl font-semibold mb-4 text-white">
+      {
+        isEnglish
+          ? "Can you walk with a torn meniscus?"
+          : "¿Se puede caminar con un menisco desgarrado?"
+      }
+    </h3>
+    <p class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Yes, many people can continue walking, and even some athletes can keep competing. However, after two or three days, the knee may become stiffer and swollen."
+          : "Sí, muchas personas pueden seguir caminando, e incluso algunos atletas pueden continuar compitiendo. Sin embargo, tras dos o tres días, la rodilla puede volverse más rígida e inflamarse."
+      }
+    </p>
+
+    <h3 class="text-2xl font-semibold mb-4 text-white">
+      {isEnglish ? "Does the meniscus regenerate?" : "¿El menisco se regenera?"}
+    </h3>
+    <p class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Injuries in the peripheral zone (red zone) have a better chance of healing due to good blood flow. In contrast, injuries in the central zone (white zone) usually require conservative treatment or surgery."
+          : "Las lesiones en la zona periférica (zona roja) tienen más posibilidades de sanar debido a su buen flujo sanguíneo. En cambio, las lesiones en la zona central (zona blanca) suelen requerir tratamiento conservador o cirugía."
+      }
+    </p>
+
+    <h3 class="text-2xl font-semibold mb-4 text-white">
+      {isEnglish ? "Is surgery necessary?" : "¿Es necesario operarlo?"}
+    </h3>
+    <p class="text-xl mb-8">
+      {
+        isEnglish
+          ? "It depends on each case, considering factors such as the patient's age, presence of joint effusion, severity of the injury, and whether other knee structures are compromised."
+          : "Dependerá de cada caso, considerando factores como la edad del paciente, la presencia de derrame articular, la gravedad de la lesión y si hay otras estructuras de la rodilla comprometidas."
+      }
+    </p>
+
+    <p class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The choice between conservative or surgical treatment will always depend on the location of the tear, the type of injury, and the response to initial treatment."
+          : "La elección entre tratamiento conservador o quirúrgico dependerá siempre de la ubicación del desgarro, el tipo de lesión y la respuesta al tratamiento inicial."
+      }
+    </p>
+
+    <p class="text-xl mb-8">
+      {
+        isEnglish
+          ? "So, when facing a meniscal injury, it's best to consult with a specialist who can evaluate all options. What about you? Have you had any meniscal injury? How was your recovery?"
+          : "Así que, ante una lesión de menisco, lo mejor es consultar con un especialista que valore todas las opciones. ¿Y tú? ¿Has tenido alguna lesión meniscal? ¿Cómo fue tu recuperación?"
+      }
+    </p>
+
+    <h3 class="text-2xl font-semibold mb-4 text-white">
+      {
+        isEnglish
+          ? "If you'd like to schedule a consultation, I'll be waiting for you at my office located in the Torre Norte 2 building in Zona Río, just 10 minutes from the San Ysidro-Tijuana border."
+          : "Si deseas agendar una consulta de valoración te espero en consulta me encuentro en el edificio torre norte 2 en zona rio a 10 minutos de la línea San Ysidro-Tijuana."
+      }
+    </h3>
+
+    <p class="text-xl mb-8">
+      {
+        isEnglish
+          ? "If you're in another state, I invite you to schedule an online consultation."
+          : "Si te encuentras en otro estado, te invito a agendar una asesoría en línea."
+      }
+    </p>
+  </Observer>
+
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <!-- <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  /> -->
+
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "the-best-orthopedic-duo-in-tijuana"
+      : "la-mejor-dupla-ortopedica-en-tijuana"}
+    PreviousName={isEnglish
+      ? "The best orthopedic duo in Tijuana"
+      : "La mejor dupla ortopedica en Tijuana"}
+  />
+</article>

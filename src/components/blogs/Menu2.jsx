@@ -3,132 +3,140 @@ import React, { useEffect, useState } from "react";
 const blogsURL = [
   {
     id: 1,
-    url: "/blogs/la-mejor-dupla-ortopedica-en-tijuana/",
+    url: "/blogs/eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco/",
   },
   {
     id: 2,
-    url: "/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular/",
+    url: "/blogs/la-mejor-dupla-ortopedica-en-tijuana/",
   },
   {
     id: 3,
-    url: "/blogs/fracturas-ocultas-diagnostico-tijuana/",
+    url: "/blogs/dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular/",
   },
   {
     id: 4,
-    url: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis/",
+    url: "/blogs/fracturas-ocultas-diagnostico-tijuana/",
   },
   {
     id: 5,
-    url: "/blogs/fractura-de-humero-proximal-en-adultos-mayores/",
+    url: "/blogs/Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis/",
   },
   {
     id: 6,
-    url: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos/",
+    url: "/blogs/fractura-de-humero-proximal-en-adultos-mayores/",
   },
   {
     id: 7,
-    url: "/blogs/Como-saber-si-es-artritis-o-artrosis/",
+    url: "/blogs/lumbalgia-tipos-factores-de-riesgos-y-tratamientos/",
   },
   {
     id: 8,
-    url: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento/",
+    url: "/blogs/Como-saber-si-es-artritis-o-artrosis/",
   },
   {
     id: 9,
-    url: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis/",
+    url: "/blogs/Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento/",
   },
   {
     id: 10,
-    url: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos/",
+    url: "/blogs/Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis/",
   },
   {
     id: 11,
-    url: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas/",
+    url: "/blogs/Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos/",
   },
   {
     id: 12,
-    url: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical/",
+    url: "/blogs/Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas/",
   },
   {
     id: 13,
-    url: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
+    url: "/blogs/Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical/",
   },
   {
     id: 14,
+    url: "/blogs/Infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla/",
+  },
+  {
+    id: 15,
     url: "/blogs/Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor/",
   },
-  { id: 15, url: "/blogs/Lesion-de-Ligamento-cruzado-anterior/" },
-  { id: 16, url: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion/" },
-  { id: 17, url: "/blogs/Fractura-de-tibia-y-Perone/" },
+  { id: 16, url: "/blogs/Lesion-de-Ligamento-cruzado-anterior/" },
+  { id: 17, url: "/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion/" },
+  { id: 18, url: "/blogs/Fractura-de-tibia-y-Perone/" },
 ];
 
 const blogsURLEN = [
   {
     id: 1,
-    url: "/en/blogs/the-best-orthopedic-duo-in-tijuana/",
+    url: "/en/blogs/dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries/",
   },
   {
     id: 2,
-    url: "/en/blogs/knee-pain-arthroscopy-to-treat-joint-wear/",
+    url: "/en/blogs/the-best-orthopedic-duo-in-tijuana/",
   },
   {
     id: 3,
-    url: "/en/blogs/hidden-fractures-diagnosis-tijuana/",
+    url: "/en/blogs/knee-pain-arthroscopy-to-treat-joint-wear/",
   },
   {
     id: 4,
-    url: "/en/blogs/is-a-second-surgery-necessary-to-treat-pseudoarthrosis/",
+    url: "/en/blogs/hidden-fractures-diagnosis-tijuana/",
   },
   {
     id: 5,
-    url: "/en/blogs/proximal-humerus-fracture-in-older-adults/",
+    url: "/en/blogs/is-a-second-surgery-necessary-to-treat-pseudoarthrosis/",
   },
   {
     id: 6,
-    url: "/en/blogs/low-back-pain-types-risk-factors-and-treatments/",
+    url: "/en/blogs/proximal-humerus-fracture-in-older-adults/",
   },
   {
     id: 7,
-    url: "/en/blogs/how-to-tell-if-its-arthritis-or-osteoarthritis/",
+    url: "/en/blogs/low-back-pain-types-risk-factors-and-treatments/",
   },
   {
     id: 8,
-    url: "/en/blogs/tendinitis-and-tendinosis-causes-differences-and-treatment/",
+    url: "/en/blogs/how-to-tell-if-its-arthritis-or-osteoarthritis/",
   },
   {
     id: 9,
-    url: "/en/blogs/knee-injections-options-and-benefits-for-osteoarthritis/",
+    url: "/en/blogs/tendinitis-and-tendinosis-causes-differences-and-treatment/",
   },
   {
     id: 10,
-    url: "/en/blogs/bunions-symptoms-detection-and-types-of-surgery-to-remove-them/",
+    url: "/en/blogs/knee-injections-options-and-benefits-for-osteoarthritis/",
   },
   {
     id: 11,
-    url: "/en/blogs/why-is-it-said-that-the-body-rejects-material-factors-associated-with-failure-in-fracture-osteosynthesis/",
+    url: "/en/blogs/bunions-symptoms-detection-and-types-of-surgery-to-remove-them/",
   },
   {
     id: 12,
-    url: "/en/blogs/conservative-treatment-vs-surgery-when-conservative-treatment-fails-and-requires-surgical-intervention-for-cervical-disc-herniation/",
+    url: "/en/blogs/why-is-it-said-that-the-body-rejects-material-factors-associated-with-failure-in-fracture-osteosynthesis/",
   },
   {
     id: 13,
-    url: "/en/blogs/knee-injections-with-hyaluronic-acid-for-knee-osteoarthritis-treatment/",
+    url: "/en/blogs/conservative-treatment-vs-surgery-when-conservative-treatment-fails-and-requires-surgical-intervention-for-cervical-disc-herniation/",
   },
   {
     id: 14,
-    url: "/en/blogs/osteoporosis-a-silent-condition-affecting-half-the-population-over-50/",
+    url: "/en/blogs/knee-injections-with-hyaluronic-acid-for-knee-osteoarthritis-treatment/",
   },
   {
     id: 15,
-    url: "/en/blogs/anterior-cruciate-ligament-injury/",
+    url: "/en/blogs/osteoporosis-a-silent-condition-affecting-half-the-population-over-50/",
   },
   {
     id: 16,
-    url: "/en/blogs/pseudoarthrosis-and-delayed-union/",
+    url: "/en/blogs/anterior-cruciate-ligament-injury/",
   },
   {
     id: 17,
+    url: "/en/blogs/pseudoarthrosis-and-delayed-union/",
+  },
+  {
+    id: 18,
     url: "/en/blogs/tibia-and-fibula-fracture/",
   },
 ];

@@ -84,6 +84,11 @@ export function getStaticPaths() {
         blog: "the-best-orthopedic-duo-in-tijuana",
       },
     },
+    {
+      params: {
+        blog: "dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries",
+      },
+    },
   ];
 }
 
@@ -289,6 +294,18 @@ const blogs = [
     keywords: "orthopedic duo, Tijuana, orthopedic care",
     id: 17,
   },
+  {
+    titulo:
+      "dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries",
+    ruta: "/en/blogs/dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries",
+    blogTitle: "Meniscal Tears: Types, Rehabilitation, and When to Operate",
+    date: "May 2025",
+    title: "Meniscal Tears: Types, Rehabilitation, and When to Operate",
+    description:
+      "Knee pain? Dr. Ricardo Monge explains the classification, symptoms, diagnoses, conservative treatment and arthroscopy, postoperative care, and more.",
+    keywords: "Meniscus, meniscus tear, arthroscopy in Tijuana",
+    id: 18,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -416,6 +433,15 @@ if (blog === "anterior-cruciate-ligament-injury") {
   date = "April 2025";
   content = "Blog17";
   blogTitle = "The Best Orthopedic Duo in Tijuana";
+} else if (
+  blog ===
+  "dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries"
+) {
+  image =
+    "/Desgarros Meniscales Tipos rehabilitacion y cuando operar articulo por el ortopedista y traumatologo en Tijuana.webp";
+  date = "May 2025";
+  content = "Blog18";
+  blogTitle = "Meniscal Tears: Conservative vs. Surgical Treatment";
 } else {
   image = "/fondoDefault.png";
 }

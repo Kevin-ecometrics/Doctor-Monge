@@ -153,6 +153,14 @@ function Blogs({ URL }) {
         "En este blog te platicamos sobre la excelencia que se transmite: Padre e hijo, Ricardo Monge López y Ricardo Monge Romero, líderes en cirugía mínimamente invasiva y soluciones articulares innovadoras.",
       link: "/blogs/la-mejor-dupla-ortopedica-en-tijuana",
     },
+    {
+      img: "/Desgarros Meniscales- Tipos rehabilitacion y cuando operar articulo por el doctor Ricardo Monge ortopedista y traumatologo en Tijuana.webp",
+      fecha: "Mayo 2025",
+      titulo: "Desgarros meniscales: Tipos, rehabilitación y cuándo operar",
+      texto:
+        "¿Sabías que los desgarros meniscales no solo afectan a deportistas? Cada vez son más comunes y sus síntomas pueden confundirse. Descubre los tipos, diferentes formas de diagnósticos y tratamientos. En este blog te respondo tus dudas más frecuentes. Te invito a leerlo",
+      link: "/blogs/eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+    },
   ];
 
   const blogItem_en = [
@@ -294,6 +302,14 @@ function Blogs({ URL }) {
       texto:
         "In this blog we tell you about the excellence that is transmitted: Father and son, Ricardo Monge López and Ricardo Monge Romero, leaders in minimally invasive surgery and innovative joint solutions.",
       link: "/en/blogs/the-best-orthopedic-duo-in-tijuana",
+    },
+    {
+      img: "/Desgarros Meniscales- Tipos rehabilitacion y cuando operar articulo por el doctor Ricardo Monge ortopedista y traumatologo en Tijuana.webp",
+      fecha: "May 2025",
+      titulo: "Meniscal Tears: Types, Rehabilitation, and When to Operate",
+      texto:
+        "Did you know that meniscal tears don't only affect athletes? They are becoming more common, and their symptoms can be confusing. Learn about the types, different diagnostic methods, and treatments. ",
+      link: "/en/blogs/dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries",
     },
   ];
 

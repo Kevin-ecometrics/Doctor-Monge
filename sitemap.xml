@@ -12,6 +12,13 @@
         <priority>1.0</priority>
     </url>
 
+        <url>
+        <loc>https://mongeortopedia.com/blogs/eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco/</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <url>
         <loc>https://mongeortopedia.com/blogs/la-mejor-dupla-ortopedica-en-tijuana/</loc>
         <lastmod>2025-04-30</lastmod>
@@ -209,6 +216,13 @@
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <url>
+        <loc>https://mongeortopedia.com/en/blogs/dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries/</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>    
     
     <url>
         <loc>https://mongeortopedia.com/en/blogs/the-best-orthopedic-duo-in-tijuana/</loc>
