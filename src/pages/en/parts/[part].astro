@@ -22,7 +22,7 @@ export function getStaticPaths() {
         part: "knee-arthroscopy-postoperative-instructions",
       },
     },
-    { params: { part: "general-preoperative-recommendations" } },
+    { params: { part: "preparation-for-your-surgical-procedure" } },
   ];
 }
 
@@ -55,12 +55,12 @@ const fichasData = {
     bannerTitle: "April 8, 2025",
     bannerDate: "Postoperative instructions for knee arthroscopy",
   },
-  "general-preoperative-recommendations": {
-    title: "Dr Monge | General preoperative recommendations",
+  "preparation-for-your-surgical-procedure": {
+    title: "Dr Monge | Preparation for your surgical procedure",
     description: "Technical sheet description.",
     keywords: "technical-sheet, doctor, monge",
     bannerTitle: "April 14, 2025",
-    bannerDate: "General preoperative recommendations",
+    bannerDate: "Preparation for your surgical procedure",
   },
 };
 
@@ -87,8 +87,8 @@ const parts = [
     ruta: "knee-arthroscopy-postoperative-instructions",
   },
   {
-    nombre: "General preoperative recommendations",
-    ruta: "general-preoperative-recommendations",
+    nombre: "Preparation for your surgical procedure",
+    ruta: "preparation-for-your-surgical-procedure",
   },
 ];
 
@@ -203,7 +203,7 @@ const otrosFichas = parts.filter((p) => p.ruta !== part);
       )
     }
     {
-      part === "general-preoperative-recommendations" && (
+      part === "preparation-for-your-surgical-procedure" && (
         <>
           <section class="bg-[url(/banner-ficha5-mobile.webp)] md:bg-[url(/banner-ficha5.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -217,7 +217,7 @@ const otrosFichas = parts.filter((p) => p.ruta !== part);
           </section>
           <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
             <FichaPDF
-              title="5. General preoperative recommendations.pdf"
+              title="5. Preparation-for-your-surgical-procedure.pdf"
               pdf="/documentos-de-preparacion.pdf"
               client:only="react"
             />

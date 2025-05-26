@@ -23,7 +23,7 @@ export function getStaticPaths() {
         ficha: "instrucciones-postoperatorias-de-artroscopia-de-rodilla",
       },
     },
-    { params: { ficha: "recomendaciones-generales-preoperatorias" } },
+    { params: { ficha: "preparacion-para-tu-intervencion-quirurgica" } },
   ];
 }
 
@@ -58,12 +58,12 @@ const fichasData = {
     bannerTitle: "8 de Abril, 2025",
     bannerDate: "Instrucciones postoperatorias de artroscopia de rodilla",
   },
-  "recomendaciones-generales-preoperatorias": {
-    title: "Dr Monge | Recomendaciones generales preoperatorias",
+  "preparacion-para-tu-intervencion-quirurgica": {
+    title: "Dr Monge | Preparación para tu intervención quirúrgica",
     description: "Descripción de la ficha técnica.",
     keywords: "ficha-tecnica, doctor, monge",
     bannerTitle: "14 de Abril, 2025",
-    bannerDate: "Recomendaciones generales preoperatorias",
+    bannerDate: "Preparación para tu intervención quirúrgica",
   },
 };
 
@@ -90,8 +90,8 @@ const fichas = [
     ruta: "instrucciones-postoperatorias-de-artroscopia-de-rodilla",
   },
   {
-    nombre: "Recocomendaciones generales preoperatorias",
-    ruta: "recomendaciones-generales-preoperatorias",
+    nombre: "Preparación para tu intervención quirúrgica",
+    ruta: "preparacion-para-tu-intervencion-quirurgica",
   },
 ];
 
@@ -208,7 +208,7 @@ const otrosFichas = fichas.filter((p) => p.ruta !== ficha);
       )
     }
     {
-      ficha === "recomendaciones-generales-preoperatorias" && (
+      ficha === "preparacion-para-tu-intervencion-quirurgica" && (
         <>
           <section class="bg-[url(/banner-ficha5-mobile.webp)] md:bg-[url(/banner-ficha5.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -222,7 +222,7 @@ const otrosFichas = fichas.filter((p) => p.ruta !== ficha);
           </section>
           <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
             <FichaPDF
-              title="5. Recocomendaciones generales preoperatorias.pdf"
+              title="5. Preparacion para tu intervencion quirurgica.pdf"
               pdf="/documentos-de-preparacion.pdf"
               client:only="react"
             />
