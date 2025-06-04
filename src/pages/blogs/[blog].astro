@@ -89,6 +89,11 @@ export function getStaticPaths() {
         blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
       },
     },
+    {
+      params: {
+        blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+      },
+    },
   ];
 }
 
@@ -318,6 +323,18 @@ const blogs = [
     keywords: "Meniscos, desgarro menisco, artroscopia en Tijuana",
     id: 18,
   },
+  {
+    titulo:
+      "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+    ruta: "/blogs/valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+    blogTitle: "Valoracion traumatologica",
+    date: "Junio 2025",
+    title: "¿Qué pasa en una valoración ortopédica?| Recupera tu movilidad",
+    description:
+      "El Dr. Ricardo Monge te guía paso a paso para que aproveches al máximo tu consulta, con un enfoque personalizado para tu salud ósea y muscular.",
+    keywords: "Consulta ortopédica, Valoración ortopédica en Tijuana",
+    id: 19,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -464,6 +481,15 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   date = "Mayo 2025";
   content = "Blog18";
   blogTitle = "Desgarros Meniscales: Tratamiento Conservador vs. Quirúrgico";
+} else if (
+  blog ===
+  "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor"
+) {
+  image =
+    "/como prepararte para tu evaluacion con el dr monge especialista en traumatologia.webp";
+  date = "Junio";
+  content = "Blog19";
+  blogTitle = "Consulta de valoración: ¿En qué consiste y cómo prepararse?";
 } else {
   image = "/fondoDefault.png";
 }

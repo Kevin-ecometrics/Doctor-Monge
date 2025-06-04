@@ -1,0 +1,312 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/consulta ortopedica paso a paso con el dr monge.webp";
+import Image2 from "@public/diagnostico y tratamiento en traumatologia con el dr monge.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+  {
+    blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+  },
+];
+
+const blogActual =
+  "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor";
+
+const id = 19;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h3 class="text-xl mb-16">
+      {
+        isEnglish
+          ? "If you're looking for a second opinion, have questions about your diagnosis, treatment plan, injuries, or are experiencing persistent or acute pain—even if it's your first consultation—here’s what to expect."
+          : "Si estas buscando una segunda opinión, te quedaron dudas acerca de tu diagnóstico, el manejo del traumatólogo, tus lesiones o tratamiento, o experimentas dolor persistente o agudo. Incluso si se trata de tu primera vez acudiendo a una valoración, aquí te explico qué esperar."
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {
+        isEnglish
+          ? "During your consultation with Dr. Ricardo Monge"
+          : "Durante tu consulta con el Dr. Ricado Monge"
+      }
+    </h3>
+    <h3 class="text-2xl mb-8 text-white font-bold">
+      {
+        isEnglish
+          ? "Medical history and patient record"
+          : "Historia cínica y expediente"
+      }
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The first step is to get to know you and understand your case. We’ll discuss your symptoms, personal and family history of degenerative diseases, whether you practice any sports, or if you’ve had any accidents."
+          : "Lo primero que hacemos es conocerte, escuchar tu caso, abordaremos: Tus síntomas, antecedentes de patologías degenerativas tuyos o familiares, si practicas algún deporte o tuviste algún incidente"
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "If you already have recent tests, it’s important to bring them. For fractures, bring X-rays; for specific injuries like meniscus or ligament tears, bring your MRI. For osteoporosis, bring a bone density scan. This only applies if you already have them—if not, don’t worry, we’ll request the appropriate tests during your consultation."
+          : "Si ya cuentas con estudios recientes, es importante llevarlos, ya sean estudios de fracturas: radiografías de la zona, si te lesionaste una zona específica como las lesiones de meniscos o ligamentos es importante llevar tu resonancia magnética, en caso de osteoporosis acudir con la densitometría ósea, cabe recalcar que esto es si ya tienes estos estudios recientes, en caso de no tenerlos no te preocupes en tu valoración te solicitaremos de acuerdo con las observaciones y requerimientos específicos."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Why are they useful? The more information we have, the more accurate our diagnostic impression will be."
+          : "¿Por qué son útiles? Cuanta más información tengamos, más precisa será nuestra impresión diagnóstica."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {isEnglish ? "Physical examination" : "Exploración física"}
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Next, we’ll conduct a physical examination. Please wear comfortable clothing or garments that allow easy access to the affected area without causing discomfort or pain."
+          : "Posteriormente se procede a una exploración física. Trata de llevar ropa cómoda o ropa que se pueda movilizar bien para acceder al área de interés y que no te genere incomodidad o dolor a la hora de descubrirte esa área."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "We’ll perform specific movements to identify the problem area. Depending on the case, we may also use an ultrasound (a tool that provides real-time images of soft tissues to diagnose tendinitis, bursitis, or joint effusions)."
+          : "Realizaremos ciertos movimientos específicos para localizar alguna molestia dependiendo el caso podemos complementarlos con algún ultrasonido (tecnología que muestra tejidos blandos en tiempo real para diagnosticar tendinitis, bursitis o derrames articulares)"
+      }
+    </h4>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish ? "Dr. Ricardo Monge Consultation" : ""}
+        title={isEnglish ? "Dr. Ricardo Monge Consultation" : ""}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {isEnglish ? "Diagnosis and treatment" : "Diagnóstico y tratamiento"}
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "We will request additional tests if needed to support the diagnosis and suggest the most appropriate treatment. We’ll also discuss whether conservative treatment can be extended or if surgical intervention (open or minimally invasive) is necessary—along with benefits and recovery timelines."
+          : "Solicitaremos estudios adicionales si son necesarios para complementar el diagnóstico para poder sugerir el tratamiento más conveniente y discutir si hay posibilidad de prolongar el tratamiento conservador o si es necesario una intervención quirúrgica (abierta o mínimamente invasiva) ventajas y tiempos de superación."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "What’s the goal? To restore musculoskeletal function as quickly as possible."
+          : "¿Cuál es el objetivo? Recuperar la funcionalidad del sistema musculo-esquelético en el menor tiempo posible."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-3xl mb-16 font-bold text-white">
+      {
+        isEnglish
+          ? "Key recommendations for your consultation"
+          : "Recomendaciones clave para tu consulta de valoración"
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-xl mb-8 font-semibold">
+      {
+        isEnglish
+          ? "During your consultation, feel free to ask any questions you may have so we can provide you with the necessary information at your pace. Together, we’ll explore all available treatment options to help you live pain-free."
+          : "Durante tu consulta de valoración ten la confianza de hacer todas las preguntas necesarias, para poder darte toda información que requieres o al ritmo que no necesitas para juntos poder trazar alternativas y posibilidades de toda la gama de tratamientos que se puede hacer para darte una vida sin dolor."
+      }
+    </h4>
+    <h4 class="text-xl mb-8 font-semibold text-white">
+      {
+        isEnglish
+          ? "At the end, review what was discussed and make sure you understand:"
+          : "Al finalizar, repasa lo discutido y asegúrate de entender:"
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <ol class="list-decimal list-inside mb-8 space-y-4">
+      <li class="text-xl">
+        {isEnglish ? "The diagnosis" : "El diagnóstico"}
+      </li>
+      <li class="text-xl">
+        {isEnglish ? "The treatment plan" : "El plan de tratamiento"}
+      </li>
+    </ol>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Make sure everything about your case was clearly explained and ask any questions you may have. If needed, request guidance or additional material to review at home or with your family."
+          : "Asegúrate de que han quedado claras las explicaciones sobre tu caso y plantea todas las dudas que tengas. Si es necesario, pide alguna guía o material de apoyo para revisarlo en casa o con familiares."
+      }
+    </h4>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish ? "Patient consultation" : ""}
+        title={isEnglish ? "Patient consultation" : ""}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-3xl text-white font-semibold mb-8">
+      {
+        isEnglish
+          ? "Why is this consultation valuable?"
+          : "¿Por qué es valiosa esta consulta?"
+      }
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "A visit to the orthopedic specialist may feel overwhelming, but it will give you clarity about your condition and provide a personalized plan to help you regain a pain-free and independent life."
+          : "Una visita con el traumatólogo puede parecer bastante abrumadora, pero te brindará certeza sobre tu salud y te proporcionará un plan personalizado para recuperar tu vida sin dolor e independencia."
+      }
+    </h3>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl font-semibold text-white mb-8">
+      {isEnglish ? "Schedule your appointment" : "Agenda tu cita"}
+    </h2>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "I invite you to schedule a consultation. You can find me at the Torre Norte 2 building in Zona Río, Tijuana. The space is accessible, with ramps and wide hallways designed for your mobility—whether you use a cane, crutches, walker, or wheelchair."
+          : "Te invito a consulta, me puedes encontrar en el edificio Torre Norte 2 en zona rio Tijuana, un espacio accesible con rampas, y pasillos amplios diseñados para tu movilidad, para que puedas trasladarte cómodamente si usas bastón, muletas, andadera o silla de ruedas."
+      }
+    </h3>
+    <h3 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "If you're located elsewhere in the country and can’t attend in person but would like help analyzing your test results or getting a second opinion, I invite you to schedule an online consultation."
+          : "Si estas en otra parte de la república, se te complica acudir a consulta presencial, pero te gustaría que te apoyara a resolver dudas, analizar tus estudios y darte una segunda opinión, te invito a agendar una asesoría online."
+      }
+    </h3>
+  </Observer>
+
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <!-- <Comments
+    client:visible
+    author={author}
+    comment={comment}
+    business={business}
+  /> -->
+
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries"
+      : "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco"}
+    PreviousName={isEnglish
+      ? "Dr. Ricardo Monge resolves all your questions about meniscus injuries"
+      : "El Dr. Ricardo Monge resuelve todas tus dudas sobre lesiones de menisco"}
+  />
+</article>

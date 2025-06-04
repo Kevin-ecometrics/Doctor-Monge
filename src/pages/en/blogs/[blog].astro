@@ -89,6 +89,11 @@ export function getStaticPaths() {
         blog: "dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries",
       },
     },
+    {
+      params: {
+        blog: "traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path",
+      },
+    },
   ];
 }
 
@@ -306,6 +311,19 @@ const blogs = [
     keywords: "Meniscus, meniscus tear, arthroscopy in Tijuana",
     id: 18,
   },
+  {
+    titulo:
+      "traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path",
+    ruta: "/en/blogs/traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path",
+    blogTitle: "Traumatology Assessment",
+    date: "June 2025",
+    title:
+      "What Happens During an Orthopedic Evaluation? | Regain Your Mobility",
+    description:
+      "Dr. Ricardo Monge guides you step by step to get the most out of your consultation, with a personalized approach to your bone and muscle health.",
+    keywords: "Orthopedic Consultation, Orthopedic Evaluation in Tijuana",
+    id: 19,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -442,6 +460,15 @@ if (blog === "anterior-cruciate-ligament-injury") {
   date = "May 2025";
   content = "Blog18";
   blogTitle = "Meniscal Tears: Conservative vs. Surgical Treatment";
+} else if (
+  blog ===
+  "traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path"
+) {
+  image =
+    "/como prepararte para tu evaluacion con el dr monge especialista en traumatologia.webp";
+  date = "June";
+  content = "Blog19";
+  blogTitle = "Assessment Consultation: What to Expect and How to Prepare";
 } else {
   image = "/fondoDefault.png";
 }

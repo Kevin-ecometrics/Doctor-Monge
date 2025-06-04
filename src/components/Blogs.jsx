@@ -161,6 +161,14 @@ function Blogs({ URL }) {
         "¿Sabías que los desgarros meniscales no solo afectan a deportistas? Cada vez son más comunes y sus síntomas pueden confundirse. Descubre los tipos, diferentes formas de diagnósticos y tratamientos. En este blog te respondo tus dudas más frecuentes. Te invito a leerlo",
       link: "/blogs/eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
     },
+    {
+      img: "/preparate para tu consulta con el dr monge.webp",
+      fecha: "Junio",
+      titulo: "¿Qué pasa en una valoración ortopédica?",
+      texto:
+        "Te explico brevemente cómo prepararte para tu evaluación ortopédica, para que puedas sacar el máximo provecho de tu consulta. Esto te brindará mayor comodidad y nos permitirá, juntos, establecer un diagnóstico y un plan de tratamiento adaptado a tus necesidades.",
+      link: "/blogs/valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+    },
   ];
 
   const blogItem_en = [
@@ -310,6 +318,14 @@ function Blogs({ URL }) {
       texto:
         "Did you know that meniscal tears don't only affect athletes? They are becoming more common, and their symptoms can be confusing. Learn about the types, different diagnostic methods, and treatments. ",
       link: "/en/blogs/dr-ricardo-monge-resolves-all-your-questions-about-meniscus-injuries",
+    },
+    {
+      img: "/preparate para tu consulta con el dr monge.webp",
+      fecha: "June",
+      titulo: "What happens in an orthopedic assessment?",
+      texto:
+        "I will briefly explain how to prepare you for your orthopedic assessment, so that you can get the most out of your consultation. This will provide you with greater comfort and allow us, together, to establish a diagnosis and treatment plan tailored to your needs.",
+      link: "/en/blogs/traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path",
     },
   ];
 
@@ -478,7 +494,7 @@ function Blogs({ URL }) {
                     <p className="absolute inset-0 flex items-end p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       <a
                         className="text-white z-10 hover:text-blue-600 cursor-pointer"
-                        href={item.link}
+                        href={`${item.link}/`}
                         rel="noopener noreferrer"
                         onClick={handleClicked} // Handler aquí
                         role="button" // Accesibilidad

@@ -139,12 +139,8 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     <div class="flex justify-center items-center">
       <Image
         src={Image1}
-        alt={isEnglish
-          ? "The best orthopedic duo in Tijuana - Dr. Monge Orthopedic Trauma Surgeon"
-          : "La mejor dupla ortopedica en Tijuana  Dr Monge Ortopedista traumatologo"}
-        title={isEnglish
-          ? "The best orthopedic duo in Tijuana - Dr. Monge Orthopedic Trauma Surgeon"
-          : "La mejor dupla ortopedica en Tijuana  Dr Monge Ortopedista traumatologo"}
+        alt={isEnglish ? "" : ""}
+        title={isEnglish ? "" : ""}
         class="fade-up object-cover mb-16"
       />
     </div>
@@ -443,12 +439,8 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     <div class="flex justify-center items-center">
       <Image
         src={Image2}
-        alt={isEnglish
-          ? "The best orthopedic duo Dr. Monge Orthopedic Trauma Surgeon"
-          : "La mejor dupla ortopedica Dr Monge Ortopedista traumatologo "}
-        title={isEnglish
-          ? "The best orthopedic duo Dr. Monge Orthopedic Trauma Surgeon"
-          : "La mejor dupla ortopedica Dr Monge Ortopedista traumatologo "}
+        alt={isEnglish ? "" : ""}
+        title={isEnglish ? "" : ""}
         class="fade-up object-cover mb-16"
       />
     </div>
@@ -593,5 +585,11 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     PreviousName={isEnglish
       ? "The best orthopedic duo in Tijuana"
       : "La mejor dupla ortopedica en Tijuana"}
+    NextLink={isEnglish
+      ? "traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path"
+      : "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor"}
+    NextName={isEnglish
+      ? "Assessment Consultation: What to Expect and How to Prepare"
+      : "Consulta de valoración: ¿En qué consiste y cómo prepararse?"}
   />
 </article>
