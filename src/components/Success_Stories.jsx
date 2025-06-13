@@ -42,7 +42,7 @@ const SuccessStories = ({ URL }) => {
       subtitle:
         "Los resultados de esta cirugía tienen una de las tasas de éxito más altas, es normal sentirte con angustia previo a este procedimiento ortopédico por lo que en este videoblog te explico como traumatólogo especialista en rodilla todo lo que debes saber.",
       background: "/Protesis%20total%20de%20cadera%20en%20Tijuana.png",
-      link: "/procedimientos/protesis-total-de-rodilla",
+      link: "/procedimientos/protesis-total-de-rodilla/",
     },
     {
       title: "Prótesis total de",
@@ -50,7 +50,7 @@ const SuccessStories = ({ URL }) => {
       subtitle:
         "En este videoblog profundizaremos en una de las cirugías en traumatología más realizadas mundialmente con poco más de 1 millón de pacientes cada año. Te explico en que consiste y quienes son candidatos.",
       background: "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png",
-      link: "/procedimientos/protesis-total-de-cadera",
+      link: "/procedimientos/protesis-total-de-cadera/",
     },
     {
       title: "Hernia de",
@@ -59,7 +59,7 @@ const SuccessStories = ({ URL }) => {
         "¿Sabías que la radiculopatía por hernia en disco lumbar es una de las principales causas de discapacidad ortopédica en todo el mundo? Me gustaría hablar sobre la intervención quirúrgica, una práctica en traumatología donde se realiza una descompresión de la raíz nerviosa afectada.",
       background:
         "/protesis%20total%20de%20rodilla%20en%20Tijuana%20consulta.png",
-      link: "/procedimientos/hernia-de-disco-lumbar",
+      link: "/procedimientos/hernia-de-disco-lumbar/",
     },
     {
       title: "Lesion de",
@@ -68,7 +68,7 @@ const SuccessStories = ({ URL }) => {
         "El ligamento cruzado anterior es uno de los estabilizadores más importantes de la rodilla que le da el 85% de su estabilidad, acompáñame te platico de ortopedia y de cómo se aborda esta lesión.",
       background:
         "/Lesiones%20en%20ligamento%20cruzado%20anterior%20tratamiento%20conservador%20en%20Tijuana.png",
-      link: "/procedimientos/lesion-por-lca",
+      link: "/procedimientos/lesion-por-lca/",
     },
     {
       title: "Hernia discal",
@@ -77,7 +77,7 @@ const SuccessStories = ({ URL }) => {
         "Una hernia se produce cuando el disco que se encargan de disipar las fuerzas que recorren la columna se dañan, por tanto, se aplasta las raíces nerviosas. Te invito a ver este videoblog para conocer su tratamiento ortopédico.",
       background:
         "/Hernia%20de%20disco%20lumbar%20cirugia%20y%20tratamiento%20en%20Tijuana.png",
-      link: "/procedimientos/hernia-discal-cervical",
+      link: "/procedimientos/hernia-discal-cervical/",
     },
     {
       title: "Lesiones en",
@@ -86,7 +86,7 @@ const SuccessStories = ({ URL }) => {
         "Son responsables del casi 50 % de la trasmisión de fuerza a través de la rodilla y actúan como estabilizadores secundarios. Esta es una de las lesiones de rodilla más comunes te invito a conocer tratamiento.",
       background:
         "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png",
-      link: "/procedimientos/lesiones-en-meniscos",
+      link: "/procedimientos/lesiones-en-meniscos/",
     },
   ];
 
@@ -97,7 +97,7 @@ const SuccessStories = ({ URL }) => {
       subtitle:
         "This surgery has one of the highest success rates. It's normal to feel anxious before this orthopedic procedure, so in this vlog I explain everything you need to know as a knee specialist trauma surgeon.",
       background: "/Protesis%20total%20de%20cadera%20en%20Tijuana.png",
-      link: "/en/procedures/total-hip-prosthesis",
+      link: "/en/procedures/total-hip-prosthesis/",
     },
     {
       title: "Total hip",
@@ -105,7 +105,7 @@ const SuccessStories = ({ URL }) => {
       subtitle:
         "In this vlog we'll explore one of the most performed trauma surgeries worldwide with over 1 million patients each year. I'll explain what it involves and who are candidates.",
       background: "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png",
-      link: "/en/procedures/total-knee-prosthesis",
+      link: "/en/procedures/total-knee-prosthesis/",
     },
     {
       title: "Lumbar disc",
@@ -114,7 +114,7 @@ const SuccessStories = ({ URL }) => {
         "Did you know lumbar disc herniation radiculopathy is one of the leading causes of orthopedic disability worldwide? I'd like to discuss the surgical intervention, a trauma procedure that decompresses the affected nerve root.",
       background:
         "/protesis%20total%20de%20rodilla%20en%20Tijuana%20consulta.png",
-      link: "/en/procedures/herniated-lumbar-disc",
+      link: "/en/procedures/herniated-lumbar-disc/",
     },
     {
       title: "Anterior cruciate",
@@ -123,7 +123,7 @@ const SuccessStories = ({ URL }) => {
         "The anterior cruciate ligament is one of the knee's most important stabilizers, providing 85% of its stability. Join me as I discuss orthopedics and how this injury is treated.",
       background:
         "/Lesiones%20en%20ligamento%20cruzado%20anterior%20tratamiento%20conservador%20en%20Tijuana.png",
-      link: "/en/procedures/acl-injury",
+      link: "/en/procedures/acl-injury/",
     },
     {
       title: "Cervical disc",
@@ -132,7 +132,7 @@ const SuccessStories = ({ URL }) => {
         "A herniation occurs when the discs that dissipate forces along the spine are damaged, compressing nerve roots. I invite you to watch this vlog to learn about its orthopedic treatment.",
       background:
         "/Hernia%20de%20disco%20lumbar%20cirugia%20y%20tratamiento%20en%20Tijuana.png",
-      link: "/en/procedures/cervical-disc-herniation",
+      link: "/en/procedures/cervical-disc-herniation/",
     },
     {
       title: "Meniscal",
@@ -141,7 +141,7 @@ const SuccessStories = ({ URL }) => {
         "The menisci are responsible for nearly 50% of force transmission through the knee and act as secondary stabilizers. This is one of the most common knee injuries - I invite you to learn about its treatment.",
       background:
         "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png",
-      link: "/en/procedures/meniscus-injuries",
+      link: "/en/procedures/meniscus-injuries/",
     },
   ];
 

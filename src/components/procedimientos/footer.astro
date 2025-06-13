@@ -35,7 +35,7 @@ const currentYear = new Date().getFullYear();
           otrosProcedimientos.map((p) => (
             <li class="mb-2">
               <a
-                href={`${URL ? "/en/procedures/" : "/procedimientos/"}${p.ruta}`}
+                href={`${URL ? "/en/procedures/" : "/procedimientos/"}${p.ruta}/`}
                 class="group text-gray-300 hover:text-white transition-colors flex items-center justify-center"
               >
                 <span class="w-2 h-2 bg-blue-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -146,13 +146,13 @@ const currentYear = new Date().getFullYear();
         </h3>
         <nav class="grid grid-cols-1 gap-y-4 text-center">
           <a
-            href={URL ? "/en/privacy" : "/politicas"}
+            href={URL ? "/en/privacy/" : "/politicas/"}
             class="text-gray-300 hover:text-blue-400 transition-colors hover:underline underline-offset-4"
           >
             {URL ? "Terms and Conditions" : "Términos y Condiciones"}
           </a>
           <a
-            href={URL ? "/en/terms" : "/terminos"}
+            href={URL ? "/en/terms/" : "/terminos/"}
             class="text-gray-300 hover:text-blue-400 transition-colors hover:underline underline-offset-4"
           >
             {URL ? "Privacy Policy" : "Política de Privacidad"}
