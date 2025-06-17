@@ -94,6 +94,11 @@ export function getStaticPaths() {
         blog: "traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path",
       },
     },
+    {
+      params: {
+        blog: "broken-ankle-symptoms-surgery-or-no-surgery-and-recovery",
+      },
+    },
   ];
 }
 
@@ -324,6 +329,17 @@ const blogs = [
     keywords: "Orthopedic Consultation, Orthopedic Evaluation in Tijuana",
     id: 19,
   },
+  {
+    titulo: "broken-ankle-symptoms-surgery-or-no-surgery-and-recovery",
+    ruta: "/en/blogs/broken-ankle-symptoms-surgery-or-no-surgery-and-recovery",
+    blogTitle: "Broken Ankle: Symptoms, Surgery or No Surgery, and Recovery",
+    date: "Junio 2025",
+    title: "Broken Ankle: Symptoms, Surgery or No Surgery, and Recovery",
+    description:
+      "Learn about broken ankle symptoms, when surgery is necessary, and how to recover effectively with Dr. Ricardo Monge.",
+    keywords: "broken ankle, symptoms, surgery, recovery",
+    id: 20,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -469,6 +485,14 @@ if (blog === "anterior-cruciate-ligament-injury") {
   date = "June";
   content = "Blog19";
   blogTitle = "Assessment Consultation: What to Expect and How to Prepare";
+} else if (
+  blog === "broken-ankle-symptoms-surgery-or-no-surgery-and-recovery"
+) {
+  image =
+    "/Blog de Tobillo Roto por el Doctor Ricardo Monge Romero traumatologo Ortopedista.webp";
+  date = "June 2025";
+  content = "Blog20";
+  blogTitle = "Ankle Fracture: When to Operate and When It Is Not Necessary";
 } else {
   image = "/fondoDefault.png";
 }

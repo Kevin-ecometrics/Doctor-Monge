@@ -1,0 +1,612 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/Consulta-de-Fractura-de-Tobillo-por-el-Doctor-Ricardo-Monge-Romero-Traumatologo-Ortopedista.webp";
+import Image2 from "@public/Tipos-de-Fracturas-de-Tobillo-Explicadas-por-el-Doctor-Ricardo-Monge-Romero-Especialista-en-Ortopedia.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+  {
+    blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+  },
+  {
+    blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+  },
+];
+
+const blogActual =
+  "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion";
+
+const id = 20;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h3 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "One of the most common and also most complex injuries in trauma consultations are ankle fractures."
+          : "Una de las lesiones más comunes que llegan a consulta traumatológica y también entre las más complejas son las fracturas del tobillo."
+      }
+    </h3>
+    <h3 class="text-xl mb-8 text-white">
+      {
+        isEnglish
+          ? "They affect multiple structures: bones, ligaments (which maintain joint alignment), nerves and blood vessels, and can become more complicated with more fractured bones due to increased instability."
+          : "Afectan múltiples estructuras: huesos, ligamentos (que mantienen la alineación articular), nervios y vasos sanguíneos y esta puede complicarse cuanto mayor sea el número de huesos fracturados, ya que las vuelve más inestables."
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "This is because your ankle functions like a well-adjusted door hinge. It only moves in two planes: upward (dorsiflexion) and downward (plantar flexion). For this hinge to work smoothly and stably, it depends on three key bones that fit together perfectly: <span class='text-white font-semibold'>the distal end of the tibia (shinbone)</span>, <span class='text-white font-semibold'>the fibula (the thinner leg bone)</span>, and <span class='text-white font-semibold'>the talus (the bone that connects to the foot)</span>."
+        : "Esto se debe a que tu tobillo funciona como bisagra de puerta bien ajustada. Solo se mueve a dos planos: hacia arriba (flexión dorsal) y hacia abajo (flexión plantar). Para que esta bisagra funcione con suavidad y estabilidad, depende de tres huesos clave que encajan a la perfección: <span class='text-white font-semibold'>el extremo inferior de la tibia (hueso de la espinilla)</span>, <span class='text-white font-semibold'>el peroné (el hueso más delgado de la pierna)</span> y <span class='text-white font-semibold'>el astrágalo (el hueso que conecta con el pie)</span>."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Ankle Structure: What Provides Support and Stability?"
+          : "Estructura del Tobillo: ¿Qué le da soporte y estabilidad?"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? 'The <span class="text-white font-semibold">"Cup" of Support</span>: <br/> The ends of the tibia and fibula create a sort of cup into which the top of the talus (an irregularly shaped bone connecting the foot to the leg) fits, like a puzzle piece.'
+        : 'La <span class="text-white font-semibold">"Copita" de soporte</span>: <br/>  El extremo de la tibia y el peroné crean una especie de copa y dentro de este encaja la parte superior del astrágalo (hueso de forma irregular que une el pie a la pierna), como una pieza de un rompecabezas.'}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? 'The <span class="text-white font-semibold">"Pillars" of Stability</span>: <br/> This structure is reinforced by three bony prominences known as malleoli:'
+        : 'Los <span class="text-white font-semibold">"Pilares" de Estabilidad</span>: <br/>  Esta estructura está reforzada por tres prominencias óseas conocidas como maléolos:'}
+    />
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Medial Malleolus</span>: Part of the tibia (inner ankle)."
+          : "<span class='text-white font-semibold'>Maléolo Interno (Medial)</span>: Parte de la tibia (en la parte interior del tobillo)."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Posterior Malleolus</span>: Also part of the tibia (back of ankle)."
+          : "<span class='text-white font-semibold'>Maléolo Posterior</span>: También parte de la tibia (en la parte posterior)."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Lateral Malleolus</span>: Part of the fibula (outer ankle)."
+          : "<span class='text-white font-semibold'>Maléolo Externo (Lateral)</span>: Parte del peroné (en la parte exterior del tobillo)."}
+      />
+    </ul>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "When one or more of these pillars fracture, the structure loses stability and alignment precision."
+          : "Cuando uno o más de estos pilares se fracturan, la estructura pierde estabilidad y precisión en su alineación."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h1 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "These are the most common symptoms of an ankle fracture"
+          : "Estos son los síntomas más comunes en una fractura de tobillo"
+      }
+    </h1>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Intense pain</span> when putting weight on the foot or applying pressure"
+          : "<span class='text-white font-semibold'>Dolor intenso</span> al apoyar el pie o aplicar presión"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Swelling, bruising</span> and numbness"
+          : "<span class='text-white font-semibold'>Inflamación, moretones</span> y entumecimiento"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Functional limitation</span> (difficulty walking)"
+          : "<span class='text-white font-semibold'>Limitación funcional</span> (dificultad para caminar)"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Visible deformity</span> in displaced fractures"
+          : "<span class='text-white font-semibold'>Deformidad visible</span> cuando se tratan de fracturas desplazadas"}
+      />
+    </ul>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish ? "Ankle structure" : "Estructura del tobillo"}
+        title={isEnglish ? "Ankle structure" : "Estructura del tobillo"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Types of ankle fractures by shape and location"
+          : "Tipos de fracturas de tobillo por forma y ubicación"
+      }
+    </h2>
+    <h3 class="text-xl mb-4 font-semibold text-white">
+      {isEnglish ? "By shape:" : "Por forma:"}
+    </h3>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Hairline</span> (crack without displacement)"
+          : "<span class='text-white font-semibold'>Fisura</span> (grieta sin desplazamiento)"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Simple</span> (linear break)"
+          : "<span class='text-white font-semibold'>Simple</span> (rotura lineal)"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Displaced</span> (separated fragments)"
+          : "<span class='text-white font-semibold'>Desplazada</span> (fragmentos separados)"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Comminuted</span> (multiple fragments)"
+          : "<span class='text-white font-semibold'>Conminuta</span> (múltiples fragmentos)"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Open</span> (bone exposed)"
+          : "<span class='text-white font-semibold'>Abierta</span> (hueso expuesto)"}
+      />
+    </ul>
+
+    <h3 class="text-xl mb-4 font-semibold text-white">
+      {isEnglish ? "By location:" : "Por ubicación:"}
+    </h3>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Medial malleolus</span>: Fracture of the inner tibia. If not displaced or fragments are small, may be treated without surgery."
+          : "<span class='text-white font-semibold'>Maléolo medial</span>: Fractura de tibia interna. Si no hay desplazamiento o los fragmentos son pequeños, puede tratarse sin cirugía."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Posterior malleolus</span>: Fracture at the back of the tibia. If affecting >25% of joint, requires surgery due to instability."
+          : "<span class='text-white font-semibold'>Maléolo posterior</span>: Fractura en la parte posterior de la tibia. Si afecta >25% de la articulación, requiere cirugía por inestabilidad."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Bimalleolar</span>: Fracture of two malleoli."
+          : "<span class='text-white font-semibold'>Bimalear</span>: Fractura de dos maléolos."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Bimalleolar equivalent</span>: Fracture of one malleolus with medial ligament injury (e.g. deltoid ligament rupture). Both are unstable and usually require surgery."
+          : "<span class='text-white font-semibold'>Equivalente bimalear</span>: Fractura de un maléolo con lesión ligamentosa medial (ej: rotura del ligamento deltoideo). Ambas son inestables y suelen requerir cirugía."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Trimalleolar</span>: Fracture of all three malleoli. Always unstable and requires surgery."
+          : "<span class='text-white font-semibold'>Trimalear</span>: Fractura de los tres maléolos. Siempre es inestable y requiere cirugía."}
+      />
+    </ul>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "When NOT to operate an ankle fracture?"
+          : "¿Cuándo no operar una fractura de tobillo?"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Each patient is different and factors like age and fracture type will determine if conservative treatment is appropriate, such as for stable fractures (non-displaced infrasyndesmotic and transsyndesmotic fibular fractures without medial injury) which may be treated without surgery."
+          : "Cada paciente es diferente y factores como la edad y el tipo de fractura van a determinar que se aborde desde lo conservador por ejemplo las fracturas estables, es decir las no desplazadas infrasindesmales y transindesmales del peroné sin lesión medial pueden tratarse sin cirugía."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Conservative treatment involves immobilization with a cast boot with the ankle at a 90° angle for 4-6 weeks. This positioning helps prevent contractures. During this period, partial weight bearing may be allowed, followed by rehabilitation to recover mobility and strength."
+          : "El tratamiento conservador consiste en la inmovilización con un tipo bota de yeso con el tobillo en ángulo recto (90°) durante 4 a 6 semanas. Este posicionamiento ayuda a prevenir contracturas. Durante este periodo se puede permitir una carga parcial de peso, seguida por rehabilitación para recuperar movilidad y fuerza."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "When SHOULD you operate an ankle fracture?"
+          : "¿Cuándo sí operar una fractura de tobillo?"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "Surgery is indicated if there is <span class='text-white font-semibold'>bone displacement</span>, if it compromises <span class='text-white font-semibold'>joint stability</span>, if there are injuries in other areas, or if there are <span class='text-white font-semibold'>multiple fragments</span> requiring plates or grafts for reconstruction. The <span class='text-white font-semibold'>MIPO technique</span> involves placing plates with minimal skin opening. For very complex cases, we sometimes place an <span class='text-white font-semibold'>external fixator</span> to allow space for the fragments to align."
+        : "Se indica cirugía si hay un <span class='text-white font-semibold'>desplazamiento óseo</span>, si compromete la <span class='text-white font-semibold'>estabilidad articular</span>, si hay lesión en otras áreas o existen <span class='text-white font-semibold'>múltiples fragmentos</span> que requieren de placas o injertos para reconstruir. La <span class='text-white font-semibold'>técnica MIPO</span> consiste en colocar placas con mínima apertura de la piel. Cuando son muy complejas en algunas ocasiones colocamos un <span class='text-white font-semibold'>fijador externo</span> y damos espacio a la articulación para que se alineen los fragmentos."}
+    />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish ? "Ankle surgery" : "Cirugía de tobillo"}
+        title={isEnglish ? "Ankle surgery" : "Cirugía de tobillo"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "How is surgery chosen for your ankle fracture? Key factors"
+          : "¿Cómo se elige la cirugía para tu fractura de tobillo? Factores clave"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "If you've been told you need surgery for your ankle fracture, you may wonder what type of operation is best for you. The answer: it depends."
+          : "Si te han dicho que necesitas cirugía para tu fractura de tobillo, es normal que te preguntes qué tipo de operación es la mejor para ti. La respuesta, depende mucho."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The surgical approach to repair an ankle fracture isn't one-size-fits-all. The decision about which technique to use (like plates, screws, or even joint fusion or replacement in advanced cases) depends on you and your specific injury."
+          : "El enfoque quirúrgico para reparar una fractura de tobillo no es único ni universal. La decisión sobre qué técnica usar (como placas, tornillos, o incluso una fusión o reemplazo articular en casos avanzados) depende de ti y de tu lesión específica."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Orthopedic trauma surgeons evaluate several key aspects:"
+          : "Los médicos traumatólogos valoramos varios aspectos clave:"
+      }
+    </h4>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Your overall health</span>: Do you have other conditions?"
+          : "<span class='text-white font-semibold'>Tu estado de salud general</span>: ¿Tienes otras enfermedades?"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Your age</span>"
+          : "<span class='text-white font-semibold'>Tu edad</span>"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Fracture severity</span>: How many fragments are there? Is it displaced? Are ligaments damaged?"
+          : "<span class='text-white font-semibold'>La gravedad de la fractura</span>: ¿Cuántos fragmentos hay? ¿Está desplazada? ¿Hay daño en los ligamentos?"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Your lifestyle and activity level</span>: Are you very active, an athlete, or more sedentary?"
+          : "<span class='text-white font-semibold'>Tu estilo de vida y actividad</span>: ¿Eres muy activo, deportista o llevas una vida más sedentaria?"}
+      />
+    </ul>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "If the fracture has caused severe damage to the ankle joint, affecting much of the cartilage, options may include <span class='text-white font-semibold'>arthrodesis</span> (fusing bones to eliminate pain) or <span class='text-white font-semibold'>arthroplasty</span> (replacing the damaged joint with a prosthesis)."
+        : "Es importante si la fractura ha causado un daño muy severo en la articulación del tobillo, afectando gran parte del cartílago, las opciones pueden incluir una <span class='text-white font-semibold'>artrodesis</span> que es fusionar los huesos para eliminar el dolor, o una <span class='text-white font-semibold'>artroplastia</span> para reemplazar la articulación dañada por una prótesis."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-8 font-semibold text-white">
+      {
+        isEnglish
+          ? "Types of surgical approaches"
+          : "Tipos de abordajes quirúrgicos"
+      }
+    </h3>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Anterolateral Approach</span>: Used for fibula and distal tibia fractures, as well as for accessing the tibiotalar joint. Allows good visualization of the articular surface and application of submuscular and subcutaneous plates."
+          : "<span class='text-white font-semibold'>Abordaje Anterolateral</span>: Se utiliza para fracturas del peroné y la tibia distal, así como para abordar la articulación tibioastragalina. Permite una buena visualización de la superficie articular y la aplicación de placas submusculares y subcutáneas."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Posterolateral Approach</span>: Used for posterior malleolus and syndesmosis fractures. Provides good visualization of the posterior fragment and facilitates anatomical reduction and stable fixation, including the syndesmosis."
+          : "<span class='text-white font-semibold'>Abordaje Posterolateral</span>: Se utiliza para fracturas del maléolo posterior y la sindesmosis. Ofrece una buena visualización del fragmento posterior y facilita la reducción anatómica y fijación estable, incluyendo la sindesmosis."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Medial Approach</span>: Used for medial malleolus and distal tibia fractures, including approaches for medial malleolus fracture repair and syndesmosis."
+          : "<span class='text-white font-semibold'>Abordaje Medial</span>: Se utiliza para fracturas del maléolo medial y la tibia distal, incluyendo abordajes para la reparación de la fractura del maléolo medial y la sindesmosis."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Combined Anterolateral and Medial Approach</span>: Used in complex fractures involving both lateral and medial aspects of the ankle."
+          : "<span class='text-white font-semibold'>Abordaje Combinado Anterolateral y Medial</span>: Se utiliza en fracturas complejas que involucran tanto la parte lateral como medial del tobillo."}
+      />
+    </ul>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Key Recovery Tips After Ankle Surgery"
+          : "Consejos Clave para tu Recuperación tras Cirugía de Tobillo"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "<span class='text-white font-semibold'>Physical therapy is essential</span> to recover mobility, balance and muscle strength after ankle surgery. Always follow the personalized plan designed by your physical therapist, as well as attending follow-up appointments with your orthopedic surgeon to monitor fracture progress."
+        : "<span class='text-white font-semibold'>La fisioterapia es fundamental</span> para recuperar la movilidad, el equilibrio y la fuerza muscular después de la cirugía de tobillo. Sigue siempre el plan personalizado que te diseñe tu fisioterapeuta, así como acudir a tus citas de seguimiento con tu traumatólogo para poder darle un seguimiento de la evolución de fractura."}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "<span class='text-white font-semibold'>Listen carefully to your body</span>: exercise progression should be gradual and intensity should only increase if pain allows; never force recovery, as pain is an important signal."
+        : "<span class='text-white font-semibold'>Escucha atentamente a tu cuerpo</span>: el avance en los ejercicios debe ser gradual y la intensidad solo debe aumentar si el dolor lo permite; nunca fuerces la recuperación, ya que el dolor es una señal importante."}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "Once past the initial rehabilitation phase, you can begin incorporating <span class='text-white font-semibold'>low-impact activities</span> like stationary biking, swimming or walking on flat surfaces, always with prior authorization."
+        : "Una vez superada la fase inicial de rehabilitación, puedes empezar a incorporar <span class='text-white font-semibold'>actividades de bajo impacto</span> como la bicicleta estática, la natación o caminar sobre superficie plana, siempre bajo la autorización previa."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-8 font-semibold text-white">
+      {isEnglish ? "Frequently Asked Questions" : "Preguntas frecuentes"}
+    </h3>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "How long until I can walk again?"
+          : "¿En cuánto tiempo podré volver a caminar?"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The answer varies significantly for each person, as every body and every fracture is unique, and recovery time depends on the type of injury and its treatment. Generally, you can begin weight bearing and taking first steps with crutches or a walker between 6-12 weeks post-surgery."
+          : "La respuesta varía significativamente en cada persona, ya que cada cuerpo y cada fractura son únicos y el tiempo de recuperación depende del tipo de lesión y su abordaje. Por lo general, podrás empezar a apoyar el pie y dar los primeros pasos con ayuda de muletas o andador, entre las 6 a 12 semanas postoperatorias."
+      }
+    </h4>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "To support this process and promote faster, stronger recovery, your best ally is <span class='text-white font-semibold'>self-care</span>: with a diet rich in proteins, vitamins and minerals to repair bone and muscle health, complemented with supplements. It's important to improve habits and completely avoid <span class='text-white font-semibold'>tobacco, alcohol, excessive coffee and energy drinks</span> as these substances can interfere with healing and consolidation."
+        : "Para apoyar este proceso y favorecer una recuperación más rápida y sólida, tu mejor aliado es el <span class='text-white font-semibold'>cuidado personal</span>: con una alimentación rica en proteínas, vitaminas y minerales para reparar tu salud ósea y muscular, además de complementarlo con suplementos es importante mejorar hábitos y evitar por completo el <span class='text-white font-semibold'>tabaco, el alcohol, el café en exceso y las bebidas energéticas</span> ya que estas sustancias pueden interferir en la cicatrización y consolidación."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-8 font-semibold text-white">
+      {
+        isEnglish
+          ? "How to sleep with an ankle fracture?"
+          : "¿Cómo dormir con fractura de tobillo?"
+      }
+    </h3>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>On your back with foot elevated</span>: Sleeping on your back is one of the most recommended positions. Elevating the ankle reduces fluid accumulation, minimizing swelling."
+          : "<span class='text-white font-semibold'>Boca arriba con el pie en alto</span>: Dormir de espaldas es una de las posiciones más recomendadas. Colocar el tobillo reduce la acumulación de líquidos, minimizando la hinchazón."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Firm but comfortable pillows</span>: Use cushions that keep the foot elevated slightly above heart level. This promotes lymphatic drainage and reduces swelling."
+          : "<span class='text-white font-semibold'>Almohadas firmes, pero cómodas</span>: Usa cojines que mantengan el pie elevado a un nivel un poco por encima del corazón. Esto favorece el drenaje linfático y reduce la hinchazón."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Strategic placement</span>: Place one pillow under the injured ankle and another under the leg to avoid tension."
+          : "<span class='text-white font-semibold'>Distribución estratégica</span>: Coloca una almohada debajo del tobillo lesionado y otra debajo de la pierna para evitar tensiones."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Avoid overly soft cushions</span>: They don't provide necessary support and may leave the ankle in an uncomfortable position overnight."
+          : "<span class='text-white font-semibold'>Evita cojines demasiado blandos</span>: No ofrecen el soporte necesario y pueden provocar que el tobillo quede en una posición incómoda durante la noche."}
+      />
+    </ul>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "What are the most common complications of an ankle fracture?"
+          : "¿Cuáles son las complicaciones más comunes de una fractura de tobillo?"
+      }
+    </h2>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Delayed union</span>: Doesn't heal within 3 months. Want to know more about complications like nonunion? I invite you to keep exploring the blog."
+          : "<span class='text-white font-semibold'>Retraso de consolidación</span>: No cura en el periodo de 3 meses. ¿Te interesa saber más sobre complicaciones como la pseudoartrosis? Te invito a seguir explorando el blog."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Joint stiffness</span>: Usually due to lack of mobility and rehabilitation exercises"
+          : "<span class='text-white font-semibold'>Rigidez articular</span>: Usualmente sucede por falta de movilidad y ejercicios de rehabilitación"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Infections</span>: Depends on each patient and infection degree - may require antibiotics or surgical intervention"
+          : "<span class='text-white font-semibold'>Infecciones</span>: Depende de cada paciente y el grado de infección se puede administrar antibiótico o bien puede ser necesario una intervención quirúrgica"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Poor stability</span>: If a fracture heals in incorrect position it will cause incorrect functionality, generating pain and wear requiring revision surgery"
+          : "<span class='text-white font-semibold'>Mala estabilidad</span>: Si una fractura consolida en una posición incorrecta produjera una funcionalidad incorrecta, generando dolor, desgaste para ello sera necesario una cirugia de revisión"}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Post-traumatic arthritis</span>: In some patients fractures can accelerate joint degeneration requiring intervention like joint fusion or arthroplasty"
+          : "<span class='text-white font-semibold'>Artrosis postraumática</span>: En algunos pacientes las fracturas pueden generar un avance en la degeneración articular lo cual requerirá una intervención como una fijación articular o artroplastia"}
+      />
+    </ul>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Your recovery requires attention and conscious action: always listen to your body and don't hesitate to ask your orthopedic surgeon all your questions about the injury, treatment or recommendations. Each case is evaluated comprehensively to ensure the best possible outcome."
+          : "Tu recuperación requiere atención y acción consciente: escucha siempre a tu cuerpo y no dudes en plantear todas tus dudas a tu traumatólogo sobre la lesión, tratamiento o recomendaciones. Cada caso se evalúa de forma integral para garantizar la mejor evolución posible."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Do you need specialized evaluation?"
+          : "¿Necesitas una valoración especializada?"
+      }
+    </h2>
+    <h3
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "If you're seeking a second opinion, a family member had an accident, or you need guidance. I offer <span class='text-white font-semibold'>remote medical consultations</span> for your convenience, or you can visit me at my office in <span class='text-white font-semibold'>Torre Norte 2, Tijuana</span> - an accessible building with parking and spacious, comfortable facilities so you have no difficulty receiving care."
+        : "Si buscas una segunda opinión, un familiar sufrió un accidente o necesitas orientación. Te ofrezco <span class='text-white font-semibold'>asesorías médicas a distancia</span> para tu comodidad o bien, te espero en mi consultorio me puedes encontrar en <span class='text-white font-semibold'>Torre Norte 2, en Tijuana</span> - un edificio accesible, con estacionamiento e instalaciones amplias y cómodas para que no tengas ninguna dificultad en recibir tu atención."}
+    />
+  </Observer>
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path"
+      : "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor"}
+    PreviousName={isEnglish
+      ? "Valuation consultation: What does it consist of and how to prepare?"
+      : "Consulta de valoración: ¿En qué consiste y cómo prepararse?"}
+  />
+</article>

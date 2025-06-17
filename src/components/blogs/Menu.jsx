@@ -61,7 +61,7 @@ function Menu({ blogs, titulo }) {
             {paginatedBlogs.map((blog, index) => (
               <a
                 key={index}
-                href={blog.ruta}
+                href={`${blog.ruta}/`}
                 className={`block p-3 text-center rounded-lg transition duration-300 transform hover:scale-105 ${
                   blog.ruta === isCurrentPath
                     ? "text-blue-400 bg-gray-700"

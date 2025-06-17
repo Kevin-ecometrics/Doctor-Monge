@@ -94,6 +94,11 @@ export function getStaticPaths() {
         blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
       },
     },
+    {
+      params: {
+        blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+      },
+    },
   ];
 }
 
@@ -335,6 +340,18 @@ const blogs = [
     keywords: "Consulta ortopédica, Valoración ortopédica en Tijuana",
     id: 19,
   },
+  {
+    titulo: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+    ruta: "/blogs/fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+    blogTitle:
+      "Fractura de tobillo: síntomas, operar o no operar y recuperación",
+    date: "Junio 2025",
+    title: "Fractura de tobillo: síntomas, operar o no operar y recuperación",
+    description:
+      "¿Reposo, férula u operación? Qué hacer ante una fractura de tobillo, todo lo que necesitas saber y claves para sanar bien con el especialista Dr. Ricardo Monge ",
+    keywords: "Fractura tobillo, Tobillo roto, operar, no operar, Tijuana",
+    id: 20,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -490,6 +507,14 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
   date = "Junio";
   content = "Blog19";
   blogTitle = "Consulta de valoración: ¿En qué consiste y cómo prepararse?";
+} else if (
+  blog === "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion"
+) {
+  image =
+    "/Blog de Tobillo Roto por el Doctor Ricardo Monge Romero traumatologo Ortopedista.webp";
+  date = "Junio";
+  content = "Blog20";
+  blogTitle = "Fractura de Tobillo: Cuándo Operar y Cuándo No es Necesario ";
 } else {
   image = "/fondoDefault.png";
 }

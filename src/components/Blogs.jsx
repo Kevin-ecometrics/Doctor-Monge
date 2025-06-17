@@ -169,6 +169,14 @@ function Blogs({ URL }) {
         "Te explico brevemente cómo prepararte para tu evaluación ortopédica, para que puedas sacar el máximo provecho de tu consulta. Esto te brindará mayor comodidad y nos permitirá, juntos, establecer un diagnóstico y un plan de tratamiento adaptado a tus necesidades.",
       link: "/blogs/valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
     },
+    {
+      img: "/doctor monge revisa tobillo roto.webp",
+      fecha: "Junio",
+      titulo: "Tobillo roto: Cuándo Operar y Cuándo No es Necesario",
+      texto:
+        "¿Sabes cuándo es necesario operar y cuándo no? En este blog te explico los criterios quirúrgicos, los diferentes tipos de abordaje, cuándo puedes volver a caminar y recomendaciones clave para tu recuperación. Sigue leyendo y resuelve tus dudas",
+      link: "/blogs/fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+    },
   ];
 
   const blogItem_en = [
@@ -326,6 +334,14 @@ function Blogs({ URL }) {
       texto:
         "I will briefly explain how to prepare you for your orthopedic assessment, so that you can get the most out of your consultation. This will provide you with greater comfort and allow us, together, to establish a diagnosis and treatment plan tailored to your needs.",
       link: "/en/blogs/traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path",
+    },
+    {
+      img: "/doctor monge revisa tobillo roto.webp",
+      fecha: "June",
+      titulo: "Broken Ankle: When Surgery Is Needed and When It’s Not",
+      texto:
+        "Do you know when surgery is necessary and when it’s not? In this blog, I explain the surgical criteria, different approach types, when you can start walking again, and key recommendations for your recovery. Keep reading and clear up your doubts!",
+      link: "/en/blogs/broken-ankle-symptoms-surgery-or-no-surgery-and-recovery",
     },
   ];
 
