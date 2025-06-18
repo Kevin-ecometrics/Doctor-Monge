@@ -539,9 +539,10 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
       <li
         class="text-xl"
         set:html={isEnglish
-          ? "<span class='text-white font-semibold'>Delayed union</span>: Doesn't heal within 3 months. Want to know more about complications like nonunion? I invite you to keep exploring the blog."
-          : "<span class='text-white font-semibold'>Retraso de consolidación</span>: No cura en el periodo de 3 meses. ¿Te interesa saber más sobre complicaciones como la pseudoartrosis? Te invito a seguir explorando el blog."}
+          ? `<span class='text-white font-semibold'>Delayed consolidation</span>: Does not heal within 3 months. Interested in learning more about complications such as pseudarthrosis? <a href="https://mongeortopedia.com/en/blogs/pseudoarthrosis-and-delayed-union/" class="underline text-blue-400 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Continue exploring the blog</a>.`
+          : `<span class='text-white font-semibold'>Retraso de consolidación</span>: No cura en el periodo de 3 meses. ¿Te interesa saber más sobre complicaciones como la pseudoartrosis? <a href="https://mongeortopedia.com/blogs/Pseudoartrosis-y-Retraso-de-Consolidacion/" class="underline text-blue-400 hover:text-blue-600" target="_blank" rel="noopener noreferrer">Sigue explorando el blog</a>.`}
       />
+
       <li
         class="text-xl"
         set:html={isEnglish
