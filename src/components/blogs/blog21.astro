@@ -1,0 +1,560 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/Dr-Monge-Fases-de-Recuperacion-de-una-Fractura-Guia-Completa.webp";
+import Image2 from "@public/Dr-Monge-Factores-que-retrasan-la-Curacion-de-Fracturas.webp";
+import Image3 from "@public/Dr-Monge-Consejos-para-Acelerar-la-Curacion-de-Huesos.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+  {
+    blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+  },
+  {
+    blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+  },
+  {
+    blog: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+  },
+];
+
+const blogActual =
+  "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion";
+
+const id = 21;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h1 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "What do a hip fracture, tibia and fibula have in common?"
+          : "¿Qué tienen en común una fractura de cadera, tibia y peroné?"
+      }
+    </h1>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Although they occur in different areas of the body, they all go through the same healing path. As a trauma specialist in Tijuana, I've had the privilege of accompanying my patients along this journey. Today I want to explain not only the recovery phases, but how to identify which stage you're in, what signs indicate everything is going well, and when you should act on a possible complication."
+          : "Aunque ocurren en zonas distintas del cuerpo, todas pasan por el mismo camino de curación. Como especialista en traumatología en Tijuana, he tenido el privilegio de acompañar a mis pacientes a lo largo de este camino. Hoy quiero explicarte no solo las fases de recuperación, sino cómo identificar en qué etapa estás, qué señales indican que todo está marchando bien, y cuándo debes actuar ante una posible complicación."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "What is bone consolidation?"
+          : "¿Qué es la consolidación ósea?"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "It's the biological process by which bone repairs itself after a fracture. It consists of 4 interconnected stages where cells, minerals and tissues work together to rebuild the bone structure. Understanding these phases allows you to have realistic expectations and set goals during your healing process."
+          : "Es el proceso biológico mediante el cual el hueso se repara después de una fractura. Consta de 4 etapas interconectadas en las que células, minerales y tejidos trabajan juntas para reconstruir la estructura ósea. Comprender estas fases te permite tener expectativas realistas y establecer metas durante tu proceso de sanación."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Phase 1: Inflammatory (0-7 days)"
+          : "Fase 1: Inflamatoria (0-7 días)"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "This phase begins immediately after the fracture. Inflammation is a universal response to tissue damage, whether from direct trauma or after surgery. It's normal and part of the healing process."
+          : "Esta fase inicia inmediatamente tras la fractura. La inflamación es una respuesta universal al daño del tejido, ya sea por un trauma directo o después de una cirugía. Es normal y es parte del proceso de curación."
+      }
+    </h4>
+    <h3 class="text-xl mb-4 font-semibold text-white">
+      {isEnglish ? "Why does it happen?" : "¿Por qué ocurre?"}
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Imagine there's an earthquake and an alarm sounds: The same thing happens in your body to alert. When the bone fractures, bleeding occurs in the area. This activates the arrival of immune cells that release substances to attract more cells, increase blood flow and allow fluid entry, which generates inflammation. In turn, a clot forms creating a kind of scaffold that provides stability to start the new bone."
+          : "Imagina que hay un sismo y suena una alarma: Lo mismo sucede en tu cuerpo para avisar. Al fracturarse el hueso, se produce sangrado en la zona. Esto activa la llegada de las células inmunitarias que liberan sustancias para atraer más células, aumentar el flujo sanguíneo y permitir la entrada de líquido, lo que genera inflamación. A su vez, se forma un coágulo generando una especie de andamio que provee la estabilidad para iniciar el nuevo hueso."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "During this phase it's normal to feel intense pain, pulsations, localized heat and sensitivity to movement. Don't worry, this phase is normal, it may be uncomfortable, but it's the foundation of the process."
+          : "Durante esta fase es normal sentir dolor intenso, pulsaciones, calor localizado y sensibilidad al movimiento. No te preocupes, esta fase es normal, puede ser incómoda, pero es la base del proceso."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Phase 2: Soft Callus Formation (week 2-6)"
+          : "Fase 2: Formación del callo blando (semana 2-6)"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "In this phase, mesenchymal stem cells migrate to the fracture site where they divide into chondroblasts that begin to weave a cartilage network and fibroblasts that secrete collagen and proteins that form a spongy tissue."
+          : "En esta fase, las células madre mesenquimales se desplazan al sitio de la fractura donde se dividen en condroblastos que comienzan a tejer una red de cartílago y fibroblastos que secretan colágeno y proteínas que forman un tejido esponjoso."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "At first this new tissue doesn't contain calcium so it's a soft tissue that requires much attention and care as it can be easily damaged. On x-rays it can be seen as a cloud around the fracture."
+          : "Al principio este nuevo tejido no contiene calcio por tanto es un tejido blando que requiere de mucha atención y cuidado ya que se puede dañar con facilidad. En las radiografías se puede ver como una nube alrededor de la fractura."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "It's recommended to maintain proper immobilization and relative rest, as the bone is stabilizing and isn't yet strong enough to support full weight."
+          : "Se recomienda mantener una correcta inmovilización y reposo relativo, ya que el hueso se está estabilizando y aún no es lo suficientemente fuerte para soportar carga completa."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Phase 3: Hard Callus Formation (week 6-12)"
+          : "Fase 3: Formación callo duro (semana 6-12)"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "During this stage, the soft callus mineralizes and hardens, and osteoblasts which are bone-building cells deposit minerals like calcium and phosphate in the soft callus to harden it. This forms a hard callus of bone making it more stable."
+          : "Durante esta etapa, el callo blando se mineraliza y se endurece, y los osteoblastos que son las células constructoras de hueso depositan minerales como calcio y fosfato en el callo blando para endurecerlo. Esto forma un callo duro de hueso haciéndolo más estable."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "During this process there's a notable decrease in pain, a greater sense of firmness. During this phase controlled partial weight bearing begins."
+          : "Durante este proceso hay una disminución notable del dolor, una mayor sensación de firmeza. Durante esta fase se inicia una carga parcial controlada del peso."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Phase 4: Bone Remodeling (months up to 2 years)"
+          : "Fase 4: Remodelación ósea (meses hasta 2 años)"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The final stage of bone consolidation. Although the bone is already functional, it continues remodeling to recover its original structure."
+          : "La etapa final de la consolidación ósea. Aunque el hueso ya es funcional, continúa remodelándose para recuperar su estructura original."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Osteoclasts will reabsorb excess bone tissue, like a stone sculpture where excess is removed and details are polished, while osteoblasts continue forming new bone, which replaces the soft callus."
+          : "Los osteoclastos reabsorberán el exceso de tejido óseo, como si fuera una escultura de piedra que se va quitando los excesos y puliendo detalles, mientras que los osteoblastos continúan formando el hueso nuevo, que es el que reemplaza el callo blando."
+      }
+    </h4>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish
+          ? "Dr. Monge's 4 bone fracture healing phases diagram - Inflammation, Soft Callus, Hard Callus, Remodeling"
+          : "Diagrama de las 4 fases de curación de fracturas del Dr. Monge - Inflamación, Callo Blando, Callo Duro, Remodelación"}
+        title={isEnglish
+          ? "Complete Guide to Bone Fracture Healing Stages | Dr. Monge Orthopedics Tijuana"
+          : "Guía Completa de las Etapas de Curación Ósea | Dr. Monge Ortopedia Tijuana"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h1 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Why might your fracture take longer to heal? Factors"
+          : "¿Por qué tu fractura puede tardar más en sanar? Factores"
+      }
+    </h1>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "There are several factors that can influence consolidation time:"
+          : "Existen varios factores que pueden influir en el tiempo de consolidación:"
+      }
+    </h4>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Fracture type:</span> Complex or comminuted fractures take longer to heal."
+          : "<span class='text-white font-semibold'>Tipo de fractura:</span> Las fracturas complejas o conminutas tardan más en sanar."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Age:</span> Between 30 and 50 years, consolidation is slower. With age, bone density decreases."
+          : "<span class='text-white font-semibold'>Edad:</span> Entre los 30 y 50 años, la consolidación es más lenta. Con la edad, disminuye la densidad ósea."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Smoking:</span> Reduces blood flow by up to 40%, which affects cellular nutrition."
+          : "<span class='text-white font-semibold'>Tabaquismo:</span> Reduce el flujo sanguíneo hasta en un 40%, lo cual afecta la nutrición celular."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Diabetes:</span> Makes collagen production difficult and alters bone cell function."
+          : "<span class='text-white font-semibold'>Diabetes:</span> Dificulta la producción de colágeno y altera la función de las células óseas."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Anemia:</span> Limits oxygen transport needed for repair."
+          : "<span class='text-white font-semibold'>Anemia:</span> Limita el transporte de oxígeno necesario para la reparación."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Osteoporosis:</span> Affects bone mineralization."
+          : "<span class='text-white font-semibold'>Osteoporosis:</span> Afecta la mineralización del hueso."}
+      />
+      <li
+        class="text-xl"
+        set:html={isEnglish
+          ? "<span class='text-white font-semibold'>Poor nutrition:</span> A malnourished body lacks the basic elements for bone regeneration."
+          : "<span class='text-white font-semibold'>Mala alimentación:</span> Un cuerpo mal nutrido carece de los elementos básicos para la regeneración ósea."}
+      />
+    </ul>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Diabetic smoker patients may take up to 70% longer to consolidate a fracture. Also, certain medications (like corticosteroids) can also interfere in the process."
+          : "Pacientes diabéticos fumadores pueden tardar hasta un 70% más en consolidar una fractura. Además, ciertos medicamentos (como corticosteroides) también pueden interferir en el proceso."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-8 font-semibold text-white">
+      {
+        isEnglish
+          ? "What if the bone doesn't heal correctly?"
+          : "¿Y si el hueso no sana correctamente?"
+      }
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "When there's a delay in consolidation, it may be necessary to stimulate the area with:"
+          : "Cuando hay un retraso en la consolidación, puede ser necesario estimular la zona con:"
+      }
+    </h4>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li class="text-xl">
+        {isEnglish ? "Therapeutic ultrasound" : "Ultrasonido terapéutico"}
+      </li>
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "Platelet-rich plasma (PRP)"
+            : "Plasma rico en plaquetas (PRP)"
+        }
+      </li>
+      <li class="text-xl">
+        {isEnglish ? "Nutritional correction" : "Corrección nutricional"}
+      </li>
+    </ul>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "If pseudoarthrosis develops, surgical intervention with grafts or fixators is required."
+          : "Si se desarrolla una pseudoartrosis se requiere intervención quirúrgica con injertos o fijadores."
+      }
+    </h4>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish
+          ? "Comparative infographic: How smoking and diabetes affect bone fracture healing time"
+          : "Infografía comparativa: Cómo el tabaquismo y diabetes afectan el tiempo de curación de fracturas"}
+        title={isEnglish
+          ? "7 Factors That Delay Bone Healing | Trauma Specialist Tijuana"
+          : "7 Factores que Retrasan la Curación Ósea | Especialista en Traumatología Tijuana"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Is my body going through the phases correctly? Signs the bone is healing properly:"
+          : "¿Mi cuerpo si está llevando las fases de forma correcta? Señales que el hueso se está curando correctamente:"
+      }
+    </h2>
+    <h3 class="text-xl mb-4 font-semibold text-white">
+      {
+        isEnglish
+          ? "How to know if you're healing well?"
+          : "¿Cómo saber si estás sanando bien?"
+      }
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "As your trauma specialist, I'll monitor the process with imaging studies and periodic check-ups. Some positive signs you may notice in your process are:"
+          : "Como tu traumatólogo, monitorearé el proceso con estudios de imagen y revisiones periódicas. Algunas señales positivas que puedes notar en tu proceso son:"
+      }
+    </h4>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "The pain gradually decreases, as does the swelling."
+            : "El dolor va disminuyendo gradualmente, al igual que la hinchazón."
+        }
+      </li>
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "You may have greater mobility and stability or strength when bearing weight."
+            : "Puedes tener mayor movilidad y estabilidad o fuerza al momento de soportar peso."
+        }
+      </li>
+    </ul>
+
+    <h3 class="text-xl mb-4 font-semibold text-white">
+      {isEnglish ? "Warning signs:" : "Señales de alerta:"}
+    </h3>
+    <ul class="list-disc list-inside mb-8 space-y-4">
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "Pain that reappears or increases without reason"
+            : "Dolor que reaparece o aumenta sin razón"
+        }
+      </li>
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "Persistent swelling with redness or heat (could be infection)"
+            : "Hinchazón persistente con enrojecimiento o calor (podría ser infección)"
+        }
+      </li>
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "Loss of sensitivity or changes in coloration (bluish, pale)"
+            : "Pérdida de sensibilidad o cambios en la coloración (azulado, pálido)"
+        }
+      </li>
+      <li class="text-xl">
+        {
+          isEnglish
+            ? "Abnormal mobility in the fractured area"
+            : "Movilidad anormal en la zona fracturada"
+        }
+      </li>
+    </ul>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image3}
+        alt={isEnglish
+          ? "Nutrition for bone health: Salmon, nuts, dairy and vitamin supplements for fracture recovery"
+          : "Alimentos para huesos: Salmón, frutos secos, lácteos y suplementos para recuperación de fracturas"}
+        title={isEnglish
+          ? "Best Foods to Accelerate Bone Healing | Dr. Monge Nutrition Guide"
+          : "Mejores Alimentos para Acelerar la Curación Ósea | Guía Nutricional Dr. Monge"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h3 class="text-xl mb-8 font-semibold text-white">
+      {
+        isEnglish
+          ? "Tips to optimize bone consolidation"
+          : "Consejos para optimizar la consolidación ósea"
+      }
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Follow a diet focused on high-quality proteins like chicken, lean meat and especially blue fish like salmon. These provide omega-3 fatty acids and vitamin D, fundamental for bone health and the consolidation process."
+          : "Sigue una dieta enfocada en proteínas de alta calidad como pollo, carne magra y especialmente pescados azules como el salmón. Estos aportan ácidos grasos omega-3 y vitamina D, fundamentales para la salud ósea y el proceso de consolidación."
+      }
+    </h4>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "<span class='text-white font-semibold'>Vitamin K supplementation:</span> Essential for coagulation and osteocalcin maturation, an important protein for bone mineralization."
+        : "<span class='text-white font-semibold'>Suplementación con vitamina K:</span> Esencial para la coagulación y maduración de la osteocalcina, una proteína importante para la mineralización del hueso."}
+    />
+
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "<span class='text-white font-semibold'>Increase your vitamin C intake:</span> Essential for collagen generation, you can find it in oranges, tangerines, lemons and tomatoes."
+        : "<span class='text-white font-semibold'>Aumenta tu ingesta de vitamina C:</span> Es esencial para la generación de colágeno, la puedes encontrar en naranjas, mandarinas, limones y tomates."}
+    />
+
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "<span class='text-white font-semibold'>Make sure to consume calcium:</span> Include dairy products, nuts and seeds in your diet."
+        : "<span class='text-white font-semibold'>Asegúrate de consumir calcio:</span> Incluye en tu dieta productos lácteos, frutos secos y semillas."}
+    />
+
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "<span class='text-white font-semibold'>Avoid:</span> Smoking and consuming refined sugars as they alter the calcium and phosphorus balance, affecting your bone healing."
+        : "<span class='text-white font-semibold'>Evita:</span> Fumar y consumir azucares refinados ya que alteran el equilibrio de calcio y fósforo, afectando la sanación de tus huesos."}
+    />
+
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "<span class='text-white font-semibold'>Prioritize sleep:</span> Sleep 7 to 8 hours daily, this allows the body greater cellular regeneration."
+        : "<span class='text-white font-semibold'>Prioriza dormir:</span> Duerme de 7 a 8 horas diarias, esto permite al cuerpo una mayor regeneración celular."}
+    />
+
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "<span class='text-white font-semibold'>Stay in relative motion:</span> Guided and safe physical activity is key to recovering mobility and strengthening tissues during rehabilitation."
+        : "<span class='text-white font-semibold'>Mantente en movimiento relativo:</span> La actividad física guiada y segura es clave para recuperar movilidad y fortalecer los tejidos durante la rehabilitación."}
+    />
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Recovering from a fracture isn't just about waiting or stopping your life, it's about continuing movement, understanding your body's signals and adapting a new routine to integrate each phase and work as a team with your trauma specialist, physiotherapist. Each phase is an opportunity to heal and recover your independence, that's for sure with patience."
+          : "Recuperarte de una fractura no es solo esperar o detener tu vida, se trata de continuar el movimiento, entender las señales del cuerpo y adaptar una nueva rutina integrar en cada fase y trabajar en equipo con tu traumatólogo, fisioterapeuta. Cada fase es una oportunidad para sanar y recuperar tu independencia, eso sí con paciencia."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "If you've fractured yourself and have doubts about your process or suspect your fracture isn't progressing well, I invite you to my office in Torre Norte 2 in Tijuana to support you with a diagnosis and imaging tests to monitor and work together on a personalized treatment plan."
+          : "Si te fracturaste y tienes dudas sobre tu proceso o sospechas que tu fractura no evoluciona bien, te invito a mi consultorio en torre norte 2 en Tijuana para poderte apoyar con un diagnóstico y pruebas de imagen para monitorizar y poder trabajar juntos en un plan de tratamiento personalizado."
+      }
+    </h4>
+  </Observer>
+
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "broken-ankle-symptoms-surgery-or-no-surgery-and-recovery"
+      : "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion"}
+    PreviousName={isEnglish
+      ? "Ankle Fracture: When Surgery Is Needed and When It's Not"
+      : "Fractura de Tobillo: Cuándo Operar y Cuándo No es Necesario"}
+  />
+</article>

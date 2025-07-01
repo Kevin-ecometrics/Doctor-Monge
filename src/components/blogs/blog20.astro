@@ -603,6 +603,12 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Footer
     URL={isEnglish}
+    NextLink={isEnglish
+      ? "you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery"
+      : "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion"}
+    NextName={isEnglish
+      ? "Which Phase of Recovery Are You In? Complete Guide for Fracture Patients in Tijuana"
+      : "¿En qué fase de recuperación estás? Guía completa para pacientes con fractura en Tijuana"}
     PreviousLink={isEnglish
       ? "traumatology-assessment-clear-your-doubts-and-design-your-pain-free-path"
       : "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor"}

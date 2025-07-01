@@ -177,6 +177,15 @@ function Blogs({ URL }) {
         "¿Sabes cuándo es necesario operar y cuándo no? En este blog te explico los criterios quirúrgicos, los diferentes tipos de abordaje, cuándo puedes volver a caminar y recomendaciones clave para tu recuperación. Sigue leyendo y resuelve tus dudas",
       link: "/blogs/fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
     },
+    {
+      img: "/Dr Monge Te fracturaste Fases sintomas y que esperar en tu recuperacion.webp",
+      fecha: "Junio",
+      titulo:
+        "¿Te fracturaste? Fases, síntomas y que esperar en tu recuperación ",
+      texto:
+        "¿Cómo saber si tu fractura se está curando bien? Descubre en qué fase de recuperación estás, señales de avance y alertas y como provenirlas. Lee más en mi blog",
+      link: "/blogs/te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+    },
   ];
 
   const blogItem_en = [
@@ -342,6 +351,15 @@ function Blogs({ URL }) {
       texto:
         "Do you know when surgery is necessary and when it’s not? In this blog, I explain the surgical criteria, different approach types, when you can start walking again, and key recommendations for your recovery. Keep reading and clear up your doubts!",
       link: "/en/blogs/broken-ankle-symptoms-surgery-or-no-surgery-and-recovery",
+    },
+    {
+      img: "/Dr Monge Te fracturaste Fases sintomas y que esperar en tu recuperacion.webp",
+      fecha: "June",
+      titulo:
+        "Did you fracture? Phases, symptoms and what to expect in your recovery.",
+      texto:
+        "How do you know if your fracture is healing well? Find out what stage of recovery you're in, signs of progress and alerts and how to proceed. Read more on my blog",
+      link: "/en/blogs/you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery",
     },
   ];
 

@@ -99,6 +99,11 @@ export function getStaticPaths() {
         blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
       },
     },
+    {
+      params: {
+        blog: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+      },
+    },
   ];
 }
 
@@ -352,6 +357,18 @@ const blogs = [
     keywords: "Fractura tobillo, Tobillo roto, operar, no operar, Tijuana",
     id: 20,
   },
+  {
+    titulo: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+    ruta: "/blogs/te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+    blogTitle:
+      "¿En qué fase de recuperación estás? Guía completa para pacientes con fractura en Tijuana",
+    date: "Junio 2025",
+    title: "¿Te fracturaste? Fases, síntomas y que esperar en tu recuperación ",
+    description:
+      "Identifica en qué etapa de recuperación se encuentra tu fractura y detecta a tiempo signos de mejora o advertencia junto con el DR. Ricardo Monge en Tijuana.",
+    keywords: "fractura, recuperación, fases de fractura, Tijuana",
+    id: 21,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -504,7 +521,7 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
 ) {
   image =
     "/como prepararte para tu evaluacion con el dr monge especialista en traumatologia.webp";
-  date = "Junio";
+  date = "Junio 2025";
   content = "Blog19";
   blogTitle = "Consulta de valoración: ¿En qué consiste y cómo prepararse?";
 } else if (
@@ -512,9 +529,18 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
 ) {
   image =
     "/Blog de Tobillo Roto por el Doctor Ricardo Monge Romero traumatologo Ortopedista.webp";
-  date = "Junio";
+  date = "Junio 2025";
   content = "Blog20";
   blogTitle = "Fractura de Tobillo: Cuándo Operar y Cuándo No es Necesario ";
+} else if (
+  blog === "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion"
+) {
+  (image =
+    "/Dr Monge Te fracturaste sintomas y que esperar en tu recuperacion.webp"),
+    (date = "Junio 2025"),
+    (content = "Blog21"),
+    (blogTitle =
+      "¿En qué fase de recuperación estás? Guía completa para pacientes con fractura en Tijuana");
 } else {
   image = "/fondoDefault.png";
 }

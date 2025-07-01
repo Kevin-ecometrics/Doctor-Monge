@@ -99,6 +99,11 @@ export function getStaticPaths() {
         blog: "broken-ankle-symptoms-surgery-or-no-surgery-and-recovery",
       },
     },
+    {
+      params: {
+        blog: "you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery",
+      },
+    },
   ];
 }
 
@@ -340,6 +345,19 @@ const blogs = [
     keywords: "broken ankle, symptoms, surgery, recovery",
     id: 20,
   },
+  {
+    titulo: "you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery",
+    ruta: "/en/blogs/you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery",
+    blogTitle:
+      "Which Phase of Recovery Are You In? Complete Guide for Fracture Patients in Tijuana",
+    date: "June 2025",
+    title:
+      "Did You Fracture Something? Phases, Symptoms, and What to Expect in Your Recovery",
+    description:
+      "Find out which stage of recovery your fracture is in and identify early signs of improvement or warning with Dr. Ricardo Monge in Tijuana.",
+    keywords: "fracture, recovery, fracture phases, Tijuana",
+    id: 21,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -482,7 +500,7 @@ if (blog === "anterior-cruciate-ligament-injury") {
 ) {
   image =
     "/como prepararte para tu evaluacion con el dr monge especialista en traumatologia.webp";
-  date = "June";
+  date = "June 2025";
   content = "Blog19";
   blogTitle = "Assessment Consultation: What to Expect and How to Prepare";
 } else if (
@@ -493,6 +511,15 @@ if (blog === "anterior-cruciate-ligament-injury") {
   date = "June 2025";
   content = "Blog20";
   blogTitle = "Ankle Fracture: When to Operate and When It Is Not Necessary";
+} else if (
+  blog === "you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery"
+) {
+  (image =
+    "/Dr Monge Te fracturaste sintomas y que esperar en tu recuperacion.webp"),
+    (date = "June 2025"),
+    (content = "Blog21"),
+    (blogTitle =
+      "What stage of recovery are you in? Complete guide for fracture patients in Tijuana");
 } else {
   image = "/fondoDefault.png";
 }
