@@ -97,7 +97,7 @@ const SuccessStories = ({ URL }) => {
       subtitle:
         "This surgery has one of the highest success rates. It's normal to feel anxious before this orthopedic procedure, so in this vlog I explain everything you need to know as a knee specialist trauma surgeon.",
       background: "/Protesis%20total%20de%20cadera%20en%20Tijuana.png",
-      link: "/en/procedures/total-hip-prosthesis/",
+      link: "/en/procedures/total-knee-prosthesis/",
     },
     {
       title: "Total hip",
@@ -105,7 +105,7 @@ const SuccessStories = ({ URL }) => {
       subtitle:
         "In this vlog we'll explore one of the most performed trauma surgeries worldwide with over 1 million patients each year. I'll explain what it involves and who are candidates.",
       background: "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png",
-      link: "/en/procedures/total-knee-prosthesis/",
+      link: "/en/procedures/total-hip-prosthesis/",
     },
     {
       title: "Lumbar disc",
