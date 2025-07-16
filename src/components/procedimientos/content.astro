@@ -4,5 +4,5 @@ const { title, content } = Astro.props;
 
 <main class="lg:w-[60%] mx-auto py-8 px-8">
   <h2 class="text-[24px] mb-8 font-bold">{title}</h2>
-  <h1 class="text-[17px] text-[#969596] whitespace-pre-wrap">{content}</h1>
+  <h1 set:html={content} class="text-[17px] text-[#969596]" />
 </main>

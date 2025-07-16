@@ -13,7 +13,6 @@ import Partners from "@components/Partners.jsx";
 import Blogs from "@components/Blogs";
 import Contact from "@components/Contact.jsx";
 import PatientInformation from "@components/PatientInformation.astro";
-
 const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
@@ -89,6 +88,7 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     <section id="section9" class="snap-start">
       <Contact client:idle URL={isEnglish} />
     </section>
+
     <div class="scroll-menu">
       <div class="scroll-bar"></div>
     </div>

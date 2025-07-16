@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Blogs.css";
-import ReactGA from "../utils/GA";
+import { sendGAEvent } from "../utils/gtag"; // ajusta la ruta según tu estructura
 
 function Blogs({ URL }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -385,25 +385,30 @@ function Blogs({ URL }) {
     }
   };
 
-  const handleClicked = (e) => {
-    e.preventDefault(); // ¡Clave! Detiene la navegación inmediata
-    const link = e.currentTarget.href; // Guarda el href antes del async
+  const ensureTrailingSlash = (url) => {
+    return url.endsWith("/") ? url : url + "/";
+  };
 
-    if (typeof ReactGA !== "undefined") {
-      ReactGA.event({
-        category: "button_click",
-        action: "Click",
-        label: "Leer tema", // Añade label para mejor tracking
+  const handleBlogClick = (e, blogItem, url) => {
+    e.preventDefault();
+
+    const urlWithSlash = ensureTrailingSlash(url);
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "blog_click", {
+        debug_mode: window.location.hostname === "localhost",
+        event_category: "Blog",
+        event_label: blogItem.titulo,
+        value: 1,
       });
-      console.log("Evento enviado ✅");
-
-      // Retraso para asegurar el envío
-      setTimeout(() => {
-        window.location.href = link; // Navega después de 300ms
-      }, 1000);
+      console.log("✅ Evento GA enviado:", blogItem.titulo);
     } else {
-      console.error("Error: ReactGA no cargado");
+      console.warn("⚠️ window.gtag no está disponible");
     }
+
+    setTimeout(() => {
+      window.location.href = urlWithSlash;
+    }, 300);
   };
 
   const blogItem = URL ? blogItem_en : blogItem_es;
@@ -434,22 +439,6 @@ function Blogs({ URL }) {
     reversedBlogItem[(currentIndex + 1) % blogItem.length],
     reversedBlogItem[(currentIndex + 2) % blogItem.length],
   ];
-
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "ArrowRight") {
-        handleNext();
-      } else if (event.key === "ArrowLeft") {
-        handlePrev();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleNext, handlePrev]);
 
   return (
     <div>
@@ -517,6 +506,7 @@ function Blogs({ URL }) {
                       className="text-white z-10 hover:text-blue-600"
                       href={item.link}
                       rel="noopener noreferrer"
+                      onClick={(e) => handleBlogClick(e, item, item.link)}
                     >
                       {item.titulo}
                     </a>{" "}
@@ -528,9 +518,9 @@ function Blogs({ URL }) {
                     <p className="absolute inset-0 flex items-end p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       <a
                         className="text-white z-10 hover:text-blue-600 cursor-pointer"
-                        href={`${item.link}/`}
+                        href={item.link}
                         rel="noopener noreferrer"
-                        onClick={handleClicked} // Handler aquí
+                        onClick={(e) => handleBlogClick(e, item, item.link)}
                         role="button" // Accesibilidad
                       >
                         {URL ? "Read blog" : "Leer tema"}

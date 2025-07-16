@@ -42,12 +42,9 @@ const canonicalUrl = Astro.url.href.endsWith("/")
       content="Recibe la atención en ortopedia con el Dr. Ricardo Monge especializado en lesiones musculoesqueléticas en rodillas, cadera y columna en Tijuana."
     />
     <meta property="og:image" content="https://mongeortopedia.com/og.jpg" />
-    <script
-      type="text/partytown"
-      is:inline
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-ML4B63MEC1"></script>
-    <script is:inline type="text/partytown">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ML4B63MEC1"
+    ></script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         window.dataLayer.push(arguments);
@@ -55,7 +52,7 @@ const canonicalUrl = Astro.url.href.endsWith("/")
       gtag("js", new Date());
       gtag("config", "G-ML4B63MEC1");
     </script>
-    <script type="text/partytown">
+    <script is:inline>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -68,7 +65,7 @@ const canonicalUrl = Astro.url.href.endsWith("/")
       })(window, document, "script", "dataLayer", "GTM-56JJJJZZ");
     </script>
     <script
-      type="text/partytown"
+      is:inline
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-11309383024"></script>
     <script type="text/partytown">
