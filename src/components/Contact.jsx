@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { motion, useInView } from "framer-motion";
-
+import { sendGAEvent } from "@utils/sendGAEvent";
 function Contact({ URL }) {
   const [isLoading, setIsLoading] = useState(false);
   const ref = useRef(null);
@@ -22,18 +22,20 @@ function Contact({ URL }) {
     };
 
     try {
-      const response = await axios.post(
-        "https://mongeortopedia.com/contactoForm",
-        data
-      );
-      console.log(response);
+      await axios.post("https://mongeortopedia.com/contactoForm", data);
+      sendGAEvent({
+        eventName: "form_submit_success",
+        category: "Formulario de contacto",
+        label: `${data.nombre} - ${data.correo}`,
+        value: 1,
+      });
+
       toast.success(
         URL ? "Message sent successfully" : "Mensaje enviado correctamente"
       );
       setIsLoading(false);
       e.target.reset();
     } catch (error) {
-      console.error(error);
       toast.error(
         URL ? "Error sending message" : "Ocurrió un error al enviar el mensaje"
       );
@@ -44,6 +46,30 @@ function Contact({ URL }) {
       setAnimationKey((prevKey) => prevKey + 1);
     }
   }, [isInView]);
+
+  const handleWhatsAppClick = () => {
+    sendGAEvent({
+      eventName: "whatsapp_click",
+      category: "Contacto",
+      label: "WhatsApp 6641690650",
+    });
+  };
+
+  const handleEmailClick = () => {
+    sendGAEvent({
+      eventName: "email_click",
+      category: "Contacto",
+      label: "Correo pacientes@mongeortopedia.com",
+    });
+  };
+
+  const handlePhoneClick = () => {
+    sendGAEvent({
+      eventName: "phone_click",
+      category: "Contacto",
+      label: "Teléfono 6649763510",
+    });
+  };
 
   return (
     <main
@@ -99,6 +125,9 @@ function Contact({ URL }) {
               <div className="mb-4 group">
                 <a
                   href="tel:6649763510"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handlePhoneClick}
                   className="flex items-center gap-4 group-hover:text-blue-600 group-hover:cursor-pointer"
                 >
                   <svg
@@ -123,13 +152,7 @@ function Contact({ URL }) {
                     <path d="M14 16l1 0" />
                     <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
                   </svg>
-                  <h3
-                    className="font-medium text-[29px]"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    664 976 3510
-                  </h3>
+                  <h3 className="font-medium text-[29px]">664 976 3510</h3>
                 </a>
               </div>
               <h3 className="mb-2 font-bold text-[#969596]">
@@ -149,6 +172,9 @@ function Contact({ URL }) {
               <a
                 className="flex items-center gap-4 group-hover:text-blue-600 group-hover:cursor-pointer"
                 href="https://wa.me/6641690650"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleWhatsAppClick}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -166,18 +192,13 @@ function Contact({ URL }) {
                   <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
                   <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                 </svg>
-                <h3
-                  className="font-medium text-[29px]  "
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  664 169 0650
-                </h3>
+                <h3 className="font-medium text-[29px]  ">664 169 0650</h3>
               </a>
             </div>
             <div className="mb-8 group">
               <a
                 href="mailto:pacientes@mongeortopedia.com"
+                onClick={handleEmailClick}
                 className=" group-hover:text-blue-600 flex items-center gap-4 group-hover:cursor-pointer"
                 target="_blank"
                 rel="noopener noreferrer"

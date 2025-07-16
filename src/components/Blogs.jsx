@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Blogs.css";
-import { sendGAEvent } from "../utils/gtag"; // ajusta la ruta según tu estructura
+import { sendGAEvent } from "@utils/sendGAEvent";
 
 function Blogs({ URL }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -394,17 +394,12 @@ function Blogs({ URL }) {
 
     const urlWithSlash = ensureTrailingSlash(url);
 
-    if (typeof window.gtag === "function") {
-      window.gtag("event", "blog_click", {
-        debug_mode: window.location.hostname === "localhost",
-        event_category: "Blog",
-        event_label: blogItem.titulo,
-        value: 1,
-      });
-      console.log("✅ Evento GA enviado:", blogItem.titulo);
-    } else {
-      console.warn("⚠️ window.gtag no está disponible");
-    }
+    sendGAEvent({
+      eventName: "blog_click",
+      category: "Blog",
+      label: blogItem.titulo,
+      value: 1,
+    });
 
     setTimeout(() => {
       window.location.href = urlWithSlash;
