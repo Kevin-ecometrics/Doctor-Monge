@@ -104,6 +104,11 @@ export function getStaticPaths() {
         blog: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
       },
     },
+    {
+      params: {
+        blog: "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+      },
+    },
   ];
 }
 
@@ -369,6 +374,18 @@ const blogs = [
     keywords: "fractura, recuperación, fases de fractura, Tijuana",
     id: 21,
   },
+  {
+    titulo:
+      "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+    ruta: "/blogs/dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+    blogTitle: "Enfermedades de la columna: causas, síntomas y tratamiento",
+    date: "Julio 2025",
+    title: "Enfermedades de la columna: causas, síntomas y tratamiento",
+    description:
+      "Espondilosis, Espondilitis, Espondilólisis y Espondilolistesis: Síntomas y opciones de tratamiento, qué los causa y cómo afectan tu espalda.",
+    keywords: "enfermedades de la columna, salud vertebral, tratamiento",
+    id: 22,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -541,6 +558,16 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
     (content = "Blog21"),
     (blogTitle =
       "¿En qué fase de recuperación estás? Guía completa para pacientes con fractura en Tijuana");
+} else if (
+  blog ===
+  "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis"
+) {
+  (image =
+    "/Te fracturaste Fases sintomas y que esperar en tu recuperacion.webp"),
+    (date = "Julio 2025"),
+    (content = "Blog22"),
+    (blogTitle =
+      "Dolor de espalda: El ABC de tu columna y las enfermedades que la afectan.");
 } else {
   image = "/fondoDefault.png";
 }

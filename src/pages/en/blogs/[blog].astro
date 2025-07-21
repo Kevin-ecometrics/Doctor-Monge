@@ -104,6 +104,11 @@ export function getStaticPaths() {
         blog: "you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery",
       },
     },
+    {
+      params: {
+        blog: "back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis",
+      },
+    },
   ];
 }
 
@@ -358,6 +363,18 @@ const blogs = [
     keywords: "fracture, recovery, fracture phases, Tijuana",
     id: 21,
   },
+  {
+    titulo:
+      "back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis",
+    ruta: "/en/blogs/back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis",
+    blogTitle: "Diseases of the Spine: Causes, Symptoms and Treatment",
+    date: "July 2025",
+    title: "Diseases of the Spine: Causes, Symptoms and Treatment",
+    description:
+      "Spondylosis, Spondylosis, Spondylolisthesis and Spondylolisthesis: Symptoms and treatment options, what causes them and how they affect your back.",
+    keywords: "spine diseases, spine treatment, spine symptoms",
+    id: 22,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -520,6 +537,16 @@ if (blog === "anterior-cruciate-ligament-injury") {
     (content = "Blog21"),
     (blogTitle =
       "What stage of recovery are you in? Complete guide for fracture patients in Tijuana");
+} else if (
+  blog ===
+  "back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis"
+) {
+  (image =
+    "/Te fracturaste Fases sintomas y que esperar en tu recuperacion.webp"),
+    (date = "July 2025"),
+    (content = "Blog22"),
+    (blogTitle =
+      "Back pain: The ABC of your spine and the diseases that affect it.");
 } else {
   image = "/fondoDefault.png";
 }

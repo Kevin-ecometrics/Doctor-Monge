@@ -13,6 +13,13 @@
     </url>
 
     <url>
+        <loc>https://mongeortopedia.com/blogs/dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis/</loc>
+        <lastmod>2025-07-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>    
+    </url>
+
+    <url>
         <loc>https://mongeortopedia.com/blogs/te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion/</loc>
         <lastmod>2025-06-30</lastmod>
         <changefreq>weekly</changefreq>
@@ -237,8 +244,15 @@
         <priority>1.0</priority>
     </url>
 
+        <url>
+        <loc>https://mongeortopedia.com/en/blogs/back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis/</loc>
+        <lastmod>2025-07-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>    
+    </url>
+
     <url>
-        <loc>you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery</loc>
+        <loc>https://mongeortopedia.com/en/blogs/you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery/</loc>
         <lastmod>2025-06-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>    

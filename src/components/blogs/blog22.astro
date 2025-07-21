@@ -1,0 +1,539 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/Enfermedades de la columna Por Dr Ricardo Monge.webp";
+import Image2 from "@public/Enfermedades de la columna Por Dr Monge.webp";
+import Image3 from "@public/Dr-Monge-Consejos-para-Acelerar-la-Curacion-de-Huesos.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+  {
+    blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+  },
+  {
+    blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+  },
+  {
+    blog: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+  },
+  {
+    blog: "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+  },
+];
+
+const blogActual =
+  "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis";
+
+const id = 22;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "The spine is a structure that protects the spinal cord, provides support to the body allowing movement. <br/> <br/> Although we speak of it in singular, it consists of a complex row of 33 vertebrae, intervertebral discs, nerve roots and ligaments that work together to achieve functional harmony. <br/> <br/> However, this is not always the case and there may be malformations, wear and tear, injuries or accidents. When this interruption occurs, it often results in instability or back pain."
+        : "La columna vertebral es una estructura que protege la médula espinal, brinda soporte al cuerpo permitiéndole el movimiento.  <br/> <br/> Aunque se hable de ella en singular, está conformada por una compleja hilera de 33 vertebras, discos intervertebrales, raíces nerviosas y ligamentos que trabajan en conjunto para lograr una armonía funcional.  <br/> <br/> Sin embargo, no siempre es el caso y existen malformaciones, desgastes, lesiones o accidentes. Cuando esta interrupción ocurre, a menudo se traduce en inestabilidad o dolor de espalda. "}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {
+        isEnglish
+          ? "Back pain is a universal experience, but its causes are very diverse."
+          : "El dolor de espalda es una experiencia universal, pero sus causas son muy variadas."
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "There are pains that are similar even in name, which frequently causes confusion and can lead to misunderstandings about their cause and treatment. <br/> <br/> <strong class='text-white'>Today I'll tell you about the main differences between spondylosis, spondylitis, spondylolysis and spondylolisthesis. Although they sound similar, they describe different pathologies</strong>"
+        : "Hay dolores que se parecen incluso en su nombre, que frecuentemente genera confusión, lo que puede llevar a malentendidos sobre su causa y tratamiento. <br/> <br/> <strong class='text-white'>Hoy te platico sobre las principales diferencias, entre una espondilosis, espondilitis, espondilólisis y espondilolistesis. Aunque suenan parecidos, describen patologías distintas </strong>"}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-8 font-bold text-white">
+      {isEnglish ? "Spondylosis" : "Espondilosis "}
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `What is Spondylosis? Degeneration of the Spinal Column <br/><br/>
+    Do you have pain in your back and neck? Spondylosis is a disorder of abnormal wear and tear on the cartilage of the discs and cervical vertebrae causing chronic pain. Usually caused by aging affecting people over 60 years old. Sometimes this wear can present with bone spurs on the vertebrae. <br/><br/>
+    <strong class='text-white text-3xl'>Causes and Risk Factors of Spondylosis: The Passage of Time</strong><br/><br/>
+    <strong class='text-white'>Dehydrated Discs:</strong> Intervertebral discs, which act as shock absorbers between vertebrae, begin to dehydrate and shrink around age 40 causing them to impact each other. <br/><br/>
+    <strong class='text-white'>Herniated Discs:</strong> Disc deterioration can lead to cracks in the outer part of the discs making it more likely to compress nerve roots or the spinal cord. <br/><br/>
+    <strong class='text-white'>Bone Spurs:</strong> In response to disc deterioration, the body may produce additional amounts of bone in an attempt to strengthen the spine. These bone growths can crush the spinal cord and nerve roots, causing pain. <br/><br/>
+    <strong class='text-white'>Stiff Ligaments:</strong> Reduces flexibility of the neck and back contributing to limited mobility and pain. <br/><br/>
+    Other factors besides aging include: repetitive movements and uncomfortable postures at work, previous injuries, genetic factors and smoking that affects overall bone quality.`
+        : `¿Qué es la Espondilosis? La Degeneración de la Columna Vertebral <br/><br/>
+    ¿Tienes dolor en la espalda y parte del cuello? La espondilosis es un trastorno de desgaste anormal en el cartílago de los discos y las vértebras cervicales causando un dolor crónico. Usualmente ocasionado por el envejecimiento afectando a personas mayores de 60 años. En ocasiones este desgaste puede presentar crecimiento de espolones en las vértebras. <br/><br/>
+    <strong class='text-white text-3xl'>Causas y Factores de Riesgo de espondilosis: El Paso del Tiempo</strong><br/><br/>
+    <strong class='text-white'>Discos Deshidratados:</strong> Los discos intervertebrales, que actúan como amortiguadores entre las vértebras, comienzan a deshidratarse y encogerse alrededor de los 40 años haciendo que impacten entre sí. <br/><br/>
+    <strong class='text-white'>Hernias de disco:</strong> El deterioro discal puede llevar a la aparición de grietas en la parte externa de los discos haciendo más propenso a que se presionen las raíces nerviosas o la médula espinal. <br/><br/>
+    <strong class='text-white'>Espolones Óseos:</strong> Como respuesta al deterioro de los discos, el cuerpo puede producir cantidades adicionales de hueso en un intento de fortalecer la columna. Estos crecimientos óseos, pueden aplastar la médula y las raíces nerviosas, causando dolor. <br/><br/>
+    <strong class='text-white'>Ligamentos rígidos:</strong> Reduce la flexibilidad del cuello y espalda contribuyendo a tener poca movilidad y dolor. <br/><br/>
+    Otros factores aparte del envejecimiento, suelen ser: movimientos repetitivos y posturas incómodas en el trabajo, lesiones previas, factores genéticos y el tabaquismo que afecta la calidad general de los huesos.`}
+    />
+
+    <h3 class="text-3xl mb-4 font-semibold text-white">
+      {
+        isEnglish
+          ? "Key Symptoms of Spondylosis and When to Seek Medical Attention"
+          : "Síntomas Clave Espondilosis y Cuándo Buscar Atención Médica"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Spondylosis is often asymptomatic, meaning many people may have the condition without experiencing pain or discomfort. When symptoms do occur, they vary depending on the region of the spine affected. <br/><br/>
+    <strong class='text-white'>Cervical Spondylosis (neck):</strong> The most common symptoms include neck pain and stiffness, which may worsen with activity. It's common to experience headaches, especially at the back of the head, and a grinding sensation when turning the neck. <br/><br/>
+    Pain may radiate from the shoulder blade to the arm and forearm, and there may be numbness or tingling in the shoulders or arms. Pain may manifest when sitting for long periods, standing, or bending the neck backward. In more severe cases, if the spinal cord or nerve roots are compressed, symptoms such as tingling, numbness and weakness in the arms, hands, legs or feet, lack of coordination, difficulty walking, and even loss of bladder control may appear. <br/><br/>
+    <strong class='text-white'>Lumbar Spondylosis:</strong> Typical symptoms include constant low back pain that may radiate to the buttocks and legs. Stiffness is common in the morning or after prolonged inactivity. <br/><br/>
+    <strong class='text-white'>Diagnosis:</strong> <br/>
+    The diagnostic process begins with a thorough physical examination, where the doctor evaluates the range of motion of the neck and back, analyzes reflexes and muscle strength to detect possible pressure on spinal nerves or the spinal cord.`
+        : `La espondilosis a menudo es asintomática, lo que significa que muchas personas pueden tener la condición sin experimentar dolor o molestias. Cuando sí se presentan síntomas, estos varían según la región de la columna afectada. <br/><br/>
+    <strong class='text-white'>Espondilosis cervical (cuello):</strong> Los síntomas más comunes incluyen dolor y rigidez en el cuello, que pueden empeorar con la actividad. Es frecuente experimentar dolores de cabeza, especialmente en la parte posterior de la cabeza, y una sensación de rechinamiento al girar el cuello. <br/><br/>
+    El dolor puede irradiarse desde el omóplato hacia el brazo y el antebrazo, y puede haber entumecimiento u hormigueo en los hombros o brazos. El dolor puede manifestarse al estar sentado mucho tiempo, al pararse, o al doblar el cuello hacia atrás. En casos más severos, si la médula espinal o las raíces nerviosas se comprimen, pueden aparecer síntomas como hormigueo, entumecimiento y debilidad en los brazos, manos, piernas o pies, falta de coordinación, dificultad para caminar, e incluso pérdida del control de la vejiga. <br/><br/>
+    <strong class='text-white'>Espondilosis lumbar:</strong> Los síntomas típicos incluyen dolor lumbar constante que puede irradiarse a los glúteos y las piernas. La rigidez es común por la mañana o después de un período prolongado de inactividad. <br/><br/>
+    <strong class='text-white'>Diagnóstico:</strong> <br/>
+    El proceso diagnóstico comienza con un examen físico exhaustivo, donde el médico evalúa la amplitud de movimiento del cuello y la espalda, analiza los reflejos y la fuerza muscular para detectar posibles presiones sobre los nervios raquídeos o la médula espinal.`}
+    />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish
+          ? "Dr. Monge's 4 bone fracture healing phases diagram - Inflammation, Soft Callus, Hard Callus, Remodeling"
+          : "Diagrama de las 4 fases de curación de fracturas del Dr. Monge - Inflamación, Callo Blando, Callo Duro, Remodelación"}
+        title={isEnglish
+          ? "Complete Guide to Bone Fracture Healing Stages | Dr. Monge Orthopedics Tijuana"
+          : "Guía Completa de las Etapas de Curación Ósea | Dr. Monge Ortopedia Tijuana"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white text-3xl'>Spondylosis Treatment:</strong><br/><br/>
+Treatment aims to reduce pain and joint stiffness, as well as prevent ankylosis and deformities. It is based on two main pillars: non-steroidal anti-inflammatory drugs and depending on the case, it may also be treated with injections and physiotherapy. Applying hot or cold compresses to the affected area can help relieve inflammation and muscle tension. <br/><br/>
+Physiotherapy constitutes a basic pillar and should be individualized for each patient. It is very important to avoid prolonged rest or the use of braces or corsets that immobilize the spine. <br/><br/>
+Surgical treatment is only used in rare cases when the joints are very damaged and mobility has been lost or the pain is untreatable.
+`
+        : `
+<strong class='text-white text-3xl'>Tratamiento espondilosis:</strong><br/><br/>
+El tratamiento tiene como objetivo reducir el dolor y la rigidez articular, así como prevenir la anquilosis y las deformidades. Está basado en dos ejes primordiales: antiinflamatorios no esteroideos y dependiendo el caso puede también tratarse con infiltraciones y tratamiento fisioterápico. La aplicación de compresas calientes o frías en la zona afectada puede ayudar a aliviar la inflamación y la tensión muscular. <br/><br/>
+El tratamiento fisioterápico constituye un pilar básico y debe individualizarse para cada paciente. Es muy importante evitar el reposo prolongado o la aplicación de corsés o fajas que inmovilicen la columna. <br/><br/>
+El tratamiento quirúrgico solo se utiliza en contadas ocasiones cuando las articulaciones están muy dañadas y se ha perdido la movilidad o el dolor es intratable.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white text-3xl'>Spondylitis: When Inflammation Affects the Spine</strong><br/><br/>
+Spondylitis on the other hand affects in a chronic way. Usually associated with an autoimmune disease like rheumatoid arthritis that generates inflammation that mostly affects the bones and joints at the base of the spine that connect with the pelvis. <br/><br/>
+Over time, chronic inflammation can lead to the affected vertebrae fusing or joining together (ankylosis), which severely limits movement and causes progressive stiffness. This fusion can result in a hunched posture.
+`
+        : `
+<strong class='text-white text-3xl'>Espondilitis: Cuando la Inflamación Afecta la Columna</strong><br/><br/>
+La espondilitis por otra parte afecta de una forma crónica. Usualmente asociado a una enfermedad autoinmune como la artritis reumatoide que genera inflamación que afecta mayormente los huesos y las articulaciones en la base de la columna que conectan con la pelvis. <br/><br/>
+Con el tiempo, la inflamación crónica puede llevar a que las vértebras afectadas se fusionen o se unan (anquilosis), lo que limita severamente el movimiento y causa una rigidez progresiva. Esta fusión puede resultar en una postura encorvada.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white text-3xl'>Characteristic Symptoms of Spondylitis and its Inflammatory Pain Pattern</strong><br/><br/>
+The most common symptoms are intermittent low back pain, fatigue, loss of appetite, weight loss, skin rashes, breathing problems. <br/><br/>
+<strong class='text-white'>Worsening with Rest:</strong> Pain and stiffness are worse at night or after periods of inactivity. <br/>
+<strong class='text-white'>Improvement with Activity:</strong> Unlike degenerative pain, it improves with physical exercise. <br/><br/>
+It can also affect the eyes (uveitis), cause fatigue, loss of appetite, and skin rashes.
+`
+        : `
+<strong class='text-white text-3xl'>Síntomas Característicos de espondilitis y su Patrón de Dolor Inflamatorio</strong><br/><br/>
+Los síntomas más comunes son dolores intermitentes en la espalda baja, fatiga, pérdida de apetito, pérdida de peso, erupciones en la piel, problemas para respirar. <br/><br/>
+<strong class='text-white'>Empeoramiento con el Reposo:</strong> El dolor y la rigidez son peores por la noche o después de períodos de inactividad. <br/>
+<strong class='text-white'>Mejora con la Actividad:</strong> A diferencia del dolor degenerativo, mejora con el ejercicio físico. <br/><br/>
+También puede afectar los ojos (uveítis), causar fatiga, pérdida de apetito, y erupciones en la piel.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white'>Diagnosis:</strong><br/>
+Diagnosis can take time and includes blood tests and imaging studies such as x-rays or MRIs. There is no cure, but there is multidisciplinary treatment.
+`
+        : `
+<strong class='text-white'>Diagnóstico:</strong><br/>
+El diagnóstico puede llevar tiempo e incluye análisis de sangre y estudios de imagen como radiografías o resonancias. No tiene cura, pero sí tratamiento multidisciplinario.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white'>Spondylitis Treatment:</strong><br/><br/>
+<strong class='text-white'>Non-Steroidal Anti-Inflammatory Drugs (NSAIDs):</strong> Are the first line of treatment. <br/>
+<strong class='text-white'>Corticosteroids:</strong> Useful in intense outbreaks or localized injections. <br/>
+<strong class='text-white'>Physiotherapy and Exercise:</strong> Essential to improve posture, mobility and breathing.
+`
+        : `
+<strong class='text-white'>Tratamiento de espondilitis:</strong><br/><br/>
+<strong class='text-white'>Antiinflamatorios no Esteroides (AINEs):</strong> Son la primera línea de tratamiento. <br/>
+<strong class='text-white'>Corticosteroides:</strong> Útiles en brotes intensos o infiltraciones localizadas. <br/>
+<strong class='text-white'>Fisioterapia y Ejercicio:</strong> Esenciales para mejorar postura, movilidad y respiración.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white'>Spondylolysis: The Stress Fracture in the Vertebra</strong><br/><br/>
+It is a fracture in the isthmus of a vertebra, common in young athletes. <br/>
+Pain in the lower back, buttocks or legs when exercising or bending the back. <br/>
+High-impact sports such as gymnastics, weightlifting, wrestling or ballet increase the risk.
+`
+        : `
+<strong class='text-white'>Espondilólisis: La Fractura por Estrés en la Vértebra</strong><br/><br/>
+Es una fractura en el istmo de una vértebra, común en jóvenes atletas. <br/>
+Dolor en la parte baja de la espalda, glúteos o piernas al hacer ejercicio o inclinar la espalda. <br/>
+Deportes de alto impacto como gimnasia, pesas, lucha o ballet aumentan el riesgo.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white'>Diagnosis:</strong><br/>
+X-rays, bone scans and other imaging allow confirmation of the defect and ruling out other conditions.
+`
+        : `
+<strong class='text-white'>Diagnóstico:</strong><br/>
+Radiografías, gammagrafía ósea y otras imágenes permiten confirmar el defecto y descartar otras condiciones.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white'>Spondylolysis Treatment Approach:</strong><br/><br/>
+<strong class='text-white'>Strengthening Exercises:</strong> Help better support the spine. <br/>
+<strong class='text-white'>Physiotherapy:</strong> To relieve pain and improve mobility. <br/>
+<strong class='text-white'>Medication:</strong> Painkillers and NSAIDs to control symptoms.
+`
+        : `
+<strong class='text-white'>Enfoque del Tratamiento de espondilólisis:</strong><br/><br/>
+<strong class='text-white'>Ejercicios de fortalecimiento:</strong> Ayudan a sostener mejor la columna. <br/>
+<strong class='text-white'>Fisioterapia:</strong> Para aliviar el dolor y mejorar la movilidad. <br/>
+<strong class='text-white'>Medicación:</strong> Analgésicos y AINEs para controlar los síntomas.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white text-3xl'>Spondylolisthesis: The Vertebral Slip</strong><br/><br/>
+It is the displacement of one vertebra forward or backward. It is classified by grades (I to V, according to the percentage of displacement). <br/>
+It can derive from spondylolysis, congenital causes or accidents.
+`
+        : `
+<strong class='text-white text-3xl'>Espondilolistesis: El Deslizamiento Vertebral</strong><br/><br/>
+Es el desplazamiento de una vértebra hacia adelante o atrás. Se clasifica por grados (I a V, según el porcentaje de desplazamiento). <br/>
+Puede derivarse de espondilólisis, causas congénitas o accidentes.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white'>Symptoms and Possible Nerve Complications in Spondylolisthesis:</strong><br/><br/>
+Pain in legs, buttocks, hips, instability and even incontinence. <br/>
+Diagnosis with CT or MRI. Affects more high-performance athletes.
+`
+        : `
+<strong class='text-white'>Síntomas y Posibles Complicaciones Nerviosas en espondilolistesis:</strong><br/><br/>
+Dolor en piernas, glúteos, cadera, inestabilidad y hasta incontinencia. <br/>
+Diagnóstico con tomografía o resonancia magnética. Afecta más a atletas de alto rendimiento.
+`}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+<strong class='text-white'>Treatment:</strong><br/><br/>
+<strong class='text-white'>Conservative:</strong> Exercise, physiotherapy, analgesia and relative rest. More than 80% improve. <br/>
+<strong class='text-white'>Surgical:</strong> If the grade worsens or there is neurological compromise. <br/><br/>
+<strong class='text-white'>Reduction:</strong> Repositioning of the slipped bone. <br/>
+<strong class='text-white'>Laminectomy:</strong> Part of the vertebra is removed to relieve pressure. <br/>
+<strong class='text-white'>Spinal Fusion:</strong> Screws and rods are used to stabilize the spine.
+`
+        : `
+<strong class='text-white'>Tratamiento:</strong><br/><br/>
+<strong class='text-white'>Conservador:</strong> Ejercicio, fisioterapia, analgesia y reposo relativo. Más del 80% mejora. <br/>
+<strong class='text-white'>Quirúrgico:</strong> Si el grado empeora o hay compromiso neurológico. <br/><br/>
+<strong class='text-white'>Reducción:</strong> Reposicionamiento del hueso deslizado. <br/>
+<strong class='text-white'>Laminectomía:</strong> Se extrae parte de la vértebra para liberar presión. <br/>
+<strong class='text-white'>Fusión espinal:</strong> Se usan tornillos y varillas para estabilizar la columna.
+`}
+    />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish
+          ? "Comparative infographic: How smoking and diabetes affect bone fracture healing time"
+          : "Infografía comparativa: Cómo el tabaquismo y diabetes afectan el tiempo de curación de fracturas"}
+        title={isEnglish
+          ? "7 Factors That Delay Bone Healing | Trauma Specialist Tijuana"
+          : "7 Factores que Retrasan la Curación Ósea | Especialista en Traumatología Tijuana"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-2xl font-bold mb-6 text-white">
+      {
+        isEnglish
+          ? "Differentiating the 'Spondylo': An Essential Comparison"
+          : "Diferenciando las 'Espondilo': Una Comparación Esencial"
+      }
+    </h2>
+
+    <div
+      class="w-full overflow-x-auto md:overflow-visible md:flex md:justify-center"
+      set:html={isEnglish
+        ? `
+  <table class='min-w-[800px] md:min-w-[1000px] text-sm text-left text-white border border-gray-700'>
+    <thead class='bg-gray-800 text-white'>
+      <tr>
+        <th class='px-4 py-3 border border-gray-700'>Condition</th>
+        <th class='px-4 py-3 border border-gray-700'>Origin</th>
+        <th class='px-4 py-3 border border-gray-700'>Causes</th>
+        <th class='px-4 py-3 border border-gray-700'>Symptoms</th>
+        <th class='px-4 py-3 border border-gray-700'>Treatment</th>
+        <th class='px-4 py-3 border border-gray-700'>Age Range</th>
+      </tr>
+    </thead>
+    <tbody class='bg-gray-900'>
+      <tr>
+        <td class='px-4 py-2 border border-gray-700'>Spondylosis</td>
+        <td class='px-4 py-2 border border-gray-700'>Degenerative / wear</td>
+        <td class='px-4 py-2 border border-gray-700'>Aging, natural wear</td>
+        <td class='px-4 py-2 border border-gray-700'>Pain/stiffness (neck/lumbar), bone spurs, numbness/weakness</td>
+        <td class='px-4 py-2 border border-gray-700'>Physiotherapy, NSAIDs, self-care, (occasionally) injections / surgery</td>
+        <td class='px-4 py-2 border border-gray-700'>Elderly adults</td>
+      </tr>
+      <tr>
+        <td class='px-4 py-2 border border-gray-700'>Spondylitis</td>
+        <td class='px-4 py-2 border border-gray-700'>Autoimmune / inflammatory</td>
+        <td class='px-4 py-2 border border-gray-700'>Genetics, autoimmune disease</td>
+        <td class='px-4 py-2 border border-gray-700'>Inflammatory low back pain, fatigue, morning stiffness, uveitis</td>
+        <td class='px-4 py-2 border border-gray-700'>NSAIDs, Biologics, Physiotherapy, (rarely) surgery</td>
+        <td class='px-4 py-2 border border-gray-700'>Young adults 20 to 40 years</td>
+      </tr>
+      <tr>
+        <td class='px-4 py-2 border border-gray-700'>Spondylolysis</td>
+        <td class='px-4 py-2 border border-gray-700'>Stress fracture</td>
+        <td class='px-4 py-2 border border-gray-700'>Repetitive stress, injuries, congenital</td>
+        <td class='px-4 py-2 border border-gray-700'>Low back pain, buttocks, hamstrings</td>
+        <td class='px-4 py-2 border border-gray-700'>Rest, Physiotherapy, Medication</td>
+        <td class='px-4 py-2 border border-gray-700'>Children and young athletes</td>
+      </tr>
+      <tr>
+        <td class='px-4 py-2 border border-gray-700'>Spondylolisthesis</td>
+        <td class='px-4 py-2 border border-gray-700'>Vertebral slip (over another vertebra)</td>
+        <td class='px-4 py-2 border border-gray-700'>Previous spondylolysis, congenital, degenerative, trauma</td>
+        <td class='px-4 py-2 border border-gray-700'>Low back pain, radiation to legs/buttocks, instability, incontinence</td>
+        <td class='px-4 py-2 border border-gray-700'>Physiotherapy, Medication, Surgery</td>
+        <td class='px-4 py-2 border border-gray-700'>Any age</td>
+      </tr>
+    </tbody>
+  </table>
+`
+        : `
+  <table class='min-w-[800px] md:min-w-[1000px] text-sm text-left text-white border border-gray-700'>
+    <thead class='bg-gray-800 text-white'>
+      <tr>
+        <th class='px-4 py-3 border border-gray-700'>Afección</th>
+        <th class='px-4 py-3 border border-gray-700'>Origen</th>
+        <th class='px-4 py-3 border border-gray-700'>Causas</th>
+        <th class='px-4 py-3 border border-gray-700'>Síntomas</th>
+        <th class='px-4 py-3 border border-gray-700'>Tratamiento</th>
+        <th class='px-4 py-3 border border-gray-700'>Rango de edad</th>
+      </tr>
+    </thead>
+    <tbody class='bg-gray-900'>
+      <tr>
+        <td class='px-4 py-2 border border-gray-700'>Espondilosis</td>
+        <td class='px-4 py-2 border border-gray-700'>Degenerativa / desgaste</td>
+        <td class='px-4 py-2 border border-gray-700'>Envejecimiento, desgaste natural</td>
+        <td class='px-4 py-2 border border-gray-700'>Dolor/rigidez (cuello/lumbar), espolones, entumecimiento/debilidad</td>
+        <td class='px-4 py-2 border border-gray-700'>Fisioterapia, AINEs, autocuidados, (ocasionalmente) infiltraciones / cirugía</td>
+        <td class='px-4 py-2 border border-gray-700'>Adultos mayores</td>
+      </tr>
+      <tr>
+        <td class='px-4 py-2 border border-gray-700'>Espondilitis</td>
+        <td class='px-4 py-2 border border-gray-700'>Autoinmune / inflamatoria</td>
+        <td class='px-4 py-2 border border-gray-700'>Genética, enfermedad autoinmune</td>
+        <td class='px-4 py-2 border border-gray-700'>Dolor lumbar inflamatorio, fatiga, rigidez matutina, uveítis</td>
+        <td class='px-4 py-2 border border-gray-700'>AINEs, Biológicos, Fisioterapia, (raramente) cirugía</td>
+        <td class='px-4 py-2 border border-gray-700'>Jóvenes adultos 20 a 40 años</td>
+      </tr>
+      <tr>
+        <td class='px-4 py-2 border border-gray-700'>Espondilólisis</td>
+        <td class='px-4 py-2 border border-gray-700'>Fractura por estrés</td>
+        <td class='px-4 py-2 border border-gray-700'>Estrés repetitivo, lesiones, congénita</td>
+        <td class='px-4 py-2 border border-gray-700'>Dolor lumbar bajo, glúteos, isquiotibiales</td>
+        <td class='px-4 py-2 border border-gray-700'>Reposo, Fisioterapia, Medicación</td>
+        <td class='px-4 py-2 border border-gray-700'>Niños y jóvenes atletas</td>
+      </tr>
+      <tr>
+        <td class='px-4 py-2 border border-gray-700'>Espondilolistesis</td>
+        <td class='px-4 py-2 border border-gray-700'>Deslizamiento vertebral (sobre otra vértebra)</td>
+        <td class='px-4 py-2 border border-gray-700'>Espondilolisis previa, congénita, degenerativa, trauma</td>
+        <td class='px-4 py-2 border border-gray-700'>Dolor lumbar, irradiación a piernas/glúteos, inestabilidad, incontinencia</td>
+        <td class='px-4 py-2 border border-gray-700'>Fisioterapia, Medicación, Cirugía</td>
+        <td class='px-4 py-2 border border-gray-700'>Cualquier edad</td>
+      </tr>
+    </tbody>
+  </table>
+`}
+    />
+
+    <h2 class="text-2xl font-bold mb-6 mt-6 text-white">
+      {
+        isEnglish
+          ? "When to Consult a Spinal Specialist"
+          : "Cuando Consultar a un Especialista en Columna Vertebral"
+      }
+    </h2>
+
+    <h4
+      class="text-xl mb-8 leading-relaxed"
+      set:html={isEnglish
+        ? `
+  If you have persistent and intense pain or it progressively worsens, presents numbness, difficulty moving, it is necessary to schedule an evaluation as soon as possible.<br /><br />
+  Early and accurate diagnosis is key for effective treatment and to prevent long-term complications.<br /><br />
+  The human body is perfect and very wise, it knows when it can heal and when it can't, in the case of the spine which is a vital structure, its health is linked to our general well-being and our ability to lead an active and fulfilling life.<br /><br />
+  Understanding and differentiating conditions like <strong class='text-white'>spondylosis</strong>, <strong class='text-white'>spondylitis</strong>, <strong class='text-white'>spondylolysis</strong> and <strong class='text-white'>spondylolisthesis</strong> is crucial to addressing pain in an informed way.<br /><br />
+  Each patient is unique and the management of their back is a personalized process, from approaches such as <strong class='text-white'>physiotherapy</strong>, <strong class='text-white'>medication</strong>, <strong class='text-white'>injections</strong> or <strong class='text-white'>surgical interventions</strong>.<br />
+  The decision about which is the best treatment goes hand in hand with your trusted trauma specialist or neurosurgeon, as multiple factors will be evaluated in order to offer you the best option.<br /><br />
+  The key to optimal health and a pain-free life with independence lies in <strong class='text-white'>prevention</strong>, <strong class='text-white'>early detection</strong> and adopting <strong class='text-white'>healthy habits</strong>.<br /><br />
+  <strong class='text-white'>If you or a family member suffer from chronic back pain or have discomfort</strong>, I invite you to my office, you can find me at <strong class='text-white'>Torre Norte 2 in Tijuana, Baja California</strong>.<br />
+  If you are in another state of the country, I also offer <strong class='text-white'>online consultations</strong>.<br />
+  It will be a pleasure to work together on your well-being.
+`
+        : `
+  Si presentas un dolor persistente e intenso o este empeora progresivamente, presenta entumecimiento, dificultad para moverse es necesario agendar una valoración lo más pronto posible.<br /><br />
+  Un diagnóstico temprano y preciso es clave para un tratamiento eficaz y para prevenir complicaciones a largo plazo.<br /><br />
+  El cuerpo humano es perfecto y muy sabio, sabe cuándo puede curarse y cuando no, en el caso de la columna vertebral que es una estructura vital, su salud está ligada a nuestro bienestar general y a nuestra capacidad para llevar una vida activa y plena.<br /><br />
+  Comprender y diferenciar afecciones como la <strong class='text-white'>espondilosis</strong>, <strong class='text-white'>espondilitis</strong>, <strong class='text-white'>espondilólisis</strong> y <strong class='text-white'>espondilolistesis</strong> es crucial para abordar el dolor de forma informada.<br /><br />
+  Cada paciente es único y el manejo de su espalda es un proceso personalizado, desde los enfoques como <strong class='text-white'>fisioterapia</strong>, <strong class='text-white'>medicamento</strong>, <strong class='text-white'>infiltraciones</strong> o <strong class='text-white'>intervenciones quirúrgicas</strong>.<br />
+  La decisión sobre cuál es el mejor tratamiento va de la mano con tu traumatólogo de confianza o tu neurocirujano, ya que se evaluarán múltiples factores con el fin de ofrecerte la mejor opción.<br /><br />
+  La clave para una salud óptima y una vida sin dolor e independencia reside en la <strong class='text-white'>prevención</strong>, la <strong class='text-white'>detección temprana</strong> y adoptar <strong class='text-white'>hábitos saludables</strong>.<br /><br />
+  <strong class='text-white'>Si tú o un familiar padecen de dolor de espalda crónico o presentan molestias</strong>, te invito a mi consultorio, me pueden encontrar en <strong class='text-white'>Torre Norte 2 en Tijuana, Baja California</strong>.<br />
+  Si te encuentras en otro estado de la república, también realizo <strong class='text-white'>asesorías en línea</strong>.<br />
+  Será un gusto poder trabajar juntos en tu bienestar.
+`}
+    />
+  </Observer>
+
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery"
+      : "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion"}
+    PreviousName={isEnglish
+      ? "You fractured: Phases, symptoms and what to expect in your recovery"
+      : "Te fracturaste: Fases, síntomas y qué esperar en tu recuperación"}
+  />
+</article>

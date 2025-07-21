@@ -186,6 +186,14 @@ function Blogs({ URL }) {
         "¿Cómo saber si tu fractura se está curando bien? Descubre en qué fase de recuperación estás, señales de avance y alertas y como provenirlas. Lee más en mi blog",
       link: "/blogs/te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
     },
+    {
+      img: "/Enfermedades de la espalda por Dr Ricardo Monge.webp",
+      fecha: "Julio",
+      titulo: "Enfermedades de la columna: causas, síntomas y tratamiento",
+      texto:
+        "Te invito a conocer Todo sobre el dolor de espalda, síntomas y tratamientos. Diferenciando entre una espondilosis, espondilitis, espondilólisis y espondilolistesis. Aunque suenan parecidos, describen patologías distintas",
+      link: "/blogs/dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+    },
   ];
 
   const blogItem_en = [
@@ -360,6 +368,14 @@ function Blogs({ URL }) {
       texto:
         "How do you know if your fracture is healing well? Find out what stage of recovery you're in, signs of progress and alerts and how to proceed. Read more on my blog",
       link: "/en/blogs/you-fractured-phases-symptoms-and-what-to-expect-in-your-recovery",
+    },
+    {
+      img: "/Enfermedades de la espalda por Dr Ricardo Monge.webp",
+      fecha: "July",
+      titulo: "Diseases of the spine: causes, symptoms and treatment",
+      texto:
+        "I invite you to learn all about back pain, symptoms and treatments. Differentiating between spondylosis, spondylitis, spondylolisthesis and spondylolisthesis. Although they sound similar, they describe different pathologies.",
+      link: "/en/blogs/back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis",
     },
   ];
 
