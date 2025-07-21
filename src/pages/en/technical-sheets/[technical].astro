@@ -6,23 +6,23 @@ import Layout from "@layouts/LayoutFicha.astro";
 import { slide } from "astro:transitions";
 export function getStaticPaths() {
   return [
-    { params: { part: "recommendations-for-healthy-spine" } },
+    { params: { technical: "recommendations-for-healthy-spine" } },
     {
       params: {
-        part: "total-hip-replacement-postoperative-instructions",
+        technical: "total-hip-replacement-postoperative-instructions",
       },
     },
     {
       params: {
-        part: "total-knee-replacement-postoperative-instructions",
+        technical: "total-knee-replacement-postoperative-instructions",
       },
     },
     {
       params: {
-        part: "knee-arthroscopy-postoperative-instructions",
+        technical: "knee-arthroscopy-postoperative-instructions",
       },
     },
-    { params: { part: "preparation-for-your-surgical-procedure" } },
+    { params: { technical: "preparation-for-your-surgical-procedure" } },
   ];
 }
 
@@ -64,12 +64,12 @@ const fichasData = {
   },
 };
 
-const { part } = Astro.params;
-const fichaData = fichasData[part as keyof typeof fichasData];
+const { technical } = Astro.params;
+const fichaData = fichasData[technical as keyof typeof fichasData];
 const year = new Date().getFullYear();
 
 const URL = Astro.url.pathname.startsWith("/en/");
-const parts = [
+const technicals = [
   {
     nombre: "Recommendations for a healthy spine",
     ruta: "recommendations-for-healthy-spine",
@@ -92,7 +92,7 @@ const parts = [
   },
 ];
 
-const otrosFichas = parts.filter((p) => p.ruta !== part);
+const otrosFichas = technicals.filter((p) => p.ruta !== technical);
 ---
 
 <Layout
@@ -107,7 +107,7 @@ const otrosFichas = parts.filter((p) => p.ruta !== part);
     })}
   >
     {
-      part === "recommendations-for-healthy-spine" && (
+      technical === "recommendations-for-healthy-spine" && (
         <>
           <section class="bg-[url(/banner-ficha-mobile.webp)] md:bg-[url(/banner-ficha.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -131,7 +131,7 @@ const otrosFichas = parts.filter((p) => p.ruta !== part);
       )
     }
     {
-      part === "total-hip-replacement-postoperative-instructions" && (
+      technical === "total-hip-replacement-postoperative-instructions" && (
         <>
           <section class="bg-[url(/banner-ficha2-mobile.webp)] md:bg-[url(/banner-ficha2.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -155,7 +155,7 @@ const otrosFichas = parts.filter((p) => p.ruta !== part);
       )
     }
     {
-      part === "total-knee-replacement-postoperative-instructions" && (
+      technical === "total-knee-replacement-postoperative-instructions" && (
         <>
           <section class="bg-[url(/banner-ficha3-mobile.webp)] md:bg-[url(/banner-ficha3.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -179,7 +179,7 @@ const otrosFichas = parts.filter((p) => p.ruta !== part);
       )
     }
     {
-      part === "knee-arthroscopy-postoperative-instructions" && (
+      technical === "knee-arthroscopy-postoperative-instructions" && (
         <>
           <section class="bg-[url(/banner-ficha4-mobile.webp)] md:bg-[url(/banner-ficha4.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -203,7 +203,7 @@ const otrosFichas = parts.filter((p) => p.ruta !== part);
       )
     }
     {
-      part === "preparation-for-your-surgical-procedure" && (
+      technical === "preparation-for-your-surgical-procedure" && (
         <>
           <section class="bg-[url(/banner-ficha5-mobile.webp)] md:bg-[url(/banner-ficha5.webp)] bg-cover bg-no-repeat h-[700px] relative">
             <div class="absolute inset-0 bg-black bg-opacity-30" />
@@ -217,7 +217,7 @@ const otrosFichas = parts.filter((p) => p.ruta !== part);
           </section>
           <section class="md:px-16 border-white border-t-4 border-b-4 py-8">
             <FichaPDF
-              title="5. Preparation-for-your-surgical-procedure.pdf"
+              title="5. Preparation for your surgical procedure.pdf"
               pdf="/documentos-de-preparacion.pdf"
               client:only="react"
             />

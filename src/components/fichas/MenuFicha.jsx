@@ -6,46 +6,46 @@ import { motion } from "framer-motion"; // Animaciones
 const fichas = [
   {
     title: "Recomendaciones para una columna sana",
-    link: "/fichas/recomendaciones-para-una-columna-sana/",
+    link: "/fichas-tecnicas/recomendaciones-para-una-columna-sana/",
   },
   {
     title: "Instrucciones postoperatorias de Reemplazo total de cadera",
-    link: "/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-cadera/",
+    link: "/fichas-tecnicas/instrucciones-postoperatorias-de-reemplazo-total-de-cadera/",
   },
   {
     title: "Instrucciones postoperatorias de Reemplazo total de rodilla",
-    link: "/fichas/instrucciones-postoperatorias-de-reemplazo-total-de-rodilla/",
+    link: "/fichas-tecnicas/instrucciones-postoperatorias-de-reemplazo-total-de-rodilla/",
   },
   {
     title: "Instrucciones postoperatorias de artroscopia de rodilla",
-    link: "/fichas/instrucciones-postoperatorias-de-artroscopia-de-rodilla/",
+    link: "/fichas-tecnicas/instrucciones-postoperatorias-de-artroscopia-de-rodilla/",
   },
   {
     title: "Recomendaciones generales preoperatorias",
-    link: "/fichas/recomendaciones-generales-preoperatorias/",
+    link: "/fichas-tecnicas/recomendaciones-generales-preoperatorias/",
   },
 ];
 
 const fichasEN = [
   {
     title: "Recommendations for a healthy spine",
-    link: "/en/parts/recommendations-for-healthy-spine/",
+    link: "/en/technical-sheets/recommendations-for-healthy-spine/",
   },
   {
     title: "Postoperative instructions for total hip replacement",
-    link: "/en/parts/total-hip-replacement-postoperative-instructions/",
+    link: "/en/technical-sheets/total-hip-replacement-postoperative-instructions/",
   },
   {
     title: "Postoperative instructions for total knee replacement",
-    link: "/en/parts/total-knee-replacement-postoperative-instructions/",
+    link: "/en/technical-sheets/total-knee-replacement-postoperative-instructions/",
   },
   {
     title: "Postoperative instructions for knee arthroscopy",
-    link: "/en/parts/knee-arthroscopy-postoperative-instructions/",
+    link: "/en/technical-sheets/knee-arthroscopy-postoperative-instructions/",
   },
   {
-    title: "General preoperative recommendations",
-    link: "/en/parts/general-preoperative-recommendations/",
+    title: "Preparation for your surgical procedure",
+    link: "/en/technical-sheets/preparation-for-your-surgical-procedure/",
   },
 ];
 

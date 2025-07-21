@@ -26,14 +26,14 @@ const currentYear = new Date().getFullYear();
       <h3
         class="text-2xl font-bold mb-6 relative pb-2 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-0.5 after:bg-gradient-to-r after:from-blue-400 after:to-cyan-300"
       >
-        {URL ? "Parts" : "Fichas"}
+        {URL ? "Technical Sheets" : "Fichas Técnicas"}
       </h3>
       <ul class="grid grid-cols-2 text-center">
         {
           otrosFichas.map((p) => (
             <li class="mb-2">
               <a
-                href={`${URL ? "/en/parts/" : "/fichas/"}${p.ruta}`}
+                href={`${URL ? "/en/technical-sheets/" : "/fichas-tecnicas/"}${p.ruta}/`}
                 class="group text-gray-300 hover:text-white transition-colors flex items-center justify-center"
               >
                 <span class="w-2 h-2 bg-blue-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity" />
