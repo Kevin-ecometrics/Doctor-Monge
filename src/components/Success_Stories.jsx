@@ -41,7 +41,7 @@ const SuccessStories = ({ URL }) => {
       title2: "rodilla",
       subtitle:
         "Los resultados de esta cirugía tienen una de las tasas de éxito más altas, es normal sentirte con angustia previo a este procedimiento ortopédico por lo que en este videoblog te explico como traumatólogo especialista en rodilla todo lo que debes saber.",
-      background: "/Protesis-total-de-cadera-en-Tijuana.png",
+      background: "/Protesis-total-de-cadera-en-Tijuana.webp",
       link: "/procedimientos/protesis-total-de-rodilla/",
     },
     {
