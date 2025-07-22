@@ -92,7 +92,7 @@ function Testimonials({ URL }) {
         transition={{ duration: 5, ease: "easeOut" }}
         style={{
           backgroundImage:
-            "url('/Bienvenido a tu tratamiento a la medida con expertos en traumatologia.png')",
+            "url('/Bienvenido-a-tu-tratamiento-a-la-medida-con-expertos-en-traumatologia.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",

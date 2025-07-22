@@ -5,78 +5,77 @@ function Partners({ URL }) {
 
   const partners_en = [
     {
-      image: "/Logos FENECOT 2 (A).png",
-      hoverLogo: "/Logos FENECOT 2 (B).png",
+      image: "/Logos-FENECOT-2-A.png",
+      hoverLogo: "/Logos-FENECOT-2-B.png",
       alt: "Dr. Ricardo Monge is a member of the National Federation of Orthopedics and Traumatology Colleges of Mexico",
     },
     {
       image:
-        "/El consejo mexicano de ortopedia y traumatologia reconoce y certifica a Ricardo Monge como medico especialista en Tijuana.png",
+        "/El-consejo-mexicano-de-ortopedia-y-traumatologia-reconoce-y-certifica-a-Ricardo-Monge-como-medico-especialista-en-Tijuana.png",
       hoverLogo: "/cmo.png",
       alt: "The Mexican Council of Orthopedics and Traumatology certifies and evaluates physicians like Ricardo Monge",
     },
     {
       image:
-        "/Ricardo Monge  miembro de AANA  fundacion en pro  de la ensenanza  de artroscopia y cirugia no invasivas.png",
+        "/Ricardo-Monge-miembro-de-AANA-fundacion-en-pro-de-la-ensenanza-de-artroscopia-y-cirugia-no-invasivas.png",
       hoverLogo: "/AANA.png",
       alt: "Dr. Ricardo Monge participates in important foundations specialized in arthroscopy and minimally invasive surgeries",
     },
     {
       image:
-        "/Ricardo Monge pertenece a una de las organizaciones de ortopedia y traumatologia mas grande de america latina.png",
+        "/Ricardo-Monge-pertenece-a-una-de-las-organizaciones-de-ortopedia-y-traumatologia-mas-grande-de-america-latina.png",
       hoverLogo: "/femecot.png",
       alt: "Ricardo Monge belongs to an institution that promotes knowledge and continuous improvement in orthopedic and trauma medical practice",
     },
     {
       image:
-        "/Monge pertenece a la asociacion medica de especialistas musculoesqueleticos mas grande del mundo.png",
+        "/Monge-pertenece-a-la-asociacion-medica-de-especialistas-musculoesqueleticos-mas-grande-del-mundo.png",
       hoverLogo: "/AAOS.png",
       alt: "Ricardo Monge regularly attends conferences and courses with the world's largest association of musculoskeletal specialists",
     },
     {
       image:
-        "/El ortopedista y  traumatologo  Ricardo Monge es  miembro del  programa de ensenanza de recostruccion articular en AMECRA.png",
+        "/El-ortopedista-y-traumatologo-Ricardo-Monge-es-miembro-del-programa-de-ensenanza-de-recostruccion-articular-en-AMECRA.png",
       hoverLogo: "/AMECRA.png",
       alt: "AMECRA is a renowned institution for its expertise in joint reconstruction, of which Ricardo Monge is a member",
     },
   ];
 
-  // Spanish content
   const partners_es = [
     {
-      image: "/Logos FENECOT 2 (A).png",
-      hoverLogo: "/Logos FENECOT 2 (B).png",
-      alt: "El doctor Ricardo Monge es miembro de la federacion nacional de colegios de ortopedia y traumatologia de mexico",
+      image: "/Logos-FENECOT-2-A.png",
+      hoverLogo: "/Logos-FENECOT-2-B.png",
+      alt: "El doctor Ricardo Monge es miembro de la federación nacional de colegios de ortopedia y traumatología de México",
     },
     {
       image:
-        "/El consejo mexicano de ortopedia y traumatologia reconoce y certifica a Ricardo Monge como medico especialista en Tijuana.png",
+        "/El-consejo-mexicano-de-ortopedia-y-traumatologia-reconoce-y-certifica-a-Ricardo-Monge-como-medico-especialista-en-Tijuana.png",
       hoverLogo: "/cmo.png",
-      alt: "El Consejo Mexicano de Ortopedia y Traumatologia certifica y evalua a los medicos como Ricardo MONGE",
+      alt: "El Consejo Mexicano de Ortopedia y Traumatología certifica y evalúa a los médicos como Ricardo Monge",
     },
     {
       image:
-        "/Ricardo Monge  miembro de AANA  fundacion en pro  de la ensenanza  de artroscopia y cirugia no invasivas.png",
+        "/Ricardo-Monge-miembro-de-AANA-fundacion-en-pro-de-la-ensenanza-de-artroscopia-y-cirugia-no-invasivas.png",
       hoverLogo: "/AANA.png",
-      alt: "Una importante fundacion especializada en astroscopia cirugias invasivas forman parte de la amplia variedad de instituciones de las que el doctor Ricardo Monge participa",
+      alt: "Una importante fundación especializada en artroscopía y cirugías invasivas forman parte de la amplia variedad de instituciones de las que el doctor Ricardo Monge participa",
     },
     {
       image:
-        "/Ricardo Monge pertenece a una de las organizaciones de ortopedia y traumatologia mas grande de america latina.png",
+        "/Ricardo-Monge-pertenece-a-una-de-las-organizaciones-de-ortopedia-y-traumatologia-mas-grande-de-america-latina.png",
       hoverLogo: "/femecot.png",
       alt: "Ricardo Monge pertenece a una institución que fomenta el conocimiento y promueve el mejoramiento continuo de la práctica médica a especialistas en ortopedia y traumatología",
     },
     {
       image:
-        "/Monge pertenece a la asociacion medica de especialistas musculoesqueleticos mas grande del mundo.png",
+        "/Monge-pertenece-a-la-asociacion-medica-de-especialistas-musculoesqueleticos-mas-grande-del-mundo.png",
       hoverLogo: "/AAOS.png",
       alt: "Ricardo Monge está en constantes congresos y diplomados con la asociación médica de especialistas musculoesqueléticos en el mundo",
     },
     {
       image:
-        "/El ortopedista y  traumatologo  Ricardo Monge es  miembro del  programa de ensenanza de recostruccion articular en AMECRA.png",
+        "/El-ortopedista-y-traumatologo-Ricardo-Monge-es-miembro-del-programa-de-ensenanza-de-recostruccion-articular-en-AMECRA.png",
       hoverLogo: "/AMECRA.png",
-      alt: "La AMECRA es una reconocida institucion por su alta especialidades en recostrucion articular de la que Ricardo Monge forma parte",
+      alt: "La AMECRA es una reconocida institución por su alta especialidad en reconstrucción articular de la que Ricardo Monge forma parte",
     },
   ];
 

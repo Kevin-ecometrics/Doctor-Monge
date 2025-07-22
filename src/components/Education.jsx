@@ -9,7 +9,7 @@ const Education = ({ URL }) => {
 
   const educationData_es = [
     {
-      logo: "/Ricardo Monge  obtuvo su titulo  como medico  general en una prestigiosa  universidad en Tijuana Baja California.png",
+      logo: "/Ricardo-Monge-obtuvo-su-titulo-como-medico-general-en-una-prestigiosa-universidad-en-Tijuana-Baja-California.png",
       hoverLogo: "/xochicalco.png",
       alt: "El doctor Ricardo Monge se formó en una de las mejores universidades de Tijuana Baja california con un modelo educativo integral",
       years: "2013 - 2018",
@@ -18,7 +18,7 @@ const Education = ({ URL }) => {
         "La universidad cuenta con 50 años de calidad y prestigio con múltiples acreditaciones como La Asociación Mexicana de Facultades y Escuelas de Medicina, A.C., O.M.S. , COMAEM, COMAPROD, convirtiéndola en una las mejores universidades para la licenciatura en medina. ",
     },
     {
-      logo: "/Ricardo Monge es un medico especialista avalado por la UNAM.png",
+      logo: "/Ricardo-Monge-es-un-medico-especialista-avalado-por-la-UNAM.png",
       hoverLogo: "/unam.png",
       alt: "El doctor Ricardo Monge fue Avadado por unas de las facultades más reconocidas del país en su especialidad como traumatólogo",
       years: "2018 - 2021",
@@ -27,7 +27,7 @@ const Education = ({ URL }) => {
         "Especialidad en traumatología y Ortopedia otorgada en el Hospital General del Estado de Sonora, avalado por la U.N.A.M. certificado y miembro del Consejo Mexicano de Ortopedia. ",
     },
     {
-      logo: "/Ricardo Monge pertenece a una de las organizaciones de ortopedia y traumatologia mas grande de america latina.png",
+      logo: "/Ricardo-Monge-pertenece-a-una-de-las-organizaciones-de-ortopedia-y-traumatologia-mas-grande-de-america-latina.png",
       hoverLogo: "/femecot.png",
       alt: "Ricardo Monge pertenece a una institución que fomenta el conocimiento y promueve el mejoramiento continuo de la práctica médica a especialistas en ortopedia y traumatología",
       years: "2021 - 2022",
@@ -39,7 +39,7 @@ const Education = ({ URL }) => {
 
   const educationData_en = [
     {
-      logo: "/Ricardo Monge  obtuvo su titulo  como medico  general en una prestigiosa  universidad en Tijuana Baja California.png",
+      logo: "/Ricardo-Monge-obtuvo-su-titulo-como-medico-general-en-una-prestigiosa-universidad-en-Tijuana-Baja-California.png",
       hoverLogo: "/xochicalco.png",
       alt: "Dr. Ricardo Monge trained at one of the best universities in Tijuana with a comprehensive educational model",
       years: "2013 - 2018",
@@ -48,7 +48,7 @@ const Education = ({ URL }) => {
         "The university has 50 years of quality and prestige with multiple accreditations including the Mexican Association of Medical Schools, WHO, COMAEM, and COMAPROD, making it one of the best universities for medical studies.",
     },
     {
-      logo: "/Ricardo Monge es un medico especialista avalado por la UNAM.png",
+      logo: "/Ricardo-Monge-es-un-medico-especialista-avalado-por-la-UNAM.png",
       hoverLogo: "/unam.png",
       alt: "Dr. Ricardo Monge was certified by one of the most recognized medical schools in Mexico for his trauma specialist training",
       years: "2018 - 2021",
@@ -57,7 +57,7 @@ const Education = ({ URL }) => {
         "Specialization in Traumatology and Orthopedics at the General Hospital of Sonora, certified by UNAM and member of the Mexican Council of Orthopedics.",
     },
     {
-      logo: "/Ricardo Monge pertenece a una de las organizaciones de ortopedia y traumatologia mas grande de america latina.png",
+      logo: "/Ricardo-Monge-pertenece-a-una-de-las-organizaciones-de-ortopedia-y-traumatologia-mas-grande-de-america-latina.png",
       hoverLogo: "/femecot.png",
       alt: "Ricardo Monge belongs to an institution that promotes knowledge and continuous improvement in orthopedic and trauma medical practice",
       years: "2021 - 2022",

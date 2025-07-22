@@ -56,7 +56,7 @@ function Hero({ URL }) {
           <div className="w-[400px] h-[400px] lg:h-screen lg:w-full lg:absolute lg:translate-x-4 translate-x-[-40px] top-[-150px] hidden lg:block">
             <motion.img
               key={animationKey}
-              src="/hero.webp"
+              src="/doctor-monge-especialista-en-ortopedia-y-traumatologia.webp"
               style={{
                 maskImage: "linear-gradient(to bottom, black 60%, transparent)",
               }}
@@ -81,7 +81,7 @@ function Hero({ URL }) {
               initial={{ scale: 1.25 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1.5 }}
-              src="/herom.webp"
+              src="/doctor-monge-especialista-en-traumatologia-y-ortopedia.webp"
               loading="lazy"
               alt={
                 URL
