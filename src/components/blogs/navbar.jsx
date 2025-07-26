@@ -15,7 +15,7 @@ const Navbar = ({ URL }) => {
       <div className="flex justify-start">
         <button id="back-button">
           <img
-            src="/El doctor Ricardo Monge es  ortopedista especialista en rodilla cadera y espalda.png"
+            src="/El-doctor-Ricardo-Monge-es-ortopedista-especialista-en-rodilla-cadera-y-espalda.webp"
             alt="El doctor Ricardo Monge es especialista en ortopedia y traumatología especializado en lesiones musculo esqueléticas  de rodilla, cadera y espalda"
           />
         </button>

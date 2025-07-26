@@ -115,7 +115,7 @@ const Education = ({ URL }) => {
           <div>
             <img
               src={hoverIndex === index ? item.hoverLogo : item.logo}
-              loading="eager"
+              loading="lazy"
               fetchPriority="high"
               className="w-24"
               alt={item.alt}

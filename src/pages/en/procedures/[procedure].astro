@@ -18,6 +18,7 @@ export function getStaticPaths() {
     { params: { procedure: "acl-injury" } },
     { params: { procedure: "cervical-disc-herniation" } },
     { params: { procedure: "meniscus-injuries" } },
+    { params: { procedure: "what-is-an-infiltration" } },
   ];
 }
 
@@ -28,6 +29,7 @@ const procedure = [
   { nombre: "ACL injury", ruta: "acl-injury" },
   { nombre: "Cervical disc herniation", ruta: "cervical-disc-herniation" },
   { nombre: "Meniscus injuries", ruta: "meniscus-injuries" },
+  { nombre: "What is an infiltration", ruta: "what-is-an-infiltration" },
 ];
 const { procedure: procedureParam } = Astro.params;
 const otrosProcedimientos = procedure.filter((p) => p.ruta !== procedureParam);
@@ -43,10 +45,9 @@ if (procedureParam === "total-hip-prosthesis") {
   videoId = "3OoNbdidyEw";
   title = "Total hip prosthesis";
   duration = "PT1M37S";
-
-  (background = "/Protesis%20total%20de%20cadera%20en%20Tijuana.png"),
-    (content =
-      "A total hip replacement is basically the final treatment for any advanced wear and tear of the hip or a deformity that caused wear and tear. It can be from fractures or a consequence of a fracture that left the joint badly worn out, or it can be the wear and tear of aging itself and the biomechanical changes that occur in the hip. <br/> <br/>It can also be due to an autoimmune disease, one of those in which the body itself attacks us or attacks certain structures, in this case, the cartilage and synovium, such as rheumatoid arthritis. <br/> <br/>What is the best approach? <br/>In terms of the incision, the approach or the cut you make can be made from the front, from the side or from the back, that is, anterior, lateral or posterior. <br/> <br/>Which one is the best? The one your orthopedist does best. This will depend on the orthopedist's experience with the type of approach; that is how patients will do best. This is something that has already been studied, because sometimes there is this controversy as to whether the anterior or the posterior is better, and what has been observed is that patients can do well with all three approaches. After a few weeks, the results level out, and the one that your doctor knows best is the one that should be performed. <br/> <br/>If you are interested in hip replacement, opinions or costs, you can contact me at: 664 976 3510 or write me at: pacientes@mongeortopedia.com");
+  background = "/Protesis-total-de-cadera-en-Tijuana.png";
+  content =
+    "A total hip replacement is basically the final treatment for any advanced wear and tear of the hip or a deformity that caused wear and tear. It can be from fractures or a consequence of a fracture that left the joint badly worn out, or it can be the wear and tear of aging itself and the biomechanical changes that occur in the hip. <br/> <br/>It can also be due to an autoimmune disease, one of those in which the body itself attacks us or attacks certain structures, in this case, the cartilage and synovium, such as rheumatoid arthritis. <br/> <br/>What is the best approach? <br/>In terms of the incision, the approach or the cut you make can be made from the front, from the side or from the back, that is, anterior, lateral or posterior. <br/> <br/>Which one is the best? The one your orthopedist does best. This will depend on the orthopedist's experience with the type of approach; that is how patients will do best. This is something that has already been studied, because sometimes there is this controversy as to whether the anterior or the posterior is better, and what has been observed is that patients can do well with all three approaches. After a few weeks, the results level out, and the one that your doctor knows best is the one that should be performed. <br/> <br/>If you are interested in hip replacement, opinions or costs, you can contact me at: 664 976 3510 or write me at: pacientes@mongeortopedia.com";
   keywords =
     "traumatology, traumatologist, total hip prosthesis, orthopedic surgery, hip replacement, Tijuana";
 } else if (procedureParam === "total-knee-prosthesis") {
@@ -54,9 +55,9 @@ if (procedureParam === "total-hip-prosthesis") {
   title = "Total knee prosthesis";
   duration = "PT0M51S";
 
-  (background = "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png"),
-    (content =
-      "I will tell you briefly about total knee arthroplasty or total knee prosthesis. It is the only treatment that is considered curative of wear and tear, because what is done is that the elements that create the inflammation and precisely the wear and tear are removed. Regarding the knee, what we do in surgery is to remove the cartilage and part of the bone to accommodate new components that will fulfill the functions of what we remove, which is normally in the femur, in the tibia and sometimes in the patella, which is the small bone that is in front of the knee. Like all surgery, it requires good planning, several types of studies to be able to see which are the types of cuts, the type of alignment and the balancing that needs to be done in the knee so that it is stable.  <br/> <br/>If you have any doubts or questions, do not hesitate to send us a message or call us so we can answer them. ");
+  background = "/Hernia-discal-cervical-cirugia-en-Tijuana.png";
+  content =
+    "I will tell you briefly about total knee arthroplasty or total knee prosthesis. It is the only treatment that is considered curative of wear and tear, because what is done is that the elements that create the inflammation and precisely the wear and tear are removed. Regarding the knee, what we do in surgery is to remove the cartilage and part of the bone to accommodate new components that will fulfill the functions of what we remove, which is normally in the femur, in the tibia and sometimes in the patella, which is the small bone that is in front of the knee. Like all surgery, it requires good planning, several types of studies to be able to see which are the types of cuts, the type of alignment and the balancing that needs to be done in the knee so that it is stable.  <br/> <br/>If you have any doubts or questions, do not hesitate to send us a message or call us so we can answer them. ";
   keywords =
     "traumatology, traumatologist, total knee prosthesis, knee surgery, orthopedic specialist, Tijuana";
 } else if (procedureParam === "herniated-lumbar-disc") {
@@ -64,10 +65,10 @@ if (procedureParam === "total-hip-prosthesis") {
   title = "Herniated lumbar disc";
   duration = "PT1M27S";
 
-  (background =
-    "/protesis%20total%20de%20rodilla%20en%20Tijuana%20consulta.png"),
-    (content =
-      "A common cause of back pain can be lumbar disc herniations, it can be either pure back pain or it can be accompanied by sciatica, which is basically sciatic pain. This type of pain has two main elements, one mechanical and one chemical. The mechanical one is the fact that the hernia is crushing a structure, which in this case is the nerve root, and causing the pain. The other one is the chemical one, it is what the lesion or the herniated disc starts to secrete and those substances that it secretes start to irritate everything around it, which is usually the nerve root. To assess herniations we need two types of studies. One is X-rays, because X-rays, when we do see the bone and we do not see the herniation, we see other types of lesions that could hurt them.   <br/> <br/>The other is magnetic resonance imaging where we see directly the discs, the roots, how free they are and how big the hernia or the disc lesion is. The great majority of herniated discs are treated conservatively, such as infiltration therapy, medications and spinal care, approximately 60 to 70 percent of herniated discs will not undergo surgery, but the others that behave badly and do not do well with conservative treatment or that meet certain criteria that make them surgical from the start, are the ones that we will operate on. If you have more questions about herniated discs I invite you to send us a message or call us to schedule your appointment. ");
+  background = "/protesis-total-de-rodilla-en-Tijuana-consulta.png";
+
+  content =
+    "A common cause of back pain can be lumbar disc herniations, it can be either pure back pain or it can be accompanied by sciatica, which is basically sciatic pain. This type of pain has two main elements, one mechanical and one chemical. The mechanical one is the fact that the hernia is crushing a structure, which in this case is the nerve root, and causing the pain. The other one is the chemical one, it is what the lesion or the herniated disc starts to secrete and those substances that it secretes start to irritate everything around it, which is usually the nerve root. To assess herniations we need two types of studies. One is X-rays, because X-rays, when we do see the bone and we do not see the herniation, we see other types of lesions that could hurt them.   <br/> <br/>The other is magnetic resonance imaging where we see directly the discs, the roots, how free they are and how big the hernia or the disc lesion is. The great majority of herniated discs are treated conservatively, such as infiltration therapy, medications and spinal care, approximately 60 to 70 percent of herniated discs will not undergo surgery, but the others that behave badly and do not do well with conservative treatment or that meet certain criteria that make them surgical from the start, are the ones that we will operate on. If you have more questions about herniated discs I invite you to send us a message or call us to schedule your appointment. ";
   keywords =
     "traumatology, traumatologist, herniated lumbar disc, back pain treatment, spine surgery, Tijuana";
 } else if (procedureParam === "acl-injury") {
@@ -75,10 +76,10 @@ if (procedureParam === "total-hip-prosthesis") {
   title = "ACL injury";
   duration = "PT1M07S";
 
-  (background =
-    "/Lesiones%20en%20ligamento%20cruzado%20anterior%20tratamiento%20conservador%20en%20Tijuana.png"),
-    (content =
-      "For your knee to function properly, it depends on many structures that will provide stability. Among tendons, ligaments, the same form of the bones, the menisci, there are some structures that are called crossed ligaments, one anterior and one posterior, that is to say one that goes in front and one that goes behind. The anterior cruciate ligament is one of the most important structures is that it gives more stability to the knee. It provides almost 80-85% of stability as a primary stabilizer. What the anterior cruciate helps is so that the tibia does not go towards front and does not rotate of more, for putting it this way. A rupture of this ligament is going to cause instability in your knee, which is going to hurt the meniscus and cartilage and cause early wear and tear.   <br/> <br/>Although some people can do a conservative treatment depending on the injury, the great majority needs a reconstruction because it is necessary to return that function, that ligament so that that knee continues being stable and to prevent the early wear and tear.  <br/> <br/>If you have any questions, any doubts, do not hesitate to call us or send us a message so we can help you. ");
+  background =
+    "/Lesiones-en-ligamento-cruzado-anterior-tratamiento-conservador-en-Tijuana.png";
+  content =
+    "For your knee to function properly, it depends on many structures that will provide stability. Among tendons, ligaments, the same form of the bones, the menisci, there are some structures that are called crossed ligaments, one anterior and one posterior, that is to say one that goes in front and one that goes behind. The anterior cruciate ligament is one of the most important structures is that it gives more stability to the knee. It provides almost 80-85% of stability as a primary stabilizer. What the anterior cruciate helps is so that the tibia does not go towards front and does not rotate of more, for putting it this way. A rupture of this ligament is going to cause instability in your knee, which is going to hurt the meniscus and cartilage and cause early wear and tear.   <br/> <br/>Although some people can do a conservative treatment depending on the injury, the great majority needs a reconstruction because it is necessary to return that function, that ligament so that that knee continues being stable and to prevent the early wear and tear.  <br/> <br/>If you have any questions, any doubts, do not hesitate to call us or send us a message so we can help you. ";
   keywords =
     "traumatology, traumatologist, ACL injury, knee ligament surgery, orthopedic care, Tijuana";
 } else if (procedureParam === "cervical-disc-herniation") {
@@ -86,10 +87,9 @@ if (procedureParam === "total-hip-prosthesis") {
   title = "Cervical disc herniation";
   duration = "PT1M11S";
 
-  (background =
-    "/Hernia%20de%20disco%20lumbar%20cirugia%20y%20tratamiento%20en%20Tijuana.png"),
-    (content =
-      "When we talk about neck pain, something relatively common are herniated discs. Herniated discs are when there is an injury to the intervertebral disc, which serves to protect us from the loads that pass through the spine. The bump or herniation is made and it will crush a nerve root. This nerve root is in charge of communicating with the outside world throughout the body. What the hernia is going to do is to crush a nerve root and that nerve root is going to respond with pain, decreased effort, decreased sensitivity. While the great majority can be treated conservatively, with therapy, with analgesics, with infiltrations, some need surgery. <br/> <br/>The surgery basically consists of removing that disguise, and to replace it by something in this case there are times that we put a box that is going to replace that space and something is put to protect that box or in other cases a disc prosthesis can be put, although it is less common in some patients can require that type of things the objective is to remove the damaged disc and to replace it by something that can maintain the space and the roots can be free. <br/> <br/>If you have any questions do not hesitate to send us a message or call us to answer you. ");
+  background = "/Hernia-de-disco-lumbar-cirugia-y-tratamiento-en-Tijuana.png";
+  content =
+    "When we talk about neck pain, something relatively common are herniated discs. Herniated discs are when there is an injury to the intervertebral disc, which serves to protect us from the loads that pass through the spine. The bump or herniation is made and it will crush a nerve root. This nerve root is in charge of communicating with the outside world throughout the body. What the hernia is going to do is to crush a nerve root and that nerve root is going to respond with pain, decreased effort, decreased sensitivity. While the great majority can be treated conservatively, with therapy, with analgesics, with infiltrations, some need surgery. <br/> <br/>The surgery basically consists of removing that disguise, and to replace it by something in this case there are times that we put a box that is going to replace that space and something is put to protect that box or in other cases a disc prosthesis can be put, although it is less common in some patients can require that type of things the objective is to remove the damaged disc and to replace it by something that can maintain the space and the roots can be free. <br/> <br/>If you have any questions do not hesitate to send us a message or call us to answer you. ";
   keywords =
     "traumatology, traumatologist, cervical disc herniation, neck pain treatment, spine surgery, Tijuana";
 } else if (procedureParam === "meniscus-injuries") {
@@ -97,12 +97,52 @@ if (procedureParam === "total-hip-prosthesis") {
   title = "Meniscus injuries";
   duration = "PT0M58S";
 
-  (background =
-    "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png"),
-    (content =
-      "Let me tell you a little bit about the menisci. The menisci are fibrocartilaginous structures that are inside the knee. They are like gaskets. And what they help us is to establish or help a little bit with the forces that pass through the knee to protect the cartilage. One helps us for that structure and to protect it and the other is that they are also very important stabilizers in the knee. These structures can be injured and when the menisci are injured, they need to be evaluated to see if they are apt to be repaired or sutured in a special way, and the other is to remove the part of the meniscus that is not useful. But this depends on each patient, the type of injury, since not all can be repaired, but the idea is to try to repair to return the function and that your knee continues to function properly and prevent early wear. Do you have any questions? Do not hesitate to send us a message or call us. ");
+  background = "/Lesiones-en-meniscos-tratamiento-conservador-en-Tijuana.png";
+  content =
+    "Let me tell you a little bit about the menisci. The menisci are fibrocartilaginous structures that are inside the knee. They are like gaskets. And what they help us is to establish or help a little bit with the forces that pass through the knee to protect the cartilage. One helps us for that structure and to protect it and the other is that they are also very important stabilizers in the knee. These structures can be injured and when the menisci are injured, they need to be evaluated to see if they are apt to be repaired or sutured in a special way, and the other is to remove the part of the meniscus that is not useful. But this depends on each patient, the type of injury, since not all can be repaired, but the idea is to try to repair to return the function and that your knee continues to function properly and prevent early wear. Do you have any questions? Do not hesitate to send us a message or call us. ";
   keywords =
     "traumatology, traumatologist, meniscus injuries, knee treatment, orthopedic surgery, Tijuana";
+} else if (procedureParam === "what-is-an-infiltration") {
+  videoId = "4ExmTZNFOzA";
+  title = "What is infiltration therapy?";
+  duration = "PT3M30S";
+  background = "/que-es-una-infiltracion-por-el-doctor-monge.webp";
+  content = `An infiltration is the injection of a substance or medication into a specific area. Normally, the ones we hear about most are inside joints — the knee, the hip, the spine — but in reality, it can be done in all parts of the body for certain purposes.<br/><br/>
+
+Infiltrations with corticosteroids:<br/><br/>
+
+One of them is the steroid anti-inflammatory, which is the tried and true option. It is an anti-inflammatory that basically all types of infiltrations in tests and studies must be compared against in terms of effect and duration, or be comparable enough to be considered somewhat valid to start using it.<br/><br/>
+
+It is the cheapest and its effect is a little faster than others. It is injected with anesthetic and we usually wait about two weeks to see the full effect. What goes away, goes away; what remains, remains — and from there we see how long it will last. For many patients, it lasts a long time and works very well. Obviously, we combine this with other treatments to improve the effect, for example: physical therapy, medications, etc. For some patients, it doesn’t work as well. That sometimes tells us about the severity or how advanced the problem is, and unfortunately, if it doesn’t work well or doesn’t last long, it means that perhaps other options need to be considered.<br/><br/>
+
+Infiltration with PRP:<br/><br/>
+
+Platelet-rich plasma, simply put, involves drawing blood from the patient, processing or centrifuging it, and extracting the part that contains the platelets, which are then reintroduced.<br/><br/>
+
+The idea of reinjecting it, as I tell patients, is that it is the closest thing to something natural the patient can have to reduce inflammation and pain. It does not regenerate, it’s not magic, it will not create new cartilage or many of the things that are sometimes used to sell the idea of injecting it. It works very well when done properly, significantly reducing inflammation and pain, and it has some properties that might help in repairing certain tissues, but it will not regenerate.<br/><br/>
+
+It has been observed that platelet-rich plasma tends to last a little longer than steroid anti-inflammatory injections. The only downside is that it is recommended to be infiltrated 2 to 3 times.<br/><br/>
+
+The timing between each infiltration varies, but the idea is that if you decide to do it, it should be done properly. The cost is also a bit higher than steroids.<br/><br/>
+
+Infiltration with Hyaluronic Acid:<br/><br/>
+
+Hyaluronic acid is a substance that the knee or cartilage produces by itself. It helps somewhat with lubrication and nutrition of the cartilage, the impact of forces, and how all the cells in the knee’s biomechanics are managed.<br/><br/>
+
+It is a substance injected as a gel-like material that basically replaces the hyaluronic acid no longer present in the knee. It helps somewhat with lubrication, volume, and provides some nutrition to the cartilage. Some formulations, or at least those I personally use, combine it with an anti-inflammatory to have the benefits of both, but it can also be injected alone.<br/><br/>
+
+Many presentations come as three separate doses or one complete dose of six milliliters. The separate doses are two milliliters each and can be administered at intervals until the three doses are completed. Personally, I don’t like to give the patient three separate injections, so all three can be given in a single session with the same effect as buying the more expensive single dose. The goal is also to reduce inflammation and pain.<br/><br/>
+
+The timing for hyaluronic acid is more debatable than for the other two because it depends heavily on the severity and whether the knee is in an optimal condition for hyaluronic acid injection.<br/><br/>
+
+When is it used?  
+It is used when there is wear and tear, not for meniscus injuries or certain knee pains, since that is not the indication for hyaluronic acid.<br/><br/>
+
+When to use it?<br/><br/>
+
+Depending on what is being sought, all patients must consider the severity of the wear and whether any of these types of infiltrations are appropriate — and, of course, the costs. The idea is to reduce pain and inflammation enough so that the patient can undergo physical therapy and carry out daily activities without discomfort. There will come a time when these infiltrations start to fail and become less effective as the wear problem progresses.`;
+  keywords =
+    "orthopedics, infiltration therapy, PRP, hyaluronic acid, corticosteroids, joint pain, orthopedist, Tijuana";
 }
 
 const URL = Astro.url.pathname.startsWith("/en/");

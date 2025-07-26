@@ -42,6 +42,7 @@ function Hero({ URL }) {
                   ? "Dr. Ricardo Monge is an orthopedic specialist in knee, hip and back conditions"
                   : "El doctor Ricardo Monge es especialista en ortopedia y traumatología especializado en lesiones musculo esqueléticas de rodilla, cadera y espalda"
               }
+              fetchPriority="high"
               className="mb-8"
             />
             <div>
@@ -63,7 +64,9 @@ function Hero({ URL }) {
               initial={{ scale: 1.25 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1.5 }}
-              loading="lazy"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               alt={
                 URL
                   ? "Dr. Ricardo Monge is an orthopedic specialist in knee, hip and back conditions"
@@ -72,7 +75,7 @@ function Hero({ URL }) {
             />
           </div>
 
-          <div className="block lg:hidden">
+          <div className="block lg:hidden min-h-screen">
             <motion.img
               key={animationKey}
               style={{
@@ -82,7 +85,9 @@ function Hero({ URL }) {
               animate={{ scale: 1 }}
               transition={{ duration: 1.5 }}
               src="/doctor-monge-especialista-en-traumatologia-y-ortopedia.webp"
-              loading="lazy"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               alt={
                 URL
                   ? "Dr. Ricardo Monge is an orthopedic specialist in knee, hip and back conditions"

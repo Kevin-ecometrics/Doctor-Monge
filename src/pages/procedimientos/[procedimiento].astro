@@ -18,6 +18,7 @@ export function getStaticPaths() {
     { params: { procedimiento: "lesion-por-lca" } },
     { params: { procedimiento: "hernia-discal-cervical" } },
     { params: { procedimiento: "lesiones-en-meniscos" } },
+    { params: { procedimiento: "que-es-una-infiltracion" } },
   ];
 }
 
@@ -29,6 +30,7 @@ const procedimientos = [
   { nombre: "Lesion por LCA", ruta: "lesion-por-lca" },
   { nombre: "Hernia discal cervical", ruta: "hernia-discal-cervical" },
   { nombre: "Lesiones en meniscos", ruta: "lesiones-en-meniscos" },
+  { nombre: "¿Qué es una infiltración?", ruta: "que-es-una-infiltracion" },
 ];
 
 const otrosProcedimientos = procedimientos.filter(
@@ -46,7 +48,7 @@ if (procedimiento === "protesis-total-de-cadera") {
   videoId = "3OoNbdidyEw";
   title = "Protesis total de cadera";
   duration = "PT1M37S";
-  background = "/Protesis%20total%20de%20cadera%20en%20Tijuana.png";
+  background = "/Protesis-total-de-cadera-en-Tijuana.png";
   content =
     "Una prótesis total de cadera es, básicamente, el tratamiento final de cualquier desgaste avanzado de la cadera o de una deformidad que causó desgaste. Puede ser por fracturas o una consecuencia de una fractura que dejó mal la articulación y se desgastó, o puede ser el propio desgaste del envejecimiento y los cambios biomecánicos que ocurren en la cadera. <br/> <br/>También puede ser por una enfermedad autoinmune, de esas en las que el propio cuerpo nos ataca o ataca ciertas estructuras, en este caso, el cartílago y la sinovial, como es la artritis reumatoide. <br/> <br/>¿Qué abordaje es el mejor? <br/>En cuanto a la incisión, el abordaje o el corte que te hacen se puede realizar por enfrente, por al lado o por atrás, o sea, anterior, lateral o posterior. <br/> <br/>¿Cuál es el mejor? El que mejor sabe hacer tu ortopedista. Esto dependerá de la experiencia del ortopedista con el tipo de abordaje; así es como les irá mejor a los pacientes. Esto es algo ya estudiado, porque a veces existe esa controversia sobre si es mejor el anterior o el posterior, y actualmente lo que se ha observado es que con los tres abordajes les puede ir bien a los pacientes. Después de ciertas semanas, los resultados se nivelan, y el que mejor sepa hacer tu doctor es el que se debería realizar. <br/> <br/>Si te interesa saber sobre reemplazo de cadera, opiniones o costos, puedes contactarme al: 664 976 3510 o escribirme a: pacientes@mongeortopedia.com";
   keywords =
@@ -56,7 +58,7 @@ if (procedimiento === "protesis-total-de-cadera") {
   title = "Protesis total de rodilla";
   duration = "PT0M51S";
 
-  background = "/Hernia%20discal%20cervical%20cirugia%20en%20Tijuana.png";
+  background = "/Hernia-discal-cervical-cirugia-en-Tijuana.png";
   content =
     "Te platico brevemente sobre la artroplastia total de rodilla o la prótesis total de rodilla. Es el único tratamiento que se considera curativo del desgaste, porque lo que se hace es que se quitan los elementos que crean la inflamación y precisamente el desgaste. En cuanto a la rodilla lo que hacemos en la cirugía es quitar el cartílago y parte del hueso para acomodar nuevos componentes que van a cumplir las funciones de lo que quitamos que normalmente es en el fémur, en la tibia y a veces en la patela que es el hueso chiquito que está enfrente de la rodilla. Como toda cirugía requiere una buena planeación, varios tipos de estudios para poder ver cuáles son los tipos de cortes, el tipo de alineación y el balanceo que se necesita hacer en la rodilla para que te quede estable.  <br/> <br/>Si tienes alguna duda o alguna pregunta no dudes en mandar mensaje o llamarnos para poderte resolverlo. ";
   keywords =
@@ -66,7 +68,7 @@ if (procedimiento === "protesis-total-de-cadera") {
   title = "Hernia de disco lumbar";
   duration = "PT1M27S";
 
-  background = "/protesis%20total%20de%20rodilla%20en%20Tijuana%20consulta.png";
+  background = "/protesis-total-de-rodilla-en-Tijuana-consulta.png";
   content =
     "Una causa común de dolor de espalda pueden ser las hernias de disco lumbares, pueden ser tanto del puro dolor de espalda o que están acompañados de ciatalgia, que es básicamente el dolor del ciático. Este tipo de dolor tiene dos elementos principales, uno mecánico y uno químico. El mecánico es el hecho de que la hernia está aplastando una estructura, que en este caso es la raíz nerviosa, y causa el dolor. El otro es el químico, es lo que la lesión o la hernia de disco empieza a secretar y esas sustancias que secreta empiezan a irritar todo lo que tiene alrededor, que normalmente es la raíz nerviosa. Para valorar las hernias necesitamos dos tipos de estudio. Uno son los rayos X, porque los rayos X, cuando sí vemos el hueso y no vemos la hernia, vemos otro tipo de lesiones que pudieran lastimarlas.   <br/> <br/>La raíz y la otra es la resonancia magnética donde vemos directamente los discos las raíces qué tan libres están y qué tan grande está la hernia o la lesión del disco la gran mayoría de las hernias de disco se tratan de manera conservadora como es esto terapia infiltraciones medicamentos y cuidados de la columna aproximadamente como el 60 o 70 por ciento de las hernias no se les va a hacer cirugía pero las demás que se portan mal que no les va a bien con el tratamiento conservador o que cumplen con ciertos criterios que ya la hacen quirúrgica de entrada pues son las que vamos a operar. Si tienes más preguntas sobre las hernias de disco te invito a mandar mensaje o a llamarnos para agendar tu cita. ";
   keywords =
@@ -77,7 +79,7 @@ if (procedimiento === "protesis-total-de-cadera") {
   duration = "PT1M07S";
 
   background =
-    "/Lesiones%20en%20ligamento%20cruzado%20anterior%20tratamiento%20conservador%20en%20Tijuana.png";
+    "/Lesiones-en-ligamento-cruzado-anterior-tratamiento-conservador-en-Tijuana.png";
   content =
     "Para que tu rodilla funcione de una manera adecuada depende de muchas estructuras que le van a brindar estabilidad. Entre tendones, ligamentos, la misma forma de los huesos, los meniscos, hay unas estructuras que se llaman ligamentos cruzados, uno anterior y uno posterior, o sea uno que va enfrente y uno que va atrás. El ligamento cruzado anterior es una de las estructuras más importante es que da más estabilidad a la rodilla. Le brinda casi un 80-85% de estabilidad como un estabilizador primario. Lo que ayuda el cruzado anterior es para que la tibia no se vaya hacia enfrente y no rote de más, por ponerlo así. Una ruptura de este ligamento lo que va a provocar es que hay inestabilidad en tu rodilla, lo cual va a hacer que se lastimen los meniscos y el cartílago y te va a provocar un desgaste temprano.   <br/> <br/>Cuando algunas personas sí pueden hacer un tratamiento conservador dependiendo de la lesión, la gran mayoría necesita una reconstrucción porque se necesita regresar esa función, ese ligamento para que esa rodilla siga estando estable y prevenir el desgaste temprano.  <br/> <br/>Si tienes alguna pregunta, alguna duda, no dudes en llamarnos o mandar mensaje para poderte resolver. ";
   keywords =
@@ -87,8 +89,7 @@ if (procedimiento === "protesis-total-de-cadera") {
   title = "Hernia discal cervical";
   duration = "PT1M11S";
 
-  background =
-    "/Hernia%20de%20disco%20lumbar%20cirugia%20y%20tratamiento%20en%20Tijuana.png";
+  background = "/Hernia-de-disco-lumbar-cirugia-y-tratamiento-en-Tijuana.png";
   content =
     "Cuando hablamos de dolor de cuello, algo relativamente común son las hernias de disco. Las hernias de disco son cuando hay una lesión en el disco intervertebral,  el cual sirve para protegernos de las cargas que pasan a través de la columna. Se hace el chichón o la hernia y va a aplastar una raíz nerviosa. Esa raíz nerviosa se encarga en todo el cuerpo de comunicarnos con el exterior. La hernia lo que va a hacer es aplastar una raíz nerviosa y esa raíz nerviosa va a responder con dolor, disminución de esfuerzo, disminución de la sensibilidad. Cuando la gran mayoría se puede tratar de una manera conservadora, con terapia, con analgésicos, con infiltraciones, algunos necesitan de cirugía. <br/> <br/>La cirugía básicamente consiste en quitar ese disfraz, y reemplazarlo por algo en este caso hay veces de que ponemos una caja que va a reemplazar ese espacio y se pone algo para proteger esa caja o en otros casos se puede poner una prótesis de disco, aunque es menos común en algunos pacientes pueden requerir ese tipo de cosas el objetivo es quitar el disco dañado y reemplazarlo por algo que pueda mantener el espacio y pueden estar libres las raíces. <br/> <br/>Si tienes alguna pregunta no dudes en mandar mensaje o llamarnos para responderte ";
   keywords =
@@ -98,12 +99,52 @@ if (procedimiento === "protesis-total-de-cadera") {
   title = "Lesiones en meniscos";
   duration = "PT0M58S";
 
-  background =
-    "/Lesiones%20en%20meniscos%20tratamiento%20conservador%20en%20Tijuana.png";
+  background = "/Lesiones-en-meniscos-tratamiento-conservador-en-Tijuana.png";
   content =
     "Les platico un poquito de lo que son los meniscos. Los meniscos son unas estructuras fibrocartilaginosas que están dentro de la rodilla. Son como empaques. Y lo que nos ayuda es establecer o ayudar un poquito con las fuerzas que pasan a través de la rodilla para proteger el cartílago. Una nos ayuda para esa estructura y para protegerla y la otra es de que también son estabilizadores muy importantes en la rodilla. Esas estructuras se pueden lastimar y cuando se lastiman los meniscos se necesitan valorar para ver si son aptos para repararlos o suturarlos de una manera especial y la otra es quitar la parte del menisco que no sirve. Pero esto depende de cada paciente, el tipo de lesión, ya que no todas se pueden reparar, pero la idea es tratar de reparar   <br/> <br/>para regresarle la función y que tu rodilla siga funcionando de una manera adecuada y prevenir el desgaste temprano. ¿Tienes alguna duda, alguna pregunta? No dudes en mandar mensaje o llamarnos. ";
   keywords =
     "traumatología en Tijuana, traumatólogo, lesiones en meniscos, cirugía de rodilla, ortopedia, Tijuana";
+} else if (procedimiento === "que-es-una-infiltracion") {
+  videoId = "4ExmTZNFOzA";
+  title = "¿Qué es una infiltración?";
+  duration = "PT3M30S"; // Puedes ajustar la duración exacta si lo deseas
+  background = "/que-es-una-infiltracion-por-el-doctor-monge.webp";
+  content = `Una infiltración es poner una sustancia o medicamento en un área en específico, normalmente la que escuchamos mucho es dentro de articulaciones, la rodilla, la cadera, la columna, pero en realidad se puede poner en todas las partes del cuerpo para ciertas cosas.<br/><br/>
+
+Infiltraciones con corticoides:<br/><br/>
+
+Una de ellas es el antiinflamatorio esteroideo que es la vieja confiable. Es un antiinflamatorio que básicamente todos los tipos de infiltraciones en las pruebas y en los estudios se tiene que comparar contra el esteroide antiinflamatorio y le tienen que ganar en cuanto efecto y cuanto tiempo, o que sea comparable para sea un poquito válido que el empezar a usarlo.<br/><br/>
+
+Es el más barato y el efecto es un poquito más rápido que los otros. Se pone con anestésico normalmente le damos unas dos semanas para ver el efecto completo. Lo que se fue, se fue, lo que se quedó se quedó y a partir de ahí vemos que tanto tiempo le va a durar. A muchos pacientes les dura mucho tiempo y les va muy bien que esto obviamente lo combinamos con otro tipo de cosas para que también agarre más por ejemplo: terapia física, medicamentos, etcétera o algunos pacientes no les va tan bien. Eso nos habla a veces de la gravedad o qué tanto está avanzado el problema y lamentablemente si no les va bien o no les dura mucho tiempo quiere decir que quizás haya necesidad de pensar en algunas otras cosas.<br/><br/>
+
+Infiltración con PRP:<br/><br/>
+
+El plasma rico en plaquetas es básicamente para ponerlo de una manera sencilla, es sacarle sangre al paciente se procesa o se centrifuga y se saca una parte de donde vinen las plaquetas y estas se reintroducen.<br/><br/>
+
+La idea de ponerlos otra vez, es lo que les digo a los pacientes, es lo más cercano a algo, natural, que va a tener el paciente para bajar inflamación y para bajar el dolor. No regenera , no hace magia, no va a hacer de nuevo cartílago o muchas de estas cosas que a veces se usa para pada vender la idea de ponerlo. si funciona muy bien cuando se hace bien, baja mucho la inflamación baja mucho el dolor y tiene algunas propiedades que pudiera ayudar también en la reparación de algunas cosas, pero no va a regenerar.<br/><br/>
+
+Se ha visto una tendencia que dura un poco más el plasma rico en plaquetas que el esteroide inflamatorio el único problema es de que se recomienda que sea 2 a 3 veces lo que se infiltra.<br/><br/>
+
+Los tiempos entre cada infiltración varía, pero la idea es de que si decide hacerlo que se haga bien y la otra es de el costo, es un poquito más elevado que el esteroide.<br/><br/>
+
+Infiltración con Ácido Hialurónico:<br/><br/>
+
+El ácido hialurónico es una sustancia que la rodilla o el cartílago crea por sí mismo. Ayuda un poquito con la lubricación y con la nutrición del cartílago y el impacto de fuerzas y el cómo se manejan todas las células en la biomecánica de la rodilla.<br/><br/>
+
+Es una sustancia que se pone que es como un tipo gel que básicamente va a sustituir el ácido hialurónico que ya no hay en la rodilla ayuda un poquito con la lubricación, ayuda un poquito con el volumen y ayuda un poquito para dar nutrición a ese cartílago. Hay unas presentaciones o yo en lo particular lo mezclo también con antiinflamatorio para tener un poquito de los dos mundos, pero se puede poner también por sí solo.<br/><br/>
+
+Muchas de las presentaciones vienen por tres dosis por separado o una que es una dosis completa de seis mililitros. La dosis por separado son dos mililitros cada una y se puede optar por poner cada cierto tiempo hasta completar las tres. Yo en lo particular a mí no me gusta aplicar al paciente tres veces, entonces se puede poner las tres es una misma sesión y va a tener el mismo efecto que haber comprado el que es un poquito más caro. Lo que se busca con esto también bajar inflamación bajar dolor.<br/><br/>
+
+Los tiempos son un poquito más debatibles que los otros dos, porque también depende mucho de la gravedad y sí esa rodilla es óptimo, el poder ponerle ácido hialurónico<br/><br/>
+
+¿Cuándo se pone? cuando hay desgaste, no por una lesión de meniscos o por un dolor X de la rodilla, se va a poner ácido hialurónico porque no es la indicación.<br/><br/>
+
+¿Cuándo se pone?<br/><br/>
+
+Dependiendo de lo que se está buscando hay que considerar siempre todos los pacientes la gravedad del desgaste si en realidad les conviene alguno de ese tipo de infiltraciones y pues obviamente los costos. La idea es disminuir el dolor, disminuir inflamación lo suficiente para que puedan hacer terapia física y sus actividades diarias sin molestias. Va a llegar un momento donde estas infiltraciones empiezan a fallar, no van a ser tan efectivas conforme vaya avanzando el problema del desgaste.`;
+
+  keywords =
+    "traumatología en Tijuana, infiltraciones, PRP, ácido hialurónico, corticoides, dolor articular, ortopedia, Tijuana";
 }
 
 const URL = Astro.url.pathname.startsWith("/en/");

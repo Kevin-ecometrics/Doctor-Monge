@@ -147,13 +147,21 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
         document.querySelector("#section8"),
         document.querySelector("#section9"),
       ].filter(Boolean) as HTMLElement[];
+      let heights: any[] = [];
+
+      function calculateHeights() {
+        heights = sections.map((section) => section.offsetHeight);
+      }
+
+      // Calcular al cargar y al redimensionar
+      window.addEventListener("load", calculateHeights);
+      window.addEventListener("resize", calculateHeights);
 
       if (mainElement && scrollBar instanceof HTMLElement) {
         mainElement.addEventListener("scroll", function () {
-          const heights = sections.map((section) => section.offsetHeight);
           const scrollPosition = mainElement.scrollTop;
-
           let accumulatedHeight = 0;
+
           for (let i = 0; i < sections.length; i++) {
             accumulatedHeight += heights[i];
             if (scrollPosition < accumulatedHeight) {

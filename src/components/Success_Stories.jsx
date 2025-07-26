@@ -87,6 +87,14 @@ const SuccessStories = ({ URL }) => {
         "/Lesiones-en-meniscos-tratamiento-conservador-en-Tijuana.png",
       link: "/procedimientos/lesiones-en-meniscos/",
     },
+    {
+      title: "¿Qué es una",
+      title2: "infiltración?",
+      subtitle:
+        "En este procedimiento te explico cómo una infiltración puede ayudarte a aliviar el dolor y la inflamación aplicando el medicamento directamente en la zona afectada.",
+      background: "/que-es-una-infiltracion-por-el-doctor-monge.webp",
+      link: "/procedimientos/que-es-una-infiltracion/",
+    },
   ];
 
   const content_en = [
@@ -141,6 +149,14 @@ const SuccessStories = ({ URL }) => {
         "/Lesiones-en-meniscos-tratamiento-conservador-en-Tijuana.png",
       link: "/en/procedures/meniscus-injuries/",
     },
+    {
+      title: "What is an",
+      title2: "infiltration?",
+      subtitle:
+        "In this procedure, I explain how an infiltration can help you relieve pain and inflammation by applying the medication directly to the affected area.",
+      background: "/que-es-una-infiltracion-por-el-doctor-monge.webp",
+      link: "/en/procedures/what-is-an-infiltration/",
+    },
   ];
 
   function incrementIndex() {
@@ -193,17 +209,22 @@ const SuccessStories = ({ URL }) => {
           initial={{ scale: 1.25 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          style={{
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundImage: `url(${
+          className="absolute inset-0 overflow-hidden" // asegura que el <img> no salga del contenedor
+        >
+          <img
+            src={
               URL
                 ? content_en[currentIndex].background
                 : content_es[currentIndex].background
-            })`,
-          }}
-          className="absolute inset-0"
-        />
+            }
+            alt="Fondo destacado"
+            loading="eager" // carga inmediata
+            decoding="async" // libera hilo principal
+            fetchPriority="high" // prioridad alta para LCP
+            className="w-full h-full object-cover" // rellena el contenedor
+          />
+        </motion.div>
+
         <motion.div
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
