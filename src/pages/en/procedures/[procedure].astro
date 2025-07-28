@@ -18,7 +18,7 @@ export function getStaticPaths() {
     { params: { procedure: "acl-injury" } },
     { params: { procedure: "cervical-disc-herniation" } },
     { params: { procedure: "meniscus-injuries" } },
-    { params: { procedure: "what-is-an-infiltration" } },
+    { params: { procedure: "articular-infiltrations" } },
   ];
 }
 
@@ -29,7 +29,7 @@ const procedure = [
   { nombre: "ACL injury", ruta: "acl-injury" },
   { nombre: "Cervical disc herniation", ruta: "cervical-disc-herniation" },
   { nombre: "Meniscus injuries", ruta: "meniscus-injuries" },
-  { nombre: "What is an infiltration", ruta: "what-is-an-infiltration" },
+  { nombre: "Articular infiltrations", ruta: "articular-infiltrations" },
 ];
 const { procedure: procedureParam } = Astro.params;
 const otrosProcedimientos = procedure.filter((p) => p.ruta !== procedureParam);
@@ -102,11 +102,11 @@ if (procedureParam === "total-hip-prosthesis") {
     "Let me tell you a little bit about the menisci. The menisci are fibrocartilaginous structures that are inside the knee. They are like gaskets. And what they help us is to establish or help a little bit with the forces that pass through the knee to protect the cartilage. One helps us for that structure and to protect it and the other is that they are also very important stabilizers in the knee. These structures can be injured and when the menisci are injured, they need to be evaluated to see if they are apt to be repaired or sutured in a special way, and the other is to remove the part of the meniscus that is not useful. But this depends on each patient, the type of injury, since not all can be repaired, but the idea is to try to repair to return the function and that your knee continues to function properly and prevent early wear. Do you have any questions? Do not hesitate to send us a message or call us. ";
   keywords =
     "traumatology, traumatologist, meniscus injuries, knee treatment, orthopedic surgery, Tijuana";
-} else if (procedureParam === "what-is-an-infiltration") {
+} else if (procedureParam === "articular-infiltrations") {
   videoId = "4ExmTZNFOzA";
   title = "What is infiltration therapy?";
   duration = "PT3M30S";
-  background = "/que-es-una-infiltracion-por-el-doctor-monge.webp";
+  background = "/infiltracion-articular-por-el-doctor-monge.webp";
   content = `An infiltration is the injection of a substance or medication into a specific area. Normally, the ones we hear about most are inside joints — the knee, the hip, the spine — but in reality, it can be done in all parts of the body for certain purposes.<br/><br/>
 
 Infiltrations with corticosteroids:<br/><br/>

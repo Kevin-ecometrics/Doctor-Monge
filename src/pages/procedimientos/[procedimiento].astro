@@ -18,7 +18,7 @@ export function getStaticPaths() {
     { params: { procedimiento: "lesion-por-lca" } },
     { params: { procedimiento: "hernia-discal-cervical" } },
     { params: { procedimiento: "lesiones-en-meniscos" } },
-    { params: { procedimiento: "que-es-una-infiltracion" } },
+    { params: { procedimiento: "infiltraciones-articular" } },
   ];
 }
 
@@ -30,7 +30,7 @@ const procedimientos = [
   { nombre: "Lesion por LCA", ruta: "lesion-por-lca" },
   { nombre: "Hernia discal cervical", ruta: "hernia-discal-cervical" },
   { nombre: "Lesiones en meniscos", ruta: "lesiones-en-meniscos" },
-  { nombre: "¿Qué es una infiltración?", ruta: "que-es-una-infiltracion" },
+  { nombre: "Infiltracion articular", ruta: "infiltraciones-articular" },
 ];
 
 const otrosProcedimientos = procedimientos.filter(
@@ -104,11 +104,11 @@ if (procedimiento === "protesis-total-de-cadera") {
     "Les platico un poquito de lo que son los meniscos. Los meniscos son unas estructuras fibrocartilaginosas que están dentro de la rodilla. Son como empaques. Y lo que nos ayuda es establecer o ayudar un poquito con las fuerzas que pasan a través de la rodilla para proteger el cartílago. Una nos ayuda para esa estructura y para protegerla y la otra es de que también son estabilizadores muy importantes en la rodilla. Esas estructuras se pueden lastimar y cuando se lastiman los meniscos se necesitan valorar para ver si son aptos para repararlos o suturarlos de una manera especial y la otra es quitar la parte del menisco que no sirve. Pero esto depende de cada paciente, el tipo de lesión, ya que no todas se pueden reparar, pero la idea es tratar de reparar   <br/> <br/>para regresarle la función y que tu rodilla siga funcionando de una manera adecuada y prevenir el desgaste temprano. ¿Tienes alguna duda, alguna pregunta? No dudes en mandar mensaje o llamarnos. ";
   keywords =
     "traumatología en Tijuana, traumatólogo, lesiones en meniscos, cirugía de rodilla, ortopedia, Tijuana";
-} else if (procedimiento === "que-es-una-infiltracion") {
+} else if (procedimiento === "infiltraciones-articular") {
   videoId = "4ExmTZNFOzA";
   title = "¿Qué es una infiltración?";
   duration = "PT3M30S"; // Puedes ajustar la duración exacta si lo deseas
-  background = "/que-es-una-infiltracion-por-el-doctor-monge.webp";
+  background = "/infiltracion-articular-por-el-doctor-monge.webp";
   content = `Una infiltración es poner una sustancia o medicamento en un área en específico, normalmente la que escuchamos mucho es dentro de articulaciones, la rodilla, la cadera, la columna, pero en realidad se puede poner en todas las partes del cuerpo para ciertas cosas.<br/><br/>
 
 Infiltraciones con corticoides:<br/><br/>

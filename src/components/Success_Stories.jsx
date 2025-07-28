@@ -88,12 +88,12 @@ const SuccessStories = ({ URL }) => {
       link: "/procedimientos/lesiones-en-meniscos/",
     },
     {
-      title: "¿Qué es una",
-      title2: "infiltración?",
+      title: "Infiltraciones ",
+      title2: "articulares",
       subtitle:
-        "En este procedimiento te explico cómo una infiltración puede ayudarte a aliviar el dolor y la inflamación aplicando el medicamento directamente en la zona afectada.",
-      background: "/que-es-una-infiltracion-por-el-doctor-monge.webp",
-      link: "/procedimientos/que-es-una-infiltracion/",
+        "Las infiltraciones son un tratamiento conservador que consiste en inyectar una sustancia o medicamento en la zona afectada para aliviar el dolor e inflamación articular, te invito a conocer más en mi videoblog.",
+      background: "/infiltracion-articular-por-el-doctor-monge.webp",
+      link: "/procedimientos/infiltraciones-articular/",
     },
   ];
 
@@ -150,12 +150,12 @@ const SuccessStories = ({ URL }) => {
       link: "/en/procedures/meniscus-injuries/",
     },
     {
-      title: "What is an",
-      title2: "infiltration?",
+      title: "Infiltrations ",
+      title2: "articular",
       subtitle:
-        "In this procedure, I explain how an infiltration can help you relieve pain and inflammation by applying the medication directly to the affected area.",
-      background: "/que-es-una-infiltracion-por-el-doctor-monge.webp",
-      link: "/en/procedures/what-is-an-infiltration/",
+        "Infiltrations are a conservative treatment that involves injecting a substance or medication into the affected area to relieve joint pain and inflammation, I invite you to learn more in my videoblog.",
+      background: "/infiltracion-articular-por-el-doctor-monge.webp",
+      link: "/en/procedures/articular-infiltrations/",
     },
   ];
 
