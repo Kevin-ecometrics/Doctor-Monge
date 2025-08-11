@@ -109,6 +109,11 @@ export function getStaticPaths() {
         blog: "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
       },
     },
+    {
+      params: {
+        blog: "desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
+      },
+    },
   ];
 }
 
@@ -386,6 +391,17 @@ const blogs = [
     keywords: "enfermedades de la columna, salud vertebral, tratamiento",
     id: 22,
   },
+  {
+    titulo: "desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
+    ruta: "/blogs/desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
+    blogTitle: "Desquilibrio hormonal y tu salud ósea: cómo influyen",
+    date: "Agosto 2025",
+    title: "Desequilibrio hormonal y dolor en huesos y articulaciones",
+    description:
+      "El Dr. Ricardo Monge te explica todo sobre hormonas y como afectan tu sistema musculoesquelético. Entiende la causa de tu malestar y encuentra soluciones",
+    keywords: "desbalance hormonal, hormonas y dolor de huesos, traumatólogo ",
+    id: 23,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -568,6 +584,13 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
     (content = "Blog22"),
     (blogTitle =
       "Dolor de espalda: El ABC de tu columna y las enfermedades que la afectan.");
+} else if (blog === "desquilibrio-hormonal-y-tu-salud-osea-como-influyen") {
+  (image =
+    "/Desequilibrio Hormonal  y Articulaciones Dr Ricardo Monge R traumatologia y Ortopedia en Tijuana.webp"),
+    (date = "Agosto 2025"),
+    (content = "Blog23"),
+    (blogTitle =
+      "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?");
 } else {
   image = "/fondoDefault.png";
 }

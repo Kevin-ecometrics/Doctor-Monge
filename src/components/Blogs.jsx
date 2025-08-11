@@ -194,6 +194,14 @@ function Blogs({ URL }) {
         "Te invito a conocer Todo sobre el dolor de espalda, síntomas y tratamientos. Diferenciando entre una espondilosis, espondilitis, espondilólisis y espondilolistesis. Aunque suenan parecidos, describen patologías distintas",
       link: "/blogs/dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
     },
+    {
+      img: "/Desequilibrio Hormonal y Dolor en Huesos y Articulaciones Dr Ricardo Monge R traumatologia y Ortopedia en Tijuana.webp",
+      fecha: "Agosto",
+      titulo: "Desequilibrio hormonal y dolor en huesos y articulaciones",
+      texto:
+        "¿Sabías que tus hormonas son clave para mantener huesos fuertes, músculos saludables y articulaciones en óptimas condiciones? En este blog descubrirás cuáles son las hormonas más importantes, qué sucede cuando se desequilibran y cómo impactan tu bienestar.",
+      link: "/blogs/desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
+    },
   ];
 
   const blogItem_en = [
@@ -376,6 +384,14 @@ function Blogs({ URL }) {
       texto:
         "I invite you to learn all about back pain, symptoms and treatments. Differentiating between spondylosis, spondylitis, spondylolisthesis and spondylolisthesis. Although they sound similar, they describe different pathologies.",
       link: "/en/blogs/back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis",
+    },
+    {
+      img: "/Desequilibrio Hormonal y Dolor en Huesos y Articulaciones Dr Ricardo Monge R traumatologia y Ortopedia en Tijuana.webp",
+      fecha: "August",
+      titulo: "Hormonal imbalance and pain in bones and joints",
+      texto:
+        "Did you know that your hormones are key to maintaining strong bones, healthy muscles, and optimal joint function? In this blog, you will discover which hormones are most important, what happens when they become imbalanced, and how they affect your well-being.",
+      link: "/en/blogs/hormonal-imbalance-and-your-bone-health-how-they-influence",
     },
   ];
 

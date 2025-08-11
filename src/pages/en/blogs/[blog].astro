@@ -109,6 +109,11 @@ export function getStaticPaths() {
         blog: "back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis",
       },
     },
+    {
+      params: {
+        blog: "hormonal-imbalance-and-your-bone-health-how-they-influence",
+      },
+    },
   ];
 }
 
@@ -375,6 +380,17 @@ const blogs = [
     keywords: "spine diseases, spine treatment, spine symptoms",
     id: 22,
   },
+  {
+    titulo: "hormonal-imbalance-and-your-bone-health-how-they-influence",
+    ruta: "/en/blogs/hormonal-imbalance-and-your-bone-health-how-they-influence",
+    blogTitle: "Hormonal Imbalance and Your Bone Health: How They Influence",
+    date: "August 2025",
+    title: "Hormonal Imbalance and Your Bone Health: How They Influence",
+    description:
+      "Learn about the hormonal imbalance and its influence on your bone health. Discover how hormones affect your body and how to maintain a healthy balance.",
+    keywords: "hormonal imbalance, bone health, hormones",
+    id: 23,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -547,6 +563,14 @@ if (blog === "anterior-cruciate-ligament-injury") {
     (content = "Blog22"),
     (blogTitle =
       "Back pain: The ABC of your spine and the diseases that affect it.");
+} else if (
+  blog === "hormonal-imbalance-and-your-bone-health-how-they-influence"
+) {
+  (image =
+    "/Desequilibrio Hormonal  y Articulaciones Dr Ricardo Monge R traumatologia y Ortopedia en Tijuana.webp"),
+    (date = "August 2025"),
+    (content = "Blog23"),
+    (blogTitle = "Hormonal Imbalance and Your Bone Health: How They Influence");
 } else {
   image = "/fondoDefault.png";
 }

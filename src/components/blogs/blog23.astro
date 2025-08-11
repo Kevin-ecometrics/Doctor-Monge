@@ -1,0 +1,400 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/Dolor en Huesos y Articulaciones Dr Ricardo Monge R traumatologia y Ortopedia en Tijuana.webp";
+import Image2 from "@public/Dolor en Huesos y Articulaciones Dr Ricardo Monge R traumatologia y Ortopedia.webp";
+import Image3 from "@public/Dr-Monge-Consejos-para-Acelerar-la-Curacion-de-Huesos.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+  {
+    blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+  },
+  {
+    blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+  },
+  {
+    blog: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+  },
+  {
+    blog: "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+  },
+  {
+    blog: "desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
+  },
+];
+
+const blogActual = "desquilibrio-hormonal-y-tu-salud-osea-como-influyen";
+
+const id = 23;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "Today I want to talk about a crucial topic that is often underestimated: the influence of hormones on bone, joint and muscle pain.<br/><br/>As a trauma specialist in musculoskeletal injuries and pathologies here in Tijuana, I see patients daily in my office seeking relief for these problems. It's essential to understand how hormonal imbalance can be an underlying factor in the chronic pain they experience."
+        : "Hoy quiero hablarles sobre un tema crucial que a menudo se subestima: la influencia de las hormonas en el dolor de huesos, articulaciones y músculos.<br/><br/>Como traumatólogo especialista en lesiones y patologías musculoesqueléticas aquí en Tijuana, recibo a diario en mi consultorio pacientes que buscan alivio para estos problemas. Es fundamental entender cómo el desequilibrio hormonal puede ser un factor subyacente en el dolor crónico que experimentan."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Endocrine System" : "Sistema endocrino"}
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "The endocrine system is composed of a network of glands that create and release hormones, including the pituitary gland, adrenal glands, thyroid, pancreas and ovaries among others."
+        : "El sistema endocrino está compuesto una red de glándulas que crean y liberan hormonas, esta conformado por la glándula pituitaria, glándulas suprarrenales, la tiroides, el páncreas y los ovarios por mencionar algunas."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Hormonal Imbalance and Metabolic Disorders"
+          : "Desequilibrio hormonal y trastorno metabólicos"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `When the body produces too little or too much hormone or has problems receiving or processing them, a domino effect occurs. A hormonal imbalance can trigger a metabolic disorder, altering the body's normal functioning.<br/><br/>
+        Some conditions related to hormonal imbalance and metabolic disorders include:<br/><br/>
+        <strong class='text-white'>Diabetes</strong><br/>
+        <strong class='text-white'>Metabolic syndrome</strong><br/>
+        <strong class='text-white'>Tumors</strong><br/>
+        <strong class='text-white'>Thyroid cancer</strong><br/>
+        <strong class='text-white'>Hyperthyroidism and hypothyroidism</strong><br/>
+        <strong class='text-white'>Thyroid nodules</strong><br/>
+        <strong class='text-white'>Amenorrhea (absence of periods)</strong><br/>
+        <strong class='text-white'>Hormonal acne</strong><br/>
+        <strong class='text-white'>Infertility</strong><br/>
+        <strong class='text-white'>Hypogonadism</strong><br/>
+        <strong class='text-white'>Menopause disorders</strong><br/>
+        <strong class='text-white'>Polycystic ovary syndrome</strong><br/>
+        <strong class='text-white'>Premenstrual syndrome</strong><br/>
+        <strong class='text-white'>Hypercalcemia and hypocalcemia</strong><br/>
+        <strong class='text-white'>Osteopenia and osteoporosis</strong><br/>
+        <strong class='text-white'>Vitamin D deficiency</strong>`
+        : `Cuando el cuerpo produce muy poca o demasiada hormona o tiene problemas para recibirlas o procesarlas, se genera un efecto dominó. Un desequilibrio hormonal puede desencadenar un trastorno metabólico, alterando el funcionamiento normal del cuerpo.<br/><br/>
+        Algunas afecciones relacionadas con el desequilibrio hormonal y los trastornos metabólicos incluyen:<br/><br/>
+        <strong class='text-white'>Diabetes</strong><br/>
+        <strong class='text-white'>síndrome metabólico</strong><br/>
+        <strong class='text-white'>Tumores</strong><br/>
+        <strong class='text-white'>Cáncer de tiroides</strong><br/>
+        <strong class='text-white'>hipertiroidismo e hipotiroidismo</strong><br/>
+        <strong class='text-white'>Nódulos tiroideos</strong><br/>
+        <strong class='text-white'>Amenorrea (ausencia de periodos)</strong><br/>
+        <strong class='text-white'>Acné hormonal</strong><br/>
+        <strong class='text-white'>Infertilidad</strong><br/>
+        <strong class='text-white'>Hipogonadismo</strong><br/>
+        <strong class='text-white'>Trastornos de la menopausia</strong><br/>
+        <strong class='text-white'>Síndrome de ovario poliquístico</strong><br/>
+        <strong class='text-white'>Síndrome premenstrual</strong><br/>
+        <strong class='text-white'>Hipercalcemia e hipocalcemia</strong><br/>
+        <strong class='text-white'>Osteopenia y osteoporosis</strong><br/>
+        <strong class='text-white'>Deficiencia de vitamina D</strong>`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Which hormones are related to bones?"
+          : "¿Qué hormonas están relacionadas con los huesos?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Here are the crucial hormones for your bone health:<br/><br/>
+        <strong class='text-white'>1,25-dihydroxyvitamin D:</strong> Calcium-regulating hormone, produced from vitamin D, necessary for calcium absorption.<br/><br/>
+        <strong class='text-white'>Calcitonin:</strong> Protects against excessive calcium levels in the blood.<br/><br/>
+        <strong class='text-white'>Sex hormones:</strong> Estrogen is a key regulator of bone remodeling in women and men, acting on cells that form and resorb. Testosterone is important for bone growth and is also a source of estrogen in the body.<br/><br/>
+        <strong class='text-white'>Growth hormones:</strong> Growth hormone and its production of insulin-like growth factor (IGF-1) influence bone formation.<br/><br/>
+        <strong class='text-white'>Thyroid hormones:</strong> Necessary for skeletal maturation and influence the maintenance of adult bones.<br/><br/>
+        <strong class='text-white'>Cortisol:</strong> Large amounts of this adrenal hormone block bone growth.<br/><br/>
+        <strong class='text-white'>Insulin:</strong> Important for bone growth, regulates both bone formation and resorption.<br/><br/>
+        <strong class='text-white'>Leptin:</strong> This circulating hormone has direct and indirect influences on bone metabolism.`
+        : `A continuación, te explico las hormonas cruciales para tu salud ósea:<br/><br/>
+        <strong class='text-white'>1,25-dihidroxivitamina D:</strong> Hormona reguladora del calcio, producida a partir de la vitamina D, es necesaria para la absorción del calcio.<br/><br/>
+        <strong class='text-white'>Calcitonina:</strong> Protege contra los niveles excesivos de calcio en la sangre.<br/><br/>
+        <strong class='text-white'>Hormonas sexuales:</strong> El estrógeno es un regulador clave de la remodelación ósea en mujeres y hombres, actúa sobre las células que forman y reabsorben. La testosterona es importante para el crecimiento óseo y también es una fuente de estrógeno en el cuerpo.<br/><br/>
+        <strong class='text-white'>Hormonas del crecimiento:</strong> La hormona del crecimiento y su producción del factor de crecimiento similar a la insulina (IGF-1) influyen en la formación ósea.<br/><br/>
+        <strong class='text-white'>Hormonas tiroideas:</strong> Necesarias para la maduración esquelética e influyen en el mantenimiento de los huesos adultos.<br/><br/>
+        <strong class='text-white'>Cortisol:</strong> Grandes cantidades de esta hormona suprarrenal bloquean el crecimiento óseo.<br/><br/>
+        <strong class='text-white'>Insulina:</strong> Importante para el crecimiento óseo, regula tanto la formación como la resorción ósea.<br/><br/>
+        <strong class='text-white'>Leptina:</strong> Esta hormona circulante tiene influencias directas e indirectas sobre el metabolismo óseo.`}
+    />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish
+          ? "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?"
+          : "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?"}
+        title={isEnglish
+          ? "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?"
+          : "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-6 font-bold text-white">
+      {
+        isEnglish
+          ? "How endocrine diseases cause pain in bones, joints and muscles"
+          : "¿Cómo las enfermedades endocrinas provocan dolor en huesos, articulaciones y músculos?"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `<strong class='text-white text-2xl'>Imbalances in calcium and phosphorus metabolism:</strong><br/><br/>
+        <strong class='text-white'>Hyperparathyroidism:</strong> Excess parathyroid hormone (PTH) raises calcium levels in the blood by extracting it from bones. This weakens bones (osteopenia, osteoporosis) and can cause diffuse bone pain, fractures and kidney stones. Joint pain is also common.<br/><br/>
+        <strong class='text-white'>Hypoparathyroidism:</strong> PTH deficiency causes low calcium and high phosphorus levels in the blood. This can lead to painful muscle spasms (tetany) and, long-term, calcium deposits in soft tissues, including joints, causing pain.<br/><br/>
+        <strong class='text-white'>Vitamin D deficiency:</strong> Vitamin D is essential for calcium absorption. Its deficiency (osteomalacia in adults and rickets in children) causes soft, weak bones, resulting in generalized bone pain, muscle weakness and deformities.<br/><br/>
+        <strong class='text-white text-2xl'>Thyroid hormone alterations:</strong><br/><br/>
+        <strong class='text-white'>Hypothyroidism (underactive thyroid):</strong> Low thyroid hormone production can lead to several musculoskeletal problems:<br/>
+        - Hypothyroid myopathy: Weakness, stiffness, cramps and diffuse muscle pain.<br/>
+        - Joint pain: Stiffness and pain in joints, especially hands and knees, often with swelling.<br/>
+        - Carpal tunnel syndrome: Nerve compression in the wrist, causing pain, numbness and tingling in the hand.<br/><br/>
+        <strong class='text-white'>Hyperthyroidism (overactive thyroid):</strong> Excess thyroid hormones can also affect muscles and bones:<br/>
+        - Osteoporosis: Accelerates bone remodeling, which can lead to bone density loss and increased fracture risk.<br/>
+        - Muscle weakness: Weakness in proximal muscles (shoulders and hips).`
+        : `<strong class='text-white text-2xl'>Desequilibrios en el metabolismo del calcio y el fósforo:</strong><br/><br/>
+        <strong class='text-white'>Hiperparatiroidismo:</strong> El exceso de hormona paratiroidea (PTH) eleva los niveles de calcio en la sangre al extraerlo de los huesos. Esto debilita los huesos (osteopenia, osteoporosis) y puede causar dolor óseo difuso, fracturas y cálculos renales. El dolor articular también es común.<br/><br/>
+        <strong class='text-white'>Hipoparatiroidismo:</strong> La deficiencia de PTH provoca niveles bajos de calcio en la sangre y altos de fósforo. Esto puede llevar a espasmos musculares dolorosos (tetania) y, a largo plazo, a depósitos de calcio en los tejidos blandos, incluyendo las articulaciones, causando dolor.<br/><br/>
+        <strong class='text-white'>Deficiencia de Vitamina D:</strong> La vitamina D es esencial para la absorción de calcio. Su deficiencia (osteomalacia en adultos y raquitismo en niños) provoca huesos blandos y débiles, lo que resulta en dolor óseo generalizado, debilidad muscular y deformidades.<br/><br/>
+        <strong class='text-white text-2xl'>Alteraciones en las hormonas tiroideas:</strong><br/><br/>
+        <strong class='text-white'>Hipotiroidismo (tiroides hipoactiva):</strong> La baja producción de hormonas tiroideas puede llevar a varios problemas musculoesqueléticos:<br/>
+        - Miopatía hipotiroidea: Debilidad, rigidez, calambres y dolores musculares difusos.<br/>
+        - Dolor articular: Rigidez y dolor en las articulaciones, especialmente en manos y rodillas, a menudo con hinchazón.<br/>
+        - Síndrome del túnel carpiano: Compresión del nervio en la muñeca, causando dolor, entumecimiento y hormigueo en la mano.<br/><br/>
+        <strong class='text-white'>Hipertiroidismo (tiroides hiperactiva):</strong> El exceso de hormonas tiroideas también puede afectar los músculos y huesos:<br/>
+        - Osteoporosis: Acelera la remodelación ósea, lo que puede llevar a una pérdida de densidad ósea y mayor riesgo de fracturas.<br/>
+        - Debilidad muscular: Debilidad en los músculos proximales (hombros y caderas).`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-6 font-bold text-white">
+      {
+        isEnglish
+          ? "Osteoporosis due to hormonal imbalance"
+          : "Osteoporosis por desequilibrio hormonal"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Osteoporosis is responsible for a large number of fractures, especially of the hip, spine and wrists, which frequently cause severe disability.<br/><br/>
+        This condition usually occurs in postmenopausal women, although it can also affect patients with estrogen deficiency and those receiving corticosteroid treatment.<br/><br/>
+        A 2017 Australian study on the "Prevalence of osteoporosis and age-related fragility fractures" revealed that osteoporosis risks in women increase progressively: from 45-49 years there is a 3.3% risk, increasing to 50% around 85 years.<br/><br/>
+        <strong class='text-white text-2xl'>Accelerated bone loss after menopause: Type 1 primary osteoporosis</strong><br/><br/>
+        In the first 5 to 7 years after menopause, reduced estrogen causes faster bone mass loss.<br/><br/>
+        Why does this happen?<br/><br/>
+        An imbalance is created between bone resorption and production at both estrogen and estradiol levels, which drops by 10-15% and estrone by 35%. This causes the calcium that is normally well "stored" in bones to begin releasing into the blood. To prevent too much calcium accumulation, the body increases its elimination through urine, absorbs less calcium from food and adjusts the production of certain hormones related to its management.<br/><br/>
+        Afterwards, the rate of loss slows down, entering a phase known as type II osteoporosis.<br/><br/>
+        In general, endocrine diseases alter the body's delicate metabolic and regulatory balance. When this balance is compromised, bones can become fragile, muscles can weaken or experience cramps, and joints can become inflamed or wear out, resulting in pain and decreased function.`
+        : `La osteoporosis es responsable de un gran número de fracturas, especialmente de cadera, columna vertebral y muñecas, que con frecuencia causan una discapacidad severa.<br/><br/>
+        Esta afección suele presentarse en mujeres posmenopáusicas, aunque también puede afectar a pacientes con deficiencia de estrógenos y a quienes reciben tratamiento con corticoides.<br/><br/>
+        Un estudio australiano de 2017 sobre la "Prevalencia de la osteoporosis y las fracturas por fragilidad relacionadas con la edad" reveló que los riesgos de osteoporosis en mujeres aumentan progresivamente: a partir de los 45-49 años hay un 3.3% de riesgo, incrementándose al 50% alrededor de los 85 años.<br/><br/>
+        <strong class='text-white text-2xl'>La pérdida ósea acelerada después de la menopausia: Osteoporosis primaria tipo 1</strong><br/><br/>
+        En los primeros 5 a 7 años después de la menopausia, la reducción de estrógenos provoca una pérdida de masa ósea más rápida.<br/><br/>
+        ¿Por qué pasa?<br/><br/>
+        Se crea un desequilibrio entre la reabsorción y la producción ósea en niveles tanto de estrógenos como de estradiol que cae un 10-15% y los de estrona un 35% esto provoca que el calcio que normalmente está bien "guardado" en los huesos se comienza a liberar hacia la sangre, el cuerpo para evitar que el calcio se acumule demasiado, aumenta su eliminación por la orina, absorbe menos calcio de los alimentos y ajusta la producción de ciertas hormonas relacionadas con su manejo.<br/><br/>
+        Después, el ritmo de pérdida se vuelve más lento, entrando en una fase que se le conoce como osteoporosis tipo ll.<br/><br/>
+        En general, las enfermedades endocrinas alteran el delicado equilibrio metabólico y regulador del cuerpo. Cuando este equilibrio se ve comprometido, los huesos pueden volverse frágiles, los músculos pueden debilitarse o experimentar calambres, y las articulaciones pueden inflamarse o desgastarse, lo que se traduce en dolor y disminución de la función.`}
+    />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish
+          ? "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?"
+          : "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?"}
+        title={isEnglish
+          ? "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?"
+          : "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h2 class="text-3xl mb-6 font-bold text-white">
+      {
+        isEnglish
+          ? "How to maintain hormonal balance and protect your bone health"
+          : "Cómo mantener el equilibrio hormonal y proteger tu salud ósea"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Maintaining hormonal balance can be challenging, but it's key to your overall well-being and to preserving bone strength.<br/><br/>
+        <strong class='text-white text-2xl'>Get annual medical checkups</strong><br/><br/>
+        Even without obvious symptoms, annual checkups allow us to prevent. Some basic studies your doctor may request include:<br/>
+        - Complete blood count: Evaluates blood cells.<br/>
+        - Blood chemistry: Analyzes elements in blood serum.<br/>
+        - Urine test.<br/><br/>
+        Depending on results, your doctor may refer you to specialists (traumatologist, endocrinologist, gynecologist) or indicate a multidisciplinary approach.<br/><br/>
+        Some hormonal imbalance symptoms include:<br/>
+        - Changes or absence of menstruation.<br/>
+        - Fatigue.<br/>
+        - Skin changes (dryness, darkening on neck or armpits, acne).<br/>
+        - Joint or bone pain due to tissue edema, mainly affecting feet, ankles and legs, which over time can generate more complex orthopedic problems.<br/><br/>
+        <strong class='text-white text-2xl'>Balanced and specialized eating plan</strong><br/><br/>
+        Diet directly influences hormone production and bone health. Try to include:<br/>
+        - <strong class='text-white'>Healthy Fats:</strong> For hormone production like fish, chia nuts and seeds. Coconut oil and avocado are also excellent omega-3 sources.<br/>
+        - <strong class='text-white'>Quality Proteins:</strong> Opt for chicken, fish, eggs and legumes essential for tissue repair and growth.<br/>
+        - <strong class='text-white'>Fiber and Vegetables:</strong> Fiber helps eliminate excess hormones from the body.<br/>
+        - <strong class='text-white'>Antioxidants:</strong> Protect from oxidative stress that can affect hormonal balance. Berries, citrus, green tea and vegetables are excellent sources.<br/>
+        - <strong class='text-white'>Regular Meal Schedule:</strong> Avoid skipping meals and try to include protein in each one to maintain stable blood sugar.<br/>
+        - <strong class='text-white'>Adequate Hydration:</strong> Drink enough water. Limit sugary drinks and caffeine, as they can interfere with your hormones.<br/><br/>
+        <strong class='text-white text-2xl'>Exercise and physical activity</strong><br/><br/>
+        Movement is your best ally against bone loss. Try to combine:<br/>
+        - Brisk walks of at least 30 minutes.<br/>
+        - Strength exercises to maintain muscle and bone mass.<br/>
+        - Low-impact activities like swimming or yoga.<br/>
+        Doing physical activity 3 to 5 days a week will make a big difference.<br/><br/>
+        <strong class='text-white text-2xl'>Stress regulation</strong><br/><br/>
+        Stress, particularly cortisol release, can alter your hormones. To combat it, incorporate deep breathing exercises, have a support network you can talk to, prioritize quality sleep so your body has enough time to recover.<br/><br/>
+        Although at first glance bones and hormones may seem unrelated, they actually work intrinsically together. The body is an orchestra, hormones are the conductors guiding the symphony ensuring balance between bone tissue formation and resorption.<br/><br/>
+        An imbalance, no matter how small, can have significant repercussions, manifesting in conditions like osteoporosis, joint and muscle pain, and even increased susceptibility to fractures. Therefore, understanding the influence of key hormones like estrogen, vitamin D, calcitonin and cortisol is fundamental for prevention and management of these conditions.<br/><br/>
+        Prioritizing regular checkups, adopting a balanced diet, maintaining a consistent exercise routine and managing stress not only contributes to overall hormonal balance, but is also a crucial investment in the strength and health of our musculoskeletal system that allows us to move with integrity and independence.<br/><br/>
+        <strong class='text-white'>If you're interested in scheduling a consultation with me, it will be a pleasure to be part of your process. I'm located in Tijuana, Baja California in Torre Norte 2.</strong><br/>
+        You can send me a message from this page and I'll respond promptly, or call me directly to schedule your appointment.`
+        : `Mantener el equilibrio hormonal puede ser un reto, pero es clave para tu bienestar general y para conservar la fortaleza de tus huesos.<br/><br/>
+        <strong class='text-white text-2xl'>Realiza chequeos médicos anuales</strong><br/><br/>
+        Aunque no tengas síntomas evidentes, las revisiones anuales nos permiten prevenir. Algunos estudios básicos que tu médico puede solicitar son:<br/>
+        - Biometría hemática: Evalúa las células de la sangre.<br/>
+        - Química sanguínea: Analiza los elementos en el suero sanguíneo.<br/>
+        - Examen de orina.<br/><br/>
+        Según los resultados, tu médico podría referirte a especialistas (traumatólogo, endocrinólogo, ginecólogo) o indicar un abordaje multidisciplinario.<br/><br/>
+        Algunos síntomas de desequilibrio hormonal incluyen:<br/>
+        - Cambios o ausencia de menstruación.<br/>
+        - Fatiga.<br/>
+        - Cambios en la piel (resequedad, oscurecimiento en cuello o axilas, acné).<br/>
+        - Dolor en articulaciones o huesos debido a edema tisular, afectando principalmente pies, tobillos y piernas, lo que con el tiempo puede generar problemas ortopédicos más complejos.<br/><br/>
+        <strong class='text-white text-2xl'>Plan de alimentación balanceado y especializado</strong><br/><br/>
+        La dieta influye directamente en la producción de hormonas y en la salud de tus huesos.Trata de incluir:<br/>
+        - <strong class='text-white'>Grasas Saludables:</strong> para la producción de hormonas. como pescados, nueces y semillas de chía. El aceite de coco y el aguacate también son excelentes fuentes en omega-3.<br/>
+        - <strong class='text-white'>Proteínas de Calidad:</strong> Opta por pollo, pescado, huevos y legumbres esenciales para la reparación y crecimiento de tejidos.<br/>
+        - <strong class='text-white'>Fibra y Verduras:</strong> La fibra ayuda a eliminar el exceso de hormonas del cuerpo.<br/>
+        - <strong class='text-white'>Antioxidantes:</strong> Protegen del estrés oxidativo que puede afectar el equilibrio hormonal. Los frutos rojos, cítricos, té verde y vegetales son excelentes fuentes.<br/>
+        - <strong class='text-white'>Horario Regular de Comidas:</strong> evita saltarte comidas y procura incluir proteína en cada una para mantener estable el azúcar en sangre.<br/>
+        - <strong class='text-white'>Hidratación Adecuada:</strong> Bebe suficiente agua. Limita el consumo de bebidas azucaradas y cafeína, ya que pueden interferir con tus hormonas.<br/><br/>
+        <strong class='text-white text-2xl'>Ejercicio y actividad física</strong><br/><br/>
+        El movimiento es tu mejor aliado contra la pérdida ósea. Procura combinar:<br/>
+        - Caminatas rápidas de al menos 30 minutos.<br/>
+        - Ejercicios de fuerza para mantener la masa muscular y ósea.<br/>
+        - Actividades de bajo impacto como natación o yoga.<br/>
+        Realizar actividad física de 3 a 5 días por semana marcará una gran diferencia.<br/><br/>
+        <strong class='text-white text-2xl'>Regular el estrés</strong><br/><br/>
+        El estrés, particularmente la liberación de cortisol puede alterar tus hormonas. Para combatirlo, incorpora ejercicios de respiración profunda, ten una red de apoyo co quien puedas platicar, prioriza un sueño de calidad para que tu cuerpo tenga tiempo suficiente para recuperarse.<br/><br/>
+        Aunque parezcan a simple vista que los huesos y las hormonas no tienen relación, en realidad trabajan intrínsecamente, el cuerpo es una orquesta, las hormonas son los directores que guían la sinfonía asegurando el equilibrio entre la formación y la reabsorción de tejido óseo.<br/><br/>
+        Un desequilibrio, por pequeño que sea, puede tener repercusiones significativas, manifestándose en condiciones como la osteoporosis, el dolor articular y muscular, e incluso en una mayor susceptibilidad a fracturas. Por ello, comprender la influencia de hormonas clave como el estrógeno, la vitamina D, la calcitonina y el cortisol es fundamental para la prevención y el manejo de estas afecciones.<br/><br/>
+        Priorizar chequeos regulares, adoptar una dieta equilibrada, mantener una rutina de ejercicio constante y gestionar el estrés no solo contribuye al equilibrio hormonal general, sino que también es una inversión crucial en la fortaleza y salud de nuestro sistema musculoesquelético que nos permiten movernos con integridad e independencia.<br/><br/>
+        <strong class='text-white'>Si te interesa agendar consulta conmigo, será un placer poder formar parte de tu proceso, me encuentro en Tijuana Baja california en Torre norte 2.</strong><br/>
+        Puedes enviarme un mensaje desde esta página y te responderé a la brevedad, o bien llamarme directamente para agendar tu cita.`}
+    />
+  </Observer>
+
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis"
+      : "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis"}
+    PreviousName={isEnglish
+      ? "Diseases of the Spine: Causes, Symptoms and Treatment"
+      : "Dolor de espalda: diferencias entre espondilosis, espondilitis, espondilolisis y espondilolistesis"}
+  />
+</article>
