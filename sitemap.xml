@@ -12,6 +12,13 @@
         <priority>1.0</priority>
     </url>
 
+        <url>
+        <loc>https://mongeortopedia.com/blogs/desquilibrio-hormonal-y-tu-salud-osea-como-influyen/</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>    
+    </url>
+
     <url>
         <loc>https://mongeortopedia.com/blogs/dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis/</loc>
         <lastmod>2025-07-21</lastmod>
@@ -252,6 +259,13 @@
         <priority>1.0</priority>
     </url>
 
+    <url>
+        <loc>https://mongeortopedia.com/en/blogs/hormonal-imbalance-and-your-bone-health-how-they-influence/</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>    
+    </url>
+
         <url>
         <loc>https://mongeortopedia.com/en/blogs/back-pain-differences-between-spondylosis-spondylitis-spondylolysis-and-spondylolisthesis/</loc>
         <lastmod>2025-07-21</lastmod>
@@ -343,7 +357,7 @@
         <priority>0.8</priority>
 </url>
 <url>
-    <loc>https://mongeortopedia.com/en/blogs/knee-pain-arthroscopy-to-treat-joint-wear             
+    <loc>https://mongeortopedia.com/en/blogs/knee-pain-arthroscopy-to-treat-joint-wear</loc> 
     <lastmod>2025-04-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
