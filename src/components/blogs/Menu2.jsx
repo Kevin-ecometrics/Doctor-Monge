@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 
 const blogsURL = [
   {
+    id: 0,
+    url: "/blogs/artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad/",
+  },
+  {
     id: 1,
     url: "/blogs/desquilibrio-hormonal-y-tu-salud-osea-como-influyen/",
   },
@@ -87,6 +91,10 @@ const blogsURL = [
 ];
 
 const blogsURLEN = [
+  {
+    id: 0,
+    url: "/en/blogs/elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility/",
+  },
   {
     id: 1,
     url: "/en/blogs/hormonal-imbalance-and-your-bone-health-how-they-influence/",

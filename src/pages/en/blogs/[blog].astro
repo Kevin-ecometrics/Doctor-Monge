@@ -114,6 +114,11 @@ export function getStaticPaths() {
         blog: "hormonal-imbalance-and-your-bone-health-how-they-influence",
       },
     },
+    {
+      params: {
+        blog: "elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility",
+      },
+    },
   ];
 }
 
@@ -391,6 +396,21 @@ const blogs = [
     keywords: "hormonal imbalance, bone health, hormones",
     id: 23,
   },
+  {
+    titulo:
+      "elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility",
+    ruta: "/en/blogs/elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility",
+    blogTitle:
+      "Elbow Arthroscopy: The Minimally Invasive Technique That Relieves Pain and Restores Mobility",
+    date: "September 2025",
+    title:
+      "Elbow Arthroscopy: The Minimally Invasive Technique That Relieves Pain and Restores Mobility",
+    description:
+      "Does your elbow hurt or is it difficult to move? Dr. Ricardo Monge shows you how minimally invasive surgery can restore your mobility and eliminate pain.",
+    keywords:
+      "elbow arthroscopy, minimally invasive technique, elbow treatment",
+    id: 24,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -571,6 +591,16 @@ if (blog === "anterior-cruciate-ligament-injury") {
     (date = "August 2025"),
     (content = "Blog23"),
     (blogTitle = "Hormonal Imbalance and Your Bone Health: How They Influence");
+} else if (
+  blog ===
+  "elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility"
+) {
+  (image =
+    "/Artroscopia de Codo Dr Ricardo Monge traumatologia y Ortopedia en Tijuana.webp"),
+    (date = "September 2025"),
+    (content = "Blog24"),
+    (blogTitle =
+      "Arthroscopy: the definitive solution to cure elbow pain and regain mobility, a minimally invasive procedure with great results");
 } else {
   image = "/fondoDefault.png";
 }

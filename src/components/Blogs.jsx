@@ -202,6 +202,14 @@ function Blogs({ URL }) {
         "¿Sabías que tus hormonas son clave para mantener huesos fuertes, músculos saludables y articulaciones en óptimas condiciones? En este blog descubrirás cuáles son las hormonas más importantes, qué sucede cuando se desequilibran y cómo impactan tu bienestar.",
       link: "/blogs/desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
     },
+    {
+      img: "/Artroscopia de Codo Dr Ricardo Monge R traumatologia.webp",
+      fecha: "Septiembre",
+      titulo: "Artroscopia de codo con el mejor traumatólogo en Tijuana",
+      texto:
+        "¿Eres atleta de alto rendimiento o sufres de un dolor en el codo que limita tu movilidad? En este blog te comparto todo sobre la artroscopia de codo, una técnica mínimamente invasiva que alivia el dolor y devuelve tu movilidad",
+      link: "/blogs/artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
+    },
   ];
 
   const blogItem_en = [
@@ -392,6 +400,14 @@ function Blogs({ URL }) {
       texto:
         "Did you know that your hormones are key to maintaining strong bones, healthy muscles, and optimal joint function? In this blog, you will discover which hormones are most important, what happens when they become imbalanced, and how they affect your well-being.",
       link: "/en/blogs/hormonal-imbalance-and-your-bone-health-how-they-influence",
+    },
+    {
+      img: "/Artroscopia de Codo Dr Ricardo Monge R traumatologia.webp",
+      fecha: "September",
+      titulo: "Elbow arthroscopy with the best orthopedic surgeon in Tijuana",
+      texto:
+        "Are you a high-performance athlete or do you suffer from elbow pain that limits your mobility? In this blog, I share everything you need to know about elbow arthroscopy, a minimally invasive technique that relieves pain and restores mobility.",
+      link: "/en/blogs/elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility",
     },
   ];
 

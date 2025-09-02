@@ -12,7 +12,14 @@
         <priority>1.0</priority>
     </url>
 
-        <url>
+    <url>
+        <loc>https://mongeortopedia.com/blogs/artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad/</loc>
+        <lastmod>2025-09-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>    
+    </url>    
+
+    <url>
         <loc>https://mongeortopedia.com/blogs/desquilibrio-hormonal-y-tu-salud-osea-como-influyen/</loc>
         <lastmod>2025-08-11</lastmod>
         <changefreq>weekly</changefreq>
@@ -259,6 +266,13 @@
         <priority>1.0</priority>
     </url>
 
+    <url>
+        <loc>https://mongeortopedia.com/en/blogs/    elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility
+/</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>    
+    </url>
     <url>
         <loc>https://mongeortopedia.com/en/blogs/hormonal-imbalance-and-your-bone-health-how-they-influence/</loc>
         <lastmod>2025-08-11</lastmod>

@@ -1,0 +1,408 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/Artroscopia de Codo Dr Ricardo Monge traumatologia.webp";
+import Image2 from "@public/Artroscopia de Codo Dr Ricardo Monge R traumatologia y Ortopedia en Tijuana Partes del Codo.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+  {
+    blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+  },
+  {
+    blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+  },
+  {
+    blog: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+  },
+  {
+    blog: "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+  },
+  {
+    blog: "desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
+  },
+  {
+    blog: "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
+  },
+];
+
+const blogActual =
+  "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad";
+
+const id = 24;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "Hello, I'm Dr. Ricardo Monge, an orthopedic surgeon specializing in joint injuries in Tijuana, and today I want to talk to you about a procedure that, although practiced for decades, remains one of the most advanced options for treating various elbow conditions: "
+        : "Hola soy el Dr. Ricardo Monge traumatólogo especialista en lesiones articulares en Tijuana y hoy quiero hablarles de un procedimiento que, aunque se practica desde hace décadas, sigue siendo una de las opciones más avanzadas para tratar diversas afecciones del codo:  "}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Arthroscopy" : "La artroscopia"}
+    </h3>
+    <h4
+      class="text-xl mb-4"
+      set:html={isEnglish
+        ? "This minimally invasive method allows us to address complex joint problems with much more comfortable recovery for the patient."
+        : "Este método mínimamente invasivo nos permite abordar problemas complejos de la articulación con una recuperación mucho más cómoda para el paciente."}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "Before understanding arthroscopy, it is important to know how this joint is formed."
+        : "Antes de comprender la artroscopia, es importante conocer cómo está conformada esta articulación "}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Elbow Anatomy: Understanding one of the body's most complex joints"
+          : "Anatomía del codo: Entendiendo una de las articulaciones más complejas del cuerpo"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Humerus: arm bone.<br/><br/>
+        Radius: forearm bone on the thumb side.<br/><br/>
+        Ulna: forearm bone on the pinky side.<br/><br/>
+        The surfaces of these bones are covered by articular cartilage, a smooth and slippery layer that cushions impacts and allows bones to glide without friction. Additionally, a thin layer of tissue called synovial membrane produces a lubricating fluid that keeps the joint in optimal conditions. The collateral ligaments on the sides provide stability, preventing dislocations.<br/><br/>
+        Inside the elbow we can also find important nerves that control the hand and forearm, making it a delicate area.`
+        : `Húmero: hueso del brazo.<br/><br/>
+        Radio: hueso del antebrazo en el lado del pulgar.<br/><br/>
+        Cúbito: hueso del antebrazo en el lado del meñique.<br/><br/>
+        Las superficies de estos huesos están recubiertas por el cartílago articular, una capa lisa y resbaladiza que amortigua los impactos y permite que los huesos se deslicen sin fricción. Además, una delgada capa de tejido llamada membrana sinovial produce un líquido lubricante que mantiene la articulación en óptimas condiciones. Los ligamentos colaterales a los lados le dan estabilidad, evitando dislocaciones.<br/><br/>
+        Dentro del codo también podemos encontrar nervios importantes que controlan la mano y el antebrazo lo que los convierte en una zona delicada.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Signs your elbow may be giving"
+          : "Señales que tu codo puede dar"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `<strong class='text-white'>Stiffness or loss of arm mobility</strong><br/><br/>
+        <strong class='text-white'>Pain when using the elbow for actions like throwing or stretching</strong><br/><br/>
+        <strong class='text-white'>Swelling usually accompanied by pain</strong><br/><br/>
+        <strong class='text-white'>Visible changes and deformities</strong><br/><br/>
+        <strong class='text-white'>Decreased strength in the arm or elbow</strong><br/><br/>
+        <strong class='text-white'>Pain when closing the fist</strong><br/><br/>
+        <strong class='text-white'>Tingling and numbness in the elbow, hands, wrist and arms</strong>`
+        : `<strong class='text-white'>Rigidez o pérdida de la movilidad del brazo</strong><br/><br/>
+        <strong class='text-white'>Dolor al utilizar el codo para acciones como lanzamientos o estiramientos</strong><br/><br/>
+        <strong class='text-white'>Inflamación usualmente acompañada de dolor</strong><br/><br/>
+        <strong class='text-white'>Cambios y deformidades visibles</strong><br/><br/>
+        <strong class='text-white'>Disminución de la fuerza del brazo o del codo</strong><br/><br/>
+        <strong class='text-white'>Dolor al cerrar el puño</strong><br/><br/>
+        <strong class='text-white'>Hormigueo y entumecimiento en el codo, las manos, la muñeca y los brazos</strong>`}
+    />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish
+          ? "Diagram showing elbow anatomy and arthroscopy procedure"
+          : "Diagrama que muestra la anatomía del codo y el procedimiento de artroscopia"}
+        title={isEnglish
+          ? "Elbow Anatomy and Arthroscopy Procedure"
+          : "Anatomía del Codo y Procedimiento de Artroscopia"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "When is elbow arthroscopy recommended?"
+          : "¿Cuándo se recomienda una artroscopia de codo?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `It is the last option when conservative treatment does not work or the condition is significantly affecting mobility and generating a lot of pain.<br/><br/>
+        It is also recommended to treat:<br/><br/>
+        <strong class='text-white'>Tennis elbow (lateral epicondylitis):</strong> when the damage caused by small tears and repetitive stress is persistent.<br/><br/>
+        <strong class='text-white'>Osteoarthritis and rheumatoid arthritis:</strong> Helps improve movement and clean the joint.<br/><br/>
+        <strong class='text-white'>Removal of foreign bodies:</strong> The most common reason for this type of surgery. Small fragments of cartilage or bone can break off and cause pain or blockage in movement.<br/><br/>
+        <strong class='text-white'>Release of scar tissue and bone spurs:</strong> Ideal for patients with elbow stiffness, who cannot bend or stretch the arm completely.<br/><br/>
+        <strong class='text-white'>Osteochondritis dissecans:</strong> A condition that affects young athletes, where a fragment of cartilage separates from the bone.`
+        : `Es la última opción cuando el tratamiento conservador no funciona o la afección está afectando significativamente la movilidad y genera mucho dolor.<br/><br/>
+        También se recomienda para tratar:<br/><br/>
+        <strong class='text-white'>Codo de tenista (epicondilitis lateral):</strong> cuando el daño generado por los pequeños desgarres y estrés repetitivo es persistente.<br/><br/>
+        <strong class='text-white'>Osteoartritis y artritis reumatoide:</strong> Ayuda a mejorar el movimiento y a limpiar la articulación.<br/><br/>
+        <strong class='text-white'>Extracción de cuerpos extraños:</strong> La causa más común para este tipo de cirugía. Pequeños fragmentos de cartílago o hueso pueden desprenderse y causar dolor o bloqueo en el movimiento.<br/><br/>
+        <strong class='text-white'>Liberación de tejido cicatricial y espolones óseos:</strong> Ideal para pacientes con rigidez en el codo, que no pueden doblar o estirar completamente el brazo.<br/><br/>
+        <strong class='text-white'>Osteocondritis disecante:</strong> Una afección que afecta a atletas jóvenes, donde un fragmento de cartílago se separa del hueso.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Arthroscopy: What to expect?"
+          : "Artroscopia: ¿Qué esperar?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Elbow arthroscopy is an outpatient procedure performed through small incisions.<br/><br/>
+        <strong class='text-white'>Preparation:</strong> You will be administered anesthesia and the area will be prepared.<br/><br/>
+        <strong class='text-white'>Visualization:</strong> fluid will be injected into the joint to expand it, giving a clearer workspace. Then, the arthroscope, a very small camera, is inserted through an incision. The images are projected on a screen, allowing us to see inside the elbow in great detail.<br/><br/>
+        <strong class='text-white'>Treatment:</strong> Through other small incisions, specialized instruments are inserted to perform the necessary treatment, such as scraping, cutting or removing damaged fragments. We can even use special sutures and anchors to repair tissues.<br/><br/>
+        <strong class='text-white'>Completion:</strong> Once the procedure is completed, the instruments are removed and the incisions are closed with one or two stitches.`
+        : `La artroscopia de codo es un procedimiento ambulatorio que se realiza a través de pequeñas incisiones.<br/><br/>
+        <strong class='text-white'>Preparación:</strong> Se le administrará anestesia y se preparará el área.<br/><br/>
+        <strong class='text-white'>Visualización:</strong> se te inyectara líquido en la articulación para expandirla, lo que le da un espacio de trabajo más claro. Luego, se inserta el artroscopio, una cámara muy pequeña, a través de una incisión. Las imágenes se proyectan en una pantalla, permitiéndonos ver el interior del codo con gran detalle.<br/><br/>
+        <strong class='text-white'>Tratamiento:</strong> A través de otras incisiones pequeñas, se insertan instrumentos especializados para realizar el tratamiento necesario, como raspar, cortar o retirar fragmentos dañados. Podemos incluso usar suturas y anclajes especiales para reparar tejidos.<br/><br/>
+        <strong class='text-white'>Finalización:</strong> Una vez completado el procedimiento, se retiran los instrumentos y las incisiones se cierran con uno o dos puntos.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Benefits compared to open surgery"
+          : "Beneficios frente a la cirugía abierta"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `<strong class='text-white'>Smaller incision size and scars</strong><br/><br/>
+        <strong class='text-white'>Lower risk of infection</strong><br/><br/>
+        <strong class='text-white'>Less pain and inflammation in the postoperative period</strong><br/><br/>
+        <strong class='text-white'>Faster recovery to return to work or sports</strong>`
+        : `<strong class='text-white'>Menor tamaño de incisiones y cicatrices</strong><br/><br/>
+        <strong class='text-white'>Menor riesgo de infección</strong><br/><br/>
+        <strong class='text-white'>Menos dolor e inflamación en el postoperatorio</strong><br/><br/>
+        <strong class='text-white'>Recuperación más rápida para volver al trabajo o al deporte</strong>`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Recovery after arthroscopy"
+          : "Recuperación tras una artroscopia"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Rehabilitation plays an important role so you can resume your daily activities. For this, your physical therapist and I will work together to personalize a treatment plan and exercises to recover movement and strength in the elbow and forearm.<br/><br/>
+        It is important to have support from a family member, friend or caregiver a few days after surgery since your joint requires special care the first few days.<br/><br/>
+        It is normal to experience swelling, discomfort and pain in the operated elbow area. It is important to take the indicated medication and eat properly to facilitate a more optimal recovery for your body. It is also recommended to apply ice with an ice bag. Ice should be applied for periods of 20 to 30 minutes separated by one hour during the first weeks.`
+        : `La rehabilitación desempeña un papel importante para que puedas retomar sus actividades cotidianas. Para ello tu fisioterapeuta y yo trabajaremos de la mano para personalizar un plan de tratamiento y ejercicios para recuperar el movimiento la fuerza del codo y el antebrazo.<br/><br/>
+        Es importante contar con apoyo de algún familiar, amigo o cuidador, unos días después de la cirugía ya que tu articulación requiere de cuidados especiales los primeros días.<br/><br/>
+        Es normal experimentar inflamación, discomfort y dolor en el área del codo operada. Es importante tomar la medicación señalada y comer adecuadamente para facilitar a tu cuerpo una recuperación más optima, también se recomienda aplicar hielo con una bolsa de hielo. El hielo debe aplicarse por periodos de 20 a 30 minutos separados por una hora. Durante las primeras semanas.`}
+    />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish
+          ? "Patient recovery after elbow arthroscopy with physical therapy"
+          : "Paciente en recuperación después de artroscopia de codo con terapia física"}
+        title={isEnglish
+          ? "Postoperative Recovery and Rehabilitation after Elbow Arthroscopy"
+          : "Recuperación Postoperatoria y Rehabilitación después de Artroscopia de Codo"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "What you should and shouldn't do at home after elbow arthroscopy"
+          : "Lo que sí y lo que no debes hacer en casa tras una artroscopia de codo"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `<strong class='text-white text-2xl'>Recommended actions:</strong><br/><br/>
+        <strong class='text-white'>Adequate rest:</strong> Quality sleep is essential. It is recommended to sleep in a semi-sitting position, using pillows that provide support and keep the elbow in a stable and safe posture.<br/><br/>
+        <strong class='text-white'>Indicated exercises:</strong> It is important to punctually comply with the arm and elbow mobility exercises prescribed by the specialist. Additionally, gently moving the fingers helps prevent stiffness and improve circulation.<br/><br/>
+        <strong class='text-white'>Light physical activity:</strong> Walking gradually promotes blood flow, which contributes to better recovery.<br/><br/>
+        <strong class='text-white text-2xl'>Actions to avoid:</strong><br/><br/>
+        <strong class='text-white'>Lifting heavy objects</strong> like water jugs, grocery bags or backpacks, as they can compromise the joint.<br/><br/>
+        <strong class='text-white'>Performing repetitive movements</strong> with the operated arm, as they delay healing and increase the risk of pain or inflammation.<br/><br/>
+        <strong class='text-white'>Taking tub baths or submerging the arm,</strong> as it increases the risk of infection in the surgical area.`
+        : `<strong class='text-white text-2xl'>Acciones recomendadas:</strong><br/><br/>
+        <strong class='text-white'>Descanso adecuado:</strong> El sueño de calidad es esencial. Se recomienda dormir en posición semi-sentada, utilizando almohadas que brinden soporte y mantengan el codo en una postura estable y segura.<br/><br/>
+        <strong class='text-white'>Ejercicios indicados:</strong> Es importante cumplir de manera puntual con los ejercicios de movilidad del brazo y del codo prescritos por el especialista. Además, mover los dedos con suavidad ayuda a prevenir la rigidez y mejorar la circulación.<br/><br/>
+        <strong class='text-white'>Actividad física ligera:</strong> Caminar de forma gradual favorece el flujo sanguíneo, lo cual contribuye a una mejor recuperación.<br/><br/>
+        <strong class='text-white text-2xl'>Acciones que debes evitar:</strong><br/><br/>
+        <strong class='text-white'>Levantar objetos pesados</strong> como garrafones de agua, bolsas de despensa o mochilas, ya que pueden comprometer la articulación.<br/><br/>
+        <strong class='text-white'>Realizar movimientos repetitivos</strong> con el brazo operado, pues retrasan la cicatrización y aumentan el riesgo de dolor o inflamación.<br/><br/>
+        <strong class='text-white'>Tomar baños de tina o sumergir el brazo,</strong> debido a que incrementa el riesgo de infección en la zona quirúrgica.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Return to daily activities after elbow arthroscopy"
+          : "Regreso a las actividades diarias después de la artroscopia de codo"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `The return to daily activities is usually one of the main concerns after surgery. However, it is essential not to rush recovery or compare it with that of other people, since each organism responds differently. The time and rehabilitation plan will depend on the type of approach performed and should always be evaluated together with your physical therapist.<br/><br/>
+        The body is wise and has its own healing rhythm and it is necessary to listen to it and give it that push it requires to reintegrate into normality, be patient. Little by little, it's about respecting recovery times. Only then will you be able to enjoy a version of yourself without pain or discomfort, achieving a full and safe recovery.`
+        : `El retorno a las actividades cotidianas suele ser una de las principales inquietudes después de una cirugía. However, es fundamental no apresurar la recuperación ni compararla con la de otras personas, ya que cada organismo responde de manera diferente. El tiempo y el plan de rehabilitación dependerán del tipo de abordaje realizado y siempre deben ser evaluados junto con tu fisioterapeuta.<br/><br/>
+        El cuerpo es sabio y tiene su propio ritmo de sanación y es necesario escucharlo y darle ese empujón que requiere para que se reincorpore a la normalidad, se paciente. Poco a poquito, se trata de ir respetando los tiempos de recuperación. Solo así podrás disfrutar de una versión de ti mismo sin dolor ni molestias, alcanzando una recuperación plena y segura.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Reincorporation to sport" : "Reincorporación al deporte"}
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `In the case of high-performance athletes, the return to sports activity must be gradual and carefully supervised. Some recommendations include:<br/><br/>
+        <strong class='text-white'>Perform a prolonged warm-up</strong> before each session.<br/><br/>
+        <strong class='text-white'>Pay attention to technique</strong> in all movements to avoid overloading the joint.<br/><br/>
+        <strong class='text-white'>Do not exceed the time or intensity</strong> of training in the initial phases.<br/><br/>
+        <strong class='text-white'>Gradually increase the workload,</strong> as recovery allows.<br/><br/>
+        Following these indications is key to preventing relapses and achieving a safe and successful return.`
+        : `En el caso de los atletas de alto rendimiento, el retorno a la actividad deportiva debe ser gradual y cuidadosamente supervisado. Algunas recomendaciones incluyen:<br/><br/>
+        <strong class='text-white'>Realizar un calentamiento prolongado</strong> antes de cada sesión.<br/><br/>
+        <strong class='text-white'>Prestar atención a la técnica</strong> en todos los movimientos para evitar sobrecargar la articulación.<br/><br/>
+        <strong class='text-white'>No exceder el tiempo ni la intensidad</strong> del entrenamiento en las primeras fases.<br/><br/>
+        <strong class='text-white'>Aumentar progresivamente la carga de trabajo,</strong> conforme lo permita la recuperación.<br/><br/>
+        Seguir estas indicaciones es clave para prevenir recaídas y lograr un regreso seguro y exitoso.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `If you want to know more about elbow arthroscopy or are looking for a second opinion for your pain—whether you are a high-performance athlete or facing a limitation that has not improved with conservative treatment—I invite you to a consultation.<br/><br/>
+        I am located in Tijuana, at Torre Norte 2, a few minutes from the border line, and we accept various medical insurances.<br/><br/>
+        As a specialist in joint injuries, it will be a pleasure to support you in your recovery process so you can regain your mobility, well-being and independence.<br/><br/>
+        Trust your traumatologist in Tijuana for the management of your elbow pain. I am here to help you.`
+        : `Si deseas conocer más sobre la artroscopia de codo o buscas una segunda opinión para tu dolor —ya seas atleta de alto rendimiento o enfrentes una limitación que no ha mejorado con tratamiento conservador— te invito a una consulta de valoración.<br/><br/>
+        Me encuentro en Tijuana, en Torre Norte 2, a pocos minutos de la línea fronteriza, y aceptamos diversos seguros médicos.<br/><br/>
+        Como especialista en lesiones articulares, será un placer apoyarte en tu proceso de recuperación para que retomes tu movilidad, bienestar e independencia.<br/><br/>
+        Confía en tu traumatólogo en Tijuana para el manejo de tu dolor de codo. Estoy aquí para ayudarte.`}
+    />
+  </Observer>
+
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "hormonal-imbalance-and-your-bone-health-how-they-influence"
+      : "desquilibrio-hormonal-y-tu-salud-osea-como-influyen"}
+    PreviousName={isEnglish
+      ? "Hormonal Imbalance and Your Bone Health: How They Influence"
+      : "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo Influyen?"}
+  />
+</article>

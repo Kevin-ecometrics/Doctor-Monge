@@ -114,6 +114,11 @@ export function getStaticPaths() {
         blog: "desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
       },
     },
+    {
+      params: {
+        blog: "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
+      },
+    },
   ];
 }
 
@@ -402,6 +407,21 @@ const blogs = [
     keywords: "desbalance hormonal, hormonas y dolor de huesos, traumatólogo ",
     id: 23,
   },
+  {
+    titulo:
+      "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
+    ruta: "/blogs/artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
+    blogTitle:
+      "Artroscopia de codo: la técnica mínimamente invasiva que alivia el dolor y devuelve tu movilidad",
+    date: "Septiembre 2025",
+    title:
+      "Artroscopia de codo: la técnica mínimamente invasiva que alivia el dolor y devuelve tu movilidad",
+    description:
+      "¿Te duele el codo o te cuesta moverlo? El Dr. Ricardo Monge,  te muestra cómo la cirugía mínimamente invasiva recupera tu movilidad y elimina dolor.",
+    keywords:
+      "artroscopia de codo, técnica mínimamente invasiva, tratamiento de codo",
+    id: 24,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -591,6 +611,16 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
     (content = "Blog23"),
     (blogTitle =
       "Desequilibrio Hormonal y tu Salud Ósea: ¿Cómo las Enfermedades Endocrinas Provocan Dolor en Huesos, Articulaciones y Músculos?");
+} else if (
+  blog ===
+  "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad"
+) {
+  (image =
+    "/Artroscopia de Codo Dr Ricardo Monge traumatologia y Ortopedia en Tijuana.webp"),
+    (date = "Septiembre 2025"),
+    (content = "Blog24"),
+    (blogTitle =
+      "Artroscopia la solución definitiva para curar el dolor del codo y recuperar tu movilidad, procedimiento mínimamente invasivo con grandes resultados ");
 } else {
   image = "/fondoDefault.png";
 }
