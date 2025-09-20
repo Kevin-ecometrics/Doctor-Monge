@@ -1,0 +1,12 @@
+---
+import LayoutBlog from "@layouts/LayoutTermino.astro";
+import Booking from "@components/appointment/booking";
+---
+
+<LayoutBlog
+  title="Agendar Cita"
+  description="Agenda cita con el Dr. Ricardo Monge, especialista en traumatología en Tijuana."
+  keywords="Agendar cita, Dr. Ricardo Monge, traumatología, Tijuana"
+>
+  <Booking client:visible />
+</LayoutBlog>
