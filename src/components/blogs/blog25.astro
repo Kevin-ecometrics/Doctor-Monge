@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
-import Image1 from "@public/Artroscopia de Codo Dr Ricardo Monge traumatologia.webp";
-import Image2 from "@public/Artroscopia de Codo Dr Ricardo Monge R traumatologia y Ortopedia en Tijuana Partes del Codo.webp";
+import Image1 from "@public/Ricardo Monge explica lo que es una luxacion en el hombro.webp";
+import Image2 from "@public/Dr Monge explica lo que es una reduccion cerrada.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
 import Footer from "./Footer.astro";
@@ -133,6 +133,20 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     />
   </Observer>
 
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish
+          ? "Diagram showing elbow anatomy and arthroscopy procedure"
+          : "Diagrama que muestra la anatomía del codo y el procedimiento de artroscopia"}
+        title={isEnglish
+          ? "Elbow Anatomy and Arthroscopy Procedure"
+          : "Anatomía del Codo y Procedimiento de Artroscopia"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
   <Observer client:visible>
     <h3 class="text-2xl mb-6 font-semibold text-white">
       {
@@ -300,6 +314,21 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
       <strong class='text-white'>Lesión neurológica:</strong> A veces los nervios se estiran, se lesionan o se aplastan cuando se luxa una articulación. Un traumatismo directo puede contundir o aplastar un nervio. Un aplastamiento provoca una lesión más importante que una contusión y pueden necesitar una reparación quirúrgica.`}
     />
   </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish
+          ? "Diagram showing elbow anatomy and arthroscopy procedure"
+          : "Diagrama que muestra la anatomía del codo y el procedimiento de artroscopia"}
+        title={isEnglish
+          ? "Elbow Anatomy and Arthroscopy Procedure"
+          : "Anatomía del Codo y Procedimiento de Artroscopia"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
 
   <Observer client:visible>
     <h3 class="text-2xl mb-6 font-semibold text-white">

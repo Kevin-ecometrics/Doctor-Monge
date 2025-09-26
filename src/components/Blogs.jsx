@@ -211,7 +211,7 @@ function Blogs({ URL }) {
       link: "/blogs/artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
     },
     {
-      img: "/Artroscopia de Codo Dr Ricardo Monge R traumatologia.webp",
+      img: "/Ricardo monge explica sobre que es la luxacion.webp",
       fecha: "Septiembre",
       titulo: "¿Luxación? Tipos, complicaciones, tratamiento y rehabilitación",
       texto:
@@ -418,7 +418,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility",
     },
     {
-      img: "/Artroscopia de Codo Dr Ricardo Monge R traumatologia.webp",
+      img: "/Ricardo monge explica sobre que es la luxacion.webp",
       fecha: "September",
       titulo:
         "Dislocation? Types, complications, treatment, and rehabilitation",
