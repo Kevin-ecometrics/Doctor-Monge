@@ -1,0 +1,402 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/Artroscopia de Codo Dr Ricardo Monge traumatologia.webp";
+import Image2 from "@public/Artroscopia de Codo Dr Ricardo Monge R traumatologia y Ortopedia en Tijuana Partes del Codo.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+  {
+    blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+  },
+  {
+    blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+  },
+  {
+    blog: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+  },
+  {
+    blog: "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+  },
+  {
+    blog: "desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
+  },
+  {
+    blog: "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
+  },
+  {
+    blog: "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
+  },
+];
+
+const blogActual =
+  "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion";
+
+const id = 25;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "You've probably seen videos where someone suffers a shoulder or elbow dislocation and then a healthcare professional 'pops it back' into place. This procedure is the reduction of a dislocation, a serious injury that I'd like to explain as an orthopedic surgeon in Tijuana. My goal is to clearly explain what they are, their symptoms, how they're treated, and most importantly, when they constitute a medical emergency."
+        : "Seguramente has visto videos donde alguien sufre una dislocación de hombro o codo y luego un profesional de la salud lo 'acomoda' de vuelta su lugar. Este procedimiento es la reducción de una luxación, una lesión seria que hoy me gustaría explicar como traumatólogo en Tijuana, mi objetivo es explicarte de manera clara qué son, cuáles son sus síntomas, cómo se tratan y lo más importante, cuándo son una urgencia médica."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "What exactly is a dislocation?"
+          : "¿Qué es exactamente una luxación?"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-4"
+      set:html={isEnglish
+        ? "A dislocation occurs when an extreme force displaces the bones that form a joint, causing them to lose their normal alignment."
+        : "Una luxación ocurre cuando una fuerza extrema desplaza los huesos que forman una articulación, haciendo que pierdan su alineación normal."}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "A joint is composed of bone surfaces covered with cartilage, joint capsules, ligaments, and synovial fluid. Imagine they function as a perfect gear working in harmony, but dislocation disassembles this gear."
+        : "Una articulación que está compuesta por superficies óseas recubiertas de cartílago, cápsulas articulares, ligamentos y líquido sinovial, Imaginemos entonces que funcionan como un engranaje perfecto que trabaja en armonía, pero la luxación desarma este engranaje."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Simple and Complex Dislocations?"
+          : "¿Luxaciones simples y complejas?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "We call it a simple dislocation when there is no fracture and complex when it generates a fracture and considerable instability.<br/><br/> The most frequently affected joints are, first, the shoulder, followed by the elbow, being more common in men. These are followed by dislocations of the knee, hip, and fingers."
+        : "Le llamamos luxación simple cuando no hay fractura y compleja cuando genera una fractura e inestabilidad considerable.<br/><br/> Las articulaciones más frecuentemente afectadas son, en primer lugar, el hombro, seguido del codo, siendo más común en hombres. Le siguen las luxaciones de rodilla, cadera y dedos."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Types of Dislocations" : "Tipos de Luxaciones"}
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `1. By cause:<br/><br/>
+      <strong class='text-white'>Traumatic:</strong> The most common. Result of a direct impact, fall, or accident.<br/><br/>
+      <strong class='text-white'>Congenital:</strong> Due to abnormalities present at birth, such as hip dysplasia.<br/><br/>
+      <strong class='text-white'>Pathological:</strong> Due to diseases that weaken joints, such as rheumatoid arthritis.<br/><br/>
+      <strong class='text-white'>Recurrent instability:</strong> Sequel of a previous injury that left the joint vulnerable.<br/><br/>
+      2. By direction of displacement:<br/><br/>
+      <strong class='text-white'>Anterior:</strong> The bone moves forward (example: anterior shoulder dislocation is the most common).<br/><br/>
+      <strong class='text-white'>Posterior:</strong> The bone moves backward (example: posterior hip dislocation, often from a car accident).<br/><br/>
+      <strong class='text-white'>Inferior/Superior:</strong> Less common, but usually serious because they can critically compress nerves or blood vessels, requiring immediate attention.<br/><br/>
+      <strong class='text-white'>Subluxation:</strong> A partial dislocation. The bones separate but not completely, and usually return to position spontaneously.`
+        : `1. Por su causa:<br/><br/>
+      <strong class='text-white'>Traumáticas:</strong> La más común. Resultado de un impacto directo, una caída o un accidente.<br/><br/>
+      <strong class='text-white'>Congénitas:</strong> Por anomalías presentes al nacer, como la displasia de cadera.<br/><br/>
+      <strong class='text-white'>Patológicas:</strong> Debido a enfermedades que debilitan las articulaciones, como la artritis reumatoide.<br/><br/>
+      <strong class='text-white'>Por inestabilidad recurrente:</strong> Secuela de una lesión previa que dejó la articulación vulnerable.<br/><br/>
+      2. Por la dirección del desplazamiento:<br/><br/>
+      <strong class='text-white'>Anterior:</strong> El hueso se desplaza hacia adelante (ejemplo: la luxación anterior de hombro es la más común).<br/><br/>
+      <strong class='text-white'>Posterior:</strong> El hueso se mueve hacia atrás (ejemplo: una luxación posterior de cadera, frecuentemente por un accidente automovilístico).<br/><br/>
+      <strong class='text-white'>Inferior/Superior:</strong> Menos comunes, pero suelen ser graves porque pueden comprimir nervios o vasos sanguíneos de forma crítica, requiriendo atención inmediata.<br/><br/>
+      <strong class='text-white'>Subluxación:</strong> Es una dislocación parcial. Los huesos se separan, pero no por completo, y suelen regresar a su posición espontáneamente.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Common Symptoms of a Dislocation"
+          : "Síntomas comunes de una luxación"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `<strong class='text-white'>How to identify?</strong><br/><br/>
+      <strong class='text-white'>Intense, sharp pain</strong> that worsens with movement.<br/><br/>
+      <strong class='text-white'>Visible deformity or swelling</strong> in the area.<br/><br/>
+      <strong class='text-white'>Total or partial inability</strong> to move the joint.<br/><br/>
+      <strong class='text-white'>Numbness, tingling, or loss of sensation</strong> (sign of possible nerve injury).<br/><br/>
+      <strong class='text-white'>Bruising and warmth sensation</strong> in the area.`
+        : `<strong class='text-white'>¿Cómo identificar?</strong><br/><br/>
+      <strong class='text-white'>Dolor intenso y agudo</strong> que empeora con el movimiento.<br/><br/>
+      <strong class='text-white'>Deformidad visible o hinchazón</strong> en la zona.<br/><br/>
+      <strong class='text-white'>Incapacidad total o parcial</strong> para mover la articulación.<br/><br/>
+      <strong class='text-white'>Entumecimiento, hormigueo o pérdida de sensibilidad</strong> (signo de posible lesión nerviosa).<br/><br/>
+      <strong class='text-white'>Hematomas y sensación de calor</strong> en el área.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "When is it a medical emergency?"
+          : "¿Cuándo es una urgencia médica?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `A dislocation is always an emergency that requires immediate medical evaluation. Time is a vital factor to prevent complications. Go to the emergency room or an orthopedic center immediately if, in addition to the previous symptoms, the following occur:<br/><br/>
+      <strong class='text-white'>Loss of pulse</strong> below the injury (hand, foot).<br/><br/>
+      <strong class='text-white'>Pale, cold, or bluish skin.</strong><br/><br/>
+      <strong class='text-white'>Severe loss of sensation or paralysis.</strong><br/><br/>
+      <strong class='text-white'>An open wound</strong> near the dislocated joint.`
+        : `Una luxación es siempre una urgencia que requiere evaluación médica inmediata. El tiempo es un factor vital para prevenir complicaciones. Acuda a urgencias o un centro de traumatología de inmediato si, además de los síntomas anteriores, se presentan:<br/><br/>
+      <strong class='text-white'>Pérdida de pulso</strong> por debajo de la lesión (mano, pie).<br/><br/>
+      <strong class='text-white'>Piel pálida, fría o azulada.</strong><br/><br/>
+      <strong class='text-white'>Pérdida de sensibilidad severa o parálisis.</strong><br/><br/>
+      <strong class='text-white'>Una herida abierta</strong> cerca de la articulación dislocada.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "First Aid: What to Do and What to Avoid"
+          : "Primeros Auxilios: ¿Qué hacer y Qué evitar hacer?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `<strong class='text-white text-2xl'>What to do:</strong><br/><br/>
+      <strong class='text-white'>Stay calm</strong> and call emergency services or take the person to a hospital.<br/><br/>
+      <strong class='text-white'>Immobilize the area</strong> as it is. Do not attempt to move it.<br/><br/>
+      <strong class='text-white'>Apply ice</strong> wrapped in a cloth to reduce swelling and pain.<br/><br/>
+      <strong class='text-white text-2xl'>What to avoid:</strong><br/><br/>
+      <strong class='text-white'>Do not attempt to readjust the joint</strong> - incorrect manipulation can cause severe damage to nerves, blood vessels, or worsen a fracture.<br/><br/>
+      <strong class='text-white'>Do not massage the area</strong> or apply heat.`
+        : `<strong class='text-white text-2xl'>Lo que debe hacer:</strong><br/><br/>
+      <strong class='text-white'>Mantener la calma</strong> y llamar a su servicio de emergencias o trasladar a la persona a un hospital.<br/><br/>
+      <strong class='text-white'>Inmovilice el área</strong> tal como está. No intentar moverla.<br/><br/>
+      <strong class='text-white'>Aplicar hielo</strong> envuelto en un paño para reducir la hinchazón y el dolor.<br/><br/>
+      <strong class='text-white text-2xl'>Lo que debe evitar:</strong><br/><br/>
+      <strong class='text-white'>No intentar reacomodar la articulación</strong>, una manipulación incorrecta puede causar daños severos en nervios, vasos sanguíneos o agravar una fractura.<br/><br/>
+      <strong class='text-white'>No masajear la zona ni aplicar calor.</strong>`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Diagnosis in Orthopedic Consultation"
+          : "Diagnóstico en consulta traumatología"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Diagnosis involves:<br/><br/>
+      <strong class='text-white'>Physical evaluation:</strong> We check circulation, nerve function, and the extent of damage.<br/><br/>
+      <strong class='text-white'>Imaging studies:</strong><br/><br/>
+      <strong class='text-white'>X-rays:</strong> Essential to confirm the dislocation and rule out fractures.<br/><br/>
+      <strong class='text-white'>MRI or CT Scan:</strong> To evaluate damage to ligaments, cartilage, or more complex injuries.`
+        : `El diagnóstico involucra:<br/><br/>
+      <strong class='text-white'>Evaluación física:</strong> Revisamos la circulación, función nerviosa y la extensión del daño.<br/><br/>
+      <strong class='text-white'>Estudios de imagen:</strong><br/><br/>
+      <strong class='text-white'>Radiografías:</strong> Esenciales para confirmar la luxación y descartar fracturas.<br/><br/>
+      <strong class='text-white'>Resonancia Magnética o Tomografía:</strong> Para evaluar daños en ligamentos, cartílagos o lesiones más complejas.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "When is surgery necessary for a dislocation?"
+          : "¿Cuándo hay que operar una luxación?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `<strong class='text-white'>Blood vessel injuries:</strong> A hip or knee dislocation can interrupt blood flow to the leg. Therefore, leg tissues cannot get enough blood (called ischemia) and may die (called necrosis). A dislocated hip is prone to necrosis, especially if the dislocation is not reduced quickly. Certain elbow injuries can interrupt blood flow to the forearm, causing similar problems.<br/><br/>
+      <strong class='text-white'>Hemorrhage:</strong> Severe or traumatic dislocations can damage surrounding tissues and cause internal bleeding. A dislocated bone can pierce the skin and cause external bleeding.<br/><br/>
+      <strong class='text-white'>Nerve injury:</strong> Sometimes nerves are stretched, injured, or crushed when a joint is dislocated. Direct trauma can bruise or crush a nerve. Crushing causes more significant injury than bruising and may require surgical repair.`
+        : `<strong class='text-white'>Lesiones de los vasos sanguíneos:</strong> Una luxación de cadera o rodilla puede interrumpir el flujo de sangre a la pierna. Por lo tanto, los tejidos de la pierna no pueden obtener sangre suficiente (lo que se denomina isquemia) y pueden morir (lo que se denomina necrosis). Una cadera luxada es propensa a la necrosis, especialmente si la luxación no se reduce rápidamente. Ciertas lesiones del codo pueden interrumpir el flujo sanguíneo al antebrazo, causando problemas similares.<br/><br/>
+      <strong class='text-white'>Hemorragia:</strong> Las luxaciones graves o traumáticas pueden dañar los tejidos que las rodean y causar hemorragias internas. Un hueso luxado (dislocado) puede perforar la piel y causar una hemorragia externa.<br/><br/>
+      <strong class='text-white'>Lesión neurológica:</strong> A veces los nervios se estiran, se lesionan o se aplastan cuando se luxa una articulación. Un traumatismo directo puede contundir o aplastar un nervio. Un aplastamiento provoca una lesión más importante que una contusión y pueden necesitar una reparación quirúrgica.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Conservative Treatment" : "Tratamiento conservador"}
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `The main treatment is closed reduction, which consists of gently manipulating the joint to return the bones to their anatomical position.<br/><br/>
+      This procedure:<br/><br/>
+      <strong class='text-white'>Must be performed exclusively by a physician.</strong><br/><br/>
+      <strong class='text-white'>Is usually performed under sedation or local anesthesia</strong> to minimize pain and muscle tension.<br/><br/>
+      <strong class='text-white'>Specific traction and counter-traction techniques are used.</strong> There are outdated techniques and new techniques that allow for an ideal reduction and immobilization for a speedy recovery, although this will depend on each case and the patient's overall health status.`
+        : `El tratamiento principal es la reducción cerrada, que consiste en manipular suavemente la articulación para regresar los huesos a su posición anatómica.<br/><br/>
+      Este procedimiento:<br/><br/>
+      <strong class='text-white'>Debe ser realizado exclusivamente por un médico.</strong><br/><br/>
+      <strong class='text-white'>Suele realizarse bajo sedación o anestesia local</strong> para minimizar el dolor y la tensión muscular.<br/><br/>
+      <strong class='text-white'>Se utilizan técnicas específicas de tracción y contracción.</strong> Existen técnicas en desuso y nuevas técnicas que permiten una reducción e inmovilización ideal para una pronta recuperación, claro está dependerá de cada caso y el estado de salud general del paciente.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Recovery and Rehabilitation: The Role of Physical Therapy"
+          : "Recuperación y Rehabilitación: El Rol de la Fisioterapia"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Immobilization is only the first phase. Physical therapy is fundamental for a complete recovery. We follow the PRICE protocol in the initial phases and then progress to specific exercises:<br/><br/>
+      <strong class='text-white'>Protection:</strong> Use of splints.<br/><br/>
+      <strong class='text-white'>Rest:</strong> Avoid risk activities.<br/><br/>
+      <strong class='text-white'>Ice:</strong> To control inflammation.<br/><br/>
+      <strong class='text-white'>Compression:</strong> With elastic bandages.<br/><br/>
+      <strong class='text-white'>Elevation:</strong> To drain fluid and reduce swelling.<br/><br/>
+      Physical therapy focuses on:<br/><br/>
+      <strong class='text-white'>Recovering range of motion.</strong><br/><br/>
+      <strong class='text-white'>Strengthening the muscles surrounding the joint</strong> to provide stability.<br/><br/>
+      <strong class='text-white'>Preventing future injuries.</strong><br/><br/>
+      The knee, elbow, and shoulder are particularly prone to developing stiffness after a dislocation, especially in older people, which is why a comprehensive approach to recovery is essential to prevent stiffness and help the joint move as normally as possible.`
+        : `La inmovilización es solo la primera fase. La fisioterapia es fundamental para una recuperación completa. Seguimos el protocolo PRICE en las primeras fases y luego avanzamos a ejercicios específicos:<br/><br/>
+      <strong class='text-white'>Protección:</strong> Uso de férulas.<br/><br/>
+      <strong class='text-white'>Reposo:</strong> Evitar actividades de riesgo.<br/><br/>
+      <strong class='text-white'>Hielo (Ice):</strong> Para controlar la inflamación.<br/><br/>
+      <strong class='text-white'>Compresión:</strong> Con vendajes elásticos.<br/><br/>
+      <strong class='text-white'>Elevación:</strong> Para drenar el líquido y reducir la hinchazón.<br/><br/>
+      La fisioterapia se enfoca en:<br/><br/>
+      <strong class='text-white'>Recuperar el rango de movimiento.</strong><br/><br/>
+      <strong class='text-white'>Fortalecer los músculos que rodean la articulación</strong> para darle estabilidad.<br/><br/>
+      <strong class='text-white'>Prevenir futuras lesiones.</strong><br/><br/>
+      La rodilla, el codo y el hombro son particularmente propensos a desarrollar rigidez después de una luxación, especialmente en personas mayores, es por ello que es indispensable un enfoque integral en la recuperación para prevenir la rigidez y ayudar a que la articulación se mueva lo más normalmente posible.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "A dislocation is more than just a 'bone out of place' that needs to be 'put back'. It is a complex injury that can become serious and compromise the integrity of the joint and even the patient's life. Timely diagnosis by a specialist orthopedic surgeon is essential."
+        : "Una luxación es más allá de un hueso salido que tiene que 'acomodarse' es una lesión compleja que puede llegar a ser grave y comprometer la integridad de la articulación e inclusa la vida de los pacientes. El diagnóstico oportuno por un traumatólogo especialista es indispensable."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `If you or a family member have suffered an injury and are seeking a second opinion, I would be happy to support you with an approach or diagnosis to ensure an optimal recovery or treatment plan that minimizes the risk of complications and restores optimal health and independence.<br/><br/>
+      I invite you to write to me, send me a message, or follow me on my social media to learn more about injuries, pathologies, and orthopedics and traumatology tips.<br/><br/>
+      <strong class='text-white'>I am located in Tijuana near you in Zona Río, just minutes from the border.</strong><br/><br/>
+      Among the conditions and treatments I address are: Joint pain or osteoarthritis, hip and knee replacements, spinal problems such as herniated discs and degeneration, fracture treatment, sprains, and sports injuries through conservative treatment or surgery, and knee and shoulder arthroscopy.`
+        : `Si tu o un familiar sufrieron una lesión, están buscando una segunda opinión con gusto puedo apoyarles en un abordaje o diagnóstico para que tengan una recuperación o plan de tratamiento óptimo que garantice el menor riesgo de complicaciones y devuelva a su estado de salud optimo y a su independencia.<br/><br/>
+      Te invito a escribirme, mandarme mensaje o seguirme en mis redes sociales para conocer más sobre lesiones, patologías y tips de ortopedia y traumatología.<br/><br/>
+      <strong class='text-white'>Me encuentro en Tijuana cerca de ti en zona Río a unos minutos de la frontera</strong><br/><br/>
+      Entre los padecimientos y tratamientos que atiendo se encuentra: Dolor articular o artrosis, prótesis de cadera y rodilla, problemas de columna como hernias de disco y desgaste, tratamiento de fracturas esguinces y lesiones deportivas de forma conservadora o con cirugía y artroscopía de rodilla y de hombro.`}
+    />
+  </Observer>
+
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility"
+      : "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad"}
+    PreviousName={isEnglish
+      ? "Elbow Arthroscopy: The Minimally Invasive Technique That Relieves Pain and Restores Mobility"
+      : "Artroscopia de Codo: la técnica mínimamente invasiva que alivia el dolor y devuelve tu movilidad"}
+  />
+</article>

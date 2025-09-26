@@ -210,6 +210,14 @@ function Blogs({ URL }) {
         "¿Eres atleta de alto rendimiento o sufres de un dolor en el codo que limita tu movilidad? En este blog te comparto todo sobre la artroscopia de codo, una técnica mínimamente invasiva que alivia el dolor y devuelve tu movilidad",
       link: "/blogs/artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
     },
+    {
+      img: "/Artroscopia de Codo Dr Ricardo Monge R traumatologia.webp",
+      fecha: "Septiembre",
+      titulo: "¿Luxación? Tipos, complicaciones, tratamiento y rehabilitación",
+      texto:
+        "Recupera tu movilidad sin miedo: Una guía breve sobre las luxaciones. ¿sabías que el mayor riesgo no es el dolor, sino las lesiones en nervios y vasos sanguíneos? En este blog te explico síntomas, cuándo es una  urgencia, tipos de tratamiento y más.",
+      link: "/blogs/luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
+    },
   ];
 
   const blogItem_en = [
@@ -408,6 +416,15 @@ function Blogs({ URL }) {
       texto:
         "Are you a high-performance athlete or do you suffer from elbow pain that limits your mobility? In this blog, I share everything you need to know about elbow arthroscopy, a minimally invasive technique that relieves pain and restores mobility.",
       link: "/en/blogs/elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility",
+    },
+    {
+      img: "/Artroscopia de Codo Dr Ricardo Monge R traumatologia.webp",
+      fecha: "September",
+      titulo:
+        "Dislocation? Types, complications, treatment, and rehabilitation",
+      texto:
+        "Regain your mobility without fear: A brief guide on dislocations. Did you know that the greatest risk is not the pain itself, but injuries to nerves and blood vessels? In this blog, I explain symptoms, when it is an emergency, treatment options, and more.",
+      link: "/en/blogs/dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
     },
   ];
 

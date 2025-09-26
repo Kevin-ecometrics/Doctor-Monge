@@ -1,0 +1,13 @@
+---
+import LayoutBlog from "@layouts/LayoutTermino.astro";
+import Booking from "@components/appointment/booking";
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<LayoutBlog
+  title="Schedule Appointment"
+  description="Schedule an appointment with Dr. Ricardo Monge, a specialist in traumatology in Tijuana."
+  keywords="Schedule appointment, Dr. Ricardo Monge, traumatology, Tijuana"
+>
+  <Booking client:visible URL={isEnglish} />
+</LayoutBlog>

@@ -119,6 +119,11 @@ export function getStaticPaths() {
         blog: "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
       },
     },
+    {
+      params: {
+        blog: "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
+      },
+    },
   ];
 }
 
@@ -422,6 +427,18 @@ const blogs = [
       "artroscopia de codo, técnica mínimamente invasiva, tratamiento de codo",
     id: 24,
   },
+  {
+    titulo:
+      "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
+    ruta: "/blogs/luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
+    blogTitle: "¿Luxación? Tipos, complicaciones, tratamiento y rehabilitación",
+    date: "Septiembre 2025",
+    title: "¿Luxación? Tipos, complicaciones, tratamiento y rehabilitación",
+    description:
+      "Identifica los síntomas, cuándo es una urgencia y conoce los tratamientos y para sanar con éxito con el experto en lesiones el Dr. Ricardo Monge. ",
+    keywords: "Luxación urgencia, tratamiento traumatologo en Tijuana",
+    id: 25,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -621,6 +638,16 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
     (content = "Blog24"),
     (blogTitle =
       "Artroscopia la solución definitiva para curar el dolor del codo y recuperar tu movilidad, procedimiento mínimamente invasivo con grandes resultados ");
+} else if (
+  blog ===
+  "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion"
+) {
+  (image =
+    "/Artroscopia de Codo Dr Ricardo Monge traumatologia y Ortopedia en Tijuana.webp"),
+    (date = "Septiembre 2025"),
+    (content = "Blog25"),
+    (blogTitle =
+      "Guía Completa para luxaciones: cuando es una urgencia, síntomas, tratamiento y recuperación.");
 } else {
   image = "/fondoDefault.png";
 }

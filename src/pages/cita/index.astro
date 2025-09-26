@@ -1,6 +1,7 @@
 ---
 import LayoutBlog from "@layouts/LayoutTermino.astro";
 import Booking from "@components/appointment/booking";
+const isEnglish = Astro.url.pathname.startsWith("/en/");
 ---
 
 <LayoutBlog
@@ -8,5 +9,5 @@ import Booking from "@components/appointment/booking";
   description="Agenda cita con el Dr. Ricardo Monge, especialista en traumatología en Tijuana."
   keywords="Agendar cita, Dr. Ricardo Monge, traumatología, Tijuana"
 >
-  <Booking client:visible />
+  <Booking client:visible URL={isEnglish} />
 </LayoutBlog>

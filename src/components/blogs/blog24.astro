@@ -398,6 +398,12 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Footer
     URL={isEnglish}
+    NextLink={isEnglish
+      ? "dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery"
+      : "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion"}
+    NextName={isEnglish
+      ? "Dislocation? Types, Complications, Treatment, and Rehabilitation"
+      : "¿Luxación? Tipos, complicaciones, tratamiento y rehabilitación"}
     PreviousLink={isEnglish
       ? "hormonal-imbalance-and-your-bone-health-how-they-influence"
       : "desquilibrio-hormonal-y-tu-salud-osea-como-influyen"}

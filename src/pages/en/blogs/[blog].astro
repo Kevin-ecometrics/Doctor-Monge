@@ -119,6 +119,11 @@ export function getStaticPaths() {
         blog: "elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility",
       },
     },
+    {
+      params: {
+        blog: "dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
+      },
+    },
   ];
 }
 
@@ -411,6 +416,19 @@ const blogs = [
       "elbow arthroscopy, minimally invasive technique, elbow treatment",
     id: 24,
   },
+  {
+    titulo:
+      "dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
+    ruta: "/blogs/dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
+    blogTitle:
+      "Dislocation? Types, complications, treatment, and rehabilitation",
+    date: "September 2025",
+    title: "Dislocation? Types, complications, treatment, and rehabilitation",
+    description:
+      "Identify the symptoms, learn when it is an emergency, and explore treatment options to recover successfully with injury expert Dr. Ricardo Monge.",
+    keywords: "Dislocation emergency, trauma treatment in Tijuana",
+    id: 25,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -601,6 +619,16 @@ if (blog === "anterior-cruciate-ligament-injury") {
     (content = "Blog24"),
     (blogTitle =
       "Arthroscopy: the definitive solution to cure elbow pain and regain mobility, a minimally invasive procedure with great results");
+} else if (
+  blog ===
+  "dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery"
+) {
+  (image =
+    "/Artroscopia de Codo Dr Ricardo Monge traumatologia y Ortopedia en Tijuana.webp"),
+    (date = "September 2025"),
+    (content = "Blog25"),
+    (blogTitle =
+      "Complete Guide to Dislocations: when it is an emergency, symptoms, treatment, and recovery.");
 } else {
   image = "/fondoDefault.png";
 }
