@@ -82,13 +82,13 @@ function Testimonials({ URL }) {
       ref={ref}
       className="flex justify-center items-center lg:h-screen py-16 lg:py-0"
       style={{
-        overflow: "hidden", // Asegura que el contenido animado no desborde
+        overflow: "hidden",
       }}
     >
       <motion.div
-        key={animationKey} // Usa la clave que cambia para forzar la reanimación
-        initial={{ scale: 1.25 }} // Inicia con el fondo escalado al 125%
-        animate={{ scale: 1 }} // Anima la escala al 100% cuando está en vista
+        key={animationKey}
+        initial={{ scale: 1.25 }}
+        animate={{ scale: 1 }}
         transition={{ duration: 5, ease: "easeOut" }}
         style={{
           backgroundImage:
@@ -97,8 +97,8 @@ function Testimonials({ URL }) {
           backgroundPosition: "center",
           width: "100%",
           height: "100%",
-          zIndex: -1, // Asegura que el fondo esté detrás del contenido
-          position: "absolute", // Asegura que el fondo no afecte el scroll
+          zIndex: -1,
+          position: "absolute",
         }}
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 px-8 lg:w-[80%] lg:mx-auto gap-16">

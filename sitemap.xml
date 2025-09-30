@@ -266,11 +266,24 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+        <url>
+        <loc>https://mongeortopedia.com/cita/</loc>
+        <lastmod>2025-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <url>
         <loc>https://mongeortopedia.com/en/</loc>
         <lastmod>2025-04-17</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+    </url>
+
+        <url>
+        <loc>https://mongeortopedia.com/en/appointment/</loc>
+        <lastmod>2025-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
         <url>

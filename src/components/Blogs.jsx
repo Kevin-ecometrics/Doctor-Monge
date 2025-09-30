@@ -561,7 +561,7 @@ function Blogs({ URL }) {
                   <p className="absolute inset-0 flex items-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     {item.fecha}
                   </p>
-                  <h2 className="text-hover-blue font-bold absolute inset-0 flex items-start px-4 py-12 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200 ">
+                  <h2 className="text-hover-blue font-bold absolute inset-0 flex items-start px-4 py-10 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200 ">
                     <a
                       className="text-white z-10 hover:text-blue-600"
                       href={item.link}
@@ -571,7 +571,7 @@ function Blogs({ URL }) {
                       {item.titulo}
                     </a>{" "}
                   </h2>
-                  <h3 className="absolute inset-0 flex items-center text-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <h3 className="absolute inset-0 flex items-center translate-y-2 text-start p-4 justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     {item.texto}
                   </h3>
                   <div className="items-center gap-2 group">

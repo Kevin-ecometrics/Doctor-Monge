@@ -1,6 +1,6 @@
-import { useState, useCallback, useMemo, useEffect } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import axios from "axios";
-
+import TourAppointment from "./TourAppointment";
 export default function OptimizedDoctoraliaBookingInterface({ URL }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,8 +20,22 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [appointmentData, setAppointmentData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const tourRef = useRef(null);
+
+  // ================== Tour =======================
+
+  useEffect(() => {
+    tourRef.current = new TourAppointment(URL);
+    return () => tourRef.current?.destroy();
+  }, [URL]);
+
+  const startTour = useCallback(() => {
+    if (showSuccessModal) return;
+    tourRef.current?.start();
+  }, [showSuccessModal]);
 
   // ================== Constants ==================
+
   const services = useMemo(
     () => [
       // {
@@ -514,6 +528,16 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
 
   return (
     <div className="min-h-screen bg-black text-white py-16">
+      <div className="fixed top-4 right-4 z-40">
+        <button
+          onClick={startTour}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-lg"
+          title={URL ? "Show guided tour" : "Mostrar tour guiado"}
+        >
+          {URL ? "Help" : "Ayuda"}
+        </button>
+      </div>
+
       {/* Modal de éxito */}
       {showSuccessModal && appointmentData && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
@@ -637,8 +661,8 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
                 <h1 className="text-3xl font-bold text-white">
                   Dr. Ricardo Monge
                 </h1>
-                <span className="px-3 py-1 bg-emerald-500/90 text-white text-sm font-medium rounded-full backdrop-blur-sm">
-                  {URL ? "✓ Verified" : "✓ Verificado"}
+                <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full backdrop-blur-sm">
+                  {URL ? "Verified" : "Verificado"}
                 </span>
               </div>
 
@@ -651,26 +675,36 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
               <div className="flex flex-wrap items-center gap-4 text-sm text-blue-100">
                 <div className="flex items-center gap-2">
                   <span>📍</span>
-                  <span>
+                  <a
+                    className="hover:text-blue-500"
+                    href="https://maps.app.goo.gl/jYeUjsYweXXd6gC36"
+                    target="_blank"
+                  >
                     {URL
                       ? "Fray Servando Teresa de Mier 1351-Interior 809-810, Tijuana, B.C."
                       : "Fray Servando Teresa de Mier 1351-Interior 809-810, Tijuana, B.C."}
-                  </span>
+                  </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-yellow-400">★★★★★</span>
-                  <span>{URL ? "(99 reviews)" : "(99 opiniones)"}</span>
+                  <a
+                    href="https://www.doctoralia.com.mx/ricardo-luis-monge-romero/ortopedista-traumatologo/tijuana#profile-reviews"
+                    target="_blank"
+                    className="hover:text-blue-500 "
+                  >
+                    {URL ? "(99 reviews)" : "(99 opiniones)"}
+                  </a>
                 </div>
-                <div className="flex items-center gap-2">
+                {/* <div className="flex items-center gap-2">
                   <span>⏱️</span>
                   <span>
                     {URL ? "Responds within 2 hours" : "Responde en 2 horas"}
                   </span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-2">
                   <span>🎓</span>
                   <span>
-                    {URL ? "15 years of experience" : "15 años de experiencia"}
+                    {URL ? "6 years of experience" : "6 años de experiencia"}
                   </span>
                 </div>
               </div>
@@ -684,7 +718,7 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
           {/* Main Content */}
           <div className="lg:col-span-3 space-y-8">
             {/* Personal Information */}
-            <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-6">
+            <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-6 personal-info-section">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <span className="mr-3">👤</span>
                 {URL ? "Personal Information" : "Información Personal"}
@@ -809,7 +843,7 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
             {/* Service and Insurance Selection */}
             <div className="grid md:grid-cols-1 gap-8">
               {/* Service Selection */}
-              <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-6">
+              <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-6 visit-type-section">
                 <h3 className="text-xl font-bold text-white mb-6 flex items-center">
                   <span className="mr-3">🏥</span>
                   {URL ? "Type of Consultation" : "Tipo de Consulta"}
@@ -879,7 +913,7 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
               </div>
 
               {/* Insurance Selection */}
-              <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-6">
+              <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-6 insurance-section">
                 <h3 className="text-xl font-bold text-white mb-6 flex items-center">
                   <span className="mr-3">🛡️</span>
                   {URL
@@ -947,7 +981,7 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
             </div>
 
             {/* Calendar Section */}
-            <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-6">
+            <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl p-6 calendar-section">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <span className="mr-3">📅</span>
                 {URL ? "Select your date" : "Selecciona tu fecha"}
@@ -1136,7 +1170,7 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
           {/* Sidebar - Summary */}
           <div className="lg:col-span-1">
             <div className="sticky top-6">
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl shadow-2xl p-6">
+              <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl shadow-2xl p-6 summary-section">
                 <h3 className="text-xl font-bold text-white mb-6 flex items-center">
                   <span className="mr-2">📋</span>
                   {URL ? "Your Appointment Summary" : "Resumen de tu cita"}
@@ -1144,7 +1178,6 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3 p-3 bg-slate-700/50 rounded-lg border border-slate-600">
-                    <span className="text-blue-400">👨‍⚕️</span>
                     <div>
                       <div className="text-sm text-slate-400">
                         {URL ? "Doctor" : "Doctor"}
