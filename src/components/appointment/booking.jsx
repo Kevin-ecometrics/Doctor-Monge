@@ -173,12 +173,12 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
   const scheduleByDay = useMemo(
     () => ({
       0: [], // Domingo cerrado
-      1: ["10:00", "11:00", "12:00", "16:00", "17:00"], // Lunes
+      1: ["10:00", "11:00", "12:00", "16:00", "17:00", "18:00"], // Lunes
       2: ["10:00", "11:00", "12:00", "13:00"], // Martes
-      3: ["10:00", "11:00", "12:00", "16:00", "17:00"], // Miércoles
+      3: ["10:00", "11:00", "12:00", "16:00", "17:00", "18:00"], // Miércoles
       4: ["10:00", "11:00", "12:00", "13:00"], // Jueves
-      5: ["10:00", "11:00", "12:00", "16:00", "17:00"], // Viernes
-      6: ["10:00", "11:00", "12:00"], // Sábado
+      5: ["10:00", "11:00", "12:00", "16:00", "17:00", "18:00"], // Viernes
+      6: ["10:00", "11:00", "12:00", "13:00"], // Sábado
     }),
     []
   );
@@ -332,25 +332,36 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
   ]);
 
   // ================== Callbacks ==================
-  const updateFormData = useCallback((field, value) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-    setErrors((prev) => ({ ...prev, [field]: "" }));
-    // Si cambia isFirstVisit, limpia campos relacionados
-    if (field === "isFirstVisit") {
-      setSelectedService("");
-      setFormData((prev) => ({
-        ...prev,
-        firstVisitReason: "",
-      }));
-    }
-    // Si cambia hasInsurance, limpia insuranceName
-    if (field === "hasInsurance" && !value) {
-      setFormData((prev) => ({
-        ...prev,
-        insuranceName: "",
-      }));
-    }
-  }, []);
+  const updateFormData = useCallback(
+    (field, value) => {
+      setFormData((prev) => ({ ...prev, [field]: value }));
+      setErrors((prev) => ({ ...prev, [field]: "" }));
+
+      // Si cambia isFirstVisit, actualiza el servicio seleccionado
+      if (field === "isFirstVisit") {
+        if (!value) {
+          // Si NO es primera visita, establece el servicio por defecto
+          setSelectedService(URL ? "Follow-up Visit" : "Visita sucesiva");
+        } else {
+          // Si ES primera visita, limpia el servicio
+          setSelectedService("");
+          setFormData((prev) => ({
+            ...prev,
+            firstVisitReason: "",
+          }));
+        }
+      }
+
+      // Si cambia hasInsurance, limpia insuranceName
+      if (field === "hasInsurance" && !value) {
+        setFormData((prev) => ({
+          ...prev,
+          insuranceName: "",
+        }));
+      }
+    },
+    [URL]
+  );
 
   const selectDate = useCallback((dayObj) => {
     if (
@@ -877,34 +888,47 @@ export default function OptimizedDoctoraliaBookingInterface({ URL }) {
                     )}
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {services.map((service) => (
-                      <button
-                        key={service.name}
-                        onClick={() => setSelectedService(service.name)}
-                        className={`w-full p-4 rounded-xl border-2 text-left transition-all duration-200 ${
-                          selectedService === service.name
-                            ? "border-blue-500 bg-blue-900/50 shadow-lg"
-                            : "border-slate-600 hover:border-blue-400 hover:bg-slate-700/50"
-                        }`}
-                      >
-                        <div className="flex justify-between items-start">
-                          <div className="flex-1">
-                            <div className="font-semibold text-white">
-                              {service.name}
-                            </div>
-                          </div>
-                          {service.price ? (
-                            <div className="text-right ml-4">
-                              <div className="text-lg font-bold text-blue-400">
-                                ${service.price}
-                              </div>
-                              <div className="text-sm text-slate-400">MXN</div>
-                            </div>
-                          ) : null}
+                  <div>
+                    <input
+                      type="hidden"
+                      value={URL ? "Follow-up Visit" : "Visita sucesiva"}
+                      onChange={(e) => setSelectedService(e.target.value)}
+                    />
+                    <div>
+                      <div className="font-bold text-lg text-white mb-2">
+                        {URL
+                          ? "Treatment Follow-up Visit"
+                          : "Consulta de Seguimiento"}
+                      </div>
+                      <p className="text-sm text-slate-400">
+                        {URL
+                          ? "Treatment evaluation and continuity of your personalized medical care plan"
+                          : "Evaluación y continuidad de tu plan de atención médica personalizado"}
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-3">
+                        <div className="bg-blue-500/10 px-3 py-1 rounded-full">
+                          <span className="text-xs text-blue-300">
+                            {URL
+                              ? "Progress Assessment"
+                              : "Evaluación de Progreso"}
+                          </span>
                         </div>
-                      </button>
-                    ))}
+                        <div className="bg-blue-500/10 px-3 py-1 rounded-full">
+                          <span className="text-xs text-blue-300">
+                            {URL
+                              ? "Treatment Adjustment"
+                              : "Ajuste de Tratamiento"}
+                          </span>
+                        </div>
+                        <div className="bg-blue-500/10 px-3 py-1 rounded-full">
+                          <span className="text-xs text-blue-300">
+                            {URL
+                              ? "Care Continuity"
+                              : "Continuidad de Atención"}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
                 {!formData.isFirstVisit && errors.service && (

@@ -61,7 +61,7 @@ const SuccessStories = ({ URL }) => {
       link: "/procedimientos/hernia-de-disco-lumbar/",
     },
     {
-      title: "Lesion de",
+      title: "Lesión de",
       title2: "L.C.A.",
       subtitle:
         "El ligamento cruzado anterior es uno de los estabilizadores más importantes de la rodilla que le da el 85% de su estabilidad, acompáñame te platico de ortopedia y de cómo se aborda esta lesión.",
