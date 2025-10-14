@@ -124,6 +124,11 @@ export function getStaticPaths() {
         blog: "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
       },
     },
+    {
+      params: {
+        blog: "dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical",
+      },
+    },
   ];
 }
 
@@ -439,6 +444,17 @@ const blogs = [
     keywords: "Luxación urgencia, tratamiento traumatologo en Tijuana",
     id: 25,
   },
+  {
+    titulo: "dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical",
+    ruta: "/blogs/dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical",
+    blogTitle: "Dolor y rigidez en el cuello: ¿Podría ser artrosis cervical?",
+    date: "Octubre 2025",
+    title: "Dolor y rigidez en el cuello: ¿Podría ser artrosis cervical?",
+    description:
+      "El Dr. Ricardo Monge te lo explica claro y rápido: las señales de alerta, causas más comunes, opciones de tratamiento y cirugía.",
+    keywords: "Cervicoartrosis, artrosis cervical, dolor de cuello",
+    id: 26,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -648,6 +664,15 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
     (content = "Blog25"),
     (blogTitle =
       "Guía Completa para luxaciones: cuando es una urgencia, síntomas, tratamiento y recuperación.");
+} else if (
+  blog === "dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical"
+) {
+  (image =
+    "/Dr Ricardo Monge explica la artrosis cervical causas sintomas y tratamiento.webp"),
+    (date = "Octubre 2025"),
+    (content = "Blog26"),
+    (blogTitle =
+      "Dolor y rigidez en el cuello: ¿Podría ser artrosis cervical?");
 } else {
   image = "/fondoDefault.png";
 }

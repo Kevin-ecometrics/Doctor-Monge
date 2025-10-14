@@ -421,6 +421,12 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Footer
     URL={isEnglish}
+    NextLink={isEnglish
+      ? "pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis"
+      : "dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical"}
+    NextName={isEnglish
+      ? "Pain and Stiffness in the Neck: It Could Be Cervical Osteoarthritis"
+      : "Dolor y Rigidez en el Cuello: Podría ser Artrosis Cervical"}
     PreviousLink={isEnglish
       ? "elbow-arthroscopy-the-minimally-invasive-technique-that-relieves-pain-and-restores-mobility"
       : "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad"}

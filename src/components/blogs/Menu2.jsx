@@ -3,6 +3,10 @@ import React, { useEffect, useState } from "react";
 const blogsURL = [
   {
     id: 0,
+    url: "/blogs/dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical/",
+  },
+  {
+    id: 0,
     url: "/blogs/luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion/",
   },
   {
@@ -95,6 +99,10 @@ const blogsURL = [
 ];
 
 const blogsURLEN = [
+  {
+    id: 0,
+    url: "/en/blogs/pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis/",
+  },
   {
     id: 0,
     url: "/en/blogs/dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery/",

@@ -124,6 +124,11 @@ export function getStaticPaths() {
         blog: "dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
       },
     },
+    {
+      params: {
+        blog: "pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis",
+      },
+    },
   ];
 }
 
@@ -419,7 +424,7 @@ const blogs = [
   {
     titulo:
       "dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
-    ruta: "/blogs/dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
+    ruta: "/en/blogs/dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
     blogTitle:
       "Dislocation? Types, complications, treatment, and rehabilitation",
     date: "September 2025",
@@ -428,6 +433,20 @@ const blogs = [
       "Identify the symptoms, learn when it is an emergency, and explore treatment options to recover successfully with injury expert Dr. Ricardo Monge.",
     keywords: "Dislocation emergency, trauma treatment in Tijuana",
     id: 25,
+  },
+  {
+    titulo:
+      "pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis",
+    ruta: "/en/blogs/pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis",
+    blogTitle:
+      "Pain and Stiffness in the Neck: Could It Be Cervical Osteoarthritis?",
+    date: "October 2025",
+    title:
+      "Pain and Stiffness in the Neck: Could It Be Cervical Osteoarthritis?",
+    description:
+      "Discover the causes, symptoms, and treatments for cervical osteoarthritis with Dr. Ricardo Monge, an expert in musculoskeletal health.",
+    keywords: "cervical osteoarthritis, neck pain, neck stiffness",
+    id: 26,
   },
 ];
 
@@ -629,6 +648,15 @@ if (blog === "anterior-cruciate-ligament-injury") {
     (content = "Blog25"),
     (blogTitle =
       "Complete Guide to Dislocations: when it is an emergency, symptoms, treatment, and recovery.");
+} else if (
+  blog === "pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis"
+) {
+  (image =
+    "/Dolor y Rigidez en el Cuello podria ser Artrosis Cervical Dr Ricardo Monge.webp"),
+    (date = "October 2025"),
+    (content = "Blog26"),
+    (blogTitle =
+      "Pain and Stiffness in the Neck: Could It Be Cervical Osteoarthritis?");
 } else {
   image = "/fondoDefault.png";
 }

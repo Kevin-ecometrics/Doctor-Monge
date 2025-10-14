@@ -5,6 +5,7 @@ import {
   FaArrowRight,
   FaCheckCircle,
 } from "react-icons/fa";
+import { sendGAEvent } from "../utils/sendGAEvent";
 
 function Appointment({ URL }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -68,17 +69,20 @@ function Appointment({ URL }) {
 
     return () => {
       clearTimeout(timer);
-      clearInterval(progressInterval);
       clearInterval(slideInterval);
     };
   }, [content.features.length]);
 
   const handleClick = () => {
-    window.location.href = content.link;
-  };
+    // Enviar evento GA solo al hacer click en el botón
+    sendGAEvent({
+      eventName: "appointment_click",
+      category: "Appointment",
+      label: content.cta,
+      value: 1,
+    });
 
-  const handleFeatureClick = (index) => {
-    setActiveIndex(index);
+    window.location.href = content.link;
   };
 
   return (
@@ -123,15 +127,12 @@ function Appointment({ URL }) {
             return (
               <div
                 key={index}
-                onClick={() => handleFeatureClick(index)}
                 className={`flex-1 flex flex-col items-center text-white transition-all duration-500 ease-out p-6 sm:p-8 rounded-3xl cursor-pointer backdrop-blur-sm ${
                   isActive
                     ? "scale-100 sm:scale-105 opacity-100 bg-blue-600/30 border-2 border-blue-400 shadow-lg shadow-blue-500/30"
                     : "scale-95 opacity-80 bg-gray-900/30 border-2 border-gray-700/50 hover:scale-100 hover:opacity-90 hover:border-gray-600"
                 }`}
-                style={{
-                  transitionDelay: `${index * 50}ms`,
-                }}
+                style={{ transitionDelay: `${index * 50}ms` }}
               >
                 <div
                   className={`relative p-4 sm:p-5 rounded-full transition-all duration-500 mb-5 ${
@@ -143,9 +144,7 @@ function Appointment({ URL }) {
                   {isActive && (
                     <div className="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-60"></div>
                   )}
-                  <Icon
-                    className={`relative w-7 h-7 sm:w-9 sm:h-9 transition-transform duration-300`}
-                  />
+                  <Icon className="relative w-7 h-7 sm:w-9 sm:h-9 transition-transform duration-300" />
                 </div>
 
                 <h3
@@ -172,7 +171,7 @@ function Appointment({ URL }) {
           {content.features.map((_, i) => (
             <button
               key={i}
-              onClick={() => handleFeatureClick(i)}
+              onClick={() => setActiveIndex(i)}
               className={`h-2 sm:h-2.5 rounded-full transition-all duration-500 cursor-pointer hover:scale-125 ${
                 activeIndex === i
                   ? "bg-blue-500 w-10 sm:w-12"

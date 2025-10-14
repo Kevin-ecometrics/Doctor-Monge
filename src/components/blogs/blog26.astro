@@ -1,0 +1,432 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/Ricardo Monge explica lo que es una luxacion en el hombro.webp";
+import Image2 from "@public/Dr Monge explica lo que es una reduccion cerrada.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+  {
+    blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+  },
+  {
+    blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+  },
+  {
+    blog: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+  },
+  {
+    blog: "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+  },
+  {
+    blog: "desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
+  },
+  {
+    blog: "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
+  },
+  {
+    blog: "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
+  },
+  {
+    blog: "dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical",
+  },
+];
+
+const blogActual = "dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical";
+
+const id = 26;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "Cervical spondylosis or cervical osteoarthritis is a degenerative condition that affects the entire joint and surrounding tissues, causing pain, swelling, and stiffness."
+        : "La cervicoartrosis o artrosis cervical es una condición degenerativa que afecta a toda la articulación y los tejidos que la rodean, por lo que provoca dolor, hinchazón y rigidez."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Why does cervical osteoarthritis occur?"
+          : "¿Por qué sucede la artrosis cervical?"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "Throughout life, repetitive microtraumas occur that cause the cartilage covering the joints and the disc between the vertebrae to decrease in thickness and lose their function of cushioning movement and absorbing impact on this region."
+        : "A lo largo de la vida, se producen microtraumatismos repetitivos que hacen que el cartílago que recubre las articulaciones y el disco que existe entre las vértebras disminuyan su grosor y pierdan su función de amortiguar el movimiento y absorber el impacto sobre esta región."}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "With the deterioration of cartilage, its elasticity is lost, becoming thin, weak, and brittle, causing the pads that are part of the cervical spine to also compress and wear out, creating friction between the vertebrae. This generates muscle spasms as a defense mechanism."
+        : "Con el deterioro del cartílago, se pierde su elasticidad, volviéndose delgado, débil y quebradizo, provocando que las almohadillas que forman parte de la columna cervical también se compriman y se desgasten, haciendo que exista un roce entre las vértebras. Esto genera espasmos musculares como mecanismo de defensa."}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "In the early stages, pain usually appears with movement and improves with rest, but as it progresses, the pain persists even at rest."
+        : "En las primeras fases, el dolor suele aparecer con el movimiento y mejora con el reposo, pero conforme avanza, el dolor persiste incluso en reposo."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "What happens inside the cervical spine and why is it so important?"
+          : "¿Qué pasa dentro de las cervicales y por qué son tan importantes?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "They are composed of very important spinal nerves that exit through small openings between each vertebra. These nerves stimulate muscle movement in the neck, shoulder, arm, and hand, as well as provide sensation."
+        : "Están compuestas por nervios raquídeos importantísimos que salen por pequeños orificios entre cada vértebra. Estos nervios estimulan el movimiento muscular del cuello, hombro, el brazo y la mano, así como proporcionan la sensibilidad."}
+    />
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+    Cervical nerves C1, C2, and C3 control head and neck movements forward, backward, and sideways. 
+    The C2 nerve provides sensation to the upper part of the head; C3, to the sides of the face and the back of the head.
+    <br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class="text-white">Cervical nerve 4:</strong> Controls movement and sensation in parts of the neck, shoulders, and upper arms. It is also one of the nerves that controls the diaphragm.</li>
+      <li><strong class="text-white">Cervical nerve 5:</strong> Controls the deltoid muscles of the shoulders and the biceps. It provides sensation to the upper arm down to the elbow.</li>
+      <li><strong class="text-white">Cervical nerve 6:</strong> Controls the wrist extensor muscles and participates in biceps control. It provides sensation to the thumb side of the forearm and hand.</li>
+      <li><strong class="text-white">Cervical nerve 7:</strong> Controls the triceps muscles and wrist extensors. It provides sensation to the back of the arm, down to the middle finger.</li>
+      <li><strong class="text-white">Cervical nerve 8:</strong> Controls your hands and provides sensation to the pinky side of your hand and forearm.</li>
+    </ul>
+    `
+        : `
+    Los nervios cervicales C1, C2 y C3 controlan los movimientos de la cabeza y el cuello hacia adelante, hacia atrás y hacia los lados. 
+    El nervio C2 proporciona sensibilidad a la parte superior de la cabeza; el C3, a los lados de la cara y la parte posterior de la cabeza.
+    <br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class="text-white">Nervio cervical 4:</strong> Controla el movimiento y sensibilidad en las partes del cuello, hombros y en la parte superior de los brazos. También es uno de los nervios que controla el diafragma.</li>
+      <li><strong class="text-white">Nervio cervical 5:</strong> Controla los músculos deltoides de los hombros y los bíceps. Proporciona sensibilidad a la parte superior del brazo hasta el codo.</li>
+      <li><strong class="text-white">Nervio cervical 6:</strong> Controla los músculos extensores de la muñeca y participa en el control del bíceps. Proporciona sensibilidad al lado del pulgar del antebrazo y la mano.</li>
+      <li><strong class="text-white">Nervio cervical 7:</strong> Controla los músculos tríceps y extensores de la muñeca. Proporciona sensibilidad a la parte posterior del brazo, hasta el dedo medio.</li>
+      <li><strong class="text-white">Nervio cervical 8:</strong> Controla tus manos y da sensibilidad al lado del meñique de tu mano y antebrazo.</li>
+    </ul>
+    `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Cervical Osteoarthritis Symptoms"
+          : "Síntomas artrosis cervical"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `<strong class='text-white'>Pain and stiffness in the neck and shoulders:</strong> This pain and its intensity can be variable or very severe, worsening at night while sleeping due to increased pressure.<br/><br/>
+      <strong class='text-white'>Cervical vertigo:</strong> Causes dizziness and a feeling of instability. This occurs due to compression of certain nervous and vascular structures in the cervical area.<br/><br/>
+      <strong class='text-white'>Cracking sounds:</strong> These sounds generally occur during wide movements of the cervical spine.<br/><br/>
+      <strong class='text-white'>Mechanical blockage:</strong> Caused by osteophytes, loose bodies, or contractures, it can produce a lack of neck mobility.<br/><br/>
+      Typically, morning stiffness in osteoarthritis lasts about 30 minutes and improves with movement during the day.`
+        : `<strong class='text-white'>Dolor y rigidez en el cuello y hombros:</strong> Este dolor y su intensidad pueden ser variables o muy severos, empeorando por la noche al dormir por el aumento de presión.<br/><br/>
+      <strong class='text-white'>Vértigo cervical:</strong> Provoca mareos y una sensación de inestabilidad. Esto ocurre debido a la compresión de ciertas estructuras nerviosas y vasculares en la zona cervical.<br/><br/>
+      <strong class='text-white'>Crujidos:</strong> Estos sonidos se producen generalmente durante los movimientos amplios de la columna cervical.<br/><br/>
+      <strong class='text-white'>Bloqueo mecánico:</strong> Producido por osteofitos, cuerpos libres o contracturas, puede producir una falta de movilidad del cuello.<br/><br/>
+      Normalmente, la rigidez matutina de la artrosis suele ser de unos 30 minutos y va mejorando con el movimiento durante el día.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Cervical Spondylosis and Osteophytes or 'Parrot Beaks'"
+          : "Cervicoartrosis y osteofitos o 'picos de loro'"
+      }
+    </h4>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "When there is wear and tear, the body seeks to protect itself from that imbalance and friction between the cervical vertebrae. To do this, it tries to fuse the worn cervical vertebrae and these bony protuberances (osteophytes) are generated, which can cause mechanical blockages or contractures."
+        : "Al haber un desgaste, lo que el cuerpo busca es protegerse de ese desbalance y roce que hay entre las cervicales. Para ello, intenta fusionar las cervicales desgastadas y se generan estas protuberancias óseas (osteofitos) que, pueden generar bloqueos mecánicos o contracturas."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Risk Factors: Who is More Prone?"
+          : "Factores de Riesgo: ¿Quiénes son más propensos?"
+      }
+    </h4>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+    While age is a main factor, cervical spondylosis doesn't only occur in older adults. 
+    The truth is that currently more cases are appearing at earlier ages, from 40–50 years old, 
+    with women being especially affected due to decreased estrogen during menopause. 
+    Other risk factors include:
+    <br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class='text-white'>Previous neck trauma (whiplash).</strong></li>
+      <li><strong class='text-white'>Obesity and sedentary lifestyle.</strong></li>
+      <li><strong class='text-white'>Jobs or activities that require maintaining forced neck postures (for example, office work, painters, etc.).</strong></li>
+      <li><strong class='text-white'>High-impact sports or high-risk activities for the spine.</strong></li>
+      <li><strong class='text-white'>Genetic factors.</strong></li>
+      <li><strong class='text-white'>Pathologies such as diabetes, rheumatoid arthritis, or joint infections.</strong></li>
+    </ul>
+    `
+        : `
+    Si bien la edad es un factor principal, la cervicoartrosis no solo pasa en adultos mayores. 
+    La verdad es que actualmente se presentan más casos en edades más tempranas, a partir de los 40–50 años, 
+    siendo las mujeres especialmente afectadas por la disminución de estrógeno en la menopausia. 
+    Otros factores de riesgo incluyen:
+    <br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class='text-white'>Traumatismos previos en el cuello (latigazo cervical).</strong></li>
+      <li><strong class='text-white'>Obesidad y sedentarismo.</strong></li>
+      <li><strong class='text-white'>Trabajos o actividades que exigen mantener posturas forzadas del cuello (por ejemplo, oficina, pintores, etc.).</strong></li>
+      <li><strong class='text-white'>Deportes de impacto o de alto riesgo para la columna.</strong></li>
+      <li><strong class='text-white'>Factores genéticos.</strong></li>
+      <li><strong class='text-white'>Patologías como diabetes, artritis reumatoide o alguna infección articular.</strong></li>
+    </ul>
+    `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Diagnosis of Cervical Osteoarthritis"
+          : "Diagnóstico de artrosis cervical"
+      }
+    </h2>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `Diagnosis is based on:<br/><br/>
+      <strong class='text-white'>Physical examination:</strong> Where mobility, muscle strength, and reflexes are evaluated.<br/><br/>
+      <strong class='text-white'>Imaging studies:</strong> Studies such as X-rays, MRIs, and CT scans allow confirmation of the diagnosis, evaluation of stenosis (number of compression levels, importance and location of stenosis, and associated instability).`
+        : `El diagnóstico se basa en:<br/><br/>
+      <strong class='text-white'>Exploración física:</strong> Donde se evalúa la movilidad, la fuerza muscular y los reflejos.<br/><br/>
+      <strong class='text-white'>Estudios de imagen:</strong> Estudios como radiografías, resonancias magnéticas y TAC permiten confirmar el diagnóstico, evaluar la estenosis (número de niveles de compresión, importancia y localización de la estenosis, e inestabilidad asociada).`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Conservative Treatment for Neck Osteoarthritis"
+          : "Tratamiento conservador para artrosis de cuello"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+    It depends on the degree of affectation. Almost always, or in most cases, it is approached with multidisciplinary conservative treatment aimed at reducing pain and recovering functionality.
+    <br/><br/>
+    This plan may include:
+    <br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class='text-white'>Physical therapy and specific strengthening exercises.</strong></li>
+      <li><strong class='text-white'>Anti-inflammatory and analgesic medications.</strong></li>
+      <li><strong class='text-white'>Pain management therapies, such as injections.</strong></li>
+      <li><strong class='text-white'>Relative rest and temporary use of splints or soft collars.</strong></li>
+      <li><strong class='text-white'>Activity modification and postural correction.</strong></li>
+    </ul>
+    <br/>
+    The approach is always multidisciplinary management, prioritizing conservative options before considering surgery.
+    `
+        : `
+    Depende del grado de afectación. Casi siempre, o en la mayoría de los casos, se aborda con un tratamiento conservador multidisciplinar con el fin de reducir el dolor y recuperar la funcionalidad.
+    <br/><br/>
+    Este plan puede incluir:
+    <br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class='text-white'>Fisioterapia y ejercicios de fortalecimiento específicos.</strong></li>
+      <li><strong class='text-white'>Medicamentos antiinflamatorios y analgésicos.</strong></li>
+      <li><strong class='text-white'>Terapias para el manejo del dolor, como infiltraciones.</strong></li>
+      <li><strong class='text-white'>Reposo relativo y uso temporal de férulas o collares blandos.</strong></li>
+      <li><strong class='text-white'>Modificación de actividades y corrección postural.</strong></li>
+    </ul>
+    <br/>
+    El enfoque es siempre un manejo multidisciplinar, priorizando las opciones conservadoras antes de considerar la cirugía.
+    `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Exercises and Activities Not Recommended if You Have Cervical Osteoarthritis"
+          : "Ejercicios y actividades no recomendados si se padece de artrosis cervical"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+    When suffering from cervical osteoarthritis, it is important to avoid certain movements and efforts that may aggravate symptoms or accelerate joint wear.
+    <br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class='text-white'>High-impact sports:</strong> Running, basketball, or any sport that involves impact or collision of the head and neck.</li>
+      <li><strong class='text-white'>Prolonged static postures:</strong> Avoid maintaining postures that produce tension in the neck, for example, spending a lot of time on the cell phone, computer, sitting, or with the head tilted.</li>
+      <li><strong class='text-white'>Certain gym exercises:</strong> It is recommended to avoid exercises such as military press, behind-the-neck pulldowns, or carrying heavy objects, especially if they involve carrying weight above the shoulders.</li>
+      <li><strong class='text-white'>Avoid sudden movements of the cervical spine, such as swimming breaststroke.</strong></li>
+    </ul>
+    `
+        : `
+    Al padecer artrosis cervical, es importante evitar ciertos movimientos y esfuerzos que puedan agravar los síntomas o acelerar el desgaste articular.
+    <br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class='text-white'>Deportes de alto impacto:</strong> Correr, baloncesto o cualquier deporte que involucre algún choque o impacto de la cabeza y cuello.</li>
+      <li><strong class='text-white'>Posturas estáticas prolongadas:</strong> Evitar mantener posturas que produzcan tensión en el cuello, por ejemplo, pasar mucho tiempo en el celular, la computadora, sentado o con la cabeza inclinada.</li>
+      <li><strong class='text-white'>Ciertos ejercicios de gimnasio:</strong> Se recomienda evitar ejercicios como el press militar, el jalón tras nuca o cargar objetos pesados, especialmente si implican cargar peso por encima de los hombros.</li>
+      <li><strong class='text-white'>Evitar movimientos bruscos de la columna cervical, como nadar a estilo braza.</strong></li>
+    </ul>
+    `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Surgery for Cervical Osteoarthritis"
+          : "Cirugía por artrosis cervical"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `In case there is no improvement with conservative treatment or if the condition is in a situation that compromises nerve integrity (such as progressive muscle weakness or loss of sphincter control), surgery will need to be considered.<br/><br/>
+      There are different types of surgery:<br/><br/>
+      <strong class='text-white'>Laminectomy:</strong> Consists of removing the vertebral arch (also known as lamina) that covers the spinal canal. This surgery enlarges the spinal canal to relieve pressure on the spinal cord or nerves, pressure that is caused by bony growths such as osteophytes.<br/><br/>
+      <strong class='text-white'>Cervical fusion:</strong> Consists of joining two vertebrae together so they don't move. For this, in addition to using a fixation system (such as plates and screws), the bone is stimulated to grow from one vertebra to another as if making a weld.<br/><br/>
+      <strong class='text-white'>Cervical disc prosthesis:</strong> It is a mobile implant placed through an anterior approach that replaces the damaged disc. It maintains some movement and can reduce overload on adjacent discs.`
+        : `En caso de que no haya mejoría con el tratamiento conservador o que la afección esté en una situación que comprometa la integridad de los nervios (como debilidad muscular progresiva o pérdida de control de esfínteres), será necesario valorar la cirugía.<br/><br/>
+      Existen diferentes tipos de cirugía:<br/><br/>
+      <strong class='text-white'>Laminectomía:</strong> Consiste en extirpar el arco vertebral (también conocido como lámina) que cubre el canal espinal. Esta cirugía agranda el canal espinal para aliviar la presión sobre la médula espinal o los nervios, presión que es provocada por crecimientos óseos como los osteofitos.<br/><br/>
+      <strong class='text-white'>Fusión cervical:</strong> Consiste en unir dos vértebras entre sí para que no se muevan. Para ello, además de usar un sistema de fijación (como placas y tornillos), se estimula al hueso para que crezca de una vértebra a otra como si se hiciera una soldadura.<br/><br/>
+      <strong class='text-white'>Prótesis de disco cervical:</strong> Es un implante móvil colocado por vía anterior que sustituye al disco dañado. Mantiene cierto movimiento y puede reducir la sobrecarga en los discos adyacentes.`}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? "A diagnosis of cervical spondylosis is not the end of an active life, much less at a young age. With proper and personalized management, the vast majority of patients achieve excellent control of their symptoms and maintain their quality of life. The key lies in an accurate diagnosis and a treatment plan adapted to each individual."
+        : "Un diagnóstico de cervicoartrosis no es el fin de una vida activa y mucho menos en edad joven. Con el manejo adecuado y personalizado, la gran mayoría de los pacientes logran un excelente control de sus síntomas y mantienen su calidad de vida. La clave está en un diagnóstico preciso y un plan de tratamiento adaptado a cada uno."}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `If you or any friend or family member experience these symptoms, share this blog with them.<br/><br/>
+      <strong class='text-white'>If you live in Tijuana, its surroundings, or San Diego, don't hesitate to schedule an appointment with me for a complete evaluation consultation and a personalized treatment plan.</strong>`
+        : `Si tu o algún amigo o familiar experimentan estos síntomas compártele este blog.<br/><br/>
+      <strong class='text-white'>Si vives en Tijuana, sus alrededores o San diego, no dudes en agendar una cita conmigo para una consulta de valoración completa y un plan de tratamiento personalizado.</strong>`}
+    />
+  </Observer>
+
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "cervical-osteoarthritis-complete-guide-symptoms-treatment-and-recovery"
+      : "cervicoartrosis-guia-completa-sintomas-tratamiento-y-recuperacion"}
+    PreviousName={isEnglish
+      ? "Cervical Osteoarthritis: Complete Guide"
+      : "Cervicoartrosis: Guía Completa"}
+  />
+</article>

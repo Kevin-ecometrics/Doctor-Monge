@@ -218,6 +218,14 @@ function Blogs({ URL }) {
         "Recupera tu movilidad sin miedo: Una guía breve sobre las luxaciones. ¿sabías que el mayor riesgo no es el dolor, sino las lesiones en nervios y vasos sanguíneos? En este blog te explico síntomas, cuándo es una  urgencia, tipos de tratamiento y más.",
       link: "/blogs/luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
     },
+    {
+      img: "/Ricardo monge explica sobre que es la luxacion.webp",
+      fecha: "Octubre",
+      titulo: "¿Dolor y Rigidez en el Cuello? Podría ser Artrosis Cervical",
+      texto:
+        "La artrosis cervical es el desgaste de las articulaciones y discos del cuello. Aunque suele relacionarse con la edad, hoy en día afecta a personas cada vez más jóvenes, especialmente mujeres. Si notas dolor o rigidez en el cuello, chasquidos al mover la cabeza, hormigueo o dolor en hombros, brazos o manos, o incluso mareos, te invito  a leer el nuevo blog",
+      link: "/blogs/dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical",
+    },
   ];
 
   const blogItem_en = [
@@ -425,6 +433,15 @@ function Blogs({ URL }) {
       texto:
         "Regain your mobility without fear: A brief guide on dislocations. Did you know that the greatest risk is not the pain itself, but injuries to nerves and blood vessels? In this blog, I explain symptoms, when it is an emergency, treatment options, and more.",
       link: "/en/blogs/dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
+    },
+    {
+      img: "/Ricardo monge explica sobre que es la luxacion.webp",
+      fecha: "October",
+      titulo:
+        "Pain and Stiffness in the Neck? It Could Be Cervical Osteoarthritis",
+      texto:
+        "Cervical osteoarthritis is the wear and tear of the joints and discs in the neck. Although it is usually associated with age, it now affects younger and younger people, especially women. If you notice pain or stiffness in your neck, clicking when you move your head, tingling or pain in your shoulders, arms, or hands, or even dizziness, I invite you to read the new blog.",
+      link: "/en/blogs/pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis",
     },
   ];
 
