@@ -2,8 +2,8 @@
 import { Image } from "astro:assets";
 import Comments from "@components/blogs/Comment";
 import Form from "@components/blogs/CommentForm";
-import Image1 from "@public/Ricardo Monge explica lo que es una luxacion en el hombro.webp";
-import Image2 from "@public/Dr Monge explica lo que es una reduccion cerrada.webp";
+import Image1 from "@public/Ricardo Monge menciona las causas por el dolor en el cuello.webp";
+import Image2 from "@public/Dr Monge explica los diagnosticos para una artrosis cervical.webp";
 import Observer from "@components/blogs/Observer";
 import ObserverImage from "@components/blogs/ObserverImage";
 import Footer from "./Footer.astro";
@@ -185,6 +185,21 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     />
   </Observer>
 
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish
+          ? "Ricardo Monge explains the causes of neck pain"
+          : "Ricardo Monge menciona las causas del dolor en el cuello"}
+        title={isEnglish
+          ? "Ricardo Monge explains the causes of neck pain"
+          : "Ricardo Monge menciona las causas del dolor en el cuello"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
   <Observer client:visible>
     <h2 class="text-2xl mb-6 font-semibold text-white">
       {
@@ -268,7 +283,20 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     `}
     />
   </Observer>
-
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish
+          ? "Dr. Monge explains the diagnoses for cervical osteoarthritis"
+          : "Dr. Monge explica los diagnósticos para una artrosis cervical"}
+        title={isEnglish
+          ? "Dr. Monge explains the diagnoses for cervical osteoarthritis"
+          : "Dr. Monge explica los diagnósticos para una artrosis cervical"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
   <Observer client:visible>
     <h2 class="text-2xl mb-6 font-semibold text-white">
       {

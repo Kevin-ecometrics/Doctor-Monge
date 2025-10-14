@@ -86,9 +86,9 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
     <section id="section8" class="snap-start">
       <Blogs client:only="react" URL={isEnglish} />
     </section>
-    <section id="section9" class="snap-start">
+    <!-- <section id="section9" class="snap-start">
       <Appointment client:idle URL={isEnglish} />
-    </section>
+    </section> -->
     <section id="section10" class="snap-start">
       <Contact client:idle URL={isEnglish} />
     </section>

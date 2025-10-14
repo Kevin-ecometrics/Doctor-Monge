@@ -219,7 +219,7 @@ function Blogs({ URL }) {
       link: "/blogs/luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
     },
     {
-      img: "/Ricardo monge explica sobre que es la luxacion.webp",
+      img: "/Ricardo monge explica sobre que es la artrosis cervical.webp",
       fecha: "Octubre",
       titulo: "¿Dolor y Rigidez en el Cuello? Podría ser Artrosis Cervical",
       texto:
@@ -435,7 +435,7 @@ function Blogs({ URL }) {
       link: "/en/blogs/dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery",
     },
     {
-      img: "/Ricardo monge explica sobre que es la luxacion.webp",
+      img: "/Ricardo monge explica sobre que es la artrosis cervical.webp",
       fecha: "October",
       titulo:
         "Pain and Stiffness in the Neck? It Could Be Cervical Osteoarthritis",
