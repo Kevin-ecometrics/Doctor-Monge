@@ -25,6 +25,7 @@ import Blog23 from "../blogs/blog23.astro";
 import Blog24 from "../blogs/blog24.astro";
 import Blog25 from "../blogs/blog25.astro";
 import Blog26 from "../blogs/blog26.astro";
+import Blog27 from "../blogs/blog27.astro";
 import Menu2 from "./Menu2";
 
 const { content } = Astro.props;
@@ -58,6 +59,7 @@ const { content } = Astro.props;
     {content === "Blog24" ? <Blog24 /> : null}
     {content === "Blog25" ? <Blog25 /> : null}
     {content === "Blog26" ? <Blog26 /> : null}
+    {content === "Blog27" ? <Blog27 /> : null}
     <Menu2 client:load />
   </div>
 </main>

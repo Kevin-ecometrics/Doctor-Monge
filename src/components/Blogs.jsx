@@ -226,6 +226,14 @@ function Blogs({ URL }) {
         "La artrosis cervical es el desgaste de las articulaciones y discos del cuello. Aunque suele relacionarse con la edad, hoy en día afecta a personas cada vez más jóvenes, especialmente mujeres. Si notas dolor o rigidez en el cuello, chasquidos al mover la cabeza, hormigueo o dolor en hombros, brazos o manos, o incluso mareos, te invito  a leer el nuevo blog",
       link: "/blogs/dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical",
     },
+    {
+      img: "/dr monge reconoce si todo esta en marcha con tu placa tornillo o clavo.webp",
+      fecha: "Octubre",
+      titulo: "Vivir con placas y tornillos",
+      texto:
+        "¿Te fracturaste un hueso y te colocaron una placa, clavo o tornillo? En este blog te contamos cómo funciona la osteosíntesis, cuáles son las señales de que tu fractura está sanando correctamente, y cómo identificar si hay retraso en la consolidación, una consolidación viciosa o una pseudoartrosis. Además, te explicamos cuándo es necesario retirar el material y en qué casos puede dejarse sin problema ",
+      link: "/blogs/vivir-con-placas-y-tornillos-como-saber-si-tu-hueso-esta-sanando-bien-con-el-experto-dr-ricardo-monge-traumatologo-en-tijuana",
+    },
   ];
 
   const blogItem_en = [
@@ -442,6 +450,14 @@ function Blogs({ URL }) {
       texto:
         "Cervical osteoarthritis is the wear and tear of the joints and discs in the neck. Although it is usually associated with age, it now affects younger and younger people, especially women. If you notice pain or stiffness in your neck, clicking when you move your head, tingling or pain in your shoulders, arms, or hands, or even dizziness, I invite you to read the new blog.",
       link: "/en/blogs/pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis",
+    },
+    {
+      img: "/dr monge reconoce si todo esta en marcha con tu placa tornillo o clavo.webp",
+      fecha: "October",
+      titulo: "Living with Plates and Screws",
+      texto:
+        "Did you fracture a bone and get a plate, rod, or screw? In this blog, we explain how osteosynthesis works, the signs that your fracture is healing properly, and how to identify delayed union, malunion, or nonunion. We also explain when it’s necessary to remove the hardware and in which cases it can be safely left in place.",
+      link: "/en/blogs/living-with-plates-and-screws-how-to-know-if-your-bone-is-healing-well-with-expert-dr-ricardo-monge-traumatologist-in-tijuana",
     },
   ];
 

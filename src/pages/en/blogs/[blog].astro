@@ -129,6 +129,11 @@ export function getStaticPaths() {
         blog: "pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis",
       },
     },
+    {
+      params: {
+        blog: "living-with-plates-and-screws-how-to-know-if-your-bone-is-healing-well-with-expert-dr-ricardo-monge-traumatologist-in-tijuana",
+      },
+    },
   ];
 }
 
@@ -448,6 +453,19 @@ const blogs = [
     keywords: "cervical osteoarthritis, neck pain, neck stiffness",
     id: 26,
   },
+  {
+    titulo:
+      "living-with-plates-and-screws-how-to-know-if-your-bone-is-healing-well-with-expert-dr-ricardo-monge-traumatologist-in-tijuana",
+    ruta: "/en/blogs/living-with-plates-and-screws-how-to-know-if-your-bone-is-healing-well-with-expert-dr-ricardo-monge-traumatologist-in-tijuana",
+    blogTitle:
+      "Living with Plates and Screws: How to Know if Your Bone is Healing Well?",
+    date: "October 2025",
+    title: "Is Your Bone Healing Properly? Avoid Nonunion",
+    description:
+      "Learn how to recognize if everything is going well with your plate, screw, or intramedullary rod, and the differences between delayed union, malunion, and nonunion.",
+    keywords: "osteosynthesis, fractures, nonunion",
+    id: 27,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -657,6 +675,16 @@ if (blog === "anterior-cruciate-ligament-injury") {
     (content = "Blog26"),
     (blogTitle =
       "Pain and Stiffness in the Neck: Could It Be Cervical Osteoarthritis?");
+} else if (
+  blog ===
+  "living-with-plates-and-screws-how-to-know-if-your-bone-is-healing-well-with-expert-dr-ricardo-monge-traumatologist-in-tijuana"
+) {
+  (image =
+    "/dr monge te explica como saber si tu hueso esta sanando bien.webp"),
+    (date = "October 2025"),
+    (content = "Blog27"),
+    (blogTitle =
+      "Living with Plates and Screws: How to Know if Your Bone is Healing Well?");
 } else {
   image = "/fondoDefault.png";
 }

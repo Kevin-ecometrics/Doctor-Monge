@@ -1,0 +1,607 @@
+---
+import { Image } from "astro:assets";
+import Comments from "@components/blogs/Comment";
+import Form from "@components/blogs/CommentForm";
+import Image1 from "@public/dr ricardo monge te dice la diferencia entre placa y tornillos.webp";
+import Image2 from "@public/dr monge te explica los factores de riesgo.webp";
+import Observer from "@components/blogs/Observer";
+import ObserverImage from "@components/blogs/ObserverImage";
+import Footer from "./Footer.astro";
+import FichaPDF from "@components/blogs/blogpdf";
+let author = "YVLB";
+let comment =
+  "Excelente atención, tomo el tiempo necesario para explicar detalladamente así como la exploración física. Me sentí realmente atendida y con buen pronóstico de resolución.";
+let business = "Paciente";
+
+const blogsRutas = [
+  {
+    blog: "Fractura-de-tibia-y-Perone",
+  },
+  {
+    blog: "Pseudoartrosis-y-Retraso-de-Consolidacion",
+  },
+  {
+    blog: "Lesion-de-Ligamento-cruzado-anterior",
+  },
+  {
+    blog: "Osteoporosis-Una-condicion-silenciosa-que-afecta-a-la-mitad-de-la-poblacion-mayor",
+  },
+  {
+    blog: "infiltraciones-en-la-rodilla-con-acido-hialuronico-para-tratamiento-de-artrosis-de-rodilla",
+  },
+  {
+    blog: "Tratamiento-conservador-vs-cirugia-Cuando-un-tratamiento-conservador-falla-y-requiere-intervencion-quirurgica-en-hernia-discal-cervical",
+  },
+  {
+    blog: "Porque-se-dice-que-el-cuerpo-rechazo-de-material-Factores-asociados-al-fallo-en-la-osteosintesis-de-fracturas",
+  },
+  {
+    blog: "Juanetes-sintomas-deteccion-y-tipos-de-cirugia-para-eliminarlos",
+  },
+  {
+    blog: "Infiltraciones-de-rodilla-Opciones-y-beneficios-para-la-osteoartritis",
+  },
+  {
+    blog: "Tendinitis-y-tendinosis-causas-diferencias-y-tratamiento",
+  },
+  {
+    blog: "Como-saber-si-es-artritis-o-artrosis",
+  },
+  {
+    blog: "lumbalgia-tipos-factores-de-riesgos-y-tratamientos",
+  },
+  {
+    blog: "fractura-de-humero-proximal-en-adultos-mayores",
+  },
+  {
+    blog: "Es-necesaria-una-segunda-cirugia-para-tratar-la-pseudoartrosis",
+  },
+  {
+    blog: "fracturas-ocultas-diagnostico-tijuana",
+  },
+  {
+    blog: "dolor-de-rodilla-artroscopia-para-tratar-el-desgaste-articular",
+  },
+  {
+    blog: "la-mejor-dupla-ortopedica-en-tijuana",
+  },
+  {
+    blog: "eldr-ricardo-monge-resuelve-todas-tus-dudas-sobre-lesiones-de-menisco",
+  },
+  {
+    blog: "valoracion-traumatologica-resuelve-tus-dudas-y-disena-tu-camino-sin-dolor",
+  },
+  {
+    blog: "fractura-de-tobillo-sintomas-operar-o-no-operar-y-recuperacion",
+  },
+  {
+    blog: "te-fracturaste-fases-sintomas-y-que-esperar-en-tu-recuperacion",
+  },
+  {
+    blog: "dolor-de-espalda-diferencias-entre-espondilosis-espondilitis-espondilolisis-y-espondilolistesis",
+  },
+  {
+    blog: "desquilibrio-hormonal-y-tu-salud-osea-como-influyen",
+  },
+  {
+    blog: "artroscopia-de-codo-la-tecnica-minimamente-invasiva-que-alivia-el-dolor-y-devuelve-tu-movilidad",
+  },
+  {
+    blog: "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion",
+  },
+  {
+    blog: "dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical",
+  },
+  {
+    blog: "vivir-con-placas-y-tornillos-como-saber-si-tu-hueso-esta-sanando-bien-con-el-experto-dr-ricardo-monge-traumatologo-en-tijuana",
+  },
+];
+
+const blogActual =
+  "vivir-con-placas-y-tornillos-como-saber-si-tu-hueso-esta-sanando-bien-con-el-experto-dr-ricardo-monge-traumatologo-en-tijuana";
+
+const id = 27;
+
+const isEnglish = Astro.url.pathname.startsWith("/en/");
+---
+
+<article
+  class="prose lg:prose-xl mx-auto py-4 [&>h1]:text-white text-start md:w-[80%] [&>h2]:text-white text-[#9e9e9e]"
+>
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Did you fall, have an accident, or suffer a complex bone fracture?"
+          : "¿Te caíste, tuviste un accidente o te fracturaste un hueso de forma compleja?"
+      }
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Osteosynthesis is the technical name for the surgery that aims to achieve stabilization and union of a bone that has suffered a fracture."
+          : "La osteosíntesis es el nombre técnico para la cirugía que busca lograr la estabilización y la unión de un hueso que ha sufrido una fractura."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "What exactly is osteosynthesis for?"
+          : "¿Para qué sirve exactamente la osteosíntesis?"
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Let's imagine we're building the foundation for a second floor - we need it to be well-aligned and support the load. In this case, materials like plates, screws, and nails will function as support and foundation for your body so the bone can heal and consolidate."
+          : "Imaginemos que levantamos los cimientos para un segundo piso, requerimos que estén bien alineados y soporten la carga, en este caso el material como placas, tornillos y clavos funcionarán como soporte y cimiento de tu cuerpo para que el hueso pueda sanar y consolidarse."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Osteosynthesis materials can be titanium alloys and stainless steel."
+          : "Los materiales de la osteosíntesis pueden ser aleaciones de titanio y acero inoxidable."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "There are different instruments for osteosynthesis:"
+          : "Existen diferentes instrumentos para osteosíntesis:"
+      }
+    </h4>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+      <strong class='text-white'>Intramedullary Nails:</strong> These are metal rods that go inside the bone (in the center, like a post), very common in femur and tibia fractures.<br/><br/>
+      <strong class='text-white'>Plates and Screws:</strong> Used mainly in fractures near joints.
+      `
+        : `
+      <strong class='text-white'>Clavos Intramedulares:</strong> Son barras metálicas que van dentro del hueso (en el centro, como un poste), muy comunes en fracturas de fémur y tibia.<br/><br/>
+      <strong class='text-white'>Placas y Tornillos:</strong> Se usan sobre todo en fracturas cerca de las articulaciones.
+      `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Are all screws used in fractures the same?"
+          : "¿Todos los tornillos que se ponen en las fracturas son iguales?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+      There are multiple types including:<br/><br/>
+      <ul class='list-disc pl-6 space-y-2'>
+        <li><strong class='text-white'>Compression screw:</strong> used to firmly join two bone parts, applying slight pressure that helps their consolidation.</li>
+        <li><strong class='text-white'>Fully threaded screw:</strong> fixes two pieces (for example, bone with bone or with a plate), but without exerting pressure between them.</li>
+        <li><strong class='text-white'>Syndesmotic screw:</strong> used mainly in the ankle, to stabilize the union between the tibia and fibula after an injury or fracture.</li>
+        <li><strong class='text-white'>Cannulated screw:</strong> has an internal hole that allows more precise placement, guided by a thin wire. Common in hip or femoral neck surgeries.</li>
+        <li><strong class='text-white'>Anchor screws (metal anchors):</strong> used to fix injured tendons or ligaments to the bone. They have hooks or points that facilitate their grip.</li>
+        <li><strong class='text-white'>Interference screws:</strong> used in anterior cruciate ligament (ACL) reconstructions to maintain the graft in place within the bone.</li>
+        <li><strong class='text-white'>Dynamic hip screw (DHS):</strong> used in fractures of the upper femur (hip). Its design allows the bone to adjust as it heals.</li>
+        <li><strong class='text-white'>Dynamic compression screws (DCS):</strong> thicker and more resistant, designed for fractures near the knee or hip.</li>
+      </ul>
+      `
+        : `
+      Existen múltiples tipos entre ellos:<br/><br/>
+      <ul class='list-disc pl-6 space-y-2'>
+        <li><strong class='text-white'>Tornillo de compresión:</strong> se usa para unir firmemente dos partes de hueso, aplicando una leve presión que ayuda a su consolidación.</li>
+        <li><strong class='text-white'>Tornillo de rosca completa:</strong> fija dos piezas (por ejemplo, hueso con hueso o con una placa), pero sin ejercer presión entre ellas.</li>
+        <li><strong class='text-white'>Tornillo sindesmótico:</strong> se utiliza principalmente en el tobillo, para estabilizar la unión entre la tibia y el peroné después de una lesión o fractura.</li>
+        <li><strong class='text-white'>Tornillo canulado:</strong> tiene un orificio interno que permite colocarlo con mayor precisión, guiado por un alambre delgado. Es común en cirugías de cadera o cuello femoral.</li>
+        <li><strong class='text-white'>Tornillos de anclaje (anclas metálicas):</strong> sirven para fijar tendones o ligamentos lesionados al hueso. Tienen ganchos o puntas que facilitan su agarre.</li>
+        <li><strong class='text-white'>Tornillos de interferencia:</strong> se emplean en reconstrucciones del ligamento cruzado anterior (LCA) para mantener el injerto en su sitio dentro del hueso.</li>
+        <li><strong class='text-white'>Tornillo dinámico de cadera (DHS):</strong> se usa en fracturas de la parte alta del fémur (cadera). Su diseño permite que el hueso se acomode a medida que cicatriza.</li>
+        <li><strong class='text-white'>Tornillos de compresión dinámica (TCD):</strong> son más gruesos y resistentes, pensados para fracturas cercanas a la rodilla o la cadera.</li>
+      </ul>
+      `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Plates:" : "Placas:"}
+    </h4>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+      Plates are metal sheets (steel or titanium) that are placed over the bone and secured with screws. They are used to maintain the fragments of a fracture in place while the bone heals.<br/><br/>
+      <ul class='list-disc pl-6 space-y-2'>
+        <li><strong class='text-white'>Compression plates:</strong> help join the ends of the bone by applying pressure, ideal for stable fractures.</li>
+        <li><strong class='text-white'>Dynamic compression plates (DCP):</strong> have special holes that allow adjusting the pressure on the fracture.</li>
+        <li><strong class='text-white'>Low contact plates (LCP):</strong> a more modern version; their design allows better blood flow in the bone, favoring recovery.</li>
+      </ul>
+      <br/>
+      These plates are used mainly in fractures of long bones like the femur, humerus, or radius, and also in some spine or wrist surgeries.
+      `
+        : `
+      Las placas son láminas metálicas (de acero o titanio) que se colocan sobre el hueso y se sujetan con tornillos. Se utilizan para mantener los fragmentos de una fractura en su lugar mientras el hueso sana.<br/><br/>
+      <ul class='list-disc pl-6 space-y-2'>
+        <li><strong class='text-white'>Placas de compresión:</strong> ayudan a unir los extremos del hueso aplicando presión, ideal para fracturas estables.</li>
+        <li><strong class='text-white'>Placas de compresión dinámica (PCD):</strong> tienen orificios especiales que permiten ajustar la presión sobre la fractura.</li>
+        <li><strong class='text-white'>Placas de bajo contacto (LCP):</strong> son una versión más moderna; su diseño permite un mejor flujo sanguíneo en el hueso, favoreciendo la recuperación.</li>
+      </ul>
+      <br/>
+      Estas placas se usan sobre todo en fracturas de huesos largos como el fémur, el húmero o el radio, y también en algunas cirugías de columna o muñeca.
+      `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Intramedullary nails:" : "Clavos intramedulares:"}
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "Nails are metal bars that are placed inside the bone canal (like an internal rod). They are used in fractures of long bones like the femur, tibia, or humerus and offer excellent stability."
+          : "Los clavos son barras metálicas que se colocan dentro del canal del hueso (como una varilla interna). Se utilizan en fracturas de huesos largos como el fémur, la tibia o el húmero y ofrecen una excelente estabilidad."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "They are placed through small incisions, without needing to completely expose the bone. These devices allow for earlier recovery and reduce damage to the tissues surrounding the bone."
+          : "Se colocan mediante pequeñas incisiones, sin necesidad de exponer completamente el hueso. Estos dispositivos permiten una recuperación más temprana y reducen el daño a los tejidos que rodean el hueso."
+      }
+    </h4>
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image1}
+        alt={isEnglish
+          ? "Dr. Monge explains the difference between plates and screws"
+          : "Dr. Monge explica la diferencia entre placa y tornillos"}
+        title={isEnglish
+          ? "Dr. Monge explains the difference between plates and screws"
+          : "Dr. Monge explica la diferencia entre placa y tornillos"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Monitoring Your Recovery: How do I know if I'm healing well?"
+          : "Monitoreando tu Recuperación: ¿Cómo sé si estoy sanando bien?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+      Bone healing is a complex process that has several stages, from the formation of soft callus to the final welding and remodeling. There are two criteria to know if you're on the right track:<br/><br/>
+      <strong class='text-white'>Less Pain:</strong> Pain should decrease consistently. One of the most important signs that the process is progressing well is a reduction in pain. Persistent pain, especially when supporting or moving, can be a warning sign.<br/><br/>
+      <strong class='text-white'>Functional Recovery:</strong> Noticing that you can move the limb or support weight (if your doctor authorized it) better and better is a great indicator of progress.<br/><br/>
+      <strong class='text-white'>No Persistent Inflammation:</strong> The absence of excessive and persistent heat or swelling in the area is a good sign that there are no complications.
+      `
+        : `
+      La curación del hueso es un proceso complejo que tiene varias etapas, desde la formación del callo blando hasta la soldadura final y la remodelación. Hay dos criterios para saber si vas por buen camino:<br/><br/>
+      <strong class='text-white'>Menos Dolor:</strong> El dolor debe disminuir de forma constante. Una de las señales más importantes de que el proceso avanza bien es una reducción del dolor. El dolor persistente, especialmente al apoyar o mover, puede ser una señal de alerta.<br/><br/>
+      <strong class='text-white'>Recuperación Funcional:</strong> Notar que puedes mover la extremidad o soportar la carga (si tu médico lo autorizó) cada vez mejor, es un gran indicador de progreso.<br/><br/>
+      <strong class='text-white'>Sin Inflamación Persistente:</strong> La ausencia de calor o hinchazón excesiva y persistente en el área es un buen signo de que no hay complicaciones.
+      `}
+    />
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "During this process it's important to periodically get X-rays to confirm progress. The goal is to see the fracture line and how a bridge of new bone is being generated."
+          : "Durante este proceso es importante acudir periódicamente a realizarse radiografías para confirmar el progreso, el objetivo es ver la línea de la fractura y como se va generando un puente de hueso nuevo."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Delay or pseudoarthrosis?" : "¿Retardo o pseudoartrosis?"}
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "We call it delay when the healing time is notably exceeded, but the process hasn't completely stopped yet. Radiographically, the bone edges appear 'clean'. In these cases, prolonging rest or dynamization of the nail can reactivate the process."
+          : "Le llamamos retardo cuando el tiempo de curación se excede notablemente, pero el proceso aún no se ha detenido por completo. Radiográficamente, los bordes del hueso se ven 'limpios'. En estos casos, prolongar el reposo o la dinamización del clavo puede reactivar el proceso."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Cases in which it will be necessary to perform removal of osteosynthesis material"
+          : "Casos en los que será necesario realizar una intervención de material de osteosíntesis"
+      }
+    </h4>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+      <ul class='list-disc pl-6 space-y-2'>
+        <li><strong class='text-white'>Infection:</strong> In case of a deep infection it's preferable to remove the material, since microbes form hiding places where antibiotics cannot reach them.</li>
+        <li><strong class='text-white'>Discomfort:</strong> if the material remains very superficial or near a joint it can cause discomfort or pain, so it's essential to remove it.</li>
+        <li><strong class='text-white'>Practicing extreme sports:</strong> being people with high risk of suffering new fractures, if this occurs in a limb that already has a previous nail, it's very difficult to operate.</li>
+        <li><strong class='text-white'>Growth:</strong> in the case of growing patients it's better to remove it. This is because the bone can envelop the nail or screw preventing its extraction.</li>
+      </ul>
+      `
+        : `
+      <ul class='list-disc pl-6 space-y-2'>
+        <li><strong class='text-white'>Infección:</strong> En caso de una infección profunda es preferible retirar el material, ya que los microbios forman escondites donde los antibióticos no pueden alcanzarlos.</li>
+        <li><strong class='text-white'>Molestia:</strong> si el material queda muy superficial o cerca de una articulación puede ocasionar molestia o dolor, por lo que es indispensable retirarlo.</li>
+        <li><strong class='text-white'>Practicar deportes extremos:</strong> al ser personas con mucho riesgo de sufrir nuevas fracturas, si esto ocurre en una extremidad que ya tiene previamente un clavo, es muy difícil de operar.</li>
+        <li><strong class='text-white'>Crecimiento:</strong> en el caso de pacientes en crecimiento es mejor retirarlo. Esto se debe a que el hueso puede envolver el clavo o tornillo impidiendo la extracción de este.</li>
+      </ul>
+      `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Vicious consolidation" : "Consolidación viciosa"}
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "We call it vicious consolidation when the bone has healed, but not in the correct anatomical or biomechanical way, due to a problem of length, angulation, or rotation. In this case, surgery is required to correct the deformity and improve pain."
+          : "Le decimos consolidación viciosa cuando el hueso pego, pero no lo hizo de la forma correcta anatómica o biomecánicamente, debido a un problema de longitud, angulación o rotación, en este caso se requiere realizar una cirugía para corregir la deformidad y mejorar el dolor."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Pseudoarthrosis" : "Pseudoartrosis"}
+    </h3>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "In cases of pseudoarthrosis, it's the most serious diagnosis, as it indicates that the bone healing process has completely stopped. This is usually confirmed when at least nine months have passed since the fracture without evidence of consolidation."
+          : "En los casos de pseudoartrosis, se trata del diagnóstico más serio, ya que indica que el proceso de curación del hueso se ha detenido por completo. Esto suele confirmarse cuando han pasado al menos nueve meses desde la fractura sin que exista evidencia de consolidación."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "On X-rays, the bone ends may appear hardened (sclerotic) or even reabsorbed."
+          : "En las radiografías, los extremos del hueso pueden observarse endurecidos (esclerosados) o incluso reabsorbidos."
+      }
+    </h4>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+    Treatment depends on the type of pseudoarthrosis:<br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class='text-white'>Hypertrophic pseudoarthrosis:</strong> The initial approach is to treat any infection that may be present.</li>
+      <li><strong class='text-white'>Atrophic pseudoarthrosis:</strong> It's necessary to remove the fibrous or damaged tissue until healthy bone is exposed. In these cases, bone grafts may be used, whether autografts (such as from the patient's own iliac crest) or donor grafts, and even new fixation through osteosynthesis to favor bone regeneration and stability.</li>
+    </ul>
+    `
+        : `
+    El tratamiento depende del tipo de pseudoartrosis:<br/><br/>
+    <ul class='list-disc pl-6 space-y-2'>
+      <li><strong class='text-white'>Pseudoartrosis hipertrófica:</strong> El enfoque inicial es tratar cualquier infección que pueda estar presente.</li>
+      <li><strong class='text-white'>Pseudoartrosis atrófica:</strong> Es necesario retirar el tejido fibroso o dañado hasta exponer hueso sano. En estos casos, puede recurrirse a injertos óseos, ya sean autoinjertos (como de la cresta ilíaca del propio paciente) o injertos de donador, e incluso a una nueva fijación mediante osteosíntesis para favorecer la regeneración y estabilidad del hueso.</li>
+    </ul>
+    `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Rejection of osteosynthesis material"
+          : "Rechazo del material de osteosíntesis"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "These are multifactorial causes that can lead to osteosynthesis failure, not necessarily that the body rejects the material, but that there was extensive material fatigue that generated overload and stress."
+          : "Son causas multifactoriales que pueden incidir en un fallo de osteosíntesis, no necesariamente que el cuerpo rechaza el material, si no que hubo una fatiga extensa del material que genero una sobre carga y estrés."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "If rest measures, relative rest, and postoperative and rehabilitation care are not followed to the letter, they can compromise the osteosynthesis process."
+          : "Si no se siguen al pie de la letra la medida des de reposo y reposo relativo y cuidados postoperatorios y de rehabilitación pueden comprometer el proceso de la osteosíntesis."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Risk factors:" : "Factores de riesgo:"}
+    </h4>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+      <ul class='list-disc pl-6 space-y-2'>
+        <li><strong class='text-white'>Open fractures:</strong> due to greater exposure and therefore greater contamination, predisposes to late complications during the consolidation process.</li>
+        <li><strong class='text-white'>Smoking:</strong> Smoking reduces your body's ability to form callus. Nicotine and other substances inhibit osteoblasts, which are the specialized cells that build new bone.</li>
+        <li><strong class='text-white'>Diabetes mellitus:</strong> Especially if not well controlled, it's an important metabolic risk factor, due to microvascular damage, which is a key factor for bone consolidation.</li>
+        <li><strong class='text-white'>Alcoholism:</strong> favoring the production of osteoclasts that basically generate bone resorption, delaying consolidation.</li>
+      </ul>
+      `
+        : `
+      <ul class='list-disc pl-6 space-y-2'>
+        <li><strong class='text-white'>Fracturas expuestas:</strong> debido a su mayor exposición y por ende, mayor contaminación, predispone a complicaciones tardías durante el proceso de consolidación.</li>
+        <li><strong class='text-white'>Tabaquismo:</strong> Fumar reduce la capacidad de tu cuerpo para formar callo. La nicotina y otras sustancias inhiben los osteoblastos, que son las células especializadas que construyen el hueso nuevo.</li>
+        <li><strong class='text-white'>Diabetes mellitus:</strong> Especialmente si no está bien controlada, es un factor de riesgo metabólico importante, debido al daño microvascular, que es un factor clave para la consolidación ósea.</li>
+        <li><strong class='text-white'>Alcoholismo:</strong> favoreciendo la producción de osteoclastos que básicamente generan reabsorción del hueso, retardando la consolidación.</li>
+      </ul>
+      `}
+    />
+  </Observer>
+
+  <ObserverImage client:visible>
+    <div class="flex justify-center items-center">
+      <Image
+        src={Image2}
+        alt={isEnglish
+          ? "Dr. Monge explains the risk factors"
+          : "Dr. Monge explica los factores de riesgo"}
+        title={isEnglish
+          ? "Dr. Monge explains the risk factors"
+          : "Dr. Monge explica los factores de riesgo"}
+        class="fade-up object-cover mb-16"
+      />
+    </div>
+  </ObserverImage>
+
+  <Observer client:visible>
+    <h3 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Reasons why your plate and screws fail or 'don't stick'"
+          : "¿Causas por la que falla o 'no pega' tu placa y tornillos?"
+      }
+    </h3>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+      <strong class='text-white'>Mechanical failures:</strong> can be seen on X-ray as abundant callus, what the body wants to heal is the unstable screw, plate, or nail. This instability generates excessive movement or stress that prevents the bones from consolidating.<br/><br/>
+      <strong class='text-white'>Biological failures:</strong> can be seen on X-ray as little or no callus, the body doesn't have the capacity to generate bone, due to poor circulation or an infection.
+      `
+        : `
+      <strong class='text-white'>Fallas mecánicas:</strong> se puede ver en la radiografía un callo abundante, lo que el cuerpo quiere curar es el tornillo, placa o clavo inestable. Esta inestabilidad genera un movimiento excesivo o estrés que impide que consoliden los huesos.<br/><br/>
+      <strong class='text-white'>Fallas biológicas:</strong> se puede ver en la radiografía poco calo o nulo, el cuerpo no tiene la capacidad para generar hueso, debido a mala circulación o una infección.
+      `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h2 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Has my fracture healed? Is it necessary to remove the plates and screws?"
+          : "¿Ya sanó mi fractura? ¿Es necesario retirar las placas y tornillos?"
+      }
+    </h2>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "When the bone has completely consolidated—generally between 9 and 12 months, depending on the type of fracture—the fixation material has fulfilled its function and can be removed. This procedure is known as Removal of Osteosynthesis Material (ROM). However, it's not always mandatory; it will depend on the fracture, the type of material used, and the patient's evolution."
+          : "Cuando el hueso ha consolidado por completo —generalmente entre los 9 y 12 meses, según el tipo de fractura—, el material de fijación ya ha cumplido su función y puede retirarse. Este procedimiento se conoce como Extracción del Material de Osteosíntesis (EMO). Sin embargo, no siempre es obligatorio; dependerá de la fractura, el tipo de material utilizado y la evolución del paciente."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {isEnglish ? "Important considerations" : "Consideraciones importantes"}
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "After removal, it will be necessary to follow care similar to the first surgery, to ensure adequate recovery without complications."
+          : "Después de la extracción, será necesario seguir cuidados similares a los de la primera cirugía, para asegurar una recuperación adecuada y sin complicaciones."
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "In the case of the spine, when an arthrodesis (vertebral fusion) is performed and the implants are left in place, adjacent segment disease may occur over time. This happens because when the operated area becomes rigid, the nearby vertebrae assume more load and movement, which can accelerate their wear."
+          : "En el caso de la columna vertebral, cuando se realiza una artrodesis (fusión de vértebras) y se dejan los implantes en su lugar, puede presentarse con el tiempo la llamada enfermedad del segmento adyacente. Esto ocurre porque al volver rígido el área operada, las vértebras cercanas asumen más carga y movimiento, lo que puede acelerar su desgaste."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Selection of osteosynthesis material:"
+          : "Selección del material de osteosíntesis:"
+      }
+    </h4>
+    <h4 class="text-xl mb-8">
+      {
+        isEnglish
+          ? "The choice of the type of osteosynthesis should be made carefully considering factors such as the patient's age, the complexity of the fracture, the condition of the tissues, and the material's ability to adequately transmit loads to the recovering bone."
+          : "La elección del tipo de osteosíntesis debe hacerse cuidadosamente considerando factores como la edad del paciente, la complejidad de la fractura, el estado de los tejidos y la capacidad del material para transmitir las cargas de forma adecuada al hueso en recuperación."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+      Remember that osteosynthesis provides mechanical stability, but it's your body that performs the true healing. Therefore, it's essential to maintain constant follow-up with your traumatologist and physiotherapist to avoid complications like pseudoarthrosis.<br/><br/>
+      Adopting healthy habits, avoiding alcohol and tobacco consumption, and taking care of your general well-being will help your body heal faster and effectively.
+      `
+        : `
+      Recuerda que la osteosíntesis brinda estabilidad mecánica, pero es tu cuerpo el que realiza la verdadera curación. Por eso, es fundamental mantener un seguimiento constante con tu traumatólogo y fisioterapeuta para evitar complicaciones como la pseudoartrosis.<br/><br/>
+      Adoptar hábitos saludables, evitar el consumo de alcohol y tabaco, y cuidar tu bienestar general ayudará a tu organismo a sanar más rápido y de manera efectiva.
+      `}
+    />
+  </Observer>
+
+  <Observer client:visible>
+    <h4 class="text-2xl mb-6 font-semibold text-white">
+      {
+        isEnglish
+          ? "Recovery is a process, not a race. Be patient and don't hesitate to ask any concerns you have; your traumatologist will accompany you throughout the recovery process."
+          : "La recuperación es un proceso, no una carrera. Ten paciencia y no dudes en preguntar cualquier inquietud que tengas; tu traumatólogo te acompañará durante todo el proceso de recuperación."
+      }
+    </h4>
+  </Observer>
+
+  <Observer client:visible>
+    <h4
+      class="text-xl mb-8"
+      set:html={isEnglish
+        ? `
+      If you have suffered a fracture and notice that you're not improving, or have doubts about whether it's a vicious consolidation, delayed consolidation, or pseudoarthrosis, I invite you to schedule a consultation for evaluation. Together we can analyze your case and design a personalized treatment plan.<br/><br/>
+      I'm located in Tijuana, Baja California, and also offer online consultations for patients from other states.<br/><br/>
+      If you have any questions or comments, you can write them or schedule your appointment directly.
+      `
+        : `
+      Si has sufrido una fractura y notas que no mejoras, o tienes dudas sobre si se trata de una consolidación viciosa, un retraso en la consolidación o una pseudoartrosis, te invito a agendar una consulta de valoración. Juntos podremos analizar tu caso y diseñar un plan de tratamiento personalizado.<br/><br/>
+      Me encuentro en Tijuana, Baja California, y también ofrezco asesorías en línea para pacientes de otros estados.<br/><br/>
+      Si tienes alguna pregunta o comentario, puedes escribirlo o agendar tu cita directamente.
+      `}
+    />
+  </Observer>
+
+  <section class="flex justify-center items-center flex-col md:w-[80%] mx-auto">
+    <Form
+      client:visible
+      blogs={blogsRutas}
+      blogActual={blogActual}
+      idForm={id}
+    />
+  </section>
+
+  <Footer
+    URL={isEnglish}
+    PreviousLink={isEnglish
+      ? "pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis"
+      : "dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical"}
+    PreviousName={isEnglish
+      ? "Pain and Stiffness in the Neck: It Could Be Cervical Osteoarthritis"
+      : "Dolor y Rigidez en el Cuello: Podría Ser Artrosis Cervical"}
+  />
+</article>

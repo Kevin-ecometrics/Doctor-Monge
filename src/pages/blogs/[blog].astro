@@ -129,6 +129,11 @@ export function getStaticPaths() {
         blog: "dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical",
       },
     },
+    {
+      params: {
+        blog: "vivir-con-placas-y-tornillos-como-saber-si-tu-hueso-esta-sanando-bien-con-el-experto-dr-ricardo-monge-traumatologo-en-tijuana",
+      },
+    },
   ];
 }
 
@@ -455,6 +460,19 @@ const blogs = [
     keywords: "Cervicoartrosis, artrosis cervical, dolor de cuello",
     id: 26,
   },
+  {
+    titulo:
+      "vivir-con-placas-y-tornillos-como-saber-si-tu-hueso-esta-sanando-bien-con-el-experto-dr-ricardo-monge-traumatologo-en-tijuana",
+    ruta: "/blogs/vivir-con-placas-y-tornillos-como-saber-si-tu-hueso-esta-sanando-bien-con-el-experto-dr-ricardo-monge-traumatologo-en-tijuana",
+    blogTitle:
+      "Vivir con placas y tornillos: ¿Cómo saber si tu hueso está sanando bien?",
+    date: "Octubre 2025",
+    title: "¿Tu hueso se está consolidando bien? Evita la Pseudoartrosis",
+    description:
+      "Aprende a reconocer si todo marcha bien con tu placa, tornillo o clavo intramedular, diferencias entre retraso, consolidación viciosa y pseudoartrosis. ",
+    keywords: "osteosíntesis, fracturas, pseudoartrosis ",
+    id: 27,
+  },
 ];
 
 const { blog } = Astro.params;
@@ -673,6 +691,16 @@ if (blog === "Lesion-de-Ligamento-cruzado-anterior") {
     (content = "Blog26"),
     (blogTitle =
       "Dolor y rigidez en el cuello: ¿Podría ser artrosis cervical?");
+} else if (
+  blog ===
+  "vivir-con-placas-y-tornillos-como-saber-si-tu-hueso-esta-sanando-bien-con-el-experto-dr-ricardo-monge-traumatologo-en-tijuana"
+) {
+  (image =
+    "/dr monge te explica como saber si tu hueso esta sanando bien.webp"),
+    (date = "Octubre 2025"),
+    (content = "Blog27"),
+    (blogTitle =
+      "Vivir con placas y tornillos: ¿Cómo saber si tu hueso está sanando bien?");
 } else {
   image = "/fondoDefault.png";
 }

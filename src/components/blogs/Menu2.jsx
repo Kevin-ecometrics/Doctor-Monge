@@ -3,6 +3,10 @@ import React, { useEffect, useState } from "react";
 const blogsURL = [
   {
     id: 0,
+    url: "/blogs/vivir-con-placas-y-tornillos-como-saber-si-tu-hueso-esta-sanando-bien-con-el-experto-dr-ricardo-monge-traumatologo-en-tijuana/",
+  },
+  {
+    id: 0,
     url: "/blogs/dolor-y-rigidez-en-el-cuello-podria-ser-artrosis-cervical/",
   },
   {
@@ -99,6 +103,10 @@ const blogsURL = [
 ];
 
 const blogsURLEN = [
+  {
+    id: 0,
+    url: "/en/blogs/living-with-plates-and-screws-how-to-know-if-your-bone-is-healing-well-with-expert-dr-ricardo-monge-traumatologist-in-tijuana/",
+  },
   {
     id: 0,
     url: "/en/blogs/pain-and-stiffness-in-the-neck-it-could-be-cervical-osteoarthritis/",

@@ -450,6 +450,12 @@ const isEnglish = Astro.url.pathname.startsWith("/en/");
 
   <Footer
     URL={isEnglish}
+    NextLink={isEnglish
+      ? "living-with-plates-and-screws-how-to-know-if-your-bone-is-healing-well-with-expert-dr-ricardo-monge-traumatologist-in-tijuana"
+      : "vivir-con-placas-y-tornillos-como-saber-si-tu-hueso-esta-sanando-bien-con-el-experto-dr-ricardo-monge-traumatologo-en-tijuana"}
+    NextName={isEnglish
+      ? "Living with Plates and Screws: How to Know if Your Bone Is Healing Well with Expert Dr. Ricardo Monge, Traumatologist in Tijuana"
+      : "Vivir con Placas y Tornillos: Cómo Saber si tu Hueso Está Sanando Bien con el Experto Dr. Ricardo Monge, Traumatólogo en Tijuana"}
     PreviousLink={isEnglish
       ? "dislocation-complete-guide-when-it-is-an-emergency-symptoms-treatment-and-recovery"
       : "luxacion-guia-completa-para-luxaciones-cuando-es-una-urgencia-sintomas-tratamiento-y-recuperacion"}
